@@ -1,6 +1,9 @@
-﻿
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html lang="ko">
+
 	<head>
 		
 
@@ -67,29 +70,15 @@ var eFrequencySeq = '172';
 var eFrequencyPlannerYn = 'Y';
 </script>
 
-		<link href="../common/css/style_main-1.css" rel="stylesheet">
-		<link href="../common/css/style_msr-1.css" rel="stylesheet">
-		<style type="text/css">
-			.msr_faq_wrap > dd > ul > li.li2 {width:100%}
-		</style>
+		<link href="../common/css/style_coffee.css" rel="stylesheet">
+		<!--[if lt IE 9]>
+		<link href="/common/css_ie/style_main.css" rel="stylesheet">
+		<link href="/common/css_ie/style_coffee.css" rel="stylesheet">
+		<![endif]-->
 	</head>
+
 	<body>
-		
-		<script type="text/javascript">
-			var $vo = {};
-				$vo.menu_cd 		  = "STB2703";
-				$vo.cate			  = "F17";
-				$vo.searchKeyword	  = "";
-				$vo.pageIndex		  = "1";
-				
-				
-			var $init = {};
-				$init.category = null;
-				$init.setCategoryCode = null;				
-				$init.setCategoryName = null;
-		</script>
-	
-		<div class="pop_dimm"></div>
+		<div id="wrap">
 			
 <script>
 //appId      : '1012019678818238',
@@ -383,34 +372,34 @@ var eFrequencyPlannerYn = 'Y';
 						</ul>
 						<ul>
 							<li class="mob_gnb_ttl2"><a role="button" class="en" href="javascript:void(0);">COFFEE<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 --></li>
-							<li><a href="../coffee/index.do.html">한눈에 보기</a></li>
+							<li><a href="index.do.html">한눈에 보기</a></li>
 							<li>
 								<a role="button" href="javascript:void(0);">커피<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 -->
 								<ul>
-									<li><a href="../coffee/product_list.do.html">스타벅스 원두</a></li>
-									<li><a href="../coffee/product_list.do-1.html?PACKAGE=01">스타벅스 비아</a></li>
+									<li><a href="product_list.do.html">스타벅스 원두</a></li>
+									<li><a href="product_list.do-1.html?PACKAGE=01">스타벅스 비아</a></li>
 									<!-- <li><a href="/coffee/product_list.do?PACKAGE=02">스타벅스 오리가미</a></li> 20210915 삭제 -->
-									<li><a href="../coffee/product_list.do-2.html?PACKAGE=05">스타벅스앳홈 by 캡슐</a></li><!-- 20210915 추가 -->
+									<li><a href="product_list.do-2.html?PACKAGE=05">스타벅스앳홈 by 캡슐</a></li><!-- 20210915 추가 -->
 								</ul>
 							</li>
-							<li><a href="../coffee/productFinder.do.html">나와 어울리는 커피</a></li>
+							<li><a href="productFinder.do.html">나와 어울리는 커피</a></li>
 							<li>
 								<a role="button" href="javascript:void(0);">스타벅스 리저브™<span class="mob_gnb_arrow_down"></span></a>
 								<ul>
-									<li><a href="../coffee/reserve_info.do.html">ABOUT</a></li>
-									<li><a href="../coffee/reserve_magazine_list.do.html">RESERVE MAGAZINE</a></li>
+									<li><a href="reserve_info.do.html">ABOUT</a></li>
+									<li><a href="reserve_magazine_list.do.html">RESERVE MAGAZINE</a></li>
 								</ul>
 							</li>
 							<li>
 								<a role="button" href="javascript:void(0);">에스프레소 음료<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가  -->
 								<ul>
-									<li><a href="../coffee/doppio.do.html">도피오</a></li>
-									<li><a href="../coffee/espresso_macchiato.do.html">에스프레소 마키아또</a></li>
-									<li><a href="../coffee/americano.do.html">아메리카노</a></li>
-									<li><a href="../coffee/caramel_macchato.do.html">마키아또</a></li>
-									<li><a href="../coffee/cappuccino.do.html">카푸치노</a></li>
-									<li><a href="../coffee/latte.do.html">라떼</a></li>
-									<li><a href="../coffee/mocha.do.html">모카</a></li>
+									<li><a href="doppio.do.html">도피오</a></li>
+									<li><a href="espresso_macchiato.do.html">에스프레소 마키아또</a></li>
+									<li><a href="americano.do.html">아메리카노</a></li>
+									<li><a href="caramel_macchato.do.html">마키아또</a></li>
+									<li><a href="cappuccino.do.html">카푸치노</a></li>
+									<li><a href="latte.do.html">라떼</a></li>
+									<li><a href="mocha.do.html">모카</a></li>
 									<!-- <li><a href="javascript:void(0);">더블샷</a></li> -->
 									<!-- <li><a href="/coffee/flat_white.do">리스트레또 비안코</a></li> 20210914 삭제 -->
 									<!-- <li class="mgnb_gold"><a href="javascript:void(0);">·에스프레소 초이스</a></li>
@@ -421,24 +410,24 @@ var eFrequencyPlannerYn = 'Y';
 							<li>
 								<a role="button" href="javascript:void(0);">최상의 커피를 즐기는 법<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가  -->
 								<ul>
-									<li><a href="../coffee/higher_enjoy.do.html">커피 프레스</a></li>
-									<li><a href="../coffee/higher_enjoy.do-1.html?PACKAGE=01">푸어 오버</a></li>
-									<li><a href="../coffee/higher_enjoy.do-2.html?PACKAGE=02">아이스 푸어 오버</a></li>
-									<li><a href="../coffee/higher_enjoy.do-3.html?PACKAGE=03">커피 메이커</a></li>
-									<li><a href="../coffee/higher_enjoy.do-4.html?PACKAGE=04">리저브를 매장에서 다양하게 즐기는 법</a></li>
+									<li><a href="higher_enjoy.do.html">커피 프레스</a></li>
+									<li><a href="higher_enjoy.do-1.html?PACKAGE=01">푸어 오버</a></li>
+									<li><a href="higher_enjoy.do-2.html?PACKAGE=02">아이스 푸어 오버</a></li>
+									<li><a href="higher_enjoy.do-3.html?PACKAGE=03">커피 메이커</a></li>
+									<li><a href="higher_enjoy.do-4.html?PACKAGE=04">리저브를 매장에서 다양하게 즐기는 법</a></li>
 								</ul>
 							</li>
 							<li>
 								<a role="button" href="javascript:void(0);">커피 이야기<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 -->
 								<ul>
 									<!-- 20210914 수정 -->
-									<li><a href="../coffee/story.do.html">농장에서 우리의 손으로</a></li>
+									<li><a href="story.do.html">농장에서 우리의 손으로</a></li>
 									<!-- <li><a href="/coffee/story.do?PACKAGE=01">에스프레소 초이스</a></li> -->
-									<li><a href="../coffee/story.do-1.html?PACKAGE=02">최상의 아라비카 원두</a></li>
-									<li><a href="../coffee/story.do-2.html?PACKAGE=03">스타벅스 로스트 스펙트럼</a></li>
+									<li><a href="story.do-1.html?PACKAGE=02">최상의 아라비카 원두</a></li>
+									<li><a href="story.do-2.html?PACKAGE=03">스타벅스 로스트 스펙트럼</a></li>
 									<!-- <li><a href="javascript:void(0);">추출방식 알아보기</a></li> -->
-									<li><a href="../coffee/story.do-3.html?PACKAGE=04">스타벅스 디카페인</a></li>
-									<li><a href="../coffee/story.do-4.html?PACKAGE=05">클로버® 커피 추출 시스템</a></li>
+									<li><a href="story.do-3.html?PACKAGE=04">스타벅스 디카페인</a></li>
+									<li><a href="story.do-4.html?PACKAGE=05">클로버® 커피 추출 시스템</a></li>
 									<!-- //20210914 수정 -->
 								</ul>
 							</li>
@@ -587,7 +576,7 @@ var eFrequencyPlannerYn = 'Y';
 									<li><a href="../msr/msreward/about.do.html">스타벅스 리워드 소개</a></li> <!-- 스타벅스 리워드 수정 -->
 									<li><a href="../msr/msreward/level_benefit.do.html">등급 및 혜택</a></li>
 									<li><a href="../msr/msreward/star.do.html">스타벅스 별</a></li>
-									<li><a href="faq.do.html?menu_cd=STB2703&cate=F17">자주 하는 질문</a></li> <!-- 20210809 수정 -->
+									<li><a href="../community/faq.do.html?menu_cd=STB2703&cate=F17">자주 하는 질문</a></li> <!-- 20210809 수정 -->
 								</ul>
 							</li>
 							<li>
@@ -598,7 +587,7 @@ var eFrequencyPlannerYn = 'Y';
 									<li><a href="../msr/scard/register_inquiry.do.html">등록 및 조회</a></li>
 									<li><a href="../msr/scard/charge_information.do.html">충전 및 이용안내</a></li>
 									<li><a href="../msr/scard/lost_report.do.html">분실신고/환불신청</a></li>
-									<li><a href="faq.do-1.html?menu_cd=STB2703&cate=F05">자주 하는 질문</a></li> <!-- 20210809 수정 -->
+									<li><a href="../community/faq.do-1.html?menu_cd=STB2703&cate=F05">자주 하는 질문</a></li> <!-- 20210809 수정 -->
 								</ul>
 							</li>
 							<li>
@@ -607,7 +596,7 @@ var eFrequencyPlannerYn = 'Y';
 									<li><a href="../msr/sceGift/egift_information.do.html">스타벅스 e-Gift Card 소개</a></li>
 									<li><a href="../msr/sceGift/msr_useguide.do.html">이용안내</a></li>
 									<li><a href="../msr/sceGift/gift_step1.do.html" required="login">선물하기</a></li>
-									<li><a href="faq.do-2.html?menu_cd=STB2703&cate=F22">자주 하는 질문</a></li> <!-- 20210809 수정 -->
+									<li><a href="../community/faq.do-2.html?menu_cd=STB2703&cate=F22">자주 하는 질문</a></li> <!-- 20210809 수정 -->
 								</ul>
 							</li>
 						</ul>
@@ -688,55 +677,52 @@ var eFrequencyPlannerYn = 'Y';
 	</div>
 </div>			
 
-			<!-- 서브 타이틀 -->
-			<div class="sub_tit_wrap">
-				<div class="sub_tit_inner">
-					<h2><img src="../common/img/msr/msreward/msr_tit2.jpg?v=210810" alt="자주 하는 질문"></h2> <!-- 20210809 수정 -->
-					<ul class="smap">
-						<li><a href="javascript:void(0)"><img src="../common/img/common/icon_home.png" alt="홈으로"></a></li>
-						<li><img class="arrow" src="../common/img/common/icon_arrow.png" alt="하위메뉴"></li>
-						<li class="en"><a href="javascript:void(0)" class="subHeadMnu1">WHAT'S NEW</a></li>
-						<li><img class="arrow" src="../common/img/common/icon_arrow.png" alt="하위메뉴"></li>
-						<li><a href="javascript:void(0)" class="subHeadMnu2">자주 하는 질문</a></li> <!-- 211221 수정 -->
-					</ul>
-				</div>
-			</div>
-			<!-- 서브 타이틀 end -->
-						
 			<div id="container">
-				<!-- 자주하는 질문 -->
-				<section class="msr_section">
-					<p class="msr_t1"><span class="subHeadMnu2"></span>에 대한 궁금점이 많으신가요?고객님의 문의사항에 대한 답변을 빠르게 찾으실 수 있습니다.</p>
-					<div class="faq_sch_wrap">
-						<form action="" method="post">
-							<fieldset>
-								<legend class="hid">스타벅스 리워드 자주하는 질문 검색</legend> <!-- 스타벅스 리워드 수정 -->
-								<div class="select_box select_box01" style="display:none">
-									<label class="value" for="msr_faq_01">전체</label>
-									<select title="자주하는 질문 검색 종류" id="msr_faq_01">
-										<option value="전체">전체</option>
-										<option value="자주하는 질문1">자주하는 질문1</option>
-										<option value="자주하는 질문2">자주하는 질문2</option>
-									</select>
-								</div>
-								<div class="msr_sch_input">
-									<input type="text" name="msr_bar01" id="msr_bar01"> <a href="javascript:void(0)" class="sch_btn">검색</a>
-								</div>
-							</fieldset>
-						</form>
-					</div>
-					<dl class="msr_faq_wrap">
-
-					</dl>
-					<div class="faq_pagination">
-						<ul class="pager">
-
+				<!-- 서브 타이틀 -->
+				<div class="sub_tit_wrap">
+					<div class="sub_tit_inner">
+						<h2><img src="../common/img/coffee/espresso/doppio_ttl.jpg" alt="도피오"></h2>
+						<ul class="smap">
+							<li><a href="../index.htm"><img src="../common/img/common/icon_home.png" alt="홈으로"></a></li>
+							<li><img class="arrow" src="../common/img/common/icon_arrow.png" alt="하위메뉴"></li>
+							<li class="en"><a href="espresso.do.html">COFFEE</a></li>
+							<li><img class="arrow" src="../common/img/common/icon_arrow.png" alt="하위메뉴"></li>
+							<li><a href="espresso.do.html">에스프레소 음료</a></li>
+							<li><img class="arrow" src="../common/img/common/icon_arrow.png" alt="하위메뉴"></li>
+							<li><a href="doppio.do.html" class="this">도피오</a></li>
 						</ul>
 					</div>
+				</div>
+				<!-- 서브 타이틀 end -->
+				<!-- 상단 커피 -->
+				<section class="cf_espressoTop_wrap">
+					<article class="cf_espressoTop_inner">
+						<p class="cf_espressoClasslcs_img"><img src="../common/img/coffee/espresso/doppio_img01.jpg" alt="doppio"></p>
+						<dl class="cf_espressoClasslcs_info">
+                            <dt>“라떼, 모카, 마끼아또 등 모든 스타벅스 음료의 기본이자 생명은 완벽하게 추출된 에스프레소입니다.” </dt>
+                            <dd>                                
+                                <p>도피오는 진한 에스프레소 샷 두 개를 섞은 음료입니다. 바리스타는 각각의 샷을 정확히 5초 동안 추출합니다. <br>샷에는 반드시 크레마, 바디, 하트로 형성된 세 개의 층이 있어야 하며, 지난 40여 년 동안 스타벅스가 도피오를 추출한 방식입니다. <br>스타벅스는 완벽한 에스프레소를 만드는 것이 맛있는 음료를 만드는 핵심이라고 믿습니다.</p><!-- 20210914 수정 -->
+                            </dd>
+						</dl>
+					</article>
 				</section>
-				<!-- 자주하는 질문 end -->			
+				<!-- 상단 end -->
+				<!-- 하단 -->
+				<!-- 제품 상세보기 하단공통 -->
+				<div class="productView_footmenu">
+					<div class="productView_footmenu_inner">						
+						<div class="productView_bottom">
+							<p class="tit">관련 제품</p>
+							<div class="productRel_wrap"> 
+								<ul class="productRel_ul">
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 제품 상세보기 하단공통 end -->
+				<!-- 하단 end -->
 			</div>
-			<!-- footer -->
 			
 
 
@@ -1200,9 +1186,100 @@ var eFrequencyPlannerYn = 'Y';
 				});
 			</script>
 		
-			<!-- footer end -->
-			
-			<script src="../common/js/bbs/bbs.js?v=220122"></script>
-	</body>
+            <form name="drinkListForm" method="post">
+                <input type="hidden" name="product_cd">
+            </form>
+		<script src="../common/js/coffee.js"></script>
+		<script src="../common/js/jquery.ezmark.min-1.js"></script>		
+		<script>
+			$(document).ready(function(){
+
+				/* 150517 추가 - 문진욱 */
+
+				if (myWindow > 960) {
+
+					var faSlider = $('.footer_awards_slider').bxSlider({
+						minSlides:4,
+						maxSlides:6,
+						slideWidth:189,
+						slideMargin:0,
+						controls:false,
+						auto:true,
+						autoControls:true,
+						autoControlsCombine:true,
+						pause:2000
+					});
+
+				} else if ((myWindow > 640) && (myWindow <= 960)) {
+					var faSlider = $('.footer_awards_slider').bxSlider({
+						minSlides:3,
+						maxSlides:3,
+						slideWidth:210,
+						slideMargin:0,
+						controls:false,
+						auto:true,
+						autoControls:true,
+						autoControlsCombine:true,
+						pause:2000
+					});
+				} else if (myWindow <= 640) {
+					var faSlider = $('.footer_awards_slider').bxSlider({
+						minSlides:1,
+						maxSlides:1,
+						slideWidth:300,
+						slideMargin:0,
+						controls:false,
+						auto:true,
+						autoControls:true,
+						autoControlsCombine:true,
+						pause:2000
+					});
+				}
+
+				/* 150517 추가 - 문진욱 end */
+				
+				getProductList('W0000115');
+
+			});
+            
+            function getProductList(tmp_cate) {
+
+                var option = {
+                        'CATE_CD' : tmp_cate
+                };
+                __ajaxCall('/menu/productListAjax.do', option , true, "JSON", "POST", 
+                function(data) {                    
+                    if(data.list.length > 0) {
+                        $('#tpl_productLi').tmpl(data.list).appendTo($('.productRel_ul'));
+                        
+                        $('.goView').bind('click', function() {
+                            product_cd = $(this).attr('prod');
+                            f = document.drinkListForm;
+                            f.action = "/menu/drink_view.do";
+                            f.product_cd.value = product_cd;
+                            f.submit();
+                        });
+                    } else {
+                    	$('.productView_footmenu').hide();
+                    }
+                },
+                function() {
+                });
+
+            }
+		</script>
+        <script type="text/x-jquery-tmpl" id="tpl_productLi">
+            <li>
+                <dl>
+                    <dt><a href="javascript:void(0)" class="goView" prod="${product_CD}"><img src="${img_UPLOAD_PATH.replace("www", "image")}${file_PATH}" alt="${product_NM}"></a></dt>
+                    <dd>
+                        <p class="t1">${product_NM}</p>
+                        <p class="t2">${content}</p>
+                        <p class="more_btn"><a href="javascript:void(0)" class="goView" prod="${product_CD}"><img src="//image.istarbucks.co.kr/common/img/coffee/cf_more_btn.png" alt="자세히 보기"></a></p>
+                    </dd>
+                </dl>
+            </li>
+        </script>
+	</div></body>
 
 </html>

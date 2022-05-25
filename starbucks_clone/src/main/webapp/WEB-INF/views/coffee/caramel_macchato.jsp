@@ -1,4 +1,6 @@
-﻿
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html lang="ko">
 
@@ -68,12 +70,13 @@ var eFrequencySeq = '172';
 var eFrequencyPlannerYn = 'Y';
 </script>
 
-		<link href="../common/css/style_coffee-2.css?v=210917" rel="stylesheet">
+		<link href="../common/css/style_coffee.css" rel="stylesheet">
 		<!--[if lt IE 9]>
 		<link href="/common/css_ie/style_main.css" rel="stylesheet">
 		<link href="/common/css_ie/style_coffee.css" rel="stylesheet">
 		<![endif]-->
 	</head>
+
 
 	<body>
 		<div id="wrap">
@@ -679,7 +682,7 @@ var eFrequencyPlannerYn = 'Y';
 				<!-- 서브 타이틀 -->
 				<div class="sub_tit_wrap">
 					<div class="sub_tit_inner">
-						<h2><img src="../common/img/coffee/espresso/americano_ttl.jpg" alt="아메리카노"></h2>
+						<h2><img src="../common/img/coffee/espresso/caramel_macchato_ttl.jpg" alt="마키야또"></h2>
 						<ul class="smap">
 							<li><a href="../index.htm"><img src="../common/img/common/icon_home.png" alt="홈으로"></a></li>
 							<li><img class="arrow" src="../common/img/common/icon_arrow.png" alt="하위메뉴"></li>
@@ -687,7 +690,7 @@ var eFrequencyPlannerYn = 'Y';
 							<li><img class="arrow" src="../common/img/common/icon_arrow.png" alt="하위메뉴"></li>
 							<li><a href="espresso.do.html">에스프레소 음료</a></li>
 							<li><img class="arrow" src="../common/img/common/icon_arrow.png" alt="하위메뉴"></li>
-							<li><a href="americano.do.html" class="this">아메리카노</a></li>
+							<li><a href="caramel_macchato.do.html" class="this">마키아또</a></li>
 						</ul>
 					</div>
 				</div>
@@ -695,11 +698,11 @@ var eFrequencyPlannerYn = 'Y';
 				<!-- 상단 커피 -->
 				<section class="cf_espressoTop_wrap">
 					<article class="cf_espressoTop_inner">
-						<p class="cf_espressoClasslcs_img"><img src="../common/img/coffee/espresso/americano_img01.jpg" alt="americano"></p>
+						<p class="cf_espressoClasslcs_img"><img src="../common/img/coffee/espresso/caramel_macchato_img01.jpg" alt="caramel macchato"></p>
 						<dl class="cf_espressoClasslcs_info">
-							<dt>“아메리카노는 에스프레소의 진한 풍미를 잘 느낄 수 있는 음료입니다. ” </dt>
+							<dt>“여러 층으로 이루어진 달콤한 마키아또는 본연의 달콤한 맛이 느껴질 때까지 부드러운 스팀 밀크가 먼저 입안을 채웁니다.”</dt><!-- 20210914 수정 -->
 							<dd>								
-								<p>아메리카노는 에스프레소 샷 두 개를 추출하여 바로 컵에 붓고, 그 위에 뜨거운 물을 재빠르게 부어 얇은 크레마 층이 형성되는 음료입니다. <br>갓 분쇄된 에스프레소만이 깊은 풍미를 가진 아메리카노를 만들 수 있습니다.</p><!-- 20210914 수정 -->
+								<p>스팀 밀크 다음으로 크리미한 우유 거품이 올라가며, 진한 에스프레소를 부어 윗부분에 갈색 마크가 형성됩니다. <br>마지막으로 바리스타가 캐러멜 드리즐을 그물 모양으로 뿌리면 마치 예술 작품과 같은 마키아토가 완성됩니다.</p><!-- 20210914 수정 -->
 							</dd>
 						</dl>
 					</article>
@@ -1236,7 +1239,7 @@ var eFrequencyPlannerYn = 'Y';
 
 				/* 150517 추가 - 문진욱 end */
                 
-                getProductList('W0000121');
+                getProductList('W0000120');
 
             });
             
@@ -1265,7 +1268,7 @@ var eFrequencyPlannerYn = 'Y';
                 });
 
             }
-		</script>
+        </script>
         <script type="text/x-jquery-tmpl" id="tpl_productLi">
             <li>
                 <dl>
