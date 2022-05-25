@@ -1,4 +1,4 @@
-﻿
+
 <!DOCTYPE html>
 <html lang="ko">
 
@@ -68,7 +68,7 @@ var eFrequencySeq = '172';
 var eFrequencyPlannerYn = 'Y';
 </script>
 
-		<link href="../common/css/style_coffee-2.css?v=210917" rel="stylesheet">
+		<link href="../common/css/style_coffee.css" rel="stylesheet">
 		<!--[if lt IE 9]>
 		<link href="/common/css_ie/style_main.css" rel="stylesheet">
 		<link href="/common/css_ie/style_coffee.css" rel="stylesheet">
@@ -679,7 +679,7 @@ var eFrequencyPlannerYn = 'Y';
 				<!-- 서브 타이틀 -->
 				<div class="sub_tit_wrap">
 					<div class="sub_tit_inner">
-						<h2><img src="../common/img/coffee/espresso/americano_ttl.jpg" alt="아메리카노"></h2>
+						<h2><img src="../common/img/coffee/espresso/espresso_macchiato_ttl.jpg" alt="에스프레소 마키아또"></h2>
 						<ul class="smap">
 							<li><a href="../index.htm"><img src="../common/img/common/icon_home.png" alt="홈으로"></a></li>
 							<li><img class="arrow" src="../common/img/common/icon_arrow.png" alt="하위메뉴"></li>
@@ -687,7 +687,7 @@ var eFrequencyPlannerYn = 'Y';
 							<li><img class="arrow" src="../common/img/common/icon_arrow.png" alt="하위메뉴"></li>
 							<li><a href="espresso.do.html">에스프레소 음료</a></li>
 							<li><img class="arrow" src="../common/img/common/icon_arrow.png" alt="하위메뉴"></li>
-							<li><a href="americano.do.html" class="this">아메리카노</a></li>
+							<li><a href="espresso_macchiato.do.html" class="this">에스프레소 마키아또</a></li>
 						</ul>
 					</div>
 				</div>
@@ -695,12 +695,12 @@ var eFrequencyPlannerYn = 'Y';
 				<!-- 상단 커피 -->
 				<section class="cf_espressoTop_wrap">
 					<article class="cf_espressoTop_inner">
-						<p class="cf_espressoClasslcs_img"><img src="../common/img/coffee/espresso/americano_img01.jpg" alt="americano"></p>
+						<p class="cf_espressoClasslcs_img"><img src="../common/img/coffee/espresso/espresso_macchiato_img01.jpg" alt="espresso macchiato"></p>
 						<dl class="cf_espressoClasslcs_info">
-							<dt>“아메리카노는 에스프레소의 진한 풍미를 잘 느낄 수 있는 음료입니다. ” </dt>
+							<dt>“에스프레소 마키아또는 전통적인 유럽 스타일의 음료입니다.” </dt>
 							<dd>								
-								<p>아메리카노는 에스프레소 샷 두 개를 추출하여 바로 컵에 붓고, 그 위에 뜨거운 물을 재빠르게 부어 얇은 크레마 층이 형성되는 음료입니다. <br>갓 분쇄된 에스프레소만이 깊은 풍미를 가진 아메리카노를 만들 수 있습니다.</p><!-- 20210914 수정 -->
-							</dd>
+								<p>에스프레소 마키아또는 전통적인 유럽 스타일 음료로 완벽하게 추출된 에스프레소 샷에 부드러운 우유 거품이 더해집니다. <br>거품을 너무 많이 넣으면 에스프레소의 강렬하고 진한 풍미와 캐러멜 풍미를 가릴 수 있으므로, 거품은 아주 적은 양만 올립니다.<p><!-- 20210914 -->
+							</p></dd>
 						</dl>
 					</article>
 				</section>
@@ -1236,9 +1236,9 @@ var eFrequencyPlannerYn = 'Y';
 
 				/* 150517 추가 - 문진욱 end */
                 
-                getProductList('W0000121');
+                getProductList('W0000122');
 
-            });
+			});
             
             function getProductList(tmp_cate) {
 

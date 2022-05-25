@@ -1,4 +1,6 @@
-﻿
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html lang="ko">
 
@@ -679,7 +681,7 @@ var eFrequencyPlannerYn = 'Y';
 				<!-- 서브 타이틀 -->
 				<div class="sub_tit_wrap">
 					<div class="sub_tit_inner">
-						<h2><img src="../common/img/coffee/espresso/espresso_macchiato_ttl.jpg" alt="에스프레소 마키아또"></h2>
+						<h2><img src="../common/img/coffee/espresso/doppio_ttl.jpg" alt="도피오"></h2>
 						<ul class="smap">
 							<li><a href="../index.htm"><img src="../common/img/common/icon_home.png" alt="홈으로"></a></li>
 							<li><img class="arrow" src="../common/img/common/icon_arrow.png" alt="하위메뉴"></li>
@@ -687,7 +689,7 @@ var eFrequencyPlannerYn = 'Y';
 							<li><img class="arrow" src="../common/img/common/icon_arrow.png" alt="하위메뉴"></li>
 							<li><a href="espresso.do.html">에스프레소 음료</a></li>
 							<li><img class="arrow" src="../common/img/common/icon_arrow.png" alt="하위메뉴"></li>
-							<li><a href="espresso_macchiato.do.html" class="this">에스프레소 마키아또</a></li>
+							<li><a href="doppio.do.html" class="this">도피오</a></li>
 						</ul>
 					</div>
 				</div>
@@ -695,12 +697,12 @@ var eFrequencyPlannerYn = 'Y';
 				<!-- 상단 커피 -->
 				<section class="cf_espressoTop_wrap">
 					<article class="cf_espressoTop_inner">
-						<p class="cf_espressoClasslcs_img"><img src="../common/img/coffee/espresso/espresso_macchiato_img01.jpg" alt="espresso macchiato"></p>
+						<p class="cf_espressoClasslcs_img"><img src="../common/img/coffee/espresso/doppio_img01.jpg" alt="doppio"></p>
 						<dl class="cf_espressoClasslcs_info">
-							<dt>“에스프레소 마키아또는 전통적인 유럽 스타일의 음료입니다.” </dt>
-							<dd>								
-								<p>에스프레소 마키아또는 전통적인 유럽 스타일 음료로 완벽하게 추출된 에스프레소 샷에 부드러운 우유 거품이 더해집니다. <br>거품을 너무 많이 넣으면 에스프레소의 강렬하고 진한 풍미와 캐러멜 풍미를 가릴 수 있으므로, 거품은 아주 적은 양만 올립니다.<p><!-- 20210914 -->
-							</p></dd>
+                            <dt>“라떼, 모카, 마끼아또 등 모든 스타벅스 음료의 기본이자 생명은 완벽하게 추출된 에스프레소입니다.” </dt>
+                            <dd>                                
+                                <p>도피오는 진한 에스프레소 샷 두 개를 섞은 음료입니다. 바리스타는 각각의 샷을 정확히 5초 동안 추출합니다. <br>샷에는 반드시 크레마, 바디, 하트로 형성된 세 개의 층이 있어야 하며, 지난 40여 년 동안 스타벅스가 도피오를 추출한 방식입니다. <br>스타벅스는 완벽한 에스프레소를 만드는 것이 맛있는 음료를 만드는 핵심이라고 믿습니다.</p><!-- 20210914 수정 -->
+                            </dd>
 						</dl>
 					</article>
 				</section>
@@ -711,9 +713,9 @@ var eFrequencyPlannerYn = 'Y';
 					<div class="productView_footmenu_inner">						
 						<div class="productView_bottom">
 							<p class="tit">관련 제품</p>
-							<div class="productRel_wrap">
-                                <ul class="productRel_ul">
-                                </ul>
+							<div class="productRel_wrap"> 
+								<ul class="productRel_ul">
+								</ul>
 							</div>
 						</div>
 					</div>
@@ -1235,8 +1237,8 @@ var eFrequencyPlannerYn = 'Y';
 				}
 
 				/* 150517 추가 - 문진욱 end */
-                
-                getProductList('W0000122');
+				
+				getProductList('W0000115');
 
 			});
             
@@ -1246,7 +1248,7 @@ var eFrequencyPlannerYn = 'Y';
                         'CATE_CD' : tmp_cate
                 };
                 __ajaxCall('/menu/productListAjax.do', option , true, "JSON", "POST", 
-                function(data) {
+                function(data) {                    
                     if(data.list.length > 0) {
                         $('#tpl_productLi').tmpl(data.list).appendTo($('.productRel_ul'));
                         
@@ -1258,7 +1260,7 @@ var eFrequencyPlannerYn = 'Y';
                             f.submit();
                         });
                     } else {
-                        $('.productView_footmenu').hide();
+                    	$('.productView_footmenu').hide();
                     }
                 },
                 function() {

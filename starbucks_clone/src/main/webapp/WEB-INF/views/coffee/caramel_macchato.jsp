@@ -1,4 +1,6 @@
-﻿
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html lang="ko">
 
@@ -74,6 +76,7 @@ var eFrequencyPlannerYn = 'Y';
 		<link href="/common/css_ie/style_coffee.css" rel="stylesheet">
 		<![endif]-->
 	</head>
+
 
 	<body>
 		<div id="wrap">
@@ -679,7 +682,7 @@ var eFrequencyPlannerYn = 'Y';
 				<!-- 서브 타이틀 -->
 				<div class="sub_tit_wrap">
 					<div class="sub_tit_inner">
-						<h2><img src="../common/img/coffee/espresso/cappuccino_ttl.jpg" alt="카푸치노"></h2>
+						<h2><img src="../common/img/coffee/espresso/caramel_macchato_ttl.jpg" alt="마키야또"></h2>
 						<ul class="smap">
 							<li><a href="../index.htm"><img src="../common/img/common/icon_home.png" alt="홈으로"></a></li>
 							<li><img class="arrow" src="../common/img/common/icon_arrow.png" alt="하위메뉴"></li>
@@ -687,7 +690,7 @@ var eFrequencyPlannerYn = 'Y';
 							<li><img class="arrow" src="../common/img/common/icon_arrow.png" alt="하위메뉴"></li>
 							<li><a href="espresso.do.html">에스프레소 음료</a></li>
 							<li><img class="arrow" src="../common/img/common/icon_arrow.png" alt="하위메뉴"></li>
-							<li><a href="cappuccino.do.html" class="this">카푸치노</a></li>
+							<li><a href="caramel_macchato.do.html" class="this">마키아또</a></li>
 						</ul>
 					</div>
 				</div>
@@ -695,11 +698,11 @@ var eFrequencyPlannerYn = 'Y';
 				<!-- 상단 커피 -->
 				<section class="cf_espressoTop_wrap">
 					<article class="cf_espressoTop_inner">
-						<p class="cf_espressoClasslcs_img"><img src="../common/img/coffee/espresso/cappuccino_img01.jpg" alt="cappuccino"></p>
+						<p class="cf_espressoClasslcs_img"><img src="../common/img/coffee/espresso/caramel_macchato_img01.jpg" alt="caramel macchato"></p>
 						<dl class="cf_espressoClasslcs_info">
-							<dt>“카푸치노는 바리스타가 가진 가장 고도화된 기술입니다.” </dt><!-- 20210914 수정 -->
+							<dt>“여러 층으로 이루어진 달콤한 마키아또는 본연의 달콤한 맛이 느껴질 때까지 부드러운 스팀 밀크가 먼저 입안을 채웁니다.”</dt><!-- 20210914 수정 -->
 							<dd>								
-								<p>스타벅스의 바리스타는 카푸치노에 공기가 들어간 가벼운 거품과 맛있는 에스프레소가 만나 조화를 이루는 시점에 대해 고도의 트레이닝을 하며 테스트를 통과해야만 합니다. <br>무게에 따라 더 가벼운 카푸치노와 혹은 더 무거운 카푸치노를 원한다면 바리스타에게 미리 요청하세요. 취향에 맞는 카푸치노를 제조해드립니다.</p><!-- 20210914 수정 -->
+								<p>스팀 밀크 다음으로 크리미한 우유 거품이 올라가며, 진한 에스프레소를 부어 윗부분에 갈색 마크가 형성됩니다. <br>마지막으로 바리스타가 캐러멜 드리즐을 그물 모양으로 뿌리면 마치 예술 작품과 같은 마키아토가 완성됩니다.</p><!-- 20210914 수정 -->
 							</dd>
 						</dl>
 					</article>
@@ -1188,7 +1191,7 @@ var eFrequencyPlannerYn = 'Y';
                 <input type="hidden" name="product_cd">
             </form>
 		<script src="../common/js/coffee.js"></script>
-		<script src="../common/js/jquery.ezmark.min-1.js"></script>
+		<script src="../common/js/jquery.ezmark.min-1.js"></script>		
 		<script>
 			$(document).ready(function(){
 
@@ -1236,7 +1239,7 @@ var eFrequencyPlannerYn = 'Y';
 
 				/* 150517 추가 - 문진욱 end */
                 
-                getProductList('W0000119');
+                getProductList('W0000120');
 
             });
             

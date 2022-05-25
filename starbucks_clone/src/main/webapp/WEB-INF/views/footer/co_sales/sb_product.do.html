@@ -1351,14 +1351,14 @@ var eFrequencyPlannerYn = 'Y';
 		
 
     <script>
-    <!--
-    function filesDown(furl) {
+    //<!--
+    /* function filesDown(furl) {
         if ("Y" == "") {
             alert("iOS  버전에 따라 파일 선택 후 별도 저장이 필요할 수 있습니다.");
         }
 
         window.open(furl, '_blank');
-    }
+    } */
 
     //-->
     /* s::20210305 팝업 추가 */
