@@ -1,4 +1,4 @@
-﻿
+﻿<%@ page contentType="text/html; charset=UTF-8"%>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -437,7 +437,7 @@ var eFrequencyPlannerYn = 'Y';
 							<li>
 								<a role="button" href="javascript:void(0);">음료<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 -->
 								<ul>
-									<li><a href="menu/drink_list.do.html">전체보기</a></li>
+									<li><a href="menu">전체보기</a></li>
 									<li><a href="menu/drink_list.do-1.html?CATE_CD=product_cold_brew">콜드 브루</a></li>
 									<li><a href="menu/drink_list.do-2.html?CATE_CD=product_brood">브루드 커피</a></li>
 									<li><a href="menu/drink_list.do-3.html?CATE_CD=product_espresso">에스프레소</a></li>
