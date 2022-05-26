@@ -27,7 +27,11 @@
 <link href="common/css/style_dt.css?v=20191211" rel="stylesheet"> <!-- 20191211 수정 -->
 
 <!--[if lt IE 9]>
+<<<<<<< HEAD
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+=======
 	<script src="/html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+>>>>>>> refs/remotes/origin/main
 	<link href="common/css_ie/style.css" rel="stylesheet">
 	<script>
 		document.createElement('header');
@@ -141,7 +145,11 @@ var eFrequencyPlannerYn = 'Y';
 	     var js, fjs = d.getElementsByTagName(s)[0];
 	     if (d.getElementById(id)) {return;}
 	     js = d.createElement(s); js.id = id;
+<<<<<<< HEAD
+	     js.src = "//connect.facebook.net/ko_KR/sdk.js";
+=======
 	     js.src = "connect.facebook.net/ko_KR/sdk.js";
+>>>>>>> refs/remotes/origin/main
 	     fjs.parentNode.insertBefore(js, fjs);
 	   }(document, 'script', 'facebook-jssdk'));
   
@@ -229,13 +237,13 @@ var eFrequencyPlannerYn = 'Y';
 						<div class="mycard_area2">
 							<img alt="카드이름" src="common/img/common/mycard2.png">
 							<p class="num"><!-- 1234-1234-1234-1234 --></p>
-							<p class="barcord"><!-- <img src="/image.istarbucks.co.kr/common/img/common/bacord.png" alt=""> --></p>
+							<p class="barcord"><!-- <img src="//image.istarbucks.co.kr/common/img/common/bacord.png" alt=""> --></p>
 						</div>
 						<div class="mycard_one">
 							<!-- <div class="front"> -->
 							<img src="common/img/common/payment_icon1.png" alt="">
 							<!-- </div> -->
-							<!-- <div class="back"><img src="/image.istarbucks.co.kr/common/img/common/payment_icon1.png" alt=""></div> -->
+							<!-- <div class="back"><img src="//image.istarbucks.co.kr/common/img/common/payment_icon1.png" alt=""></div> -->
 						</div>
 						<p class="mycard_money_result">잔액 <span class="en balance"><!-- 550,000 --></span>원</p>
 						<!-- 150924 - 다른카드보기버튼 추가 -->
@@ -278,7 +286,7 @@ var eFrequencyPlannerYn = 'Y';
 						
 						<!-- 20170510 추가 : 아이콘추가 -->
 						<div class="notice_icon4">
-							<a href="/eFreq/status?TYPE=BARCODE">
+							<a href="eFreq/status?TYPE=BARCODE">
 								<p></p>
 								<span>e-프리퀀시<br>바코드</span>
 							</a>
@@ -296,7 +304,7 @@ var eFrequencyPlannerYn = 'Y';
 						<div class="msr_nologin_btns">
 							<ul>
 								<li><a href="javascript:$.loginLib.showLayerLogin();">로그인</a></li>
-								<li><a href="/mem/join">회원가입</a></li>
+								<li><a href="mem/join">회원가입</a></li>
 							</ul>
 						</div>
 					</div>
@@ -332,12 +340,16 @@ var eFrequencyPlannerYn = 'Y';
 
 			<!-- 960 gnb -->
 			<div class="tablet_gnb_wrap">
-				<h1 class="logo"><a href="/index.htm">스타벅스 코리아</a></h1>
+				<h1 class="logo"><a href="index.htm">스타벅스 코리아</a></h1>
 				<nav class="tablet_gnb_sep">
 					<ul>
 						<li class="tablet_gnb01"><a href="javascript:void(0);" role="button" title="마이 리워드 레이어 열기"><!-- 접근성_20171106 role, title 추가 --><span class="rCup2"></span></a></li><!-- 150709 클레스 수정 -->
 						<li class="tablet_gnb02"><a href="my/index" required="login"><span class="a11y">마이스타벅스</span></a><!-- 접근성_20171106 span추가 --></li>
+<<<<<<< HEAD
+						<li class="tablet_gnb03"><a href="store/store_map"><span class="a11y">매장찾기</span></a><!-- 접근성_20171106 span추가 --></li>
+=======
 						<li class="tablet_gnb03"><a href="/store/store_map"><span class="a11y">매장찾기</span></a><!-- 접근성_20171106 span추가 --></li>
+>>>>>>> refs/remotes/origin/main
 						<li class="tablet_gnb04"><a href="javascript:void(0);"><span class="a11y" role="button">메뉴열기</span></a><!-- 접근성_20171106 span추가 --></li>
 					</ul>
 				</nav>
@@ -399,8 +411,8 @@ var eFrequencyPlannerYn = 'Y';
 							<li>
 								<a role="button" href="javascript:void(0);">My e-프리퀀시<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 -->
 								<ul>
-									<li><a href="/eFreq/guide?promoSeq=172">이용안내</a></li>
-									<li><a href="/eFreq/status-1?promoSeq=172" required="login">이용현황</a></li>
+									<li><a href="eFreq/guide?promoSeq=172">이용안내</a></li>
+									<li><a href="eFreq/status-1?promoSeq=172" required="login">이용현황</a></li>
 								</ul>
 							</li>
 							
@@ -419,36 +431,36 @@ var eFrequencyPlannerYn = 'Y';
 						</ul>
 						<ul>
 							<li class="mob_gnb_ttl2"><a role="button" class="en" href="javascript:void(0);">COFFEE<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 --></li>
-							<li><a href="/coffee/index">한눈에 보기</a></li>
+							<li><a href="coffee/index">한눈에 보기</a></li>
 							<li>
 								<a role="button" href="javascript:void(0);">커피<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 -->
 								<ul>
-									<li><a href="/coffee/product_list">스타벅스 원두</a></li>
-									<li><a href="/coffee/product_list-1?PACKAGE=01">스타벅스 비아</a></li>
-									<!-- <li><a href="/coffee/product_list?PACKAGE=02">스타벅스 오리가미</a></li> 20210915 삭제 -->
-									<li><a href="/coffee/product_list-2?PACKAGE=05">스타벅스앳홈 by 캡슐</a></li><!-- 20210915 추가 -->
+									<li><a href="coffee/product_list">스타벅스 원두</a></li>
+									<li><a href="coffee/product_list-1?PACKAGE=01">스타벅스 비아</a></li>
+									<!-- <li><a href="coffee/product_list?PACKAGE=02">스타벅스 오리가미</a></li> 20210915 삭제 -->
+									<li><a href="coffee/product_list-2?PACKAGE=05">스타벅스앳홈 by 캡슐</a></li><!-- 20210915 추가 -->
 								</ul>
 							</li>
-							<li><a href="/coffee/productFinder">나와 어울리는 커피</a></li>
+							<li><a href="coffee/productFinder">나와 어울리는 커피</a></li>
 							<li>
 								<a role="button" href="javascript:void(0);">스타벅스 리저브™<span class="mob_gnb_arrow_down"></span></a>
 								<ul>
-									<li><a href="/coffee/reserve_info">ABOUT</a></li>
-									<li><a href="/coffee/reserve_magazine_list">RESERVE MAGAZINE</a></li>
+									<li><a href="coffee/reserve_info">ABOUT</a></li>
+									<li><a href="coffee/reserve_magazine_list">RESERVE MAGAZINE</a></li>
 								</ul>
 							</li>
 							<li>
 								<a role="button" href="javascript:void(0);">에스프레소 음료<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가  -->
 								<ul>
-									<li><a href="/coffee/doppio">도피오</a></li>
-									<li><a href="/coffee/espresso_macchiato">에스프레소 마키아또</a></li>
-									<li><a href="/coffee/americano">아메리카노</a></li>
-									<li><a href="/coffee/caramel_macchato">마키아또</a></li>
-									<li><a href="/coffee/cappuccino">카푸치노</a></li>
-									<li><a href="/coffee/latte">라떼</a></li>
-									<li><a href="/coffee/mocha">모카</a></li>
+									<li><a href="coffee/doppio">도피오</a></li>
+									<li><a href="coffee/espresso_macchiato">에스프레소 마키아또</a></li>
+									<li><a href="coffee/americano">아메리카노</a></li>
+									<li><a href="coffee/caramel_macchato">마키아또</a></li>
+									<li><a href="coffee/cappuccino">카푸치노</a></li>
+									<li><a href="coffee/latte">라떼</a></li>
+									<li><a href="coffee/mocha">모카</a></li>
 									<!-- <li><a href="javascript:void(0);">더블샷</a></li> -->
-									<!-- <li><a href="/coffee/flat_white">리스트레또 비안코</a></li> 20210914 삭제 -->
+									<!-- <li><a href="coffee/flat_white">리스트레또 비안코</a></li> 20210914 삭제 -->
 									<!-- <li class="mgnb_gold"><a href="javascript:void(0);">·에스프레소 초이스</a></li>
 									<li class="mgnb_gold"><a href="javascript:void(0);">·프로모션 상품</a></li>
 									<li class="mgnb_gold"><a href="javascript:void(0);">·브런치 유어 웨이</a></li> -->
@@ -457,86 +469,86 @@ var eFrequencyPlannerYn = 'Y';
 							<li>
 								<a role="button" href="javascript:void(0);">최상의 커피를 즐기는 법<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가  -->
 								<ul>
-									<li><a href="/coffee/higher_enjoy">커피 프레스</a></li>
-									<li><a href="/coffee/higher_enjoy-1?PACKAGE=01">푸어 오버</a></li>
-									<li><a href="/coffee/higher_enjoy-2?PACKAGE=02">아이스 푸어 오버</a></li>
-									<li><a href="/coffee/higher_enjoy-3?PACKAGE=03">커피 메이커</a></li>
-									<li><a href="/coffee/higher_enjoy-4?PACKAGE=04">리저브를 매장에서 다양하게 즐기는 법</a></li>
+									<li><a href="coffee/higher_enjoy">커피 프레스</a></li>
+									<li><a href="coffee/higher_enjoy-1?PACKAGE=01">푸어 오버</a></li>
+									<li><a href="coffee/higher_enjoy-2?PACKAGE=02">아이스 푸어 오버</a></li>
+									<li><a href="coffee/higher_enjoy-3?PACKAGE=03">커피 메이커</a></li>
+									<li><a href="coffee/higher_enjoy-4?PACKAGE=04">리저브를 매장에서 다양하게 즐기는 법</a></li>
 								</ul>
 							</li>
 							<li>
 								<a role="button" href="javascript:void(0);">커피 이야기<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 -->
 								<ul>
 									<!-- 20210914 수정 -->
-									<li><a href="/coffee/story">농장에서 우리의 손으로</a></li>
-									<!-- <li><a href="/coffee/story?PACKAGE=01">에스프레소 초이스</a></li> -->
-									<li><a href="/coffee/story-1?PACKAGE=02">최상의 아라비카 원두</a></li>
-									<li><a href="/coffee/story-2?PACKAGE=03">스타벅스 로스트 스펙트럼</a></li>
+									<li><a href="coffee/story">농장에서 우리의 손으로</a></li>
+									<!-- <li><a href="coffee/story?PACKAGE=01">에스프레소 초이스</a></li> -->
+									<li><a href="coffee/story-1?PACKAGE=02">최상의 아라비카 원두</a></li>
+									<li><a href="coffee/story-2?PACKAGE=03">스타벅스 로스트 스펙트럼</a></li>
 									<!-- <li><a href="javascript:void(0);">추출방식 알아보기</a></li> -->
-									<li><a href="/coffee/story-3?PACKAGE=04">스타벅스 디카페인</a></li>
-									<li><a href="/coffee/story-4?PACKAGE=05">클로버® 커피 추출 시스템</a></li>
+									<li><a href="coffee/story-3?PACKAGE=04">스타벅스 디카페인</a></li>
+									<li><a href="coffee/story-4?PACKAGE=05">클로버® 커피 추출 시스템</a></li>
 									<!-- //20210914 수정 -->
 								</ul>
 							</li>
 						</ul>
 						<ul>
 							<li class="mob_gnb_ttl2"><a role="button" class="en" href="javascript:void(0);">MENU<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 --></li>
-							<li><a href="/menu/index">한눈에 보기</a></li>
+							<li><a href="menu/index">한눈에 보기</a></li>
 							<li>
 								<a role="button" href="javascript:void(0);">음료<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 -->
 								<ul>
-									<li><a href="/menu/drink_list">전체보기</a></li>
-									<li><a href="/menu/drink_list-1?CATE_CD=product_cold_brew">콜드 브루</a></li>
-									<li><a href="/menu/drink_list-2?CATE_CD=product_brood">브루드 커피</a></li>
-									<li><a href="/menu/drink_list-3?CATE_CD=product_espresso">에스프레소</a></li>
-									<li><a href="/menu/drink_list-4?CATE_CD=product_frappuccino">프라푸치노</a></li>
-									<li><a href="/menu/drink_list-5?CATE_CD=product_blended">블렌디드</a></li>
-									<li><a href="/menu/drink_list-6?CATE_CD=product_fizzo">스타벅스 피지오</a></li>
-									<li><a href="/menu/drink_list-7?CATE_CD=product_tea">티(티바나)</a></li>
-									<li><a href="/menu/drink_list-8?CATE_CD=product_etc">기타 제조 음료</a></li>
-									<li><a href="/menu/drink_list-9?CATE_CD=product_juice">스타벅스 주스(병음료)</a></li>
+									<li><a href="menu/drink_list">전체보기</a></li>
+									<li><a href="menu/drink_list-1?CATE_CD=product_cold_brew">콜드 브루</a></li>
+									<li><a href="menu/drink_list-2?CATE_CD=product_brood">브루드 커피</a></li>
+									<li><a href="menu/drink_list-3?CATE_CD=product_espresso">에스프레소</a></li>
+									<li><a href="menu/drink_list-4?CATE_CD=product_frappuccino">프라푸치노</a></li>
+									<li><a href="menu/drink_list-5?CATE_CD=product_blended">블렌디드</a></li>
+									<li><a href="menu/drink_list-6?CATE_CD=product_fizzo">스타벅스 피지오</a></li>
+									<li><a href="menu/drink_list-7?CATE_CD=product_tea">티(티바나)</a></li>
+									<li><a href="menu/drink_list-8?CATE_CD=product_etc">기타 제조 음료</a></li>
+									<li><a href="menu/drink_list-9?CATE_CD=product_juice">스타벅스 주스(병음료)</a></li>
 								</ul>
 							</li>
 							<li>
 								<a role="button" href="javascript:void(0);">푸드<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 -->
 								<ul>
-									<li><a href="/menu/food_list">전체보기</a></li>
-									<li><a href="/menu/food_list-1?CATE_CD=product_bakery">브레드</a></li>
-									<li><a href="/menu/food_list-2?CATE_CD=product_cake">케이크</a></li>
-									<li><a href="/menu/food_list-3?CATE_CD=product_sandwich">샌드위치 &amp; 샐러드</a></li>
-									<li><a href="/menu/food_list-4?CATE_CD=product_wram_food">따뜻한 푸드</a></li>
-									<li><a href="/menu/food_list-5?CATE_CD=product_fruit_yogurt">과일 &amp; 요거트</a></li>
-									<li><a href="/menu/food_list-6?CATE_CD=product_snack">스낵 &amp; 미니 디저트</a></li>
-									<li><a href="/menu/food_list-7?CATE_CD=product_icecream">아이스크림</a></li>
-                                    <!-- <li><a href="/menu/food_list?CATE_CD=product_etc">기타 푸드</a></li> -->
+									<li><a href="menu/food_list">전체보기</a></li>
+									<li><a href="menu/food_list-1?CATE_CD=product_bakery">브레드</a></li>
+									<li><a href="menu/food_list-2?CATE_CD=product_cake">케이크</a></li>
+									<li><a href="menu/food_list-3?CATE_CD=product_sandwich">샌드위치 &amp; 샐러드</a></li>
+									<li><a href="menu/food_list-4?CATE_CD=product_wram_food">따뜻한 푸드</a></li>
+									<li><a href="menu/food_list-5?CATE_CD=product_fruit_yogurt">과일 &amp; 요거트</a></li>
+									<li><a href="menu/food_list-6?CATE_CD=product_snack">스낵 &amp; 미니 디저트</a></li>
+									<li><a href="menu/food_list-7?CATE_CD=product_icecream">아이스크림</a></li>
+                                    <!-- <li><a href="menu/food_list?CATE_CD=product_etc">기타 푸드</a></li> -->
 								</ul>
 							</li>
 							<li>
 								<a role="button" href="javascript:void(0);">상품<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 -->
 								<ul>
-									<li><a href="/menu/product_list">전체보기</a></li>
-									<li><a href="/menu/product_list-1?CATE_CD=product_mug">머그</a></li>
-									<li><a href="/menu/product_list-2?CATE_CD=product_glass">글라스</a></li>
-									<li><a href="/menu/product_list-3?CATE_CD=product_plastic">플라스틱 텀블러</a></li>
-									<li><a href="/menu/product_list-4?CATE_CD=product_stainless">스테인리스 텀블러</a></li>
-									<li><a href="/menu/product_list-5?CATE_CD=product_vacuum">보온병</a></li>
-									<li><a href="/menu/product_list-6?CATE_CD=product_accessories">액세서리</a></li>
-									<li><a href="/menu/product_list-7?CATE_CD=product_present">선물세트</a></li>
-									<li><a href="/menu/product_list-8?CATE_CD=product_coffee">커피 용품</a></li>
-									<li><a href="/menu/product_list-9?CATE_CD=product_teaPackage">패키지 티(티바나)</a></li>
-									<!-- <li><a href="/menu/product_list?CATE_CD=product_planner">스타벅스 플래너</a></li> --> <!-- 20210602 삭제 -->
+									<li><a href="menu/product_list">전체보기</a></li>
+									<li><a href="menu/product_list-1?CATE_CD=product_mug">머그</a></li>
+									<li><a href="menu/product_list-2?CATE_CD=product_glass">글라스</a></li>
+									<li><a href="menu/product_list-3?CATE_CD=product_plastic">플라스틱 텀블러</a></li>
+									<li><a href="menu/product_list-4?CATE_CD=product_stainless">스테인리스 텀블러</a></li>
+									<li><a href="menu/product_list-5?CATE_CD=product_vacuum">보온병</a></li>
+									<li><a href="menu/product_list-6?CATE_CD=product_accessories">액세서리</a></li>
+									<li><a href="menu/product_list-7?CATE_CD=product_present">선물세트</a></li>
+									<li><a href="menu/product_list-8?CATE_CD=product_coffee">커피 용품</a></li>
+									<li><a href="menu/product_list-9?CATE_CD=product_teaPackage">패키지 티(티바나)</a></li>
+									<!-- <li><a href="menu/product_list?CATE_CD=product_planner">스타벅스 플래너</a></li> --> <!-- 20210602 삭제 -->
 								</ul>
 							</li>
 							<li>
 								<a role="button" href="javascript:void(0);">카드<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 -->
 								<ul>
-									<li><a href="/menu/card_list">전체보기</a></li>
-									<li><a href="/menu/card_list-1?CATE_CD=product_offline">실물카드</a></li>
-									<li><a href="/menu/card_list-2?CATE_CD=product_egift">e-Gift 카드</a></li>
+									<li><a href="menu/card_list">전체보기</a></li>
+									<li><a href="menu/card_list-1?CATE_CD=product_offline">실물카드</a></li>
+									<li><a href="menu/card_list-2?CATE_CD=product_egift">e-Gift 카드</a></li>
 								</ul>
 							</li>
 							<!-- <li>
-								<a href="/wholecake/reserve_cake01">온라인 케익 예약 span class="mob_gnb_arrow_down"></span</a>
+								<a href="wholecake/reserve_cake01">온라인 케익 예약 span class="mob_gnb_arrow_down"></span</a>
 								<ul>
 									<li><a href="javascript:void(0);">케익선택</a></li>
 									<li><a href="javascript:void(0);">예약정보입력</a></li>
@@ -546,71 +558,71 @@ var eFrequencyPlannerYn = 'Y';
 							<li>
 								<a role="button" href="javascript:void(0);">메뉴 이야기<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 -->
 								<ul>
-									<li><a href="/store/store_nitro_coldbrew">나이트로 콜드브루</a></li>
-									<li><a href="/store/store_coldbrew">콜드 브루</a></li>
-									<li><a href="/menuStory/teavana">스타벅스 티바나</a></li>
+									<li><a href="store/store_nitro_coldbrew">나이트로 콜드브루</a></li>
+									<li><a href="store/store_coldbrew">콜드 브루</a></li>
+									<li><a href="menuStory/teavana">스타벅스 티바나</a></li>
 								</ul>
 							</li>
 						</ul>
 						<ul>
 							<li class="mob_gnb_ttl2"><a role="button" class="en" href="javascript:void(0);">STORE<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 --></li>
-							<li><a href="/store/index">한눈에 보기</a></li>
+							<li><a href="store/index">한눈에 보기</a></li>
 							<li>
 								<a role="button" href="javascript:void(0);">매장 찾기<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 -->
 								<ul>
-									<li><a href="/store/store_map-1?disp=quick">빠른 검색</a></li>
-									<li><a href="/store/store_map-2?disp=locale">지역 검색</a></li>
+									<li><a href="store/store_map-1?disp=quick">빠른 검색</a></li>
+									<li><a href="store/store_map-2?disp=locale">지역 검색</a></li>
 								</ul>
 							</li>
-							<li><a href="/store/store_drive">드라이브 스루 매장</a></li>
-							<li><a href="/store/store_reserve">스타벅스 리저브™ 매장</a></li>
-							<li><a href="/store/store_community">커뮤니티 스토어 매장</a></li>
+							<li><a href="store/store_drive">드라이브 스루 매장</a></li>
+							<li><a href="store/store_reserve">스타벅스 리저브™ 매장</a></li>
+							<li><a href="store/store_community">커뮤니티 스토어 매장</a></li>
 							<li>
 								<a role="button" href="javascript:void(0);">매장 이야기<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 -->
 								<ul>
-									<!-- <li><a href="/store/store_cheongdam">청담스타</a></li> 20210727 메뉴 비노출 -->
-									<li><a href="/store/store_star_field">티바나 바 매장</a></li>
-									<!-- <li><a href="/store/store_park">파미에파크</a></li> 20210727 메뉴 비노출 -->
+									<!-- <li><a href="store/store_cheongdam">청담스타</a></li> 20210727 메뉴 비노출 -->
+									<li><a href="store/store_star_field">티바나 바 매장</a></li>
+									<!-- <li><a href="store/store_park">파미에파크</a></li> 20210727 메뉴 비노출 -->
 								</ul>
 							</li>
 						</ul>
 						<ul>
 							<li class="mob_gnb_ttl2"><a role="button" class="en" href="javascript:void(0);">RESPONSIBILITY<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 --></li>
-							<li><a href="/responsibility/index">한눈에 보기</a></li>
-							<li><a href="/responsibility/starbucks_shared_planet">사회공헌 캠페인 소개</a></li> <!-- 20210820 메뉴명 수정 -->
+							<li><a href="responsibility/index">한눈에 보기</a></li>
+							<li><a href="responsibility/starbucks_shared_planet">사회공헌 캠페인 소개</a></li> <!-- 20210820 메뉴명 수정 -->
 							<li>
 								<a role="button" href="javascript:void(0);">지역 사회 참여 활동<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 -->
 								<ul>
-									<li><a href="/responsibility/hope_delivery">희망배달 캠페인</a></li>
-									<li><a href="/responsibility/talent_donation">재능기부 카페 소식</a></li>
-									<li><a href="/responsibility/community_store">커뮤니티 스토어</a></li>
-									<li><a href="/responsibility/youth_resource">청년 지원 프로그램</a></li><!-- 202107 메뉴명 수정 -->
-									<li><a href="/responsibility/our_agriculture">우리 농산물 사랑 캠페인</a></li>
-									<li><a href="/responsibility/our_culture_defend">우리 문화 지키기</a></li>
+									<li><a href="responsibility/hope_delivery">희망배달 캠페인</a></li>
+									<li><a href="responsibility/talent_donation">재능기부 카페 소식</a></li>
+									<li><a href="responsibility/community_store">커뮤니티 스토어</a></li>
+									<li><a href="responsibility/youth_resource">청년 지원 프로그램</a></li><!-- 202107 메뉴명 수정 -->
+									<li><a href="responsibility/our_agriculture">우리 농산물 사랑 캠페인</a></li>
+									<li><a href="responsibility/our_culture_defend">우리 문화 지키기</a></li>
 								</ul>
 							</li>
 							<li>
 								<a role="button" href="javascript:void(0);">환경보호 활동<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 -->
 								<ul>
-									<li><a href="/responsibility/environment">친환경 활동</a></li><!-- 202107 메뉴명 수정 -->
-									<li><a href="/responsibility/no_disposable_cup">일회용 컵 없는 매장</a></li>
-									<li><a href="/responsibility/bean_recycling">커피 원두 재활용</a></li>
+									<li><a href="responsibility/environment">친환경 활동</a></li><!-- 202107 메뉴명 수정 -->
+									<li><a href="responsibility/no_disposable_cup">일회용 컵 없는 매장</a></li>
+									<li><a href="responsibility/bean_recycling">커피 원두 재활용</a></li>
 								</ul>
 							</li>
 							<li>
 								<a role="button" href="javascript:void(0);">윤리 구매<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 -->
 								<ul>
-									<li><a href="/responsibility/ethically_sourcing">윤리적 원두 구매</a></li>
-									<li><a href="/responsibility/fair_trade">공정무역 인증</a></li>
-									<li><a href="/responsibility/farmer_support">커피 농가 지원 활동</a></li>
+									<li><a href="responsibility/ethically_sourcing">윤리적 원두 구매</a></li>
+									<li><a href="responsibility/fair_trade">공정무역 인증</a></li>
+									<li><a href="responsibility/farmer_support">커피 농가 지원 활동</a></li>
 								</ul>
 							</li>
 							<li>
 								<a role="button" href="javascript:void(0);">글로벌 사회 공헌<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 -->
 								<ul>
-									<li><a href="/responsibility/sp_ethical_management">윤리경영 보고서</a></li>
-									<li><a href="/responsibility/starbucks_foundation">스타벅스 재단</a></li>
-									<li><a href="/responsibility/sp_global_month">지구촌 봉사의 달</a></li>
+									<li><a href="responsibility/sp_ethical_management">윤리경영 보고서</a></li>
+									<li><a href="responsibility/starbucks_foundation">스타벅스 재단</a></li>
+									<li><a href="responsibility/sp_global_month">지구촌 봉사의 달</a></li>
 								</ul>
 							</li>
 						</ul>
@@ -623,7 +635,11 @@ var eFrequencyPlannerYn = 'Y';
 									<li><a href="msr/msreward/about">스타벅스 리워드 소개</a></li> <!-- 스타벅스 리워드 수정 -->
 									<li><a href="msr/msreward/level_benefit">등급 및 혜택</a></li>
 									<li><a href="msr/msreward/star">스타벅스 별</a></li>
+<<<<<<< HEAD
+									<li><a href="community/faq?menu_cd=STB2703&cate=F17">자주 하는 질문</a></li> <!-- 20210809 수정 -->
+=======
 									<li><a href="/community/faq?menu_cd=STB2703&cate=F17">자주 하는 질문</a></li> <!-- 20210809 수정 -->
+>>>>>>> refs/remotes/origin/main
 								</ul>
 							</li>
 							<li>
@@ -634,7 +650,11 @@ var eFrequencyPlannerYn = 'Y';
 									<li><a href="msr/scard/register_inquiry">등록 및 조회</a></li>
 									<li><a href="msr/scard/charge_information">충전 및 이용안내</a></li>
 									<li><a href="msr/scard/lost_report">분실신고/환불신청</a></li>
+<<<<<<< HEAD
+									<li><a href="community/faq-1?menu_cd=STB2703&cate=F05">자주 하는 질문</a></li> <!-- 20210809 수정 -->
+=======
 									<li><a href="/community/faq-1?menu_cd=STB2703&cate=F05">자주 하는 질문</a></li> <!-- 20210809 수정 -->
+>>>>>>> refs/remotes/origin/main
 								</ul>
 							</li>
 							<li>
@@ -643,45 +663,49 @@ var eFrequencyPlannerYn = 'Y';
 									<li><a href="msr/sceGift/egift_information">스타벅스 e-Gift Card 소개</a></li>
 									<li><a href="msr/sceGift/msr_useguide">이용안내</a></li>
 									<li><a href="msr/sceGift/gift_step1" required="login">선물하기</a></li>
+<<<<<<< HEAD
+									<li><a href="community/faq-2?menu_cd=STB2703&cate=F22">자주 하는 질문</a></li> <!-- 20210809 수정 -->
+=======
 									<li><a href="/community/faq-2?menu_cd=STB2703&cate=F22">자주 하는 질문</a></li> <!-- 20210809 수정 -->
+>>>>>>> refs/remotes/origin/main
 								</ul>
 							</li>
 						</ul>
 						<ul>
 							<li class="mob_gnb_ttl2"><a role="button" class="en" href="javascript:void(0);">WHAT'S NEW<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 --></li>
-							<li><a href="/whats_new/index">한눈에 보기</a></li>
+							<li><a href="whats_new/index">한눈에 보기</a></li>
 							<li>
 								<a role="button" href="javascript:void(0);">이벤트<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 --> <!-- 20210304 메뉴명변경 -->
 								<ul>
-									<li><a href="/whats_new/campaign_list">전체</a></li>
-									<li><a href="/whats_new/campaign_list-1?menu_cd=STB2812">스타벅스 카드</a></li>
-									<li><a href="/whats_new/campaign_list-2?menu_cd=STB2813">스타벅스 리워드</a></li> <!-- 스타벅스 리워드 수정 -->
-									<li><a href="/whats_new/campaign_list-3?menu_cd=STB2814">온라인</a></li>
+									<li><a href="whats_new/campaign_list">전체</a></li>
+									<li><a href="whats_new/campaign_list-1?menu_cd=STB2812">스타벅스 카드</a></li>
+									<li><a href="whats_new/campaign_list-2?menu_cd=STB2813">스타벅스 리워드</a></li> <!-- 스타벅스 리워드 수정 -->
+									<li><a href="whats_new/campaign_list-3?menu_cd=STB2814">온라인</a></li>
 									
 									
-										<li><a href="/whats_new/eFreq_gift">e-프리퀀시 증정품</a></li> <!-- 20210423 메뉴명, 경로 수정 -->
+										<li><a href="whats_new/eFreq_gift">e-프리퀀시 증정품</a></li> <!-- 20210423 메뉴명, 경로 수정 -->
 									
 								</ul>
 							</li>
 							<li>
 								<a role="button" href="javascript:void(0);">뉴스<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 --> <!-- 20210304 메뉴명변경 -->
 								<ul>
-									<li><a href="/whats_new/news_list">전체</a></li>
-									<li><a href="/whats_new/news_list-1?cate=N01">상품 출시</a></li>
-									<li><a href="/whats_new/news_list-2?cate=N02">스타벅스와 문화</a></li>
-									<li><a href="/whats_new/news_list-3?cate=N03">스타벅스 사회공헌</a></li>
-									<li><a href="/whats_new/news_list-4?cate=N04">스타벅스 카드출시</a></li>
+									<li><a href="whats_new/news_list">전체</a></li>
+									<li><a href="whats_new/news_list-1?cate=N01">상품 출시</a></li>
+									<li><a href="whats_new/news_list-2?cate=N02">스타벅스와 문화</a></li>
+									<li><a href="whats_new/news_list-3?cate=N03">스타벅스 사회공헌</a></li>
+									<li><a href="whats_new/news_list-4?cate=N04">스타벅스 카드출시</a></li>
 								</ul>
 							</li>
 							<li>
 								<a role="button" href="javascript:void(0);">매장별 이벤트<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 -->
 								<ul>
-									<li><a href="/whats_new/store_event_list">일반 매장</a></li>
-									<li><a href="/whats_new/store_event_list-1?search_date=1&tab=1">신규 매장</a></li>
+									<li><a href="whats_new/store_event_list">일반 매장</a></li>
+									<li><a href="whats_new/store_event_list-1?search_date=1&tab=1">신규 매장</a></li>
 								</ul>
 							</li>
-							<li><a href="/whats_new/notice_list">공지사항</a></li>
-							<li><a href="/whats_new/wallpaper">월페이퍼</a></li>
+							<li><a href="whats_new/notice_list">공지사항</a></li>
+							<li><a href="whats_new/wallpaper">월페이퍼</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -698,7 +722,7 @@ var eFrequencyPlannerYn = 'Y';
 		<!-- 서브 gnb -->
 		<div class="sub_gnb_wrap">
 			<div class="sub_gnb_wrap_inner">
-				<h1 class="logo"><a href="/index.htm" title="스타벅스 메인페이지">스타벅스 코리아</a><!-- 접근성_20171106 title 추가 --></h1>
+				<h1 class="logo"><a href="index.htm" title="스타벅스 메인페이지">스타벅스 코리아</a><!-- 접근성_20171106 title 추가 --></h1>
 				<nav class="util_nav">
 					
 								
@@ -706,8 +730,13 @@ var eFrequencyPlannerYn = 'Y';
 	<li class="util_nav01 sign_out" style="display:none;"><a href="javascript:void(0);">Sign out</a></li>
 	<li class="util_nav01 sign_in"><a href="javascript:void(0);">Sign In</a></li>
 	<li class="util_nav02"><a href="my/index" required="login">My Starbucks</a></li>
+<<<<<<< HEAD
+	<li class="util_nav03"><a href="util/index">Customer Service & Ideas</a></li>
+	<li class="util_nav04"><a href="store/store_map">Find a Store</a></li>
+=======
 	<li class="util_nav03"><a href="/util/index">Customer Service & Ideas</a></li>
 	<li class="util_nav04"><a href="/store/store_map">Find a Store</a></li>
+>>>>>>> refs/remotes/origin/main
 </ul>
 				</nav>
 				<p class="btn_search">
@@ -732,7 +761,11 @@ var eFrequencyPlannerYn = 'Y';
                         <div class="co_sales_ttl_inner">
                             <h4><img alt="단체 및 기업 구매 안내" src="common/img/footer/co_sales/ttl_b2b_guide.png"></h4>
                             <ul class="smap">
+<<<<<<< HEAD
+                                <li><a href="index.htm"><img src="common/img/common/icon_home_w-1.png" alt="홈으로"></a></li>
+=======
                                 <li><a href="/index.htm"><img src="common/img/common/icon_home_w-1.png" alt="홈으로"></a></li>
+>>>>>>> refs/remotes/origin/main
                                 <li><img class="arrow" src="common/img/common/icon_arrow_w-1.png" alt="하위메뉴"></li>
                                 <li><a href="index"><span class="en">CORPORATE SALES</span></a></li>
                                 <li><img class="arrow" src="common/img/common/icon_arrow_w-1.png" alt="하위메뉴"></li>
@@ -817,8 +850,8 @@ var eFrequencyPlannerYn = 'Y';
                         <!-- 20211115 수정 -->
                        <section class="cosales_b2b_area ver2022">
                             <picture>
-                                <source srcset="/img/event/2021/20211221_b2b_MO.jpg" media="(max-width:640px)"> <!-- 211221 수정 -->
-                                <img src="/img/event/2021/20211221_b2b_PC.jpg" alt="스타벅스 단체/기업 고객들을 위한 전용상품제작을 문의해주세요."> <!-- 211221 수정 -->
+                                <source srcset="img/event/2021/20211221_b2b_MO.jpg" media="(max-width:640px)"> <!-- 211221 수정 -->
+                                <img src="img/event/2021/20211221_b2b_PC.jpg" alt="스타벅스 단체/기업 고객들을 위한 전용상품제작을 문의해주세요."> <!-- 211221 수정 -->
                                 <a href="https://hncb2b.co.kr/starbucksb2b/login" class="hid bnr_link" target="_blank">자세히보기</a>
                             </picture>
                         </section>
@@ -886,33 +919,37 @@ var eFrequencyPlannerYn = 'Y';
 					<div class="footer_menus">
 						<ul class="footer_first_menu">
 							<li class="footer_menu_ttl"><a class="en" href="javascript:void(0);">CUSTOMER SERVICE &amp; IDEAS<span class="footer_arrow_down"></span></a></li>
-							<li><a href="/util/faq">자주 하는 질문</a></li><!-- 20210809 수정 -->
-							<li><a href="/customer/suggestionWrite">고객의 소리</a></li>
+							<li><a href="util/faq">자주 하는 질문</a></li><!-- 20210809 수정 -->
+							<li><a href="customer/suggestionWrite">고객의 소리</a></li>
 							<li class="footer_2depth_ttl"><a href="javascript:void(0)">스타벅스 이용 팁<span class="footer_arrow_down"></span></a>
 								<ul>
-									<li><a href="/util/web_tip">홈페이지 이용 팁</a></li>
-									<li><a href="/util/app_tip">애플리케이션 이용 팁</a></li>
-									<li><a href="/util/partnership_card">제휴카드 안내</a></li>
+									<li><a href="util/web_tip">홈페이지 이용 팁</a></li>
+									<li><a href="util/app_tip">애플리케이션 이용 팁</a></li>
+									<li><a href="util/partnership_card">제휴카드 안내</a></li>
 								</ul>
 							</li>
-							<li><a href="/util/online_survey">고객 경험 설문조사</a></li> <!-- 20210811 수정  -->
+							<li><a href="util/online_survey">고객 경험 설문조사</a></li> <!-- 20210811 수정  -->
 							
 							
-							<li><a href="/util/guest_eReceipt">비회원 전자영수증 조회</a></li>
+							<li><a href="util/guest_eReceipt">비회원 전자영수증 조회</a></li>
 							
 						</ul>
 						<ul>
 							<li class="footer_menu_ttl"><a class="en" href="javascript:void(0);">COMPANY<span class="footer_arrow_down"></span></a></li>
-							<li><a href="/company/index">한눈에 보기</a></li>
-							<li><a href="/company/mission">스타벅스 사명</a></li>
+							<li><a href="company/index">한눈에 보기</a></li>
+							<li><a href="company/mission">스타벅스 사명</a></li>
 							<li class="footer_2depth_ttl"><a href="javascript:void(0)">스타벅스 소개<span class="footer_arrow_down"></span></a>
 								<ul>
-									<li><a href="/company/starbucks_information">스타벅스 코리아</a></li> <!-- 220118 수정 -->
-									<li><a href="/company/starbucks_history">주요 연혁</a></li> <!-- 202107 수정 -->
-									<li><a href="/company/starbucks_story">스타벅스 이야기</a></li>
+									<li><a href="company/starbucks_information">스타벅스 코리아</a></li> <!-- 220118 수정 -->
+									<li><a href="company/starbucks_history">주요 연혁</a></li> <!-- 202107 수정 -->
+									<li><a href="company/starbucks_story">스타벅스 이야기</a></li>
 								</ul>
 							</li>
+<<<<<<< HEAD
+							<li><a href="company/news_list">국내 뉴스룸</a></li>
+=======
 							<li><a href="/company/news_list">국내 뉴스룸</a></li>
+>>>>>>> refs/remotes/origin/main
 							<li><a href="footer/company/global_starbucks">세계의 스타벅스</a></li>
 							<!-- 160811 메뉴 추가 -->
 							<li><a href="https://news.starbucks.com" target="_blank">글로벌 뉴스룸</a></li>
@@ -929,9 +966,15 @@ var eFrequencyPlannerYn = 'Y';
 						</ul>
 						<ul>
 							<li class="footer_menu_ttl"><a class="en" href="javascript:void(0);">PARTNERSHIP<span class="footer_arrow_down"></span></a></li>
+<<<<<<< HEAD
+							<li><a href="partnership/new_partner">신규 입점 제의</a></li>
+							<!-- <li><a href="footer/partnership/portal_systems">협력사 포털 시스템</a></li> -->
+							<li><a href="srm/login">협력 고객사 등록신청</a></li>
+=======
 							<li><a href="/partnership/new_partner">신규 입점 제의</a></li>
 							<!-- <li><a href="footer/partnership/portal_systems">협력사 포털 시스템</a></li> -->
 							<li><a href="/srm/login">협력 고객사 등록신청</a></li>
+>>>>>>> refs/remotes/origin/main
 						</ul>
 						<ul>
 							<li class="footer_menu_ttl"><a class="en" href="javascript:void(0);">ONLINE COMMUNITY<span class="footer_arrow_down"></span></a></li>
@@ -942,19 +985,19 @@ var eFrequencyPlannerYn = 'Y';
 						</ul>
 						<ul>
 							<li class="footer_menu_ttl"><a class="en" href="javascript:void(0);">RECRUIT<span class="footer_arrow_down"></span></a></li>
-							<li><a href="/recruit/index">채용 소개</a></li>
+							<li><a href="recruit/index">채용 소개</a></li>
 							<li><a href="http://job.shinsegae.com/recruit_info/notice/notice02_view.jsp?notino=5924" target="_blank">채용 지원하기</a></li><!-- 20210927 수정 -->
 						</ul>
 					</div>
 				</div>
 				<div class="footer_util_btn">
 					<ul>
-						<li><a href="/index.htm">HOME</a></li>
+						<li><a href="index.htm">HOME</a></li>
 						<li>
 							<a href="javascript:$.loginLib.showLayerLogin();" class="sign_in">Sign In</a>
 							<a href="javascript:$.loginLib.logout();" class="sign_out" style="display:none;">Sign Out</a>
 						</li>
-						<li class="last"><a href="/mem/join1">Join Us</a></li>
+						<li class="last"><a href="mem/join1">Join Us</a></li>
 					</ul>
 				</div>
 				<!-- 수상내역 -->
@@ -1013,19 +1056,19 @@ var eFrequencyPlannerYn = 'Y';
 				
 				<!-- 150517 추가 - 문진욱 -->
 				<aside class="copyright">
-					<a class="c_00b050" href="/etc/privacy">개인정보처리방침</a>
-					<a href="/etc/rules_vod" class="mbn">영상정보처리기기 운영관리 방침</a>
-					<a href="/etc/rules">홈페이지 이용약관</a>
-					<a href="/etc/rules_loc" class="mbn">위치정보 이용약관</a>
-					<a href="/etc/rules_msr" class="mbn">스타벅스 카드 이용약관</a>
-					<a href="/etc/rules_non" class="mbn">비회원 이용약관</a>
+					<a class="c_00b050" href="etc/privacy">개인정보처리방침</a>
+					<a href="etc/rules_vod" class="mbn">영상정보처리기기 운영관리 방침</a>
+					<a href="etc/rules">홈페이지 이용약관</a>
+					<a href="etc/rules_loc" class="mbn">위치정보 이용약관</a>
+					<a href="etc/rules_msr" class="mbn">스타벅스 카드 이용약관</a>
+					<a href="etc/rules_non" class="mbn">비회원 이용약관</a>
 					<span class="br"><!-- 150713 삭제  구명준  <a href="javascript:void(0);">위치정보 이용약관</a> -->
-					<a href="/etc/rules_mdp">My DT Pass 서비스 이용약관</a></span> <!-- 20200914 mdp 추가 -->
-					<a href="/etc/hotline" class="last">윤리경영 핫라인</a>
+					<a href="etc/rules_mdp">My DT Pass 서비스 이용약관</a></span> <!-- 20200914 mdp 추가 -->
+					<a href="etc/hotline" class="last">윤리경영 핫라인</a>
 					<br>
-					<a class="btned_link" href="/etc/coming_route">찾아오시는 길</a>
-					<a class="btned_link" href="/partnership/new_partner">신규입점제의</a>
-					<a class="btned_link" href="/etc/sitemap">사이트 맵</a><br>
+					<a class="btned_link" href="etc/coming_route">찾아오시는 길</a>
+					<a class="btned_link" href="partnership/new_partner">신규입점제의</a>
+					<a class="btned_link" href="etc/sitemap">사이트 맵</a><br>
 					<ul class="copy_menu">
 						<li>사업자등록번호 : 201-81-21515</li>
 						<li>주식회사 에스씨케이컴퍼니 대표이사 : 송 데이비드 호섭</li> <!-- 220105 수정 -->
@@ -1069,7 +1112,11 @@ var eFrequencyPlannerYn = 'Y';
 			<script src="common/js/jquery.tmpl.js"></script>
 			<script src="common/js/jquery.tmplPlus.min.js"></script>
 			<script src="common/js/jquery.ezmark.min.js"></script>
+<<<<<<< HEAD
+			<!-- <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script> -->
+=======
 			<!-- <script src="/developers.kakao.com/sdk/js/kakao.min.js"></script> -->
+>>>>>>> refs/remotes/origin/main
 			
 			<!--
 			<script src="common/js/swiper.jquery.min.js"></script>
@@ -1325,7 +1372,7 @@ var eFrequencyPlannerYn = 'Y';
 				$('.mycard_one').seqfx();
 			</script>
 						
-			<script src='/common/js/makePCookie.js'></script>
+			<script src='common/js/makePCookie.js'></script>
 		
 			<script>
 				$(document).ready(function () {
