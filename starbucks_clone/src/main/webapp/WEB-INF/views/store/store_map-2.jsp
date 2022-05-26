@@ -30,7 +30,7 @@
 
 <!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-	<link href="/common/css_ie/style.css" rel="stylesheet">
+	<link href="common/css_ie/style.css" rel="stylesheet">
 	<script>
 		document.createElement('header');
 		document.createElement('nav');
@@ -1115,8 +1115,8 @@ var eFrequencyPlannerYn = 'Y';
 	var $ps;
 	
 	var $pin = {};
-		$pin.store 	 = "/common/img/store/pin/pin_reg_on.png";
-		$pin.reserve = "/common/img/store/pin/pin_res_on.png";
+		$pin.store 	 = "common/img/store/pin/pin_reg_on.png";
+		$pin.reserve = "common/img/store/pin/pin_res_on.png";
 		
 	var $marker = new Array();
 	var $bounds;
@@ -1406,9 +1406,9 @@ var eFrequencyPlannerYn = 'Y';
 			<!-- <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script> -->
 			
 			<!--
-			<script src="/common/js/swiper.jquery.min.js"></script>
-			<script src="/common/js/swiper.min.js"></script>
-			<script src="/common/js/util.js"></script>
+			<script src="common/js/swiper.jquery.min.js"></script>
+			<script src="common/js/swiper.min.js"></script>
+			<script src="common/js/util.js"></script>
 			-->
 			
 		
@@ -1761,10 +1761,10 @@ var eFrequencyPlannerYn = 'Y';
 						$(".btn_storemap_quick").show();
 						
 						$(this).css({
-							'background':'url("/common/img/store/btn_find_store_on.png") center center no-repeat #006633'
+							'background':'url("common/img/store/btn_find_store_on.png") center center no-repeat #006633'
 						});
 						$('.find_road_header h2.btn_find_road a').css({
-							'background':'url("/common/img/store/btn_find_road_off.png") center center no-repeat #f4f4f2'
+							'background':'url("common/img/store/btn_find_road_off.png") center center no-repeat #f4f4f2'
 						});
 						
 						
@@ -1869,10 +1869,10 @@ var eFrequencyPlannerYn = 'Y';
 						$(".btn_storemap_quick").hide();
 						$roadResult = false;
 						$(this).css({
-							'background':'url("/common/img/store/btn_find_road_on.png") center center no-repeat #006633'
+							'background':'url("common/img/store/btn_find_road_on.png") center center no-repeat #006633'
 						});
 						$('.find_store_header h2.btn_find_store a').css({
-							'background':'url("/common/img/store/btn_find_store_off.png") center center no-repeat #f4f4f2'
+							'background':'url("common/img/store/btn_find_store_off.png") center center no-repeat #f4f4f2'
 						});
 
 				
@@ -2663,9 +2663,9 @@ var eFrequencyPlannerYn = 'Y';
 						<h6>${s_name} {{html $item.getNewIcon()}}</h6>
 						<div class="asm_stitle">
 						<ul class="my_sns_list">
-							<li class="btn_f"><a href="javascript:void(0);" class="storeFbBtn" data-caption="스타벅스코리아" data-image="${$item.getImage()}" data-link="${$item.link()}" data-title="스타벅스 ${s_name}" data-description="${notice}" ><img src="/common/img/util/reward/btn_f.gif" alt="패이스북"></a></li>
+							<li class="btn_f"><a href="javascript:void(0);" class="storeFbBtn" data-caption="스타벅스코리아" data-image="${$item.getImage()}" data-link="${$item.link()}" data-title="스타벅스 ${s_name}" data-description="${notice}" ><img src="common/img/util/reward/btn_f.gif" alt="패이스북"></a></li>
 						
-							<li class="btn_kakao mobileKaKaoTalk"><a href="javascript:void(0);" class="storeKakaoTalkBtn" data-image="${$item.getImage()}" data-description="${notice}" data-btn="스타벅스 매장찾기" data-link="${$item.link()}" ><img src="/common/img/util/reward/btn_kakao.png" alt="카카오톡"></a></li>
+							<li class="btn_kakao mobileKaKaoTalk"><a href="javascript:void(0);" class="storeKakaoTalkBtn" data-image="${$item.getImage()}" data-description="${notice}" data-btn="스타벅스 매장찾기" data-link="${$item.link()}" ><img src="common/img/util/reward/btn_kakao.png" alt="카카오톡"></a></li>
 						</ul>
 						<p>${notice}</p>
 						</div>
@@ -2733,7 +2733,7 @@ var eFrequencyPlannerYn = 'Y';
 									</dl>
 								</div>
 								<ul class="pop_btns_zon2">
-									<li class="btn_f" style="display:"><a href="javascript:void(0);" class="storeFbBtn" data-caption="스타벅스코리아" data-image="${$item.getImage()}" data-link="${$item.link()}" data-title="스타벅스 ${s_name}" data-description="${notice}" ><img src="/common/img/util/reward/btn_f.gif" alt="패이스북"></a></li>
+									<li class="btn_f" style="display:"><a href="javascript:void(0);" class="storeFbBtn" data-caption="스타벅스코리아" data-image="${$item.getImage()}" data-link="${$item.link()}" data-title="스타벅스 ${s_name}" data-description="${notice}" ><img src="common/img/util/reward/btn_f.gif" alt="패이스북"></a></li>
 									
 								</ul>
 								<div class="shopArea_infoWrap">
