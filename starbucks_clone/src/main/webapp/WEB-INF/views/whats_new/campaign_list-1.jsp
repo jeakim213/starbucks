@@ -131,7 +131,7 @@ var eFrequencyPlannerYn = 'Y';
 							<p class="msr_user_mask msr_user_mask04"></p>
 						</div>
 						<p class="user_greet_txt"><strong><!-- 홍길동 --></strong>님, 안녕하세요!</p>
-						<p class="msr_btn_setting"><a href="/my/myinfo_modify_login">개인정보 수정</a></p>
+						<p class="msr_btn_setting"><a href=my/myinfo_modify_login">개인정보 수정</a></p>
 					</div>
 					<!-- 유저인포 end -->
 					<span class="msr_sep_line"></span>
@@ -278,7 +278,7 @@ var eFrequencyPlannerYn = 'Y';
 
 			<!-- 960 gnb -->
 			<div class="tablet_gnb_wrap">
-				<h1 class="logo"><a href="/index.htm">스타벅스 코리아</a></h1>
+				<h1 class="logo"><a href=index.htm">스타벅스 코리아</a></h1>
 				<nav class="tablet_gnb_sep">
 					<ul>
 						<li class="tablet_gnb01"><a href="javascript:void(0);" role="button" title="마이 리워드 레이어 열기"><!-- 접근성_20171106 role, title 추가 --><span class="rCup2"></span></a></li><!-- 150709 클레스 수정 -->
@@ -371,7 +371,7 @@ var eFrequencyPlannerYn = 'Y';
 								<ul>
 									<li><a href="coffee/product_list">스타벅스 원두</a></li>
 									<li><a href="coffee/product_list-1?PACKAGE=01">스타벅스 비아</a></li>
-									<!-- <li><a href="/coffee/product_list?PACKAGE=02">스타벅스 오리가미</a></li> 20210915 삭제 -->
+									<!-- <li><a href=coffee/product_list?PACKAGE=02">스타벅스 오리가미</a></li> 20210915 삭제 -->
 									<li><a href="coffee/product_list-2?PACKAGE=05">스타벅스앳홈 by 캡슐</a></li><!-- 20210915 추가 -->
 								</ul>
 							</li>
@@ -528,35 +528,35 @@ var eFrequencyPlannerYn = 'Y';
 								<a role="button" href="javascript:void(0);">지역 사회 참여 활동<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 -->
 								<ul>
 									<li><a href="/responsibility/hope_delivery">희망배달 캠페인</a></li>
-									<li><a href="/responsibility/talent_donation">재능기부 카페 소식</a></li>
-									<li><a href="/responsibility/community_store">커뮤니티 스토어</a></li>
-									<li><a href="/responsibility/youth_resource">청년 지원 프로그램</a></li><!-- 202107 메뉴명 수정 -->
-									<li><a href="/responsibility/our_agriculture">우리 농산물 사랑 캠페인</a></li>
-									<li><a href="/responsibility/our_culture_defend">우리 문화 지키기</a></li>
+									<li><a href="responsibility/talent_donation">재능기부 카페 소식</a></li>
+									<li><a href="responsibility/community_store">커뮤니티 스토어</a></li>
+									<li><a href="responsibility/youth_resource">청년 지원 프로그램</a></li><!-- 202107 메뉴명 수정 -->
+									<li><a href="responsibility/our_agriculture">우리 농산물 사랑 캠페인</a></li>
+									<li><a href="responsibility/our_culture_defend">우리 문화 지키기</a></li>
 								</ul>
 							</li>
 							<li>
 								<a role="button" href="javascript:void(0);">환경보호 활동<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 -->
 								<ul>
-									<li><a href="/responsibility/environment">친환경 활동</a></li><!-- 202107 메뉴명 수정 -->
-									<li><a href="/responsibility/no_disposable_cup">일회용 컵 없는 매장</a></li>
-									<li><a href="/responsibility/bean_recycling">커피 원두 재활용</a></li>
+									<li><a href="responsibility/environment">친환경 활동</a></li><!-- 202107 메뉴명 수정 -->
+									<li><a href="responsibility/no_disposable_cup">일회용 컵 없는 매장</a></li>
+									<li><a href="responsibility/bean_recycling">커피 원두 재활용</a></li>
 								</ul>
 							</li>
 							<li>
 								<a role="button" href="javascript:void(0);">윤리 구매<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 -->
 								<ul>
-									<li><a href="/responsibility/ethically_sourcing">윤리적 원두 구매</a></li>
-									<li><a href="/responsibility/fair_trade">공정무역 인증</a></li>
-									<li><a href="/responsibility/farmer_support">커피 농가 지원 활동</a></li>
+									<li><a href="responsibility/ethically_sourcing">윤리적 원두 구매</a></li>
+									<li><a href="responsibility/fair_trade">공정무역 인증</a></li>
+									<li><a href="responsibility/farmer_support">커피 농가 지원 활동</a></li>
 								</ul>
 							</li>
 							<li>
 								<a role="button" href="javascript:void(0);">글로벌 사회 공헌<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 -->
 								<ul>
-									<li><a href="/responsibility/sp_ethical_management">윤리경영 보고서</a></li>
-									<li><a href="/responsibility/starbucks_foundation">스타벅스 재단</a></li>
-									<li><a href="/responsibility/sp_global_month">지구촌 봉사의 달</a></li>
+									<li><a href="responsibility/sp_ethical_management">윤리경영 보고서</a></li>
+									<li><a href="responsibility/starbucks_foundation">스타벅스 재단</a></li>
+									<li><a href="responsibility/sp_global_month">지구촌 봉사의 달</a></li>
 								</ul>
 							</li>
 						</ul>
@@ -644,20 +644,20 @@ var eFrequencyPlannerYn = 'Y';
 		<!-- 서브 gnb -->
 		<div class="sub_gnb_wrap">
 			<div class="sub_gnb_wrap_inner">
-				<h1 class="logo"><a href="/index.htm" title="스타벅스 메인페이지">스타벅스 코리아</a><!-- 접근성_20171106 title 추가 --></h1>
+				<h1 class="logo"><a href="index.htm" title="스타벅스 메인페이지">스타벅스 코리아</a><!-- 접근성_20171106 title 추가 --></h1>
 				<nav class="util_nav">
 					
 								
 <ul>
 	<li class="util_nav01 sign_out" style="display:none;"><a href="javascript:void(0);">Sign out</a></li>
 	<li class="util_nav01 sign_in"><a href="javascript:void(0);">Sign In</a></li>
-	<li class="util_nav02"><a href="/my/index" required="login">My Starbucks</a></li>
-	<li class="util_nav03"><a href="/util/index">Customer Service & Ideas</a></li>
-	<li class="util_nav04"><a href="/store/store_map">Find a Store</a></li>
+	<li class="util_nav02"><a href="my/index" required="login">My Starbucks</a></li>
+	<li class="util_nav03"><a href="util/index">Customer Service & Ideas</a></li>
+	<li class="util_nav04"><a href="store/store_map">Find a Store</a></li>
 </ul>
 				</nav>
 				<p class="btn_search">
-					<a href="javascript:void(0);"><img alt="통합검색" src="/common/img/common/icon_magnifier_black.png"></a>
+					<a href="javascript:void(0);"><img alt="통합검색" src="common/img/common/icon_magnifier_black.png"></a>
 				</p>
 				<a href="javascript:void(0);" class="rCup3_wrap" role="button" title="마이 리워드 레이어 열기"><!-- 접근성_20171201 class, role, title 추가 --><span class="rCup3"></span></a><!-- 150714 DOM 수정 - 떨어지는 메뉴 부분에 jsMovie 추가 -->
 			</div>
@@ -674,12 +674,12 @@ var eFrequencyPlannerYn = 'Y';
             <!-- 서브 타이틀 -->
             <div class="sub_tit_wrap">
                 <div class="sub_tit_inner">
-                <h2><img src="/common/img/whatsnew/campaign_tit_20210218.jpg" alt="이벤트"></h2> <!-- 20210304 메뉴명 변경 -->
+                <h2><img src="common/img/whatsnew/campaign_tit_20210218.jpg" alt="이벤트"></h2> <!-- 20210304 메뉴명 변경 -->
                     <ul class="smap">
-                        <li><a href="/index"><img src="/common/img/common/icon_home.png" alt="홈으로"></a></li>
-                        <li><img class="arrow" src="/common/img/common/icon_arrow.png" alt="하위메뉴"></li>
+                        <li><a href="index"><img src="common/img/common/icon_home.png" alt="홈으로"></a></li>
+                        <li><img class="arrow" src="common/img/common/icon_arrow.png" alt="하위메뉴"></li>
                         <li class="en"><a href="index">WHAT'S NEW</a></li>
-                        <li><img class="arrow" src="/common/img/common/icon_arrow.png" alt="하위메뉴"></li>
+                        <li><img class="arrow" src="common/img/common/icon_arrow.png" alt="하위메뉴"></li>
                         <li><a href="campaign_list" class="this">이벤트</a></li> <!-- 20210304 메뉴명 변경 -->
                     </ul>
                 </div>
@@ -830,41 +830,41 @@ var eFrequencyPlannerYn = 'Y';
 					<div class="footer_menus">
 						<ul class="footer_first_menu">
 							<li class="footer_menu_ttl"><a class="en" href="javascript:void(0);">CUSTOMER SERVICE &amp; IDEAS<span class="footer_arrow_down"></span></a></li>
-							<li><a href="/util/faq">자주 하는 질문</a></li><!-- 20210809 수정 -->
-							<li><a href="/customer/suggestionWrite">고객의 소리</a></li>
+							<li><a href="util/faq">자주 하는 질문</a></li><!-- 20210809 수정 -->
+							<li><a href="customer/suggestionWrite">고객의 소리</a></li>
 							<li class="footer_2depth_ttl"><a href="javascript:void(0)">스타벅스 이용 팁<span class="footer_arrow_down"></span></a>
 								<ul>
-									<li><a href="/util/web_tip">홈페이지 이용 팁</a></li>
-									<li><a href="/util/app_tip">애플리케이션 이용 팁</a></li>
-									<li><a href="/util/partnership_card">제휴카드 안내</a></li>
+									<li><a href="util/web_tip">홈페이지 이용 팁</a></li>
+									<li><a href="util/app_tip">애플리케이션 이용 팁</a></li>
+									<li><a href="util/partnership_card">제휴카드 안내</a></li>
 								</ul>
 							</li>
-							<li><a href="/util/online_survey">고객 경험 설문조사</a></li> <!-- 20210811 수정  -->
+							<li><a href="util/online_survey">고객 경험 설문조사</a></li> <!-- 20210811 수정  -->
 							
 							
-							<li><a href="/util/guest_eReceipt">비회원 전자영수증 조회</a></li>
+							<li><a href="util/guest_eReceipt">비회원 전자영수증 조회</a></li>
 							
 						</ul>
 						<ul>
 							<li class="footer_menu_ttl"><a class="en" href="javascript:void(0);">COMPANY<span class="footer_arrow_down"></span></a></li>
-							<li><a href="/footer/company/index">한눈에 보기</a></li>
-							<li><a href="/footer/company/mission">스타벅스 사명</a></li>
+							<li><a href="footer/company/index">한눈에 보기</a></li>
+							<li><a href="footer/company/mission">스타벅스 사명</a></li>
 							<li class="footer_2depth_ttl"><a href="javascript:void(0)">스타벅스 소개<span class="footer_arrow_down"></span></a>
 								<ul>
-									<li><a href="/footer/company/starbucks_information">스타벅스 코리아</a></li> <!-- 220118 수정 -->
-									<li><a href="/footer/company/starbucks_history">주요 연혁</a></li> <!-- 202107 수정 -->
-									<li><a href="/footer/company/starbucks_story">스타벅스 이야기</a></li>
+									<li><a href="footer/company/starbucks_information">스타벅스 코리아</a></li> <!-- 220118 수정 -->
+									<li><a href="footer/company/starbucks_history">주요 연혁</a></li> <!-- 202107 수정 -->
+									<li><a href="footer/company/starbucks_story">스타벅스 이야기</a></li>
 								</ul>
 							</li>
-							<li><a href="/footer/company/news_list">국내 뉴스룸</a></li>
-							<li><a href="/footer/company/global_starbucks">세계의 스타벅스</a></li>
+							<li><a href="footer/company/news_list">국내 뉴스룸</a></li>
+							<li><a href="footer/company/global_starbucks">세계의 스타벅스</a></li>
 							<!-- 160811 메뉴 추가 -->
 							<li><a href="https://news.starbucks.com" target="_blank">글로벌 뉴스룸</a></li>
 							<!-- 160811 메뉴 추가 end -->
 						</ul>
 						<ul>
 							<li class="footer_menu_ttl"><a class="en" id="goPage" href="javascript:void(0);">CORPORATE SALES<span class="footer_arrow_down"></span></a></li>
-							<li><a href="/footer/co_sales/index">단체 및 기업 구매 안내</a></li>
+							<li><a href="footer/co_sales/index">단체 및 기업 구매 안내</a></li>
 							<!-- <li><a href="/footer/co_sales/sbcard_egift">스타벅스 <span class="en">e-Gift Card</span></a></li> -->
 							<!-- <li><a href="/footer/co_sales/sbcard">스타벅스 카드</a></li> -->
 							<!-- <li><a href="/footer/co_sales/co-branded"><span class="en">Co-branded</span> 카드</a></li> -->
@@ -873,9 +873,9 @@ var eFrequencyPlannerYn = 'Y';
 						</ul>
 						<ul>
 							<li class="footer_menu_ttl"><a class="en" href="javascript:void(0);">PARTNERSHIP<span class="footer_arrow_down"></span></a></li>
-							<li><a href="/footer/partnership/new_partner">신규 입점 제의</a></li>
-							<!-- <li><a href="/footer/partnership/portal_systems">협력사 포털 시스템</a></li> -->
-							<li><a href="/srm/login">협력 고객사 등록신청</a></li>
+							<li><a href="footer/partnership/new_partner">신규 입점 제의</a></li>
+							<!-- <li><a href="footer/partnership/portal_systems">협력사 포털 시스템</a></li> -->
+							<li><a href="srm/login">협력 고객사 등록신청</a></li>
 						</ul>
 						<ul>
 							<li class="footer_menu_ttl"><a class="en" href="javascript:void(0);">ONLINE COMMUNITY<span class="footer_arrow_down"></span></a></li>
@@ -886,19 +886,19 @@ var eFrequencyPlannerYn = 'Y';
 						</ul>
 						<ul>
 							<li class="footer_menu_ttl"><a class="en" href="javascript:void(0);">RECRUIT<span class="footer_arrow_down"></span></a></li>
-							<li><a href="/footer/recruit/index">채용 소개</a></li>
+							<li><a href="footer/recruit/index">채용 소개</a></li>
 							<li><a href="http://job.shinsegae.com/recruit_info/notice/notice02_view.jsp?notino=5924" target="_blank">채용 지원하기</a></li><!-- 20210927 수정 -->
 						</ul>
 					</div>
 				</div>
 				<div class="footer_util_btn">
 					<ul>
-						<li><a href="/index.htm">HOME</a></li>
+						<li><a href="index.htm">HOME</a></li>
 						<li>
 							<a href="javascript:$.loginLib.showLayerLogin();" class="sign_in">Sign In</a>
 							<a href="javascript:$.loginLib.logout();" class="sign_out" style="display:none;">Sign Out</a>
 						</li>
-						<li class="last"><a href="/mem/join1">Join Us</a></li>
+						<li class="last"><a href="mem/join1">Join Us</a></li>
 					</ul>
 				</div>
 				<!-- 수상내역 -->
@@ -957,19 +957,19 @@ var eFrequencyPlannerYn = 'Y';
 				
 				<!-- 150517 추가 - 문진욱 -->
 				<aside class="copyright">
-					<a class="c_00b050" href="/footer/etc/privacy">개인정보처리방침</a>
-					<a href="/footer/etc/rules_vod" class="mbn">영상정보처리기기 운영관리 방침</a>
-					<a href="/footer/etc/rules">홈페이지 이용약관</a>
-					<a href="/footer/etc/rules_loc" class="mbn">위치정보 이용약관</a>
-					<a href="/footer/etc/rules_msr" class="mbn">스타벅스 카드 이용약관</a>
-					<a href="/footer/etc/rules_non" class="mbn">비회원 이용약관</a>
+					<a class="c_00b050" href="footer/etc/privacy">개인정보처리방침</a>
+					<a href="footer/etc/rules_vod" class="mbn">영상정보처리기기 운영관리 방침</a>
+					<a href="footer/etc/rules">홈페이지 이용약관</a>
+					<a href="footer/etc/rules_loc" class="mbn">위치정보 이용약관</a>
+					<a href="footer/etc/rules_msr" class="mbn">스타벅스 카드 이용약관</a>
+					<a href="footer/etc/rules_non" class="mbn">비회원 이용약관</a>
 					<span class="br"><!-- 150713 삭제  구명준  <a href="javascript:void(0);">위치정보 이용약관</a> -->
-					<a href="/footer/etc/rules_mdp">My DT Pass 서비스 이용약관</a></span> <!-- 20200914 mdp 추가 -->
-					<a href="/footer/etc/hotline" class="last">윤리경영 핫라인</a>
+					<a href="footer/etc/rules_mdp">My DT Pass 서비스 이용약관</a></span> <!-- 20200914 mdp 추가 -->
+					<a href="footer/etc/hotline" class="last">윤리경영 핫라인</a>
 					<br>
-					<a class="btned_link" href="/footer/etc/coming_route">찾아오시는 길</a>
-					<a class="btned_link" href="/footer/partnership/new_partner">신규입점제의</a>
-					<a class="btned_link" href="/footer/etc/sitemap">사이트 맵</a><br>
+					<a class="btned_link" href="footer/etc/coming_route">찾아오시는 길</a>
+					<a class="btned_link" href="footer/partnership/new_partner">신규입점제의</a>
+					<a class="btned_link" href="footer/etc/sitemap">사이트 맵</a><br>
 					<ul class="copy_menu">
 						<li>사업자등록번호 : 201-81-21515</li>
 						<li>주식회사 에스씨케이컴퍼니 대표이사 : 송 데이비드 호섭</li> <!-- 220105 수정 -->
@@ -983,36 +983,36 @@ var eFrequencyPlannerYn = 'Y';
 			<!-- footer end -->
 		
 			
-			<script src="/common/js/jquery-1.10.2.min.js"></script>
-			<script src="/common/js/%40common.js"></script>
-			<script src="/common/js/jquery-ui.min.js?v=220207"></script>
-			<script src="/common/js/idangerous.swiper-2.1.min.js"></script>
-			<script src="/common/js/idangerous.swiper.scrollbar-2.1.js"></script>
-			<script src="/common/js/jquery.bxslider.min.js"></script>
-			<script src="/common/js/skdslider.min.js"></script>
-			<script src="/common/js/jquery.drive.js"></script>
-			<script src="/common/js/jquery.easing-1.3.min.js"></script>
-			<script src="/common/js/jquery.elevatezoom.js"></script>
-			<script src="/common/js/jquery.flip.js"></script>
-			<script src="/common/js/jquery.jsmovie.1.4.4.min.js"></script>
-			<script src="/common/js/jquery.mCustomScrollbar.concat.js"></script>
-			<script src="/common/js/jquery.number.min.js"></script>
-			<script src="/common/js/jquery.rotate.2.3.js"></script>
-			<script src="/common/js/jquery.scrollbar.js"></script>
-			<script src="/common/js/jquery.scrollTo-1.4.2-min.js"></script>
-			<script src="/common/js/jquery.superscrollorama.js"></script>						
-			<script src="/common/js/jquery.transform2d.js"></script>
-			<script src="/common/js/jquery.transform3d.js"></script>			
-			<script src="/common/js/greensock/TweenMax.min.js"></script>
-			<script src="/common/js/masonry.pkgd.js"></script>
-			<script src="/common/js/common.js"></script>
-			<script src="/common/js/gnb.js?v=220502"></script>
-			<script src="/common/js/header.js?v=200915"></script>
-			<script src="/common/js/footer.js?v=210818"></script>
+			<script src="common/js/jquery-1.10.2.min.js"></script>
+			<script src="common/js/%40common.js"></script>
+			<script src="common/js/jquery-ui.min.js?v=220207"></script>
+			<script src="common/js/idangerous.swiper-2.1.min.js"></script>
+			<script src="common/js/idangerous.swiper.scrollbar-2.1.js"></script>
+			<script src="common/js/jquery.bxslider.min.js"></script>
+			<script src="common/js/skdslider.min.js"></script>
+			<script src="common/js/jquery.drive.js"></script>
+			<script src="common/js/jquery.easing-1.3.min.js"></script>
+			<script src="common/js/jquery.elevatezoom.js"></script>
+			<script src="common/js/jquery.flip.js"></script>
+			<script src="common/js/jquery.jsmovie.1.4.4.min.js"></script>
+			<script src="common/js/jquery.mCustomScrollbar.concat.js"></script>
+			<script src="common/js/jquery.number.min.js"></script>
+			<script src="common/js/jquery.rotate.2.3.js"></script>
+			<script src="common/js/jquery.scrollbar.js"></script>
+			<script src="common/js/jquery.scrollTo-1.4.2-min.js"></script>
+			<script src="common/js/jquery.superscrollorama.js"></script>						
+			<script src="common/js/jquery.transform2d.js"></script>
+			<script src="common/js/jquery.transform3d.js"></script>			
+			<script src="common/js/greensock/TweenMax.min.js"></script>
+			<script src="common/js/masonry.pkgd.js"></script>
+			<script src="common/js/common.js"></script>
+			<script src="common/js/gnb.js?v=220502"></script>
+			<script src="common/js/header.js?v=200915"></script>
+			<script src="common/js/footer.js?v=210818"></script>
 
-			<script src="/common/js/jquery.tmpl.js"></script>
-			<script src="/common/js/jquery.tmplPlus.min.js"></script>
-			<script src="/common/js/jquery.ezmark.min.js"></script>
+			<script src="common/js/jquery.tmpl.js"></script>
+			<script src="common/js/jquery.tmplPlus.min.js"></script>
+			<script src="common/js/jquery.ezmark.min.js"></script>
 			<!-- <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script> -->
 			
 			<!--
@@ -1022,8 +1022,8 @@ var eFrequencyPlannerYn = 'Y';
 			-->
 			
 		
-			<script src="/common/js/openevent/openevent.js"></script>
-			<script src="/common/js/open_event_control.js"></script>
+			<script src="common/js/openevent/openevent.js"></script>
+			<script src="common/js/open_event_control.js"></script>
 			<script type="text/javascript">
 				
 				var mrSlider;
@@ -1114,21 +1114,21 @@ var eFrequencyPlannerYn = 'Y';
 						if (m_jsonRewardSummary != null) {
 							// 등록된 카드가 없으면 링크 변경
 							if (m_jsonRewardSummary.cardInfo.cardNumber == "") {
-								if (location.href.indexOf("/my/") > -1) {
-									var url = "/my/mycard_none";
+								if (location.href.indexOf("my/") > -1) {
+									var url = "my/mycard_none";
 									
-									$('a[data-href="/my/mycard_index"]').attr("data-href", url);
-									$('a[data-href="/my/mycard"]').attr("data-href", url);
-									$('a[data-href="/my/mycard_charge"]').attr("data-href", url);
-									$('a[data-href="/my/mycard_lost"]').attr("data-href", url);
+									$('a[data-href="my/mycard_index"]').attr("data-href", url);
+									$('a[data-href="my/mycard"]').attr("data-href", url);
+									$('a[data-href="my/mycard_charge"]').attr("data-href", url);
+									$('a[data-href="my/mycard_lost"]').attr("data-href", url);
 								}
 							}
 							
 							// 로그인 상태에 따라 등록 및 조회 페이지 링크 변경
 							if (m_jsonRewardSummary.msrMemberYn == "Y") {
-								$('a[href="/msr/scard/register_inquiry"]').attr("href", "/my/mycard_info_input");
+								$('a[href="msr/scard/register_inquiry"]').attr("href", "my/mycard_info_input");
 							} else {
-								$('a[href="/msr/scard/register_inquiry"]').attr("href", "/my/reward");
+								$('a[href="msr/scard/register_inquiry"]').attr("href", "my/reward");
 							}
 							
 							clearInterval(itvChangeLink);
@@ -1137,7 +1137,7 @@ var eFrequencyPlannerYn = 'Y';
 					/* 150714 추가 - 박종현 end */
 					$('#goPage').bind('click', function(){
 						if (myWindow > 640) {
-							location.href="/footer/co_sales/index";
+							location.href="footer/co_sales/index";
 						}
 					});
 					
@@ -1181,7 +1181,7 @@ var eFrequencyPlannerYn = 'Y';
                             	if(url.length == 0){
                             		url = location.href;
                             	}  
-                            	location.href = "/login/login?redirect_url=" + encodeURIComponent(url);
+                            	location.href = "login/login?redirect_url=" + encodeURIComponent(url);
                     			
                     		}else{
                     			//MSR 회원 여부 체크
@@ -1211,7 +1211,7 @@ var eFrequencyPlannerYn = 'Y';
                 
                 function fn_showrewardTumblerMsrCheckPopup(obj){
                 	if( obj.msrMemberYn == "Y"){ /*msr 회원일 경우 페이지 이동*/
-                		location.href = "/my/reward_tumbler";
+                		location.href = "my/reward_tumbler";
                     }else{/* msr 비회원일 경우 팝업창 노출 */
                         $('#msrCheckPop_rewardTumbler').fadeIn();
                         $('.dt_pop_up_dimm').fadeIn();
@@ -1219,7 +1219,7 @@ var eFrequencyPlannerYn = 'Y';
                         $('#tumblerPopConfirmBtn, #tumblerPopCancelBtn').show();
                         $('#tumblerPopConfirmBtn').on('click', function(){
                         	// msr 비회원일 경우 카드 등록 페이지로 이동
-                        	location.href = "/my/mycard_info_input";
+                        	location.href = "my/mycard_info_input";
                         });
                     }
                 }
@@ -1232,7 +1232,7 @@ var eFrequencyPlannerYn = 'Y';
                 /* 개인컵 리워드 e */
 			</script>
 
-			<script src="/common/js/jquery.transit.min.js"></script>
+			<script src="common/js/jquery.transit.min.js"></script>
 			<script>
 				// 150805 DOM 수정
 				$('div.msr_card_zone').bind('click', function(){
@@ -1435,13 +1435,13 @@ var eFrequencyPlannerYn = 'Y';
                             $('a.goPromotionView').unbind('click').bind('click', function() {
                             	var pro_seq = $(this).attr('prod');
                             	if( pro_seq == "1088" ){
-									location.href="/whats_new/2016planner";    
+									location.href="whats_new/2016planner";    
 								}else if( pro_seq == "1076" ){
-									location.href="/whats_new/planner";
+									location.href="whats_new/planner";
 									
                             	}else{
 	                                f = document.promotionListForm;
-	                                f.action = "/whats_new/campaign_view";
+	                                f.action = "whats_new/campaign_view";
 	                                f.pro_seq.value = pro_seq;
 	                                f.submit();
                             	}
@@ -1486,12 +1486,12 @@ var eFrequencyPlannerYn = 'Y';
                             $('a.goPromotionView').unbind('click').bind('click', function() {
                                 var pro_seq = $(this).attr('prod');
                             	if( pro_seq == "1076" ){
-									location.href="/whats_new/planner";                            		
+									location.href="whats_new/planner";                            		
                             	}else if( pro_seq == "1088" ){
-									location.href="/whats_new/2016planner";                            											
+									location.href="whats_new/2016planner";                            											
                             	}else{
 	                                f = document.promotionListForm;
-	                                f.action = "/whats_new/campaign_view";
+	                                f.action = "whats_new/campaign_view";
 	                                f.pro_seq.value = pro_seq;
 	                                f.submit();
                             	}
