@@ -39,7 +39,7 @@ public class HomeController {
 	
 	@RequestMapping(value = "menu")
 	public String menu() {
-		return "menu/drink_list";
+		return "menu/drink_list-1";
 	}
 	
 	@GetMapping(value = "index")
