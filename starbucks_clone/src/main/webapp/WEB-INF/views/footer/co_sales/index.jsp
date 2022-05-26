@@ -1,22 +1,9 @@
 ﻿<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
-
-
-
-
 <!DOCTYPE html>
 <html lang="ko">
     <head>
-        
-
-
-
-
-
-
-
-
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
@@ -27,21 +14,21 @@
 <meta property="og:description" content="Starbucks">
 
 <title id="titleJoin">Starbucks Korea</title> <!-- 220117 수정 -->
-<link rel="shortcut icon" href="/common/img/common/favicon.ico?v=200828" type="image/ico"> <!-- 20200827 파비콘 교체 및 CDN 변수처리 -->
-<link href="/common/css/reset.css" rel="stylesheet">
-<link href="/common/css/style.css?v=210721" rel="stylesheet">
-<link href="/common/css/jquery.bxslider.css" rel="stylesheet">
-<link href="/common/css/idangerous.swiper.css" rel="stylesheet">
-<link href="/common/css/idangerous.swiper.scrollbar.css" rel="stylesheet">
-<link href="/common/css/jquery.mCustomScrollbar.css" rel="stylesheet">
-<link href="/common/css/jquery.scrollbar.css" rel="stylesheet">
-<link href="/common/css/jquery-ui.css" rel="stylesheet">
-<link href="/common/css/ezmark.css" rel="stylesheet">
-<link href="/common/css/style_dt.css?v=20191211" rel="stylesheet"> <!-- 20191211 수정 -->
+<link rel="shortcut icon" href="common/img/common/favicon.ico?v=200828" type="image/ico"> <!-- 20200827 파비콘 교체 및 CDN 변수처리 -->
+<link href="common/css/reset.css" rel="stylesheet">
+<link href="common/css/style.css?v=210721" rel="stylesheet">
+<link href="common/css/jquery.bxslider.css" rel="stylesheet">
+<link href="common/css/idangerous.swiper.css" rel="stylesheet">
+<link href="common/css/idangerous.swiper.scrollbar.css" rel="stylesheet">
+<link href="common/css/jquery.mCustomScrollbar.css" rel="stylesheet">
+<link href="common/css/jquery.scrollbar.css" rel="stylesheet">
+<link href="common/css/jquery-ui.css" rel="stylesheet">
+<link href="common/css/ezmark.css" rel="stylesheet">
+<link href="common/css/style_dt.css?v=20191211" rel="stylesheet"> <!-- 20191211 수정 -->
 
 <!--[if lt IE 9]>
 	<script src="/html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-	<link href="/common/css_ie/style.css" rel="stylesheet">
+	<link href="common/css_ie/style.css" rel="stylesheet">
 	<script>
 		document.createElement('header');
 		document.createElement('nav');
@@ -73,8 +60,8 @@ var eFrequencySeq = '172';
 var eFrequencyPlannerYn = 'Y';
 </script>
 
-        <link href="/common/css/style_util-2.css" rel="stylesheet">
-        <link href="/common/css/style_cosales2.css?v=211223" rel="stylesheet">
+        <link href="common/css/style_util-2.css" rel="stylesheet">
+        <link href="common/css/style_cosales2.css?v=211223" rel="stylesheet">
     </head>
 
     <body>
@@ -126,7 +113,7 @@ var eFrequencyPlannerYn = 'Y';
                      <label for="not_popup_check" class="notPopCheck"><input type="checkbox" id="not_popup_check" name="not_popup_check"> 7일간 보지 않겠습니다.</label>
                      <div class="popup_btn_wrap">
                           <!-- <a href="javascript:void(0)" class="btn black btn_popup_close">확인</a> -->
-                          <!-- <a href="/footer/co_sales/sbcard_egift" class="btn black popup_btn_login" required="login">구매 신청</a> -->
+                          <!-- <a href="footer/co_sales/sbcard_egift" class="btn black popup_btn_login" required="login">구매 신청</a> -->
                           <a href="sbcard_egift" class="btn black btn_buy_popup">구매 신청</a>
                           <a href="javascript:void(0)" class="btn_popup_close btn gray">닫기</a>
                      </div>
@@ -154,7 +141,7 @@ var eFrequencyPlannerYn = 'Y';
 	     var js, fjs = d.getElementsByTagName(s)[0];
 	     if (d.getElementById(id)) {return;}
 	     js = d.createElement(s); js.id = id;
-	     js.src = "/connect.facebook.net/ko_KR/sdk.js";
+	     js.src = "connect.facebook.net/ko_KR/sdk.js";
 	     fjs.parentNode.insertBefore(js, fjs);
 	   }(document, 'script', 'facebook-jssdk'));
   
@@ -191,14 +178,14 @@ var eFrequencyPlannerYn = 'Y';
 					<!-- 유저인포 -->
 					<div class="user_greet">
 						<div class="user_pic_area">
-							<img alt="사용자 아이디" src="/common/img/common/user_pic_sample.jpg">
+							<img alt="사용자 아이디" src="common/img/common/user_pic_sample.jpg">
 							<p class="msr_user_mask msr_user_mask01"></p>
 							<p class="msr_user_mask msr_user_mask02"></p>
 							<p class="msr_user_mask msr_user_mask03"></p>
 							<p class="msr_user_mask msr_user_mask04"></p>
 						</div>
 						<p class="user_greet_txt"><strong><!-- 홍길동 --></strong>님, 안녕하세요!</p>
-						<p class="msr_btn_setting"><a href="/my/myinfo_modify_login">개인정보 수정</a></p>
+						<p class="msr_btn_setting"><a href="my/myinfo_modify_login">개인정보 수정</a></p>
 					</div>
 					<!-- 유저인포 end -->
 					<span class="msr_sep_line"></span>
@@ -206,7 +193,7 @@ var eFrequencyPlannerYn = 'Y';
 					<!-- 유저레벨 -->
 					<!-- MSR 회원 -->
 					<div class="user_level" style="display:none;">
-						<a href="/my/reward">
+						<a href="my/reward">
 							<p class="level_star_bg en">0</p>
 							<p class="user_level_txt"><!-- <strong class="t_ac8432 en userGrade">Gold Level</strong><br /><strong>무료음료</strong> 획득 별까지<br><strong class="necessaryStar">0개</strong> 남았습니다. --></p>
 						</a>
@@ -215,7 +202,7 @@ var eFrequencyPlannerYn = 'Y';
 					
 					<!-- 일반회원 -->
 					<div class="msr_lead">
-						<a href="/msr/msreward/level_benefit">
+						<a href="msr/msreward/level_benefit">
 							<p class="icon_msr_cup"></p>
 							<p class="msr_lead_txt"><strong>스타벅스 리워드</strong><br>혜택에 편리함까지 더한<br>스타벅스 리워드를<br>즐겨보세요.</p> <!-- 스타벅스 리워드 수정 -->
 						</a>
@@ -232,7 +219,7 @@ var eFrequencyPlannerYn = 'Y';
 						<p class="msr_card_area" onclick="location.href = '/my/mycard_index';" style="cursor:pointer;"><img alt=""></p>
 						<p class="card_info_txt">잔액 <strong class="en balance">0</strong>원</p>
 						<!-- 150924 - 다른카드보기버튼 추가 -->
-						<p class="btn_other_more"><a href="/my/mycard_index">다른 카드 보기</a></p>
+						<p class="btn_other_more"><a href="my/mycard_index">다른 카드 보기</a></p>
 						<!-- 150924 - 다른카드보기버튼 추가 ebd -->
 					</div>
 					<div class="msr_card_zone m_card_pic">
@@ -240,19 +227,19 @@ var eFrequencyPlannerYn = 'Y';
 							<img alt="카드이름">
 						</div>
 						<div class="mycard_area2">
-							<img alt="카드이름" src="/common/img/common/mycard2.png">
+							<img alt="카드이름" src="common/img/common/mycard2.png">
 							<p class="num"><!-- 1234-1234-1234-1234 --></p>
 							<p class="barcord"><!-- <img src="/image.istarbucks.co.kr/common/img/common/bacord.png" alt=""> --></p>
 						</div>
 						<div class="mycard_one">
 							<!-- <div class="front"> -->
-							<img src="/common/img/common/payment_icon1.png" alt="">
+							<img src="common/img/common/payment_icon1.png" alt="">
 							<!-- </div> -->
 							<!-- <div class="back"><img src="/image.istarbucks.co.kr/common/img/common/payment_icon1.png" alt=""></div> -->
 						</div>
 						<p class="mycard_money_result">잔액 <span class="en balance"><!-- 550,000 --></span>원</p>
 						<!-- 150924 - 다른카드보기버튼 추가 -->
-						<p class="btn_other_more"><a href="/my/mycard_index">다른 카드 보기</a></p>
+						<p class="btn_other_more"><a href="my/mycard_index">다른 카드 보기</a></p>
 						<!-- 150924 - 다른카드보기버튼 추가 ebd -->
 					</div>
 					<!-- 150805 DOM 수정 -->
@@ -261,7 +248,7 @@ var eFrequencyPlannerYn = 'Y';
 					<!-- 일반회원 -->
 					<div class="sb_card_regi">
 						<a href="javascript:void(0);">
-							<p class="icon_add_card" onclick="location.href = '/my/mycard_info_input';"><img alt="카드등록 아이콘" src="/common/img/common/icon_add_card.png"></p>
+							<p class="icon_add_card" onclick="location.href = '/my/mycard_info_input';"><img alt="카드등록 아이콘" src="common/img/common/icon_add_card.png"></p>
 							<p class="sb_card_regi_txt"><strong>스타벅스 카드 등록</strong><br>카드를 등록하시고<br>다양한 리워드를<br>만나보세요.</p>
 						</a>
 					</div>
@@ -275,13 +262,13 @@ var eFrequencyPlannerYn = 'Y';
 					<!-- 알림아이콘 -->
 					<div class="notice_icons">
 						<div class="notice_icon2">
-							<a href="/my/calendar">
+							<a href="my/calendar">
 								<p></p>
 								<span>캘린더</span>
 							</a>
 						</div>
 						<div class="notice_icon3">
-							<a href="/my/ecoupon">
+							<a href="my/ecoupon">
 								<p>
 									<span class="validCoupontCnt">0</span>
 								</p>
@@ -318,14 +305,14 @@ var eFrequencyPlannerYn = 'Y';
 						<i class="icon_sbcard_lead"></i>
 						<p class="sbcard_lead_txt"><strong>스타벅스 카드를 가지고 계신가요?</strong><br>스타벅스 카드를 등록하시면, 스타벅스 리워드 만의<br>특별한 혜택을 누릴 수 있습니다.</p> <!-- 스타벅스 리워드 수정 -->
 						<p class="btn_sbcard_regi">
-							<a href="/my/mycard_info_input">카드 등록</a>
+							<a href="my/mycard_info_input">카드 등록</a>
 						</p>
 					</div>
 					<!-- 160628 수정 -->
 					<div class="top_msr_nologin_b">
 						<p class="egift_lead_txt"><strong>스타벅스 카드가 없으신가요?</strong><br>스타벅스 매장에서 구매하시거나,<br>PC/모바일웹, 스타벅스 앱에서<br>e-Gift를 “나에게 선물하기”로 구매 후,<br>편리하게 등록하세요!<br>스타벅스 리워드의 특별한 혜택! 생일 쿠폰을 드립니다!</p>
 						<p class="btn_egift_regi">
-							<a href="/msr/sceGift/gift_step1">e-Gift 선물하기</a>
+							<a href="msr/sceGift/gift_step1">e-Gift 선물하기</a>
 						</p>
 					</div>
 					<!-- 160628 수정 end -->
@@ -349,7 +336,7 @@ var eFrequencyPlannerYn = 'Y';
 				<nav class="tablet_gnb_sep">
 					<ul>
 						<li class="tablet_gnb01"><a href="javascript:void(0);" role="button" title="마이 리워드 레이어 열기"><!-- 접근성_20171106 role, title 추가 --><span class="rCup2"></span></a></li><!-- 150709 클레스 수정 -->
-						<li class="tablet_gnb02"><a href="/my/index" required="login"><span class="a11y">마이스타벅스</span></a><!-- 접근성_20171106 span추가 --></li>
+						<li class="tablet_gnb02"><a href="my/index" required="login"><span class="a11y">마이스타벅스</span></a><!-- 접근성_20171106 span추가 --></li>
 						<li class="tablet_gnb03"><a href="/store/store_map"><span class="a11y">매장찾기</span></a><!-- 접근성_20171106 span추가 --></li>
 						<li class="tablet_gnb04"><a href="javascript:void(0);"><span class="a11y" role="button">메뉴열기</span></a><!-- 접근성_20171106 span추가 --></li>
 					</ul>
@@ -371,42 +358,42 @@ var eFrequencyPlannerYn = 'Y';
 					<nav class="mob_gnb_menus">
 						<ul>
 							<li class="mob_gnb_ttl1"><a role="button" class="en" href="javascript:void(0);">My Starbucks<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 --></li>
-							<li><a href="/my/index">한눈에 보기</a></li>
+							<li><a href="my/index">한눈에 보기</a></li>
 							<li>
 								<a role="button" href="javascript:void(0);">My 리워드<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 -->
 								<ul>
-									<li><a href="/my/reward" required="login">리워드 및 혜택</a></li>
-									<li><a href="/my/reward_star_history" required="login">별 히스토리</a></li>
+									<li><a href="my/reward" required="login">리워드 및 혜택</a></li>
+									<li><a href="my/reward_star_history" required="login">별 히스토리</a></li>
 								</ul>
 							</li>
 							<li>
 								<a role="button" href="javascript:void(0);">My 스타벅스 카드<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 -->
 								<ul>
-									<li><a href="/my/mycard_index" required="login">보유 카드</a></li>
-									<li><a href="/my/mycard_info_input" required="login">카드 등록</a></li>
-									<li><a href="/my/mycard_charge" required="login">카드 충전</a></li>
-									<li><a href="/my/mycard_lost" required="login">분실신고/잔액이전</a></li>
+									<li><a href="my/mycard_index" required="login">보유 카드</a></li>
+									<li><a href="my/mycard_info_input" required="login">카드 등록</a></li>
+									<li><a href="my/mycard_charge" required="login">카드 충전</a></li>
+									<li><a href="my/mycard_lost" required="login">분실신고/잔액이전</a></li>
 								</ul>
 							</li>
 							<li>
 								<a role="button" href="javascript:void(0);">My 스타벅스 e-Gift Card<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 -->
 								<ul>
-									<li><a href="/msr/sceGift/gift_step1" required="login">선물하기</a></li>
-									<li><a href="/my/egiftCard" required="login">선물 내역</a></li>
-									<li><a href="/my/egiftCard_shopping_bag" required="login">장바구니 내역</a></li>
+									<li><a href="msr/sceGift/gift_step1" required="login">선물하기</a></li>
+									<li><a href="my/egiftCard" required="login">선물 내역</a></li>
+									<li><a href="my/egiftCard_shopping_bag" required="login">장바구니 내역</a></li>
 								</ul>
 							</li>
 							<li>
 								<a role="button" href="javascript:void(0);">My 쿠폰<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 -->
 								<ul>
-									<li><a href="/my/ecoupon?t=REG" required="login">등록하기</a></li>
-									<li><a href="/my/ecoupon?t=GIFT" required="login">선물하기</a></li>
-									<li><a href="/my/ecoupon?t=USE" required="login">사용하기</a></li>
+									<li><a href="my/ecoupon?t=REG" required="login">등록하기</a></li>
+									<li><a href="my/ecoupon?t=GIFT" required="login">선물하기</a></li>
+									<li><a href="my/ecoupon?t=USE" required="login">사용하기</a></li>
 								</ul>
 							</li>
-							<li><a href="/my/calendar" required="login">My 캘린더</a></li>
-							<!-- <li><a href="/my/drink_shop" required="login">My 음료/매장</a></li> -->
-							<li><a href="/my/my_menu" required="login">My 메뉴</a></li>
+							<li><a href="my/calendar" required="login">My 캘린더</a></li>
+							<!-- <li><a href="my/drink_shop" required="login">My 음료/매장</a></li> -->
+							<li><a href="my/my_menu" required="login">My 메뉴</a></li>
 							
 							
 							<li>
@@ -417,16 +404,16 @@ var eFrequencyPlannerYn = 'Y';
 								</ul>
 							</li>
 							
-									<li><a href="/my/vocList" required="login">My 고객의 소리</a></li>
-							<li><a href="/my/eReceiptList" required="login">전자영수증</a></li>
+									<li><a href="my/vocList" required="login">My 고객의 소리</a></li>
+							<li><a href="my/eReceiptList" required="login">전자영수증</a></li>
 							<li class="msRnb_btn"><a href="javascript:void(0);" onclick="fn_rewardTumblerMsrCheck();">개인컵 리워드 설정</a></li>
-							<li><a href="/login/login" required="login">My DT Pass</a></li>
+							<li><a href="login/login" required="login">My DT Pass</a></li>
 							<li>
 								<a role="button" href="javascript:void(0);">개인정보관리<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 -->
 								<ul>
-									<li><a href="/my/myinfo_modify_login" required="login">개인정보확인 및 수정</a></li>
-									<li><a href="/my/myinfo_out" required="login">회원 탈퇴</a></li>
-									<li><a href="/my/myinfo_modify_pwd" required="login">비밀번호 변경</a></li>
+									<li><a href="my/myinfo_modify_login" required="login">개인정보확인 및 수정</a></li>
+									<li><a href="my/myinfo_out" required="login">회원 탈퇴</a></li>
+									<li><a href="my/myinfo_modify_pwd" required="login">비밀번호 변경</a></li>
 								</ul>
 							</li>
 						</ul>
@@ -629,33 +616,33 @@ var eFrequencyPlannerYn = 'Y';
 						</ul>
 						<ul>
 							<li class="mob_gnb_ttl2"><a role="button" class="en" href="javascript:void(0);">Starbucks Rewards<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 --></li>  <!-- 스타벅스 리워드 수정 -->
-							<li><a href="/msr/index">한눈에 보기</a></li>
+							<li><a href="msr/index">한눈에 보기</a></li>
 							<li>
 								<a role="button" href="javascript:void(0);">스타벅스 리워드<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 --> <!-- 스타벅스 리워드 수정 -->
 								<ul>
-									<li><a href="/msr/msreward/about">스타벅스 리워드 소개</a></li> <!-- 스타벅스 리워드 수정 -->
-									<li><a href="/msr/msreward/level_benefit">등급 및 혜택</a></li>
-									<li><a href="/msr/msreward/star">스타벅스 별</a></li>
+									<li><a href="msr/msreward/about">스타벅스 리워드 소개</a></li> <!-- 스타벅스 리워드 수정 -->
+									<li><a href="msr/msreward/level_benefit">등급 및 혜택</a></li>
+									<li><a href="msr/msreward/star">스타벅스 별</a></li>
 									<li><a href="/community/faq?menu_cd=STB2703&cate=F17">자주 하는 질문</a></li> <!-- 20210809 수정 -->
 								</ul>
 							</li>
 							<li>
 								<a role="button" href="javascript:void(0);">스타벅스 카드<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 -->
 								<ul>
-									<li><a href="/msr/scard/about">스타벅스 카드 소개</a></li>
-									<li><a href="/msr/scard/scard_gallery">스타벅스 카드 갤러리</a></li>
-									<li><a href="/msr/scard/register_inquiry">등록 및 조회</a></li>
-									<li><a href="/msr/scard/charge_information">충전 및 이용안내</a></li>
-									<li><a href="/msr/scard/lost_report">분실신고/환불신청</a></li>
+									<li><a href="msr/scard/about">스타벅스 카드 소개</a></li>
+									<li><a href="msr/scard/scard_gallery">스타벅스 카드 갤러리</a></li>
+									<li><a href="msr/scard/register_inquiry">등록 및 조회</a></li>
+									<li><a href="msr/scard/charge_information">충전 및 이용안내</a></li>
+									<li><a href="msr/scard/lost_report">분실신고/환불신청</a></li>
 									<li><a href="/community/faq-1?menu_cd=STB2703&cate=F05">자주 하는 질문</a></li> <!-- 20210809 수정 -->
 								</ul>
 							</li>
 							<li>
 								<a role="button" href="javascript:void(0);">스타벅스 e-Gift Card<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 -->
 								<ul>
-									<li><a href="/msr/sceGift/egift_information">스타벅스 e-Gift Card 소개</a></li>
-									<li><a href="/msr/sceGift/msr_useguide">이용안내</a></li>
-									<li><a href="/msr/sceGift/gift_step1" required="login">선물하기</a></li>
+									<li><a href="msr/sceGift/egift_information">스타벅스 e-Gift Card 소개</a></li>
+									<li><a href="msr/sceGift/msr_useguide">이용안내</a></li>
+									<li><a href="msr/sceGift/gift_step1" required="login">선물하기</a></li>
 									<li><a href="/community/faq-2?menu_cd=STB2703&cate=F22">자주 하는 질문</a></li> <!-- 20210809 수정 -->
 								</ul>
 							</li>
@@ -718,13 +705,13 @@ var eFrequencyPlannerYn = 'Y';
 <ul>
 	<li class="util_nav01 sign_out" style="display:none;"><a href="javascript:void(0);">Sign out</a></li>
 	<li class="util_nav01 sign_in"><a href="javascript:void(0);">Sign In</a></li>
-	<li class="util_nav02"><a href="/my/index" required="login">My Starbucks</a></li>
+	<li class="util_nav02"><a href="my/index" required="login">My Starbucks</a></li>
 	<li class="util_nav03"><a href="/util/index">Customer Service & Ideas</a></li>
 	<li class="util_nav04"><a href="/store/store_map">Find a Store</a></li>
 </ul>
 				</nav>
 				<p class="btn_search">
-					<a href="javascript:void(0);"><img alt="통합검색" src="/common/img/common/icon_magnifier_black.png"></a>
+					<a href="javascript:void(0);"><img alt="통합검색" src="common/img/common/icon_magnifier_black.png"></a>
 				</p>
 				<a href="javascript:void(0);" class="rCup3_wrap" role="button" title="마이 리워드 레이어 열기"><!-- 접근성_20171201 class, role, title 추가 --><span class="rCup3"></span></a><!-- 150714 DOM 수정 - 떨어지는 메뉴 부분에 jsMovie 추가 -->
 			</div>
@@ -743,12 +730,12 @@ var eFrequencyPlannerYn = 'Y';
                 <header class="ms_sub_tit_wrap">
                     <div class="ms_sub_tit_bg">
                         <div class="co_sales_ttl_inner">
-                            <h4><img alt="단체 및 기업 구매 안내" src="/common/img/footer/co_sales/ttl_b2b_guide.png"></h4>
+                            <h4><img alt="단체 및 기업 구매 안내" src="common/img/footer/co_sales/ttl_b2b_guide.png"></h4>
                             <ul class="smap">
-                                <li><a href="/index.htm"><img src="/common/img/common/icon_home_w-1.png" alt="홈으로"></a></li>
-                                <li><img class="arrow" src="/common/img/common/icon_arrow_w-1.png" alt="하위메뉴"></li>
+                                <li><a href="/index.htm"><img src="common/img/common/icon_home_w-1.png" alt="홈으로"></a></li>
+                                <li><img class="arrow" src="common/img/common/icon_arrow_w-1.png" alt="하위메뉴"></li>
                                 <li><a href="index"><span class="en">CORPORATE SALES</span></a></li>
-                                <li><img class="arrow" src="/common/img/common/icon_arrow_w-1.png" alt="하위메뉴"></li>
+                                <li><img class="arrow" src="common/img/common/icon_arrow_w-1.png" alt="하위메뉴"></li>
                                 <li><a href="index"><span class="kor">스타벅스 e-Gift Card</span></a></li>
                             </ul>
                         </div>
@@ -761,7 +748,7 @@ var eFrequencyPlannerYn = 'Y';
                     <!-- ms_cont -->
                     <div class="ms_cont">
                         <div class="cosales_bnrs">
-                            <img alt="스타벅스 매장 사진" src="/common/img/footer/co_sales/bnr_b2b.png">
+                            <img alt="스타벅스 매장 사진" src="common/img/footer/co_sales/bnr_b2b.png">
                         </div>
                         <p class="cosales_guide_txt">
                             <strong>
@@ -780,7 +767,7 @@ var eFrequencyPlannerYn = 'Y';
                                     <ul class="info">
                                         <li>
                                             <i class="img">
-                                                <img src="/common/img/footer/co_sales/icon_b2b6.png" alt="스타벅스  상품 / 카드">
+                                                <img src="common/img/footer/co_sales/icon_b2b6.png" alt="스타벅스  상품 / 카드">
                                             </i>
                                             <div class="txt">
                                                 <strong>스타벅스  상품, 카드</strong>
@@ -804,7 +791,7 @@ var eFrequencyPlannerYn = 'Y';
                                     <ul class="info">
                                         <li>
                                             <i class="img">
-                                                <img src="/common/img/footer/co_sales/icon_b2b1.png" alt="스타벅스  e-Gift Card">
+                                                <img src="common/img/footer/co_sales/icon_b2b1.png" alt="스타벅스  e-Gift Card">
                                             </i>
                                             <div class="txt">
                                                 <strong>스타벅스  <b class="en">e-Gift Card</b></strong>
@@ -813,7 +800,7 @@ var eFrequencyPlannerYn = 'Y';
                                                     선물 하실 수 있습니다.
                                                 </span>
                                                 <div class="btn_wrap">
-                                                    <!-- <a href="/footer/co_sales/sbcard_egift" class="btn" required="login">구매 신청</a> --> <!-- 20210303 팝업 수정 -->
+                                                    <!-- <a href="footer/co_sales/sbcard_egift" class="btn" required="login">구매 신청</a> --> <!-- 20210303 팝업 수정 -->
                                                     <a href="sbcard_egift" class="btn btn_pop">구매 신청</a>
                                                     <a href="sbcard_egift_list" class="btn" required="login">구매 내역 조회</a>
                                                     <a href="javascript:filesDown('http://www.starbucks.co.kr/upload/b2b/co_manual.pdf');" class="btn">e-Gift Card 매뉴얼</a>
@@ -875,11 +862,11 @@ var eFrequencyPlannerYn = 'Y';
                     <nav class="ms_nav" id="msRnb">
                         <ul>
                             <li><a href="index">단체 및 기업 구매 안내</a></li>
-                            <!-- <li><a href="/footer/co_sales/sbcard_egift">스타벅스 e-Gift Card</a></li> -->
-                            <!-- <li><a required="login" href="/footer/co_sales/sbcard">스타벅스 카드</a></li> -->
-                            <!-- <li><a href="/footer/co_sales/co-branded">스타벅스 Co-branded 카드</a></li> -->
-                            <!-- <li><a required="login" href="/footer/co_sales/sb_product">스타벅스 상품</a></li> -->
-                            <!-- <li><a required="login" href="/footer/co_sales/sbgift_certificate">스타벅스 상품권</a></li> -->
+                            <!-- <li><a href="footer/co_sales/sbcard_egift">스타벅스 e-Gift Card</a></li> -->
+                            <!-- <li><a required="login" href="footer/co_sales/sbcard">스타벅스 카드</a></li> -->
+                            <!-- <li><a href="footer/co_sales/co-branded">스타벅스 Co-branded 카드</a></li> -->
+                            <!-- <li><a required="login" href="footer/co_sales/sb_product">스타벅스 상품</a></li> -->
+                            <!-- <li><a required="login" href="footer/co_sales/sbgift_certificate">스타벅스 상품권</a></li> -->
                         </ul>
                     </nav>
                     <!-- // ms_nav -->
@@ -926,7 +913,7 @@ var eFrequencyPlannerYn = 'Y';
 								</ul>
 							</li>
 							<li><a href="/company/news_list">국내 뉴스룸</a></li>
-							<li><a href="/footer/company/global_starbucks">세계의 스타벅스</a></li>
+							<li><a href="footer/company/global_starbucks">세계의 스타벅스</a></li>
 							<!-- 160811 메뉴 추가 -->
 							<li><a href="https://news.starbucks.com" target="_blank">글로벌 뉴스룸</a></li>
 							<!-- 160811 메뉴 추가 end -->
@@ -934,16 +921,16 @@ var eFrequencyPlannerYn = 'Y';
 						<ul>
 							<li class="footer_menu_ttl"><a class="en" id="goPage" href="javascript:void(0);">CORPORATE SALES<span class="footer_arrow_down"></span></a></li>
 							<li><a href="index">단체 및 기업 구매 안내</a></li>
-							<!-- <li><a href="/footer/co_sales/sbcard_egift">스타벅스 <span class="en">e-Gift Card</span></a></li> -->
-							<!-- <li><a href="/footer/co_sales/sbcard">스타벅스 카드</a></li> -->
-							<!-- <li><a href="/footer/co_sales/co-branded"><span class="en">Co-branded</span> 카드</a></li> -->
-							<!-- <li><a href="/footer/co_sales/sb_product">스타벅스 상품</a></li> -->
-							<!-- <li><a href="/footer/co_sales/sbgift_certificate">스타벅스 상품권</a></li> -->
+							<!-- <li><a href="footer/co_sales/sbcard_egift">스타벅스 <span class="en">e-Gift Card</span></a></li> -->
+							<!-- <li><a href="footer/co_sales/sbcard">스타벅스 카드</a></li> -->
+							<!-- <li><a href="footer/co_sales/co-branded"><span class="en">Co-branded</span> 카드</a></li> -->
+							<!-- <li><a href="footer/co_sales/sb_product">스타벅스 상품</a></li> -->
+							<!-- <li><a href="footer/co_sales/sbgift_certificate">스타벅스 상품권</a></li> -->
 						</ul>
 						<ul>
 							<li class="footer_menu_ttl"><a class="en" href="javascript:void(0);">PARTNERSHIP<span class="footer_arrow_down"></span></a></li>
 							<li><a href="/partnership/new_partner">신규 입점 제의</a></li>
-							<!-- <li><a href="/footer/partnership/portal_systems">협력사 포털 시스템</a></li> -->
+							<!-- <li><a href="footer/partnership/portal_systems">협력사 포털 시스템</a></li> -->
 							<li><a href="/srm/login">협력 고객사 등록신청</a></li>
 						</ul>
 						<ul>
@@ -1052,47 +1039,47 @@ var eFrequencyPlannerYn = 'Y';
 			<!-- footer end -->
 		
 			
-			<script src="/common/js/jquery-1.10.2.min.js"></script>
-			<script src="/common/js/%40common.js"></script>
-			<script src="/common/js/jquery-ui.min.js?v=220207"></script>
-			<script src="/common/js/idangerous.swiper-2.1.min.js"></script>
-			<script src="/common/js/idangerous.swiper.scrollbar-2.1.js"></script>
-			<script src="/common/js/jquery.bxslider.min.js"></script>
-			<script src="/common/js/skdslider.min.js"></script>
-			<script src="/common/js/jquery.drive.js"></script>
-			<script src="/common/js/jquery.easing-1.3.min.js"></script>
-			<script src="/common/js/jquery.elevatezoom.js"></script>
-			<script src="/common/js/jquery.flip.js"></script>
-			<script src="/common/js/jquery.jsmovie.1.4.4.min.js"></script>
-			<script src="/common/js/jquery.mCustomScrollbar.concat.js"></script>
-			<script src="/common/js/jquery.number.min.js"></script>
-			<script src="/common/js/jquery.rotate.2.3.js"></script>
-			<script src="/common/js/jquery.scrollbar.js"></script>
-			<script src="/common/js/jquery.scrollTo-1.4.2-min.js"></script>
-			<script src="/common/js/jquery.superscrollorama.js"></script>						
-			<script src="/common/js/jquery.transform2d.js"></script>
-			<script src="/common/js/jquery.transform3d.js"></script>			
-			<script src="/common/js/greensock/TweenMax.min.js"></script>
-			<script src="/common/js/masonry.pkgd.js"></script>
-			<script src="/common/js/common.js"></script>
-			<script src="/common/js/gnb.js?v=220502"></script>
-			<script src="/common/js/header.js?v=200915"></script>
-			<script src="/common/js/footer.js?v=210818"></script>
+			<script src="common/js/jquery-1.10.2.min.js"></script>
+			<script src="common/js/%40common.js"></script>
+			<script src="common/js/jquery-ui.min.js?v=220207"></script>
+			<script src="common/js/idangerous.swiper-2.1.min.js"></script>
+			<script src="common/js/idangerous.swiper.scrollbar-2.1.js"></script>
+			<script src="common/js/jquery.bxslider.min.js"></script>
+			<script src="common/js/skdslider.min.js"></script>
+			<script src="common/js/jquery.drive.js"></script>
+			<script src="common/js/jquery.easing-1.3.min.js"></script>
+			<script src="common/js/jquery.elevatezoom.js"></script>
+			<script src="common/js/jquery.flip.js"></script>
+			<script src="common/js/jquery.jsmovie.1.4.4.min.js"></script>
+			<script src="common/js/jquery.mCustomScrollbar.concat.js"></script>
+			<script src="common/js/jquery.number.min.js"></script>
+			<script src="common/js/jquery.rotate.2.3.js"></script>
+			<script src="common/js/jquery.scrollbar.js"></script>
+			<script src="common/js/jquery.scrollTo-1.4.2-min.js"></script>
+			<script src="common/js/jquery.superscrollorama.js"></script>						
+			<script src="common/js/jquery.transform2d.js"></script>
+			<script src="common/js/jquery.transform3d.js"></script>			
+			<script src="common/js/greensock/TweenMax.min.js"></script>
+			<script src="common/js/masonry.pkgd.js"></script>
+			<script src="common/js/common.js"></script>
+			<script src="common/js/gnb.js?v=220502"></script>
+			<script src="common/js/header.js?v=200915"></script>
+			<script src="common/js/footer.js?v=210818"></script>
 
-			<script src="/common/js/jquery.tmpl.js"></script>
-			<script src="/common/js/jquery.tmplPlus.min.js"></script>
-			<script src="/common/js/jquery.ezmark.min.js"></script>
+			<script src="common/js/jquery.tmpl.js"></script>
+			<script src="common/js/jquery.tmplPlus.min.js"></script>
+			<script src="common/js/jquery.ezmark.min.js"></script>
 			<!-- <script src="/developers.kakao.com/sdk/js/kakao.min.js"></script> -->
 			
 			<!--
-			<script src="/common/js/swiper.jquery.min.js"></script>
-			<script src="/common/js/swiper.min.js"></script>
-			<script src="/common/js/util.js"></script>
+			<script src="common/js/swiper.jquery.min.js"></script>
+			<script src="common/js/swiper.min.js"></script>
+			<script src="common/js/util.js"></script>
 			-->
 			
 		
-			<script src="/common/js/openevent/openevent.js"></script>
-			<script src="/common/js/open_event_control.js"></script>
+			<script src="common/js/openevent/openevent.js"></script>
+			<script src="common/js/open_event_control.js"></script>
 			<script type="text/javascript">
 				
 				var mrSlider;
@@ -1183,21 +1170,21 @@ var eFrequencyPlannerYn = 'Y';
 						if (m_jsonRewardSummary != null) {
 							// 등록된 카드가 없으면 링크 변경
 							if (m_jsonRewardSummary.cardInfo.cardNumber == "") {
-								if (location.href.indexOf("/my/") > -1) {
-									var url = "/my/mycard_none";
+								if (location.href.indexOf("my/") > -1) {
+									var url = "my/mycard_none";
 									
-									$('a[data-href="/my/mycard_index"]').attr("data-href", url);
-									$('a[data-href="/my/mycard"]').attr("data-href", url);
-									$('a[data-href="/my/mycard_charge"]').attr("data-href", url);
-									$('a[data-href="/my/mycard_lost"]').attr("data-href", url);
+									$('a[data-href="my/mycard_index"]').attr("data-href", url);
+									$('a[data-href="my/mycard"]').attr("data-href", url);
+									$('a[data-href="my/mycard_charge"]').attr("data-href", url);
+									$('a[data-href="my/mycard_lost"]').attr("data-href", url);
 								}
 							}
 							
 							// 로그인 상태에 따라 등록 및 조회 페이지 링크 변경
 							if (m_jsonRewardSummary.msrMemberYn == "Y") {
-								$('a[href="/msr/scard/register_inquiry"]').attr("href", "/my/mycard_info_input");
+								$('a[href="msr/scard/register_inquiry"]').attr("href", "my/mycard_info_input");
 							} else {
-								$('a[href="/msr/scard/register_inquiry"]').attr("href", "/my/reward");
+								$('a[href="msr/scard/register_inquiry"]').attr("href", "my/reward");
 							}
 							
 							clearInterval(itvChangeLink);
@@ -1206,7 +1193,7 @@ var eFrequencyPlannerYn = 'Y';
 					/* 150714 추가 - 박종현 end */
 					$('#goPage').bind('click', function(){
 						if (myWindow > 640) {
-							location.href="/footer/co_sales/index";
+							location.href="footer/co_sales/index";
 						}
 					});
 					
@@ -1250,7 +1237,7 @@ var eFrequencyPlannerYn = 'Y';
                             	if(url.length == 0){
                             		url = location.href;
                             	}  
-                            	location.href = "/login/login?redirect_url=" + encodeURIComponent(url);
+                            	location.href = "login/login?redirect_url=" + encodeURIComponent(url);
                     			
                     		}else{
                     			//MSR 회원 여부 체크
@@ -1280,7 +1267,7 @@ var eFrequencyPlannerYn = 'Y';
                 
                 function fn_showrewardTumblerMsrCheckPopup(obj){
                 	if( obj.msrMemberYn == "Y"){ /*msr 회원일 경우 페이지 이동*/
-                		location.href = "/my/reward_tumbler";
+                		location.href = "my/reward_tumbler";
                     }else{/* msr 비회원일 경우 팝업창 노출 */
                         $('#msrCheckPop_rewardTumbler').fadeIn();
                         $('.dt_pop_up_dimm').fadeIn();
@@ -1288,7 +1275,7 @@ var eFrequencyPlannerYn = 'Y';
                         $('#tumblerPopConfirmBtn, #tumblerPopCancelBtn').show();
                         $('#tumblerPopConfirmBtn').on('click', function(){
                         	// msr 비회원일 경우 카드 등록 페이지로 이동
-                        	location.href = "/my/mycard_info_input";
+                        	location.href = "my/mycard_info_input";
                         });
                     }
                 }
@@ -1301,7 +1288,7 @@ var eFrequencyPlannerYn = 'Y';
                 /* 개인컵 리워드 e */
 			</script>
 
-			<script src="/common/js/jquery.transit.min.js"></script>
+			<script src="common/js/jquery.transit.min.js"></script>
 			<script>
 				// 150805 DOM 수정
 				$('div.msr_card_zone').bind('click', function(){
@@ -1483,7 +1470,7 @@ var eFrequencyPlannerYn = 'Y';
     		$('a[required="login"]').on("click", function () {
     			var strHref = $(this).data("href");
     			
-    			__ajaxCall("/interface/checkLogin", {}, true, "json", "post"
+    			__ajaxCall("interface/checkLogin", {}, true, "json", "post"
     				,function (_response) {
     					if (_response.result_code == "SUCCESS") {
     						location.href = strHref;
@@ -1492,7 +1479,7 @@ var eFrequencyPlannerYn = 'Y';
     						$.loginLib.showLayerLogin();
     						m_strTargetUrl = strHref;
     						*/
-    						location.href = "/login/login?redirect_url=" + encodeURIComponent(strHref);
+    						location.href = "login/login?redirect_url=" + encodeURIComponent(strHref);
     					}
     				}
     				,function (_error) {
