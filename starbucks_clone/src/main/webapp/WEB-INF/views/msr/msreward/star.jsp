@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
 <!DOCTYPE html>
 <html lang="ko">
 	<head>
@@ -132,7 +133,7 @@ var eFrequencyPlannerYn = 'Y';
 							<p class="msr_user_mask msr_user_mask04"></p>
 						</div>
 						<p class="user_greet_txt"><strong><!-- 홍길동 --></strong>님, 안녕하세요!</p>
-						<p class="msr_btn_setting"><a href="/my/myinfo_modify_login">개인정보 수정</a></p>
+						<p class="msr_btn_setting"><a href="my/myinfo_modify_login">개인정보 수정</a></p>
 					</div>
 					<!-- 유저인포 end -->
 					<span class="msr_sep_line"></span>
