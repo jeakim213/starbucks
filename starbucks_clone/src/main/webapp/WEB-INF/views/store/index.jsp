@@ -36,7 +36,7 @@
 
 <!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-	<link href="/common/css_ie/style.css" rel="stylesheet">
+	<link href="common/css_ie/style.css" rel="stylesheet">
 	<script>
 		document.createElement('header');
 		document.createElement('nav');
@@ -90,7 +90,7 @@ var eFrequencyPlannerYn = 'Y';
 	     var js, fjs = d.getElementsByTagName(s)[0];
 	     if (d.getElementById(id)) {return;}
 	     js = d.createElement(s); js.id = id;
-	     js.src = "//connect.facebook.net/ko_KR/sdk.js";
+	     js.src = "connect.facebook.net/ko_KR/sdk.js";
 	     fjs.parentNode.insertBefore(js, fjs);
 	   }(document, 'script', 'facebook-jssdk'));
   
@@ -134,7 +134,7 @@ var eFrequencyPlannerYn = 'Y';
 							<p class="msr_user_mask msr_user_mask04"></p>
 						</div>
 						<p class="user_greet_txt"><strong><!-- 홍길동 --></strong>님, 안녕하세요!</p>
-						<p class="msr_btn_setting"><a href="/my/myinfo_modify_login">개인정보 수정</a></p>
+						<p class="msr_btn_setting"><a href="my/myinfo_modify_login">개인정보 수정</a></p>
 					</div>
 					<!-- 유저인포 end -->
 					<span class="msr_sep_line"></span>
@@ -217,7 +217,7 @@ var eFrequencyPlannerYn = 'Y';
 							</a>
 						</div>
 						<div class="notice_icon3">
-							<a href="/my/ecoupon">
+							<a href="my/ecoupon">
 								<p>
 									<span class="validCoupontCnt">0</span>
 								</p>
@@ -245,7 +245,7 @@ var eFrequencyPlannerYn = 'Y';
 						<div class="msr_nologin_btns">
 							<ul>
 								<li><a href="javascript:$.loginLib.showLayerLogin();">로그인</a></li>
-								<li><a href="/mem/join">회원가입</a></li>
+								<li><a href="mem/join">회원가입</a></li>
 							</ul>
 						</div>
 					</div>
@@ -335,14 +335,14 @@ var eFrequencyPlannerYn = 'Y';
 							<li>
 								<a role="button" href="javascript:void(0);">My 쿠폰<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 -->
 								<ul>
-									<li><a href="/my/ecoupon?t=REG" required="login">등록하기</a></li>
-									<li><a href="/my/ecoupon?t=GIFT" required="login">선물하기</a></li>
-									<li><a href="/my/ecoupon?t=USE" required="login">사용하기</a></li>
+									<li><a href="my/ecoupon?t=REG" required="login">등록하기</a></li>
+									<li><a href="my/ecoupon?t=GIFT" required="login">선물하기</a></li>
+									<li><a href="my/ecoupon?t=USE" required="login">사용하기</a></li>
 								</ul>
 							</li>
 							<li><a href="my/calendar" required="login">My 캘린더</a></li>
-							<!-- <li><a href="/my/drink_shop" required="login">My 음료/매장</a></li> -->
-							<li><a href="/my/my_menu" required="login">My 메뉴</a></li>
+							<!-- <li><a href="my/drink_shop" required="login">My 음료/매장</a></li> -->
+							<li><a href="my/my_menu" required="login">My 메뉴</a></li>
 							
 							
 							<li>
@@ -360,9 +360,9 @@ var eFrequencyPlannerYn = 'Y';
 							<li>
 								<a role="button" href="javascript:void(0);">개인정보관리<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 -->
 								<ul>
-									<li><a href="/my/myinfo_modify_login" required="login">개인정보확인 및 수정</a></li>
-									<li><a href="/my/myinfo_out" required="login">회원 탈퇴</a></li>
-									<li><a href="/my/myinfo_modify_pwd" required="login">비밀번호 변경</a></li>
+									<li><a href="my/myinfo_modify_login" required="login">개인정보확인 및 수정</a></li>
+									<li><a href="my/myinfo_out" required="login">회원 탈퇴</a></li>
+									<li><a href="my/myinfo_modify_pwd" required="login">비밀번호 변경</a></li>
 								</ul>
 							</li>
 						</ul>
@@ -598,7 +598,7 @@ var eFrequencyPlannerYn = 'Y';
 						</ul>
 						<ul>
 							<li class="mob_gnb_ttl2"><a role="button" class="en" href="javascript:void(0);">WHAT'S NEW<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 --></li>
-							<li><a href="/whats_new/index">한눈에 보기</a></li>
+							<li><a href="whats_new/index">한눈에 보기</a></li>
 							<li>
 								<a role="button" href="javascript:void(0);">이벤트<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 --> <!-- 20210304 메뉴명변경 -->
 								<ul>
@@ -912,7 +912,7 @@ var eFrequencyPlannerYn = 'Y';
 								</ul>
 							</li>
 							<li><a href="footer/company/news_list">국내 뉴스룸</a></li>
-							<li><a href="/footer/company/global_starbucks">세계의 스타벅스</a></li>
+							<li><a href="footer/company/global_starbucks">세계의 스타벅스</a></li>
 							<!-- 160811 메뉴 추가 -->
 							<li><a href="https://news.starbucks.com" target="_blank">글로벌 뉴스룸</a></li>
 							<!-- 160811 메뉴 추가 end -->
@@ -920,17 +920,17 @@ var eFrequencyPlannerYn = 'Y';
 						<ul>
 							<li class="footer_menu_ttl"><a class="en" id="goPage" href="javascript:void(0);">CORPORATE SALES<span class="footer_arrow_down"></span></a></li>
 							<li><a href="footer/co_sales/index">단체 및 기업 구매 안내</a></li>
-							<!-- <li><a href="/footer/co_sales/sbcard_egift">스타벅스 <span class="en">e-Gift Card</span></a></li> -->
-							<!-- <li><a href="/footer/co_sales/sbcard">스타벅스 카드</a></li> -->
-							<!-- <li><a href="/footer/co_sales/co-branded"><span class="en">Co-branded</span> 카드</a></li> -->
-							<!-- <li><a href="/footer/co_sales/sb_product">스타벅스 상품</a></li> -->
-							<!-- <li><a href="/footer/co_sales/sbgift_certificate">스타벅스 상품권</a></li> -->
+							<!-- <li><a href="footer/co_sales/sbcard_egift">스타벅스 <span class="en">e-Gift Card</span></a></li> -->
+							<!-- <li><a href="footer/co_sales/sbcard">스타벅스 카드</a></li> -->
+							<!-- <li><a href="footer/co_sales/co-branded"><span class="en">Co-branded</span> 카드</a></li> -->
+							<!-- <li><a href="footer/co_sales/sb_product">스타벅스 상품</a></li> -->
+							<!-- <li><a href="footer/co_sales/sbgift_certificate">스타벅스 상품권</a></li> -->
 						</ul>
 						<ul>
 							<li class="footer_menu_ttl"><a class="en" href="javascript:void(0);">PARTNERSHIP<span class="footer_arrow_down"></span></a></li>
 							<li><a href="footer/partnership/new_partner">신규 입점 제의</a></li>
-							<!-- <li><a href="/footer/partnership/portal_systems">협력사 포털 시스템</a></li> -->
-							<li><a href="/srm/login">협력 고객사 등록신청</a></li>
+							<!-- <li><a href="footer/partnership/portal_systems">협력사 포털 시스템</a></li> -->
+							<li><a href="srm/login">협력 고객사 등록신청</a></li>
 						</ul>
 						<ul>
 							<li class="footer_menu_ttl"><a class="en" href="javascript:void(0);">ONLINE COMMUNITY<span class="footer_arrow_down"></span></a></li>
@@ -953,7 +953,7 @@ var eFrequencyPlannerYn = 'Y';
 							<a href="javascript:$.loginLib.showLayerLogin();" class="sign_in">Sign In</a>
 							<a href="javascript:$.loginLib.logout();" class="sign_out" style="display:none;">Sign Out</a>
 						</li>
-						<li class="last"><a href="/mem/join1">Join Us</a></li>
+						<li class="last"><a href="mem/join1">Join Us</a></li>
 					</ul>
 				</div>
 				<!-- 수상내역 -->
@@ -1071,9 +1071,9 @@ var eFrequencyPlannerYn = 'Y';
 			<!-- <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script> -->
 			
 			<!--
-			<script src="/common/js/swiper.jquery.min.js"></script>
-			<script src="/common/js/swiper.min.js"></script>
-			<script src="/common/js/util.js"></script>
+			<script src="common/js/swiper.jquery.min.js"></script>
+			<script src="common/js/swiper.min.js"></script>
+			<script src="common/js/util.js"></script>
 			-->
 			
 		
@@ -1169,21 +1169,21 @@ var eFrequencyPlannerYn = 'Y';
 						if (m_jsonRewardSummary != null) {
 							// 등록된 카드가 없으면 링크 변경
 							if (m_jsonRewardSummary.cardInfo.cardNumber == "") {
-								if (location.href.indexOf("/my/") > -1) {
-									var url = "/my/mycard_none";
+								if (location.href.indexOf("my/") > -1) {
+									var url = "my/mycard_none";
 									
-									$('a[data-href="/my/mycard_index"]').attr("data-href", url);
-									$('a[data-href="/my/mycard"]').attr("data-href", url);
-									$('a[data-href="/my/mycard_charge"]').attr("data-href", url);
-									$('a[data-href="/my/mycard_lost"]').attr("data-href", url);
+									$('a[data-href="my/mycard_index"]').attr("data-href", url);
+									$('a[data-href="my/mycard"]').attr("data-href", url);
+									$('a[data-href="my/mycard_charge"]').attr("data-href", url);
+									$('a[data-href="my/mycard_lost"]').attr("data-href", url);
 								}
 							}
 							
 							// 로그인 상태에 따라 등록 및 조회 페이지 링크 변경
 							if (m_jsonRewardSummary.msrMemberYn == "Y") {
-								$('a[href="/msr/scard/register_inquiry"]').attr("href", "/my/mycard_info_input");
+								$('a[href="msr/scard/register_inquiry"]').attr("href", "my/mycard_info_input");
 							} else {
-								$('a[href="/msr/scard/register_inquiry"]').attr("href", "/my/reward");
+								$('a[href="msr/scard/register_inquiry"]').attr("href", "my/reward");
 							}
 							
 							clearInterval(itvChangeLink);
@@ -1192,7 +1192,7 @@ var eFrequencyPlannerYn = 'Y';
 					/* 150714 추가 - 박종현 end */
 					$('#goPage').bind('click', function(){
 						if (myWindow > 640) {
-							location.href="/footer/co_sales/index";
+							location.href="footer/co_sales/index";
 						}
 					});
 					
@@ -1236,7 +1236,7 @@ var eFrequencyPlannerYn = 'Y';
                             	if(url.length == 0){
                             		url = location.href;
                             	}  
-                            	location.href = "/login/login?redirect_url=" + encodeURIComponent(url);
+                            	location.href = "login/login?redirect_url=" + encodeURIComponent(url);
                     			
                     		}else{
                     			//MSR 회원 여부 체크
@@ -1266,7 +1266,7 @@ var eFrequencyPlannerYn = 'Y';
                 
                 function fn_showrewardTumblerMsrCheckPopup(obj){
                 	if( obj.msrMemberYn == "Y"){ /*msr 회원일 경우 페이지 이동*/
-                		location.href = "/my/reward_tumbler";
+                		location.href = "my/reward_tumbler";
                     }else{/* msr 비회원일 경우 팝업창 노출 */
                         $('#msrCheckPop_rewardTumbler').fadeIn();
                         $('.dt_pop_up_dimm').fadeIn();
@@ -1274,7 +1274,7 @@ var eFrequencyPlannerYn = 'Y';
                         $('#tumblerPopConfirmBtn, #tumblerPopCancelBtn').show();
                         $('#tumblerPopConfirmBtn').on('click', function(){
                         	// msr 비회원일 경우 카드 등록 페이지로 이동
-                        	location.href = "/my/mycard_info_input";
+                        	location.href = "my/mycard_info_input";
                         });
                     }
                 }
