@@ -23,17 +23,17 @@
 <meta property="og:description" content="Starbucks">
 
 <title id="titleJoin">Starbucks Korea</title> <!-- 220117 수정 -->
-<link rel="shortcut icon" href="/common/img/common/favicon.ico?v=200828" type="image/ico"> <!-- 20200827 파비콘 교체 및 CDN 변수처리 -->
-<link href="/common/css/reset.css" rel="stylesheet">
-<link href="/common/css/style.css?v=210721" rel="stylesheet">
-<link href="/common/css/jquery.bxslider.css" rel="stylesheet">
-<link href="/common/css/idangerous.swiper.css" rel="stylesheet">
-<link href="/common/css/idangerous.swiper.scrollbar.css" rel="stylesheet">
-<link href="/common/css/jquery.mCustomScrollbar.css" rel="stylesheet">
-<link href="/common/css/jquery.scrollbar.css" rel="stylesheet">
-<link href="/common/css/jquery-ui.css" rel="stylesheet">
-<link href="/common/css/ezmark.css" rel="stylesheet">
-<link href="/common/css/style_dt.css?v=20191211" rel="stylesheet"> <!-- 20191211 수정 -->
+<link rel="shortcut icon" href="common/img/common/favicon.ico?v=200828" type="image/ico"> <!-- 20200827 파비콘 교체 및 CDN 변수처리 -->
+<link href="common/css/reset.css" rel="stylesheet">
+<link href="common/css/style.css?v=210721" rel="stylesheet">
+<link href="common/css/jquery.bxslider.css" rel="stylesheet">
+<link href="common/css/idangerous.swiper.css" rel="stylesheet">
+<link href="common/css/idangerous.swiper.scrollbar.css" rel="stylesheet">
+<link href="common/css/jquery.mCustomScrollbar.css" rel="stylesheet">
+<link href="common/css/jquery.scrollbar.css" rel="stylesheet">
+<link href="common/css/jquery-ui.css" rel="stylesheet">
+<link href="common/css/ezmark.css" rel="stylesheet">
+<link href="common/css/style_dt.css?v=20191211" rel="stylesheet"> <!-- 20191211 수정 -->
 
 <!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -69,7 +69,7 @@ var eFrequencySeq = '172';
 var eFrequencyPlannerYn = 'Y';
 </script>
 
-        <link href="/common/css/style_whatsnew-3.css?v=20220221" rel="stylesheet">
+        <link href="common/css/style_whatsnew-3.css?v=20220221" rel="stylesheet">
     </head>
     <body>
         <div id="wrap">
@@ -125,7 +125,7 @@ var eFrequencyPlannerYn = 'Y';
 					<!-- 유저인포 -->
 					<div class="user_greet">
 						<div class="user_pic_area">
-							<img alt="사용자 아이디" src="/common/img/common/user_pic_sample.jpg">
+							<img alt="사용자 아이디" src="common/img/common/user_pic_sample.jpg">
 							<p class="msr_user_mask msr_user_mask01"></p>
 							<p class="msr_user_mask msr_user_mask02"></p>
 							<p class="msr_user_mask msr_user_mask03"></p>
@@ -174,13 +174,13 @@ var eFrequencyPlannerYn = 'Y';
 							<img alt="카드이름">
 						</div>
 						<div class="mycard_area2">
-							<img alt="카드이름" src="/common/img/common/mycard2.png">
+							<img alt="카드이름" src="common/img/common/mycard2.png">
 							<p class="num"><!-- 1234-1234-1234-1234 --></p>
 							<p class="barcord"><!-- <img src="//image.istarbucks.co.kr/common/img/common/bacord.png" alt=""> --></p>
 						</div>
 						<div class="mycard_one">
 							<!-- <div class="front"> -->
-							<img src="/common/img/common/payment_icon1.png" alt="">
+							<img src="common/img/common/payment_icon1.png" alt="">
 							<!-- </div> -->
 							<!-- <div class="back"><img src="//image.istarbucks.co.kr/common/img/common/payment_icon1.png" alt=""></div> -->
 						</div>
@@ -195,7 +195,7 @@ var eFrequencyPlannerYn = 'Y';
 					<!-- 일반회원 -->
 					<div class="sb_card_regi">
 						<a href="javascript:void(0);">
-							<p class="icon_add_card" onclick="location.href = '/my/mycard_info_input';"><img alt="카드등록 아이콘" src="/common/img/common/icon_add_card.png"></p>
+							<p class="icon_add_card" onclick="location.href = '/my/mycard_info_input';"><img alt="카드등록 아이콘" src="common/img/common/icon_add_card.png"></p>
 							<p class="sb_card_regi_txt"><strong>스타벅스 카드 등록</strong><br>카드를 등록하시고<br>다양한 리워드를<br>만나보세요.</p>
 						</a>
 					</div>
@@ -567,36 +567,36 @@ var eFrequencyPlannerYn = 'Y';
 							<li>
 								<a role="button" href="javascript:void(0);">스타벅스 리워드<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 --> <!-- 스타벅스 리워드 수정 -->
 								<ul>
-									<li><a href="/msr/msreward/about">스타벅스 리워드 소개</a></li> <!-- 스타벅스 리워드 수정 -->
-									<li><a href="/msr/msreward/level_benefit">등급 및 혜택</a></li>
-									<li><a href="/msr/msreward/star">스타벅스 별</a></li>
-									<li><a href="/community/faq?menu_cd=STB2703&cate=F17">자주 하는 질문</a></li> <!-- 20210809 수정 -->
+									<li><a href="msr/msreward/about">스타벅스 리워드 소개</a></li> <!-- 스타벅스 리워드 수정 -->
+									<li><a href="msr/msreward/level_benefit">등급 및 혜택</a></li>
+									<li><a href="msr/msreward/star">스타벅스 별</a></li>
+									<li><a href="community/faq?menu_cd=STB2703&cate=F17">자주 하는 질문</a></li> <!-- 20210809 수정 -->
 								</ul>
 							</li>
 							<li>
 								<a role="button" href="javascript:void(0);">스타벅스 카드<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 -->
 								<ul>
-									<li><a href="/msr/scard/about">스타벅스 카드 소개</a></li>
-									<li><a href="/msr/scard/scard_gallery">스타벅스 카드 갤러리</a></li>
-									<li><a href="/msr/scard/register_inquiry">등록 및 조회</a></li>
-									<li><a href="/msr/scard/charge_information">충전 및 이용안내</a></li>
-									<li><a href="/msr/scard/lost_report">분실신고/환불신청</a></li>
-									<li><a href="/community/faq-1?menu_cd=STB2703&cate=F05">자주 하는 질문</a></li> <!-- 20210809 수정 -->
+									<li><a href="msr/scard/about">스타벅스 카드 소개</a></li>
+									<li><a href="msr/scard/scard_gallery">스타벅스 카드 갤러리</a></li>
+									<li><a href="msr/scard/register_inquiry">등록 및 조회</a></li>
+									<li><a href="msr/scard/charge_information">충전 및 이용안내</a></li>
+									<li><a href="msr/scard/lost_report">분실신고/환불신청</a></li>
+									<li><a href="community/faq-1?menu_cd=STB2703&cate=F05">자주 하는 질문</a></li> <!-- 20210809 수정 -->
 								</ul>
 							</li>
 							<li>
 								<a role="button" href="javascript:void(0);">스타벅스 e-Gift Card<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 -->
 								<ul>
-									<li><a href="/msr/sceGift/egift_information">스타벅스 e-Gift Card 소개</a></li>
-									<li><a href="/msr/sceGift/msr_useguide">이용안내</a></li>
-									<li><a href="/msr/sceGift/gift_step1" required="login">선물하기</a></li>
-									<li><a href="/community/faq-2?menu_cd=STB2703&cate=F22">자주 하는 질문</a></li> <!-- 20210809 수정 -->
+									<li><a href="msr/sceGift/egift_information">스타벅스 e-Gift Card 소개</a></li>
+									<li><a href="msr/sceGift/msr_useguide">이용안내</a></li>
+									<li><a href="msr/sceGift/gift_step1" required="login">선물하기</a></li>
+									<li><a href="community/faq-2?menu_cd=STB2703&cate=F22">자주 하는 질문</a></li> <!-- 20210809 수정 -->
 								</ul>
 							</li>
 						</ul>
 						<ul>
 							<li class="mob_gnb_ttl2"><a role="button" class="en" href="javascript:void(0);">WHAT'S NEW<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 --></li>
-							<li><a href="/whats_new/index">한눈에 보기</a></li>
+							<li><a href="whats_new/index">한눈에 보기</a></li>
 							<li>
 								<a role="button" href="javascript:void(0);">이벤트<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 --> <!-- 20210304 메뉴명변경 -->
 								<ul>
@@ -658,7 +658,7 @@ var eFrequencyPlannerYn = 'Y';
 </ul>
 				</nav>
 				<p class="btn_search">
-					<a href="javascript:void(0);"><img alt="통합검색" src="/common/img/common/icon_magnifier_black.png"></a>
+					<a href="javascript:void(0);"><img alt="통합검색" src="common/img/common/icon_magnifier_black.png"></a>
 				</p>
 				<a href="javascript:void(0);" class="rCup3_wrap" role="button" title="마이 리워드 레이어 열기"><!-- 접근성_20171201 class, role, title 추가 --><span class="rCup3"></span></a><!-- 150714 DOM 수정 - 떨어지는 메뉴 부분에 jsMovie 추가 -->
 			</div>
@@ -675,12 +675,12 @@ var eFrequencyPlannerYn = 'Y';
             <!-- 서브 타이틀 -->
             <div class="sub_tit_wrap">
                 <div class="sub_tit_inner">
-                <h2><img src="/common/img/whatsnew/campaign_tit_20210218.jpg" alt="이벤트"></h2> <!-- 20210304 메뉴명 변경 -->
+                <h2><img src="common/img/whatsnew/campaign_tit_20210218.jpg" alt="이벤트"></h2> <!-- 20210304 메뉴명 변경 -->
                     <ul class="smap">
-                        <li><a href="/index"><img src="/common/img/common/icon_home.png" alt="홈으로"></a></li>
-                        <li><img class="arrow" src="/common/img/common/icon_arrow.png" alt="하위메뉴"></li>
+                        <li><a href="/index"><img src="common/img/common/icon_home.png" alt="홈으로"></a></li>
+                        <li><img class="arrow" src="common/img/common/icon_arrow.png" alt="하위메뉴"></li>
                         <li class="en"><a href="index">WHAT'S NEW</a></li>
-                        <li><img class="arrow" src="/common/img/common/icon_arrow.png" alt="하위메뉴"></li>
+                        <li><img class="arrow" src="common/img/common/icon_arrow.png" alt="하위메뉴"></li>
                         <li><a href="campaign_list" class="this">이벤트</a></li> <!-- 20210304 메뉴명 변경 -->
                     </ul>
                 </div>
@@ -831,30 +831,30 @@ var eFrequencyPlannerYn = 'Y';
 					<div class="footer_menus">
 						<ul class="footer_first_menu">
 							<li class="footer_menu_ttl"><a class="en" href="javascript:void(0);">CUSTOMER SERVICE &amp; IDEAS<span class="footer_arrow_down"></span></a></li>
-							<li><a href="/util/faq">자주 하는 질문</a></li><!-- 20210809 수정 -->
-							<li><a href="/customer/suggestionWrite">고객의 소리</a></li>
+							<li><a href="util/faq">자주 하는 질문</a></li><!-- 20210809 수정 -->
+							<li><a href="customer/suggestionWrite">고객의 소리</a></li>
 							<li class="footer_2depth_ttl"><a href="javascript:void(0)">스타벅스 이용 팁<span class="footer_arrow_down"></span></a>
 								<ul>
-									<li><a href="/util/web_tip">홈페이지 이용 팁</a></li>
-									<li><a href="/util/app_tip">애플리케이션 이용 팁</a></li>
-									<li><a href="/util/partnership_card">제휴카드 안내</a></li>
+									<li><a href="util/web_tip">홈페이지 이용 팁</a></li>
+									<li><a href="util/app_tip">애플리케이션 이용 팁</a></li>
+									<li><a href="util/partnership_card">제휴카드 안내</a></li>
 								</ul>
 							</li>
-							<li><a href="/util/online_survey">고객 경험 설문조사</a></li> <!-- 20210811 수정  -->
+							<li><a href="util/online_survey">고객 경험 설문조사</a></li> <!-- 20210811 수정  -->
 							
 							
-							<li><a href="/util/guest_eReceipt">비회원 전자영수증 조회</a></li>
+							<li><a href="util/guest_eReceipt">비회원 전자영수증 조회</a></li>
 							
 						</ul>
 						<ul>
 							<li class="footer_menu_ttl"><a class="en" href="javascript:void(0);">COMPANY<span class="footer_arrow_down"></span></a></li>
-							<li><a href="/footer/company/index">한눈에 보기</a></li>
-							<li><a href="/footer/company/mission">스타벅스 사명</a></li>
+							<li><a href="footer/company/index">한눈에 보기</a></li>
+							<li><a href="footer/company/mission">스타벅스 사명</a></li>
 							<li class="footer_2depth_ttl"><a href="javascript:void(0)">스타벅스 소개<span class="footer_arrow_down"></span></a>
 								<ul>
-									<li><a href="/footer/company/starbucks_information">스타벅스 코리아</a></li> <!-- 220118 수정 -->
-									<li><a href="/footer/company/starbucks_history">주요 연혁</a></li> <!-- 202107 수정 -->
-									<li><a href="/footer/company/starbucks_story">스타벅스 이야기</a></li>
+									<li><a href="footer/company/starbucks_information">스타벅스 코리아</a></li> <!-- 220118 수정 -->
+									<li><a href="footer/company/starbucks_history">주요 연혁</a></li> <!-- 202107 수정 -->
+									<li><a href="footer/company/starbucks_story">스타벅스 이야기</a></li>
 								</ul>
 							</li>
 							<li><a href="/footer/company/news_list">국내 뉴스룸</a></li>
@@ -865,7 +865,7 @@ var eFrequencyPlannerYn = 'Y';
 						</ul>
 						<ul>
 							<li class="footer_menu_ttl"><a class="en" id="goPage" href="javascript:void(0);">CORPORATE SALES<span class="footer_arrow_down"></span></a></li>
-							<li><a href="/footer/co_sales/index">단체 및 기업 구매 안내</a></li>
+							<li><a href="footer/co_sales/index">단체 및 기업 구매 안내</a></li>
 							<!-- <li><a href="/footer/co_sales/sbcard_egift">스타벅스 <span class="en">e-Gift Card</span></a></li> -->
 							<!-- <li><a href="/footer/co_sales/sbcard">스타벅스 카드</a></li> -->
 							<!-- <li><a href="/footer/co_sales/co-branded"><span class="en">Co-branded</span> 카드</a></li> -->
@@ -874,9 +874,9 @@ var eFrequencyPlannerYn = 'Y';
 						</ul>
 						<ul>
 							<li class="footer_menu_ttl"><a class="en" href="javascript:void(0);">PARTNERSHIP<span class="footer_arrow_down"></span></a></li>
-							<li><a href="/footer/partnership/new_partner">신규 입점 제의</a></li>
+							<li><a href="footer/partnership/new_partner">신규 입점 제의</a></li>
 							<!-- <li><a href="/footer/partnership/portal_systems">협력사 포털 시스템</a></li> -->
-							<li><a href="/srm/login">협력 고객사 등록신청</a></li>
+							<li><a href="srm/login">협력 고객사 등록신청</a></li>
 						</ul>
 						<ul>
 							<li class="footer_menu_ttl"><a class="en" href="javascript:void(0);">ONLINE COMMUNITY<span class="footer_arrow_down"></span></a></li>
@@ -887,19 +887,19 @@ var eFrequencyPlannerYn = 'Y';
 						</ul>
 						<ul>
 							<li class="footer_menu_ttl"><a class="en" href="javascript:void(0);">RECRUIT<span class="footer_arrow_down"></span></a></li>
-							<li><a href="/footer/recruit/index">채용 소개</a></li>
+							<li><a href="footer/recruit/index">채용 소개</a></li>
 							<li><a href="http://job.shinsegae.com/recruit_info/notice/notice02_view.jsp?notino=5924" target="_blank">채용 지원하기</a></li><!-- 20210927 수정 -->
 						</ul>
 					</div>
 				</div>
 				<div class="footer_util_btn">
 					<ul>
-						<li><a href="/index.htm">HOME</a></li>
+						<li><a href="index.htm">HOME</a></li>
 						<li>
 							<a href="javascript:$.loginLib.showLayerLogin();" class="sign_in">Sign In</a>
 							<a href="javascript:$.loginLib.logout();" class="sign_out" style="display:none;">Sign Out</a>
 						</li>
-						<li class="last"><a href="/mem/join1">Join Us</a></li>
+						<li class="last"><a href="mem/join1">Join Us</a></li>
 					</ul>
 				</div>
 				<!-- 수상내역 -->
@@ -959,18 +959,18 @@ var eFrequencyPlannerYn = 'Y';
 				<!-- 150517 추가 - 문진욱 -->
 				<aside class="copyright">
 					<a class="c_00b050" href="/footer/etc/privacy">개인정보처리방침</a>
-					<a href="/footer/etc/rules_vod" class="mbn">영상정보처리기기 운영관리 방침</a>
-					<a href="/footer/etc/rules">홈페이지 이용약관</a>
-					<a href="/footer/etc/rules_loc" class="mbn">위치정보 이용약관</a>
-					<a href="/footer/etc/rules_msr" class="mbn">스타벅스 카드 이용약관</a>
-					<a href="/footer/etc/rules_non" class="mbn">비회원 이용약관</a>
+					<a href="footer/etc/rules_vod" class="mbn">영상정보처리기기 운영관리 방침</a>
+					<a href="footer/etc/rules">홈페이지 이용약관</a>
+					<a href="footer/etc/rules_loc" class="mbn">위치정보 이용약관</a>
+					<a href="footer/etc/rules_msr" class="mbn">스타벅스 카드 이용약관</a>
+					<a href="footer/etc/rules_non" class="mbn">비회원 이용약관</a>
 					<span class="br"><!-- 150713 삭제  구명준  <a href="javascript:void(0);">위치정보 이용약관</a> -->
-					<a href="/footer/etc/rules_mdp">My DT Pass 서비스 이용약관</a></span> <!-- 20200914 mdp 추가 -->
-					<a href="/footer/etc/hotline" class="last">윤리경영 핫라인</a>
+					<a href="footer/etc/rules_mdp">My DT Pass 서비스 이용약관</a></span> <!-- 20200914 mdp 추가 -->
+					<a href="footer/etc/hotline" class="last">윤리경영 핫라인</a>
 					<br>
-					<a class="btned_link" href="/footer/etc/coming_route">찾아오시는 길</a>
-					<a class="btned_link" href="/footer/partnership/new_partner">신규입점제의</a>
-					<a class="btned_link" href="/footer/etc/sitemap">사이트 맵</a><br>
+					<a class="btned_link" href="footer/etc/coming_route">찾아오시는 길</a>
+					<a class="btned_link" href="footer/partnership/new_partner">신규입점제의</a>
+					<a class="btned_link" href="footer/etc/sitemap">사이트 맵</a><br>
 					<ul class="copy_menu">
 						<li>사업자등록번호 : 201-81-21515</li>
 						<li>주식회사 에스씨케이컴퍼니 대표이사 : 송 데이비드 호섭</li> <!-- 220105 수정 -->
@@ -984,36 +984,36 @@ var eFrequencyPlannerYn = 'Y';
 			<!-- footer end -->
 		
 			
-			<script src="/common/js/jquery-1.10.2.min.js"></script>
-			<script src="/common/js/%40common.js"></script>
-			<script src="/common/js/jquery-ui.min.js?v=220207"></script>
-			<script src="/common/js/idangerous.swiper-2.1.min.js"></script>
-			<script src="/common/js/idangerous.swiper.scrollbar-2.1.js"></script>
-			<script src="/common/js/jquery.bxslider.min.js"></script>
-			<script src="/common/js/skdslider.min.js"></script>
-			<script src="/common/js/jquery.drive.js"></script>
-			<script src="/common/js/jquery.easing-1.3.min.js"></script>
-			<script src="/common/js/jquery.elevatezoom.js"></script>
-			<script src="/common/js/jquery.flip.js"></script>
-			<script src="/common/js/jquery.jsmovie.1.4.4.min.js"></script>
-			<script src="/common/js/jquery.mCustomScrollbar.concat.js"></script>
-			<script src="/common/js/jquery.number.min.js"></script>
-			<script src="/common/js/jquery.rotate.2.3.js"></script>
-			<script src="/common/js/jquery.scrollbar.js"></script>
-			<script src="/common/js/jquery.scrollTo-1.4.2-min.js"></script>
-			<script src="/common/js/jquery.superscrollorama.js"></script>						
-			<script src="/common/js/jquery.transform2d.js"></script>
-			<script src="/common/js/jquery.transform3d.js"></script>			
-			<script src="/common/js/greensock/TweenMax.min.js"></script>
-			<script src="/common/js/masonry.pkgd.js"></script>
-			<script src="/common/js/common.js"></script>
-			<script src="/common/js/gnb.js?v=220502"></script>
-			<script src="/common/js/header.js?v=200915"></script>
-			<script src="/common/js/footer.js?v=210818"></script>
+			<script src="common/js/jquery-1.10.2.min.js"></script>
+			<script src="common/js/%40common.js"></script>
+			<script src="common/js/jquery-ui.min.js?v=220207"></script>
+			<script src="common/js/idangerous.swiper-2.1.min.js"></script>
+			<script src="common/js/idangerous.swiper.scrollbar-2.1.js"></script>
+			<script src="common/js/jquery.bxslider.min.js"></script>
+			<script src="common/js/skdslider.min.js"></script>
+			<script src="common/js/jquery.drive.js"></script>
+			<script src="common/js/jquery.easing-1.3.min.js"></script>
+			<script src="common/js/jquery.elevatezoom.js"></script>
+			<script src="common/js/jquery.flip.js"></script>
+			<script src="common/js/jquery.jsmovie.1.4.4.min.js"></script>
+			<script src="common/js/jquery.mCustomScrollbar.concat.js"></script>
+			<script src="common/js/jquery.number.min.js"></script>
+			<script src="common/js/jquery.rotate.2.3.js"></script>
+			<script src="common/js/jquery.scrollbar.js"></script>
+			<script src="common/js/jquery.scrollTo-1.4.2-min.js"></script>
+			<script src="common/js/jquery.superscrollorama.js"></script>						
+			<script src="common/js/jquery.transform2d.js"></script>
+			<script src="common/js/jquery.transform3d.js"></script>			
+			<script src="common/js/greensock/TweenMax.min.js"></script>
+			<script src="common/js/masonry.pkgd.js"></script>
+			<script src="common/js/common.js"></script>
+			<script src="common/js/gnb.js?v=220502"></script>
+			<script src="common/js/header.js?v=200915"></script>
+			<script src="common/js/footer.js?v=210818"></script>
 
-			<script src="/common/js/jquery.tmpl.js"></script>
-			<script src="/common/js/jquery.tmplPlus.min.js"></script>
-			<script src="/common/js/jquery.ezmark.min.js"></script>
+			<script src="common/js/jquery.tmpl.js"></script>
+			<script src="common/js/jquery.tmplPlus.min.js"></script>
+			<script src="common/js/jquery.ezmark.min.js"></script>
 			<!-- <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script> -->
 			
 			<!--
@@ -1023,8 +1023,8 @@ var eFrequencyPlannerYn = 'Y';
 			-->
 			
 		
-			<script src="/common/js/openevent/openevent.js"></script>
-			<script src="/common/js/open_event_control.js"></script>
+			<script src="common/js/openevent/openevent.js"></script>
+			<script src="common/js/open_event_control.js"></script>
 			<script type="text/javascript">
 				
 				var mrSlider;
@@ -1270,7 +1270,7 @@ var eFrequencyPlannerYn = 'Y';
 				$('.mycard_one').seqfx();
 			</script>
 						
-			<script src='/common/js/makePCookie.js'></script>
+			<script src='common/js/makePCookie.js'></script>
 		
 			<script>
 				$(document).ready(function () {
