@@ -1,22 +1,9 @@
 ﻿<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
-
-
-
-
 <!DOCTYPE html>
 <html lang="ko">
     <head>
-        
-
-
-
-
-
-
-
-
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
@@ -40,7 +27,11 @@
 <link href="common/css/style_dt.css?v=20191211" rel="stylesheet"> <!-- 20191211 수정 -->
 
 <!--[if lt IE 9]>
+<<<<<<< HEAD
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+=======
+	<script src="/html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+>>>>>>> refs/remotes/origin/main
 	<link href="common/css_ie/style.css" rel="stylesheet">
 	<script>
 		document.createElement('header');
@@ -154,7 +145,11 @@ var eFrequencyPlannerYn = 'Y';
 	     var js, fjs = d.getElementsByTagName(s)[0];
 	     if (d.getElementById(id)) {return;}
 	     js = d.createElement(s); js.id = id;
+<<<<<<< HEAD
 	     js.src = "//connect.facebook.net/ko_KR/sdk.js";
+=======
+	     js.src = "connect.facebook.net/ko_KR/sdk.js";
+>>>>>>> refs/remotes/origin/main
 	     fjs.parentNode.insertBefore(js, fjs);
 	   }(document, 'script', 'facebook-jssdk'));
   
@@ -350,7 +345,11 @@ var eFrequencyPlannerYn = 'Y';
 					<ul>
 						<li class="tablet_gnb01"><a href="javascript:void(0);" role="button" title="마이 리워드 레이어 열기"><!-- 접근성_20171106 role, title 추가 --><span class="rCup2"></span></a></li><!-- 150709 클레스 수정 -->
 						<li class="tablet_gnb02"><a href="my/index" required="login"><span class="a11y">마이스타벅스</span></a><!-- 접근성_20171106 span추가 --></li>
+<<<<<<< HEAD
 						<li class="tablet_gnb03"><a href="store/store_map"><span class="a11y">매장찾기</span></a><!-- 접근성_20171106 span추가 --></li>
+=======
+						<li class="tablet_gnb03"><a href="/store/store_map"><span class="a11y">매장찾기</span></a><!-- 접근성_20171106 span추가 --></li>
+>>>>>>> refs/remotes/origin/main
 						<li class="tablet_gnb04"><a href="javascript:void(0);"><span class="a11y" role="button">메뉴열기</span></a><!-- 접근성_20171106 span추가 --></li>
 					</ul>
 				</nav>
@@ -636,7 +635,11 @@ var eFrequencyPlannerYn = 'Y';
 									<li><a href="msr/msreward/about">스타벅스 리워드 소개</a></li> <!-- 스타벅스 리워드 수정 -->
 									<li><a href="msr/msreward/level_benefit">등급 및 혜택</a></li>
 									<li><a href="msr/msreward/star">스타벅스 별</a></li>
+<<<<<<< HEAD
 									<li><a href="community/faq?menu_cd=STB2703&cate=F17">자주 하는 질문</a></li> <!-- 20210809 수정 -->
+=======
+									<li><a href="/community/faq?menu_cd=STB2703&cate=F17">자주 하는 질문</a></li> <!-- 20210809 수정 -->
+>>>>>>> refs/remotes/origin/main
 								</ul>
 							</li>
 							<li>
@@ -647,7 +650,11 @@ var eFrequencyPlannerYn = 'Y';
 									<li><a href="msr/scard/register_inquiry">등록 및 조회</a></li>
 									<li><a href="msr/scard/charge_information">충전 및 이용안내</a></li>
 									<li><a href="msr/scard/lost_report">분실신고/환불신청</a></li>
+<<<<<<< HEAD
 									<li><a href="community/faq-1?menu_cd=STB2703&cate=F05">자주 하는 질문</a></li> <!-- 20210809 수정 -->
+=======
+									<li><a href="/community/faq-1?menu_cd=STB2703&cate=F05">자주 하는 질문</a></li> <!-- 20210809 수정 -->
+>>>>>>> refs/remotes/origin/main
 								</ul>
 							</li>
 							<li>
@@ -656,7 +663,11 @@ var eFrequencyPlannerYn = 'Y';
 									<li><a href="msr/sceGift/egift_information">스타벅스 e-Gift Card 소개</a></li>
 									<li><a href="msr/sceGift/msr_useguide">이용안내</a></li>
 									<li><a href="msr/sceGift/gift_step1" required="login">선물하기</a></li>
+<<<<<<< HEAD
 									<li><a href="community/faq-2?menu_cd=STB2703&cate=F22">자주 하는 질문</a></li> <!-- 20210809 수정 -->
+=======
+									<li><a href="/community/faq-2?menu_cd=STB2703&cate=F22">자주 하는 질문</a></li> <!-- 20210809 수정 -->
+>>>>>>> refs/remotes/origin/main
 								</ul>
 							</li>
 						</ul>
@@ -719,8 +730,13 @@ var eFrequencyPlannerYn = 'Y';
 	<li class="util_nav01 sign_out" style="display:none;"><a href="javascript:void(0);">Sign out</a></li>
 	<li class="util_nav01 sign_in"><a href="javascript:void(0);">Sign In</a></li>
 	<li class="util_nav02"><a href="my/index" required="login">My Starbucks</a></li>
+<<<<<<< HEAD
 	<li class="util_nav03"><a href="util/index">Customer Service & Ideas</a></li>
 	<li class="util_nav04"><a href="store/store_map">Find a Store</a></li>
+=======
+	<li class="util_nav03"><a href="/util/index">Customer Service & Ideas</a></li>
+	<li class="util_nav04"><a href="/store/store_map">Find a Store</a></li>
+>>>>>>> refs/remotes/origin/main
 </ul>
 				</nav>
 				<p class="btn_search">
@@ -745,7 +761,11 @@ var eFrequencyPlannerYn = 'Y';
                         <div class="co_sales_ttl_inner">
                             <h4><img alt="단체 및 기업 구매 안내" src="common/img/footer/co_sales/ttl_b2b_guide.png"></h4>
                             <ul class="smap">
+<<<<<<< HEAD
                                 <li><a href="index.htm"><img src="common/img/common/icon_home_w-1.png" alt="홈으로"></a></li>
+=======
+                                <li><a href="/index.htm"><img src="common/img/common/icon_home_w-1.png" alt="홈으로"></a></li>
+>>>>>>> refs/remotes/origin/main
                                 <li><img class="arrow" src="common/img/common/icon_arrow_w-1.png" alt="하위메뉴"></li>
                                 <li><a href="index"><span class="en">CORPORATE SALES</span></a></li>
                                 <li><img class="arrow" src="common/img/common/icon_arrow_w-1.png" alt="하위메뉴"></li>
@@ -925,7 +945,11 @@ var eFrequencyPlannerYn = 'Y';
 									<li><a href="company/starbucks_story">스타벅스 이야기</a></li>
 								</ul>
 							</li>
+<<<<<<< HEAD
 							<li><a href="company/news_list">국내 뉴스룸</a></li>
+=======
+							<li><a href="/company/news_list">국내 뉴스룸</a></li>
+>>>>>>> refs/remotes/origin/main
 							<li><a href="footer/company/global_starbucks">세계의 스타벅스</a></li>
 							<!-- 160811 메뉴 추가 -->
 							<li><a href="https://news.starbucks.com" target="_blank">글로벌 뉴스룸</a></li>
@@ -942,9 +966,15 @@ var eFrequencyPlannerYn = 'Y';
 						</ul>
 						<ul>
 							<li class="footer_menu_ttl"><a class="en" href="javascript:void(0);">PARTNERSHIP<span class="footer_arrow_down"></span></a></li>
+<<<<<<< HEAD
 							<li><a href="partnership/new_partner">신규 입점 제의</a></li>
 							<!-- <li><a href="footer/partnership/portal_systems">협력사 포털 시스템</a></li> -->
 							<li><a href="srm/login">협력 고객사 등록신청</a></li>
+=======
+							<li><a href="/partnership/new_partner">신규 입점 제의</a></li>
+							<!-- <li><a href="footer/partnership/portal_systems">협력사 포털 시스템</a></li> -->
+							<li><a href="/srm/login">협력 고객사 등록신청</a></li>
+>>>>>>> refs/remotes/origin/main
 						</ul>
 						<ul>
 							<li class="footer_menu_ttl"><a class="en" href="javascript:void(0);">ONLINE COMMUNITY<span class="footer_arrow_down"></span></a></li>
@@ -1082,7 +1112,11 @@ var eFrequencyPlannerYn = 'Y';
 			<script src="common/js/jquery.tmpl.js"></script>
 			<script src="common/js/jquery.tmplPlus.min.js"></script>
 			<script src="common/js/jquery.ezmark.min.js"></script>
+<<<<<<< HEAD
 			<!-- <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script> -->
+=======
+			<!-- <script src="/developers.kakao.com/sdk/js/kakao.min.js"></script> -->
+>>>>>>> refs/remotes/origin/main
 			
 			<!--
 			<script src="common/js/swiper.jquery.min.js"></script>
