@@ -131,9 +131,6 @@ var eFrequencyPlannerYn = 'Y';
 							<p class="msr_user_mask msr_user_mask04"></p>
 						</div>
 						<p class="user_greet_txt"><strong><!-- 홍길동 --></strong>님, 안녕하세요!</p>
-<<<<<<< HEAD
-						<p class="msr_btn_setting"><a href="my/myinfo_modify_login">개인정보 수정</a></p>
-=======
 						<p class="msr_btn_setting"><a href="my/myinfo_modify_login">개인정보 수정</a></p>
 >>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
 					</div>
@@ -218,9 +215,6 @@ var eFrequencyPlannerYn = 'Y';
 							</a>
 						</div>
 						<div class="notice_icon3">
-<<<<<<< HEAD
-							<a href="my/ecoupon">
-=======
 							<a href="my/ecoupon">
 >>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
 								<p>
@@ -250,9 +244,6 @@ var eFrequencyPlannerYn = 'Y';
 						<div class="msr_nologin_btns">
 							<ul>
 								<li><a href="javascript:$.loginLib.showLayerLogin();">로그인</a></li>
-<<<<<<< HEAD
-								<li><a href="mem/join">회원가입</a></li>
-=======
 								<li><a href="mem/join">회원가입</a></li>
 >>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
 							</ul>
@@ -344,11 +335,6 @@ var eFrequencyPlannerYn = 'Y';
 							<li>
 								<a role="button" href="javascript:void(0);">My 쿠폰<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 -->
 								<ul>
-<<<<<<< HEAD
-									<li><a href="my/ecoupon?t=REG" required="login">등록하기</a></li>
-									<li><a href="my/ecoupon?t=GIFT" required="login">선물하기</a></li>
-									<li><a href="my/ecoupon?t=USE" required="login">사용하기</a></li>
-=======
 									<li><a href="my/ecoupon?t=REG" required="login">등록하기</a></li>
 									<li><a href="my/ecoupon?t=GIFT" required="login">선물하기</a></li>
 									<li><a href="my/ecoupon?t=USE" required="login">사용하기</a></li>
@@ -356,10 +342,6 @@ var eFrequencyPlannerYn = 'Y';
 								</ul>
 							</li>
 							<li><a href="my/calendar" required="login">My 캘린더</a></li>
-<<<<<<< HEAD
-							<!-- <li><a href="my/drink_shop" required="login">My 음료/매장</a></li> -->
-							<li><a href="my/my_menu" required="login">My 메뉴</a></li>
-=======
 							<!-- <li><a href="my/drink_shop" required="login">My 음료/매장</a></li> -->
 							<li><a href="my/my_menu" required="login">My 메뉴</a></li>
 >>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
@@ -380,11 +362,6 @@ var eFrequencyPlannerYn = 'Y';
 							<li>
 								<a role="button" href="javascript:void(0);">개인정보관리<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 -->
 								<ul>
-<<<<<<< HEAD
-									<li><a href="my/myinfo_modify_login" required="login">개인정보확인 및 수정</a></li>
-									<li><a href="my/myinfo_out" required="login">회원 탈퇴</a></li>
-									<li><a href="my/myinfo_modify_pwd" required="login">비밀번호 변경</a></li>
-=======
 									<li><a href="my/myinfo_modify_login" required="login">개인정보확인 및 수정</a></li>
 									<li><a href="my/myinfo_out" required="login">회원 탈퇴</a></li>
 									<li><a href="my/myinfo_modify_pwd" required="login">비밀번호 변경</a></li>
@@ -400,9 +377,6 @@ var eFrequencyPlannerYn = 'Y';
 								<ul>
 									<li><a href="coffee/product_list">스타벅스 원두</a></li>
 									<li><a href="coffee/product_list-1?PACKAGE=01">스타벅스 비아</a></li>
-<<<<<<< HEAD
-									<!-- <li><a href="coffee/product_list?PACKAGE=02">스타벅스 오리가미</a></li> 20210915 삭제 -->
-=======
 									<!-- <li><a href="coffee/product_list?PACKAGE=02">스타벅스 오리가미</a></li> 20210915 삭제 -->
 >>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
 									<li><a href="coffee/product_list-2?PACKAGE=05">스타벅스앳홈 by 캡슐</a></li><!-- 20210915 추가 -->
@@ -427,9 +401,6 @@ var eFrequencyPlannerYn = 'Y';
 									<li><a href="coffee/latte">라떼</a></li>
 									<li><a href="coffee/mocha">모카</a></li>
 									<!-- <li><a href="javascript:void(0);">더블샷</a></li> -->
-<<<<<<< HEAD
-									<!-- <li><a href="coffee/flat_white">리스트레또 비안코</a></li> 20210914 삭제 -->
-=======
 									<!-- <li><a href="coffee/flat_white">리스트레또 비안코</a></li> 20210914 삭제 -->
 >>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
 									<!-- <li class="mgnb_gold"><a href="javascript:void(0);">·에스프레소 초이스</a></li>
@@ -452,9 +423,6 @@ var eFrequencyPlannerYn = 'Y';
 								<ul>
 									<!-- 20210914 수정 -->
 									<li><a href="coffee/story">농장에서 우리의 손으로</a></li>
-<<<<<<< HEAD
-									<!-- <li><a href="coffee/story?PACKAGE=01">에스프레소 초이스</a></li> -->
-=======
 									<!-- <li><a href="coffee/story?PACKAGE=01">에스프레소 초이스</a></li> -->
 >>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
 									<li><a href="coffee/story-1?PACKAGE=02">최상의 아라비카 원두</a></li>
@@ -495,9 +463,6 @@ var eFrequencyPlannerYn = 'Y';
 									<li><a href="menu/food_list-5?CATE_CD=product_fruit_yogurt">과일 &amp; 요거트</a></li>
 									<li><a href="menu/food_list-6?CATE_CD=product_snack">스낵 &amp; 미니 디저트</a></li>
 									<li><a href="menu/food_list-7?CATE_CD=product_icecream">아이스크림</a></li>
-<<<<<<< HEAD
-                                    <!-- <li><a href="menu/food_list?CATE_CD=product_etc">기타 푸드</a></li> -->
-=======
                                     <!-- <li><a href="menu/food_list?CATE_CD=product_etc">기타 푸드</a></li> -->
 >>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
 								</ul>
@@ -515,9 +480,6 @@ var eFrequencyPlannerYn = 'Y';
 									<li><a href="menu/product_list-7?CATE_CD=product_present">선물세트</a></li>
 									<li><a href="menu/product_list-8?CATE_CD=product_coffee">커피 용품</a></li>
 									<li><a href="menu/product_list-9?CATE_CD=product_teaPackage">패키지 티(티바나)</a></li>
-<<<<<<< HEAD
-									<!-- <li><a href="menu/product_list?CATE_CD=product_planner">스타벅스 플래너</a></li> --> <!-- 20210602 삭제 -->
-=======
 									<!-- <li><a href="menu/product_list?CATE_CD=product_planner">스타벅스 플래너</a></li> --> <!-- 20210602 삭제 -->
 >>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
 								</ul>
@@ -531,9 +493,6 @@ var eFrequencyPlannerYn = 'Y';
 								</ul>
 							</li>
 							<!-- <li>
-<<<<<<< HEAD
-								<a href="/wholecake/reserve_cake01">온라인 케익 예약 span class="mob_gnb_arrow_down"></span</a>
-=======
 								<a href="wholecake/reserve_cake01">온라인 케익 예약 span class="mob_gnb_arrow_down"></span</a>
 >>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
 								<ul>
@@ -567,11 +526,6 @@ var eFrequencyPlannerYn = 'Y';
 							<li>
 								<a role="button" href="javascript:void(0);">매장 이야기<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 -->
 								<ul>
-<<<<<<< HEAD
-									<!-- <li><a href="store/store_cheongdam">청담스타</a></li> 20210727 메뉴 비노출 -->
-									<li><a href="store/store_star_field">티바나 바 매장</a></li>
-									<!-- <li><a href="store/store_park">파미에파크</a></li> 20210727 메뉴 비노출 -->
-=======
 									<!-- <li><a href="store/store_cheongdam">청담스타</a></li> 20210727 메뉴 비노출 -->
 									<li><a href="store/store_star_field">티바나 바 매장</a></li>
 									<!-- <li><a href="store/store_park">파미에파크</a></li> 20210727 메뉴 비노출 -->
@@ -654,9 +608,6 @@ var eFrequencyPlannerYn = 'Y';
 						</ul>
 						<ul>
 							<li class="mob_gnb_ttl2"><a role="button" class="en" href="javascript:void(0);">WHAT'S NEW<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 --></li>
-<<<<<<< HEAD
-							<li><a href="whats_new/index">한눈에 보기</a></li>
-=======
 							<li><a href="whats_new/index">한눈에 보기</a></li>
 >>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
 							<li>
@@ -789,9 +740,6 @@ var eFrequencyPlannerYn = 'Y';
 								</ul>
 							</li>
 							<li><a href="footer/company/news_list">국내 뉴스룸</a></li>
-<<<<<<< HEAD
-							<li><a href="footer/company/global_starbucks">세계의 스타벅스</a></li>
-=======
 							<li><a href="footer/company/global_starbucks">세계의 스타벅스</a></li>
 >>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
 							<!-- 160811 메뉴 추가 -->
@@ -801,13 +749,6 @@ var eFrequencyPlannerYn = 'Y';
 						<ul>
 							<li class="footer_menu_ttl"><a class="en" id="goPage" href="javascript:void(0);">CORPORATE SALES<span class="footer_arrow_down"></span></a></li>
 							<li><a href="footer/co_sales/index">단체 및 기업 구매 안내</a></li>
-<<<<<<< HEAD
-							<!-- <li><a href="footer/co_sales/sbcard_egift">스타벅스 <span class="en">e-Gift Card</span></a></li> -->
-							<!-- <li><a href="footer/co_sales/sbcard">스타벅스 카드</a></li> -->
-							<!-- <li><a href="footer/co_sales/co-branded"><span class="en">Co-branded</span> 카드</a></li> -->
-							<!-- <li><a href="footer/co_sales/sb_product">스타벅스 상품</a></li> -->
-							<!-- <li><a href="footer/co_sales/sbgift_certificate">스타벅스 상품권</a></li> -->
-=======
 							<!-- <li><a href="footer/co_sales/sbcard_egift">스타벅스 <span class="en">e-Gift Card</span></a></li> -->
 							<!-- <li><a href="footer/co_sales/sbcard">스타벅스 카드</a></li> -->
 							<!-- <li><a href="footer/co_sales/co-branded"><span class="en">Co-branded</span> 카드</a></li> -->
@@ -818,10 +759,6 @@ var eFrequencyPlannerYn = 'Y';
 						<ul>
 							<li class="footer_menu_ttl"><a class="en" href="javascript:void(0);">PARTNERSHIP<span class="footer_arrow_down"></span></a></li>
 							<li><a href="footer/partnership/new_partner">신규 입점 제의</a></li>
-<<<<<<< HEAD
-							<!-- <li><a href="footer/partnership/portal_systems">협력사 포털 시스템</a></li> -->
-							<li><a href="srm/login">협력 고객사 등록신청</a></li>
-=======
 							<!-- <li><a href="footer/partnership/portal_systems">협력사 포털 시스템</a></li> -->
 							<li><a href="srm/login">협력 고객사 등록신청</a></li>
 >>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
@@ -847,9 +784,6 @@ var eFrequencyPlannerYn = 'Y';
 							<a href="javascript:$.loginLib.showLayerLogin();" class="sign_in">Sign In</a>
 							<a href="javascript:$.loginLib.logout();" class="sign_out" style="display:none;">Sign Out</a>
 						</li>
-<<<<<<< HEAD
-						<li class="last"><a href="mem/join1">Join Us</a></li>
-=======
 						<li class="last"><a href="mem/join1">Join Us</a></li>
 >>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
 					</ul>
@@ -1067,20 +1001,10 @@ var eFrequencyPlannerYn = 'Y';
 						if (m_jsonRewardSummary != null) {
 							// 등록된 카드가 없으면 링크 변경
 							if (m_jsonRewardSummary.cardInfo.cardNumber == "") {
-<<<<<<< HEAD
-								if (location.href.indexOf("my/") > -1) {
-									var url = "my/mycard_none";
-=======
 								if (location.href.indexOf("my/") > -1) {
 									var url = "my/mycard_none";
 >>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
 									
-<<<<<<< HEAD
-									$('a[data-href="my/mycard_index"]').attr("data-href", url);
-									$('a[data-href="my/mycard"]').attr("data-href", url);
-									$('a[data-href="my/mycard_charge"]').attr("data-href", url);
-									$('a[data-href="my/mycard_lost"]').attr("data-href", url);
-=======
 									$('a[data-href="my/mycard_index"]').attr("data-href", url);
 									$('a[data-href="my/mycard"]').attr("data-href", url);
 									$('a[data-href="my/mycard_charge"]').attr("data-href", url);
@@ -1091,15 +1015,9 @@ var eFrequencyPlannerYn = 'Y';
 							
 							// 로그인 상태에 따라 등록 및 조회 페이지 링크 변경
 							if (m_jsonRewardSummary.msrMemberYn == "Y") {
-<<<<<<< HEAD
-								$('a[href="msr/scard/register_inquiry"]').attr("href", "my/mycard_info_input");
-=======
 								$('a[href="msr/scard/register_inquiry"]').attr("href", "my/mycard_info_input");
 >>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
 							} else {
-<<<<<<< HEAD
-								$('a[href="msr/scard/register_inquiry"]').attr("href", "my/reward");
-=======
 								$('a[href="msr/scard/register_inquiry"]').attr("href", "my/reward");
 >>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
 							}
@@ -1110,9 +1028,6 @@ var eFrequencyPlannerYn = 'Y';
 					/* 150714 추가 - 박종현 end */
 					$('#goPage').bind('click', function(){
 						if (myWindow > 640) {
-<<<<<<< HEAD
-							location.href="footer/co_sales/index";
-=======
 							location.href="footer/co_sales/index";
 >>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
 						}
@@ -1158,9 +1073,6 @@ var eFrequencyPlannerYn = 'Y';
                             	if(url.length == 0){
                             		url = location.href;
                             	}  
-<<<<<<< HEAD
-                            	location.href = "login/login?redirect_url=" + encodeURIComponent(url);
-=======
                             	location.href = "login/login?redirect_url=" + encodeURIComponent(url);
 >>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
                     			
@@ -1192,9 +1104,6 @@ var eFrequencyPlannerYn = 'Y';
                 
                 function fn_showrewardTumblerMsrCheckPopup(obj){
                 	if( obj.msrMemberYn == "Y"){ /*msr 회원일 경우 페이지 이동*/
-<<<<<<< HEAD
-                		location.href = "my/reward_tumbler";
-=======
                 		location.href = "my/reward_tumbler";
 >>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
                     }else{/* msr 비회원일 경우 팝업창 노출 */
@@ -1204,9 +1113,6 @@ var eFrequencyPlannerYn = 'Y';
                         $('#tumblerPopConfirmBtn, #tumblerPopCancelBtn').show();
                         $('#tumblerPopConfirmBtn').on('click', function(){
                         	// msr 비회원일 경우 카드 등록 페이지로 이동
-<<<<<<< HEAD
-                        	location.href = "my/mycard_info_input";
-=======
                         	location.href = "my/mycard_info_input";
 >>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
                         });
