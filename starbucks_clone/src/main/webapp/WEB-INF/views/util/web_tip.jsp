@@ -37,7 +37,7 @@
 
 <!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-	<link href="/common/css_ie/style.css" rel="stylesheet">
+	<link href="common/css_ie/style.css" rel="stylesheet">
 	<script>
 		document.createElement('header');
 		document.createElement('nav');
@@ -965,9 +965,9 @@ var eFrequencyPlannerYn = 'Y';
 			<!-- <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script> -->
 			
 			<!--
-			<script src="/common/js/swiper.jquery.min.js"></script>
-			<script src="/common/js/swiper.min.js"></script>
-			<script src="/common/js/util.js"></script>
+			<script src="common/js/swiper.jquery.min.js"></script>
+			<script src="common/js/swiper.min.js"></script>
+			<script src="common/js/util.js"></script>
 			-->
 			
 		
