@@ -1,4 +1,5 @@
-﻿
+﻿<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -518,30 +519,7 @@ var eFrequencyPlannerYn = 'Y';
 									<!-- <li><a href="/menu/product_list.do?CATE_CD=product_planner">스타벅스 플래너</a></li> --> <!-- 20210602 삭제 -->
 								</ul>
 							</li>
-							<li>
-								<a role="button" href="javascript:void(0);">카드<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 -->
-								<ul>
-									<li><a href="../../menu/card_list.do.html">전체보기</a></li>
-									<li><a href="../../menu/card_list.do-1.html?CATE_CD=product_offline">실물카드</a></li>
-									<li><a href="../../menu/card_list.do-2.html?CATE_CD=product_egift">e-Gift 카드</a></li>
-								</ul>
-							</li>
-							<!-- <li>
-								<a href="/wholecake/reserve_cake01.do">온라인 케익 예약 span class="mob_gnb_arrow_down"></span</a>
-								<ul>
-									<li><a href="javascript:void(0);">케익선택</a></li>
-									<li><a href="javascript:void(0);">예약정보입력</a></li>
-									<li><a href="javascript:void(0);">예약완료</a></li>
-								</ul>
-							</li> -->
-							<li>
-								<a role="button" href="javascript:void(0);">메뉴 이야기<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 -->
-								<ul>
-									<li><a href="../../store/store_nitro_coldbrew.do.html">나이트로 콜드브루</a></li>
-									<li><a href="../../store/store_coldbrew.do.html">콜드 브루</a></li>
-									<li><a href="../../menuStory/teavana.do.html">스타벅스 티바나</a></li>
-								</ul>
-							</li>
+							
 						</ul>
 						<ul>
 							<li class="mob_gnb_ttl2"><a role="button" class="en" href="javascript:void(0);">STORE<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 --></li>
@@ -565,46 +543,7 @@ var eFrequencyPlannerYn = 'Y';
 								</ul>
 							</li>
 						</ul>
-						<ul>
-							<li class="mob_gnb_ttl2"><a role="button" class="en" href="javascript:void(0);">RESPONSIBILITY<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 --></li>
-							<li><a href="../../responsibility/index.do.html">한눈에 보기</a></li>
-							<li><a href="../../responsibility/starbucks_shared_planet.do.html">사회공헌 캠페인 소개</a></li> <!-- 20210820 메뉴명 수정 -->
-							<li>
-								<a role="button" href="javascript:void(0);">지역 사회 참여 활동<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 -->
-								<ul>
-									<li><a href="../../responsibility/hope_delivery.do.html">희망배달 캠페인</a></li>
-									<li><a href="../../responsibility/talent_donation.do.html">재능기부 카페 소식</a></li>
-									<li><a href="../../responsibility/community_store.do.html">커뮤니티 스토어</a></li>
-									<li><a href="../../responsibility/youth_resource.do.html">청년 지원 프로그램</a></li><!-- 202107 메뉴명 수정 -->
-									<li><a href="../../responsibility/our_agriculture.do.html">우리 농산물 사랑 캠페인</a></li>
-									<li><a href="../../responsibility/our_culture_defend.do.html">우리 문화 지키기</a></li>
-								</ul>
-							</li>
-							<li>
-								<a role="button" href="javascript:void(0);">환경보호 활동<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 -->
-								<ul>
-									<li><a href="../../responsibility/environment.do.html">친환경 활동</a></li><!-- 202107 메뉴명 수정 -->
-									<li><a href="../../responsibility/no_disposable_cup.do.html">일회용 컵 없는 매장</a></li>
-									<li><a href="../../responsibility/bean_recycling.do.html">커피 원두 재활용</a></li>
-								</ul>
-							</li>
-							<li>
-								<a role="button" href="javascript:void(0);">윤리 구매<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 -->
-								<ul>
-									<li><a href="../../responsibility/ethically_sourcing.do.html">윤리적 원두 구매</a></li>
-									<li><a href="../../responsibility/fair_trade.do.html">공정무역 인증</a></li>
-									<li><a href="../../responsibility/farmer_support.do.html">커피 농가 지원 활동</a></li>
-								</ul>
-							</li>
-							<li>
-								<a role="button" href="javascript:void(0);">글로벌 사회 공헌<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 -->
-								<ul>
-									<li><a href="../../responsibility/sp_ethical_management.do.html">윤리경영 보고서</a></li>
-									<li><a href="../../responsibility/starbucks_foundation.do.html">스타벅스 재단</a></li>
-									<li><a href="../../responsibility/sp_global_month.do.html">지구촌 봉사의 달</a></li>
-								</ul>
-							</li>
-						</ul>
+						
 						<ul>
 							<li class="mob_gnb_ttl2"><a role="button" class="en" href="javascript:void(0);">Starbucks Rewards<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 --></li>  <!-- 스타벅스 리워드 수정 -->
 							<li><a href="../../msr/index.do.html">한눈에 보기</a></li>

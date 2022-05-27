@@ -36,9 +36,9 @@ public class HomeController {
 		return "menu/drink_view_coldbrew2";
 	}
 	
-	@RequestMapping(value="order")
-	public String order() {
-		return "order";
+	@RequestMapping(value="myOrder")
+	public String myOrder() {
+		return "menu/myOrder";
 	}
 	
 }

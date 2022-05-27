@@ -189,57 +189,57 @@ $(document).ready(function () {
     '					<!-- 텍스쳐 bg end -->' +
     '				</div>' +
     '			</li>' +
-    '			<li class="gnb_nav04">' +
-    '				<h2><a href="/responsibility/index.do">RESPONSIBILITY</a></h2>' +
-    '				<div class="gnb_sub_wrap">' +
-    '					<div class="gnb_sub">' +
-    '						<div class="gnb_sub_inner">' +
-    '							<ul>' +
-    '								<li class="gnb_sub_ttl"><a href="/responsibility/starbucks_shared_planet.do">사회공헌 캠페인 소개</a></li>' + // 20210820 메뉴명 수정
-    '							</ul>' +
-    '							<ul>' +
-    '								<li class="gnb_sub_ttl"><a href="/responsibility/hope_delivery.do">지역 사회 참여 활동</a></li>' +
-    '								<li><a href="/responsibility/hope_delivery.do">희망배달 캠페인</a></li>' +
-    '								<li><a href="/responsibility/talent_donation.do">재능기부 카페 소식</a></li>' +
-    '								<li><a href="/responsibility/community_store.do">커뮤니티 스토어</a></li>' +
-    '								<li><a href="/responsibility/youth_resource.do">청년 지원 프로그램</a></li>' + // 202107 메뉴명 수정
-    '								<li><a href="/responsibility/our_agriculture.do">우리 농산물 사랑 캠페인</a></li>' +
-    '								<li><a href="/responsibility/our_culture_defend.do">우리 문화 지키기</a></li>' +
-    '							</ul>' +
-    '							<ul>' +
-    '								<li class="gnb_sub_ttl"><a href="/responsibility/environment.do">환경보호 활동</a></li>' +
-    '								<li><a href="/responsibility/environment.do">친환경 활동</a></li>' + // 202107 메뉴명 수정
-    '								<li><a href="/responsibility/no_disposable_cup.do">일회용 컵 없는 매장</a></li>' +
-    '								<li><a href="/responsibility/bean_recycling.do">커피 원두 재활용</a></li>' +
-    '							</ul>' +
-    '							<ul>' +
-    '								<li class="gnb_sub_ttl"><a href="/responsibility/ethically_sourcing.do">윤리 구매</a></li>' +
-    '								<li><a href="/responsibility/ethically_sourcing.do">윤리적 원두 구매</a></li>' +
-    '								<li><a href="/responsibility/fair_trade.do">공정무역 인증</a></li>' +
-    '								<li><a href="/responsibility/farmer_support.do">커피 농가 지원 활동</a></li>' +
-    '							</ul>' +
-    '							<ul>' +
-    '								<li class="gnb_sub_ttl"><a href="/responsibility/sp_ethical_management.do">글로벌 사회 공헌</a></li>' +
-    '								<li><a href="/responsibility/sp_ethical_management.do">윤리경영 보고서</a></li>' +
-    '								<li><a href="/responsibility/starbucks_foundation.do">스타벅스 재단</a></li>' +
-    '								<li><a href="/responsibility/sp_global_month.do">지구촌 봉사의 달</a></li>' +
-    '							</ul>' +
-    '						</div>' +
-    '					</div>' +
-    '					<!-- 텍스쳐 bg -->' +
-    '					<div class="gnb_sub_txbg">' +
-    '						<div class="gnb_sub_tx_inner">' +
-    '							<div class="gnb_sub_tx_left">' +
+    //'			<li class="gnb_nav04">' +
+    //'				<h2><a href="/responsibility/index.do">RESPONSIBILITY</a></h2>' +
+    //'				<div class="gnb_sub_wrap">' +
+    //'					<div class="gnb_sub">' +
+    //'						<div class="gnb_sub_inner">' +
+    //'							<ul>' +
+    //'								<li class="gnb_sub_ttl"><a href="/responsibility/starbucks_shared_planet.do">사회공헌 캠페인 소개</a></li>' + // 20210820 메뉴명 수정
+    //'							</ul>' +
+    //'							<ul>' +
+    //'								<li class="gnb_sub_ttl"><a href="/responsibility/hope_delivery.do">지역 사회 참여 활동</a></li>' +
+    //'								<li><a href="/responsibility/hope_delivery.do">희망배달 캠페인</a></li>' +
+    //'								<li><a href="/responsibility/talent_donation.do">재능기부 카페 소식</a></li>' +
+    //'								<li><a href="/responsibility/community_store.do">커뮤니티 스토어</a></li>' +
+    //'								<li><a href="/responsibility/youth_resource.do">청년 지원 프로그램</a></li>' + // 202107 메뉴명 수정
+    //'								<li><a href="/responsibility/our_agriculture.do">우리 농산물 사랑 캠페인</a></li>' +
+    //'								<li><a href="/responsibility/our_culture_defend.do">우리 문화 지키기</a></li>' +
+    //'							</ul>' +
+    //'							<ul>' +
+    //'								<li class="gnb_sub_ttl"><a href="/responsibility/environment.do">환경보호 활동</a></li>' +
+    //'								<li><a href="/responsibility/environment.do">친환경 활동</a></li>' + // 202107 메뉴명 수정
+    //'								<li><a href="/responsibility/no_disposable_cup.do">일회용 컵 없는 매장</a></li>' +
+    //'								<li><a href="/responsibility/bean_recycling.do">커피 원두 재활용</a></li>' +
+    //'							</ul>' +
+    //'							<ul>' +
+    //'								<li class="gnb_sub_ttl"><a href="/responsibility/ethically_sourcing.do">윤리 구매</a></li>' +
+    //'								<li><a href="/responsibility/ethically_sourcing.do">윤리적 원두 구매</a></li>' +
+    //'								<li><a href="/responsibility/fair_trade.do">공정무역 인증</a></li>' +
+    //'								<li><a href="/responsibility/farmer_support.do">커피 농가 지원 활동</a></li>' +
+    //'							</ul>' +
+    //'							<ul>' +
+    //'								<li class="gnb_sub_ttl"><a href="/responsibility/sp_ethical_management.do">글로벌 사회 공헌</a></li>' +
+    //'								<li><a href="/responsibility/sp_ethical_management.do">윤리경영 보고서</a></li>' +
+    //'								<li><a href="/responsibility/starbucks_foundation.do">스타벅스 재단</a></li>' +
+    //'								<li><a href="/responsibility/sp_global_month.do">지구촌 봉사의 달</a></li>' +
+    //'							</ul>' +
+    //'						</div>' +
+    //'					</div>' +
+    //'					<!-- 텍스쳐 bg -->' +
+    //'					<div class="gnb_sub_txbg">' +
+    //'						<div class="gnb_sub_tx_inner">' +
+    //'							<div class="gnb_sub_tx_left">' +
     //'								<h3><a href="/responsibility/bean_recycling.do">커피원두 재활용</a></h3>' + // 202107 텍스트 제거 및 영역 유지
     //'								<p class="gnb_sub_ex_txt">스타벅스 커피 원두를 재활용해 보세요.</p>' + // 202107 텍스트 제거 및 영역 유지
-    '							</div>' +
-    '							<div class="gnb_sub_tx_right">' +
-    '							</div>' +
-    '						</div>' +
-    '					</div>' +
-    '					<!-- 텍스쳐 bg end -->' +
-    '				</div>' +
-    '			</li>' +
+    //'							</div>' +
+    //'							<div class="gnb_sub_tx_right">' +
+    //'							</div>' +
+    //'						</div>' +
+    //'					</div>' +
+    //'					<!-- 텍스쳐 bg end -->' +
+    //'				</div>' +
+    //'			</li>' +
     '			<li class="gnb_nav05">' +
     '				<h2><a href="/msr/index.do">STARBUCKS REWARDS</a></h2>' + // 스타벅스 리워드 수정
     '				<div class="gnb_sub_wrap">' +
