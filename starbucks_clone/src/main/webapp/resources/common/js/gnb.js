@@ -113,20 +113,20 @@ $(document).ready(function () {
     '								<li><a href="/menu/product_list.do?CATE_CD=product_teaPackage">패키지 티(티바나)</a></li>' +
     //'								<li><a href="/menu/product_list.do?CATE_CD=product_planner">스타벅스 플래너</a></li>' + 20210602 삭제
     '							</ul>' +
-    '							<ul>' +
-    '								<li class="gnb_sub_ttl"><a href="/menu/card_list.do">카드</a></li>' +
-    '								<li><a href="/menu/card_list.do?CATE_CD=product_offline">실물카드</a></li>' +
-    '								<li><a href="/menu/card_list.do?CATE_CD=product_egift">e-Gift 카드</a></li>' +
-    '							</ul>' +
+    //'							<ul>' +
+    //'								<li class="gnb_sub_ttl"><a href="/menu/card_list.do">카드</a></li>' +
+    //'								<li><a href="/menu/card_list.do?CATE_CD=product_offline">실물카드</a></li>' +
+    //'								<li><a href="/menu/card_list.do?CATE_CD=product_egift">e-Gift 카드</a></li>' +
+    //'							</ul>' +
     //'							<ul>' +
     //'								<li class="gnb_sub_ttl"><a href="/wholecake/reserve_cake01.do">온라인 케익 예약</a></li>' +
     //'							</ul>' +
-    '							<ul>' +
-    '								<li class="gnb_sub_ttl"><a>메뉴 이야기</a></li>' +
-    '								<li><a href="/store/store_nitro_coldbrew.do">나이트로 콜드브루</a></li>' +
-    '								<li><a href="/store/store_coldbrew.do">콜드 브루</a></li>' +
-    '								<li><a href="/menuStory/teavana.do">스타벅스 티바나</a></li>' +
-    '							</ul>' +
+    //'							<ul>' +
+    //'								<li class="gnb_sub_ttl"><a>메뉴 이야기</a></li>' +
+    //'								<li><a href="/store/store_nitro_coldbrew.do">나이트로 콜드브루</a></li>' +
+    //'								<li><a href="/store/store_coldbrew.do">콜드 브루</a></li>' +
+    //'								<li><a href="/menuStory/teavana.do">스타벅스 티바나</a></li>' +
+    //'							</ul>' +
     '						</div>' +
     '					</div>' +
     '					<!-- 텍스쳐 bg -->' +
