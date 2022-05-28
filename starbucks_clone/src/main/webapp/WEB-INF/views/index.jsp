@@ -490,7 +490,11 @@ var eFrequencyPlannerYn = 'Y';
 								</ul>
 							</li>
 							<!-- <li>
+<<<<<<< HEAD
 								<a href="wholecake/reserve_cake01">온라인 케익 예약 span class="mob_gnb_arrow_down"></span</a>
+=======
+								<a href="/wholecake/reserve_cake01">온라인 케익 예약 span class="mob_gnb_arrow_down"></span</a>
+>>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
 								<ul>
 									<li><a href="javascript:void(0);">케익선택</a></li>
 									<li><a href="javascript:void(0);">예약정보입력</a></li>

@@ -31,4 +31,14 @@ public class HomeController {
 		return "index";
 	}
 	
+	@RequestMapping(value="coldbrew")
+	public String coldbrew() {
+		return "menu/drink_view_coldbrew2";
+	}
+	
+	@RequestMapping(value="order")
+	public String order() {
+		return "order";
+	}
+	
 }
