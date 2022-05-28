@@ -479,6 +479,7 @@ var eFrequencyPlannerYn = 'Y';
 									<!-- <li><a href="menu/product_list?CATE_CD=product_planner">스타벅스 플래너</a></li> --> <!-- 20210602 삭제 -->
 								</ul>
 							</li>
+<<<<<<< HEAD
 							<li>
 								<a role="button" href="javascript:void(0);">카드<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 -->
 								<ul>
@@ -503,6 +504,9 @@ var eFrequencyPlannerYn = 'Y';
 									<li><a href="menuStory/teavana">스타벅스 티바나</a></li>
 								</ul>
 							</li>
+=======
+							
+>>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
 						</ul>
 						<ul>
 							<li class="mob_gnb_ttl2"><a role="button" class="en" href="javascript:void(0);">STORE<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 --></li>
@@ -527,6 +531,7 @@ var eFrequencyPlannerYn = 'Y';
 							</li>
 						</ul>
 						<ul>
+<<<<<<< HEAD
 							<li class="mob_gnb_ttl2"><a role="button" class="en" href="javascript:void(0);">RESPONSIBILITY<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 --></li>
 							<li><a href="responsibility/index">한눈에 보기</a></li>
 							<li><a href="responsibility/starbucks_shared_planet">사회공헌 캠페인 소개</a></li> <!-- 20210820 메뉴명 수정 -->
@@ -567,6 +572,8 @@ var eFrequencyPlannerYn = 'Y';
 							</li>
 						</ul>
 						<ul>
+=======
+>>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
 							<li class="mob_gnb_ttl2"><a role="button" class="en" href="javascript:void(0);">Starbucks Rewards<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 --></li>  <!-- 스타벅스 리워드 수정 -->
 							<li><a href="msr/index">한눈에 보기</a></li>
 							<li>

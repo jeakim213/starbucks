@@ -477,30 +477,7 @@ var eFrequencyPlannerYn = 'Y';
 									<!-- <li><a href="menu/product_list?CATE_CD=product_planner">스타벅스 플래너</a></li> --> <!-- 20210602 삭제 -->
 								</ul>
 							</li>
-							<li>
-								<a role="button" href="javascript:void(0);">카드<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 -->
-								<ul>
-									<li><a href="card_list">전체보기</a></li>
-									<li><a href="card_list-1?CATE_CD=product_offline">실물카드</a></li>
-									<li><a href="card_list-2?CATE_CD=product_egift">e-Gift 카드</a></li>
-								</ul>
-							</li>
-							<!-- <li>
-								<a href="wholecake/reserve_cake01">온라인 케익 예약 span class="mob_gnb_arrow_down"></span</a>
-								<ul>
-									<li><a href="javascript:void(0);">케익선택</a></li>
-									<li><a href="javascript:void(0);">예약정보입력</a></li>
-									<li><a href="javascript:void(0);">예약완료</a></li>
-								</ul>
-							</li> -->
-							<li>
-								<a role="button" href="javascript:void(0);">메뉴 이야기<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 -->
-								<ul>
-									<li><a href="store/store_nitro_coldbrew">나이트로 콜드브루</a></li>
-									<li><a href="store/store_coldbrew">콜드 브루</a></li>
-									<li><a href="menuStory/teavana">스타벅스 티바나</a></li>
-								</ul>
-							</li>
+							
 						</ul>
 						<ul>
 							<li class="mob_gnb_ttl2"><a role="button" class="en" href="javascript:void(0);">STORE<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 --></li>

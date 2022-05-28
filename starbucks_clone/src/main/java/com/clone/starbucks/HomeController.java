@@ -36,9 +36,29 @@ public class HomeController {
 		return "menu/drink_view_coldbrew2";
 	}
 	
-	@RequestMapping(value="order")
-	public String order() {
-		return "order";
+	@RequestMapping(value="myOrder")
+	public String myOrder() {
+		return "menu/myOrder";
+	}
+	
+	@RequestMapping(value="card_list")
+	public String card_list() {
+		return "menu/card_list";
+	}
+	
+	@RequestMapping(value="drink_list")
+	public String drink_list() {
+		return "menu/drink_list";
+	}
+	
+	@RequestMapping(value="food_list")
+	public String food_list() {
+		return "menu/food_list";
+	}
+	
+	@RequestMapping(value="product_list")
+	public String product_list() {
+		return "menu/product_list";
 	}
 	
 }
