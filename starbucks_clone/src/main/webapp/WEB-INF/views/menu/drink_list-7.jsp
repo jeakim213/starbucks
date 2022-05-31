@@ -788,7 +788,7 @@ var eFrequencyPlannerYn = 'Y';
 									</div>
 									<!-- 160928 검색결과 없을 때 end -->
 								</dd>
-								<dt class="dt2"><a href="javascript:void(0);" class="a2" role="button">영양정보로 보기</a><!-- 접근성_20171123 role 추가 --></dt>
+								<!-- <dt class="dt2"><a href="javascript:void(0);" class="a2" role="button">영양정보로 보기</a>접근성_20171123 role 추가</dt>
 								<dd>
 									<h3>콜드 브루 커피</h3>
 									<table summary="콜드 브루 커피 영양정보" class="coffeeInfo mb60">
@@ -1050,7 +1050,7 @@ var eFrequencyPlannerYn = 'Y';
                                     </table>
                                     <div class="m_coffee_info">
                                     </div>
-								</dd>
+								</dd> -->
 							</dl>
 						</div>
 					</div>
@@ -2089,12 +2089,6 @@ var eFrequencyPlannerYn = 'Y';
         <script type="text/x-jquery-tmpl" id="tpl_productNutTr">
             <tr>
                 <td>${product_NM}</td>
-                <td>${convertInfoText(kcal)}</td>
-                <td>${convertInfoText(sugars)}</td>
-                <td>${convertInfoText(protein)}</td>
-                <td>${convertInfoText(sodium)}</td>
-                <td>${convertInfoText(sat_FAT)}</td>
-                <td>${convertInfoText(caffeine)}</td>
             </tr>
         </script>
         <script type="text/x-jquery-tmpl" id="tpl_productNutMob">
@@ -2103,37 +2097,31 @@ var eFrequencyPlannerYn = 'Y';
                 <li>
                     <dl>
                         <dt>칼로리(Kcal)</dt>
-                        <dd>${convertInfoText(kcal)}</dd>
                     </dl>
                 </li>
                 <li>
                     <dl>
                         <dt>당류(g)</dt>
-                        <dd>${convertInfoText(sugars)}</dd>
                     </dl>
                 </li>
                 <li>
                     <dl>
                         <dt>단백질(g)</dt>
-                        <dd>${convertInfoText(protein)}</dd>
                     </dl>
                 </li>
                 <li>
                     <dl>
                         <dt>나트륨(mg)</dt>
-                        <dd>${convertInfoText(sodium)}</dd>
                     </dl>
                 </li>
                 <li>
                     <dl>
                         <dt>포화지방(g)</dt>
-                        <dd>${convertInfoText(sat_FAT)}</dd>
                     </dl>
                 </li>
                 <li>
                     <dl>
                         <dt>카페인(mg)</dt>
-                        <dd>${convertInfoText(caffeine)}</dd>
                     </dl>
                 </li>
             </ul>
