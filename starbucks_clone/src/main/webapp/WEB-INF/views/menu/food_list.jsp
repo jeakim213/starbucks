@@ -730,7 +730,7 @@ var eFrequencyPlannerYn = 'Y';
 							<div id="mn_select_wrap">
 								<p class="cf_s_p"><input type="button" class="select" title="상세분류 옵션 선택하기"><span class="cf_s_span">상세분류</span> </p>
 								<ul class="opt">
-										    <li><span><input type="checkbox" name="select_kind1-1" id="select_kind1-1" data-target="new"> <label class="mark01" for="select_kind1-1">신규 출시된 메뉴</label></span></li>
+									<li><span><input type="checkbox" name="select_kind1-1" id="select_kind1-1" data-target="new"> <label class="mark01" for="select_kind1-1">신규 출시된 메뉴</label></span></li>
 									<li><span><input type="checkbox" name="select_kind1-2" id="select_kind1-2" data-target="sell"> <label class="mark02" for="select_kind1-2">한정기간 출시되는 시즌성 메뉴</label></span></li>
 								</ul>
 							</div>
@@ -1465,7 +1465,7 @@ var eFrequencyPlannerYn = 'Y';
 		
 			<script>
 				$(document).ready(function () {
-					$('a[href*="card_list"] , a[href*="drink_list"] , a[href*="food_list"] , a[href*="product_list"]').on("click", function () {
+					$('a[href*="carsssd_list"] , a[href*="drink_list"] , a[href*="food_list"] , a[href*="product_list"]').on("click", function () {
 						Cookies.deleteCookie("MENU_TAB");
 						Cookies.deleteCookie("MENU_CATE");
 						Cookies.deleteCookie("MENU_OPT");
@@ -2100,6 +2100,11 @@ var eFrequencyPlannerYn = 'Y';
         <script type="text/x-jquery-tmpl" id="tpl_productNutTr">
             <tr>
                 <td>${product_NM}</td>
+                <td>${convertInfoText(kcal)}</td>
+                <td>${convertInfoText(sat_FAT)}</td>
+                <td>${convertInfoText(sodium)}</td>
+                <td>${convertInfoText(sugars)}</td>
+                <td>${convertInfoText(protein)}</td>
             </tr>
         </script>
         <script type="text/x-jquery-tmpl" id="tpl_productNutMob">
@@ -2108,29 +2113,31 @@ var eFrequencyPlannerYn = 'Y';
                 <li>
                     <dl>
                         <dt>칼로리(Kcal)</dt>
+                        <dd>${convertInfoText(kcal)}</dd>
                     </dl>
                 </li>
                 <li>
                     <dl>
                         <dt>포화지방(g)</dt>
-                        
+                        <dd>${convertInfoText(sat_FAT)}</dd>
                     </dl>
                 </li>
                 <li>
                     <dl>
                         <dt>나트륨(mg)</dt>
-                       
+                        <dd>${convertInfoText(sodium)}</dd>
                     </dl>
                 </li>
                 <li>
                     <dl>
                         <dt>당류(g)</dt>
+                        <dd>${convertInfoText(sugars)}</dd>
                     </dl>
                 </li>
                 <li>
                     <dl>
                         <dt>단백질(g)</dt>
-                        
+                        <dd>${convertInfoText(protein)}</dd>
                     </dl>
                 </li>
             </ul>
