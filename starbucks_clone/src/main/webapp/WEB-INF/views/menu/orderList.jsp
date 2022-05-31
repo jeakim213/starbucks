@@ -658,9 +658,11 @@ var eFrequencyPlannerYn = 'Y';
 									</tr>
 									<!-- 0530 다정 list 출력하기 c태그 -->
 									<%-- <c:forEach var="#" items="${sessionScope.list }">--%>
+									
 									<tr>
-										<td style="vertical-align: middle; padding-right: 20px; padding-left: 18px;" align="center"><input type="checkbox" name="Sausage&Olive Mini Pie"></td><!-- name은 el태그 사용해서 영문명으로 불러오기 -->
+										<td style="vertical-align: middle; padding-right: 20px; padding-left: 18px;" align="center"><input type="checkbox" name="Sausage&Olive Mini Pie" id="Sausage&Olive Mini Pie"></td><!-- name은 el태그 사용해서 영문명으로 불러오기 -->
 										<!-- 주석처리된것 지우고 예시로 되어있는것 주석처리 하면 됨 -->
+										
 										<%-- <td><img src="${이미지링크}" class="order_list_img"></td>--%>
 										<td><img src="https://image.istarbucks.co.kr/upload/store/skuimg/2022/04/[9300000004025]_20220406130412481.jpg" class="order_list_img"></td>
 										<%-- <td class="menu_list_info">
@@ -674,7 +676,7 @@ var eFrequencyPlannerYn = 'Y';
 											가격 : 4500원
 										</td>
 										<td style="vertical-align: middle;">
-											<select name="Sausage&Olive Mini Pie_count">
+											<select name="count" id="Sausage&Olive Mini Pie"><!-- id에서 el태그로 이름불러오기 -->
 												<option>수량선택</option>
 												<option value="1">1개</option>
 												<option value="2">2개</option>
@@ -687,10 +689,11 @@ var eFrequencyPlannerYn = 'Y';
 												<option value="9">9개</option>
 											</select>
 										</td>
+										
 									</tr>
 									<%-- </c:forEach> --%>
 									<tr>
-										<td style="vertical-align: middle; padding-right: 20px; padding-left: 20px;" align="center"><input type="checkbox" name="Tiramisu Cream Danish"></td><!-- name은 el태그 사용해서 영문명으로 불러오기 -->
+										<td style="vertical-align: middle; padding-right: 20px; padding-left: 20px;" align="center"><input type="checkbox" name="Tiramisu Cream Danish" id="Tiramisu Cream Danish"></td><!-- name은 el태그 사용해서 영문명으로 불러오기 -->
 										<!-- 주석처리된것 지우고 예시로 되어있는것 주석처리 하면 됨 -->
 										<%-- <td><img src="${이미지링크}" class="order_list_img"></td>--%>
 										<td><img src="https://image.istarbucks.co.kr/upload/store/skuimg/2022/04/[9300000004026]_20220406130314367.jpg" class="order_list_img"></td>
@@ -705,7 +708,7 @@ var eFrequencyPlannerYn = 'Y';
 											가격 : 4500원
 										</td>
 										<td style="vertical-align: middle;">
-											<select name="Tiramisu Cream Danish_count">
+											<select name="count" id="Tiramisu Cream Danish">
 												<option>수량선택</option>
 												<option value="1">1개</option>
 												<option value="2">2개</option>
