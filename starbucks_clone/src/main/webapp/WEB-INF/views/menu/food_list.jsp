@@ -1790,7 +1790,7 @@ var eFrequencyPlannerYn = 'Y';
 				
                 var url = '/menu/productListAjax';
     			
-                   url = '/upload/json/menu/' + pro_seq + '.js';
+                   url = ${pageContext.request.contextPath} + '/upload/json/menu/' + pro_seq + '.json';
                 
                 __ajaxCall(url, option , true, "JSON", "POST",
                 function(data) {
@@ -1860,7 +1860,7 @@ var eFrequencyPlannerYn = 'Y';
 					
 	                var url = '/menu/productListAjax';
 	    			
-	                   url = '/upload/json/menu/' + cngCateCode + '.js';
+	                   url = ${pageContext.request.contextPath} + '/upload/json/menu/' + cngCateCode + '.json';
 	                
 	                __ajaxCall(url, option , true, "JSON", "POST", 
 	                function(data) {
