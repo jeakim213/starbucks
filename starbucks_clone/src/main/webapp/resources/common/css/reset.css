@@ -8,7 +8,8 @@ a {margin: 0;padding: 0;font-size: 100%;text-decoration: none;vertical-align: ba
 a:hover,a:focus { text-decoration:underline}/* 접근성_20171106 추가 */
 img {vertical-align: top;max-width: 100%;}
 table {border-collapse: collapse;border-spacing: 0;}
-input {margin: 0;padding: 0;box-sizing: content-box;vertical-align: top;border-radius: 0;font-family: 'nbg', '맑은 고딕', HelveticaNeue, DroidSans, Sans-serif, Helvetica;}
+input {margin: 0;padding: 0;box-sizing: content-box;vertical-align: top;font-family: 'nbg', '맑은 고딕', HelveticaNeue, DroidSans, Sans-serif, Helvetica;}
+	/* border-radius: 0; */
 .hid {position: absolute;left: -9999px;font-size: 0;width: 0;height: 0;text-indent: -9999px;overflow: hidden;}
 @font-face {font-family: 'nbg';src: url("../fonts/NanumBarunGothic.eot")}
 @font-face {font-family: 'nbg';src: url("../fonts/NanumBarunGothic.woff")}
@@ -18,3 +19,4 @@ sub {font-size: 10px}
 .fontBold {font-weight: bold}
 .pointFont{font-size:17px !important; font-weight:bold !important} /*20180320 추가*/
 .ir_type01 {position:absolute; top:0px; left:-10000px;font-size:0;line-height:0;}/*20180803 추가*/
+button {width: 80px;}

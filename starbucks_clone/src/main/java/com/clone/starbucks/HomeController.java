@@ -41,24 +41,24 @@ public class HomeController {
 		return "menu/myOrder";
 	}
 	
-	@RequestMapping(value="food_list")
-	public String food_list() {
-		return "menu/food_list";
+	@RequestMapping(value="admin_3")
+	public String admin_3() {
+		return "my/admin_3";
 	}
 	
-	@RequestMapping(value="product_list")
-	public String product_list() {
-		return "menu/product_list";
+	@RequestMapping(value="admin_4")
+	public String admin_4() {
+		return "my/admin_4";
 	}
 	
-	@RequestMapping(value="card_list")
-	public String card_list() {
-		return "menu/card_list";
+	@RequestMapping(value="admin_5")
+	public String admin_5() {
+		return "my/admin_5";
 	}
 	
-	@RequestMapping(value="drink_list")
-	public String drink_list() {
-		return "menu/drink_list";
+	@RequestMapping(value="admin_6")
+	public String admin_6() {
+		return "my/admin_6";
 	}
 	
 }
