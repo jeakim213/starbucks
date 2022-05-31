@@ -22,7 +22,7 @@
 <meta property="og:image" content="https://image.istarbucks.co.kr/common/img/kakaotalk.png">
 <meta property="og:description" content="Starbucks">
 
-<title id="titleJoin">주문하기 | Starbucks Korea</title> <!-- 220117 수정 -->
+<title id="titleJoin">장바구니 | Starbucks Korea</title> <!-- 220117 수정 -->
 <link rel="shortcut icon" href="https://image.istarbucks.co.kr/common/img/common/favicon.ico?v=200828" type="image/ico"> <!-- 20200827 파비콘 교체 및 CDN 변수처리 -->
 <link href="common/css/reset.css" rel="stylesheet">
 <link href="common/css/style.css?v=210721" rel="stylesheet">
@@ -626,14 +626,14 @@ var eFrequencyPlannerYn = 'Y';
 				<!-- 서브 타이틀 -->
 				<div class="sub_tit_wrap">
 					<div class="sub_tit_inner">
-					<!-- 0530다정 이미지링크불러오기 -->
-						<h2><img src="common/img/menu/order.png" alt="주문하기" style="width:100px"></h2>
+					<!-- 0530 다정 이미지링크불러오기 -->
+						<h2><img src="common/img/menu/cart_title.png" alt="장바구니" style="width:100px"></h2>
 						<ul class="smap">
 							<li><a href="/"><img src="//image.istarbucks.co.kr/common/img/common/icon_home.png" alt="홈으로"></a></li>
 							<li><img class="arrow" src="//image.istarbucks.co.kr/common/img/common/icon_arrow.png" alt="하위메뉴"></li>
 							<li class="en"><a href="menu/index">MENU</a></li>
 							<li><img class="arrow" src="//image.istarbucks.co.kr/common/img/common/icon_arrow.png" alt="하위메뉴"></li>
-							<!-- 0527다정 --><li><a href="menu/myOrder" class="this">주문하기</a></li>
+							<!-- 0527다정 --><li><a href="menu/orderList" class="this">장바구니</a></li>
 						</ul>
 					</div>
 				</div>
@@ -642,100 +642,97 @@ var eFrequencyPlannerYn = 'Y';
 				
 				
 				
-				<!-- 0527다정 결제페이지 제작 -->
+				<!-- 0530 다정 장바구니 제작 -->
 				<!-- 내용 부분 -->
 				<div class="content">
+					<form action="#" >
 					<div class="order_wrap">
-						<div class="order_coupon&disc" style="margin-bottom: 50px;">
-							<h3>쿠폰사용</h3><br>
-							<div class="order_coupon&disc_inner" style="text-align: center;">
-								<table class="coupon" style="border:solid; border-color: #dfdfdf; font-size: 14px; margin:auto;">
-								<thead>
-									<tr>
-										<th style="padding:25px; width: 230px;">사용 할 쿠폰명</th>
-										<th style="padding:25px; width: 140px;">사용기한</th>
-										<th style="padding:25px; width: 120px;">쿠폰금액</th>
-									</tr>
-								</thead>
-								<tbody>
-									<%-- <c:forEach var="#" items="${coupon.list }">--%>
-									<tr>
-										<td style="padding:25px; width: 230px;">1<%-- ${coupon.name }--%></td>
-										<td style="padding:25px; width: 140px;">2 ~ 3<%-- ${coupon.start }&nbsp;~&nbsp;${coupon.end }--%></td>
-										<td style="padding:25px; width: 120px;">4<%-- ${coupon.cost }--%>원</td>
-									</tr>
-									<%-- </c:forEach>--%>
-								</tbody>	
-								</table>
-								<br>
-								<input type="button" class="btn_coupon" value="쿠폰 검색"><br>
-							</div>
-						</div>
-						<div class="order_pay" style="margin-bottom: 50px;">
-							<h3>결제수단</h3><br>
-							<div class="order_pay_inner" style="text-align: center;">
-								<input type="button" value="스타벅스 카드" class="btn_pay" style="background: #006633; color: white">
-								<input type="button" value="Kakao Pay" class="btn_pay" style="background: #fae100;"><br>
-								<!-- <input type="image" src="common/img/menu/icon_kakaoPay.png"> -->
-							</div>
-						</div>
 						<div class="order_orderConfirm" style="margin-bottom: 50px;">
 							<h3>주문내역 확인</h3><br>
 							<div class="order_orderConfirm_inner" style="padding:15px;">
-							<table>
-								<!-- 0530다정 list 출력하기 c태그 -->
-								<%-- <c:forEach var="#" items="${sessionScope.list }">--%>
-								<tr>
-									<!-- 주석처리된것 지우고 예시로 되어있는것 주석처리 하면 됨 -->
-									<%-- <td><img src="${이미지링크}" class="order_list_img"></td>--%>
-									<td><img src="https://image.istarbucks.co.kr/upload/store/skuimg/2022/04/[9300000004025]_20220406130412481.jpg" class="order_list_img"></td>
-									<%-- <td class="menu_list_info">
-										상품명 : ${상품명}
-										<br><br> 
-										가격 : ${가격} <-DB불러오면 됨
-									</td> --%>
-									<td class="menu_list_info">
-										상품명 : 소시지&올리브 미니 파이 
-										<br><br> 
-										가격 : 4500원
-									</td>
-								</tr>
-								<%--</c:forEach>--%>
-							</table>
+							
+								<table style="border: thin; border-style:solid; border-color: #dfdfdf; margin: auto;">
 								
-							</div>
-						</div>
-						<div class="order_finalConfirm" style="margin-bottom: 50px;">
-							<h3>최종 결제 금액</h3>
-							<div class="order_finalConfirm_inner" style="text-align: right; table-layout: auto;">
-								<table align="right" style="border:none; font-style: normal;" >
 									<tr>
-										<td><label>제품 금액&nbsp;&nbsp;</label></td>
-										<td><label class="productMoney" style="font-size: 17px;">4500 원<%--${제품금액합계} --%></label>
+										<th colspan="4" style="padding: 20px; background: #006633; color: white; font-size: 20px;">주문 목록</th>
+									</tr>
+									<!-- 0530 다정 list 출력하기 c태그 -->
+									<%-- <c:forEach var="#" items="${sessionScope.list }">--%>
+									<tr>
+										<td style="vertical-align: middle; padding-right: 20px; padding-left: 18px;" align="center"><input type="checkbox" name="Sausage&Olive Mini Pie"></td><!-- name은 el태그 사용해서 영문명으로 불러오기 -->
+										<!-- 주석처리된것 지우고 예시로 되어있는것 주석처리 하면 됨 -->
+										<%-- <td><img src="${이미지링크}" class="order_list_img"></td>--%>
+										<td><img src="https://image.istarbucks.co.kr/upload/store/skuimg/2022/04/[9300000004025]_20220406130412481.jpg" class="order_list_img"></td>
+										<%-- <td class="menu_list_info">
+											상품명 : ${상품명}
+											<br><br> 
+											가격 : ${가격} <-DB불러오면 됨
+										</td> --%>
+										<td class="menu_list_info" style="width:400px;">
+											<b>상품명 : 소시지&올리브 미니 파이</b> 
+											<br><br> 
+											가격 : 4500원
+										</td>
+										<td style="vertical-align: middle;">
+											<select name="Sausage&Olive Mini Pie_count">
+												<option>수량선택</option>
+												<option value="1">1개</option>
+												<option value="2">2개</option>
+												<option value="3">3개</option>
+												<option value="4">4개</option>
+												<option value="5">5개</option>
+												<option value="6">6개</option>
+												<option value="7">7개</option>
+												<option value="8">8개</option>
+												<option value="9">9개</option>
+											</select>
 										</td>
 									</tr>
+									<%-- </c:forEach> --%>
 									<tr>
-										<td><label style="color:red;">할인 금액&nbsp;&nbsp;</label></td>
-										<td><label class="discountMoney" style="font-size: 17px; color:red;">0 원<%--{할인금액:쿠폰금액} --%></label></td>
+										<td style="vertical-align: middle; padding-right: 20px; padding-left: 20px;" align="center"><input type="checkbox" name="Tiramisu Cream Danish"></td><!-- name은 el태그 사용해서 영문명으로 불러오기 -->
+										<!-- 주석처리된것 지우고 예시로 되어있는것 주석처리 하면 됨 -->
+										<%-- <td><img src="${이미지링크}" class="order_list_img"></td>--%>
+										<td><img src="https://image.istarbucks.co.kr/upload/store/skuimg/2022/04/[9300000004026]_20220406130314367.jpg" class="order_list_img"></td>
+										<%-- <td class="menu_list_info">
+											상품명 : ${상품명}
+											<br><br> 
+											가격 : ${가격} <-DB불러오면 됨
+										</td> --%>
+										<td class="menu_list_info" style="width:400px;">
+											<b>상품명 : 티라미수 크림 데니쉬</b> 
+											<br><br> 
+											가격 : 4500원
+										</td>
+										<td style="vertical-align: middle;">
+											<select name="Tiramisu Cream Danish_count">
+												<option>수량선택</option>
+												<option value="1">1개</option>
+												<option value="2">2개</option>
+												<option value="3">3개</option>
+												<option value="4">4개</option>
+												<option value="5">5개</option>
+												<option value="6">6개</option>
+												<option value="7">7개</option>
+												<option value="8">8개</option>
+												<option value="9">9개</option>
+											</select>
+										</td>
 									</tr>
+									
+									
+									<%--</c:forEach>--%>
 								</table>
-								<br><br><br>
-								<p>
-									<label>최종 결제 금액&nbsp;&nbsp;</label>
-									<label class="payMoney" style="font-size: 27px;">4500 원<%--${제품금액합계}-${할인금액} --%></label>
-								</p>
+							
 							</div>
 						</div>
-						<!-- <div class="order_orderbtn" style="margin-bottom: 50px;">
-							<h3>결제화면</h3>
-						</div> -->
-						
-						<div class="order_submit" style="margin: auto; text-align: center;">
+						<div class="cart_submit" style="margin: auto; text-align: center;">
 							<input type="submit" value="결제" class="submitResetBtn" style="background: #006633; color: white;">
 							<input type="reset" value="취소" class="submitResetBtn" style="background: #f6f6f6; ">
 						</div>
-						
+							
 					</div>
+					</form>
 				</div>
 			<!-- container end -->
 			
