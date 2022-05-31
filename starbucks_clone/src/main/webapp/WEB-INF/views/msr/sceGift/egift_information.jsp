@@ -704,11 +704,7 @@ var eFrequencyPlannerYn = 'Y';
 					<section class="eInformation_info1">
 						<article class="eInformation_info1_inner">
 							<!-- 170203 수정 -->
-							<h3>스타벅스 <span class="en">e-Gift Card</span>란?
-								<p class="ttl_sub_content">(개인 전용)<br class="for_mob">
-									<a class="ml5" href="footer/co_sales/sbcard_egift">[단체/법인 구매하러가기]</a>
-								</p>
-							</h3>
+							<h3>스타벅스 <span class="en">e-Gift Card</span>란?</h3>
 							<!-- 170203 수정 end -->
 							<!-- 160510 김민호 추가 -->
 							<p class="s_titl">스타벅스 홈페이지 회원이라면 홈페이지, 모바일 애플리케이션을 통해 스타벅스 카드 <span><a class="t_006633 en" href="gift_step1" required="login">[e-Gift Card 구매·선물]</a></span>이 가능합니다.</p>
