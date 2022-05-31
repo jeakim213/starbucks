@@ -884,44 +884,7 @@ var eFrequencyPlannerYn = 'Y';
 						</svg>
 					</div><div style="position: absolute; z-index: 1; width: 100%; height: 0px; transform: translateZ(0px);"><div style="position: absolute; margin: -55px 0px 0px -16px; z-index: 0; left: 2167px; top: -974px; display: block;"><img draggable="false" src="//image.istarbucks.co.kr/common/img/store/pin/pin_general.png" alt="" title="서울대치과병원" style="min-width: 0px; min-height: 0px; max-width: 99999px; max-height: none; border: 0px; display: block; position: absolute; user-select: none; -webkit-user-drag: none; clip: rect(0px, 38px, 60px, 0px); top: 0px; left: 0px; width: 38px; height: 60px;"></div><div style="position: absolute; margin: -55px 0px 0px -16px; z-index: 0; left: 2168px; top: -973px; display: block;"><img draggable="false" src="//image.istarbucks.co.kr/common/img/store/pin/pin_general.png" alt="" title="대학로" style="min-width: 0px; min-height: 0px; max-width: 99999px; max-height: none; border: 0px; display: block; position: absolute; user-select: none; -webkit-user-drag: none; clip: rect(0px, 38px, 60px, 0px); top: 0px; left: 0px; width: 38px; height: 60px;"></div><div style="position: absolute; margin: -55px 0px 0px -16px; z-index: 0; left: 2207px; top: -944px; display: block;"><img draggable="false" src="//image.istarbucks.co.kr/common/img/store/pin/pin_general.png" alt="" title="성수역" style="min-width: 0px; min-height: 0px; max-width: 99999px; max-height: none; border: 0px; display: block; position: absolute; user-select: none; -webkit-user-drag: none; clip: rect(0px, 38px, 60px, 0px); top: 0px; left: 0px; width: 38px; height: 60px;"></div><div style="cursor: default; position: absolute; background: rgb(255, 255, 255); border: 1px solid rgb(118, 129, 168); z-index: 0; display: block; left: 2021px; top: -1240px; width: 294px; height: 203px;"><div style="position: absolute; width: 11px; height: 9px; background: url(&quot;https://t1.daumcdn.net/localimg/localimages/07/mapjsapi/2x/triangle.png&quot;) 0% 0% / 11px 9px no-repeat; left: 141px; top: 203px;"></div><div class="" style="position: absolute; left: 0px; top: 0px;"><div class="map_marker_pop"><header>대학로</header><article><div class="map_marker_pop_inner"><div class="icon_wrap"><div class="icon_wrap_l"><img src="//image.istarbucks.co.kr/common/img/store/store_icon/icon02.png"><img src="//image.istarbucks.co.kr/common/img/store/store_icon/icon04.png"><img src="//image.istarbucks.co.kr/upload/common/img/icon/icon18.png"><img src="//image.istarbucks.co.kr/common/img/store/store_icon/icon20.png"><img src="//image.istarbucks.co.kr/common/img/store/store_icon/icon22.png"><img src="//image.istarbucks.co.kr/common/img/store/store_icon/icon19.png"><img src="//image.istarbucks.co.kr/upload/common/img/icon/icon23.png"></div><div class="icon_wrap_r"><a href="javascript:void(0);" style="display:none"><img alt="트위터" src="//image.istarbucks.co.kr/common/img/util/reward/btn_t.gif"></a><a href="javascript:void(0);" style="display:none"><img alt="페이스북" src="//image.istarbucks.co.kr/common/img/util/reward/btn_f.gif"></a><a href="javascript:void(0);" style="display:none"><img alt="카카오 스토리" src="//image.istarbucks.co.kr/common/img/util/reward/btn_k.gif"></a></div></div><div class="cont_wrap"><p class="addr">서울특별시 종로구 대학로 57, 홍익대학교 대학로캠퍼스 內 (연건동)</p><p class="tel">1522-3232</p><a class="btn_marker_detail" href="javascript:getStoreDetail('9758');">상세 정보 보기</a></div></div></article></div></div><img alt="close" width="14" height="13" src="https://t1.daumcdn.net/localimg/localimages/07/mapjsapi/2x/bt_close.gif" style="position: absolute; right: 5px; top: 5px; cursor: pointer;"></div></div></div></div><div style="position: absolute; cursor: default; z-index: 1; margin: 0px 6px; height: 19px; line-height: 14px; left: 0px; bottom: 0px; color: rgb(0, 0, 0);"><div style="color: rgb(0, 0, 0); text-align: center; font-size: 10px; float: left;"><div style="float: left; margin: 2px 3px 0px 4px; height: 6px; transition: width 0.1s ease 0s; border-top: none rgb(0, 0, 0); border-right: 2px solid rgb(0, 0, 0); border-bottom: 2px solid rgb(0, 0, 0); border-left: 2px solid rgb(0, 0, 0); border-image: initial; width: 58px;"></div><div style="float: left; margin: 0px 4px 0px 0px; font-family: AppleSDGothicNeo-Regular, 돋움, dotum, sans-serif; font-weight: bold; color: rgb(0, 0, 0);">8km</div></div><div style="margin: 0px 4px; float: left;"><a target="_blank" href="http://map.kakao.com/" title="Kakao 지도로 보시려면 클릭하세요." style="float: left; width: 32px; height: 10px;"><img src="https://t1.daumcdn.net/mapjsapi/images/2x/m_bi_b.png" alt="Kakao 지도로 이동" style="float: left; width: 32px; height: 10px; border: none;"></a><div style="font: 11px / 11px Arial, Tahoma, Dotum, sans-serif; float: left;"></div></div></div><div style="cursor: auto; position: absolute; z-index: 2; left: 0px; top: 0px;"></div></section>
 				<!-- 스토어 맵 end -->
-				<!-- 배너 슬라이더 -->
-				<section class="bnr_slider_wrap">
-					<p class="store_bnr_tit">매장에서 진행되는 이벤트</p>
-					<div class="bx-wrapper" style="max-width: 1100px;"><div class="bx-viewport" style="width: 100%; overflow: hidden; position: relative; height: 213px;">
-					<ul style="width: 1415%; position: relative; transition-duration: 0s; transform: translate3d(-360px, 0px, 0px);">
-						<li style="float: left; list-style: none; position: relative; width: 80px; margin-right: 40px;" class="bx-clone"> 
-						     <a href="javascript:void(0);" class="goPromotionView" prod="1974"> 
-						         <img src="https://image.istarbucks.co.kr/upload/promotion/WEB_THUM_20220321083416501.jpg" alt="에코별 챌린지"> 
-						           <p>에코별 챌린지<br>
-						           	<span>2022-03-22 ~ 2022-06-27</span>
-						           </p>
-						      </a>
-						</li>
-						<li style="float: left; list-style: none; position: relative; width: 80px; margin-right: 40px;" class="bx-clone">
-						      <a href="javascript:void(0);" class="goPromotionView" prod="1971">
-						      		<img src="https://image.istarbucks.co.kr/upload/promotion/WEB_THUM_20220308080409646.jpg" alt="이제 상품(MD)도 매장 밖에서 미리 사이렌 오더하세요!"> 
-						      		     <p>이제 상품(MD)도 매장 밖에서 미리 사이렌 오더하세요!<br>
-						      		         <span>2022-03-08 ~ 2022-06-07</span>
-						      		     </p>
-							 </a> 
-						</li>
-						<li style="float: left; list-style: none; position: relative; width: 80px; margin-right: 40px;" class="bx-clone">
-								<a href="javascript:void(0);" class="goPromotionView" prod="1932">
-									<img src="https://image.istarbucks.co.kr/upload/promotion/WEB_THUM_20211231080741168.jpg" alt="만원당 별 적립 이벤트">
-									     <p>만원당 별 적립 이벤트<br>
-									         <span>2022-01-01 ~ 2022-12-31</span>
-									     </p>
-								</a> 
-						</li>
-					<li style="float: left; list-style: none; position: relative; width: 80px; margin-right: 40px;">                     <a href="javascript:void(0);" class="goPromotionView" prod="1994">                         <img src="https://image.istarbucks.co.kr/upload/promotion/WEB_THUM_20220429124913413.jpg" alt="22 서머 e-프리퀀시 이벤트 안내">                         <p>22 서머 e-프리퀀시 이벤트 안내<br>                                                  <span>2022-05-10 ~ 2022-07-18</span>                                                                           </p>                     </a>                 </li><li style="float: left; list-style: none; position: relative; width: 80px; margin-right: 40px;">                     <a href="javascript:void(0);" class="goPromotionView" prod="1995">                         <img src="https://image.istarbucks.co.kr/upload/promotion/WEB_THUM_20220429124801955.jpg" alt="22 서머 e-프리퀀시 증정품 안내">                         <p>22 서머 e-프리퀀시 증정품 안내<br>                                                  <span>2022-05-10 ~ 2022-07-18</span>                                                                           </p>                     </a>                 </li><li style="float: left; list-style: none; position: relative; width: 80px; margin-right: 40px;">                     <a href="javascript:void(0);" class="goPromotionView" prod="2010">                         <img src="https://image.istarbucks.co.kr/upload/promotion/WEB_THUM_20220530142349425.jpg" alt="딜리버스 보너스 스타 이벤트">                         <p>딜리버스 보너스 스타 이벤트<br>                                                  <span>2022-05-31 ~ 2022-06-13</span>                                                                           </p>                     </a>                 </li><li style="float: left; list-style: none; position: relative; width: 80px; margin-right: 40px;">                     <a href="javascript:void(0);" class="goPromotionView" prod="2012">                         <img src="https://image.istarbucks.co.kr/upload/promotion/WEB_THUM_20220525154216089.jpg" alt="22 서머 e-프리퀀시 e-스티커 증정 이벤트">                         <p>22 서머 e-프리퀀시 e-스티커 증정 이벤트<br>                                                  <span>2022-05-26 ~ 2022-06-01</span>                                                                           </p>                     </a>                 </li><li style="float: left; list-style: none; position: relative; width: 80px; margin-right: 40px;">                     <a href="javascript:void(0);" class="goPromotionView" prod="2011">                         <img src="https://image.istarbucks.co.kr/upload/promotion/WEB_THUM_20220523110525326.jpg" alt="Gift 배송하기 별 2배 적립 혜택">                         <p>Gift 배송하기 별 2배 적립 혜택<br>                                                  <span>2022-05-24 ~ 2022-06-30</span>                                                                           </p>                     </a>                 </li><li style="float: left; list-style: none; position: relative; width: 80px; margin-right: 40px;">                     <a href="javascript:void(0);" class="goPromotionView" prod="2008">                         <img src="https://image.istarbucks.co.kr/upload/promotion/WEB_THUM_20220519094211217.jpg" alt="스타벅스 현대카드 5월 한정 혜택">                         <p>스타벅스 현대카드 5월 한정 혜택<br>                                                  <span>2022-05-01 ~ 2022-05-31</span>                                                                           </p>                     </a>                 </li><li style="float: left; list-style: none; position: relative; width: 80px; margin-right: 40px;">                     <a href="javascript:void(0);" class="goPromotionView" prod="1999">                         <img src="https://image.istarbucks.co.kr/upload/promotion/WEB_THUM_20220429082859570.jpg" alt="5월 e-Gift Item 보너스 스타">                         <p>5월 e-Gift Item 보너스 스타<br>                                                  <span>2022-05-01 ~ 2022-05-31</span>                                                                           </p>                     </a>                 </li><li style="float: left; list-style: none; position: relative; width: 80px; margin-right: 40px;">                     <a href="javascript:void(0);" class="goPromotionView" prod="1993">                         <img src="https://image.istarbucks.co.kr/upload/promotion/WEB_THUM_20220411125521701.jpg" alt="SUMMER BARISTA FAVORITES">                         <p>SUMMER BARISTA FAVORITES<br>                                                                           <span>2022-04-12 ~ 2022-06-13</span>                                                  </p>                     </a>                 </li><li style="float: left; list-style: none; position: relative; width: 80px; margin-right: 40px;">                     <a href="javascript:void(0);" class="goPromotionView" prod="1992">                         <img src="https://image.istarbucks.co.kr/upload/promotion/WEB_THUM_20220411095441487.jpg" alt="서머 1 프로모션 ">                         <p>서머 1 프로모션 <br>                                                  <span>2022-04-12 ~ 2022-06-13</span>                                                                           </p>                     </a>                 </li><li style="float: left; list-style: none; position: relative; width: 80px; margin-right: 40px;">                     <a href="javascript:void(0);" class="goPromotionView" prod="1974">                         <img src="https://image.istarbucks.co.kr/upload/promotion/WEB_THUM_20220321083416501.jpg" alt="에코별 챌린지">                         <p>에코별 챌린지<br>                                                  <span>2022-03-22 ~ 2022-06-27</span>                                                                           </p>                     </a>                 </li><li style="float: left; list-style: none; position: relative; width: 80px; margin-right: 40px;">                     <a href="javascript:void(0);" class="goPromotionView" prod="1971">                         <img src="https://image.istarbucks.co.kr/upload/promotion/WEB_THUM_20220308080409646.jpg" alt="이제 상품(MD)도 매장 밖에서 미리 사이렌 오더하세요!">                         <p>이제 상품(MD)도 매장 밖에서 미리 사이렌 오더하세요!<br>                                                                           <span>2022-03-08 ~ 2022-06-07</span>                                                  </p>                     </a>                 </li><li style="float: left; list-style: none; position: relative; width: 80px; margin-right: 40px;">                     <a href="javascript:void(0);" class="goPromotionView" prod="1932">                         <img src="https://image.istarbucks.co.kr/upload/promotion/WEB_THUM_20211231080741168.jpg" alt="만원당 별 적립 이벤트">                         <p>만원당 별 적립 이벤트<br>                                                  <span>2022-01-01 ~ 2022-12-31</span>                                                                           </p>                     </a>                 </li><li style="float: left; list-style: none; position: relative; width: 80px; margin-right: 40px;" class="bx-clone">                     <a href="javascript:void(0);" class="goPromotionView" prod="1994">                         <img src="https://image.istarbucks.co.kr/upload/promotion/WEB_THUM_20220429124913413.jpg" alt="22 서머 e-프리퀀시 이벤트 안내">                         <p>22 서머 e-프리퀀시 이벤트 안내<br>                                                  <span>2022-05-10 ~ 2022-07-18</span>                                                                           </p>                     </a>                 </li><li style="float: left; list-style: none; position: relative; width: 80px; margin-right: 40px;" class="bx-clone">                     <a href="javascript:void(0);" class="goPromotionView" prod="1995">                         <img src="https://image.istarbucks.co.kr/upload/promotion/WEB_THUM_20220429124801955.jpg" alt="22 서머 e-프리퀀시 증정품 안내">                         <p>22 서머 e-프리퀀시 증정품 안내<br>                                                  <span>2022-05-10 ~ 2022-07-18</span>                                                                           </p>                     </a>                 </li><li style="float: left; list-style: none; position: relative; width: 80px; margin-right: 40px;" class="bx-clone">                     <a href="javascript:void(0);" class="goPromotionView" prod="2010">                         <img src="https://image.istarbucks.co.kr/upload/promotion/WEB_THUM_20220530142349425.jpg" alt="딜리버스 보너스 스타 이벤트">                         <p>딜리버스 보너스 스타 이벤트<br>                                                  <span>2022-05-31 ~ 2022-06-13</span>                                                                           </p>                     </a>                 </li></ul></div><div class="bx-controls bx-has-controls-direction"><div class="bx-controls-direction"><a class="bx-prev" href="">Prev</a><a class="bx-next" href="">Next</a></div></div></div>
-					<div class="bnr_slider_control_pager">
-						<div class="bnr_slider_controls"><div class="bx-controls-auto"><div class="bx-controls-auto-item"><a class="bx-stop" href="">Stop</a></div></div></div>
-						<div class="bnr_slider_pagers"><div class="bx-pager bx-default-pager"><div class="bx-pager-item"><a href="" data-slide-index="0" class="bx-pager-link active">1</a></div><div class="bx-pager-item"><a href="" data-slide-index="1" class="bx-pager-link">2</a></div><div class="bx-pager-item"><a href="" data-slide-index="2" class="bx-pager-link">3</a></div><div class="bx-pager-item"><a href="" data-slide-index="3" class="bx-pager-link">4</a></div></div></div>
-					</div>
-					
-				</section>
 				
-				<!-- 배너 슬라이더 end -->
 				<!-- 지도 영역 end -->
 			</div>
             
@@ -959,35 +922,23 @@ var eFrequencyPlannerYn = 'Y';
 						</ul>
 						<ul>
 							<li class="footer_menu_ttl"><a class="en" href="javascript:void(0);">COMPANY<span class="footer_arrow_down"></span></a></li>
-							<li><a href="footer/company/index">한눈에 보기</a></li>
-							<li><a href="footer/company/mission">스타벅스 사명</a></li>
-							<li class="footer_2depth_ttl"><a href="javascript:void(0)">스타벅스 소개<span class="footer_arrow_down"></span></a>
-								<ul>
-									<li><a href="footer/company/starbucks_information">스타벅스 코리아</a></li> <!-- 220118 수정 -->
-									<li><a href="footer/company/starbucks_history">주요 연혁</a></li> <!-- 202107 수정 -->
-									<li><a href="footer/company/starbucks_story">스타벅스 이야기</a></li>
-								</ul>
-							</li>
-							<li><a href="footer/company/news_list">국내 뉴스룸</a></li>
-							<li><a href="footer/company/global_starbucks">세계의 스타벅스</a></li>
+							<li><a href="#">한눈에 보기</a></li>
+							<li><a href="#">스타벅스 사명</a></li>
+							<li><a href="#">스타벅스 소개</a></li>
+							<li><a href="#">국내 뉴스룸</a></li>
+							<li><a href="#">세계의 스타벅스</a></li>
 							<!-- 160811 메뉴 추가 -->
-							<li><a href="https://news.starbucks.com" target="_blank">글로벌 뉴스룸</a></li>
+							<li><a href="#">글로벌 뉴스룸</a></li>
 							<!-- 160811 메뉴 추가 end -->
 						</ul>
 						<ul>
-							<li class="footer_menu_ttl"><a class="en" id="goPage" href="javascript:void(0);">CORPORATE SALES<span class="footer_arrow_down"></span></a></li>
-							<li><a href="footer/co_sales/index">단체 및 기업 구매 안내</a></li>
-							<!-- <li><a href="footer/co_sales/sbcard_egift">스타벅스 <span class="en">e-Gift Card</span></a></li> -->
-							<!-- <li><a href="footer/co_sales/sbcard">스타벅스 카드</a></li> -->
-							<!-- <li><a href="footer/co_sales/co-branded"><span class="en">Co-branded</span> 카드</a></li> -->
-							<!-- <li><a href="footer/co_sales/sb_product">스타벅스 상품</a></li> -->
-							<!-- <li><a href="footer/co_sales/sbgift_certificate">스타벅스 상품권</a></li> -->
+							<li class="footer_menu_ttl"><a class="en" href="#">CORPORATE SALES<span class="footer_arrow_down"></span></a></li>
+							<li><a href="#">단체 및 기업 구매 안내</a></li>
 						</ul>
 						<ul>
 							<li class="footer_menu_ttl"><a class="en" href="javascript:void(0);">PARTNERSHIP<span class="footer_arrow_down"></span></a></li>
-							<li><a href="footer/partnership/new_partner">신규 입점 제의</a></li>
-							<!-- <li><a href="footer/partnership/portal_systems">협력사 포털 시스템</a></li> -->
-							<li><a href="srm/login">협력 고객사 등록신청</a></li>
+							<li><a href="#">신규 입점 제의</a></li>
+							<li><a href="#">협력 고객사 등록신청</a></li>
 						</ul>
 						<ul>
 							<li class="footer_menu_ttl"><a class="en" href="javascript:void(0);">ONLINE COMMUNITY<span class="footer_arrow_down"></span></a></li>
@@ -998,8 +949,8 @@ var eFrequencyPlannerYn = 'Y';
 						</ul>
 						<ul>
 							<li class="footer_menu_ttl"><a class="en" href="javascript:void(0);">RECRUIT<span class="footer_arrow_down"></span></a></li>
-							<li><a href="footer/recruit/index">채용 소개</a></li>
-							<li><a href="http://job.shinsegae.com/recruit_info/notice/notice02_view.jsp?notino=5924" target="_blank">채용 지원하기</a></li><!-- 20210927 수정 -->
+							<li><a href="#">채용 소개</a></li>
+							<li><a href="#">채용 지원하기</a></li><!-- 20210927 수정 -->
 						</ul>
 					</div>
 				</div>
@@ -1069,19 +1020,19 @@ var eFrequencyPlannerYn = 'Y';
 				
 				<!-- 150517 추가 - 문진욱 -->
 				<aside class="copyright">
-					<a class="c_00b050" href="footer/etc/privacy">개인정보처리방침</a>
-					<a href="footer/etc/rules_vod" class="mbn">영상정보처리기기 운영관리 방침</a>
-					<a href="footer/etc/rules">홈페이지 이용약관</a>
-					<a href="footer/etc/rules_loc" class="mbn">위치정보 이용약관</a>
-					<a href="footer/etc/rules_msr" class="mbn">스타벅스 카드 이용약관</a>
-					<a href="footer/etc/rules_non" class="mbn">비회원 이용약관</a>
+					<a class="c_00b050" href="#">개인정보처리방침</a>
+					<a href="#" class="mbn">영상정보처리기기 운영관리 방침</a>
+					<a href="#">홈페이지 이용약관</a>
+					<a href="#" class="mbn">위치정보 이용약관</a>
+					<a href="#" class="mbn">스타벅스 카드 이용약관</a>
+					<a href="#" class="mbn">비회원 이용약관</a>
 					<span class="br"><!-- 150713 삭제  구명준  <a href="javascript:void(0);">위치정보 이용약관</a> -->
-					<a href="footer/etc/rules_mdp">My DT Pass 서비스 이용약관</a></span> <!-- 20200914 mdp 추가 -->
-					<a href="footer/etc/hotline" class="last">윤리경영 핫라인</a>
+					<a href="#">My DT Pass 서비스 이용약관</a></span> <!-- 20200914 mdp 추가 -->
+					<a href="#" class="last">윤리경영 핫라인</a>
 					<br>
-					<a class="btned_link" href="footer/etc/coming_route">찾아오시는 길</a>
-					<a class="btned_link" href="footer/partnership/new_partner">신규입점제의</a>
-					<a class="btned_link" href="footer/etc/sitemap">사이트 맵</a><br>
+					<a class="btned_link" href="#">찾아오시는 길</a>
+					<a class="btned_link" href="#">신규입점제의</a>
+					<a class="btned_link" href="#">사이트 맵</a><br>
 					<ul class="copy_menu">
 						<li>사업자등록번호 : 201-81-21515</li>
 						<li>주식회사 에스씨케이컴퍼니 대표이사 : 송 데이비드 호섭</li> <!-- 220105 수정 -->

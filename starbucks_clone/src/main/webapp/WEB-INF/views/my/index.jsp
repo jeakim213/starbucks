@@ -121,17 +121,18 @@ var eFrequencyPlannerYn = 'Y';
 			<!-- MSR 영역 -->
 			<div id="top_MSR" class="eFreqTop"><!-- 20170510 수정 : 클래스 eFreqTop 추가 -->
 				<div class="top_msr_wrap" style="display:none;">
+					<div class="top_msr_wrap" style="">
 					<!-- 유저인포 -->
 					<div class="user_greet">
 						<div class="user_pic_area">
-							<img alt="사용자 아이디" src="common/img/common/user_pic_sample.jpg">
+							<img alt="사용자 아이디" src="//image.istarbucks.co.kr/common/img/common/user_pic_sample.jpg">
 							<p class="msr_user_mask msr_user_mask01"></p>
 							<p class="msr_user_mask msr_user_mask02"></p>
 							<p class="msr_user_mask msr_user_mask03"></p>
 							<p class="msr_user_mask msr_user_mask04"></p>
 						</div>
 						<p class="user_greet_txt"><strong><!-- 홍길동 --></strong>님, 안녕하세요!</p>
-						<p class="msr_btn_setting"><a href="my/myinfo_modify_login">개인정보 수정</a></p>
+						<p class="msr_btn_setting"><a href="/my/myinfo_modify_login.do">개인정보 수정</a></p>
 					</div>
 					<!-- 유저인포 end -->
 					<span class="msr_sep_line"></span>
@@ -139,7 +140,7 @@ var eFrequencyPlannerYn = 'Y';
 					<!-- 유저레벨 -->
 					<!-- MSR 회원 -->
 					<div class="user_level" style="display:none;">
-						<a href="reward">
+						<a href="/my/reward.do">
 							<p class="level_star_bg en">0</p>
 							<p class="user_level_txt"><!-- <strong class="t_ac8432 en userGrade">Gold Level</strong><br /><strong>무료음료</strong> 획득 별까지<br><strong class="necessaryStar">0개</strong> 남았습니다. --></p>
 						</a>
@@ -148,7 +149,7 @@ var eFrequencyPlannerYn = 'Y';
 					
 					<!-- 일반회원 -->
 					<div class="msr_lead">
-						<a href="msr/msreward/level_benefit">
+						<a href="/msr/msreward/level_benefit.do">
 							<p class="icon_msr_cup"></p>
 							<p class="msr_lead_txt"><strong>스타벅스 리워드</strong><br>혜택에 편리함까지 더한<br>스타벅스 리워드를<br>즐겨보세요.</p> <!-- 스타벅스 리워드 수정 -->
 						</a>
@@ -162,10 +163,10 @@ var eFrequencyPlannerYn = 'Y';
 					<!-- MSR 회원 -->
 					<!-- 150805 DOM 수정 -->
 					<div class="msr_card_info w_card_pic">
-						<p class="msr_card_area" onclick="location.href = '/my/mycard_index';" style="cursor:pointer;"><img alt=""></p>
+						<p class="msr_card_area" onclick="location.href = '/my/mycard_index.do';" style="cursor:pointer;"><img alt=""></p>
 						<p class="card_info_txt">잔액 <strong class="en balance">0</strong>원</p>
 						<!-- 150924 - 다른카드보기버튼 추가 -->
-						<p class="btn_other_more"><a href="mycard_index">다른 카드 보기</a></p>
+						<p class="btn_other_more"><a href="/my/mycard_index.do">다른 카드 보기</a></p>
 						<!-- 150924 - 다른카드보기버튼 추가 ebd -->
 					</div>
 					<div class="msr_card_zone m_card_pic">
@@ -173,19 +174,19 @@ var eFrequencyPlannerYn = 'Y';
 							<img alt="카드이름">
 						</div>
 						<div class="mycard_area2">
-							<img alt="카드이름" src="common/img/common/mycard2.png">
+							<img alt="카드이름" src="//image.istarbucks.co.kr/common/img/common/mycard2.png">
 							<p class="num"><!-- 1234-1234-1234-1234 --></p>
 							<p class="barcord"><!-- <img src="//image.istarbucks.co.kr/common/img/common/bacord.png" alt=""> --></p>
 						</div>
-						<div class="mycard_one">
+						<div class="mycard_one" style="transform: rotateY(239.852deg);">
 							<!-- <div class="front"> -->
-							<img src="common/img/common/payment_icon1.png" alt="">
+							<img src="//image.istarbucks.co.kr/common/img/common/payment_icon1.png" alt="">
 							<!-- </div> -->
 							<!-- <div class="back"><img src="//image.istarbucks.co.kr/common/img/common/payment_icon1.png" alt=""></div> -->
 						</div>
 						<p class="mycard_money_result">잔액 <span class="en balance"><!-- 550,000 --></span>원</p>
 						<!-- 150924 - 다른카드보기버튼 추가 -->
-						<p class="btn_other_more"><a href="mycard_index">다른 카드 보기</a></p>
+						<p class="btn_other_more"><a href="/my/mycard_index.do">다른 카드 보기</a></p>
 						<!-- 150924 - 다른카드보기버튼 추가 ebd -->
 					</div>
 					<!-- 150805 DOM 수정 -->
@@ -194,7 +195,7 @@ var eFrequencyPlannerYn = 'Y';
 					<!-- 일반회원 -->
 					<div class="sb_card_regi">
 						<a href="javascript:void(0);">
-							<p class="icon_add_card" onclick="location.href = '/my/mycard_info_input';"><img alt="카드등록 아이콘" src="common/img/common/icon_add_card.png"></p>
+							<p class="icon_add_card" onclick="location.href = 'my/mycard_info_input';"><img alt="카드등록 아이콘" src="//image.istarbucks.co.kr/common/img/common/icon_add_card.png"></p>
 							<p class="sb_card_regi_txt"><strong>스타벅스 카드 등록</strong><br>카드를 등록하시고<br>다양한 리워드를<br>만나보세요.</p>
 						</a>
 					</div>
@@ -208,13 +209,13 @@ var eFrequencyPlannerYn = 'Y';
 					<!-- 알림아이콘 -->
 					<div class="notice_icons">
 						<div class="notice_icon2">
-							<a href="calendar">
+							<a href="/my/calendar.do">
 								<p></p>
 								<span>캘린더</span>
 							</a>
 						</div>
 						<div class="notice_icon3">
-							<a href="my/ecoupon">
+							<a href="/my/ecoupon.do">
 								<p>
 									<span class="validCoupontCnt">0</span>
 								</p>
@@ -224,7 +225,7 @@ var eFrequencyPlannerYn = 'Y';
 						
 						<!-- 20170510 추가 : 아이콘추가 -->
 						<div class="notice_icon4">
-							<a href="eFreq/status?TYPE=BARCODE">
+							<a href="/eFreq/status.do?TYPE=BARCODE">
 								<p></p>
 								<span>e-프리퀀시<br>바코드</span>
 							</a>
@@ -337,18 +338,9 @@ var eFrequencyPlannerYn = 'Y';
 									<li><a href="my/ecoupon?t=USE" required="login">사용하기</a></li>
 								</ul>
 							</li>
-							<li><a href="calendar" required="login">My 캘린더</a></li>
 							<!-- <li><a href="my/drink_shop" required="login">My 음료/매장</a></li> -->
 							<li><a href="my/my_menu" required="login">My 메뉴</a></li>
 							
-							
-							<li>
-								<a role="button" href="javascript:void(0);">My e-프리퀀시<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 -->
-								<ul>
-									<li><a href="eFreq/guide?promoSeq=172">이용안내</a></li>
-									<li><a href="eFreq/status-1?promoSeq=172" required="login">이용현황</a></li>
-								</ul>
-							</li>
 							
 									<li><a href="vocList" required="login">My 고객의 소리</a></li>
 							<li><a href="eReceiptList" required="login">전자영수증</a></li>
@@ -625,8 +617,438 @@ var eFrequencyPlannerYn = 'Y';
 	</div>
 	<!-- container end -->
 	
-	
+	<div id="container">
+                <!-- 서브 타이틀 -->
+                
+	<header class="ms_sub_tit_wrap">
+		<div class="ms_sub_tit_bg">
+			<div class="ms_sub_tit_inner">
+				<h4><img alt="My 음료/매장" src="/common/img/util/ms_ttl.png"></h4>
+				<ul class="smap">
+					<li><a href="/"><img src="//image.istarbucks.co.kr/common/img/common/icon_home_w.png" alt="홈으로"></a></li>
+					<li><img class="arrow" src="//image.istarbucks.co.kr/common/img/common/icon_arrow_w.png" alt="작은 맵 화살표"></li>
+					<li><a href="/my/index.do">My Starbucks</a></li>
+					
+					
+				</ul>
+			</div>
+		</div>
+	</header>
+                <!-- 서브 타이틀 end -->
+                
+                <!-- 내용 -->
+                <div class="ms_cont_wrap">
+                    <div class="ms_cont">
+                        <!-- 150528 - 문진욱 -->
+                        <!-- 일반회원 -->
+                        <div class="regular_user_index" style="display:none;">
+                            <!-- 일반회원정보 -->
+                            <section class="regu_user_info regu_info_add"><!-- 20200129 class="regu_info_add" 추가 -->
+                                <article class="regu_user_info_center">
+                                    <p><strong class="userName"><!-- 홍길동 --></strong> 님 안녕하세요.<br><span>(지금 스타벅스 카드를 등록하시면 <span class="en">Starbucks Rewards</span> 혜택을 받으실 수 있습니다.)</span></p> <!-- 스타벅스 리워드 수정 -->
+                                    <!-- <a href="./myinfo_modify.do">개인정보 수정</a> -->
+                                    <!-- 20160929 김민호 수정 -->
+									<a href="./myinfo_modify_login">개인정보 수정</a>
+									<a class="gray" href="./myinfo_modify_pwd">비밀번호 변경</a>
+									<!-- 20160929 김민호 수정 end -->
+                                    
+                                </article>
+                                <article class="regu_user_info_right">
+                                    <div class="regu_user_info_rt">
+                                        <a href="/whats_new/store_event_list?tab=2">
+                                            <p class="icon_new_store"></p>
+                                            <p class="icon_new_store_txt">신규 매장<br><strong>오픈 이벤트</strong></p>
+                                            <p class="icon_new_store_mtxt">신규 매장 <strong>오픈 이벤트</strong></p>
+                                            <span class="regu_next_arrow"></span>
+                                        </a>
+                                    </div>
+                                    <div class="regu_user_info_rb">
+                                        <a href="/whats_new/campaign_list">
+                                            <p class="icon_evt_cup"></p>
+                                            <p class="icon_evt_cup_txt">스타벅스<br><strong>전체 이벤트</strong></p>
+                                            <p class="icon_evt_cup_mtxt">스타벅스 <strong>전체 이벤트</strong></p>
+                                            <span class="regu_next_arrow"></span>
+                                        </a>
+                                    </div>
+                                </article>
+                            </section>
+                            <!-- 일반회원정보 end -->
+                            <!-- 카드혜택보기 -->
+							<section class="card_advantage_wrap">
+								<div class="card_advantage_int">
+									<div class="card_advantage_icon">
+										<figure class="card_advantage_icon1"></figure>
+									</div>
+									<div class="card_advantage_cont">
+										<!-- 150706 DOM 수정 - 텍스트 수정 -->
+										<div class="card_adv_txt1"><strong>아직 등록된 스타벅스 카드가 없으신가요?</strong><br>스타벅스 카드를 등록하시고 생일 무료음료 쿠폰과 다양한 스타벅스의<br> 리워드를 경험하세요. 스타벅스만의 특별한 혜택을 경험하실 수 있습니다.</div>
+										<!-- 150706 DOM 수정 - 텍스트 수정 end -->
+										<p class="card_adv_btn card_adv_btn1"><a href="/menu/card_list.do">스타벅스 카드 보기</a></p>
+										<p class="card_adv_btn card_adv_btn2"><a href="/msr/sceGift/gift_step1.do">스타벅스 e-Gift Card 구매</a></p>
+									</div>
+								</div>
+								<div class="card_advantage_inb">
+									<div class="card_advantage_icon">
+										<figure class="card_advantage_icon2"></figure>
+									</div>
+									<div class="card_advantage_cont2">
+										<!-- 150706 DOM 수정 - 텍스트 수정 -->
+										<div class="card_adv_txt2"><strong>스타벅스만의 특별한 혜택이 궁금하신가요?</strong><br>혜택에 편리함까지 더한 스타벅스 리워드로<br> 한층 더 스타벅스를 특별하게 즐기세요.</div> <!-- 스타벅스 리워드 수정 -->
+										<!-- 150706 DOM 수정 - 텍스트 수정 end -->
+										<p class="card_adv_btn card_adv_btn3"><a href="/msr/msreward/level_benefit.do">스타벅스 혜택보기</a></p>
+									</div>
+								</div>
+							</section>
+							<!-- 카드혜택보기 end -->                 
+                            <!-- 매장 & 카드 -->
+                            <section class="ms_sstore_charging">
+                                <article class="ms_sstore_charging_l">
+                                    <header><strong>새로운 스타벅스 매장을 소개합니다.</strong><br>전국의 새로운 스타벅스의 얼굴들을 만나보세요~!</header>
+                                    <div class="ms_sstore_slider">
+                                    	<!-- 150721 수정 - 신규매장이 없을 경우  -->
+                                    	<div class="no_store_wrap">
+	                                    	<figure><img src="//image.istarbucks.co.kr/common/img/util/no_store.jpg" alt=""></figure>
+											<p class="cont">신규 매장이 없습니다.</p>
+										</div>
+                                    	<!-- 150721 수정 - 신규매장이 없을 경우  end -->
+                                        <ul class="yes_store_wrap">
+                                        </ul>
+                                        <script id="storeList" type="text/x-jquery-tmpl">
+                                        	<li>
+                                                <a href="/store/store_map.do?in_biz_cd=${s_biz_code}">
+                                                    <div class="ms_sstore_slider_img">
+                                                        <img alt="" src="${defaultimage}" onerror="this.src='/common/img/util/edwDefault.png'">
+                                                    </div>
+                                                    <div class="ms_sstore_slider_txt">
+                                                        <strong>${s_name}</strong><br>
+                                                        ${sido_name} ${gugun_name}<br>
+                                                        <span class="date">${open_dt.substr(0, 4)}-${open_dt.substr(4, 2)}-${open_dt.substr(6, 2)}</span>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                    	</script>
+                                    </div>
+                                </article>
+                                <article class="ms_sstore_charging_r">
+                                    <div class="ms_regi_card">
+                                        <a href="javascript:void(0);" required="login" data-href="/my/mycard_info_input.do">
+                                            <figure class="icon_ms_regi_card"></figure>
+                                            <p><strong>카드등록</strong><br>카드를 등록하시고 다양한 리워드를 만나보세요.</p>
+                                            <strong>카드등록</strong>
+                                        </a>
+                                    </div>
+                                    <div class="ms_charge_card">
+                                        <a href="javascript:void(0);" required="login" data-href="/my/mycard_charge.do">
+                                            <figure class="icon_ms_charge_card"></figure>
+                                            <p><strong>카드충전</strong><br>매장과 온라인에서 간편하게 충전하세요.</p>
+                                            <strong>카드충전</strong>
+                                        </a>
+                                    </div>
+                                    <div class="regu_mem_icon_wrap">
+                                        <a class="regu_mem_icon1" href="javascript:void(0);" required="login" data-href="javascript:void(0);">
+                                            <span class="regu_icon"></span> <!-- 20210302 수정 -->
+                                            <span class="regu_txt">전자영수증</span> <!-- 20210302 수정 -->
+                                        </a>
+                                        <a class="regu_mem_icon2" href="javascript:void(0);" required="login" data-href="javascript:void(0);">
+                                            <span class="regu_icon"></span>
+                                            <span class="regu_txt">캘린더</span>
+                                        </a>
+                                        <a class="regu_mem_icon3" href="javascript:void(0);" required="login" data-href="javascript:void(0);">
+                                            <span class="regu_icon"><i>0</i></span>
+                                            <span class="regu_txt">e-쿠폰</span>
+                                        </a>
+                                    </div>
+                                </article>
+                            </section>
+                            <!-- 매장 & 카드 end -->
+                        </div>
+                        <!-- 일반회원 end -->
 
+                        <!-- msr 회원 -->
+                        <div class="msr_user_index">
+                            <!-- 유저정보 -->
+                            <section class="ms_user_info ms_user_add"><!-- 20200123 class="ms_user_add" 추가 -->
+                            	<!-- s::20200123 페이스북 프로필 기능 삭제 관련 메인 수정 -->
+                                <article class="ms_user_info_left">
+                                	<h5><span class="en">My</span> 리워드</h5>
+                                	<p class="ms_user_stat mo_block">
+                                		<span><strong class="userName"><!-- 홍길동 --></strong> 님은</span><br>
+                                		<span>현재 <strong class="en userGrade t_bd9b60"><!--OOO Level --></strong>이십니다.</span>
+                                	</p>
+                                	<!-- 20200805 PLCC 추가 -->
+                               		<div class="plcc-logo" style="display:none;">
+                               			<img src="/common/img/util/plcc-logo.png" alt="Hyundai Card + STARBUCKS">
+                               		</div>
+                                	<figure class="en ms_user_starbg"><span class="totalStar">${ }</span></figure>
+                                    <p class="ms_user_stat_notice"><strong class="en t_bd9b60"><!--OOO Level --></strong>을 유지 중 입니다.<br>무료음료 쿠폰 발행까지 ${ }개의 별이 남았습니다.</p>
+                                </article>
+                                <article class="ms_user_info_right">
+                                    <p class="ms_user_stat"><span><strong class="userName"><!-- 홍길동 --></strong> 님은</span> <span>현재 <strong class="en userGrade t_bd9b60"><!--OOO Level --></strong>이십니다.</span></p>
+                                    <!-- 20200805 PLCC 추가 -->
+                               		<div class="plcc-logo" style="display:none;">
+                               			<img src="/common/img/util/plcc-logo.png" alt="Hyundai Card + STARBUCKS">
+                               		</div>
+                                    <div class="ms_user_stat_btns">
+                                        <ul>
+											<li><a href="/reward">리워드 및 혜택</a></li>
+											<li><a href="/reward_star_history">별 히스토리</a></li>
+											<li class="btn_black"><a href="/myinfo_modify_login">개인정보 수정</a></li>
+											<li class="btn_gray"><a class="gray" href="/myinfo_modify_pwd">비밀번호 변경</a></li>
+                                        </ul>
+                                    </div>
+                                </article>
+                                <!-- e::20200123 페이스북 프로필 기능 삭제 관련 메인 수정 -->
+                            </section>
+                            <!-- 유저정보 end -->
+                            <!-- 등록된 카드 없음 -->
+							<section class="have_no_ms_card" style="display:none;">
+								<i class="icon_nocard"></i>
+								<p class="nocard_txt_guide"><strong>현재 등록된 스타벅스 카드가 없습니다.</strong><br>스타벅스만의 특별한 혜택을 이용하시기 위해서는 카드가 필요합니다.<br>스타벅스 카드를 등록하시고 생일 무료음료 쿠폰과<br>다양한 스타벅스의 리워드를 이용하세요.</p>
+								<div class="nocard_btns">
+									<ul>
+										<li class="nocard_btn1"><a href="/msr/scard/about">스타벅스 카드 보기</a></li>
+										<li class="nocard_btn2"><a href="/msr/sceGift/gift_step1">스타벅스 e-Gift Card 구매</a></li>
+									</ul>
+								</div>
+							</section>
+							<!-- 등록된 카드 없음 end -->
+                            <!-- My 스타벅스 카드 -->
+                            <section class="my_ms_card">
+                                <div class="my_ms_card_inner">
+                                    <header>
+                                        <h5><span class="en">My</span> 스타벅스 카드</h5>
+                                        <p class="recent_card">총 보유카드 : ${ }장</p>
+                                        <aside>
+                                            <span><strong class="curSlideNo">1<!-- 카드 --></strong>/<span class="totalCnt">2<!-- 카드 --></span></span>
+                                            <p>
+                                                <a class="back" href="javascript:void(0);">이전카드 보기</a><!-- 접근성_20171201 수정 -->
+                                                <a class="forward" href="javascript:void(0);">다음카드 보기</a><!-- 접근성_20171201 수정 -->
+                                            </p>
+                                        </aside>
+                                        <!-- 160125 김민호 시작 -->
+										<i class="card_list_btn1"><a href="/my/mycard_list"><img src="//image.istarbucks.co.kr/common/img/util/card_list_btn1.png" alt="보유카드 상세정보"><!-- 접근성_20171201 alt 수정 --></a></i>
+										<!-- 160125 김민호 end -->
+                                    </header>
+                                    <div class="my_ms_card_cont">
+                                        <div class="bx-wrapper" style="max-width: 100%; margin: 0px auto;"><div class="bx-viewport" style="width: 100%; overflow: hidden; position: relative; height: 191px;"><ul class="slider" style="width: 415%; position: relative; transition-duration: 0s; transform: translate3d(-632px, 0px, 0px);"><li style="float: left; list-style: none; position: relative; width: 632px;" class="bx-clone">             <figure>                            <img alt="스타벅스 e카드" src="https://image.istarbucks.co.kr/cardImg/20200108/.png" onerror="this.src='https://image.istarbucks.co.kr/upload/common/img/icon/card_672x423.png';">             </figure>                                                 <div class="my_ms_card_info">                                                                    <p class="my_ms_card_id">                                                         <span>스타벅스 e카드</span>                <!-- 접근성_20171201 title 추가 -->                         <a href="javascript:void(0);" class="icon_pencil" data-cardstatus="R" data-cardnickname="스타벅스 e카드" title=" 카드명 수정">정보수정</a>                  </p>               <p class="my_ms_card_id_modify" style="display:none;">               <label class="a11y" for="cardName_">카드명</label><!-- 접근성_20171201 label 추가 -->                <input class="my_nick_modify_input" id="cardName_" type="text" maxlength="20" value="스타벅스 e카드"><!-- 접근성_20171201 id 추가 -->                <a class="my_nick_modify" href="javascript:void(0);" data-cardregnumber="38480106" role="button" title="카드명 수정">수정</a><!-- 접근성_20171201 role, title 추가 -->                <a class="my_nick_cancel" href="javascript:void(0);" role="button">취소</a><!-- 접근성_20171201 role 추가 -->               </p>                                           <p class="my_ms_card_price"><span class="a11y">잔여금액</span><!-- 접근성_20171201 span 추가 --><strong class="en t_0d5f34">0</strong>원</p>                                                      <p class="my_ms_card_date">최종 사용일 : <span class="en">2021-12-05 12:16:30</span></p>                                                      <div class="my_ms_card_btns">                                                                           <p class="my_ms_card_btn1"><a href="javascript:void(0);" data-type="MANAGEMENT" data-cardregnumber="38480106">카드 관리</a></p>                                                           <p class="my_ms_card_btn2"><a href="javascript:void(0);" data-type="CHARGE" data-cardregnumber="38480106">충전하기</a></p>                                                                      </div>                                                               </div>                                             </li><li style="float: left; list-style: none; position: relative; width: 632px;">             <figure>                            <!-- 160125 김민호 시작 -->              <!-- 접근성_20171201 aria 추가 -->               <i class="representative_icon" aria-hidden="true"></i>              <!-- 160125 김민호 end -->                            <img alt="2018 서머 카드" src="https://image.istarbucks.co.kr/cardImg/20180411/003009.png" onerror="this.src='https://image.istarbucks.co.kr/upload/common/img/icon/card_672x423.png';">             </figure>                                                 <div class="my_ms_card_info">                                                                    <p class="my_ms_card_id">                                                         <span>2018 서머 카드</span>                <!-- 접근성_20171201 title 추가 -->                         <a href="javascript:void(0);" class="icon_pencil" data-cardstatus="R" data-cardnickname="2018 서머 카드" title=" 카드명 수정">정보수정</a>                  </p>               <p class="my_ms_card_id_modify" style="display:none;">               <label class="a11y" for="cardName_">카드명</label><!-- 접근성_20171201 label 추가 -->                <input class="my_nick_modify_input" id="cardName_" type="text" maxlength="20" value="2018 서머 카드"><!-- 접근성_20171201 id 추가 -->                <a class="my_nick_modify" href="javascript:void(0);" data-cardregnumber="16306725" role="button" title="카드명 수정">수정</a><!-- 접근성_20171201 role, title 추가 -->                <a class="my_nick_cancel" href="javascript:void(0);" role="button">취소</a><!-- 접근성_20171201 role 추가 -->               </p>                                           <p class="my_ms_card_price"><span class="a11y">잔여금액</span><!-- 접근성_20171201 span 추가 --><strong class="en t_0d5f34">6,100</strong>원</p>                                                      <p class="my_ms_card_date">최종 사용일 : <span class="en">2022-04-06 16:07:20</span></p>                                                      <div class="my_ms_card_btns">                                                                           <p class="my_ms_card_btn1"><a href="javascript:void(0);" data-type="MANAGEMENT" data-cardregnumber="16306725">카드 관리</a></p>                                                           <p class="my_ms_card_btn2"><a href="javascript:void(0);" data-type="CHARGE" data-cardregnumber="16306725">충전하기</a></p>                                                                      </div>                                                               </div>                                             </li><li style="float: left; list-style: none; position: relative; width: 632px;">             <figure>                            <img alt="스타벅스 e카드" src="https://image.istarbucks.co.kr/cardImg/20200108/.png" onerror="this.src='https://image.istarbucks.co.kr/upload/common/img/icon/card_672x423.png';">             </figure>                                                 <div class="my_ms_card_info">                                                                    <p class="my_ms_card_id">                                                         <span>스타벅스 e카드</span>                <!-- 접근성_20171201 title 추가 -->                         <a href="javascript:void(0);" class="icon_pencil" data-cardstatus="R" data-cardnickname="스타벅스 e카드" title=" 카드명 수정">정보수정</a>                  </p>               <p class="my_ms_card_id_modify" style="display:none;">               <label class="a11y" for="cardName_">카드명</label><!-- 접근성_20171201 label 추가 -->                <input class="my_nick_modify_input" id="cardName_" type="text" maxlength="20" value="스타벅스 e카드"><!-- 접근성_20171201 id 추가 -->                <a class="my_nick_modify" href="javascript:void(0);" data-cardregnumber="38480106" role="button" title="카드명 수정">수정</a><!-- 접근성_20171201 role, title 추가 -->                <a class="my_nick_cancel" href="javascript:void(0);" role="button">취소</a><!-- 접근성_20171201 role 추가 -->               </p>                                           <p class="my_ms_card_price"><span class="a11y">잔여금액</span><!-- 접근성_20171201 span 추가 --><strong class="en t_0d5f34">0</strong>원</p>                                                      <p class="my_ms_card_date">최종 사용일 : <span class="en">2021-12-05 12:16:30</span></p>                                                      <div class="my_ms_card_btns">                                                                           <p class="my_ms_card_btn1"><a href="javascript:void(0);" data-type="MANAGEMENT" data-cardregnumber="38480106">카드 관리</a></p>                                                           <p class="my_ms_card_btn2"><a href="javascript:void(0);" data-type="CHARGE" data-cardregnumber="38480106">충전하기</a></p>                                                                      </div>                                                               </div>                                             </li><li style="float: left; list-style: none; position: relative; width: 632px;" class="bx-clone">             <figure>                            <!-- 160125 김민호 시작 -->              <!-- 접근성_20171201 aria 추가 -->               <i class="representative_icon" aria-hidden="true"></i>              <!-- 160125 김민호 end -->                            <img alt="2018 서머 카드" src="https://image.istarbucks.co.kr/cardImg/20180411/003009.png" onerror="this.src='https://image.istarbucks.co.kr/upload/common/img/icon/card_672x423.png';">             </figure>                                                 <div class="my_ms_card_info">                                                                    <p class="my_ms_card_id">                                                         <span>2018 서머 카드</span>                <!-- 접근성_20171201 title 추가 -->                         <a href="javascript:void(0);" class="icon_pencil" data-cardstatus="R" data-cardnickname="2018 서머 카드" title=" 카드명 수정">정보수정</a>                  </p>               <p class="my_ms_card_id_modify" style="display:none;">               <label class="a11y" for="cardName_">카드명</label><!-- 접근성_20171201 label 추가 -->                <input class="my_nick_modify_input" id="cardName_" type="text" maxlength="20" value="2018 서머 카드"><!-- 접근성_20171201 id 추가 -->                <a class="my_nick_modify" href="javascript:void(0);" data-cardregnumber="16306725" role="button" title="카드명 수정">수정</a><!-- 접근성_20171201 role, title 추가 -->                <a class="my_nick_cancel" href="javascript:void(0);" role="button">취소</a><!-- 접근성_20171201 role 추가 -->               </p>                                           <p class="my_ms_card_price"><span class="a11y">잔여금액</span><!-- 접근성_20171201 span 추가 --><strong class="en t_0d5f34">6,100</strong>원</p>                                                      <p class="my_ms_card_date">최종 사용일 : <span class="en">2022-04-06 16:07:20</span></p>                                                      <div class="my_ms_card_btns">                                                                           <p class="my_ms_card_btn1"><a href="javascript:void(0);" data-type="MANAGEMENT" data-cardregnumber="16306725">카드 관리</a></p>                                                           <p class="my_ms_card_btn2"><a href="javascript:void(0);" data-type="CHARGE" data-cardregnumber="16306725">충전하기</a></p>                                                                      </div>                                                               </div>                                             </li></ul></div><div class="bx-controls bx-has-controls-direction"><div class="bx-controls-direction"><a class="bx-prev" href="">Prev</a><a class="bx-next" href="">Next</a></div></div></div>
+                                        <script id="cardList" type="text/x-jquery-tmpl">
+                                            <li>
+												<figure>
+													{{if delegateCardYn == 'Y'}}
+													<!-- 160125 김민호 시작 -->
+													<!-- 접근성_20171201 aria 추가 -->
+														<i class="representative_icon" aria-hidden="true"></i>
+													<!-- 160125 김민호 end -->
+													{{/if}}
+													<img alt="${cardNickname}" src="${cardImgUrl}" onerror="this.src='https://image.istarbucks.co.kr/upload/common/img/icon/card_672x423.png';" />
+												</figure>
+                                                <div class="my_ms_card_info">
+													{{if cardStatus == 'R'}}
+                                                	    <p class="my_ms_card_id">
+                                                        <span>${cardNickname}</span>
+															<!-- 접근성_20171201 title 추가 -->
+												            <a href="javascript:void(0);" class="icon_pencil" data-cardstatus="${cardStatus}"  data-cardNickname="${cardNickname}" title=" 카드명 수정">정보수정</a>
+													    </p>
+														<p class="my_ms_card_id_modify" style="display:none;">
+														<label class="a11y" for="cardName_">카드명</label><!-- 접근성_20171201 label 추가 -->
+															<input class="my_nick_modify_input" id="cardName_" type="text" maxlength="20" value="${cardNickname}" /><!-- 접근성_20171201 id 추가 -->
+															<a class="my_nick_modify" href="javascript:void(0);" data-cardregnumber="${cardRegNumber}" role="button" title="카드명 수정">수정</a><!-- 접근성_20171201 role, title 추가 -->
+															<a class="my_nick_cancel" href="javascript:void(0);" role="button">취소</a><!-- 접근성_20171201 role 추가 -->
+														</p>
+													{{/if}}
+													{{if goldCardRegStatus == 'X' || goldCardRegStatus == 'R'}}
+														<p class="my_ms_card_price"><span class="a11y">잔여금액</span><!-- 접근성_20171201 span 추가 --><strong class="en t_0d5f34">${$item.getBalance}</strong>원</p>
+	                                                    <p class="my_ms_card_date">최종 사용일 : <span class="en">${balanceConfirmDate}</span></p>
+	                                                    <div class="my_ms_card_btns">
+															{{if cardStatus == 'R'}}
+	                                                    	    <p class="my_ms_card_btn1"><a href="javascript:void(0);" data-type="MANAGEMENT" data-cardregnumber="${cardRegNumber}">카드 관리</a></p>
+	                                                        	<p class="my_ms_card_btn2"><a href="javascript:void(0);" data-type="CHARGE" data-cardregnumber="${cardRegNumber}">충전하기</a></p>
+															{{else [cardStatus == 'S']}}
+																{{if balance > 0}}
+																	{{if enableTransferYn == 'Y' }}
+																		<p class="my_ms_card_btn1"><a href="javascript:void(0);" data-type="TRANSFER" data-cardregnumber="${cardRegNumber}" data-cardnickname="${cardNickname}" data-balance="${balance}">잔액 이전</a></p>
+																	{{/if}}
+																	{{if refundableYn == 'Y' }}
+																		<p class="my_ms_card_btn1"><a href="javascript:void(0);" data-type="REFUND" data-cardregnumber="${cardRegNumber}" data-cardnickname="${cardNickname}" data-balance="${balance}">잔액 환불</a></p>
+																	{{/if}}
+																{{else}}
+																	<p class="my_ms_card_btn1"><a href="javascript:void(0);" data-type="DELETE" data-cardregnumber="${cardRegNumber}">카드삭제</a></p>
+																{{/if}}
+															{{/if}}
+	                                                    </div>
+													{{else}}
+														<p class="my_ms_state">${getGoldCardRegStatusText(goldCardRegStatus)}</p>
+														<div class="my_ms_card_btns">
+															<p class="my_ms_card_btn1"><a href="javascript:void(0);" data-type="MANAGEMENT" data-cardregnumber="${cardRegNumber}">카드 관리</a></p>
+															{{if goldCardRegStatus == 'A'}}															
+																<p class="my_ms_card_btn2"><a href="javascript:void(0);" data-type="MODIFY_GOLD_INFO" data-cardregnumber="${cardRegNumber}">신청정보수정</a></p>
+															{{/if}}
+														</div>	                                                    
+                                                    {{/if}}
+                                                </div>
+                                            </li>
+                                        </script>
+                                    </div>
+                                </div>
+                            </section>
+                            <!-- My 스타벅스 카드 end -->
+                            <!-- 개인화 아이콘 -->
+                            <section class="my_ms_per_icon">
+                                <ul>
+                                    <li class="my_ms_per_icon1">
+                                        <a href="javascript:void(0);">
+                                            <span class="icon"></span>                                            
+                                            <span class="txt">전자영수증</span> <!-- 20210302 수정(인박스-전자영수증으로 변경) -->
+                                        </a>
+                                    </li>
+                                    <li class="my_ms_per_icon3">
+                                        <a href="javascript:void(0);">
+                                            <span class="icon"><strong class="validCouponCnt">0</strong></span>
+                                            <span class="txt">e-쿠폰</span>
+                                        </a>
+                                    </li>
+                                    <li class="my_ms_per_icon4">
+                                        <a href="/my/mycard_charge.do">
+                                            <span class="icon"></span>
+                                             <!-- 160609 텍스트 수정 -->
+											<span class="txt">카드 충전</span>
+											<!-- 160609 텍스트 수정 end -->
+                                        </a>
+                                    </li>
+                                    <li class="my_ms_per_icon5">
+                                        <a href="/my/mycard_info_input.do">
+                                            <span class="icon"></span>
+                                            <!-- 160609 텍스트 수정 -->
+											<span class="txt">카드 등록</span>
+											<!-- 160609 텍스트 수정 end -->
+                                            
+                                        </a>
+                                    </li>
+                                </ul>
+                            </section>
+                            <!-- 개인화 아이콘 end -->
+                            <!-- 최근 마신 음료 -->
+                            <section class="recent_bev_bg" style="">
+                                <p class="recent_bev">가장 최근 2022년 4월 6일에 <strong>인천계양점</strong>에서 <strong class="t_0d5f34">(V)쉐이큰 자몽허니 블랙티</strong>를 마셨습니다.</p>
+                                <span class="icon_recent_bev"></span>
+                            </section>
+                            <!-- 최근 마신 음료 end -->
+                        </div>
+                        <!-- msr 회원 end -->
+                        <!-- 150528 - 문진욱 end -->
+                        <!-- 메뉴 순위 -->
+                        <section class="my_ms_rank">
+                            <form name="edwForm" method="post">
+                                <fieldset>
+                                    <legend>스타벅스 메뉴 순위 폼</legend>
+                                    <header class="my_ms_rank_head">
+                                        <p class="p1">스타벅스 코리아를 사랑하는</p>
+                                        <div class="my_ms_select">
+                                            <label for="my_ms_age" class="a11y">연령대</label><!-- 접근성_20171201 class 추가, 텍스트 수정 -->
+                                            <select id="my_ms_age" class="rank_select"><!-- 접근성_20171201 class 추가 -->
+                                                <option value="10">10대</option>
+                                                <option value="20" selected="selected">20대</option>
+                                                <option value="30">30대</option>
+                                                <option value="40">40대</option>
+                                                <option value="50">50대</option>
+                                            </select>
+                                        </div>
+                                        <div class="my_ms_select">
+                                            <label for="my_ms_select" class="a11y">성별</label><!-- 접근성_20171201 class 추가, 텍스트 수정 -->
+                                            <select id="my_ms_select" class="rank_select"><!-- 접근성_20171201 class 추가 -->
+                                                <option value="M">남성</option>
+                                                <option value="F" selected="selected">여성</option>
+                                            </select>
+                                        </div>
+                                        <!-- 150706 DOM 수정 - 텍스트 수정 -->
+										<p class="my_ms_last_txt">이 즐기는 메뉴가 궁금하시죠?</p>
+										<!-- 150706 DOM 수정 - 텍스트 수정 end -->
+										<a href="javascript:void(0)" class="my_ms_setBtn" role="button" title="메뉴 확인하기">확인</a><!-- 접근성_20171201 확인버튼 추가 -->
+                                    </header>
+                                    <span class="criteria">스타벅스 리워드<br>최근 일주일 판매 집계 기준</span> <!-- 스타벅스 리워드 수정 -->
+                                    <article class="my_ms_rank_wrap">
+                                        <div class="my_ms_rank_each my_ms_rank_each1">
+                                            <div class="bx-wrapper" style="max-width: 100%; margin: 0px auto;"><div class="bx-viewport" style="width: 100%; overflow: hidden; position: relative; height: 317px;"><ul class="edw1" style="width: 1115%; position: relative; transition-duration: 0s; transform: translate3d(-202px, 0px, 0px);"><li style="float: left; list-style: none; position: relative; width: 202px;" class="bx-clone">	<header>부문별 음료 판매 순위<br><strong>콜드 브루</strong></header>	<figure><a href="javascript:void(0);" class="goDrink" data-sku="9200000000487"><img alt="" src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[9200000000487]_20210430112319040.jpg"></a></figure>	<p class="first_bev">1위</p>	<p class="coffee_name"><a href="javascript:void(0);" class="goDrink" data-sku="9200000000487">바닐라 크림 콜드 브루</a></p>	<p class="second_rank">		<span class="left"><strong>2위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goDrink" data-sku="9200000000038">콜드 브루</a></span>	</p>	<p class="third_rank">		<span class="left"><strong>3위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goDrink" data-sku="9200000002081">돌체 콜드 브루</a></span>	</p></li><li style="float: left; list-style: none; position: relative; width: 202px;">	<header>부문별 음료 판매 순위<br><strong>에스프레소</strong></header>	<figure><a href="javascript:void(0);" class="goDrink" data-sku="110563"><img alt="" src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[110563]_20210426095937808.jpg"></a></figure>	<p class="first_bev">1위</p>	<p class="coffee_name"><a href="javascript:void(0);" class="goDrink" data-sku="110563">아이스 카페 아메리카노</a></p>	<p class="second_rank">		<span class="left"><strong>2위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goDrink" data-sku="110569">아이스 카페 라떼</a></span>	</p>	<p class="third_rank">		<span class="left"><strong>3위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goDrink" data-sku="128695">아이스 스타벅스 돌체 라떼</a></span>	</p></li><li style="float: left; list-style: none; position: relative; width: 202px;">	<header>부문별 음료 판매 순위<br><strong>프라푸치노</strong></header>	<figure><a href="javascript:void(0);" class="goDrink" data-sku="9200000002760"><img alt="" src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[9200000002760]_20210415133558068.jpg"></a></figure>	<p class="first_bev">1위</p>	<p class="coffee_name"><a href="javascript:void(0);" class="goDrink" data-sku="9200000002760">더블 에스프레소 칩 프라푸치노</a></p>	<p class="second_rank">		<span class="left"><strong>2위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goDrink" data-sku="168016">P 자바 칩 프라푸치노</a></span>	</p>	<p class="third_rank">		<span class="left"><strong>3위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goDrink" data-sku="9200000002502">유기농 말차로 만든 크림 프라푸치노</a></span>	</p></li><li style="float: left; list-style: none; position: relative; width: 202px;">	<header>부문별 음료 판매 순위<br><strong>블렌디드</strong></header>	<figure><a href="javascript:void(0);" class="goDrink" data-sku="9200000003991"><img alt="" src="https://image.istarbucks.co.kr/upload/store/skuimg/2022/04/[9200000003991]_20220406123619904.jpg"></a></figure>	<p class="first_bev">1위</p>	<p class="coffee_name"><a href="javascript:void(0);" class="goDrink" data-sku="9200000003991">펀치 그래피티 블렌디드</a></p>	<p class="second_rank">		<span class="left"><strong>2위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goDrink" data-sku="9200000003276">딸기 딜라이트 요거트 블렌디드</a></span>	</p>	<p class="third_rank">		<span class="left"><strong>3위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goDrink" data-sku="9200000002766">피치   레몬 블렌디드</a></span>	</p></li><li style="float: left; list-style: none; position: relative; width: 202px;">	<header>부문별 음료 판매 순위<br><strong>기타 제조 음료</strong></header>	<figure><a href="javascript:void(0);" class="goDrink" data-sku="110621"><img alt="" src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[110621]_20210415140901611.jpg"></a></figure>	<p class="first_bev">1위</p>	<p class="coffee_name"><a href="javascript:void(0);" class="goDrink" data-sku="110621">아이스 시그니처 초콜릿</a></p>	<p class="second_rank">		<span class="left"><strong>2위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goDrink" data-sku="72">시그니처 핫 초콜릿</a></span>	</p>	<p class="third_rank">		<span class="left"><strong>3위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goDrink" data-sku="9200000001302">아이스 제주 까망 라떼</a></span>	</p></li><li style="float: left; list-style: none; position: relative; width: 202px;">	<header>부문별 음료 판매 순위<br><strong>브루드 커피</strong></header>	<figure><a href="javascript:void(0);" class="goDrink" data-sku="106509"><img alt="" src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[106509]_20210430111852870.jpg"></a></figure>	<p class="first_bev">1위</p>	<p class="coffee_name"><a href="javascript:void(0);" class="goDrink" data-sku="106509">아이스 커피</a></p>	<p class="second_rank">		<span class="left"><strong>2위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goDrink" data-sku="2">오늘의 커피</a></span>	</p></li><li style="float: left; list-style: none; position: relative; width: 202px;">	<header>부문별 음료 판매 순위<br><strong>스타벅스 피지오</strong></header>	<figure><a href="javascript:void(0);" class="goDrink" data-sku="9200000004121"><img alt="" src="https://image.istarbucks.co.kr/upload/store/skuimg/2022/05/[9200000004121]_20220517102911610.jpg"></a></figure>	<p class="first_bev">1위</p>	<p class="coffee_name"><a href="javascript:void(0);" class="goDrink" data-sku="9200000004121">유자 패션 피지오</a></p>	<p class="second_rank">		<span class="left"><strong>2위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goDrink" data-sku="107051">쿨 라임 피지오</a></span>	</p>	<p class="third_rank">		<span class="left"><strong>3위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goDrink" data-sku="107031">패션 탱고 티 레모네이드 피지오</a></span>	</p></li><li style="float: left; list-style: none; position: relative; width: 202px;">	<header>부문별 음료 판매 순위<br><strong>스타벅스 주스(병음료)</strong></header>	<figure><a href="javascript:void(0);" class="goDrink" data-sku="5210008070"><img alt="" src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[5210008070]_20210426095034991.jpg"></a></figure>	<p class="first_bev">1위</p>	<p class="coffee_name"><a href="javascript:void(0);" class="goDrink" data-sku="5210008070">딸기주스 190M</a></p>	<p class="second_rank">		<span class="left"><strong>2위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goDrink" data-sku="5210008072">케일 사과주스 190M</a></span>	</p>	<p class="third_rank">		<span class="left"><strong>3위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goDrink" data-sku="9300000003775">딸기 가득 요거트 190M</a></span>	</p></li><li style="float: left; list-style: none; position: relative; width: 202px;">	<header>부문별 음료 판매 순위<br><strong>티</strong></header>	<figure><a href="javascript:void(0);" class="goDrink" data-sku="9200000000190"><img alt="" src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[9200000000190]_20210419131723532.jpg"></a></figure>	<p class="first_bev">1위</p>	<p class="coffee_name"><a href="javascript:void(0);" class="goDrink" data-sku="9200000000190">쉐이큰 자몽허니 블랙티</a></p>	<p class="second_rank">		<span class="left"><strong>2위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goDrink" data-sku="9200000002959">아이스 유자 민트 티</a></span>	</p>	<p class="third_rank">		<span class="left"><strong>3위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goDrink" data-sku="9200000003994">포멜로 플로우 그린 티</a></span>	</p></li><li style="float: left; list-style: none; position: relative; width: 202px;">	<header>부문별 음료 판매 순위<br><strong>콜드 브루</strong></header>	<figure><a href="javascript:void(0);" class="goDrink" data-sku="9200000000487"><img alt="" src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[9200000000487]_20210430112319040.jpg"></a></figure>	<p class="first_bev">1위</p>	<p class="coffee_name"><a href="javascript:void(0);" class="goDrink" data-sku="9200000000487">바닐라 크림 콜드 브루</a></p>	<p class="second_rank">		<span class="left"><strong>2위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goDrink" data-sku="9200000000038">콜드 브루</a></span>	</p>	<p class="third_rank">		<span class="left"><strong>3위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goDrink" data-sku="9200000002081">돌체 콜드 브루</a></span>	</p></li><li style="float: left; list-style: none; position: relative; width: 202px;" class="bx-clone">	<header>부문별 음료 판매 순위<br><strong>에스프레소</strong></header>	<figure><a href="javascript:void(0);" class="goDrink" data-sku="110563"><img alt="" src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[110563]_20210426095937808.jpg"></a></figure>	<p class="first_bev">1위</p>	<p class="coffee_name"><a href="javascript:void(0);" class="goDrink" data-sku="110563">아이스 카페 아메리카노</a></p>	<p class="second_rank">		<span class="left"><strong>2위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goDrink" data-sku="110569">아이스 카페 라떼</a></span>	</p>	<p class="third_rank">		<span class="left"><strong>3위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goDrink" data-sku="128695">아이스 스타벅스 돌체 라떼</a></span>	</p></li></ul></div><div class="bx-controls bx-has-controls-direction"><div class="bx-controls-direction"><a class="bx-prev" href="">Prev</a><a class="bx-next" href="">Next</a></div></div></div>
+                                        </div>
+                                        <div class="my_ms_rank_each my_ms_rank_each2">
+                                            <div class="bx-wrapper" style="max-width: 100%; margin: 0px auto;"><div class="bx-viewport" style="width: 100%; overflow: hidden; position: relative; height: 317px;"><ul class="edw2" style="width: 1115%; position: relative; transition-duration: 0s; transform: translate3d(-202px, 0px, 0px);"><li style="float: left; list-style: none; position: relative; width: 202px;" class="bx-clone">	<header>부문별 푸드 판매 순위<br><strong>브런치유어웨이</strong></header>	<figure><a href="javascript:void(0);" class="goFood" data-sku="5110003062"><img alt="" src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[5110003062]_20210421162339549.jpg"></a></figure>	<p class="first_bev">1위</p>	<p class="coffee_name"><a href="javascript:void(0);" class="goFood" data-sku="5110003062">바비큐 치킨 치즈 치아바타</a></p>	<p class="second_rank">		<span class="left"><strong>2위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goFood" data-sku="9300000002178">베이컨 치즈 토스트</a></span>	</p>	<p class="third_rank">		<span class="left"><strong>3위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goFood" data-sku="9300000001777">햄 루꼴라 올리브 샌드위치</a></span>	</p></li><li style="float: left; list-style: none; position: relative; width: 202px;">	<header>부문별 푸드 판매 순위<br><strong>브레드</strong></header>	<figure><a href="javascript:void(0);" class="goFood" data-sku="9300000003223"><img alt="" src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/03/[9300000003223]_20210315170846073.jpg"></a></figure>	<p class="first_bev">1위</p>	<p class="coffee_name"><a href="javascript:void(0);" class="goFood" data-sku="9300000003223">바질 토마토 크림치즈 베이글</a></p>	<p class="second_rank">		<span class="left"><strong>2위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goFood" data-sku="9300000004026">티라미수 크림 데니쉬</a></span>	</p>	<p class="third_rank">		<span class="left"><strong>3위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goFood" data-sku="5110006070">하트 파이</a></span>	</p></li><li style="float: left; list-style: none; position: relative; width: 202px;">	<header>부문별 푸드 판매 순위<br><strong>케이크</strong></header>	<figure><a href="javascript:void(0);" class="goFood" data-sku="5110007181"><img alt="" src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[5110007181]_20210421164728509.jpg"></a></figure>	<p class="first_bev">1위</p>	<p class="coffee_name"><a href="javascript:void(0);" class="goFood" data-sku="5110007181">부드러운 생크림 카스텔라</a></p>	<p class="second_rank">		<span class="left"><strong>2위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goFood" data-sku="9300000004034">딸기 쏙 생크림 케이크</a></span>	</p>	<p class="third_rank">		<span class="left"><strong>3위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goFood" data-sku="9300000004174">크런치 쿠키 마스카포네 케이크</a></span>	</p></li><li style="float: left; list-style: none; position: relative; width: 202px;">	<header>부문별 푸드 판매 순위<br><strong>샌드위치&amp;샐러드</strong></header>	<figure><a href="javascript:void(0);" class="goFood" data-sku="5110003062"><img alt="" src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[5110003062]_20210421162339549.jpg"></a></figure>	<p class="first_bev">1위</p>	<p class="coffee_name"><a href="javascript:void(0);" class="goFood" data-sku="5110003062">바비큐 치킨 치즈 치아바타</a></p>	<p class="second_rank">		<span class="left"><strong>2위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goFood" data-sku="9300000002178">베이컨 치즈 토스트</a></span>	</p>	<p class="third_rank">		<span class="left"><strong>3위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goFood" data-sku="9300000001777">햄 루꼴라 올리브 샌드위치</a></span>	</p></li><li style="float: left; list-style: none; position: relative; width: 202px;">	<header>부문별 푸드 판매 순위<br><strong>따뜻한 푸드</strong></header>	<figure><a href="javascript:void(0);" class="goFood" data-sku="9900000000680"><img alt="" src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[9900000000680]_20210426103936780.jpg"></a></figure>	<p class="first_bev">1위</p>	<p class="coffee_name"><a href="javascript:void(0);" class="goFood" data-sku="9900000000680">판매트러플 머쉬룸 수프</a></p>	<p class="second_rank">		<span class="left"><strong>2위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goFood" data-sku="9900000001201">판매 토마토 로제 수프</a></span>	</p>	<p class="third_rank">		<span class="left"><strong>3위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goFood" data-sku="9900000001200">판매 단호박 크림 수프</a></span>	</p></li><li style="float: left; list-style: none; position: relative; width: 202px;">	<header>부문별 푸드 판매 순위<br><strong>과일&amp;요거트</strong></header>	<figure><a href="javascript:void(0);" class="goFood" data-sku="5110009051"><img alt="" src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[5110009051]_20210422111651003.jpg"></a></figure>	<p class="first_bev">1위</p>	<p class="coffee_name"><a href="javascript:void(0);" class="goFood" data-sku="5110009051">하루 한 컵 레드</a></p>	<p class="second_rank">		<span class="left"><strong>2위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goFood" data-sku="9300000003232">오가닉 프로틴 그릭 요거트   그래놀라</a></span>	</p>	<p class="third_rank">		<span class="left"><strong>3위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goFood" data-sku="9300000002619">20 밀크 푸딩</a></span>	</p></li><li style="float: left; list-style: none; position: relative; width: 202px;">	<header>부문별 푸드 판매 순위<br><strong>스낵&amp;미니디저트</strong></header>	<figure><a href="javascript:void(0);" class="goFood" data-sku="9300000002517"><img alt="" src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[9300000002517]_20210421163620436.jpg"></a></figure>	<p class="first_bev">1위</p>	<p class="coffee_name"><a href="javascript:void(0);" class="goFood" data-sku="9300000002517">더블 치즈 베이글 칩</a></p>	<p class="second_rank">		<span class="left"><strong>2위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goFood" data-sku="9300000004045">리얼 두부칩</a></span>	</p>	<p class="third_rank">		<span class="left"><strong>3위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goFood" data-sku="9300000001924">다크 초콜릿 마카롱</a></span>	</p></li><li style="float: left; list-style: none; position: relative; width: 202px;">	<header>부문별 푸드 판매 순위<br><strong>아이스크림</strong></header>	<figure><a href="javascript:void(0);" class="goFood" data-sku="5110009050"><img alt="" src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[5110009050]_20210422110047018.jpg"></a></figure>	<p class="first_bev">1위</p>	<p class="coffee_name"><a href="javascript:void(0);" class="goFood" data-sku="5110009050">유기농 아이스크림 바닐라볼</a></p>	<p class="second_rank">		<span class="left"><strong>2위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goFood" data-sku="9900000000031">바닐라 아포가토볼</a></span>	</p>	<p class="third_rank">		<span class="left"><strong>3위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goFood" data-sku="9300000000810">유기농 아이스크림 초콜릿볼</a></span>	</p></li><li style="float: left; list-style: none; position: relative; width: 202px;">	<header>부문별 푸드 판매 순위<br><strong>프리미어 푸드</strong></header>	<figure><a href="javascript:void(0);" class="goFood" data-sku="9300000001785"><img alt="" src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[9300000001785]_20210422124351504.jpg"></a></figure>	<p class="first_bev">1위</p>	<p class="coffee_name"><a href="javascript:void(0);" class="goFood" data-sku="9300000001785">리저브초콜릿 월넛 돔 쿠키</a></p></li><li style="float: left; list-style: none; position: relative; width: 202px;">	<header>부문별 푸드 판매 순위<br><strong>브런치유어웨이</strong></header>	<figure><a href="javascript:void(0);" class="goFood" data-sku="5110003062"><img alt="" src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[5110003062]_20210421162339549.jpg"></a></figure>	<p class="first_bev">1위</p>	<p class="coffee_name"><a href="javascript:void(0);" class="goFood" data-sku="5110003062">바비큐 치킨 치즈 치아바타</a></p>	<p class="second_rank">		<span class="left"><strong>2위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goFood" data-sku="9300000002178">베이컨 치즈 토스트</a></span>	</p>	<p class="third_rank">		<span class="left"><strong>3위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goFood" data-sku="9300000001777">햄 루꼴라 올리브 샌드위치</a></span>	</p></li><li style="float: left; list-style: none; position: relative; width: 202px;" class="bx-clone">	<header>부문별 푸드 판매 순위<br><strong>브레드</strong></header>	<figure><a href="javascript:void(0);" class="goFood" data-sku="9300000003223"><img alt="" src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/03/[9300000003223]_20210315170846073.jpg"></a></figure>	<p class="first_bev">1위</p>	<p class="coffee_name"><a href="javascript:void(0);" class="goFood" data-sku="9300000003223">바질 토마토 크림치즈 베이글</a></p>	<p class="second_rank">		<span class="left"><strong>2위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goFood" data-sku="9300000004026">티라미수 크림 데니쉬</a></span>	</p>	<p class="third_rank">		<span class="left"><strong>3위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goFood" data-sku="5110006070">하트 파이</a></span>	</p></li></ul></div><div class="bx-controls bx-has-controls-direction"><div class="bx-controls-direction"><a class="bx-prev" href="">Prev</a><a class="bx-next" href="">Next</a></div></div></div>
+                                        </div>
+                                        <div class="my_ms_rank_each my_ms_rank_each3">
+                                            <div class="bx-wrapper" style="max-width: 100%; margin: 0px auto;"><div class="bx-viewport" style="width: 100%; overflow: hidden; position: relative; height: 317px;"><ul class="edw3" style="width: 515%; position: relative; transition-duration: 0s; transform: translate3d(-202px, 0px, 0px);"><li style="float: left; list-style: none; position: relative; width: 202px;" class="bx-clone">	<header>부문별 원두 판매 순위<br><strong>스타벅스 비아</strong></header>	<figure><a href="javascript:void(0);" class="goCoffee" data-sku="11089092"><img alt="" src="https://image.istarbucks.co.kr/upload/store/skuimg/2019/05/[11089092]_20190527140748520.jpg"></a></figure>	<p class="first_bev">1위</p>	<p class="coffee_name"><a href="javascript:void(0);" class="goCoffee" data-sku="11089092">비아 아이스 커피 5개입</a></p>	<p class="second_rank">		<span class="left"><strong>2위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goCoffee" data-sku="11023539">비아 콜롬비아 12개입</a></span>	</p>	<p class="third_rank">		<span class="left"><strong>3위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goCoffee" data-sku="11037708">비아 하우스 블렌드 12개입</a></span>	</p></li><li style="float: left; list-style: none; position: relative; width: 202px;">	<header>부문별 원두 판매 순위<br><strong>스타벅스 원두</strong></header>	<figure><a href="javascript:void(0);" class="goCoffee" data-sku="11017015"><img alt="" src="https://image.istarbucks.co.kr/upload/store/skuimg/2015/07/[11017015]_20150722234902895.jpg"></a></figure>	<p class="first_bev">1위</p>	<p class="coffee_name"><a href="javascript:void(0);" class="goCoffee" data-sku="11017015">하우스 블렌드 250</a></p>	<p class="second_rank">		<span class="left"><strong>2위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goCoffee" data-sku="11017011">카페 베로나 250</a></span>	</p>	<p class="third_rank">		<span class="left"><strong>3위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goCoffee" data-sku="11019859">케냐 250</a></span>	</p></li><li style="float: left; list-style: none; position: relative; width: 202px;">	<header>부문별 원두 판매 순위<br><strong>리저브 원두</strong></header>	<figure><a href="javascript:void(0);" class="goCoffee" data-sku="11133545"><img alt="" src="https://image.istarbucks.co.kr/upload/store/skuimg/2022/03/[11133545]_20220324145738445.jpg"></a></figure>	<p class="first_bev">1위</p>	<p class="coffee_name"><a href="javascript:void(0);" class="goCoffee" data-sku="11133545">Reserve 브라질 파젠다 카탄두바 250</a></p>	<p class="second_rank">		<span class="left"><strong>2위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goCoffee" data-sku="11133775">Reserve SD 콜롬비아 핀카 250</a></span>	</p>	<p class="third_rank">		<span class="left"><strong>3위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goCoffee" data-sku="11115491">Reserve 인도네시아 웨스트 자바 250</a></span>	</p></li><li style="float: left; list-style: none; position: relative; width: 202px;">	<header>부문별 원두 판매 순위<br><strong>스타벅스 비아</strong></header>	<figure><a href="javascript:void(0);" class="goCoffee" data-sku="11089092"><img alt="" src="https://image.istarbucks.co.kr/upload/store/skuimg/2019/05/[11089092]_20190527140748520.jpg"></a></figure>	<p class="first_bev">1위</p>	<p class="coffee_name"><a href="javascript:void(0);" class="goCoffee" data-sku="11089092">비아 아이스 커피 5개입</a></p>	<p class="second_rank">		<span class="left"><strong>2위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goCoffee" data-sku="11023539">비아 콜롬비아 12개입</a></span>	</p>	<p class="third_rank">		<span class="left"><strong>3위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goCoffee" data-sku="11037708">비아 하우스 블렌드 12개입</a></span>	</p></li><li style="float: left; list-style: none; position: relative; width: 202px;" class="bx-clone">	<header>부문별 원두 판매 순위<br><strong>스타벅스 원두</strong></header>	<figure><a href="javascript:void(0);" class="goCoffee" data-sku="11017015"><img alt="" src="https://image.istarbucks.co.kr/upload/store/skuimg/2015/07/[11017015]_20150722234902895.jpg"></a></figure>	<p class="first_bev">1위</p>	<p class="coffee_name"><a href="javascript:void(0);" class="goCoffee" data-sku="11017015">하우스 블렌드 250</a></p>	<p class="second_rank">		<span class="left"><strong>2위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goCoffee" data-sku="11017011">카페 베로나 250</a></span>	</p>	<p class="third_rank">		<span class="left"><strong>3위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goCoffee" data-sku="11019859">케냐 250</a></span>	</p></li></ul></div><div class="bx-controls bx-has-controls-direction"><div class="bx-controls-direction"><a class="bx-prev" href="">Prev</a><a class="bx-next" href="">Next</a></div></div></div>
+                                        </div>
+                                    </article>
+                                </fieldset>
+                            </form>
+                        </section>
+                        <!-- 메뉴 순위 end -->
+                        
+                    </div>
+                    
+                    
+
+
+
+<nav class="ms_nav" id="msRnb">					
+	<ul>
+		<li>
+			<a href="javascript:void(0);">My 리워드<span class="sbox_arrow_down"></span></a>
+			<ul>
+				<!-- 160609 텍스트 수정 -->
+				<li><a href="javascript:void(0);" required="login" data-href="/my/reward.do">· 리워드 및 혜택</a></li>
+				<li><a href="javascript:void(0);" required="login" data-href="/my/reward_star_history.do">· 별 히스토리</a></li>
+				<!-- 160609 텍스트 수정 end -->
+			</ul>
+		</li>
+		<li>
+			<a href="javascript:void(0);">My 스타벅스 카드<span class="sbox_arrow_down"></span></a>
+			<ul>
+				<!-- 160609 텍스트 수정 -->
+				<li><a href="javascript:void(0);" required="login" data-href="/my/mycard_index.do">· 보유 카드</a></li>
+				<li><a href="javascript:void(0);" required="login" data-href="/my/mycard_info_input.do">· 카드 등록</a></li>
+				<li><a href="javascript:void(0);" required="login" data-href="/my/mycard_charge.do">· 카드 충전</a></li>
+				<li><a href="javascript:void(0);" required="login" data-href="/my/mycard_lost.do">· 분실신고/잔액이전</a></li>
+				<!-- 160609 텍스트 수정 end -->
+			</ul>
+		</li>
+		<li>
+			<a href="javascript:void(0);">My 스타벅스 e-Gift Card<span class="sbox_arrow_down"></span></a>
+			<ul>
+				<li><a href="javascript:void(0);" required="login" data-href="/msr/sceGift/gift_step1.do">· 선물하기</a></li>
+				<li><a href="javascript:void(0);" required="login" data-href="/my/egiftCard.do">· 선물 내역</a></li>
+				<li><a href="javascript:void(0);" required="login" data-href="/my/egiftCard_shopping_bag.do">· 장바구니 내역</a></li>
+			</ul>
+		</li>
+		<li class="msRnb_btn">
+			<a href="javascript:void(0);" required="login" data-href="javascript:void(0);">My 쿠폰<span class="sbox_arrow_down"></span></a>
+			<ul>
+				<li><a href="/my/ecoupon.do?t=REG">· 등록하기</a></li>
+				<li><a href="/my/ecoupon.do?t=GIFT">· 선물하기</a></li>
+				<li><a href="/my/ecoupon.do?t=USE">· 사용하기</a></li>
+			</ul>
+		</li>
+		<!-- <li class="msRnb_btn"><a href="/my/drink_shop.do" required="login">My 음료/매장</a></li> -->
+		<li class="msRnb_btn"><a href="javascript:void(0);" required="login" data-href="/my/my_menu.do">My 메뉴</a></li>
+		
+		 
+		
+		
+		<!-- <li class="msRnb_btn"><a href="/my/order_status_list.do" required="login">케익 주문 현황</a></li> -->
+		<li class="msRnb_btn"><a href="javascript:void(0);" required="login" data-href="/my/eReceiptList.do">전자영수증</a></li>
+		<li class="msRnb_btn"><a href="javascript:void(0);" onclick="fn_rewardTumblerMsrCheck();">개인컵 리워드 설정</a></li>
+		<li class="msRnb_btn"><a href="javascript:void(0);" required="login" data-href="/edt/expressDtList.do">My DT Pass</a></li>
+		<li>
+			<a href="javascript:void(0);">개인정보관리<span class="sbox_arrow_down"></span></a>
+			<ul>
+				<li><a href="javascript:void(0);" required="login" data-href="/my/myinfo_modify_login.do">· 개인정보확인 및 수정</a></li>
+				<li><a href="javascript:void(0);" required="login" data-href="/my/myinfo_out.do">· 회원 탈퇴</a></li>
+				<li><a href="javascript:void(0);" required="login" data-href="/my/myinfo_modify_pwd.do">· 비밀번호 변경</a></li>
+			</ul>
+		</li>
+	</ul>
+</nav>
+                </div>
+                <!-- 내용 end -->
+            </div>
 
 
 
@@ -654,35 +1076,23 @@ var eFrequencyPlannerYn = 'Y';
 						</ul>
 						<ul>
 							<li class="footer_menu_ttl"><a class="en" href="javascript:void(0);">COMPANY<span class="footer_arrow_down"></span></a></li>
-							<li><a href="footer/company/index">한눈에 보기</a></li>
-							<li><a href="footer/company/mission">스타벅스 사명</a></li>
-							<li class="footer_2depth_ttl"><a href="javascript:void(0)">스타벅스 소개<span class="footer_arrow_down"></span></a>
-								<ul>
-									<li><a href="footer/company/starbucks_information">스타벅스 코리아</a></li> <!-- 220118 수정 -->
-									<li><a href="footer/company/starbucks_history">주요 연혁</a></li> <!-- 202107 수정 -->
-									<li><a href="footer/company/starbucks_story">스타벅스 이야기</a></li>
-								</ul>
-							</li>
-							<li><a href="footer/company/news_list">국내 뉴스룸</a></li>
-							<li><a href="footer/company/global_starbucks">세계의 스타벅스</a></li>
+							<li><a href="#">한눈에 보기</a></li>
+							<li><a href="#">스타벅스 사명</a></li>
+							<li><a href="#">스타벅스 소개</a></li>
+							<li><a href="#">국내 뉴스룸</a></li>
+							<li><a href="#">세계의 스타벅스</a></li>
 							<!-- 160811 메뉴 추가 -->
-							<li><a href="https://news.starbucks.com" target="_blank">글로벌 뉴스룸</a></li>
+							<li><a href="#">글로벌 뉴스룸</a></li>
 							<!-- 160811 메뉴 추가 end -->
 						</ul>
 						<ul>
-							<li class="footer_menu_ttl"><a class="en" id="goPage" href="javascript:void(0);">CORPORATE SALES<span class="footer_arrow_down"></span></a></li>
-							<li><a href="footer/co_sales/index">단체 및 기업 구매 안내</a></li>
-							<!-- <li><a href="footer/co_sales/sbcard_egift">스타벅스 <span class="en">e-Gift Card</span></a></li> -->
-							<!-- <li><a href="footer/co_sales/sbcard">스타벅스 카드</a></li> -->
-							<!-- <li><a href="footer/co_sales/co-branded"><span class="en">Co-branded</span> 카드</a></li> -->
-							<!-- <li><a href="footer/co_sales/sb_product">스타벅스 상품</a></li> -->
-							<!-- <li><a href="footer/co_sales/sbgift_certificate">스타벅스 상품권</a></li> -->
+							<li class="footer_menu_ttl"><a class="en" href="#">CORPORATE SALES<span class="footer_arrow_down"></span></a></li>
+							<li><a href="#">단체 및 기업 구매 안내</a></li>
 						</ul>
 						<ul>
 							<li class="footer_menu_ttl"><a class="en" href="javascript:void(0);">PARTNERSHIP<span class="footer_arrow_down"></span></a></li>
-							<li><a href="footer/partnership/new_partner">신규 입점 제의</a></li>
-							<!-- <li><a href="footer/partnership/portal_systems">협력사 포털 시스템</a></li> -->
-							<li><a href="srm/login">협력 고객사 등록신청</a></li>
+							<li><a href="#">신규 입점 제의</a></li>
+							<li><a href="#">협력 고객사 등록신청</a></li>
 						</ul>
 						<ul>
 							<li class="footer_menu_ttl"><a class="en" href="javascript:void(0);">ONLINE COMMUNITY<span class="footer_arrow_down"></span></a></li>
@@ -693,8 +1103,8 @@ var eFrequencyPlannerYn = 'Y';
 						</ul>
 						<ul>
 							<li class="footer_menu_ttl"><a class="en" href="javascript:void(0);">RECRUIT<span class="footer_arrow_down"></span></a></li>
-							<li><a href="footer/recruit/index">채용 소개</a></li>
-							<li><a href="http://job.shinsegae.com/recruit_info/notice/notice02_view.jsp?notino=5924" target="_blank">채용 지원하기</a></li><!-- 20210927 수정 -->
+							<li><a href="#">채용 소개</a></li>
+							<li><a href="#">채용 지원하기</a></li><!-- 20210927 수정 -->
 						</ul>
 					</div>
 				</div>
@@ -764,19 +1174,19 @@ var eFrequencyPlannerYn = 'Y';
 				
 				<!-- 150517 추가 - 문진욱 -->
 				<aside class="copyright">
-					<a class="c_00b050" href="footer/etc/privacy">개인정보처리방침</a>
-					<a href="footer/etc/rules_vod" class="mbn">영상정보처리기기 운영관리 방침</a>
-					<a href="footer/etc/rules">홈페이지 이용약관</a>
-					<a href="footer/etc/rules_loc" class="mbn">위치정보 이용약관</a>
-					<a href="footer/etc/rules_msr" class="mbn">스타벅스 카드 이용약관</a>
-					<a href="footer/etc/rules_non" class="mbn">비회원 이용약관</a>
+					<a class="c_00b050" href="#">개인정보처리방침</a>
+					<a href="#" class="mbn">영상정보처리기기 운영관리 방침</a>
+					<a href="#">홈페이지 이용약관</a>
+					<a href="#" class="mbn">위치정보 이용약관</a>
+					<a href="#" class="mbn">스타벅스 카드 이용약관</a>
+					<a href="#" class="mbn">비회원 이용약관</a>
 					<span class="br"><!-- 150713 삭제  구명준  <a href="javascript:void(0);">위치정보 이용약관</a> -->
-					<a href="footer/etc/rules_mdp">My DT Pass 서비스 이용약관</a></span> <!-- 20200914 mdp 추가 -->
-					<a href="footer/etc/hotline" class="last">윤리경영 핫라인</a>
+					<a href="#">My DT Pass 서비스 이용약관</a></span> <!-- 20200914 mdp 추가 -->
+					<a href="#" class="last">윤리경영 핫라인</a>
 					<br>
-					<a class="btned_link" href="footer/etc/coming_route">찾아오시는 길</a>
-					<a class="btned_link" href="footer/partnership/new_partner">신규입점제의</a>
-					<a class="btned_link" href="footer/etc/sitemap">사이트 맵</a><br>
+					<a class="btned_link" href="#">찾아오시는 길</a>
+					<a class="btned_link" href="#">신규입점제의</a>
+					<a class="btned_link" href="#">사이트 맵</a><br>
 					<ul class="copy_menu">
 						<li>사업자등록번호 : 201-81-21515</li>
 						<li>주식회사 에스씨케이컴퍼니 대표이사 : 송 데이비드 호섭</li> <!-- 220105 수정 -->

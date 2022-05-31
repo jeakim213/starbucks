@@ -1,14 +1,24 @@
 package com.clone.starbucks;
 
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.Locale;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.google.gson.Gson;
+import com.google.gson.JsonObject;
 
 /**
  * Handles requests for the application home page.
@@ -46,15 +56,29 @@ public class HomeController {
 		return "coffee/doppio";
 	}
 	
-	@RequestMapping(value="espresso_macchiato")
-	public String espresso_macchiato() {
-		return "coffee/espresso_macchiato";
+	@RequestMapping(value="admin_3")
+	public String admin_3() {
+		return "my/admin_3";
+
 	}
 	
-	@RequestMapping(value="espresso")
-	public String espresso() {
-		return "coffee/espresso";
+	@RequestMapping(value="admin_4")
+	public String admin_4() {
+		return "my/admin_4";
+
 	}
+	
+	@RequestMapping(value="admin_5")
+	public String admin_5() {
+		return "my/admin_5";
+
+	}
+
+	@RequestMapping(value="admin_6")
+	public String admin_6() {
+		return "my/admin_6";
+	}
+
 	
 	@RequestMapping(value="latte")
 	public String latte() {
@@ -309,6 +333,14 @@ public class HomeController {
 		return "msr/scard/register_inquiry";
 	}
 
+
+	/*@RequestMapping(value="scard_scard_gallery")
+	public String scard_scard_gallery() {
+		return "msr/scard/scard_gallery";
+	}
+	*/
+
+
 	@RequestMapping(value="sceGift_egift_information")
 	public String sceGift_egift_information() {
 		return "msr/sceGift/egift_information";
@@ -428,6 +460,67 @@ public class HomeController {
 		return "store/store_star_field";
 	}
 	
+	@RequestMapping(value="util_app_tip")
+	public String app_tip() {
+		return "util/app_tip";
+	}
 	
+	@RequestMapping(value="util_faq")
+	public String faq() {
+		return "util/faq";
+	}
 	
+	@RequestMapping(value="faq_1")
+	public String faq_1() {
+		return "community/faq-1";
+	}
+	
+	@RequestMapping(value="util_guest_eReceipt")
+	public String guest_eReceipt() {
+		return "util/guest_eReceipt";
+	}
+	
+	@RequestMapping(value="util_online_survey")
+	public String online_survey() {
+		return "util/online_survey";
+	}
+	
+	@RequestMapping(value="util_partnership_card")
+	public String partnership_card() {
+		return "util/partnership_card";
+	}
+	
+	@RequestMapping(value="util_storecareList")
+	public String storecareList() {
+		return "util/storecareList";
+	}
+	
+	@RequestMapping(value="util_web_tip")
+	public String web_tip() {
+		return "util/web_tip";
+	}
+	
+	//whats_new
+	@RequestMapping(value="whats_new_campaign_list")
+	public String campaign_list() {
+		return "whats_new/campaign_list";
+	}
+	
+	@RequestMapping(value="whats_new_campaign_list_1")
+	public String campaign_list_1() {
+		return "whats_new/campaign_list-1";
+	}
+	
+	//ajax-지혜
+	@ResponseBody
+	@PostMapping(value="upload/json/menu/{path}")//, produces="application/json; charset=UTF-8"
+	public String ajaxMapping(@PathVariable String path) throws FileNotFoundException, IOException {
+		String mappingPath = "upload/json/menu/" + path + ".json";
+		System.out.println(path);
+		ClassPathResource resource = new ClassPathResource(mappingPath);
+		FileReader reader = new FileReader(resource.getFile());
+		Gson gson = new Gson();
+		JsonObject obj = gson.fromJson(reader, JsonObject.class);
+		return obj.toString();
+	}
 }
