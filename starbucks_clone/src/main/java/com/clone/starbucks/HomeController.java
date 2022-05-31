@@ -28,6 +28,7 @@ public class HomeController {
 	@RequestMapping(value="americano")
 	public String americano() {
 		return "coffee/americano";
+	
 	}
 	
 	@RequestMapping(value="cappuccino")
@@ -55,36 +56,6 @@ public class HomeController {
 		return "coffee/espresso";
 	}
 	
-	@RequestMapping(value="higher_enjoy")
-	public String higher_enjoy() {
-		return "coffee/higher_enjoy";
-	}
-	
-	@RequestMapping(value="higher_enjoy_1")
-	public String higher_enjoy_1() {
-		return "coffee/higher_enjoy-1";
-	}
-	
-	@RequestMapping(value="higher_enjoy_2")
-	public String higher_enjoy_2() {
-		return "coffee/higher_enjoy-2";
-	}
-	
-	@RequestMapping(value="higher_enjoy_3")
-	public String higher_enjoy_3() {
-		return "coffee/higher_enjoy-3";
-	}
-	
-	@RequestMapping(value="higher_enjoy_4")
-	public String higher_enjoy_4() {
-		return "coffee/higher_enjoy-4";
-	}
-	
-	@RequestMapping(value = "coffee")
-	public String coffee() {
-		return "coffee/index";
-	}
-	
 	@RequestMapping(value="latte")
 	public String latte() {
 		return "coffee/latte";
@@ -93,6 +64,11 @@ public class HomeController {
 	@RequestMapping(value="mocha")
 	public String mocha() {
 		return "coffee/mocha";
+	}
+	
+	@RequestMapping(value="product_list")
+	public String coffee_product_list() {
+		return "coffee/product_list";
 	}
 	
 	@RequestMapping(value="product_list_1")
@@ -105,202 +81,11 @@ public class HomeController {
 		return "coffee/product_list-2";
 	}
 	
-	@RequestMapping(value="product_view")
-	public String product_view() {
-		return "coffee/product_view";
-	}
-	
 	@RequestMapping(value="productFinder")
 	public String productFinder() {
 		return "coffee/productFinder";
 	}
-	//community
-	@RequestMapping(value="faq")
-	public String community_faq() {
-		return "community/faq";
-	}
 	
-	@RequestMapping(value="faq_1")
-	public String community_faq_1() {
-		return "community/faq-1";
-	}
-	
-	@RequestMapping(value="faq_2")
-	public String community_faq_2() {
-		return "community/faq-2";
-	}
-	
-	@RequestMapping(value="faq_3")
-	public String community_faq_3() {
-		return "community/faq-3";
-	}
-	
-	//customer
-	@RequestMapping(value="suggestionWrite")
-	public String suggestionWrite() {
-		return "customer/suggestionWrite";
-	}
-	
-	//eFreq
-	@RequestMapping(value="gift")
-	public String gift() {
-		return "eFreq/gift";
-	}
-	
-	@RequestMapping(value="guide")
-	public String guide() {
-		return "eFreq/guide";
-	}
-	
-	@RequestMapping(value="status")
-	public String status() {
-		return "eFreq/status";
-	}
-	
-	@RequestMapping(value="status_1")
-	public String status_1() {
-		return "eFreq/status-1";
-	}
-	
-	@RequestMapping(value="status_2")
-	public String status_2() {
-		return "eFreq/status-2";
-	}
-	
-	
-	//footer/co_sales
-	@RequestMapping(value="co_sales_index")
-	public String footer_cosales_index() {
-		return "footer/co_sales/index";
-	}
-	
-	@RequestMapping(value="co_sales_sb_product")
-	public String footer_cosales_sb_product() {
-		return "footer/co_sales/sb_product";
-	}
-	
-	@RequestMapping(value="co_sales_sbcard_egift_list")
-	public String footer_cosales_sbcard_egift_list() {
-		return "footer/co_sales/sbcard_egift_list";
-	}
-	
-	@RequestMapping(value="co_sales_sbcard_egift")
-	public String footer_cosales_sbcard_egift() {
-		return "footer/co_sales/sbcard_egift";
-	}
-	
-	@RequestMapping(value="co_sales_sbcard")
-	public String footer_cosales_sbcard() {
-		return "footer/co_sales/sbcard";
-	}
-	
-	//footer/company
-	@RequestMapping(value="company_index")
-	public String footer_company_index() {
-		return "footer/company/index";
-	}
-	
-	@RequestMapping(value="company_mission")
-	public String footer_company_mission() {
-		return "footer/company/mission";
-	}
-	
-	@RequestMapping(value="company_news_list")
-	public String footer_company_newslist() {
-		return "footer/company/news_list";
-	}
-	
-	@RequestMapping(value="company_starbucks_history")
-	public String footer_company_starbuckshistory() {
-		return "footer/company/starbucks_history";
-	}
-	
-	@RequestMapping(value="company_starbucks_information")
-	public String footer_company_starbucksinformation() {
-		return "footer/company/starbucks_information";
-	}
-	
-	@RequestMapping(value="company_starbucks_story")
-	public String footer_company_starbucksstory() {
-		return "footer/company/starbucks_story";
-	}
-	
-	//footer/etc
-	@RequestMapping(value="etc_coming_route")
-	public String footer_etc_comingroute() {
-<<<<<<< HEAD
-		return "footer/etc/coming_route";
-=======
-		return "footer/etc/comingroute";
->>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
-	}
-	
-	@RequestMapping(value="etc_hotline")
-	public String footer_etc_hotline() {
-		return "footer/etc/hotline";
-	}
-	
-	@RequestMapping(value="etc_privacy_board_list")
-	public String footer_etc_privacy_board_list() {
-		return "footer/etc/privacy_board_list";
-	}
-	
-	@RequestMapping(value="etc_privacy_board_list_1")
-	public String footer_etc_privacy_board_list_1() {
-		return "footer/etc/privacy_board_list-1";
-	}
-	
-	@RequestMapping(value="etc_privacy")
-	public String footer_etc_privacy() {
-		return "footer/etc/privacy";
-	}
-	
-	@RequestMapping(value="etc_rules_loc")
-	public String footer_etc_rules_loc() {
-		return "footer/etc/rules_loc";
-	}
-	
-	@RequestMapping(value="etc_rules_mdp")
-	public String footer_etc_rules_mdp() {
-		return "footer/etc/rules_mdp";
-	}
-	
-	@RequestMapping(value="etc_rules_msr")
-	public String footer_etc_rules_msr() {
-		return "footer/etc/rules_msr";
-	}
-	
-	@RequestMapping(value="etc_rules_non")
-	public String footer_etc_rules_non() {
-		return "footer/etc/rules_non";
-	}
-	
-	@RequestMapping(value="etc_rules_vod")
-	public String footer_etc_rules_vod() {
-		return "footer/etc/rules_vod";
-	}
-	
-	@RequestMapping(value="etc_rules")
-	public String footer_etc_rules() {
-		return "footer/etc/rules";
-	}
-	
-	@RequestMapping(value="etc_sitemap")
-	public String footer_etc_sitemap() {
-		return "footer/etc/sitemap";
-	}
-	
-	//footer/partnership
-	@RequestMapping(value="partnership_new_partner")
-	public String footer_partnership_newpartner() {
-		return "footer/partnership/new_partner";
-	}
-	
-	//footer/recruit
-	@RequestMapping(value="recruit_index")
-	public String footer_recruit_index() {
-		return "footer/recruit/index";
-	}
 	
 	//login
 	@RequestMapping(value="login_login")
@@ -309,21 +94,7 @@ public class HomeController {
 	}
 	
 	//menu
-	@RequestMapping(value="menu_card_list")
-	public String card_list() {
-		return "menu/card_list";
-	}
-	
-	@RequestMapping(value="menu_card_list_1")
-	public String card_list_1() {
-		return "menu/card_list-1";
-	}
-	
-	@RequestMapping(value="menu_card_list_2")
-	public String card_list_2() {
-		return "menu/card_list-2";
-	}
-	
+		
 	@RequestMapping(value="menu_drink_list")
 	public String drink_list() {
 		return "menu/drink_list";
@@ -423,10 +194,6 @@ public class HomeController {
 		return "menu/food_list-7";
 	}
 	
-	@RequestMapping(value="menu_index")
-	public String menu_index() {
-		return "menu/index";
-	}
 	
 	@RequestMapping(value="menu_myOrder")
 	public String menu_myOrder() {
@@ -519,19 +286,8 @@ public class HomeController {
 		return "msr/scard/register_inquiry";
 	}
 	
-<<<<<<< HEAD
-	/*@RequestMapping(value="scard_scard_gallery")
-	public String scard_scard_gallery() {
-		return "msr/scard/scard_gallery";
-	}
-	*/
-=======
-	/*
-	 * @RequestMapping(value="scard_scard_gallery") public String
-	 * scard_scard_gallery() { return "msr/scard/scard_gallery"; }
-	 */
 	
->>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
+
 	@RequestMapping(value="sceGift_egift_information")
 	public String sceGift_egift_information() {
 		return "msr/sceGift/egift_information";
@@ -546,18 +302,10 @@ public class HomeController {
 	public String sceGift_msr_useguide() {
 		return "msr/sceGift/msr_useguide";
 	}
-	
-	@RequestMapping(value="msr_index")
-	public String msr_index() {
-		return "msr/index";
-	}
+
 	
 	
 	//my
-	@RequestMapping(value="calendar")
-	public String calendar() {
-		return "my/calendar";
-	}
 
 	@RequestMapping(value="egiftCard_shopping_bag")
 	public String egiftCard_shopping_bag() {
@@ -624,18 +372,9 @@ public class HomeController {
 		return "my/reward";
 	}
 	
-	@RequestMapping(value="vocList")
-	public String vocList() {
-		return "my/vocList";
-	}
-	
 	
 	//store
-	
-	@RequestMapping(value="store_index")
-	public String store_index() {
-		return "store/index";
-	}
+
 	
 	@RequestMapping(value="store_community")
 	public String store_community() {
@@ -673,51 +412,6 @@ public class HomeController {
 		return "store/store_star_field";
 	}
 	
-	//util
 	
-	@RequestMapping(value="util_app_tip")
-	public String app_tip() {
-		return "util/app_tip";
-	}
-	
-	@RequestMapping(value="util_faq")
-	public String faq() {
-		return "util/faq";
-	}
-	
-	@RequestMapping(value="util_guest_eReceipt")
-	public String guest_eReceipt() {
-		return "util/guest_eReceipt";
-	}
-	
-	@RequestMapping(value="util_online_survey")
-	public String online_survey() {
-		return "util/online_survey";
-	}
-	
-	@RequestMapping(value="util_partnership_card")
-	public String partnership_card() {
-		return "util/partnership_card";
-	}
-	
-	@RequestMapping(value="util_storecareList")
-	public String storecareList() {
-		return "util/storecareList";
-	}
-	
-	@RequestMapping(value="util_web_tip")
-	public String web_tip() {
-		return "util/web_tip";
-	}
-	
-	//whats_new
-	@RequestMapping(value="whats_new_campaign_list")
-	public String campaign_list() {
-		return "whats_new/campaign_list";
-	}
-	@RequestMapping(value="whats_new_campaign_list_1")
-	public String campaign_list_1() {
-		return "whats_new/campaign_list-1";
-	}
 	
 }

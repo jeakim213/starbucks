@@ -16,10 +16,7 @@
 
 	    <resources mapping="/resources/**" location="/resources/" />
 	    <resources mapping="/img/event/**" location="/WEB-INF/views/img/event/" />
-<<<<<<< HEAD
-=======
 	    <resources mapping="/img/util/csi/**" location="/resources/common/img/util/csi" />
->>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
   		<resources mapping="/common/**" location="/resources/common/" />
 		<resources mapping="/css/**" location="/resources/common/css/" />
 		<resources mapping="/fonts/**" location="/resources/common/fonts/" />
