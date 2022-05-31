@@ -647,26 +647,21 @@ var eFrequencyPlannerYn = 'Y';
 				<!-- 상단 end -->
 				<!-- 하단 -->
 				<!-- 제품 상세보기 하단공통 -->
-				<div class="productView_footmenu">
+			<div class="productView_footmenu">
 					<div class="productView_footmenu_inner">						
 						<div class="productView_bottom">
 							<p class="tit">관련 제품</p>
 							<div class="productRel_wrap">
                                 <ul class="productRel_ul">
-                                </ul>
-							</div>
+                                <li><dl><dt><a href="javascript:void(0)" class="goView" prod="110563"><img src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[110563]_20210426095937808.jpg" alt="아이스 카페 아메리카노"></a></dt>                     <dd>                         <p class="t1">아이스 카페 아메리카노</p>                         <p class="t2">진한 에스프레소에 시원한 정수물과 얼음을 더하여 스타벅스의 깔끔하고 강렬한 에스프레소를 가장 부드럽고 시원하게 즐길 수 있는 커피</p>
+                                <p class="more_btn"><a href="javascript:void(0)" class="goView" prod="110563"><img src="//image.istarbucks.co.kr/common/img/coffee/cf_more_btn.png" alt="자세히 보기"></a></p>                     </dd>                 </dl>             </li>
+                                <li>                 <dl>                     <dt><a href="javascript:void(0)" class="goView" prod="94"><img src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[94]_20210430103337006.jpg" alt="카페 아메리카노"></a></dt>                     <dd>                         <p class="t1">카페 아메리카노</p>                         <p class="t2">진한 에스프레소와 뜨거운 물을 섞어 스타벅스의 깔끔하고 강렬한 에스프레소를 가장 부드럽게 잘 느낄 수 있는 커피 </p>                         <p class="more_btn"><a href="javascript:void(0)" class="goView" prod="94"><img src="//image.istarbucks.co.kr/common/img/coffee/cf_more_btn.png" alt="자세히 보기"></a></p>                     </dd>                 </dl>             </li>
 						</div>
 					</div>
 				</div>
 				<!-- 제품 상세보기 하단공통 end -->
 				<!-- 하단 end -->
 			</div>
-			
-
-
-
-
-		
 			<!-- footer -->
 			<footer id="footer"> 
 				<div class="footer_wrap">

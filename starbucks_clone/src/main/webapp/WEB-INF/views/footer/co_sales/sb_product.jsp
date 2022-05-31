@@ -768,8 +768,8 @@ var eFrequencyPlannerYn = 'Y';
                         <!-- 20211115 수정 -->
                        <section class="cosales_b2b_area ver2022">
                             <picture>
-                                <source srcset="img/event/2021/20211221_b2b_MO.jpg" media="(max-width:640px)"> <!-- 211221 수정 -->
-                                <img src="img/event/2021/20211221_b2b_PC.jpg" alt="스타벅스 단체/기업 고객들을 위한 전용상품제작을 문의해주세요."> <!-- 211221 수정 -->
+                                <source srcset="https://image.istarbucks.co.kr/img/event/2021/20211221_b2b_MO.jpg" media="(max-width:640px)"> <!-- 211221 수정 -->
+                                <img src="https://image.istarbucks.co.kr/img/event/2021/20211221_b2b_PC.jpg" alt="스타벅스 단체/기업 고객들을 위한 전용상품제작을 문의해주세요."> <!-- 211221 수정 -->
                                 <a href="https://hncb2b.co.kr/starbucksb2b/login" class="hid bnr_link" target="_blank">자세히보기</a>
                             </picture>
                         </section>

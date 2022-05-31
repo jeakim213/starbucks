@@ -819,6 +819,7 @@ var eFrequencyPlannerYn = 'Y';
 				</header>
 				<!-- 서브 타이틀 end -->
 				<!-- 내용 -->
+
 				<div class="ms_cont_wrap">
 
 					<div class="ms_cont">
@@ -826,15 +827,673 @@ var eFrequencyPlannerYn = 'Y';
 							<form action="form">
 								<div class="select_box">
 									<label class="value" for="privacy_select">이전 개인정보 처리방침 보기</label>
-									<select title="이전 개인정보 처리방침 보기" id="privacy_select" name="jump">
-									</select>
+									<select title="이전 개인정보 처리방침 보기" id="privacy_select" name="jump"><option value="">이전 개인정보 처리방침 보기</option><option value="439">2022년 02월 28일 시행</option><option value="432">2022년 01월 19일 시행</option><option value="411">2021년 07월 15일 시행</option><option value="407">2021년 06월 04일 시행</option><option value="405">2021년 05월 05일 시행</option><option value="342">2021년 02월 04일 시행</option><option value="375">2020년 11월 27일 시행</option><option value="343">2020년 11월 25일 시행</option><option value="344">2020년 10월 15일 시행</option><option value="345">2020년 09월 21일 시행</option><option value="346">2020년 09월 08일 시행</option><option value="347">2020년 06월 01일 시행</option><option value="348">2020년 04월 01일 시행</option><option value="349">2020년 03월 04일 시행</option><option value="350">2019년 08월 13일 시행</option><option value="351">2019년 01월 23일 시행</option><option value="352">2018년 09월 12일 시행</option><option value="353">2018년 05월 29일 시행</option><option value="354">2018년 03월 16일 시행</option><option value="355">2018년 02월 01일 시행</option><option value="356">2017년 12월 01일 시행</option><option value="357">2017년 06월 01일 시행</option><option value="358">2017년 04월 21일 시행</option><option value="359">2016년 09월 28일 시행</option><option value="360">2016년 06월 10일 시행</option><option value="361">2016년 02월 18일 시행</option><option value="362">2015년 11월 19일 시행</option><option value="363">2015년 11월 06일 시행</option><option value="364">2015년 09월 01일 시행</option><option value="365">2015년 07월 28일 시행</option><option value="366">2015년 04월 28일 시행</option><option value="367">2015년 04월 21일 시행</option><option value="368">2015년 02월 24일 시행</option><option value="369">2014년 12월 08일 시행</option><option value="370">2014년 05월 22일 시행</option><option value="371">2014년 04월 17일 시행</option><option value="372">2013년 02월 18일 시행</option><option value="373">2011년 12월 22일 시행</option><option value="374">2009년 10월 08일 시행</option></select>
 								</div>
 							</form>
                         </div>
 
 						<!-- 202101 수정 -->
 						<div class="privacy_text" id="privacy_text">
-						</div>
+
+
+<div class="privacy_cont">
+    <p class="tit">스타벅스 코리아는 이용자 개인정보보호를 위해 최선을 다 하고 있습니다. </p>
+    <p class="t1">스타벅스 코리아를 운영하는 주식회사 에스씨케이컴퍼니는 (이하 '회사'는) 이용자의 개인정보를 중요시하며, 정보통신망 이용촉진 및 정보보호 등에 관한 법률(이하 ‘정보통신망법’), 개인정보보호법 등 국내의 개인정보 보호에 관한 법률을 준수하고 있습니다.</p>
+
+    <div class="pri_subject">
+        <ul class="ul1">
+            <li><a id="aa" href="javascript:void(0)">1. 개인정보의 수집 및 이용목적</a></li>
+            <li><a href="javascript:void(0)">2. 수집하는 개인정보의 항목 및 수집 방법</a></li>
+            <li><a href="javascript:void(0)">3. 개인정보의 보유∙이용기간 및 파기</a></li>
+            <li><a href="javascript:void(0)">4. 개인정보의 제3자 제공 및 위탁 내용</a></li>
+            <!-- 20201119 문구수정 -->
+            <li class="last"><a href="javascript:void(0)">5. 이용자 및 법정대리인의 권리와 그 행사방법</a></li>
+        </ul>
+        <ul class="ul2">
+            <li><a href="javascript:void(0)">6. 개인정보 자동수집 장치의 설치·운영 및 그 거부에 관한 사항</a></li>
+            <li><a href="javascript:void(0)">7. 개인정보에 관한 민원 서비스</a></li>
+            <li><a href="javascript:void(0)">8. 개인 정보의 기술적, 관리적 보호대책</a></li>
+            <li class="last"><a href="javascript:void(0)">9. 개정 전 고지 의무</a></li>
+        </ul>
+    </div>
+    <p class="pri_tit">1. 개인정보의 수집 및 이용 목적</p>
+    <p class="mb15">회사는 이용자의 개인정보를 최소한으로 수집하며, 수집된 개인정보는 다음의 목적을 위하여 활용합니다.</p>
+
+    <ul class="pri_con mb40">
+        <li><span>가.	홈페이지 회원 서비스 제공</span>
+            <!-- <ul class='dot'>
+                <li>홈페이지 회원가입, 본인확인</li>
+                <li>스타벅스 상품권 이용</li>
+                <li>선물하기 (e-쿠폰, e-Gift)</li>
+                <li>고객의 소리 민원처리</li>
+                <li>온라인 홀케이크 예약</li>
+                <li>서비스 부정이용 방지 등</li>
+                <li>Gift 배송서비스 이용</li>
+            </ul> --> <!-- 220216 삭제 -->
+        </li>
+        <li><span>나.	스타벅스 리워드(SR) 회원 서비스 제공</span>
+            <!-- <ul class='dot'>
+                <li>SR 회원가입</li>
+                <li>서비스 및 상품 제공을 위한 결제</li>
+                <li>스타벅스 카드 분실 신고</li>
+                <li>스타벅스 카드 잔액 환불</li>
+                <li>'별' 포인트, e-프리퀀시 적립 등</li>
+                <li>My DT Pass 서비스 제공 등</li>
+                20180514 추가
+                <li>스타벅스 딜리버스 서비스 제공 등</li>
+                20201120 추가
+            </ul> --> <!-- 220216 삭제 -->
+        </li>
+        <li><span>다.	비회원 서비스 제공</span>
+            <!-- <ul class='dot'>
+                <li>윤리경영 핫라인</li>
+                <li>신규 입점 제의 상담 신청</li>
+                <li>협력 고객사 등록 신청 등</li>
+                <li>GUEST 리워드 혜택</li>
+                20190111 수정
+                <li>Gift 배송서비스 이용(수신)</li>
+            </ul> --> <!-- 220216 삭제 -->
+        </li>
+        <li><span>라.	마케팅 정보 활용 (서비스 개선, 상품정보 및 행사 정보 안내 등)</span>
+            <!-- <ul class='dot'>
+                <li>콘텐츠 등 기존 서비스 제공(마케팅 및 광고 포함)에 더하여, 서비스 방문, 이용기록의 분석, 신규 서비스(제품)개발 및 특화, 신규 서비스(제품)개발 및 특화 목적의 소비자 리서치 진행, 이벤트 등 광고성 정보 전달, 인구통계학적 특성에 따른 서비스 제공, 기존 서비스 개선 등</li>
+                <li>이벤트 기간 내 변동사항 고지 또는 기간 임박, 공지 및 이벤트 홍보 안내를 위한 문자메시지, 이메일 발송</li>
+                <li>서비스 이용기록과 접속 빈도 분석, 서비스 이용에 대한 통계, 서비스 분석 및 통계에 따른 맞춤 서비스 제공 및 광고 게재 등</li>
+            </ul> --> <!-- 220223 삭제 -->
+        </li>
+        <li><span>마.	개인별 맞춤 서비스 제공 (스타벅스 리워드 등)</span></li>
+        <li><span>바.	이용자 보호 및 서비스 운영</span>
+            <!-- <ul class='dot'>
+                <li>법령 및 회사 이용약관을 위반하는 이용자에 대한 이용 제한 조치, 부정 이용 행위를 포함하여 서비스의 원활한 운영에 지장을 주는 행위에 대한 방지 및 제재, 계정도용 및 부정거래 방지, 약관 개정 등의 고지사항 전달, 분쟁조정을 위한 기록 보존, 민원처리 등</li>
+            </ul> --> <!-- 220223 삭제 -->
+        </li>
+        <!-- 20201006 추가 -->
+        <li><span>사.	제휴 서비스 제공</span>
+            <!-- <ul class='dot'>
+                <li>스타벅스 제휴 신용 카드 서비스 등</li>
+            </ul> --> <!-- 220223 삭제 -->
+        </li>
+        <!-- //20201006 추가 -->
+    </ul>
+
+
+    <p class="pri_tit">2. 수집하는 개인정보의 항목 및 수집 방법</p>
+    <p class="mb15">이용자는 회원가입을 하지 않아도 회사소개, 메뉴 및 매장 정보 등 다양한 서비스를 이용 할 수 있습니다. </p>
+    <ul class="pri_con mb40">
+        <li>
+            <span>가. 회사가 이용자로부터 수집하는 개인정보의 항목은 아래와 같습니다.</span>
+
+            <table summary="개인정보에 관한 민원 서비스" class="vod_tb mb10">
+                <caption class="hid">개인정보에 관한 민원 서비스 개인정보관리책임자, 개인정보관리담당자, 고객서비스책임자 테이블</caption>
+                <colgroup>
+                    <col width="15%">
+                    <col width="">
+                    <col width="29%">
+                    <col width="13%">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th scope="col">구분</th>
+                        <th scope="col">수집목적 (서비스명)</th>
+                        <th scope="col">필수 항목</th>
+                        <th scope="col" class="brn">선택 항목</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- 220216 수정 -->
+                    <tr>
+                        <td rowspan="4">비회원 서비스</td>
+                        <td>신규 입점 제의 상담 신청</td>
+                        <td>성명, 전화번호, 매장주소, 이메일, DI</td>
+                        <td class="brn" rowspan="4">-</td>
+                    </tr>
+                     <!-- //220216 수정 -->
+                    <tr>
+                        <td>협력 고객사 등록 신청</td>
+                        <td>성명, 전화번호, 이메일, DI (Duplication information)</td>
+                    </tr>
+                    <tr>
+                        <td>Gift 배송 서비스(수신)</td>
+                        <td>배송지 정보(배송지 주소, 연락처, 이름)</td>
+                    </tr>
+                    <tr>
+                        <td>GUEST 리워드</td>
+                        <td>
+                            <span class="memNonTxt">DI (Duplication information),<br>휴대전화 번호</span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td rowspan="9">웹사이트 회원</td>
+                        <td>회원가입/본인확인/회원정보 수정</td> <!-- 220216 수정 -->
+                        <td rowspan="8">성명, 생년월일, 성별, 아이디, <br>비밀번호, 휴대전화 번호, 이메일,<br> DI (Duplication information)</td>
+                        <!-- 20200220 문구 및 rowspan 수정 -->
+                        <td class="brn" rowspan="6">-</td>
+                    </tr>
+                    <tr>
+                        <td>스타벅스 카드 e-Gift 선물</td>
+                    </tr>
+                    <tr>
+                        <td>e-프리퀀시 서비스 이용 (e스티커 적립)</td>
+                    </tr>
+
+                    <!-- 20171123 추가 -->
+                    <tr>
+                        <td>모바일 앱 서비스 이용<br> - 사이렌오더 메뉴 결제/주문<br> - 홀케이크 예약<br> - e-Gift item 결제/선물 <!-- 220216 수정 -->
+                        </td>
+                    </tr>
+                    <!-- 20200220 삭제 -->
+                    <!-- <tr>
+                        <td>고객의 소리 민원 처리</td>
+                    </tr> -->
+                    <!-- //20200220 삭제 -->
+                    <tr>
+                        <td>단체 및 기업구매 신청/문의, ARS결제</td>
+                    </tr>
+                    <tr>
+                        <td>마케팅 정보 활용 <br>(서비스 개선, 상품정보 및 행사 정보 안내 등)</td>
+                    </tr>
+                    <tr>
+                        <td>Gift 배송 서비스</td>
+                        <td class="brn">배송지 정보(배송지 주소, 연락처, 이름)</td>
+                    </tr>
+                    <tr>
+                        <td>고객의 소리 민원 처리</td>
+                        <td class="brn"></td> <!-- 220216 수정 -->
+                    </tr>
+
+                    <tr>
+                        <td>콜 마이네임 서비스</td>
+                        <td>-</td>
+                        <td class="brn">닉네임</td>
+                    </tr>
+
+                    <tr>
+                        <td rowspan="8">스타벅스 <br>리워드 회원</td>
+                        <!-- 20201120 수정 -->
+                        <td>회원가입</td>
+                        <td rowspan="5">스타벅스 카드 번호<br> 스타벅스 카드 핀번호</td>
+                        <td class="brn" rowspan="5">-</td>
+                    </tr>
+                    <tr>
+                        <td>리워드 별 적립, 쿠폰 수신/선물</td>
+                    </tr>
+                    <tr>
+                        <td>선불카드 충전, 잔액확인/이용조회, <br>분실신고/환불신청</td>
+                    </tr>
+                    <tr>
+                        <td>골드카드 신청</td>
+                    </tr>
+                    <tr>
+                        <td>e-프리퀀시 서비스 이용 (e스티커 선물, 쿠폰 생성)</td>
+                    </tr>
+
+                    <tr>
+                        <td>My DT Pass 서비스</td>
+                        <td>-</td>
+                        <!-- 20180904 수정 -->
+                        <td class="brn">자동차<br> 등록번호</td>
+                        <!-- 20180904 수정 -->
+                    </tr>
+                    <!-- 20201120 추가 -->
+                    <tr>
+                        <td>스타벅스 딜리버스 서비스</td>
+                        <td>-</td>
+                        <td class="brn">배송지 정보 (주소, 수신자 연락처)</td>
+                    </tr>
+                    <!-- //20201120 추가 -->
+                    <tr>
+                        <td>잔액 환불 처리</td>
+                        <td>-</td>
+                        <td class="brn">은행<br>계좌번호</td>
+                    </tr>
+                    <!-- e::20180904 추가 -->
+                    <!-- 20201006 추가 -->
+                    <tr>
+                        <td>제휴 서비스</td>
+                        <td>스타벅스 현대카드 서비스</td>
+                        <td>이용자 확인 값(CI)</td>
+                        <td class="brn">-</td>
+                    </tr>
+                    <!-- //20201006 추가 -->
+                </tbody>
+            </table>
+
+            <ul>
+                <li>* 선택항목은 입력을 하지 않아도 회원 가입이나 서비스 이용에 제한이 없으며 필요한 경우 개인정보 수정 화면에서 직접 입력 하실 수 있습니다.</li>
+                <li>* 허위 정보 입력 시 회사의 조치
+                    <br>이용자는 자신의 정보에 대해 정확성 및 적법성을 보장해야 합니다. 만약 이를 위반하여 타인의 정보를 도용하는 등 각종 방법으로 허위 정보를 입력할 경우 회사는 해당 이용자를 관계법령에 따라 신고 할 수 있으며 강제 탈퇴를 시킬 수도 있습니다.
+                </li>
+            </ul>
+        </li>
+        <li>
+            <span>나. 서비스 이용과정에서 이용자로부터 수집하는 개인정보는 아래와 같습니다.</span>
+            <ul class="dot">
+                <li>서비스 이용기록, 접속 로그, 쿠키, 접속IP정보, 결제기록, 이용정지 기록, e-스티커 적립 기록, 통신사 멤버십 카드 번호, 단말기정보(OS종류, PUSH용 토큰, 디바이스 ID), DI, 현금 영수증 처리정보(핸드폰 번호, 사업자 번호 등), 스타벅스 카드 자동금액 충전 처리 정보(신용카드 번호, 비밀번호 앞2자리, 전화번호, 생년월일, 성별), 비회원 전자영수증 조회 처리 정보(거래일자, 신용카드 번호, 승인번호,
+                    결제금액)
+                    <br> * 쿠키의 경우 구체적인 운영 내역과 설정 거부 방법 등은 본 개인정보처리방침에 정하고 있습니다.
+                </li>
+            </ul>
+        </li>
+        <li>
+            <span>다. 회사는 아래의 방법을 통해 개인정보를 수집합니다. </span>
+            <ul class="dot">
+                <li>홈페이지, 상담게시판, 전화, 팩스, 이벤트응모 등</li>
+                <li>스마트폰용 어플리케이션을 통한 수집</li>
+                <li>'쿠키(cookie)'에 의한 정보 수집</li>
+                <li>외부 업체 서비스 제휴 등으로 제3자로부터 제공</li>
+                <!-- 20200916 mdp 수정 -->
+                <!-- <li>관계사 및 제휴사로부터의 제공</li> -->
+                <!-- 20200220 삭제 -->
+            </ul>
+            <!-- 20200916 mdp 수정 -->
+            <!-- 202101 고도화 마크업 변경 -->
+            <div class="acco_ToggleWrap">
+                <div class="acco_tit_box">
+                    <a class="acco_tit" href="javascript:void(0);" data-index="cont1">제공받는 개인정보 항목 상세 정보</a>
+                </div>
+
+                <div class="acco_cont" id="cont1">
+                    <p class="pri_cont_tit">제3자로부터 제공받는 개인정보 상세 정보</p>
+                    <table class="pri_cont_tbl" summary="위탁 상세 정보">
+                        <caption class="hid">제3자로부터 제공받는 개인정보 상세 정보에 대한 테이블</caption>
+                        <colgroup>
+                            <col width="23%">
+                            <col width="43%">
+                            <col width="33%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th class="tc" scope="col">제공하는 업체명</th>
+                                <th class="tc" scope="col">제공받는 항목</th>
+                                <th class="tc nbr" scope="col">제공받는 목적</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="tl">삼성카드</td>
+                                <td class="tl">1회용 빌링키, DI / MDP 자동결제 등록 신용카드 번호 4자리 / 신용카드 닉네임 <br>(이용 후 파기 / 별도 저장 없음)</td>
+                                <td class="tl nbr">MDP 자동결제 등록 신용카드 조회 / 결제 등</td>
+                            </tr>
+                            <!-- 20201006 추가 -->
+                            <tr>
+                                <td class="tl" rowspan="3">현대카드</td>
+                                <td class="tl">이용자 확인 값(CI), 스타벅스 멤버십 번호, 카드 발급/해지일자 등 관련 정보</td>
+                                <td class="tl nbr">제휴멤버십카드 발급 및 제휴서비스 이용</td>
+                            </tr>
+                            <tr>
+                                <td class="tl">이용자 확인 값(CI)</td>
+                                <td class="tl nbr">심사 우대 서비스 및 빠른 카드 신청을 위한 고객정보 자동입력 제공</td>
+                            </tr>
+                            <tr>
+                                <td class="tl">스타벅스 멤버십 번호, 이용 거래 가맹점 및 거래정보</td>
+                                <td class="tl nbr">정보통계/분석 및 고객별 상품, 서비스 혜택을 위한 마케팅 활용</td>
+                            </tr>
+                            <!-- //20201006 추가 -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- //202101 고도화 마크업 변경 -->
+        </li>
+    </ul>
+
+    <p class="pri_tit">3. 개인정보의 보유∙이용기간 및 파기</p>
+    <ul class="pri_con mb40">
+        <li><span>가. 회사는 회원이 탈퇴를 요청하거나 개인정보의 수집 및 이용에 대한 동의를 철회하는 경우, 수집 및 이용목적이 달성되거나 보유 및 이용기간이 종료한 경우 해당 개인정보를 지체 없이 파기합니다.
+            회사는 이용자의 개인정보 제공일로부터 서비스를 제공하는 기간 동안에 한하여 이용자의 개인정보를 보유 및 이용하게 됩니다.
+            단, 반복 재가입 등의 방법을 이용한 서비스 부정이용 방지를 위하여 키 고유 정보(이름, ID, DI, 성별, 생년)는 회원 탈퇴 후 30일간 보관하며, 관계 법령에 의한 일정 기간 보관 의무를 부과하는 경우에는 해당 기간 동안 개인정보를 안전하게 보관 합니다.</span>
+            <ul class="dot">
+                <li>서비스이용기록, 접속로그, 접속IP정보 (통신비밀보호법 : 3개월)</li>
+                <li>표시/광고에 관한 기록 (전자상거래법 : 6개월)</li>
+                <li>계약 또는 청약철회 등에 관한 기록 (전자상거래법 : 5년)</li>
+                <li>대금결제 및 재화 등의 공급에 관한 기록 (전자상거래법 : 5년)</li>
+                <li>소비자의 불만 또는 분쟁처리에 관한 기록 (전자상거래법 : 3년)</li>
+            </ul>
+        </li>
+        <li><span>나. 파기 방법</span>
+            <ul class="dot">
+                <li>전자적 파일형태로 저장된 개인정보는 기록을 재생할 수 없는 기술적 방법을 사용하여 완전하게 삭제하고, 출력물 등은 분쇄기로 분쇄하거나 소각하는 방식 등으로 파기합니다.</li>
+            </ul>
+        </li>
+        <li><span>다. 개인정보 유효기간 제도 도입</span>
+            <ul class="dot">
+                <li>회사는 장기간(12개월 이상) 서비스 미이용자의 개인정보보호를 위하여 분리하여 저장, 관리합니다. 단, '자동차 등록번호'와 “GUEST의 수집된 개인정보”의 경우 개인정보보호를 위하여 파기합니다.</li>
+                <!-- 20190111 문구수정 -->
+                <li>미이용의 기간은 로그인, 상담원 접촉일자, 거래 내역 등으로 산정하며 법령에서 정의한 기간 동안 서비스 미이용자에 대하여 분리, 저장관리합니다.</li>
+                <li>회사는 미이용자 개인정보 분리/저장시점 도래 1개월 이전에 이메일 등을 통해 해당 이용자에게 관련내용을 공지합니다. </li>
+            </ul>
+        </li>
+    </ul>
+
+    <p class="pri_tit">4. 개인정보의 제3자 제공 및 위탁 내용</p>
+    <!-- 20201119 문구수정 -->
+    <p class="">회사는 이용자의 외부 제휴사 서비스 이용을 위해 개인정보를 제공을 하고 있으며, 편리하고 더 나은 서비스 제공을 위해 개인정보 처리 업무를 외부 전문업체에 위탁하여 운영하고 있습니다.</p>
+    <!-- 20200916 mdp 수정 -->
+    <!-- 202101 고도화 마크업 변경 -->
+    <div class="acco_ToggleWrap mb40">
+        <div class="acco_tit_box">
+            <a class="acco_tit" href="javascript:void(0);" data-index="cont2">위탁 상세 정보</a>
+            <a class="acco_tit" href="javascript:void(0);" data-index="cont3">제공 상세 정보</a>
+        </div>
+
+        <div class="acco_cont" id="cont2">
+            <p class="pri_cont_tit">위탁 상세 정보</p>
+            <table class="pri_cont_tbl" summary="위탁 상세 정보">
+                <caption class="hid">위탁 상세 정보에 대한 테이블</caption>
+                <colgroup>
+                    <col width="20%">
+                    <col width="">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th class="tc" scope="col">수탁업체</th>
+                        <th class="tc nbr" scope="col">위탁업무 내용</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="tl">신세계아이앤씨</td>
+                        <td class="tl nbr">서비스 제공을 위한 시스템 개발 및 운영, 웹사이트(PC/모바일), 애플리케이션 관리, 이메일/휴대폰 문자 발송, 이벤트 업무 처리</td>
+                    </tr>
+                    <tr>
+                        <td class="tl">SCI평가정보</td>
+                        <!-- 20191106 수정 -->
+                        <td class="tl nbr">본인확인</td>
+                    </tr>
+                    <tr>
+                        <td class="tl">씽크에이티</td>
+                        <td class="tl nbr">SMS 부정거래 방지를 위한 발신번호 ARS 인증 서비스</td>
+                    </tr>
+                    <tr>
+                        <td class="tl">㈜케이지이니시스</td>
+                        <td class="tl nbr">전자지불서비스, ARS 결제 서비스, 스타벅스 카드 금액 충전 서비스</td>
+                    </tr>
+                    <tr>
+                        <td class="tl">나이스페이먼츠㈜</td>
+                        <td class="tl nbr">전자지불서비스</td>
+                    </tr>
+                    <tr>
+                        <td class="tl">스마트로</td>
+                        <td class="tl nbr">전자지불서비스, 스타벅스 카드 금액 충전 서비스</td>
+                    </tr>
+                    <tr>
+                        <td class="tl">KSNET</td>
+                        <td class="tl nbr">환불처리</td>
+                    </tr>
+                    <tr>
+                        <td class="tl">유베이스</td>
+                        <td class="tl nbr">고객문의 안내 및 상담 업무</td>
+                    </tr>
+                    <!-- 20200916 mdp 수정 -->
+                    <tr>
+                        <td class="tl">삼성카드</td>
+                        <td class="tl nbr">자동차 등록번호 소유자 성명 확인</td>
+                    </tr>
+                    <!-- 20201120 추가 -->
+                    <tr>
+                        <td class="tl">㈜써클엠</td>
+                        <td class="tl nbr">온라인 쇼핑몰 상품 배송, 쿠폰 발송, 고객 상담 업무 등</td>
+                    </tr>
+                    <tr>
+                        <td class="tl">바로고</td>
+                        <td class="tl nbr">스타벅스 딜리버스 상품 배달 업무</td>
+                    </tr>
+                    <!-- //20210527 추가 -->
+                    <tr>
+                        <td class="tl">메쉬코리아</td>
+                        <td class="tl nbr">스타벅스 딜리버스 상품 배달 업무</td>
+                    </tr>
+                    <!-- //20201120 추가 -->
+                    <!-- //220216 추가 -->
+                    <tr>
+                        <td class="tl">재단법인 행복커넥트</td>
+                        <td class="tl nbr">스타벅스 카드로 리유저블컵 보증금 환급 처리 결과 조회 및 에코매장 이용 고객 대상 만족도 설문 조사</td>
+                    </tr>
+                    <!-- //220216 추가 -->
+                </tbody>
+            </table>
+            <p class="popPriTxt">※ 단발성으로 진행되는 이벤트에 대한 개인정보 관련 고지는 <u><a href="/footer/etc/privacy_board_list.do?target=blank" target="_blank">'개인정보처리의 업무위탁 관련'</a></u> 에 고지됩니다.</p>
+        </div>
+
+        <div class="acco_cont" id="cont3">
+            <p class="pri_cont_tit">제3자 제공 상세 정보</p>
+            <!-- 220216 수정 -->
+            <table class="pri_cont_tbl" summary="위탁 상세 정보">
+                <caption class="hid">제3자 제공 상세 정보에 대한 테이블</caption>
+                <colgroup>
+                    <col width="20%">
+                    <col width="20%">
+                    <col width="20%">
+                    <col width="20%">
+                    <col width="20%">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th class="tc" scope="col">서비스명</th>
+                        <th class="tc" scope="col">제공받는 자</th>
+                        <th class="tc" scope="col">제공하는 목적</th>
+                        <th class="tc" scope="col">제공하는 개인정보항목</th>
+                        <th class="tc nbr" scope="col">제공받는 자의 개인정보 보유기간</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="tl">MDP 신용카드 자동결제 서비스</td>
+                        <td class="tl">삼성카드</td>
+                        <td class="tl">MDP 신용카드 자동결제 서비스 이용자 식별</td>
+                        <td class="tl">DI (Duplication information)</td>
+                        <td class="tl nbr">계약종료(삼성카드 탈회)이후 90일 보관</td>
+                    </tr>
+                    <tr>
+                        <td class="tl" rowspan="6">스타벅스 현대카드 서비스</td>
+                        <td class="tl" rowspan="6">현대카드</td>
+                        <td class="tl">제휴멤버십카드 발급 및 제휴서비스 이용</td>
+                        <td class="tl">스타벅스 멤버십 번호, 스타벅스 리워드 관련 정보(별 조회/적립 등)</td>
+                        <td class="tl nbr">(금융)거래관계 완료 종료시까지 또는 동의 철회 시까지</td>
+                    </tr>
+                    <tr>
+                        <td class="tl">제휴멤버십카드 심사 우대 서비스 제공을 위한 멤버십 정보 확인</td>
+                        <td class="tl">스타벅스 멤버십 번호, 최근 6개월간 구매내역, 스타벅스 카드 충전 내역</td>
+                        <td class="tl nbr">거래종료(회원탈퇴)일로부터 5년</td>
+                    </tr>
+                    <tr>
+                        <td class="tl">제휴멤버십 카드 심사 우대 서비스 제공을 위한 멤버십 정보 확인</td>
+                        <td class="tl">CI</td>
+                        <td class="tl nbr">카드발급을 위한 신청완료 시점까지</td>
+                    </tr>
+                    <tr>
+                        <td class="tl">빠른 카드신청을 위한 고객정보 자동입력 서비스의 이행 유지 업무</td>
+                        <td class="tl">CI</td>
+                        <td class="tl nbr">카드발급을 위한 신청완료 시점까지</td>
+                    </tr>
+                    <tr>
+                        <td class="tl">빠른 카드신청을 위한 고객정보 자동입력</td>
+                        <td class="tl">이메일 주소</td>
+                        <td class="tl nbr">카드발급을 위한 신청완료 시점까지</td>
+                    </tr>
+                    <tr>
+                        <td class="tl">제휴멤버십카드 이용실적 제공을 위한 정보통계/분석 및 고객별 상품, 서비스 혜택을 위한 마케팅 활용</td>
+                        <td class="tl">스타벅스 멤버십 번호, 고객거래정보(스타벅스 구매 품목, 금액, 일시 등)</td>
+                        <td class="tl nbr">(금융)거래관계 완료 종료시까지 또는 동의 철회 시까지</td>
+                    </tr>
+                </tbody>
+            </table>
+             <!-- //220216 수정 -->
+        </div>
+    </div>
+    <!-- //202101 고도화 마크업 변경 -->
+
+    <p class="pri_tit">5. 이용자 및 법정대리인의 권리와 그 행사방법</p>
+    <ul class="pri_con ">
+        <li><span>가. 이용자의 권리</span>
+            <ul class="dot">
+                <li>열람 또는 그 열람의 요구</li>
+                <li>정정 또는 그 정정의 요구</li>
+                <li>삭제 또는 그 삭제의 요구</li>
+                <li>처리정지 또는 그 삭제의 요구</li>
+                <li>동의 철회 또는 그 동의 철회의 요구</li>
+            </ul>
+        </li>
+        <li><span>나. 이용자의 권리 행사 방법</span>
+            <ul class="dot">
+                <li>홈페이지 메뉴 이용 방법
+                    <ul>
+                        <li class="pl0">- 열람, 정정 : My Starbucks &gt; 개인정보확인 및 수정 메뉴 접속 후 열람 및 정정 </li>
+                        <li class="pl0">- 삭제 : My Starbucks &gt; 개인정보관리 &gt; 회원탈퇴 메뉴 접속 후 회원탈퇴 절차 진행</li>
+                        <li class="pl0">- 동의 철회<br> * My Starbucks &gt; 개인정보관리 &gt; 회원탈퇴 메뉴 접속 후 회원탈퇴 절차 진행<br> * My Starbucks &gt; 개인정보확인 및 수정 메뉴 접속 후 “SMS를 통한 이벤트 및 신규 매장 정보 수신에 동의합니다.[선택]” 선택 동의 철회
+                        </li>
+                    </ul>
+                </li>
+                <!-- s:: 20220418 추가 -->
+                <li>모바일APP 메뉴 이용 방법
+                    <ul>
+                        <li class="pl0">- 열람, 정정 : Other &gt; 개인정보 관리 메뉴 접속 후 열람 및 정정</li>
+                        <li class="pl0">- 삭제: Other &gt; 개인정보 관리 메뉴 접속 후 회원 탈퇴 절차 진행</li>
+                        <li class="pl0">- 동의철회</li>
+                        <li class="pl0">* Other &gt; 개인정보 관리 메뉴 접속 후 회원 탈퇴 절차 진행</li>
+                        <li class="pl0">* Other &gt; 개인정보 관리 메뉴 접속 후 “SMS를 통한 이벤트 및 신규 매장 정보 수신에 동의합니다.[선택]”, 이메일을 통한 이벤트 및 신규 매장 정보 수신에 동의합니다.[선택]” 선택 동의 철회</li>
+                    </ul>
+                </li>
+                <!-- e:: 20220418 추가 -->
+                <li>회사에 열람, 정정, 삭제, 처리정지, 동의 철회 요구 방법
+                    <ul>
+                        <!-- 20180305 수정 -->
+                        <li class="pl0">- 본 개인정보처리방침 ‘개인정보에 관한 민원서비스’에 기재된 고객서비스 담당부서 및 회사의 개인정보 보호책임자에게 서면, 전화 또는 이메일로 연락하시면 본인 확인 후 지체 없이 조치하겠습니다.
+                            <br>다만, 다른 법령에서 그 개인정보가 수집 대상으로 명시되어 있는 경우에는 그 삭제를 요구할 수 없습니다.
+                        </li>
+                        <!--// 20180305 수정 -->
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <!-- 20180305 추가 -->
+    <div style="padding-left:28px">
+        <a class="btn_privacy" style="width:200px" href="//image.istarbucks.co.kr/upload/footer/[양식] 개인정보 요구서.hwp">개인정보 요구서 양식 다운로드</a>
+    </div>
+    <!--// 20180305 추가 -->
+
+    <p class="mb40">* 이용자의 권리 행사는 이용자의 법정대리인이나 위임을 받은 자 등 대리인을 통하여 하실 수 있습니다. 이 경우 대리인은 (개인정보보호법 시행규칙 별지 제11호 서식에 따른) 위임장을 제출하셔야 합니다.</p>
+    <!-- 20171123 수정 : 클래스 변경 -->
+
+    <p class="pri_tit">6. 개인정보 자동수집 장치의 설치, 운영 및 그 거부에 관한 사항</p>
+    <p class="mb15">회사는 귀하의 정보를 수시로 저장하고 찾아내는 ´쿠키(cookie)´ 등을 운용합니다. 쿠키란 회사의 웹사이트를 운영하는데 이용되는 서버가 귀하의 브라우저에 보내는 아주 작은 텍스트 파일로서 귀하의 컴퓨터 하드디스크에 저장됩니다. 회사는 다음과 같은 목적을 위해 쿠키를 사용합니다.</p>
+    <ul class="pri_con mb40">
+        <li><span>가. 쿠키 수집 목적</span>
+            <ul class="dot">
+                <!-- s:: 20220418 수정 -->
+                <li>팝업 하루 동안 보지 않기 기능 제공</li>
+                <li>홈페이지 로그인 시 편의를 위한 아이디 저장기능 제공</li>
+                <li>프리퀀시 현황판 안내 서비스 제공</li>
+                <li>매장 별 e-Gift Item 재고 조회 서비스 제공</li>
+                <!-- e:: 20220418 수정 -->
+            </ul>
+        </li>
+        <!-- s:: 20220418 삭제 -->
+        <!-- <li><span>나. 쿠키정보의 구체적인 운영 내역</span>
+            <ul class='dot'>
+                <li>팝업 하루 동안 보지 않기 기능</li>
+                <li>홈페이지 로그인 시 편의를 위한 아이디 저장기능 제공</li>
+            </ul>
+        </li> -->
+        <!-- e:: 20220418 삭제 -->
+        <li><span>나. 쿠키 설정 거부 방법</span>
+            <ul class="dot">
+                <li>회원은 쿠키 설치에 대한 선택권을 가지고 있습니다. 따라서, 회원은 웹브라우저에서 옵션을 설정함으로써 모든 쿠키를 허용하거나, 쿠키가 저장될 때마다 확인을 거치거나, 아니면 모든 쿠키의 저장을 거부할 수도 있습니다. 다만 쿠키 설치를 거부할 경우 일부 서비스 이용에 불편이나 어려움이 있을 수 있습니다.</li>
+            </ul>
+        </li>
+        <li><span>다. 설정방법의 예</span>
+            <ul class="dot">
+                <li>Internet Explorer의 경우<br> 웹 브라우저 상단의 도구 메뉴 &gt; 인터넷 옵션 &gt; 개인정보 &gt; 설정</li>
+                <!-- s:: 20220418 수정 -->
+                <li>Chrome의 경우<br>
+                    웹 브라우저 우측의 설정 메뉴 &gt; 설정 &gt; 보안 및 개인정보 보호 &gt; 쿠키 및 기타 사이트 데이터
+                </li>
+                <!-- e:: 20220418 수정 -->
+                <!-- 20171123 수정 :  위치이동 (li 내 에서 밖으로) -->
+                <li>각 브라우저 별 쿠키 설정 메뉴는 각 브라우저의 도움말을 참조할 수 있습니다.</li>
+                <!-- 20171123 수정 :  위치이동 (li 내 에서 밖으로) -->
+            </ul>
+        </li>
+    </ul>
+
+    <p class="pri_tit">7. 개인정보에 관한 민원 서비스</p>
+    <p class="mb15">회사는 이용자의 개인정보를 보호하고 개인정보와 관련한 불만을 처리하기 위하여 아래와 같이 개인정보 보호책임자를 지정하고 있습니다. 아울러 고객서비스 담당부서(고객센터)를 운영하여 개인정보에 관한 민원 서비스를 제공하고 있습니다.</p>
+    <!-- s:: 20210125 수정 -->
+    <div class="pri_info_img mb15">
+        <!-- 20220421 삭제 -->
+        <!-- <img src='https://image.istarbucks.co.kr/img/event/2022/txt_privacy_220216.png' alt='개인정보 보호책임자 정보'> -->
+        <!-- s:: 20220421 수정 -->
+        <div class="pri_info_txt">
+            <p>
+                &lt;개인정보 보호책임자&gt;
+            </p>
+            <ul class="pri_dot mb15">
+                <li>부서 : 기획담당</li>
+                <li>개인정보 보호책임자 : 하익성 담당</li>
+                <li>전화번호 : 1522-3232</li>
+                <li>이메일 : CPO1@starbucks.co.kr</li>
+                <!-- 20210128 수정 -->
+            </ul>
+            <!-- s:: 20220418 복원 및 수정 -->
+            <p>
+                &lt;고객서비스 담당부서&gt;
+            </p>
+            <ul class="pri_dot mb15">
+                <li>전화번호 : 1522-3232</li>
+                <li>이메일 : cs@starbucks.co.kr</li>
+            </ul>
+            <!-- e:: 20220418 복원 및 수정 -->
+        </div>
+        <!-- e:: 20220421 수정 -->
+    </div>
+    <!-- e:: 20210125 수정 -->
+    <p class="mb15">회원은 회사의 서비스를 이용하며 발생하는 모든 개인정보보호 관련 민원을 개인정보 보호책임자 또는 고객서비스 담당부서로 신고하실 수 있습니다.<br>회사는 이용자들의 신고사항에 대해 신속하게 충분한 답변을 드릴 것입니다.</p>
+    <p class="">기타 개인정보침해에 대한 신고나 상담이 필요하신 경우에는 아래 기관에 문의하시기 바랍니다.</p>
+    <!-- 20171123 수정 :  클래스 변경 -->
+    <ul class="pri_dot mb40">
+        <!-- 20171123 수정 :  클래스 변경 -->
+        <li>개인정보침해 신고센터 (http://privacy.kisa.or.kr / 국번 없이 118)</li>
+        <li>대검찰청 사이버수사과 (www.spo.go.kr / 국번 없이 1301)</li>
+        <li>경찰청 사이버수사국(https://ecrm.cyber.go.kr)</li> <!-- 220216 수정 -->
+        <li>개인정보 분쟁조정위원회(www.kopico.go.kr / 1833-6972)</li>
+    </ul>
+
+    <p class="pri_tit">8. 개인정보의 기술적, 관리적 보호대책</p>
+    <ul class="pri_con mb40">
+        <li>
+            <span>가. 기술적 대책</span>
+            <ul class="dot">
+                <li>이용자의 개인정보는 암호화된 통신구간을 이용하여 전송하고, 비밀번호 등 중요정보는 암호화 하여 보관하고 있습니다.</li>
+                <li>해킹이나 컴퓨터 바이러스 등에 의해 회원의 개인정보가 유출되거나 훼손되는 것을 막기 위해 외부로부터 접근이 통제된 구역에 시스템을 설치하고 있습니다. 개인정보의 훼손에 대비해서 자료를 수시로 백업하고 있고, 최신 백신프로그램을 이용하여 이용자들의 개인정보나 자료가 유출되거나 손상되지 않도록 방지하고 있습니다. 암호화 통신 등을 통하여 네트워크상에서 개인정보를 안전하게 송수신하고 있습니다.</li>
+                <li>개인정보처리 시스템은 접근 통제하고 있으며 및 접근 권한은 내부절차를 거쳐 최소한으로 개인정보취급자에게 부여하고 있으며 접속기록은 위조•변조 방지를 위하여 별도의 물리적 공간을 이용하여 이중 보관하고 있습니다.</li>
+            </ul>
+        </li>
+        <li>
+            <span>나. 관리적 대책</span>
+            <ul class="dot">
+                <li>회사는 개인정보의 안전한 처리를 위한 내부 관리계획을 수립하였으며, 이에 대한 이행사항 및 직원의 준수여부를 감시하기 위한 내부절차를 마련하고 있습니다.</li>
+                <li>개인정보보호 전담 조직을 운영하여 이용자 개인정보 보호 의무를 올바르게 준수할 수 있도록 기술적/관리적 보호조치를 상시 수행하고 있습니다.</li>
+                <li>개인정보취급자를 최소한으로 유지하고 보안서약서와 정기적인 교육 및 캠페인을 통하여 사람에 의한 정보유출을 사전에 방지하고 있습니다.</li>
+            </ul>
+        </li>
+    </ul>
+
+    <p class="pri_tit">9. 개정 전 고지 의무</p>
+    <!-- 20220418 수정 -->
+    <p class="mb15">현 개인정보 처리방침은 2022년 4월 29일부터 적용되며, 법령, 정책 또는 보안기술의 변경에 따라 내용 추가, 삭제 및 수정이 있을 시에는 개정 최소 7일전부터 홈페이지의 '공지사항'을 통해 고지할 것입니다.<br> 다만, 이용자 권리의 중대한 변경을 개정하는 경우에는 적용일로부터 30일전까지 홈페이지에 공시하고 회원이 입력한 가장 최근의 이메일로 전송하는 방법으로 회원에게 고지합니다. 변경된 개인정보처리방침은 고지한 적용일로부터 효력이
+        발생합니다.</p>
+    <ul class="dot">
+        <!-- 20220418 수정 -->
+        <li class="color_point">공고일자 : 2022년 4월 22일</li>
+        <li class="color_point">시행일자 : 2022년 4월 29일</li>
+        <!-- <li class='color_point'>스타벅스 딜리버스 서비스 관련 내용은 11월 27일 시행</li> -->
+        <!-- 20201124 수정 -->
+    </ul>
+    <!-- //220216 수정 -->
+</div></div>
 
 					</div>
                     
@@ -844,41 +1503,35 @@ var eFrequencyPlannerYn = 'Y';
         <li>
             <a href="javascript:void(0);">개인정보 처리방침<span class="sbox_arrow_down"></span></a> <!-- 20211213 수정 -->
             <ul>
-				<li><a href="privacy">· 개인정보 처리방침</a></li>
-				<li><a href="privacy_board_list-1">· 개인정보처리의 업무위탁관련</a></li>
+				<li><a href="/footer/etc/privacy.do">· 개인정보 처리방침</a></li>
+				<li><a href="/footer/etc/privacy_board_list.do">· 개인정보처리의 업무위탁관련</a></li>
 			</ul>
         </li>
         <li>
-            <a href="rules_vod">영상정보처리기기<br>운영관리 방침</a>
+            <a href="/footer/etc/rules_vod.do">영상정보처리기기<br>운영관리 방침</a>
         </li>
         <li>
             <a href="javascript:void(0);">이용약관<span class="sbox_arrow_down"></span></a>
             <ul>
-                <li><a href="rules">· 홈페이지 이용약관</a></li>
-                <li><a href="rules_loc">· 위치정보 이용약관</a></li>
-                <li><a href="rules_msr">· 스타벅스 카드 이용약관</a></li>
-                <li><a href="rules_non">· 비회원 이용약관</a></li>
-                <li><a href="rules_mdp">· My DT Pass 서비스 이용약관</a></li> 
+                <li><a href="/footer/etc/rules.do">· 홈페이지 이용약관</a></li>
+                <li><a href="/footer/etc/rules_loc.do">· 위치정보 이용약관</a></li>
+                <li><a href="/footer/etc/rules_msr.do">· 스타벅스 카드 이용약관</a></li>
+                <li><a href="/footer/etc/rules_non.do">· 비회원 이용약관</a></li>
+                <li><a href="/footer/etc/rules_mdp.do">· My DT Pass 서비스 이용약관</a></li> 
             </ul>
         </li>
         <li>
-            <a href="hotline">윤리경영 핫라인</a>
+            <a href="/footer/etc/hotline.do">윤리경영 핫라인</a>
         </li>
         <li>
-            <a href="coming_route">찾아오시는 길</a>
+            <a href="/footer/etc/coming_route.do">찾아오시는 길</a>
         </li>
         <li>
-            <a href="sitemap">사이트 맵</a>
+            <a href="/footer/etc/sitemap.do">사이트 맵</a>
         </li>
     </ul>
 </nav>
 				</div>
-
-			</div>
-			
-
-
-
 
 		
 			<!-- footer -->

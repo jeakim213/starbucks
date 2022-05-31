@@ -654,7 +654,7 @@ var eFrequencyPlannerYn = 'Y';
 							<p class="tit">관련 제품</p>
 							<div class="productRel_wrap">
                                 <ul class="productRel_ul">
-                                </ul>
+                                <li>                 <dl>                     <dt><a href="javascript:void(0)" class="goView" prod="110582"><img src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[110582]_20210415142706078.jpg" alt="아이스 카라멜 마키아또"></a></dt>                     <dd>                         <p class="t1">아이스 카라멜 마키아또</p>                         <p class="t2">향긋한 바닐라 시럽과 시원한 우유와 얼음을 넣고 점을 찍듯이 에스프레소를 부은 후 벌집 모양으로 카라멜 드리즐을 올린 달콤한 커피 음료</p>                         <p class="more_btn"><a href="javascript:void(0)" class="goView" prod="110582"><img src="//image.istarbucks.co.kr/common/img/coffee/cf_more_btn.png" alt="자세히 보기"></a></p>                     </dd>                 </dl>             </li><li>                 <dl>                     <dt><a href="javascript:void(0)" class="goView" prod="126197"><img src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[126197]_20210415154609863.jpg" alt="카라멜 마키아또"></a></dt>                     <dd>                         <p class="t1">카라멜 마키아또</p>                         <p class="t2">향긋한 바닐라 시럽과 따뜻한 스팀 밀크 위에 풍성한 우유 거품을 얹고 점을 찍듯이 에스프레소를 부은 후 벌집 모양으로 카라멜 드리즐을 올린 달콤한 커피 음료</p>                         <p class="more_btn"><a href="javascript:void(0)" class="goView" prod="126197"><img src="//image.istarbucks.co.kr/common/img/coffee/cf_more_btn.png" alt="자세히 보기"></a></p>                     </dd>                 </dl>             </li></ul>
 							</div>
 						</div>
 					</div>
@@ -663,11 +663,6 @@ var eFrequencyPlannerYn = 'Y';
 				<!-- 하단 end -->
 			</div>
 			
-
-
-
-
-		
 			<!-- footer -->
 			<footer id="footer"> 
 				<div class="footer_wrap">

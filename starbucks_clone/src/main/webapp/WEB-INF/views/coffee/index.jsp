@@ -620,11 +620,11 @@ var eFrequencyPlannerYn = 'Y';
 				<!-- 서브 타이틀 -->
 				<div class="sub_tit_wrap">
 					<div class="sub_tit_inner">
-						<h2><img src="common/img/coffee/coffee_tit.jpg" alt="COFFEE"></h2>
+						<h2><img src="//image.istarbucks.co.kr/common/img/coffee/coffee_tit.jpg" alt="COFFEE"></h2>
 						<ul class="smap">
-							<li><a href="index.htm"><img src="common/img/common/icon_home.png" alt="홈으로"></a></li>
-							<li><img class="arrow" src="common/img/common/icon_arrow.png" alt="하위메뉴"></li>						
-							<li class="en"><a href="index" class="this ">COFFEE</a></li>
+							<li><a href="/"><img src="//image.istarbucks.co.kr/common/img/common/icon_home.png" alt="홈으로"></a></li>
+							<li><img class="arrow" src="//image.istarbucks.co.kr/common/img/common/icon_arrow.png" alt="하위메뉴"></li>						
+							<li class="en"><a href="/coffee/index.do" class="this ">COFFEE</a></li>
 						</ul>
 					</div>
 				</div>
@@ -632,26 +632,28 @@ var eFrequencyPlannerYn = 'Y';
 				<!-- 서브 슬라이드 영역 -->
 				<div class="coffeeSlideArea">
 					<div class="bxslide-main">
-						<ul class="coffee_slider">
-						</ul>
+						<div class="bx-wrapper" style="max-width: 100%;"><div class="bx-viewport" style="width: 100%; overflow: hidden; position: relative; height: 200px;"><ul class="coffee_slider" style="width: auto; position: relative;">
+						<li style="float: none; list-style: none; position: absolute; width: 921px; z-index: 50; display: list-time;"><div style="background-image: url(https://image.istarbucks.co.kr/upload/banner/fs8Fa0_20220411134500434.jpg); background-size: cover; background-repeat: no-repeat;"><a href="https://www.starbucks.co.kr/whats_new/campaign_view.do?pro_seq=1992"></a></div></li><li style="float: none; list-style: none; position: absolute; width: 921px; z-index: 0; display: none;"><div style="background-image: url(https://image.istarbucks.co.kr/upload/banner/Y7YBKr_20220404160515035.jpg); background-size: cover; background-repeat: no-repeat;"><a href="https://www.starbucks.co.kr/whats_new/newsView.do?cate=&amp;seq=4496"></a></div></li></ul></div><div class="bx-controls bx-has-controls-direction"><div class="bx-controls-direction"><a class="bx-prev" href="">Prev</a><a class="bx-next" href="">Next</a></div></div></div>
 						<div class="coffee_slider_control_pager">
-							<div class="coffee_slider_controls"></div>
-							<div class="coffee_slider_pagers"></div>
+							<div class="coffee_slider_controls"><div class="bx-controls-auto"><div class="bx-controls-auto-item"><a class="bx-stop" href="">Stop</a></div></div></div>
+							<div class="coffee_slider_pagers"><div class="bx-pager bx-default-pager"><div class="bx-pager-item"><a href="" data-slide-index="0" class="bx-pager-link active">1</a></div><div class="bx-pager-item"><a href="" data-slide-index="1" class="bx-pager-link">2</a></div></div></div>
 						</div>
 					</div>
 					<!-- 150708 DOM 수정 - 투명한 버튼으로 수정 -->
 					<p id="prevBtn">
 						<a href="javascript:void(0)">
-							<img alt="" class="arrow_off" src="common/img/util/mscard_arrow_l_off.png">
-							<img alt="" class="arrow_on" src="common/img/util/mscard_arrow_l_on.png">
+							<img alt="" class="arrow_off" src="//image.istarbucks.co.kr/common/img/util/mscard_arrow_l_off.png" style="display: block;">
+							<img alt="" class="arrow_on" src="//image.istarbucks.co.kr/common/img/util/mscard_arrow_l_on.png">
 						</a>
 					</p>
 					<p id="nextBtn">
 						<a href="javascript:void(0)">
-							<img alt="" class="arrow_off" src="common/img/util/mscard_arrow_r_off.png">
-							<img alt="" class="arrow_on" src="common/img/util/mscard_arrow_r_on.png">
+							<img alt="" class="arrow_off" src="//image.istarbucks.co.kr/common/img/util/mscard_arrow_r_off.png" style="display: block;">
+							<img alt="" class="arrow_on" src="//image.istarbucks.co.kr/common/img/util/mscard_arrow_r_on.png">
 						</a>
 					</p>
+					<!-- 150708 DOM 수정 - 투명한 버튼으로 수정 -->		
+				</div>
 					<!-- 150708 DOM 수정 - 투명한 버튼으로 수정 -->		
 				</div>
 				<!-- jsp 수정 : 태그 추가 -->
@@ -669,6 +671,9 @@ var eFrequencyPlannerYn = 'Y';
 				<!-- 서브 슬라이드 영역 end -->
 
 				<!-- news -->
+				
+				
+				
 				<div class="newsArea">
                     <div class="newsArea_left"></div>
                     <div class="newsArea_right"></div>
@@ -680,8 +685,7 @@ var eFrequencyPlannerYn = 'Y';
 									<img class="m_pic" src="common/img/common/icon_board_speaker-1.png" alt="">
 								</dt><!-- jsp 수정 - 이미지 및 클래스 추가 -->
 								<dd>
-									<ul class="news_result">
-									</ul>
+									<ul class="news_result" style="direction: ltr; font-size: 13px; color: rgb(255, 255, 255);"><li style="overflow: hidden; height: 0.6125px; padding-top: 0px; margin-top: 0px; padding-bottom: 0px; margin-bottom: 0px;"><a href="javascript:pageViewBodo(4576)">스타벅스, ‘라벤더 블론드 스타벅스 더블 샷’ 입소문 타고 인기 급상승</a></li><li style="overflow: hidden; height: 19.4181px; padding-top: 0px; margin-top: 0px; padding-bottom: 0px; margin-bottom: 0px;"><a href="javascript:pageViewBodo(4572)">스타벅스, 창원NC파크R점 확장 오픈하며 스타벅스 테라스 전용 세트 출시</a></li><li style="display: none;"><a href="javascript:pageViewBodo(4563)">스타벅스, 2027년까지 커피찌꺼기 재활용률 100%에 도전 </a></li><li style="display: none;"><a href="javascript:pageViewBodo(4560)">1만명 고객 참여한 ‘다다익선 캠페인’, 스타벅스 개인컵 이용 건수도 53% 증가</a></li><li style="display: none;"><a href="javascript:pageViewBodo(4578)">스타벅스 코리아 개점 23주년 맞아 전국 23개 숲 공원돌보미 캠페인 전개</a></li></ul>
 								</dd>
 							</dl>
                             <p class="btn"><a href="footer/company/news_list"><img src="common/img/coffee/icon_coffee_notice_more.png" alt="보도자료 바로가기"></a></p>
@@ -707,9 +711,9 @@ var eFrequencyPlannerYn = 'Y';
 				<!-- 스타벅스 리저브 -->
 				<section class="coffee_reserve_wrap">
 					<div class="coffee_wrap_inner">
-						<img class="m_pic" src="common/img/coffee/m_coffee_bimg2.jpg" alt="">
-						<p class="coffee_reserve_txt"><img class="w_pic" src="common/img/coffee/coffee_reserve_txt.png" alt="스타벅스 리저브 단일 원산지 원두를 사용한 프리미엄 커피 최고의 커피를 찾기 위해 세계 곳곳을 여행하고 있는 스타벅스가 진귀하고 이국적인 프리미엄 커피를 소개합니다. 격조 높은 원두와 함께 차별화된 커피 경험, 스타벅스 리저브에서 누려보세요."><img class="m_pic" src="common/img/coffee/m_coffee_btxt2.png" alt=""></p>
-						<div class="coffee_reserve_btn"><a href="reserve_info">자세히 보기</a></div>
+						<img class="m_pic" src="//image.istarbucks.co.kr/common/img/coffee/m_coffee_bimg2.jpg" alt="">
+						<p class="coffee_reserve_txt"><img class="w_pic" src="//image.istarbucks.co.kr/common/img/coffee/coffee_reserve_txt.png" alt="스타벅스 리저브 단일 원산지 원두를 사용한 프리미엄 커피 최고의 커피를 찾기 위해 세계 곳곳을 여행하고 있는 스타벅스가 진귀하고 이국적인 프리미엄 커피를 소개합니다. 격조 높은 원두와 함께 차별화된 커피 경험, 스타벅스 리저브에서 누려보세요."><img class="m_pic" src="//image.istarbucks.co.kr/common/img/coffee/m_coffee_btxt2.png" alt=""></p>
+						<div class="coffee_reserve_btn"><a href="/coffee/reserve_info.do">자세히 보기</a></div>
 					</div>
 				</section>
 				<!-- 스타벅스 리저브 end -->

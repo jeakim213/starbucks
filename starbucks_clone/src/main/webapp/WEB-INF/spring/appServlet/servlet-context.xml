@@ -15,7 +15,8 @@
 	<!-- Handles HTTP GET requests for /resources/** by efficiently serving up static resources in the ${webappRoot}/resources directory -->
 
 	    <resources mapping="/resources/**" location="/resources/" />
-	    <resources mapping="/img/event/2022/**" location="/WEB-INF/views/img/event/2022/" />
+	    <resources mapping="/img/event/**" location="/WEB-INF/views/img/event/" />
+	    <resources mapping="/img/util/csi/**" location="/resources/common/img/util/csi" />
   		<resources mapping="/common/**" location="/resources/common/" />
 		<resources mapping="/css/**" location="/resources/common/css/" />
 		<resources mapping="/fonts/**" location="/resources/common/fonts/" />
@@ -23,6 +24,11 @@
 		<resources mapping="/js/**" location="/resources/common/js/" />
 		<resources mapping="/upload/banner/**" location="/WEB-INF/views/upload/banner/" />
 		<resources mapping="/upload/common/**" location="/WEB-INF/views/upload/common/" />
+		<resources mapping="/upload/email/**" location="/WEB-INF/views/upload/email/" />
+		<resources mapping="/v2/maps/**" location="/WEB-INF/views/v2/maps/" />
+		<resources mapping="/sdk/js/**" location="/WEB-INF/views/sdk/js/" />
+		<resources mapping="/upload/prcmcard/**" location="/WEB-INF/views/upload/prcmcard/" />
+		<resources mapping="/img/util/csi/**" location="/resources/common/img/util/csi" />
 
 	<!-- Resolves views selected for rendering by @Controllers to .jsp resources in the /WEB-INF/views directory -->
 	<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">

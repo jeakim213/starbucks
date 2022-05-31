@@ -634,8 +634,13 @@ var eFrequencyPlannerYn = 'Y';
 					<!-- 분류 보기 -->
 					<div class="product_kind_wrap">
 						<p class="tit">분류 보기</p>
-						<div class="product_kind_btn"><a href="javascript:void(0)" role="button"><img src="common/img/menu/list_up_btn.png" alt="분류보기 메뉴 접기"><!-- 접근성_20171123 role 추가 --></a><!-- 접근성_20171123 alt 값 추가 + menu.js--></div>
-						<div class="product_toggle_wrap">
+						<div class="product_kind_btn">
+						<!-- 0530 예은 수정 _ 메뉴 펼치기 -->
+							<a href="javascript:void(0)" role="button">
+								<img src="//image.istarbucks.co.kr/common/img/menu/list_up_btn.png" alt="분류보기 메뉴 접기"><!-- 접근성_20171123 role 추가 --></a>
+								<!-- 접근성_20171123 alt 값 추가 + menu.js-->
+						</div>
+						<div class="product_toggle_wrap" style="display: block";>
 							<dl class="product_kind_tab">
 								<dt class="dt1"><a href="javascript:void(0)" id="categoryTab" class="selected" role="button" title="카테고리별 상품선택">카테고리</a><!-- 접근성_20171123 role, title 추가 --></dt>
 								<dd>
@@ -660,37 +665,14 @@ var eFrequencyPlannerYn = 'Y';
 										</form>
 									</div>
 								</dd>
+
 								<dt class="dt2"><a href="javascript:void(0)" id="themeTab" role="button" title="테마별 상품보기">테마</a><!-- 접근성_20171123 role, title 추가 --></dt>
 								<dd>
 									<ul class="service_bn">
-										
-										
-											
-												
 													<li><a href="javascript:void(0)" role="button"><img src="upload/banner/themebnr/fs8Fa0_20220411135233651.jpg" alt="서머1 프로모션" data-sbseq="W0000417" style="width: 335px; height: 90px"></a></li>
-												
-												
-												
-											
-										
-											
-												
 													<li><a href="javascript:void(0)" role="button"><img src="upload/banner/themebnr/bnr_19_city_menu.jpg" alt="시티 머그 & 텀블러" data-sbseq="W0000071" style="width: 335px; height: 90px"></a></li>
-												
-												
-												
-											
-										
-											
-												
 													<li><a href="javascript:void(0)" role="button"><img src="upload/banner/themebnr/reserve.png" alt="스타벅스 리저브 상품" data-sbseq="W0000037" style="width: 335px; height: 90px"></a></li>
 												
-												
-												
-											
-										
-										
-										
 									</ul>
 								</dd>
 							</dl>
