@@ -61,4 +61,24 @@ public class HomeController {
 		return "menu/drink_list";
 	}
 	
+	@RequestMapping(value="food_view")
+	public String food_view() {
+		return "menu/food_view_SausageOlive_Mini_Pie";
+	}
+	
+	@RequestMapping(value="couponPopup")
+	public String couponPopup() {
+		return "menu/coupon_popup";
+	}
+	
+	@RequestMapping(value="orderList")
+	public String orderList() {
+		return "menu/orderList";
+	}
+	
+	@RequestMapping(value="starbucksCard")
+	public String starbucksCard() {
+		return "menu/starbucksCard";
+	}
+	
 }
