@@ -670,15 +670,7 @@ var eFrequencyPlannerYn = 'Y';
 									<th scope="col">위탁기간</th>
 								</tr>
 							</thead>
-							<tbody id="listBox">
-	<!-- 							<tr>
-									<td>10</td>
-									<td class="t_left"><a href="privacy_board_view">스타벅스 코리아 홈페이지 회원 개인정보 이용내역 발송을 위한 고객정보 제공</a></td>
-									<td>마케팅팀</td>
-									<td>2015.09.11 ~ 2015.09.30</td>
-								</tr>
-	 -->						
-							</tbody>
+							<tbody id="listBox"><tr>     <td>4</td>     <td class="t_left"><a href="javascript:pageView2( 3779 )">스타벅스 체리블라썸 프로모션 해시태그 이벤트 경품 전달을 위한 고객 정보 제공</a></td>     <td>마케팅팀</td>     <td>2020-04-15 ~ 2020-06-15</td>    </tr><tr>     <td>3</td>     <td class="t_left"><a href="javascript:pageView2( 3644 )">스타벅스 소셜 네트워크 서비스 이벤트 경품 전달을 위한 고객 정보 제공</a></td>     <td>마케팅팀</td>     <td>2019-05-13 ~ 2023-04-30</td>    </tr><tr>     <td>2</td>     <td class="t_left"><a href="javascript:pageView2( 3409 )">‘18년 12월 스타벅스-T map 음성주문 이벤트 경품 배송을 위한 고객 정보 제공</a></td>     <td>디지털기획팀</td>     <td>2019-01-14 ~ 2019-01-31</td>    </tr><tr>     <td>1</td>     <td class="t_left"><a href="javascript:pageView2( 2937 )">전자영수증 관련 이벤트 진행을 위한 고객 정보 제공</a></td>     <td>디지털마케팅팀</td>     <td>2017-05-24 ~ 2017-08-23</td>    </tr></tbody>
 						</table>
  						<div class="suggestion_tbl_pagination">
 							<ul class="pager" id="paging">
@@ -750,52 +742,52 @@ var eFrequencyPlannerYn = 'Y';
 					<div class="footer_menus">
 						<ul class="footer_first_menu">
 							<li class="footer_menu_ttl"><a class="en" href="javascript:void(0);">CUSTOMER SERVICE &amp; IDEAS<span class="footer_arrow_down"></span></a></li>
-							<li><a href="util/faq">자주 하는 질문</a></li><!-- 20210809 수정 -->
-							<li><a href="customer/suggestionWrite">고객의 소리</a></li>
+							<li><a href="/util/faq.do">자주 하는 질문</a></li><!-- 20210809 수정 -->
+							<li><a href="/customer/suggestionWrite.do">고객의 소리</a></li>
 							<li class="footer_2depth_ttl"><a href="javascript:void(0)">스타벅스 이용 팁<span class="footer_arrow_down"></span></a>
 								<ul>
-									<li><a href="util/web_tip">홈페이지 이용 팁</a></li>
-									<li><a href="util/app_tip">애플리케이션 이용 팁</a></li>
-									<li><a href="util/partnership_card">제휴카드 안내</a></li>
+									<li><a href="/util/web_tip.do">홈페이지 이용 팁</a></li>
+									<li><a href="/util/app_tip.do">애플리케이션 이용 팁</a></li>
+									<li><a href="/util/partnership_card.do">제휴카드 안내</a></li>
 								</ul>
 							</li>
-							<li><a href="util/online_survey">고객 경험 설문조사</a></li> <!-- 20210811 수정  -->
+							<li><a href="/util/online_survey.do">고객 경험 설문조사</a></li> <!-- 20210811 수정  -->
 							
 							
-							<li><a href="util/guest_eReceipt">비회원 전자영수증 조회</a></li>
+							<li><a href="/util/guest_eReceipt.do">비회원 전자영수증 조회</a></li>
 							
 						</ul>
 						<ul>
 							<li class="footer_menu_ttl"><a class="en" href="javascript:void(0);">COMPANY<span class="footer_arrow_down"></span></a></li>
-							<li><a href="company/index">한눈에 보기</a></li>
-							<li><a href="company/mission">스타벅스 사명</a></li>
+							<li><a href="/footer/company/index.do">한눈에 보기</a></li>
+							<li><a href="/footer/company/mission.do">스타벅스 사명</a></li>
 							<li class="footer_2depth_ttl"><a href="javascript:void(0)">스타벅스 소개<span class="footer_arrow_down"></span></a>
 								<ul>
-									<li><a href="company/starbucks_information">스타벅스 코리아</a></li> <!-- 220118 수정 -->
-									<li><a href="company/starbucks_history">주요 연혁</a></li> <!-- 202107 수정 -->
-									<li><a href="company/starbucks_story">스타벅스 이야기</a></li>
+									<li><a href="/footer/company/starbucks_information.do">스타벅스 코리아</a></li> <!-- 220118 수정 -->
+									<li><a href="/footer/company/starbucks_history.do">주요 연혁</a></li> <!-- 202107 수정 -->
+									<li><a href="/footer/company/starbucks_story.do">스타벅스 이야기</a></li>
 								</ul>
 							</li>
-							<li><a href="company/news_list">국내 뉴스룸</a></li>
-							<li><a href="footer/company/global_starbucks">세계의 스타벅스</a></li>
+							<li><a href="/footer/company/news_list.do">국내 뉴스룸</a></li>
+							<li><a href="/footer/company/global_starbucks.do">세계의 스타벅스</a></li>
 							<!-- 160811 메뉴 추가 -->
 							<li><a href="https://news.starbucks.com" target="_blank">글로벌 뉴스룸</a></li>
 							<!-- 160811 메뉴 추가 end -->
 						</ul>
 						<ul>
 							<li class="footer_menu_ttl"><a class="en" id="goPage" href="javascript:void(0);">CORPORATE SALES<span class="footer_arrow_down"></span></a></li>
-							<li><a href="co_sales/index">단체 및 기업 구매 안내</a></li>
-							<!-- <li><a href="footer/co_sales/sbcard_egift">스타벅스 <span class="en">e-Gift Card</span></a></li> -->
-							<!-- <li><a href="footer/co_sales/sbcard">스타벅스 카드</a></li> -->
-							<!-- <li><a href="footer/co_sales/co-branded"><span class="en">Co-branded</span> 카드</a></li> -->
-							<!-- <li><a href="footer/co_sales/sb_product">스타벅스 상품</a></li> -->
-							<!-- <li><a href="footer/co_sales/sbgift_certificate">스타벅스 상품권</a></li> -->
+							<li><a href="/footer/co_sales/index.do">단체 및 기업 구매 안내</a></li>
+							<!-- <li><a href="/footer/co_sales/sbcard_egift.do">스타벅스 <span class="en">e-Gift Card</span></a></li> -->
+							<!-- <li><a href="/footer/co_sales/sbcard.do">스타벅스 카드</a></li> -->
+							<!-- <li><a href="/footer/co_sales/co-branded.do"><span class="en">Co-branded</span> 카드</a></li> -->
+							<!-- <li><a href="/footer/co_sales/sb_product.do">스타벅스 상품</a></li> -->
+							<!-- <li><a href="/footer/co_sales/sbgift_certificate.do">스타벅스 상품권</a></li> -->
 						</ul>
 						<ul>
 							<li class="footer_menu_ttl"><a class="en" href="javascript:void(0);">PARTNERSHIP<span class="footer_arrow_down"></span></a></li>
-							<li><a href="partnership/new_partner">신규 입점 제의</a></li>
-							<!-- <li><a href="footer/partnership/portal_systems">협력사 포털 시스템</a></li> -->
-							<li><a href="srm/login">협력 고객사 등록신청</a></li>
+							<li><a href="/footer/partnership/new_partner.do">신규 입점 제의</a></li>
+							<!-- <li><a href="/footer/partnership/portal_systems.do">협력사 포털 시스템</a></li> -->
+							<li><a href="/srm/login.do">협력 고객사 등록신청</a></li>
 						</ul>
 						<ul>
 							<li class="footer_menu_ttl"><a class="en" href="javascript:void(0);">ONLINE COMMUNITY<span class="footer_arrow_down"></span></a></li>
@@ -806,24 +798,24 @@ var eFrequencyPlannerYn = 'Y';
 						</ul>
 						<ul>
 							<li class="footer_menu_ttl"><a class="en" href="javascript:void(0);">RECRUIT<span class="footer_arrow_down"></span></a></li>
-							<li><a href="recruit/index">채용 소개</a></li>
+							<li><a href="/footer/recruit/index.do">채용 소개</a></li>
 							<li><a href="http://job.shinsegae.com/recruit_info/notice/notice02_view.jsp?notino=5924" target="_blank">채용 지원하기</a></li><!-- 20210927 수정 -->
 						</ul>
 					</div>
 				</div>
 				<div class="footer_util_btn">
 					<ul>
-						<li><a href="index.htm">HOME</a></li>
+						<li><a href="/">HOME</a></li>
 						<li>
 							<a href="javascript:$.loginLib.showLayerLogin();" class="sign_in">Sign In</a>
 							<a href="javascript:$.loginLib.logout();" class="sign_out" style="display:none;">Sign Out</a>
 						</li>
-						<li class="last"><a href="mem/join1">Join Us</a></li>
+						<li class="last"><a href="/mem/join1.do">Join Us</a></li>
 					</ul>
 				</div>
 				<!-- 수상내역 -->
 				<div class="footer_awards_wrap">
-					<div class="footer_awards_wrap_inner">
+					<div class="footer_awards_wrap_inner">		<div class="bx-wrapper" style="max-width: 1134px;"><div class="bx-viewport" style="width: 100%; overflow: hidden; position: relative; height: 40px;"><ul class="footer_awards_slider" style="width: 815%; position: relative; transition-duration: 0s; transform: translate3d(-1134px, 0px, 0px);"><li style="float: left; list-style: none; position: relative; width: 189px;" class="bx-clone"><a taget="_blank" href="javascript:void(0);"><img alt="여섯가족부 2020 대한민국 일자리대상 여성가족부장관상" src="//image.istarbucks.co.kr/common/img/footer/footer_award23.jpg"></a></li><li style="float: left; list-style: none; position: relative; width: 189px;" class="bx-clone"><a taget="_blank" href="javascript:void(0);"><img alt="행정안전부 2020 소방의 날 행정안전부장관 표창" src="//image.istarbucks.co.kr/common/img/footer/footer_award24.jpg"></a></li><li style="float: left; list-style: none; position: relative; width: 189px;" class="bx-clone"><a taget="_blank" href="javascript:void(0);"><img alt="농림축산식품부 2020 대한민국 커피산업대상 농림축산식품부 장관상" src="//image.istarbucks.co.kr/common/img/footer/footer_award25.jpg"></a></li><li style="float: left; list-style: none; position: relative; width: 189px;" class="bx-clone"><a taget="_blank" href="javascript:void(0);"><img alt="산업통상자원부 2020 대한민국 중소중견기업혁신 대상 국회산업통상자원중소벤처위원회장상" src="//image.istarbucks.co.kr/common/img/footer/footer_award26.jpg"></a></li><li style="float: left; list-style: none; position: relative; width: 189px;" class="bx-clone"><a taget="_blank" href="javascript:void(0);"><img alt="일자리위원회 2020 대한민국 일자리 유공 표창 대통령직속 일자리위원회 부위원장상" src="//image.istarbucks.co.kr/common/img/footer/footer_award27.jpg"></a></li><li style="float: left; list-style: none; position: relative; width: 189px;" class="bx-clone"><a taget="_blank" href="javascript:void(0);"><img alt="동반성장위원회 2020 사랑나눔 사회공헌대상 동반성장위원회 위원장상" src="//image.istarbucks.co.kr/common/img/footer/footer_award28.jpg"></a></li>			<li style="float: left; list-style: none; position: relative; width: 189px;"><a taget="_blank" href="javascript:void(0);"><img alt="여섯가족부 2020 대한민국 일자리대상 여성가족부장관상" src="//image.istarbucks.co.kr/common/img/footer/footer_award23.jpg"></a></li>			<li style="float: left; list-style: none; position: relative; width: 189px;"><a taget="_blank" href="javascript:void(0);"><img alt="행정안전부 2020 소방의 날 행정안전부장관 표창" src="//image.istarbucks.co.kr/common/img/footer/footer_award24.jpg"></a></li>			<li style="float: left; list-style: none; position: relative; width: 189px;"><a taget="_blank" href="javascript:void(0);"><img alt="농림축산식품부 2020 대한민국 커피산업대상 농림축산식품부 장관상" src="//image.istarbucks.co.kr/common/img/footer/footer_award25.jpg"></a></li>			<li style="float: left; list-style: none; position: relative; width: 189px;"><a taget="_blank" href="javascript:void(0);"><img alt="산업통상자원부 2020 대한민국 중소중견기업혁신 대상 국회산업통상자원중소벤처위원회장상" src="//image.istarbucks.co.kr/common/img/footer/footer_award26.jpg"></a></li>			<li style="float: left; list-style: none; position: relative; width: 189px;"><a taget="_blank" href="javascript:void(0);"><img alt="일자리위원회 2020 대한민국 일자리 유공 표창 대통령직속 일자리위원회 부위원장상" src="//image.istarbucks.co.kr/common/img/footer/footer_award27.jpg"></a></li>			<li style="float: left; list-style: none; position: relative; width: 189px;"><a taget="_blank" href="javascript:void(0);"><img alt="동반성장위원회 2020 사랑나눔 사회공헌대상 동반성장위원회 위원장상" src="//image.istarbucks.co.kr/common/img/footer/footer_award28.jpg"></a></li>		<li style="float: left; list-style: none; position: relative; width: 189px;" class="bx-clone"><a taget="_blank" href="javascript:void(0);"><img alt="여섯가족부 2020 대한민국 일자리대상 여성가족부장관상" src="//image.istarbucks.co.kr/common/img/footer/footer_award23.jpg"></a></li><li style="float: left; list-style: none; position: relative; width: 189px;" class="bx-clone"><a taget="_blank" href="javascript:void(0);"><img alt="행정안전부 2020 소방의 날 행정안전부장관 표창" src="//image.istarbucks.co.kr/common/img/footer/footer_award24.jpg"></a></li><li style="float: left; list-style: none; position: relative; width: 189px;" class="bx-clone"><a taget="_blank" href="javascript:void(0);"><img alt="농림축산식품부 2020 대한민국 커피산업대상 농림축산식품부 장관상" src="//image.istarbucks.co.kr/common/img/footer/footer_award25.jpg"></a></li><li style="float: left; list-style: none; position: relative; width: 189px;" class="bx-clone"><a taget="_blank" href="javascript:void(0);"><img alt="산업통상자원부 2020 대한민국 중소중견기업혁신 대상 국회산업통상자원중소벤처위원회장상" src="//image.istarbucks.co.kr/common/img/footer/footer_award26.jpg"></a></li><li style="float: left; list-style: none; position: relative; width: 189px;" class="bx-clone"><a taget="_blank" href="javascript:void(0);"><img alt="일자리위원회 2020 대한민국 일자리 유공 표창 대통령직속 일자리위원회 부위원장상" src="//image.istarbucks.co.kr/common/img/footer/footer_award27.jpg"></a></li><li style="float: left; list-style: none; position: relative; width: 189px;" class="bx-clone"><a taget="_blank" href="javascript:void(0);"><img alt="동반성장위원회 2020 사랑나눔 사회공헌대상 동반성장위원회 위원장상" src="//image.istarbucks.co.kr/common/img/footer/footer_award28.jpg"></a></li></ul></div><div class="bx-controls bx-has-pager bx-has-controls-auto"><div class="bx-pager bx-default-pager"><div class="bx-pager-item"><a href="" data-slide-index="0" class="bx-pager-link">1</a></div><div class="bx-pager-item"><a href="" data-slide-index="1" class="bx-pager-link active">2</a></div></div><div class="bx-controls-auto"><div class="bx-controls-auto-item"><a class="bx-stop" href="">Stop</a></div></div></div></div>
 						<div class="footer_slider_controller">
 							<div class="footer_slider_controls"></div>
 							<div class="footer_slider_pagers"></div>
@@ -833,7 +825,7 @@ var eFrequencyPlannerYn = 'Y';
 				<!-- 수상내역 end -->
                 
                 <!-- Express DT MSR 회원 확인 Popup -->
-				<div class="dtPop ecoPop" id="msrCheckPop" style="display:none">
+				<div class="dtPop ecoPop" id="msrCheckPop" style="display: none; margin-top: -51px;">
 					<div class="head">
 						<p class="tt"></p>
 						<p id="dtPopCommonCloseBtn" class="close dtPopClose"><a href="javascript:void(0)"></a></p> <!-- 팝업 닫힘 클래스 : dtPopClose -->
@@ -855,7 +847,7 @@ var eFrequencyPlannerYn = 'Y';
 					<!--// 버튼 -->
 				</div>
 				<!-- 개인컵 리워드  MSR 회원 확인 Popup s-->
-				<div class="dtPop ecoPop" id="msrCheckPop_rewardTumbler" style="display:none">
+				<div class="dtPop ecoPop" id="msrCheckPop_rewardTumbler" style="display: none; margin-top: -51px;">
 					<div class="head">
 						<p class="tt">스타벅스 리워드 등록 안내</p>  <!-- 스타벅스 리워드 수정  -->
 						<p id="tumblerPopCommonCloseBtn" class="close ecoPopClose"><a href="javascript:void(0)"></a></p> <!-- 팝업 닫힘 클래스 : dtPopClose -->
@@ -877,19 +869,19 @@ var eFrequencyPlannerYn = 'Y';
 				
 				<!-- 150517 추가 - 문진욱 -->
 				<aside class="copyright">
-					<a class="c_00b050" href="privacy">개인정보처리방침</a>
-					<a href="rules_vod" class="mbn">영상정보처리기기 운영관리 방침</a>
-					<a href="rules">홈페이지 이용약관</a>
-					<a href="rules_loc" class="mbn">위치정보 이용약관</a>
-					<a href="rules_msr" class="mbn">스타벅스 카드 이용약관</a>
-					<a href="rules_non" class="mbn">비회원 이용약관</a>
+					<a class="c_00b050" href="/footer/etc/privacy.do">개인정보처리방침</a>
+					<a href="/footer/etc/rules_vod.do" class="mbn">영상정보처리기기 운영관리 방침</a>
+					<a href="/footer/etc/rules.do">홈페이지 이용약관</a>
+					<a href="/footer/etc/rules_loc.do" class="mbn">위치정보 이용약관</a>
+					<a href="/footer/etc/rules_msr.do" class="mbn">스타벅스 카드 이용약관</a>
+					<a href="/footer/etc/rules_non.do" class="mbn">비회원 이용약관</a>
 					<span class="br"><!-- 150713 삭제  구명준  <a href="javascript:void(0);">위치정보 이용약관</a> -->
-					<a href="rules_mdp">My DT Pass 서비스 이용약관</a></span> <!-- 20200914 mdp 추가 -->
-					<a href="hotline" class="last">윤리경영 핫라인</a>
+					<a href="/footer/etc/rules_mdp.do">My DT Pass 서비스 이용약관</a></span> <!-- 20200914 mdp 추가 -->
+					<a href="/footer/etc/hotline.do" class="last">윤리경영 핫라인</a>
 					<br>
-					<a class="btned_link" href="coming_route">찾아오시는 길</a>
-					<a class="btned_link" href="partnership/new_partner">신규입점제의</a>
-					<a class="btned_link" href="sitemap">사이트 맵</a><br>
+					<a class="btned_link" href="/footer/etc/coming_route.do">찾아오시는 길</a>
+					<a class="btned_link" href="/footer/partnership/new_partner.do">신규입점제의</a>
+					<a class="btned_link" href="/footer/etc/sitemap.do">사이트 맵</a><br>
 					<ul class="copy_menu">
 						<li>사업자등록번호 : 201-81-21515</li>
 						<li>주식회사 에스씨케이컴퍼니 대표이사 : 송 데이비드 호섭</li> <!-- 220105 수정 -->

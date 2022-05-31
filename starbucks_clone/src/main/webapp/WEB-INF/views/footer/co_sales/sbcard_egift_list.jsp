@@ -62,9 +62,7 @@ var eFrequencyPlannerYn = 'Y';
 </script>
 
     <script>
-    <!--
-        location.href = "footer/co_sales/index";
-    //-->
+        //location.href = "footer/co_sales/index";
     </script>
 
     <link href="common/css/style_util-2.css" rel="stylesheet">

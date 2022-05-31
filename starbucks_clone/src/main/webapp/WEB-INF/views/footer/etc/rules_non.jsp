@@ -641,15 +641,128 @@ var eFrequencyPlannerYn = 'Y';
 							<form action="form">
 								<div class="select_box">
 									<label class="value" for="use_term_select">이전 비회원 이용약관 보기</label>
-									<select title="비회원 이용약관 보기" id="use_term_select" name="jump">
-									</select>
+									<select title="비회원 이용약관 보기" id="use_term_select" name="jump"><option value="">이전 비회원 이용약관 보기</option><option value="413">2021년 07월 15일 시행</option><option value="161">2020년 04월 01일 시행</option><option value="22">2019년 01월 09일 시행</option></select>
 								</div>
 							</form>
 						</div>
 						
 						<!-- 202101 수정 -->
 						<div class="non_text" id="non_text">
-						</div>
+
+<div class="privacy_cont noMember">
+    <p class="tit">비회원 이용약관</p>
+    <p class="pri_tit" id="quick_01">제 1 장 총칙</p>
+    <p class="sub_tit" id="quick_01_01">1. 목적</p>
+    <ol class="pri_con pri_con2 mb40">
+        <p class="mb40">이 약관은 스타벅스 코리아를 운영하는 주식회사 에스씨케이컴퍼니(이하“회사”라고 합니다)가 모바일 <span class="en">App</span>과 인터넷사이트(<span class="en">http://www.starbucks.co.kr</span>)를 통하여 제공하는 서비스 및 기타 정보서비스(이하 “서비스”라고 합니다.)의 이용 조건 및 절차에 관한 기본적인 사항 등을 규정하는 데 그 목적이 있습니다.</p>
+        <p class="sub_tit" id="quick_01_02">2. 용어정의</p>
+        <ol class="pri_con pri_con2 mb40">
+            <li class="mb20"><strong>이 약관에서 사용하는 용어의 정의는 다음과 같습니다.</strong></li>
+            <li>가. “비회원”이라 함은 회사의 “서비스”에 접속하여 회원가입을 하지 않고 이 약관에 따라 “회사”와 이용계약을 체결하고 “회사”가 제공하는 “서비스”를 이용하는 고객을 말합니다.</li>
+            <li>나. “<span class="en">GUEST</span>”라 함은, 비회원 중 모바일 기반의 본인인증 서비스 사업자가 제공하는 인증방법을 통해 본인 인증을 한 고객을 지칭합니다.</li>
+            <li>다. “<span class="en">GUEST</span> 리워드”는 고객이 <span class="en">GUEST</span> 및 홈페이지 회원을 대상으로 사이렌 오더 이용 시, 제공하는 리워드 서비스로서, 구체적인 리워드 내용이나, 서비스 운영 방침은 회사의 정책에 따라 변할 수 있으며, 이에 대해서는 별도의 방법으로 사전에 안내해 드립니다.</li>
+        </ol>
+
+        <p class="sub_tit" id="quick_01_03">3. 약관의 변경</p>
+        <ol class="pri_con pri_con2 mb40">
+            <li>가. 회사는 경영환경의 변화 또는 영업정책에 따라 본 약관을 변경할 수 있으며 변경된 약관은 비회원에게 화면을 통한 공지 등의 방법으로 공지함으로 효력을 발생합니다.</li>
+            <li>나. 회사는 약관을 변경할 경우에는 적용일자 및 개정사유를 명시하여 현행약관과 함께 홈페이지 및 모바일 <span class="en">App</span>에 그 적용일의 7일전부터 공시합니다. 다만, 비회원에게 불리한 내용으로 약관을 개정하는 경우에는 적용일로부터 30일전까지 공시하고 변경된 약관은 공시하거나 고지한 적용일로부터 효력이 발생합니다.</li>
+        </ol>
+    </ol>
+
+    <p class="pri_tit" id="quick_02">제2장 비회원 관리 및 서비스</p>
+    <ol class="pri_con pri_con2 mb40">
+        <li>
+            <p class="sub_tit" id="quick_02_01">1. 서비스의 제공 등</p>
+            <ul class="mb40">
+                <!-- 20180517수정 : 클래스 추가 -->
+                <li>가. 회사는 여러 가지 각종 제품, 이벤트 정보 및 리워드 서비스 등을 제공하며 필요에 따라 그 내용이 추가, 변경 및 정지될 수 있습니다. 또한 회사는 천재지변 또는 중계선 고장 등의 불가피한 사정으로 인하여 서비스를 중단할 수 있습니다.</li>
+                <li>나. 회사는 긴급한 사정, 회원의 정당한 권리 침해 방지 등을 위해 필요한 경우, 별도의 사전 동의 없이 홈페이지 및 모바일 <span class="en">App</span>을 통해 고지 할 수 있습니다.</li>
+            </ul>
+        </li>
+        <li>
+            <p class="sub_tit" id="quick_02_02">2. “비회원”에 대한 고지</p>
+            <ol class="mb40">
+                <li>
+                    가. 회사가 약관의 변경 또는 비회원에 대한 통지를 하는 경우 아래의 규정된 방법 중 1가지 이상의 방법으로 비회원에게 고지 하되, 비회원 전체에 대한 통지의 경우 7일 전 “회사”의 게시판에 게시하도록 한다.
+                    <ul>
+                        <li>1. 회사의 홈페이지 또는 앱 등을 통한 게시</li>
+                        <li>2. 전자우편 또는 전화연락을 통한 통지</li>
+                        <li>3. 회사의 매장 게시</li>
+                    </ul>
+                </li>
+                <li>나. 본 조의 고지방법은 이 약관에서 달리 규정하지 않는 한, 이 약관의 각 조항에서 규정하는 통보 또는 통지의 경우에 이를 준용한다.</li>
+            </ol>
+        </li>
+        <li>
+            <p class="sub_tit" id="quick_02_03">3. 정보의 제공 및 광고의 게재</p>
+            <ul class="mb40">
+                <li>가. '회사'는 '비회원'이 '서비스' 이용 중 필요하다고 인정되는 다양한 정보를 공지사항 등의 방법으로 '비회원'에게 제공할 수 있습니다.</li>
+                <li>나. 제1항의 정보를 전화 및 모사전송기기에 의하여 전송하려고 하는 경우에는 '비회원'의 사전 동의를 받아서 전송합니다. 다만, '비회원'의 거래관련 정보 및 고객문의 등에 대한 회신에 있어서는 제외됩니다.</li>
+            </ul>
+        </li>
+        <li>
+            <p class="sub_tit" id="quick_02_04">4. 업무의 제휴</p>
+            <p class="mb40">회사는 이용자의 편의를 도모하고 효과적인 서비스 운영을 위해 서비스의 일정 부분에 대해 다른 회사와 제휴할 수 있습니다. <br>제휴회사가 서비스와 관련하여 진행한 활동은 회사가 직접 시행한 활동에 준하는 효력이 있습니다.</p>
+        </li>
+        <li>
+            <p class="sub_tit" id="quick_02_06">5. e-프리퀀시 이벤트 적립</p>
+            <p class="mb40"><span class="en">GUEST</span> 고객은 e-프리퀀시 이벤트에 참여할 수 있으며, 필요한 이용 조건, 절차 및 권리, 의무 등 기본 사항은 “홈페이지 이용약관” 제2장 제7조 “이벤트 참여” 내용에 따릅니다.</p>
+        </li>
+        <li>
+            <p class="sub_tit" id="quick_02_07">6. 사이렌 오더 서비스 </p>
+            <p class="mb40">비회원 및 <span class="en">GUEST</span>는 스타벅스 모바일 <span class="en">App</span>을 통해 제공하는 사이렌 오더 서비스를 이용할 수 있으며, 필요한 이용 조건, 절차 및 당사자간의 권리, 의무 등 기본적인 사항을 “홈페이지 이용약관”의 제2장 제8조 “사이렌 오더 서비스” 내용에 따릅니다.</p>
+        </li>
+        <li>
+            <p class="sub_tit" id="quick_02_07">7. Gift 서비스</p>
+            <p class="mb40">비회원은 <span class="en">Gift</span> 서비스에서 판매된 배송상품, <span class="en">e-Gift Item</span>, <span class="en">e-Gift Card</span>를 수신할 수 있습니다. 서비스 이용 시 필요한 이용 조건, 절차 및 당사자간의 권리, 의무 등 기본적인 사항은 “홈페이지 이용약관”의 내용에 따릅니다.</p>
+        </li>
+
+        <li class="new_color_point">
+            <p class="sub_tit" id="quick_02_08">8. 전자영수증(e-Receipt &amp; History)의 발행 </p>
+            <ol class="mb40">
+                <li>
+                    가. 회사는 비회원과 거래한 내역 및 그 증빙에 대하여, 전자적 형태인 전자 영수증으로 우선 발급하며, 비회원은 이에 동의합니다.
+                </li>
+                <li>
+                    <p class="text_top">나. 회사는 관련법령에 의거하여 비회원과의 거래내역을 거래가 발생한 날로부터 최대 5년 간 보관하며, 해당 기간 동안 비회원은 회사가 제공하는 홈페이지 및 모바일 <span class="en">App</span>을 통하여 최근 5년 간의 거래 내역을 열람 및 확인할 수 있습니다. 단, 다음 각 호에 해당하는 경우 모바일 <span class="en">App</span>을 통한 전자영수증 확인 및 지류 영수증 제공은
+                        불가합니다</p>
+                    <ul>
+                        <li>① 비회원으로 이용 중에 모바일 <span class="en">App</span> 삭제 시 </li>
+                    </ul>
+                </li>
+                <li>
+                    <p class="text_top">다. 1항에도 불구하고, 비회원이 영수증 발급을 희망하는 경우, 홈페이지에서 비회원 전자영수증 조회 기능을 통해 결제수단에 관련된 정보입력 하고, 최근 5년간 전자영수증 내용을 확인할 수 있습니다. </p>
+                </li>
+                <li>
+                    <p class="text_top">라. 모바일 <span class="en">App</span>의 “전자영수증(<span class="en">e-Receipt &amp; History</span>)” 메뉴를 통해 사이렌 오더 주문, e-쿠폰 결제 등 매장에서 승인 완료된 비회원의 거래내역 등을 확인할 수 있습니다.</p>
+                </li>
+                <li>
+                    <p class="text_top">마. 회사는 다음 각 호에 해당하는 경우, “전자영수증(<span class="en">e-Receipt &amp; History</span>)” 서비스 전부 또는 일부를 제한하거나 중지할 수 있습니다.</p>
+                    <ul>
+                        <li>① 서비스를 위한 설비 보수, 점검, 교체 등의 사유로 일시적인 서비스 장애가 발생한 경우</li>
+                        <li>② 제반 설비의 장애 또는 이용폭주로 정상적인 서비스 이용이 어려운 경우</li>
+                        <li>③ 천재지변 등 불가항력적 사유가 발생한 경우</li>
+                    </ul>
+                </li>
+            </ol>
+        </li>
+        <li>
+            <p class="sub_tit" id="quick_02_07">9. 서비스의 중단</p>
+            <ul class="mb40">
+                <li>가. 회사는 컴퓨터 등 정보통신설비의 보수 점검 교체 및 고장, 통신의 두절, 기타 불가항력적 사유가 발생한 경우에는 서비스의 제공을 일시적으로 중단할 수 있습니다.</li>
+                <li>나. 회사는 제1항의 사유로 서비스의 제공이 일시적으로 중단됨으로 인하여 이용자 또는 제3자가 입은 손해에 대하여 배상하지 아니합니다. 단 회사의 고의 또는 과실이 있는 경우에는 그러하지 아니합니다.</li>
+            </ul>
+        </li>
+    </ol>
+
+    <p class="pri_tit" id="quick_02">제 3장 약관 및 손해배상</p>
+
+    <p class="mb40">약관 외 준칙 이 약관에 명시되지 않은 사항은 정보통신망 이용촉진 및 정보보호 등에 관한 법률, 전기통신기본법, 전기통신사업법 및 기타 관련법령의 규정에 의합니다.<br> 회사는 약관의 규제 등에 관한 법률, 전자거래기본법, 전자서명법, 정보통신망 이용촉진 및 정보보호 등에 관한 법률에 따릅니다.<br> 이 약관에서 정하지 아니한 사항과 이 약관의 해석에 관하여는 정부가 제정한 전자거래 소비자보호지침 및 관계법령 또는 전자상거래 상 관례에
+        따릅니다.<br> 책임 제한 기타 회사는 천재지변 기타 이에 준하는 불가항력으로 인하여 서비스를 제공할 수 없거나 회사의 귀책사유가 없는 경우에는 책임을 지지 않습니다. 또한 회사는 서비스 이용과 관련하여 이용자의 고의 또는 과실로 인하여 발생한 손해에 관하여도 책임을 지지 않습니다. 만일 서비스 이용으로 발생한 분쟁에 대해 소송이 제기될 경우 회사의 소재지를 관할하는 법원을 관할법원으로 합니다.</p>
+
+    <p><span class="color_point">본 이용약관은 2022년 1월 19일부터 시행합니다.</span></p>
+</div></div>
 						
 					</div>
 					<!-- //ms_cont -->
@@ -662,31 +775,31 @@ var eFrequencyPlannerYn = 'Y';
         <li>
             <a href="javascript:void(0);">개인정보 처리방침<span class="sbox_arrow_down"></span></a> <!-- 20211213 수정 -->
             <ul>
-				<li><a href="privacy">· 개인정보 처리방침</a></li>
-				<li><a href="privacy_board_list-1">· 개인정보처리의 업무위탁관련</a></li>
+				<li><a href="/footer/etc/privacy.do">· 개인정보 처리방침</a></li>
+				<li><a href="/footer/etc/privacy_board_list.do">· 개인정보처리의 업무위탁관련</a></li>
 			</ul>
         </li>
         <li>
-            <a href="rules_vod">영상정보처리기기<br>운영관리 방침</a>
+            <a href="/footer/etc/rules_vod.do">영상정보처리기기<br>운영관리 방침</a>
         </li>
         <li>
             <a href="javascript:void(0);">이용약관<span class="sbox_arrow_down"></span></a>
             <ul>
-                <li><a href="rules">· 홈페이지 이용약관</a></li>
-                <li><a href="rules_loc">· 위치정보 이용약관</a></li>
-                <li><a href="rules_msr">· 스타벅스 카드 이용약관</a></li>
-                <li><a href="rules_non">· 비회원 이용약관</a></li>
-                <li><a href="rules_mdp">· My DT Pass 서비스 이용약관</a></li> 
+                <li><a href="/footer/etc/rules.do">· 홈페이지 이용약관</a></li>
+                <li><a href="/footer/etc/rules_loc.do">· 위치정보 이용약관</a></li>
+                <li><a href="/footer/etc/rules_msr.do">· 스타벅스 카드 이용약관</a></li>
+                <li><a href="/footer/etc/rules_non.do">· 비회원 이용약관</a></li>
+                <li><a href="/footer/etc/rules_mdp.do">· My DT Pass 서비스 이용약관</a></li> 
             </ul>
         </li>
         <li>
-            <a href="hotline">윤리경영 핫라인</a>
+            <a href="/footer/etc/hotline.do">윤리경영 핫라인</a>
         </li>
         <li>
-            <a href="coming_route">찾아오시는 길</a>
+            <a href="/footer/etc/coming_route.do">찾아오시는 길</a>
         </li>
         <li>
-            <a href="sitemap">사이트 맵</a>
+            <a href="/footer/etc/sitemap.do">사이트 맵</a>
         </li>
     </ul>
 </nav>
