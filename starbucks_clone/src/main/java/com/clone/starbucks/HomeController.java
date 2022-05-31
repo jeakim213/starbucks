@@ -57,14 +57,12 @@ public class HomeController {
 		return "coffee/doppio";
 	}
 	
-
 	@RequestMapping(value="admin_3")
 	public String admin_3() {
 		return "my/admin_3";
 
 	}
 	
-
 	@RequestMapping(value="admin_4")
 	public String admin_4() {
 		return "my/admin_4";
@@ -80,7 +78,8 @@ public class HomeController {
 	@RequestMapping(value="admin_6")
 	public String admin_6() {
 		return "my/admin_6";
-	}	
+	}
+
 	
 	@RequestMapping(value="latte")
 	public String latte() {
@@ -219,6 +218,23 @@ public class HomeController {
 	}
 	
 	
+	//0531 13 다정
+	@RequestMapping(value="food_view")
+	public String food_view() {
+		return "menu/food_view";
+	}
+	
+	//0531 14 다정
+	@RequestMapping(value="product_view")
+	public String product_view() {
+		return "menu/product_view";
+	}
+	
+	@RequestMapping(value="drink_view")
+	public String drink_view() {
+		return "menu/drink_view";
+	}
+	
 	//0531 다정
 	@RequestMapping(value="orderList")
 	public String orderList() {
@@ -318,11 +334,13 @@ public class HomeController {
 		return "msr/scard/register_inquiry";
 	}
 
+
 	/*@RequestMapping(value="scard_scard_gallery")
 	public String scard_scard_gallery() {
 		return "msr/scard/scard_gallery";
 	}
 	*/
+
 
 	@RequestMapping(value="sceGift_egift_information")
 	public String sceGift_egift_information() {
@@ -488,6 +506,7 @@ public class HomeController {
 	public String campaign_list() {
 		return "whats_new/campaign_list";
 	}
+	
 	@RequestMapping(value="whats_new_campaign_list_1")
 	public String campaign_list_1() {
 		return "whats_new/campaign_list-1";

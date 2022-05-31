@@ -647,7 +647,8 @@ var eFrequencyPlannerYn = 'Y';
                             <div class="myAssignZone">
                                 <h4>소시지&amp;올리브 미니 파이<br><span>Sausage&amp;Olive Mini Pie</span></h4>
                                 <p class="t1">통통한 미니 소시지와 그린 올리브를 패스츄리에 토핑하여 골라 먹는 재미를 더한 미니 파이로 세이보리하고 고소한 풍미가 매력적인 스낵 브레드입니다.</p>
-                                <div class="myDrink"><a href="javascript:void(0)" role="button" title="나만의 푸드 등록 옵션">나만의 푸드로 등록</a><!-- 접근성_20171123 role, title 추가 --></div>
+                                <!-- 0531 다정 나만의 푸드로 등록->구매하기로 변경 -->
+                                <div class="myDrink"><a href="javascript:void(0)" role="button" title="구매 및 담기">구매 및 담기</a><!-- 접근성_20171123 role, title 추가 --></div>
                             </div>
                             <div class="m_view_slide">
                                 <div class="bx-wrapper" style="max-width: 100%;"><div class="bx-viewport" style="width: 100%; overflow: hidden; position: relative; height: 0px;"><ul class="m_view_slider" style="width: 315%; position: relative; transition-duration: 0s; transform: translate3d(0px, 0px, 0px);"><li style="float: left; list-style: none; position: relative; width: 100px;" class="bx-clone"><img class="m_view_img" src="https://image.istarbucks.co.kr/upload/store/skuimg/2022/04/[9300000004025]_20220406130412481.jpg" data-zoom-image="https://image.istarbucks.co.kr/upload/store/skuimg/2022/04/[9300000004025]_20220406130412481.jpg" alt=""></li>
@@ -756,7 +757,7 @@ var eFrequencyPlannerYn = 'Y';
                                 <!-- <a href="javascript:void(0)"> --><!-- 접근성_20171123 이동 페이지 없을 시 anchor tag 제거 -->
                                     <li>해당 상품과 관련된 진행 중인 프로모션이 없습니다.</li>
                                 </ul>
-                                <p class="more"><a href="whats_new/campaign_list"><img src="//image.istarbucks.co.kr/common/img/menu/news_more.png" alt="프로모션 새소식 더보기"></a></p>
+                                <p class="more"><a href="#"><img src="//image.istarbucks.co.kr/common/img/menu/news_more.png" alt="프로모션 새소식 더보기"></a></p>
                             </div>
                             <!-- <div class="productView_top_right">
                                 <dl>

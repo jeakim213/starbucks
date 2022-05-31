@@ -1057,6 +1057,7 @@ var eFrequencyPlannerYn = 'Y';
 				
 				<!-- 150517 추가 - 문진욱 -->
 				<aside class="copyright">
+				<a class="c_00b050" href="#">개인정보처리방침</a>
 					<a class="c_00b050" href="footer/etc/privacy">개인정보처리방침</a>
 					<a href="footer/etc/rules_vod" class="mbn">영상정보처리기기 운영관리 방침</a>
 					<a href="footer/etc/rules">홈페이지 이용약관</a>
