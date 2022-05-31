@@ -992,13 +992,8 @@ var eFrequencyPlannerYn = 'Y';
 									</table>
 									<div class="m_coffee_info">
 									</div>
-<<<<<<< HEAD
 								</dd> -->
 							</dl>
-=======
-								</dd>
-							</dl> -->
->>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
 						</div>
 					</div>
 					<!-- 음료 리스트(카테고리 별) end -->
@@ -1783,7 +1778,7 @@ var eFrequencyPlannerYn = 'Y';
 				
                 var url = '/menu/productListAjax';
     			
-                   url = '/upload/json/menu/' + pro_seq + '.js';
+                   url = ${pageContext.request.contextPath} + '/upload/json/menu/' + pro_seq + '.json';
                 
                 __ajaxCall(url, option , true, "JSON", "POST",
                 function(data) {
@@ -1853,7 +1848,7 @@ var eFrequencyPlannerYn = 'Y';
 					
 	                var url = '/menu/productListAjax';
 	    			
-	                   url = '/upload/json/menu/' + cngCateCode + '.js';
+	                   url = ${pageContext.request.contextPath} + '/upload/json/menu/' + cngCateCode + '.json';
 	                
 	                __ajaxCall(url, option , true, "JSON", "POST", 
 	                function(data) {
@@ -2105,11 +2100,6 @@ var eFrequencyPlannerYn = 'Y';
         <script type="text/x-jquery-tmpl" id="tpl_productNutTr">
             <tr>
                 <td>${product_NM}</td>
-<<<<<<< HEAD
-               
-=======
-                
->>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
             </tr>
         </script>
         <script type="text/x-jquery-tmpl" id="tpl_productNutMob">
@@ -2118,11 +2108,6 @@ var eFrequencyPlannerYn = 'Y';
                 <li>
                     <dl>
                         <dt>칼로리(Kcal)</dt>
-<<<<<<< HEAD
-                       
-=======
-                        
->>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
                     </dl>
                 </li>
                 <li>
@@ -2140,11 +2125,6 @@ var eFrequencyPlannerYn = 'Y';
                 <li>
                     <dl>
                         <dt>당류(g)</dt>
-<<<<<<< HEAD
-                       
-=======
-                        
->>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
                     </dl>
                 </li>
                 <li>

@@ -481,7 +481,6 @@ var eFrequencyPlannerYn = 'Y';
 									<!-- <li><a href="menu/product_list?CATE_CD=product_planner">스타벅스 플래너</a></li> --> <!-- 20210602 삭제 -->
 								</ul>
 							</li>
-<<<<<<< HEAD
 							<li>
 								<a role="button" href="javascript:void(0);">카드<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 -->
 								<ul>
@@ -491,11 +490,7 @@ var eFrequencyPlannerYn = 'Y';
 								</ul>
 							</li>
 							<!-- <li>
-<<<<<<< HEAD
 								<a href="wholecake/reserve_cake01">온라인 케익 예약 span class="mob_gnb_arrow_down"></span</a>
-=======
-								<a href="/wholecake/reserve_cake01">온라인 케익 예약 span class="mob_gnb_arrow_down"></span</a>
->>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
 								<ul>
 									<li><a href="javascript:void(0);">케익선택</a></li>
 									<li><a href="javascript:void(0);">예약정보입력</a></li>
@@ -510,9 +505,6 @@ var eFrequencyPlannerYn = 'Y';
 									<li><a href="menuStory/teavana">스타벅스 티바나</a></li>
 								</ul>
 							</li>
-=======
-							
->>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
 						</ul>
 						<ul>
 							<li class="mob_gnb_ttl2"><a role="button" class="en" href="javascript:void(0);">STORE<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 --></li>
