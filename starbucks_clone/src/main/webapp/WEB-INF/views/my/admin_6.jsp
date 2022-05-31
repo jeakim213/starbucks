@@ -41,12 +41,9 @@
 			</tr>
 			<tr>
 				<td colspan=2 align="right">
-					<input type=button style="width: 60px;" value='수정'
-						onclick="location.href='${root}index?formpath=modifyCheck&modifyId=${user.id }'" />
-					<input type=button style="width: 60px;" value='삭제'
-						onclick="location.href='${root}index?formpath=memberDelete&modifyId=${user.id }'" />
-					<input type=button style="width: 60px;" value='목록'
-						onclick="location.href='memberListProc'" />
+					<button onclick="location.href='${root}index?formpath=modifyCheck&modifyId=${user.id }'">수정</button>
+					<button onclick="location.href='${root}index?formpath=memberDelete&modifyId=${user.id }'">삭제</button>
+					<button onclick="location.href='memberListProc'">목록</button>
 				</td>
 			</tr>
 		</table>

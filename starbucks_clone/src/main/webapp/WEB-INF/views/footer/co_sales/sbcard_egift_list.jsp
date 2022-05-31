@@ -62,9 +62,13 @@ var eFrequencyPlannerYn = 'Y';
 </script>
 
     <script>
-    <!--
-        location.href = "footer/co_sales/index";
-    //-->
+<<<<<<< HEAD
+        //location.href = "footer/co_sales/index";
+=======
+    
+        //location.href = "footer/co_sales/index";
+    
+>>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
     </script>
 
     <link href="common/css/style_util-2.css" rel="stylesheet">
@@ -1040,16 +1044,16 @@ var eFrequencyPlannerYn = 'Y';
 						</ul>
 						<ul>
 							<li class="footer_menu_ttl"><a class="en" href="javascript:void(0);">COMPANY<span class="footer_arrow_down"></span></a></li>
-							<li><a href="../company/index">한눈에 보기</a></li>
-							<li><a href="../company/mission">스타벅스 사명</a></li>
+							<li><a href="company/index">한눈에 보기</a></li>
+							<li><a href="company/mission">스타벅스 사명</a></li>
 							<li class="footer_2depth_ttl"><a href="javascript:void(0)">스타벅스 소개<span class="footer_arrow_down"></span></a>
 								<ul>
-									<li><a href="../company/starbucks_information">스타벅스 코리아</a></li> <!-- 220118 수정 -->
-									<li><a href="../company/starbucks_history">주요 연혁</a></li> <!-- 202107 수정 -->
-									<li><a href="../company/starbucks_story">스타벅스 이야기</a></li>
+									<li><a href="company/starbucks_information">스타벅스 코리아</a></li> <!-- 220118 수정 -->
+									<li><a href="company/starbucks_history">주요 연혁</a></li> <!-- 202107 수정 -->
+									<li><a href="company/starbucks_story">스타벅스 이야기</a></li>
 								</ul>
 							</li>
-							<li><a href="../company/news_list">국내 뉴스룸</a></li>
+							<li><a href="company/news_list">국내 뉴스룸</a></li>
 							<li><a href="footer/company/global_starbucks">세계의 스타벅스</a></li>
 							<!-- 160811 메뉴 추가 -->
 							<li><a href="https://news.starbucks.com" target="_blank">글로벌 뉴스룸</a></li>
@@ -1066,7 +1070,7 @@ var eFrequencyPlannerYn = 'Y';
 						</ul>
 						<ul>
 							<li class="footer_menu_ttl"><a class="en" href="javascript:void(0);">PARTNERSHIP<span class="footer_arrow_down"></span></a></li>
-							<li><a href="../partnership/new_partner">신규 입점 제의</a></li>
+							<li><a href="partnership/new_partner">신규 입점 제의</a></li>
 							<!-- <li><a href="footer/partnership/portal_systems">협력사 포털 시스템</a></li> -->
 							<li><a href="srm/login">협력 고객사 등록신청</a></li>
 						</ul>
@@ -1079,7 +1083,7 @@ var eFrequencyPlannerYn = 'Y';
 						</ul>
 						<ul>
 							<li class="footer_menu_ttl"><a class="en" href="javascript:void(0);">RECRUIT<span class="footer_arrow_down"></span></a></li>
-							<li><a href="../recruit/index">채용 소개</a></li>
+							<li><a href="recruit/index">채용 소개</a></li>
 							<li><a href="http://job.shinsegae.com/recruit_info/notice/notice02_view.jsp?notino=5924" target="_blank">채용 지원하기</a></li><!-- 20210927 수정 -->
 						</ul>
 					</div>
@@ -1150,19 +1154,19 @@ var eFrequencyPlannerYn = 'Y';
 				
 				<!-- 150517 추가 - 문진욱 -->
 				<aside class="copyright">
-					<a class="c_00b050" href="../etc/privacy">개인정보처리방침</a>
-					<a href="../etc/rules_vod" class="mbn">영상정보처리기기 운영관리 방침</a>
-					<a href="../etc/rules">홈페이지 이용약관</a>
-					<a href="../etc/rules_loc" class="mbn">위치정보 이용약관</a>
-					<a href="../etc/rules_msr" class="mbn">스타벅스 카드 이용약관</a>
-					<a href="../etc/rules_non" class="mbn">비회원 이용약관</a>
+					<a class="c_00b050" href="etc/privacy">개인정보처리방침</a>
+					<a href="etc/rules_vod" class="mbn">영상정보처리기기 운영관리 방침</a>
+					<a href="etc/rules">홈페이지 이용약관</a>
+					<a href="etc/rules_loc" class="mbn">위치정보 이용약관</a>
+					<a href="etc/rules_msr" class="mbn">스타벅스 카드 이용약관</a>
+					<a href="etc/rules_non" class="mbn">비회원 이용약관</a>
 					<span class="br"><!-- 150713 삭제  구명준  <a href="javascript:void(0);">위치정보 이용약관</a> -->
-					<a href="../etc/rules_mdp">My DT Pass 서비스 이용약관</a></span> <!-- 20200914 mdp 추가 -->
-					<a href="../etc/hotline" class="last">윤리경영 핫라인</a>
+					<a href="etc/rules_mdp">My DT Pass 서비스 이용약관</a></span> <!-- 20200914 mdp 추가 -->
+					<a href="etc/hotline" class="last">윤리경영 핫라인</a>
 					<br>
-					<a class="btned_link" href="../etc/coming_route">찾아오시는 길</a>
-					<a class="btned_link" href="../partnership/new_partner">신규입점제의</a>
-					<a class="btned_link" href="../etc/sitemap">사이트 맵</a><br>
+					<a class="btned_link" href="etc/coming_route">찾아오시는 길</a>
+					<a class="btned_link" href="partnership/new_partner">신규입점제의</a>
+					<a class="btned_link" href="etc/sitemap">사이트 맵</a><br>
 					<ul class="copy_menu">
 						<li>사업자등록번호 : 201-81-21515</li>
 						<li>주식회사 에스씨케이컴퍼니 대표이사 : 송 데이비드 호섭</li> <!-- 220105 수정 -->
@@ -1330,6 +1334,7 @@ var eFrequencyPlannerYn = 'Y';
 					/* 150714 추가 - 박종현 end */
 					$('#goPage').bind('click', function(){
 						if (myWindow > 640) {
+							console.log('실행');
 							location.href="footer/co_sales/index";
 						}
 					});

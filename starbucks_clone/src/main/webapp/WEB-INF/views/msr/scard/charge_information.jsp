@@ -737,6 +737,8 @@ var eFrequencyPlannerYn = 'Y';
 						<div class="scard_term_area">
 							<p class="con">스타벅스 카드 이용약관이 궁금하신가요?</p>
 							<p class="btn"><a href="footer/etc/rules_msr"><img src="common/img/msr/mycard_btn.png" alt="스타벅스 카드 이용약관 보기"></a></p>
+							<!-- 0530 예은 수정 _ 이용약관 링크 수정 -->
+							<!-- <p class="btn"><a href="etc_rules_msr"><img src="common/img/msr/mycard_btn.png" alt="스타벅스 카드 이용약관 보기"></a></p> -->
 						</div>
 					</div>
 				</div>

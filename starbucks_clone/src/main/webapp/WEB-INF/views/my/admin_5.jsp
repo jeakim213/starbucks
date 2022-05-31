@@ -24,7 +24,7 @@
 
 <title id="titleJoin">My Starbucks | Starbucks Korea</title> <!-- 220117 수정 -->
 <link rel="shortcut icon" href="https://image.istarbucks.co.kr/common/img/common/favicon.ico?v=200828" type="image/ico"> <!-- 20200827 파비콘 교체 및 CDN 변수처리 -->
-<link href="common/css/reset.css" rel="stylesheet">
+<link href="common/css/reset_admin.css" rel="stylesheet">
 <link href="common/css/style.css?v=210721" rel="stylesheet">
 <link href="common/css/jquery.bxslider.css" rel="stylesheet">
 <link href="common/css/idangerous.swiper.css" rel="stylesheet">
@@ -741,12 +741,9 @@ var eFrequencyPlannerYn = 'Y';
 			</tr>
 			<tr>
 				<td colspan=2 align="right">
-					<input type=button style="width: 60px;" value='수정'
-						onclick="location.href='${root}index?formpath=modifyCheck&modifyId=${user.id }'" />
-					<input type=button style="width: 60px;" value='삭제'
-						onclick="location.href='${root}index?formpath=memberDelete&modifyId=${user.id }'" />
-					<input type=button style="width: 60px;" value='목록'
-						onclick="location.href='memberListProc'" />
+					<button onclick="location.href='${root}index?formpath=modifyCheck&modifyId=${user.id }'">수정</button>
+					<button onclick="location.href='${root}index?formpath=memberDelete&modifyId=${user.id }'">삭제</button>
+					<button onclick="location.href='memberListProc'">목록</button>
 				</td>
 			</tr>
 		</table>

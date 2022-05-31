@@ -652,7 +652,7 @@ var eFrequencyPlannerYn = 'Y';
 							<p class="tit">관련 제품</p>
 							<div class="productRel_wrap">
                                 <ul class="productRel_ul">
-                                </ul>
+                                <li>                 <dl>                     <dt><a href="javascript:void(0)" class="goView" prod="9200000004119"><img src="https://image.istarbucks.co.kr/upload/store/skuimg/2022/04/[9200000004119]_20220412083025862.png" alt="라벤더 카페 브레베"></a></dt>                     <dd>                         <p class="t1">라벤더 카페 브레베</p>                         <p class="t2">진한 리저브 에스프레소 샷과 은은한 라벤더향이 고급스럽게 어우러진 부드럽고 세련된 풍미의 라벤더 카페 브레베</p>                         <p class="more_btn"><a href="javascript:void(0)" class="goView" prod="9200000004119"><img src="//image.istarbucks.co.kr/common/img/coffee/cf_more_btn.png" alt="자세히 보기"></a></p>                     </dd>                 </dl>             </li><li>                 <dl>                     <dt><a href="javascript:void(0)" class="goView" prod="9200000001086"><img src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/02/[9200000001086]_20210225090838931.jpg" alt="럼 샷 코르타도"></a></dt>                     <dd>                         <p class="t1">럼 샷 코르타도</p>                         <p class="t2">[더종로R, 청담스타R 전용음료] 최고의 리저브 에스프레소 샷, 스팀 밀크 그리고 럼이 짙게 어우러진 스타벅스 리저브 만의 코르타도입니다.</p>                         <p class="more_btn"><a href="javascript:void(0)" class="goView" prod="9200000001086"><img src="//image.istarbucks.co.kr/common/img/coffee/cf_more_btn.png" alt="자세히 보기"></a></p>                     </dd>                 </dl>             </li><li>                 <dl>                     <dt><a href="javascript:void(0)" class="goView" prod="9200000001939"><img src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/02/[9200000001939]_20210225094313315.jpg" alt="바닐라 빈 라떼"></a></dt>                     <dd>                         <p class="t1">바닐라 빈 라떼</p>                         <p class="t2">리저브만을 위한 프리미엄 바닐라 빈 시럽이 부드럽게 어우러진 카페 라떼</p>                         <p class="more_btn"><a href="javascript:void(0)" class="goView" prod="9200000001939"><img src="//image.istarbucks.co.kr/common/img/coffee/cf_more_btn.png" alt="자세히 보기"></a></p>                     </dd>                 </dl>             </li><li>                 <dl>                     <dt><a href="javascript:void(0)" class="goView" prod="9200000002095"><img src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/02/[9200000002095]_20210225095033382.jpg" alt="사케라또 비안코 오버 아이스"></a></dt>                     <dd>                         <p class="t1">사케라또 비안코 오버 아이스</p>                         <p class="t2">얼음과 같이 쉐이킹하여 차가워진 진한 리저브 에스프레소와 하우스 메이드 크림이 어우러진 달콤한 음료</p>                         <p class="more_btn"><a href="javascript:void(0)" class="goView" prod="9200000002095"><img src="//image.istarbucks.co.kr/common/img/coffee/cf_more_btn.png" alt="자세히 보기"></a></p>                     </dd>                 </dl>             </li><li>                 <dl>                     <dt><a href="javascript:void(0)" class="goView" prod="128692"><img src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[128692]_20210426091933665.jpg" alt="스타벅스 돌체 라떼"></a></dt>                     <dd>                         <p class="t1">스타벅스 돌체 라떼</p>                         <p class="t2">스타벅스의 다른 커피 음료보다 더욱 깊은 커피의 맛과 향에 깔끔한 무지방 우유와 부드러운 돌체 시럽이 들어간 음료로 달콤하고 진한 커피 라떼</p>                         <p class="more_btn"><a href="javascript:void(0)" class="goView" prod="128692"><img src="//image.istarbucks.co.kr/common/img/coffee/cf_more_btn.png" alt="자세히 보기"></a></p>                     </dd>                 </dl>             </li><li>                 <dl>                     <dt><a href="javascript:void(0)" class="goView" prod="9200000004120"><img src="https://image.istarbucks.co.kr/upload/store/skuimg/2022/04/[9200000004120]_20220412082952150.png" alt="아이스 라벤더 카페 브레베"></a></dt>                     <dd>                         <p class="t1">아이스 라벤더 카페 브레베</p>                         <p class="t2">진한 리저브 에스프레소 샷과 은은한 라벤더향이 고급스럽게 어우러진 부드럽고 세련된 풍미의 라벤더 카페 브레베</p>                         <p class="more_btn"><a href="javascript:void(0)" class="goView" prod="9200000004120"><img src="//image.istarbucks.co.kr/common/img/coffee/cf_more_btn.png" alt="자세히 보기"></a></p>                     </dd>                 </dl>             </li><li>                 <dl>                     <dt><a href="javascript:void(0)" class="goView" prod="9200000001941"><img src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/02/[9200000001941]_20210225094346653.jpg" alt="아이스 바닐라 빈 라떼"></a></dt>                     <dd>                         <p class="t1">아이스 바닐라 빈 라떼</p>                         <p class="t2">리저브만을 위한 프리미엄 바닐라 빈 시럽이 부드럽게 어우러진 카페 라떼</p>                         <p class="more_btn"><a href="javascript:void(0)" class="goView" prod="9200000001941"><img src="//image.istarbucks.co.kr/common/img/coffee/cf_more_btn.png" alt="자세히 보기"></a></p>                     </dd>                 </dl>             </li><li>                 <dl>                     <dt><a href="javascript:void(0)" class="goView" prod="128695"><img src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[128695]_20210426092031969.jpg" alt="아이스 스타벅스 돌체 라떼"></a></dt>                     <dd>                         <p class="t1">아이스 스타벅스 돌체 라떼</p>                         <p class="t2">스타벅스의 다른 커피 음료보다 더욱 깊은 커피의 맛과 향에 깔끔한 무지방 우유와 부드러운 돌체 시럽이 들어간 음료로 달콤하고 진한 커피 라떼</p>                         <p class="more_btn"><a href="javascript:void(0)" class="goView" prod="128695"><img src="//image.istarbucks.co.kr/common/img/coffee/cf_more_btn.png" alt="자세히 보기"></a></p>                     </dd>                 </dl>             </li><li>                 <dl>                     <dt><a href="javascript:void(0)" class="goView" prod="110569"><img src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[110569]_20210415143035989.jpg" alt="아이스 카페 라떼"></a></dt>                     <dd>                         <p class="t1">아이스 카페 라떼</p>                         <p class="t2">풍부하고 진한 농도의 에스프레소가 시원한 우유와 얼음을 만나 고소함과 시원함을 즐길 수 있는 대표적인 커피 라떼</p>                         <p class="more_btn"><a href="javascript:void(0)" class="goView" prod="110569"><img src="//image.istarbucks.co.kr/common/img/coffee/cf_more_btn.png" alt="자세히 보기"></a></p>                     </dd>                 </dl>             </li><li>                 <dl>                     <dt><a href="javascript:void(0)" class="goView" prod="41"><img src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[41]_20210415133833725.jpg" alt="카페 라떼"></a></dt>                     <dd>                         <p class="t1">카페 라떼</p>                         <p class="t2">풍부하고 진한 에스프레소가 신선한 스팀 밀크를 만나 부드러워진 커피 위에 우유 거품을 살짝 얹은 대표적인 커피 라떼</p>                         <p class="more_btn"><a href="javascript:void(0)" class="goView" prod="41"><img src="//image.istarbucks.co.kr/common/img/coffee/cf_more_btn.png" alt="자세히 보기"></a></p>                     </dd>                 </dl>             </li></ul>
 							</div>
 						</div>
 					</div>
@@ -689,35 +689,23 @@ var eFrequencyPlannerYn = 'Y';
 						</ul>
 						<ul>
 							<li class="footer_menu_ttl"><a class="en" href="javascript:void(0);">COMPANY<span class="footer_arrow_down"></span></a></li>
-							<li><a href="footer/company/index">한눈에 보기</a></li>
-							<li><a href="footer/company/mission">스타벅스 사명</a></li>
-							<li class="footer_2depth_ttl"><a href="javascript:void(0)">스타벅스 소개<span class="footer_arrow_down"></span></a>
-								<ul>
-									<li><a href="footer/company/starbucks_information">스타벅스 코리아</a></li> <!-- 220118 수정 -->
-									<li><a href="footer/company/starbucks_history">주요 연혁</a></li> <!-- 202107 수정 -->
-									<li><a href="footer/company/starbucks_story">스타벅스 이야기</a></li>
-								</ul>
-							</li>
-							<li><a href="footer/company/news_list">국내 뉴스룸</a></li>
-							<li><a href="footer/company/global_starbucks">세계의 스타벅스</a></li>
+							<li><a href="#">한눈에 보기</a></li>
+							<li><a href="#">스타벅스 사명</a></li>
+							<li><a href="#">스타벅스 소개</a></li>
+							<li><a href="#">국내 뉴스룸</a></li>
+							<li><a href="#">세계의 스타벅스</a></li>
 							<!-- 160811 메뉴 추가 -->
-							<li><a href="https://news.starbucks.com" target="_blank">글로벌 뉴스룸</a></li>
+							<li><a href="#">글로벌 뉴스룸</a></li>
 							<!-- 160811 메뉴 추가 end -->
 						</ul>
 						<ul>
-							<li class="footer_menu_ttl"><a class="en" id="goPage" href="javascript:void(0);">CORPORATE SALES<span class="footer_arrow_down"></span></a></li>
-							<li><a href="footer/co_sales/index">단체 및 기업 구매 안내</a></li>
-							<!-- <li><a href="footer/co_sales/sbcard_egift">스타벅스 <span class="en">e-Gift Card</span></a></li> -->
-							<!-- <li><a href="footer/co_sales/sbcard">스타벅스 카드</a></li> -->
-							<!-- <li><a href="footer/co_sales/co-branded"><span class="en">Co-branded</span> 카드</a></li> -->
-							<!-- <li><a href="footer/co_sales/sb_product">스타벅스 상품</a></li> -->
-							<!-- <li><a href="footer/co_sales/sbgift_certificate">스타벅스 상품권</a></li> -->
+							<li class="footer_menu_ttl"><a class="en" href="#">CORPORATE SALES<span class="footer_arrow_down"></span></a></li>
+							<li><a href="#">단체 및 기업 구매 안내</a></li>
 						</ul>
 						<ul>
 							<li class="footer_menu_ttl"><a class="en" href="javascript:void(0);">PARTNERSHIP<span class="footer_arrow_down"></span></a></li>
-							<li><a href="footer/partnership/new_partner">신규 입점 제의</a></li>
-							<!-- <li><a href="footer/partnership/portal_systems">협력사 포털 시스템</a></li> -->
-							<li><a href="srm/login">협력 고객사 등록신청</a></li>
+							<li><a href="#">신규 입점 제의</a></li>
+							<li><a href="#">협력 고객사 등록신청</a></li>
 						</ul>
 						<ul>
 							<li class="footer_menu_ttl"><a class="en" href="javascript:void(0);">ONLINE COMMUNITY<span class="footer_arrow_down"></span></a></li>
@@ -728,8 +716,8 @@ var eFrequencyPlannerYn = 'Y';
 						</ul>
 						<ul>
 							<li class="footer_menu_ttl"><a class="en" href="javascript:void(0);">RECRUIT<span class="footer_arrow_down"></span></a></li>
-							<li><a href="footer/recruit/index">채용 소개</a></li>
-							<li><a href="http://job.shinsegae.com/recruit_info/notice/notice02_view.jsp?notino=5924" target="_blank">채용 지원하기</a></li><!-- 20210927 수정 -->
+							<li><a href="#">채용 소개</a></li>
+							<li><a href="#">채용 지원하기</a></li><!-- 20210927 수정 -->
 						</ul>
 					</div>
 				</div>
@@ -799,19 +787,19 @@ var eFrequencyPlannerYn = 'Y';
 				
 				<!-- 150517 추가 - 문진욱 -->
 				<aside class="copyright">
-					<a class="c_00b050" href="footer/etc/privacy">개인정보처리방침</a>
-					<a href="footer/etc/rules_vod" class="mbn">영상정보처리기기 운영관리 방침</a>
-					<a href="footer/etc/rules">홈페이지 이용약관</a>
-					<a href="footer/etc/rules_loc" class="mbn">위치정보 이용약관</a>
-					<a href="footer/etc/rules_msr" class="mbn">스타벅스 카드 이용약관</a>
-					<a href="footer/etc/rules_non" class="mbn">비회원 이용약관</a>
+					<a class="c_00b050" href="#">개인정보처리방침</a>
+					<a href="#" class="mbn">영상정보처리기기 운영관리 방침</a>
+					<a href="#">홈페이지 이용약관</a>
+					<a href="#" class="mbn">위치정보 이용약관</a>
+					<a href="#" class="mbn">스타벅스 카드 이용약관</a>
+					<a href="#" class="mbn">비회원 이용약관</a>
 					<span class="br"><!-- 150713 삭제  구명준  <a href="javascript:void(0);">위치정보 이용약관</a> -->
-					<a href="footer/etc/rules_mdp">My DT Pass 서비스 이용약관</a></span> <!-- 20200914 mdp 추가 -->
-					<a href="footer/etc/hotline" class="last">윤리경영 핫라인</a>
+					<a href="#">My DT Pass 서비스 이용약관</a></span> <!-- 20200914 mdp 추가 -->
+					<a href="#" class="last">윤리경영 핫라인</a>
 					<br>
-					<a class="btned_link" href="footer/etc/coming_route">찾아오시는 길</a>
-					<a class="btned_link" href="footer/partnership/new_partner">신규입점제의</a>
-					<a class="btned_link" href="footer/etc/sitemap">사이트 맵</a><br>
+					<a class="btned_link" href="#">찾아오시는 길</a>
+					<a class="btned_link" href="#">신규입점제의</a>
+					<a class="btned_link" href="#">사이트 맵</a><br>
 					<ul class="copy_menu">
 						<li>사업자등록번호 : 201-81-21515</li>
 						<li>주식회사 에스씨케이컴퍼니 대표이사 : 송 데이비드 호섭</li> <!-- 220105 수정 -->

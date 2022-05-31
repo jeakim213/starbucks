@@ -620,11 +620,11 @@ var eFrequencyPlannerYn = 'Y';
 				<!-- 서브 타이틀 -->
 				<div class="sub_tit_wrap">
 					<div class="sub_tit_inner">
-						<h2><img src="common/img/coffee/coffee_tit.jpg" alt="COFFEE"></h2>
+						<h2><img src="//image.istarbucks.co.kr/common/img/coffee/coffee_tit.jpg" alt="COFFEE"></h2>
 						<ul class="smap">
-							<li><a href="index.htm"><img src="common/img/common/icon_home.png" alt="홈으로"></a></li>
-							<li><img class="arrow" src="common/img/common/icon_arrow.png" alt="하위메뉴"></li>						
-							<li class="en"><a href="index" class="this ">COFFEE</a></li>
+							<li><a href="/"><img src="//image.istarbucks.co.kr/common/img/common/icon_home.png" alt="홈으로"></a></li>
+							<li><img class="arrow" src="//image.istarbucks.co.kr/common/img/common/icon_arrow.png" alt="하위메뉴"></li>						
+							<li class="en"><a href="/coffee/index.do" class="this ">COFFEE</a></li>
 						</ul>
 					</div>
 				</div>
@@ -632,26 +632,28 @@ var eFrequencyPlannerYn = 'Y';
 				<!-- 서브 슬라이드 영역 -->
 				<div class="coffeeSlideArea">
 					<div class="bxslide-main">
-						<ul class="coffee_slider">
-						</ul>
+						<div class="bx-wrapper" style="max-width: 100%;"><div class="bx-viewport" style="width: 100%; overflow: hidden; position: relative; height: 200px;"><ul class="coffee_slider" style="width: auto; position: relative;">
+						<li style="float: none; list-style: none; position: absolute; width: 921px; z-index: 50; display: list-time;"><div style="background-image: url(https://image.istarbucks.co.kr/upload/banner/fs8Fa0_20220411134500434.jpg); background-size: cover; background-repeat: no-repeat;"><a href="https://www.starbucks.co.kr/whats_new/campaign_view.do?pro_seq=1992"></a></div></li><li style="float: none; list-style: none; position: absolute; width: 921px; z-index: 0; display: none;"><div style="background-image: url(https://image.istarbucks.co.kr/upload/banner/Y7YBKr_20220404160515035.jpg); background-size: cover; background-repeat: no-repeat;"><a href="https://www.starbucks.co.kr/whats_new/newsView.do?cate=&amp;seq=4496"></a></div></li></ul></div><div class="bx-controls bx-has-controls-direction"><div class="bx-controls-direction"><a class="bx-prev" href="">Prev</a><a class="bx-next" href="">Next</a></div></div></div>
 						<div class="coffee_slider_control_pager">
-							<div class="coffee_slider_controls"></div>
-							<div class="coffee_slider_pagers"></div>
+							<div class="coffee_slider_controls"><div class="bx-controls-auto"><div class="bx-controls-auto-item"><a class="bx-stop" href="">Stop</a></div></div></div>
+							<div class="coffee_slider_pagers"><div class="bx-pager bx-default-pager"><div class="bx-pager-item"><a href="" data-slide-index="0" class="bx-pager-link active">1</a></div><div class="bx-pager-item"><a href="" data-slide-index="1" class="bx-pager-link">2</a></div></div></div>
 						</div>
 					</div>
 					<!-- 150708 DOM 수정 - 투명한 버튼으로 수정 -->
 					<p id="prevBtn">
 						<a href="javascript:void(0)">
-							<img alt="" class="arrow_off" src="common/img/util/mscard_arrow_l_off.png">
-							<img alt="" class="arrow_on" src="common/img/util/mscard_arrow_l_on.png">
+							<img alt="" class="arrow_off" src="//image.istarbucks.co.kr/common/img/util/mscard_arrow_l_off.png" style="display: block;">
+							<img alt="" class="arrow_on" src="//image.istarbucks.co.kr/common/img/util/mscard_arrow_l_on.png">
 						</a>
 					</p>
 					<p id="nextBtn">
 						<a href="javascript:void(0)">
-							<img alt="" class="arrow_off" src="common/img/util/mscard_arrow_r_off.png">
-							<img alt="" class="arrow_on" src="common/img/util/mscard_arrow_r_on.png">
+							<img alt="" class="arrow_off" src="//image.istarbucks.co.kr/common/img/util/mscard_arrow_r_off.png" style="display: block;">
+							<img alt="" class="arrow_on" src="//image.istarbucks.co.kr/common/img/util/mscard_arrow_r_on.png">
 						</a>
 					</p>
+					<!-- 150708 DOM 수정 - 투명한 버튼으로 수정 -->		
+				</div>
 					<!-- 150708 DOM 수정 - 투명한 버튼으로 수정 -->		
 				</div>
 				<!-- jsp 수정 : 태그 추가 -->
@@ -669,6 +671,9 @@ var eFrequencyPlannerYn = 'Y';
 				<!-- 서브 슬라이드 영역 end -->
 
 				<!-- news -->
+				
+				
+				
 				<div class="newsArea">
                     <div class="newsArea_left"></div>
                     <div class="newsArea_right"></div>
@@ -680,8 +685,7 @@ var eFrequencyPlannerYn = 'Y';
 									<img class="m_pic" src="common/img/common/icon_board_speaker-1.png" alt="">
 								</dt><!-- jsp 수정 - 이미지 및 클래스 추가 -->
 								<dd>
-									<ul class="news_result">
-									</ul>
+									<ul class="news_result" style="direction: ltr; font-size: 13px; color: rgb(255, 255, 255);"><li style="overflow: hidden; height: 0.6125px; padding-top: 0px; margin-top: 0px; padding-bottom: 0px; margin-bottom: 0px;"><a href="javascript:pageViewBodo(4576)">스타벅스, ‘라벤더 블론드 스타벅스 더블 샷’ 입소문 타고 인기 급상승</a></li><li style="overflow: hidden; height: 19.4181px; padding-top: 0px; margin-top: 0px; padding-bottom: 0px; margin-bottom: 0px;"><a href="javascript:pageViewBodo(4572)">스타벅스, 창원NC파크R점 확장 오픈하며 스타벅스 테라스 전용 세트 출시</a></li><li style="display: none;"><a href="javascript:pageViewBodo(4563)">스타벅스, 2027년까지 커피찌꺼기 재활용률 100%에 도전 </a></li><li style="display: none;"><a href="javascript:pageViewBodo(4560)">1만명 고객 참여한 ‘다다익선 캠페인’, 스타벅스 개인컵 이용 건수도 53% 증가</a></li><li style="display: none;"><a href="javascript:pageViewBodo(4578)">스타벅스 코리아 개점 23주년 맞아 전국 23개 숲 공원돌보미 캠페인 전개</a></li></ul>
 								</dd>
 							</dl>
                             <p class="btn"><a href="footer/company/news_list"><img src="common/img/coffee/icon_coffee_notice_more.png" alt="보도자료 바로가기"></a></p>
@@ -707,9 +711,9 @@ var eFrequencyPlannerYn = 'Y';
 				<!-- 스타벅스 리저브 -->
 				<section class="coffee_reserve_wrap">
 					<div class="coffee_wrap_inner">
-						<img class="m_pic" src="common/img/coffee/m_coffee_bimg2.jpg" alt="">
-						<p class="coffee_reserve_txt"><img class="w_pic" src="common/img/coffee/coffee_reserve_txt.png" alt="스타벅스 리저브 단일 원산지 원두를 사용한 프리미엄 커피 최고의 커피를 찾기 위해 세계 곳곳을 여행하고 있는 스타벅스가 진귀하고 이국적인 프리미엄 커피를 소개합니다. 격조 높은 원두와 함께 차별화된 커피 경험, 스타벅스 리저브에서 누려보세요."><img class="m_pic" src="common/img/coffee/m_coffee_btxt2.png" alt=""></p>
-						<div class="coffee_reserve_btn"><a href="reserve_info">자세히 보기</a></div>
+						<img class="m_pic" src="//image.istarbucks.co.kr/common/img/coffee/m_coffee_bimg2.jpg" alt="">
+						<p class="coffee_reserve_txt"><img class="w_pic" src="//image.istarbucks.co.kr/common/img/coffee/coffee_reserve_txt.png" alt="스타벅스 리저브 단일 원산지 원두를 사용한 프리미엄 커피 최고의 커피를 찾기 위해 세계 곳곳을 여행하고 있는 스타벅스가 진귀하고 이국적인 프리미엄 커피를 소개합니다. 격조 높은 원두와 함께 차별화된 커피 경험, 스타벅스 리저브에서 누려보세요."><img class="m_pic" src="//image.istarbucks.co.kr/common/img/coffee/m_coffee_btxt2.png" alt=""></p>
+						<div class="coffee_reserve_btn"><a href="/coffee/reserve_info.do">자세히 보기</a></div>
 					</div>
 				</section>
 				<!-- 스타벅스 리저브 end -->
@@ -845,35 +849,23 @@ var eFrequencyPlannerYn = 'Y';
 						</ul>
 						<ul>
 							<li class="footer_menu_ttl"><a class="en" href="javascript:void(0);">COMPANY<span class="footer_arrow_down"></span></a></li>
-							<li><a href="footer/company/index">한눈에 보기</a></li>
-							<li><a href="footer/company/mission">스타벅스 사명</a></li>
-							<li class="footer_2depth_ttl"><a href="javascript:void(0)">스타벅스 소개<span class="footer_arrow_down"></span></a>
-								<ul>
-									<li><a href="footer/company/starbucks_information">스타벅스 코리아</a></li> <!-- 220118 수정 -->
-									<li><a href="footer/company/starbucks_history">주요 연혁</a></li> <!-- 202107 수정 -->
-									<li><a href="footer/company/starbucks_story">스타벅스 이야기</a></li>
-								</ul>
-							</li>
-							<li><a href="footer/company/news_list">국내 뉴스룸</a></li>
-							<li><a href="footer/company/global_starbucks">세계의 스타벅스</a></li>
+							<li><a href="#">한눈에 보기</a></li>
+							<li><a href="#">스타벅스 사명</a></li>
+							<li><a href="#">스타벅스 소개</a></li>
+							<li><a href="#">국내 뉴스룸</a></li>
+							<li><a href="#">세계의 스타벅스</a></li>
 							<!-- 160811 메뉴 추가 -->
-							<li><a href="https://news.starbucks.com" target="_blank">글로벌 뉴스룸</a></li>
+							<li><a href="#">글로벌 뉴스룸</a></li>
 							<!-- 160811 메뉴 추가 end -->
 						</ul>
 						<ul>
-							<li class="footer_menu_ttl"><a class="en" id="goPage" href="javascript:void(0);">CORPORATE SALES<span class="footer_arrow_down"></span></a></li>
-							<li><a href="footer/co_sales/index">단체 및 기업 구매 안내</a></li>
-							<!-- <li><a href="footer/co_sales/sbcard_egift">스타벅스 <span class="en">e-Gift Card</span></a></li> -->
-							<!-- <li><a href="footer/co_sales/sbcard">스타벅스 카드</a></li> -->
-							<!-- <li><a href="footer/co_sales/co-branded"><span class="en">Co-branded</span> 카드</a></li> -->
-							<!-- <li><a href="footer/co_sales/sb_product">스타벅스 상품</a></li> -->
-							<!-- <li><a href="footer/co_sales/sbgift_certificate">스타벅스 상품권</a></li> -->
+							<li class="footer_menu_ttl"><a class="en" href="#">CORPORATE SALES<span class="footer_arrow_down"></span></a></li>
+							<li><a href="#">단체 및 기업 구매 안내</a></li>
 						</ul>
 						<ul>
 							<li class="footer_menu_ttl"><a class="en" href="javascript:void(0);">PARTNERSHIP<span class="footer_arrow_down"></span></a></li>
-							<li><a href="footer/partnership/new_partner">신규 입점 제의</a></li>
-							<!-- <li><a href="footer/partnership/portal_systems">협력사 포털 시스템</a></li> -->
-							<li><a href="srm/login">협력 고객사 등록신청</a></li>
+							<li><a href="#">신규 입점 제의</a></li>
+							<li><a href="#">협력 고객사 등록신청</a></li>
 						</ul>
 						<ul>
 							<li class="footer_menu_ttl"><a class="en" href="javascript:void(0);">ONLINE COMMUNITY<span class="footer_arrow_down"></span></a></li>
@@ -884,8 +876,8 @@ var eFrequencyPlannerYn = 'Y';
 						</ul>
 						<ul>
 							<li class="footer_menu_ttl"><a class="en" href="javascript:void(0);">RECRUIT<span class="footer_arrow_down"></span></a></li>
-							<li><a href="footer/recruit/index">채용 소개</a></li>
-							<li><a href="http://job.shinsegae.com/recruit_info/notice/notice02_view.jsp?notino=5924" target="_blank">채용 지원하기</a></li><!-- 20210927 수정 -->
+							<li><a href="#">채용 소개</a></li>
+							<li><a href="#">채용 지원하기</a></li><!-- 20210927 수정 -->
 						</ul>
 					</div>
 				</div>
@@ -955,19 +947,19 @@ var eFrequencyPlannerYn = 'Y';
 				
 				<!-- 150517 추가 - 문진욱 -->
 				<aside class="copyright">
-					<a class="c_00b050" href="footer/etc/privacy">개인정보처리방침</a>
-					<a href="footer/etc/rules_vod" class="mbn">영상정보처리기기 운영관리 방침</a>
-					<a href="footer/etc/rules">홈페이지 이용약관</a>
-					<a href="footer/etc/rules_loc" class="mbn">위치정보 이용약관</a>
-					<a href="footer/etc/rules_msr" class="mbn">스타벅스 카드 이용약관</a>
-					<a href="footer/etc/rules_non" class="mbn">비회원 이용약관</a>
+					<a class="c_00b050" href="#">개인정보처리방침</a>
+					<a href="#" class="mbn">영상정보처리기기 운영관리 방침</a>
+					<a href="#">홈페이지 이용약관</a>
+					<a href="#" class="mbn">위치정보 이용약관</a>
+					<a href="#" class="mbn">스타벅스 카드 이용약관</a>
+					<a href="#" class="mbn">비회원 이용약관</a>
 					<span class="br"><!-- 150713 삭제  구명준  <a href="javascript:void(0);">위치정보 이용약관</a> -->
-					<a href="footer/etc/rules_mdp">My DT Pass 서비스 이용약관</a></span> <!-- 20200914 mdp 추가 -->
-					<a href="footer/etc/hotline" class="last">윤리경영 핫라인</a>
+					<a href="#">My DT Pass 서비스 이용약관</a></span> <!-- 20200914 mdp 추가 -->
+					<a href="#" class="last">윤리경영 핫라인</a>
 					<br>
-					<a class="btned_link" href="footer/etc/coming_route">찾아오시는 길</a>
-					<a class="btned_link" href="footer/partnership/new_partner">신규입점제의</a>
-					<a class="btned_link" href="footer/etc/sitemap">사이트 맵</a><br>
+					<a class="btned_link" href="#">찾아오시는 길</a>
+					<a class="btned_link" href="#">신규입점제의</a>
+					<a class="btned_link" href="#">사이트 맵</a><br>
 					<ul class="copy_menu">
 						<li>사업자등록번호 : 201-81-21515</li>
 						<li>주식회사 에스씨케이컴퍼니 대표이사 : 송 데이비드 호섭</li> <!-- 220105 수정 -->

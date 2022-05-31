@@ -656,18 +656,14 @@ var eFrequencyPlannerYn = 'Y';
 			<div id="container">
 				<!-- 자주하는 질문 -->
 				<section class="msr_section">
-					<p class="msr_t1"><span class="subHeadMnu2"></span>에 대한 궁금점이 많으신가요?고객님의 문의사항에 대한 답변을 빠르게 찾으실 수 있습니다.</p>
+					<p class="msr_t1"><span class="subHeadMnu2">스타벅스 리워드</span>에 대한 궁금점이 많으신가요?고객님의 문의사항에 대한 답변을 빠르게 찾으실 수 있습니다.</p>
 					<div class="faq_sch_wrap">
-						<form action="" method="post">
+						<form method="post">
 							<fieldset>
 								<legend class="hid">스타벅스 리워드 자주하는 질문 검색</legend> <!-- 스타벅스 리워드 수정 -->
 								<div class="select_box select_box01" style="display:none">
-									<label class="value" for="msr_faq_01">전체</label>
-									<select title="자주하는 질문 검색 종류" id="msr_faq_01">
-										<option value="전체">전체</option>
-										<option value="자주하는 질문1">자주하는 질문1</option>
-										<option value="자주하는 질문2">자주하는 질문2</option>
-									</select>
+									<label class="value" for="msr_faq_01">스타벅스 리워드</label>
+									<select title="자주하는 질문 검색 종류" id="msr_faq_01"><option value="">전체</option><option value="F18">홈페이지</option><option value="F14">애플리케이션</option><option value="F05">스타벅스 카드</option><option value="F24">단체 및 기업 구매</option><option value="F27">e-Gift Item</option><option value="F22">e-Gift Card</option><option value="F17" selected="">스타벅스 리워드</option><option value="F21">e-쿠폰</option><option value="F20">e-프리퀀시</option><option value="F23">사이렌 오더</option><option value="F01">커피와 음료</option><option value="F02">푸드</option><option value="F03">판매상품</option><option value="F04">결제</option><option value="F07">회사, 사회공헌</option><option value="F15">오해와 진실</option><option value="F08">채용</option><option value="F25">스타벅스 기어 앱</option><option value="F26">전자영수증</option><option value="F09">기타</option></select>
 								</div>
 								<div class="msr_sch_input">
 									<input type="text" name="msr_bar01" id="msr_bar01"> <a href="javascript:void(0)" class="sch_btn">검색</a>
@@ -675,79 +671,55 @@ var eFrequencyPlannerYn = 'Y';
 							</fieldset>
 						</form>
 					</div>
-					<dl class="msr_faq_wrap">
-
-					</dl>
+					<dl class="msr_faq_wrap"><dt class="ajaxFaqList on" data-index=""> <ul>  <li class="li2">   <dl>    <dt class="en">Q</dt>    <dd>Star Code (스타코드)란 무엇인가요?</dd>   </dl>  </li> </ul></dt><dd style="display: block;"> <ul>  <li class="li2">   <dl>    <dt class="en">A</dt>    <dd>     스타벅스 “별”을 적립할 수 있는 코드번호로 Star Code 10자리를 부여받은 경우에 한하여 사용 가능합니다. <br>Star Code 이벤트가 진행되는 스타벅스 카드 구매 후 스타벅스 APP 또는 홈페이지에 등록 시 코드번호 입력이 가능하며, 코드번호 등록 즉시 스타벅스 리워드인 “별”로 전환이 됩니다.<br>Star Code 입력 가능 기간은 이벤트에 따라 상이하며, 자세한 내용은 스타벅스 홈페이지를 통해 안내되는 이벤트 페이지를 꼭 참고해 주세요.       </dd>   </dl>  </li> </ul></dd><dt class="ajaxFaqList on" data-index=""> <ul>  <li class="li2">   <dl>    <dt class="en">Q</dt>    <dd>Star 쿠폰이란 무엇인가요?</dd>   </dl>  </li> </ul></dt><dd style="display: block;"> <ul>  <li class="li2">   <dl>    <dt class="en">A</dt>    <dd>     스타벅스 리워드 회원에 한해서 등록 및 사용 가능한 쿠폰으로 Star 쿠폰은 등록 즉시 스타벅스 리워드인 “별”로 전환이 됩니다.<br>Star 쿠폰 번호 13자리와 PIN 번호를 부여받은 경우에 한하여 사용 가능한 쿠폰입니다.      </dd>   </dl>  </li> </ul></dd><dt class="ajaxFaqList on" data-index=""> <ul>  <li class="li2">   <dl>    <dt class="en">Q</dt>    <dd>[쿠폰] 회원 계정에 등록된 스타벅스 카드를 이용하여 원두를 구매했으나, 쿠폰이 발행되지 않았습니다.</dd>   </dl>  </li> </ul></dt><dd style="display: block;"> <ul>  <li class="li2">   <dl>    <dt class="en">A</dt>    <dd>     타 계정에 등록된 스타벅스 카드/e-쿠폰/e-Gift Item을 사용한 복합 결제 시, 쿠폰 발행이 정상적으로 되지 않을 수 있습니다.<br>그린/골드 레벨 회원이 원두 구매 시 제공되는 카페 아메리카노 e-쿠폰 발행을 원하실 경우, 반드시 회원 본인 계정에 등록된 스타벅스 카드만 사용하여 원두를 구매해 주시기 바랍니다.<br>(리저브 원두 구매 시 리저브 원두 e-쿠폰, 티바나 패키지 티 구매 시 풀 리프 티 e-쿠폰의 발행 기준 또한 위와 동일합니다.)    </dd>   </dl>  </li> </ul></dd><dt class="ajaxFaqList on" data-index=""> <ul>  <li class="li2">   <dl>    <dt class="en">Q</dt>    <dd>[골드카드] 골드카드 발급 신청을 했는데 아직 수령하지 못했습니다. 제작 기간이 얼마나 소요되나요?</dd>   </dl>  </li> </ul></dt><dd style="display: block;"> <ul>  <li class="li2">   <dl>    <dt class="en">A</dt>    <dd>     실물 골드카드 발급 서비스는 2020년 1월 1일부로 종료되었습니다.<br><br>서비스 종료 전에 발급 신청하셨던 건들은 2020년 7월 31일까지 매장에서&nbsp;수령 가능하시도록&nbsp;최대한&nbsp;수령 기간을&nbsp;길게 지정하였으며, 그 이후에는 모두&nbsp;폐기 처리되어&nbsp;수령 불가함을 안내드립니다.<br><br>실물&nbsp;골드카드는&nbsp;종료되었으나,&nbsp;e-골드카드&nbsp;발급은 지속 운영하오니 골드회원님들의 많은 이용 부탁드립니다.    </dd>   </dl>  </li> </ul></dd><dt class="ajaxFaqList on" data-index=""> <ul>  <li class="li2">   <dl>    <dt class="en">Q</dt>    <dd>[골드카드] e-골드카드는 무엇인가요?</dd>   </dl>  </li> </ul></dt><dd style="display: block;"> <ul>  <li class="li2">   <dl>    <dt class="en">A</dt>    <dd>     골드레벨 진입 시, 바로 신청하여 사용 가능한 온라인 e-골드카드 입니다.    </dd>   </dl>  </li> </ul></dd><dt class="ajaxFaqList on" data-index=""> <ul>  <li class="li2">   <dl>    <dt class="en">Q</dt>    <dd>[레벨혜택] 웰컴 레벨 혜택 중 웰컴 첫 구매 쿠폰은 무엇인가요?</dd>   </dl>  </li> </ul></dt><dd style="display: block;"> <ul>  <li class="li2">   <dl>    <dt class="en">A</dt>    <dd>     웰컴 레벨 진입 후, 처음 구매를 하시는 경우 다음날 계정으로 발행되는 무료 음료 쿠폰입니다.<br>웰컴 레벨 회원에게만 1회 제공되는 혜택으로, 쿠폰을 사용하시고, 회원 탈퇴 후 재가입 하신 경우에는 쿠폰이 재 발행 되지 않습니다.<br>(e-Gift Item 선물은 구매에 해당하지 않습니다.)    </dd>   </dl>  </li> </ul></dd><dt class="ajaxFaqList on" data-index=""> <ul>  <li class="li2">   <dl>    <dt class="en">Q</dt>    <dd>[웰컴레벨] 웰컴레벨의 유효기간이 있나요?</dd>   </dl>  </li> </ul></dt><dd style="display: block;"> <ul>  <li class="li2">   <dl>    <dt class="en">A</dt>    <dd>     아니오, 한 번 웰컴레벨에 진입하시면 지속적으로 유지할 수 있습니다.    </dd>   </dl>  </li> </ul></dd><dt class="ajaxFaqList on" data-index=""> <ul>  <li class="li2">   <dl>    <dt class="en">Q</dt>    <dd>[골드레벨] 골드레벨의 유효 기간이 있나요?</dd>   </dl>  </li> </ul></dt><dd style="display: block;"> <ul>  <li class="li2">   <dl>    <dt class="en">A</dt>    <dd>     골드레벨 진입일로부터 1년입니다.    </dd>   </dl>  </li> </ul></dd><dt class="ajaxFaqList on" data-index=""> <ul>  <li class="li2">   <dl>    <dt class="en">Q</dt>    <dd>[골드레벨] 골드레벨은 어떻게 진입할 수 있나요?</dd>   </dl>  </li> </ul></dt><dd style="display: block;"> <ul>  <li class="li2">   <dl>    <dt class="en">A</dt>    <dd>     웰컴레벨에서 첫 번째 별 적립 일로부터 1년 안에 30개의 별을 적립해야 합니다.    </dd>   </dl>  </li> </ul></dd><dt class="ajaxFaqList on" data-index=""> <ul>  <li class="li2">   <dl>    <dt class="en">Q</dt>    <dd>[골드레벨] 골드레벨의 유효기간 만료 후 유지 방법은 무엇인가요?</dd>   </dl>  </li> </ul></dt><dd style="display: block;"> <ul>  <li class="li2">   <dl>    <dt class="en">A</dt>    <dd>     골드레벨 진입일로부터 1년 안에 별 30개를 적립하시면 유효기간이 1년 연장됩니다.    </dd>   </dl>  </li> </ul></dd></dl>
 					<div class="faq_pagination">
-						<ul class="pager">
-
-						</ul>
+						<ul class="pager"><li class=" active"><a href="javascript:void(0)">1</a></li><li class=""><a href="javascript:void(0)">2</a></li><li class=""><a href="javascript:void(0)">3</a></li><li class=""><a href="javascript:void(0)">4</a></li><li class=""><a href="javascript:void(0)">5</a></li></ul>
 					</div>
 				</section>
 				<!-- 자주하는 질문 end -->			
 			</div>
 			<!-- footer -->
 			
-
-
-
-
-		
 			<!-- footer -->
 			<footer id="footer"> 
 				<div class="footer_wrap">
 					<div class="footer_menus">
 						<ul class="footer_first_menu">
 							<li class="footer_menu_ttl"><a class="en" href="javascript:void(0);">CUSTOMER SERVICE &amp; IDEAS<span class="footer_arrow_down"></span></a></li>
-							<li><a href="util/faq">자주 하는 질문</a></li><!-- 20210809 수정 -->
-							<li><a href="customer/suggestionWrite">고객의 소리</a></li>
+							<li><a href="/util/faq.do">자주 하는 질문</a></li><!-- 20210809 수정 -->
+							<li><a href="/customer/suggestionWrite.do">고객의 소리</a></li>
 							<li class="footer_2depth_ttl"><a href="javascript:void(0)">스타벅스 이용 팁<span class="footer_arrow_down"></span></a>
 								<ul>
-									<li><a href="util/web_tip">홈페이지 이용 팁</a></li>
-									<li><a href="util/app_tip">애플리케이션 이용 팁</a></li>
-									<li><a href="util/partnership_card">제휴카드 안내</a></li>
+									<li><a href="/util/web_tip.do">홈페이지 이용 팁</a></li>
+									<li><a href="/util/app_tip.do">애플리케이션 이용 팁</a></li>
+									<li><a href="/util/partnership_card.do">제휴카드 안내</a></li>
 								</ul>
 							</li>
-							<li><a href="util/online_survey">고객 경험 설문조사</a></li> <!-- 20210811 수정  -->
+							<li><a href="/util/online_survey.do">고객 경험 설문조사</a></li> <!-- 20210811 수정  -->
 							
 							
-							<li><a href="util/guest_eReceipt">비회원 전자영수증 조회</a></li>
+							<li><a href="/util/guest_eReceipt.do">비회원 전자영수증 조회</a></li>
 							
 						</ul>
 						<ul>
 							<li class="footer_menu_ttl"><a class="en" href="javascript:void(0);">COMPANY<span class="footer_arrow_down"></span></a></li>
-							<li><a href="footer/company/index">한눈에 보기</a></li>
-							<li><a href="footer/company/mission">스타벅스 사명</a></li>
-							<li class="footer_2depth_ttl"><a href="javascript:void(0)">스타벅스 소개<span class="footer_arrow_down"></span></a>
-								<ul>
-									<li><a href="footer/company/starbucks_information">스타벅스 코리아</a></li> <!-- 220118 수정 -->
-									<li><a href="footer/company/starbucks_history">주요 연혁</a></li> <!-- 202107 수정 -->
-									<li><a href="footer/company/starbucks_story">스타벅스 이야기</a></li>
-								</ul>
-							</li>
-							<li><a href="footer/company/news_list">국내 뉴스룸</a></li>
-							<li><a href="footer/company/global_starbucks">세계의 스타벅스</a></li>
-
+							<li><a href="#">한눈에 보기</a></li>
+							<li><a href="#">스타벅스 사명</a></li>
+							<li><a href="#">스타벅스 소개</a></li>
+							<li><a href="#">국내 뉴스룸</a></li>
+							<li><a href="#">세계의 스타벅스</a></li>
 							<!-- 160811 메뉴 추가 -->
-							<li><a href="https://news.starbucks.com" target="_blank">글로벌 뉴스룸</a></li>
+							<li><a href="#">글로벌 뉴스룸</a></li>
 							<!-- 160811 메뉴 추가 end -->
 						</ul>
 						<ul>
-							<li class="footer_menu_ttl"><a class="en" id="goPage" href="javascript:void(0);">CORPORATE SALES<span class="footer_arrow_down"></span></a></li>
-							<li><a href="footer/co_sales/index">단체 및 기업 구매 안내</a></li>
-							<!-- <li><a href="footer/co_sales/sbcard_egift">스타벅스 <span class="en">e-Gift Card</span></a></li> -->
-							<!-- <li><a href="footer/co_sales/sbcard">스타벅스 카드</a></li> -->
-							<!-- <li><a href="footer/co_sales/co-branded"><span class="en">Co-branded</span> 카드</a></li> -->
-							<!-- <li><a href="footer/co_sales/sb_product">스타벅스 상품</a></li> -->
-							<!-- <li><a href="footer/co_sales/sbgift_certificate">스타벅스 상품권</a></li> -->
-
+							<li class="footer_menu_ttl"><a class="en" href="#">CORPORATE SALES<span class="footer_arrow_down"></span></a></li>
+							<li><a href="#">단체 및 기업 구매 안내</a></li>
 						</ul>
 						<ul>
 							<li class="footer_menu_ttl"><a class="en" href="javascript:void(0);">PARTNERSHIP<span class="footer_arrow_down"></span></a></li>
-							<li><a href="footer/partnership/new_partner">신규 입점 제의</a></li>
-							<!-- <li><a href="footer/partnership/portal_systems">협력사 포털 시스템</a></li> -->
-							<li><a href="srm/login">협력 고객사 등록신청</a></li>
-
+							<li><a href="#">신규 입점 제의</a></li>
+							<li><a href="#">협력 고객사 등록신청</a></li>
 						</ul>
 						<ul>
 							<li class="footer_menu_ttl"><a class="en" href="javascript:void(0);">ONLINE COMMUNITY<span class="footer_arrow_down"></span></a></li>
@@ -758,25 +730,24 @@ var eFrequencyPlannerYn = 'Y';
 						</ul>
 						<ul>
 							<li class="footer_menu_ttl"><a class="en" href="javascript:void(0);">RECRUIT<span class="footer_arrow_down"></span></a></li>
-							<li><a href="footer/recruit/index">채용 소개</a></li>
-							<li><a href="http://job.shinsegae.com/recruit_info/notice/notice02_view.jsp?notino=5924" target="_blank">채용 지원하기</a></li><!-- 20210927 수정 -->
+							<li><a href="#">채용 소개</a></li>
+							<li><a href="#">채용 지원하기</a></li><!-- 20210927 수정 -->
 						</ul>
 					</div>
 				</div>
 				<div class="footer_util_btn">
 					<ul>
-						<li><a href="index.htm">HOME</a></li>
+						<li><a href="/">HOME</a></li>
 						<li>
 							<a href="javascript:$.loginLib.showLayerLogin();" class="sign_in">Sign In</a>
 							<a href="javascript:$.loginLib.logout();" class="sign_out" style="display:none;">Sign Out</a>
 						</li>
-						<li class="last"><a href="mem/join1">Join Us</a></li>
-
+						<li class="last"><a href="/mem/join1.do">Join Us</a></li>
 					</ul>
 				</div>
 				<!-- 수상내역 -->
 				<div class="footer_awards_wrap">
-					<div class="footer_awards_wrap_inner">
+					<div class="footer_awards_wrap_inner">		<ul class="footer_awards_slider">			<li><a taget="_blank" href="javascript:void(0);"><img alt="여섯가족부 2020 대한민국 일자리대상 여성가족부장관상" src="//image.istarbucks.co.kr/common/img/footer/t_footer_award23.jpg"></a></li>			<li><a taget="_blank" href="javascript:void(0);"><img alt="행정안전부 2020 소방의 날 행정안전부장관 표창" src="//image.istarbucks.co.kr/common/img/footer/t_footer_award24.jpg"></a></li>			<li><a taget="_blank" href="javascript:void(0);"><img alt="농림축산식품부 2020 대한민국 커피산업대상 농림축산식품부 장관상" src="//image.istarbucks.co.kr/common/img/footer/t_footer_award25.jpg"></a></li>			<li><a taget="_blank" href="javascript:void(0);"><img alt="산업통상자원부 2020 대한민국 중소중견기업혁신 대상 국회산업통상자원중소벤처위원회장상" src="//image.istarbucks.co.kr/common/img/footer/t_footer_award26.jpg"></a></li>			<li><a taget="_blank" href="javascript:void(0);"><img alt="일자리위원회 2020 대한민국 일자리 유공 표창 대통령직속 일자리위원회 부위원장상" src="//image.istarbucks.co.kr/common/img/footer/t_footer_award27.jpg"></a></li>			<li><a taget="_blank" href="javascript:void(0);"><img alt="동반성장위원회 2020 사랑나눔 사회공헌대상 동반성장위원회 위원장상" src="//image.istarbucks.co.kr/common/img/footer/t_footer_award28.jpg"></a></li>		</ul>
 						<div class="footer_slider_controller">
 							<div class="footer_slider_controls"></div>
 							<div class="footer_slider_pagers"></div>
@@ -786,7 +757,7 @@ var eFrequencyPlannerYn = 'Y';
 				<!-- 수상내역 end -->
                 
                 <!-- Express DT MSR 회원 확인 Popup -->
-				<div class="dtPop ecoPop" id="msrCheckPop" style="display:none">
+				<div class="dtPop ecoPop" id="msrCheckPop" style="display: none; margin-top: -51px;">
 					<div class="head">
 						<p class="tt"></p>
 						<p id="dtPopCommonCloseBtn" class="close dtPopClose"><a href="javascript:void(0)"></a></p> <!-- 팝업 닫힘 클래스 : dtPopClose -->
@@ -808,7 +779,7 @@ var eFrequencyPlannerYn = 'Y';
 					<!--// 버튼 -->
 				</div>
 				<!-- 개인컵 리워드  MSR 회원 확인 Popup s-->
-				<div class="dtPop ecoPop" id="msrCheckPop_rewardTumbler" style="display:none">
+				<div class="dtPop ecoPop" id="msrCheckPop_rewardTumbler" style="display: none; margin-top: -51px;">
 					<div class="head">
 						<p class="tt">스타벅스 리워드 등록 안내</p>  <!-- 스타벅스 리워드 수정  -->
 						<p id="tumblerPopCommonCloseBtn" class="close ecoPopClose"><a href="javascript:void(0)"></a></p> <!-- 팝업 닫힘 클래스 : dtPopClose -->
@@ -830,19 +801,19 @@ var eFrequencyPlannerYn = 'Y';
 				
 				<!-- 150517 추가 - 문진욱 -->
 				<aside class="copyright">
-					<a class="c_00b050" href="footer/etc/privacy">개인정보처리방침</a>
-					<a href="footer/etc/rules_vod" class="mbn">영상정보처리기기 운영관리 방침</a>
-					<a href="footer/etc/rules">홈페이지 이용약관</a>
-					<a href="footer/etc/rules_loc" class="mbn">위치정보 이용약관</a>
-					<a href="footer/etc/rules_msr" class="mbn">스타벅스 카드 이용약관</a>
-					<a href="footer/etc/rules_non" class="mbn">비회원 이용약관</a>
+					<a class="c_00b050" href="#">개인정보처리방침</a>
+					<a href="#" class="mbn">영상정보처리기기 운영관리 방침</a>
+					<a href="#">홈페이지 이용약관</a>
+					<a href="#" class="mbn">위치정보 이용약관</a>
+					<a href="#" class="mbn">스타벅스 카드 이용약관</a>
+					<a href="#" class="mbn">비회원 이용약관</a>
 					<span class="br"><!-- 150713 삭제  구명준  <a href="javascript:void(0);">위치정보 이용약관</a> -->
-					<a href="footer/etc/rules_mdp">My DT Pass 서비스 이용약관</a></span> <!-- 20200914 mdp 추가 -->
-					<a href="footer/etc/hotline" class="last">윤리경영 핫라인</a>
+					<a href="#">My DT Pass 서비스 이용약관</a></span> <!-- 20200914 mdp 추가 -->
+					<a href="#" class="last">윤리경영 핫라인</a>
 					<br>
-					<a class="btned_link" href="footer/etc/coming_route">찾아오시는 길</a>
-					<a class="btned_link" href="footer/partnership/new_partner">신규입점제의</a>
-					<a class="btned_link" href="footer/etc/sitemap">사이트 맵</a><br>
+					<a class="btned_link" href="#">찾아오시는 길</a>
+					<a class="btned_link" href="#">신규입점제의</a>
+					<a class="btned_link" href="#">사이트 맵</a><br>
 					<ul class="copy_menu">
 						<li>사업자등록번호 : 201-81-21515</li>
 						<li>주식회사 에스씨케이컴퍼니 대표이사 : 송 데이비드 호섭</li> <!-- 220105 수정 -->

@@ -708,14 +708,172 @@ var eFrequencyPlannerYn = 'Y';
 							<form action="form">
 								<div class="vod_select_box">
 									<label class="value" for="rules_vod_select">이전 영상정보처리기기 운영관리 방침 보기</label>
-									<select title="이전 영상정보처리기기 운영관리 방침 보기" id="rules_vod_select" name="jump">
-									</select>
+									<select title="이전 영상정보처리기기 운영관리 방침 보기" id="rules_vod_select" name="jump"><option value="">이전 영상정보처리기기 운영관리 방침 보기</option><option value="433">2022년 01월 19일 시행</option><option value="337">2020년 04월 01일 시행</option><option value="338">2019년 11월 14일 시행</option><option value="339">2016년 08월 16일 시행</option><option value="340">2015년 01월 14일 시행</option><option value="341">2014년 03월 24일 시행</option></select>
 								</div> 
 							</form>
 						</div>
 						<!-- 202101 수정 -->
-						<div class="vod_text" id="vod_text">
-						</div>
+						<div class="vod_text" id="vod_text"><div class="privacy_cont">
+    <p class="tit">스타벅스 코리아는 고객님을 보호합니다.</p>
+    <p class="t1">스타벅스 코리아를 운영하는 주식회사 에스씨케이컴퍼니(이하 '회사')는 영상정보처리기기 운영관리 방침을 통해 본 회사에서 처리하는 영상정보가 어떠한 용도와 방식으로 이용 관리되고 있는지 알려드립니다.</p>
+    <p class="pri_tit">1. 영상정보처리기기의 설치 근거 및 설치 목적</p>
+    <p class="mb40">
+        본 회사는「개인정보 보호법」제25조 제1항에 따라 다음과 같은 목적으로 영상정보처리기기를 설치•운영 합니다.<br>
+        - 시설안전 및 화재 예방<br>
+        - 도난 방지
+    </p>
+
+    <p class="pri_tit">2. 설치 대수, 설치 위치 및 촬영범위</p>
+    <table summary="개인정보에 관한 민원 서비스" class="vod_tb mb40">
+        <caption class="hid">개인정보에 관한 민원 서비스 개인정보관리책임자, 개인정보관리담당자, 고객서비스책임자 테이블</caption>
+        <colgroup>
+            <col width="40%">
+        
+            <col width="60%">
+        </colgroup>
+        <thead>
+            <tr>
+                <th scope="col">설치 대수</th>
+                
+                <th scope="col" class="brn">설치 위치 및 촬영 범위</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>매장 출입구 또는 매장 내부에 설치 대수 별도 안내</td>
+                <td class="brn">매장 내 외부</td>
+            </tr>
+        </tbody>
+    </table>
+    <p class="pri_tit">3. 관리책임자 및 접근권한자</p>
+    <p class="mb15">귀하의 영상정보를 보호하고 개인 영상정보와 관련한 불만을 처리하기 위하여 아래와 같이 개인영상정보 보호 책임자를 두고 있습니다.</p>
+    <table summary="개인정보에 관한 민원 서비스" class="vod_tb mb40">
+        <caption class="hid">개인정보에 관한 민원 서비스 개인정보관리책임자, 개인정보관리담당자, 고객서비스책임자 테이블</caption>
+        <colgroup>
+            <col width="20%">
+            <col width="20%">
+            <col width="20%">
+            <col width="20%">
+            <col width="20%">
+        </colgroup>
+        <thead>
+            <tr>
+                <th scope="col">구분</th>
+                <th scope="col">이름</th>
+                <th scope="col">직위</th>
+                <th scope="col">소속</th>
+                <th scope="col" class="brn">연락처</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>총괄 책임자</td>
+                <td>하익성</td>
+                <td>개인정보보호책임자</td>
+                <td>기획담당</td>
+                <td rowspan="3" class="brn">1522-3232</td>
+            </tr>
+            <tr>
+                <td>관리책임자<br>(매장 외)</td>
+                <td>인사/총무 부서장</td>
+                <td>팀장</td>
+                <td>인사/총무부서</td>
+            </tr>
+            <tr>
+                <td>관리책임자<br>(매장)</td>
+                <td>매장 운영 부서장</td>
+                <td>팀장</td>
+                <td>매장운영 부서</td>
+            </tr>
+            <tr>
+                <td>접근권한자</td>
+                <td colspan="4" class="brn">각 매장의 점장 및 지역매니저, 시설 담장자, 보안부서팀원</td>
+            </tr>
+        </tbody>
+    </table>
+    <p class="pri_tit">4. 영상정보의 촬영시간, 보관기간, 보관장소 및 처리방법</p>
+    <table summary="개인정보에 관한 민원 서비스" class="vod_tb mb40">
+        <caption class="hid">개인정보에 관한 민원 서비스 개인정보관리책임자, 개인정보관리담당자, 고객서비스책임자 테이블</caption>
+        <colgroup>
+            
+            <col width="30%">
+            <col width="35%">
+            <col width="35%">
+        </colgroup>
+        <thead>
+            <tr>
+                <th scope="col">촬영시간</th>
+                <th scope="col">보관기간</th>
+                <th scope="col" class="brn">보관장소</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>24시간</td>
+                <td>촬영일로부터 30일 내외</td>
+                <td class="brn">각 매장 사무실</td>
+            </tr>
+        </tbody>
+    </table>
+    <p class="mb40">
+        - <strong>처리방법</strong> : 개인영상정보의 목적 외 이용, 제3자 제공, 파기, 열람 등 요구에 관한 사항을 기록•관리하고, 보관기간 만료 시 복원이 불가능한 방법으로 영구 삭제(출력물의 경우 파쇄 또는 소각)합니다.
+    </p>
+
+    <p class="pri_tit">5. 영상정보처리기기 설치 및 관리 등의 위탁에 관한 사항</p>
+    <p class="mb15">
+        본 회사는 아래와 같이 영상정보처리기기 설치 및 관리 등을 위탁하고 있으며, 관계 법령에 따라 위탁계약 시 개인정보가 안전하게 관리될 수 있도록 필요한 사항을 규정하고 있습니다.
+    </p>
+    <table summary="개인정보에 관한 민원 서비스" class="vod_tb mb40">
+        <caption class="hid">개인정보에 관한 민원 서비스 개인정보관리책임자, 개인정보관리담당자, 고객서비스책임자 테이블</caption>
+        <colgroup>
+            
+            <col width="25%">
+            <col width="25%">
+            <col width="25%">
+            <col width="25%">
+        </colgroup>
+        <thead>
+            <tr>
+                <th scope="col">수탁업체</th>
+                <th scope="col">담당자</th>
+                <th scope="col">연락처</th>
+                <th scope="col" class="brn">비고</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>엔토스정보통신</td>
+                <td>기술 담당</td>
+                <td>02-6340-5600</td>
+                <td class="brn">설치 및 <span class="en">AS</span></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p class="pri_tit">6.개인영상정보의 확인 방법 및 장소에 관한 사항</p>
+    <ol class="pri_con mb40">
+        <li>- 확인 방법 : 영상정보가 보관 된 매장에 미리 연락하고 해당 매장을 방문하시면 확인 가능합니다.</li>
+        <li>- 확인 장소 : 영상정보가 보관 된 각 매장</li>
+    </ol>
+    
+    <p class="pri_tit">7. 정보주체의 영상정보 열람 등 요구에 대한 조치</p>
+    <p class="mb40">
+        귀하는 개인영상정보에 관하여 열람 또는 존재확인•삭제를 원하는 경우 언제든지 영상정보처리기기 운영자에게 요구하실 수 있습니다. 단, 귀하가 촬영된 개인영상정보 및 명백히 정보주체의 급박한 생명, 신체, 재산의 이익을 위하여 필요한 개인영상정보에 한정됩니다.<br><br>
+        본 회사는 개인영상정보에 관하여 열람 또는 존재확인•삭제를 요구한 경우 지체 없이 필요한 조치를 하겠습니다.
+    </p>
+    
+    <p class="pri_tit">8. 영상정보의 안전성 확보조치</p>
+    <p class="mb40">
+        본 회사에서 처리하는 영상정보는 비밀번호 등을 통하여 안전하게 관리되고 있습니다. 또한 본 회사는 개인영상정보보호를 위한 관리적 대책으로서 개인정보에 대한 접근 권한을 차등부여하고 있으며, 개인영상정보의 위•변조 방지를 위하여 개인영상정보의 생성 일시, 열람 시 열람 목적,열람자,열람 일시 등을 기록하여 관리하고 있습니다. 
+    </p>
+    <p class="pri_tit">9. 개인정보 처리방침 변경에 관한 사항</p>
+    <p class="mb40">
+        이 영상정보처리기기 운영관리방침은 법령ㆍ정책 또는 보안기술의 변경에 따라 내용의 추가ㆍ삭제 및 수정이 있을 시에는 시행하기 최소 7일전에 본 회사 홈페이지를 통해 변경사유 및 내용 등을 공지하도록 하겠습니다.
+    </p>
+    
+    
+    <p class="pri_tail">- 공고일자 : 2022년 2월 21일 / 시행일자 : 2022년 2월 28일</p>
+</div></div>
 					</div>
 					<!-- //ms_cont -->
 
@@ -727,31 +885,31 @@ var eFrequencyPlannerYn = 'Y';
         <li>
             <a href="javascript:void(0);">개인정보 처리방침<span class="sbox_arrow_down"></span></a> <!-- 20211213 수정 -->
             <ul>
-				<li><a href="privacy">· 개인정보 처리방침</a></li>
-				<li><a href="privacy_board_list-1">· 개인정보처리의 업무위탁관련</a></li>
+				<li><a href="/footer/etc/privacy.do">· 개인정보 처리방침</a></li>
+				<li><a href="/footer/etc/privacy_board_list.do">· 개인정보처리의 업무위탁관련</a></li>
 			</ul>
         </li>
         <li>
-            <a href="rules_vod">영상정보처리기기<br>운영관리 방침</a>
+            <a href="/footer/etc/rules_vod.do">영상정보처리기기<br>운영관리 방침</a>
         </li>
         <li>
             <a href="javascript:void(0);">이용약관<span class="sbox_arrow_down"></span></a>
             <ul>
-                <li><a href="rules">· 홈페이지 이용약관</a></li>
-                <li><a href="rules_loc">· 위치정보 이용약관</a></li>
-                <li><a href="rules_msr">· 스타벅스 카드 이용약관</a></li>
-                <li><a href="rules_non">· 비회원 이용약관</a></li>
-                <li><a href="rules_mdp">· My DT Pass 서비스 이용약관</a></li> 
+                <li><a href="/footer/etc/rules.do">· 홈페이지 이용약관</a></li>
+                <li><a href="/footer/etc/rules_loc.do">· 위치정보 이용약관</a></li>
+                <li><a href="/footer/etc/rules_msr.do">· 스타벅스 카드 이용약관</a></li>
+                <li><a href="/footer/etc/rules_non.do">· 비회원 이용약관</a></li>
+                <li><a href="/footer/etc/rules_mdp.do">· My DT Pass 서비스 이용약관</a></li> 
             </ul>
         </li>
         <li>
-            <a href="hotline">윤리경영 핫라인</a>
+            <a href="/footer/etc/hotline.do">윤리경영 핫라인</a>
         </li>
         <li>
-            <a href="coming_route">찾아오시는 길</a>
+            <a href="/footer/etc/coming_route.do">찾아오시는 길</a>
         </li>
         <li>
-            <a href="sitemap">사이트 맵</a>
+            <a href="/footer/etc/sitemap.do">사이트 맵</a>
         </li>
     </ul>
 </nav>
