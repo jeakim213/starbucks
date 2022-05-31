@@ -46,34 +46,30 @@ public class HomeController {
 		return "coffee/doppio";
 	}
 	
-
 	@RequestMapping(value="admin_3")
 	public String admin_3() {
 		return "my/admin_3";
 
 	}
 	
-
 	@RequestMapping(value="admin_4")
 	public String admin_4() {
 		return "my/admin_4";
 
 	}
 	
-<<<<<<< HEAD
-
 	@RequestMapping(value="admin_5")
 	public String admin_5() {
 		return "my/admin_5";
 
 	}
 	
-
 	@RequestMapping(value="admin_6")
 	public String admin_6() {
 		return "my/admin_6";
 
-=======
+	}
+	
 	@RequestMapping(value="latte")
 	public String latte() {
 		return "coffee/latte";
@@ -114,7 +110,6 @@ public class HomeController {
 	@RequestMapping(value="menu_drink_list")
 	public String drink_list() {
 		return "menu/drink_list";
->>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
 	}
 	
 	@RequestMapping(value="menu_drink_list_1")
@@ -310,16 +305,6 @@ public class HomeController {
 	public String scard_register_inquiry() {
 		return "msr/scard/register_inquiry";
 	}
-<<<<<<< HEAD
-	
-
-	/*@RequestMapping(value="scard_scard_gallery")
-	public String scard_scard_gallery() {
-		return "msr/scard/scard_gallery";
-	}
-	*/
-=======
->>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
 
 	@RequestMapping(value="sceGift_egift_information")
 	public String sceGift_egift_information() {
@@ -440,8 +425,6 @@ public class HomeController {
 		return "store/store_star_field";
 	}
 	
-	
-<<<<<<< HEAD
 	@RequestMapping(value="util_app_tip")
 	public String app_tip() {
 		return "util/app_tip";
@@ -487,11 +470,10 @@ public class HomeController {
 	public String campaign_list() {
 		return "whats_new/campaign_list";
 	}
+	
 	@RequestMapping(value="whats_new_campaign_list_1")
 	public String campaign_list_1() {
 		return "whats_new/campaign_list-1";
 	}
-=======
->>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
 	
 }
