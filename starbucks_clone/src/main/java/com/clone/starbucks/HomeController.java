@@ -425,6 +425,14 @@ public class HomeController {
 		return "menu/index";
 	}
 	
+	//0531 다정
+	@RequestMapping(value="orderList")
+	public String orderList() {
+		return "menu/orderList";
+	}
+	
+	
+	
 	@RequestMapping(value="menu_myOrder")
 	public String menu_myOrder() {
 		return "menu/myOrder";
