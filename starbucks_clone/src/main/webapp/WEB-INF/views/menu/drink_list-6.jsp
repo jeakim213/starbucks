@@ -1,4 +1,5 @@
-﻿<%@ page language="java" contentType="text/html; charset=UTF-8"
+﻿<%@page isELIgnored="true" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
 
@@ -633,8 +634,13 @@ var eFrequencyPlannerYn = 'Y';
 					<!-- 분류 보기 -->
 					<div class="product_kind_wrap">
 						<p class="tit">분류 보기</p>
-						<div class="product_kind_btn"><a href="javascript:void(0)" role="button"><!-- 접근성_20171123 role 추가 --><img src="common/img/menu/list_up_btn.png" alt="분류보기 메뉴 접기"><!-- 접근성_20171123 alt 값 추가 + menu.js--></a></div>
-						<div class="product_toggle_wrap">
+						<div class="product_kind_btn">
+                     <!-- 0530 예은 수정 _ 메뉴 펼치기 -->
+                        <a href="javascript:void(0)" role="button">
+                        <img src="//image.istarbucks.co.kr/common/img/menu/list_up_btn.png" alt="분류보기 메뉴 접기"><!-- 접근성_20171123 role 추가 --></a>
+                        <!-- 접근성_20171123 alt 값 추가 + menu.js-->
+                        </div>
+                  <div class="product_toggle_wrap" display="block";>
 							<dl class="product_kind_tab">
 								<dt class="dt1"><a href="javascript:void(0)" id="categoryTab" class="selected" role="button" title="카테고리별 음료선택">카테고리</a></dt><!-- 접근성_20171123 role, title 추가 -->
 								<dd>
