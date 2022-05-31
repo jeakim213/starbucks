@@ -637,11 +637,44 @@ var eFrequencyPlannerYn = 'Y';
                             <div class="campaign_list">
                                 <dl>
                                     <!-- 진행 이벤트 --> 
+                                    <!-- 0530 예은 수정 -->
                                     <dt>진행  이벤트</dt>
                                     <dd>
                                         <ul>
+                                        	<li>
+                                        		<dl>
+                                        			<dt>
+                                        				<a href="javascript:void(0)" class="goPromotionView" prod="1994">
+                                        				<img src="https://image.istarbucks.co.kr/upload/promotion/WEB_THUM_20220429124913413.jpg" alt="22 서머 e-프리퀀시 이벤트 안내"></a>
+                                        			</dt>
+                                        			<dd>
+                                        				<h4>
+                                        					<span class="icon_pin">중요</span>
+                                        					22 서머 e-프리퀀시 이벤트 안내</h4>
+                                        				<p class="date">2022-05-10 ~ 2022-07-18</p>
+                                        			</dd>
+                                        		</dl>
+                                        	</li>
+                                        	<li>
+                                        		<dl>
+                                        			<dt>
+                                        				<a href="javascript:void(0)" class="goPromotionView" prod="1994">
+                                        				<img src="https://image.istarbucks.co.kr/upload/promotion/WEB_THUM_20220429124913413.jpg" alt="22 서머 e-프리퀀시 이벤트 안내"></a>
+                                        			</dt>
+                                        			<dd>
+                                        				<h4>
+                                        					<span class="icon_pin">중요</span>
+                                        					22 서머 e-프리퀀시 이벤트 안내</h4>
+                                        				<p class="date">2022-05-10 ~ 2022-07-18</p>
+                                        			</dd>
+                                        		</dl>
+                                        	</li>
                                         </ul>
+                                         
                                     </dd>
+                                    
+                                       
+                                 
 
                                     <!-- 종료 이벤트 -->
                                     <dt>종료  이벤트</dt>
@@ -1309,8 +1342,8 @@ var eFrequencyPlannerYn = 'Y';
 						}
 					}
 				});
-                
-                $('.campaign_list > dl > dd > ul').empty();
+                //0530 예은 수정
+                //$('.campaign_list > dl > dd > ul').empty();
                 
                 getIngList('all');
                 getIngList('STB2812');
