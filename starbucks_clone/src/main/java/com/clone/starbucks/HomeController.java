@@ -28,6 +28,7 @@ public class HomeController {
 	@RequestMapping(value="americano")
 	public String americano() {
 		return "coffee/americano";
+	
 	}
 	
 	@RequestMapping(value="cappuccino")
@@ -86,151 +87,17 @@ public class HomeController {
 	}
 	
 	//footer/co_sales
-<<<<<<< HEAD
-=======
-	@RequestMapping(value="co_sales_index")
-	public String footer_cosales_index() {
-		return "footer/co_sales/index";
-	}
-	
-	@RequestMapping(value="co_sales_sb_product")
-	public String footer_cosales_sb_product() {
-		return "footer/co_sales/sb_product";
-	}
-	
-	@RequestMapping(value="co_sales_sbcard_egift_list")
-	public String footer_cosales_sbcard_egift_list() {
-		return "footer/co_sales/sbcard_egift_list";
-	}
-	
-	@RequestMapping(value="co_sales_sbcard_egift")
-	public String footer_cosales_sbcard_egift() {
-		return "footer/co_sales/sbcard_egift";
-	}
-	
-	@RequestMapping(value="co_sales_sbcard")
-	public String footer_cosales_sbcard() {
-		return "footer/co_sales/sbcard";
-	}
-	
-	//footer/company
-	@RequestMapping(value="company_index")
-	public String footer_company_index() {
-		return "footer/company/index";
-	}
-	
-	@RequestMapping(value="company_mission")
-	public String footer_company_mission() {
-		return "footer/company/mission";
-	}
-	
-	@RequestMapping(value="company_news_list")
-	public String footer_company_newslist() {
-		return "footer/company/news_list";
-	}
-	
-	@RequestMapping(value="company_starbucks_history")
-	public String footer_company_starbuckshistory() {
-		return "footer/company/starbucks_history";
-	}
-	
-	@RequestMapping(value="company_starbucks_information")
-	public String footer_company_starbucksinformation() {
-		return "footer/company/starbucks_information";
-	}
-	
-	@RequestMapping(value="company_starbucks_story")
-	public String footer_company_starbucksstory() {
-		return "footer/company/starbucks_story";
-	}
-	
-	//footer/etc
-	@RequestMapping(value="etc_coming_route")
-	public String footer_etc_comingroute() {
-		return "footer/etc/coming_route";
-	}
-	
-	@RequestMapping(value="etc_hotline")
-	public String footer_etc_hotline() {
-		return "footer/etc/hotline";
-	}
-	
-	@RequestMapping(value="etc_privacy_board_list")
-	public String footer_etc_privacy_board_list() {
-		return "footer/etc/privacy_board_list";
-	}
-	
-	@RequestMapping(value="etc_privacy_board_list_1")
-	public String footer_etc_privacy_board_list_1() {
-		return "footer/etc/privacy_board_list-1";
-	}
-	
-	@RequestMapping(value="etc_privacy")
-	public String footer_etc_privacy() {
-		return "footer/etc/privacy";
-	}
-	
-	@RequestMapping(value="etc_rules_loc")
-	public String footer_etc_rules_loc() {
-		return "footer/etc/rules_loc";
-	}
-	
-	@RequestMapping(value="etc_rules_mdp")
-	public String footer_etc_rules_mdp() {
-		return "footer/etc/rules_mdp";
-	}
-	
-	@RequestMapping(value="etc_rules_msr")
-	public String footer_etc_rules_msr() {
-		return "footer/etc/rules_msr";
-	}
-	
-	@RequestMapping(value="etc_rules_non")
-	public String footer_etc_rules_non() {
-		return "footer/etc/rules_non";
-	}
-	
-	@RequestMapping(value="etc_rules_vod")
-	public String footer_etc_rules_vod() {
-		return "footer/etc/rules_vod";
-	}
-	
-	@RequestMapping(value="etc_rules")
-	public String footer_etc_rules() {
-		return "footer/etc/rules";
-	}
-	
-	@RequestMapping(value="etc_sitemap")
-	public String footer_etc_sitemap() {
-		return "footer/etc/sitemap";
-	}
-	
-	//footer/partnership
-	@RequestMapping(value="partnership_new_partner")
-	public String footer_partnership_newpartner() {
-		return "footer/partnership/new_partner";
-	}
-	
-	//footer/recruit
-	@RequestMapping(value="recruit_index")
-	public String footer_recruit_index() {
-		return "footer/recruit/index";
-	}
->>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
-	
 	//login
 	@RequestMapping(value="login_login")
 	public String login() {
 		return "login/login";
 	}
-	
 	//menu
 	@RequestMapping(value="menu_drink_list")
 	public String drink_list() {
 		return "menu/drink_list";
 	}
 	
-
 	@RequestMapping(value="menu_drink_list_1")
 	public String drink_list_1() {
 		return "menu/drink_list-1";
@@ -325,6 +192,7 @@ public class HomeController {
 		return "menu/food_list-7";
 	}
 	
+	
 	@RequestMapping(value="menu_myOrder")
 	public String menu_myOrder() {
 		return "menu/myOrder";
@@ -415,17 +283,7 @@ public class HomeController {
 	public String scard_register_inquiry() {
 		return "msr/scard/register_inquiry";
 	}
-	
-<<<<<<< HEAD
-=======
 
-	/*@RequestMapping(value="scard_scard_gallery")
-	public String scard_scard_gallery() {
-		return "msr/scard/scard_gallery";
-	}
-	*/
-
->>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
 	@RequestMapping(value="sceGift_egift_information")
 	public String sceGift_egift_information() {
 		return "msr/sceGift/egift_information";
@@ -440,8 +298,6 @@ public class HomeController {
 	public String sceGift_msr_useguide() {
 		return "msr/sceGift/msr_useguide";
 	}
-	
-	
 	//my
 
 	@RequestMapping(value="egiftCard_shopping_bag")
@@ -547,52 +403,6 @@ public class HomeController {
 		return "store/store_star_field";
 	}
 	
-	//util
 	
-	@RequestMapping(value="util_app_tip")
-	public String app_tip() {
-		return "util/app_tip";
-	}
-	
-	@RequestMapping(value="util_faq")
-	public String faq() {
-		return "util/faq";
-	}
-	
-	@RequestMapping(value="util_guest_eReceipt")
-	public String guest_eReceipt() {
-		return "util/guest_eReceipt";
-	}
-	
-	@RequestMapping(value="util_online_survey")
-	public String online_survey() {
-		return "util/online_survey";
-	}
-	
-	@RequestMapping(value="util_partnership_card")
-	public String partnership_card() {
-		return "util/partnership_card";
-	}
-	
-	@RequestMapping(value="util_storecareList")
-	public String storecareList() {
-		return "util/storecareList";
-	}
-	
-	@RequestMapping(value="util_web_tip")
-	public String web_tip() {
-		return "util/web_tip";
-	}
-	
-	//whats_new
-	@RequestMapping(value="whats_new_campaign_list")
-	public String campaign_list() {
-		return "whats_new/campaign_list";
-	}
-	@RequestMapping(value="whats_new_campaign_list_1")
-	public String campaign_list_1() {
-		return "whats_new/campaign_list-1";
-
-	}
 	
 }
