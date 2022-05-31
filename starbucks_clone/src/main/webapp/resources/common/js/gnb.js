@@ -10,46 +10,46 @@ $(document).ready(function () {
     '						<div class="gnb_sub_inner">' +
     '							<ul>' +
     '								<li class="gnb_sub_ttl"><a href="/coffee/product_list.do">커피</a></li>' +
-    '								<li><a href="/coffee/product_list.do">스타벅스 원두</a></li>' +
-    '								<li><a href="/coffee/product_list.do?PACKAGE=01">스타벅스 비아</a></li>' +
-//    '								<li><a href="/coffee/product_list.do?PACKAGE=02">스타벅스 오리가미</a></li>' + // 20210915 삭제
-    '								<li><a href="/coffee/product_list.do?PACKAGE=05">스타벅스앳홈 by 캡슐</a></li>' + // 20210915 추가
+    '								<li><a href="/coffee/product_list">스타벅스 원두</a></li>' +
+    '								<li><a href="/coffee/product_list?PACKAGE=01">스타벅스 비아</a></li>' +
+//    '								<li><a href="/coffee/product_list?PACKAGE=02">스타벅스 오리가미</a></li>' + // 20210915 삭제
+    '								<li><a href="/coffee/product_list?PACKAGE=05">스타벅스앳홈 by 캡슐</a></li>' + // 20210915 추가
     '							</ul>' +
     '							<ul>' +
-    '								<li class="gnb_sub_ttl"><a href="/coffee/productFinder.do">나와 어울리는 커피</a></li>' +
+    '								<li class="gnb_sub_ttl"><a href="/coffee/productFinder">나와 어울리는 커피</a></li>' +
     '							</ul>' +
     //'							<ul>' +
-    //'								<li class="gnb_sub_ttl"><a href="/coffee/reserve_info.do">스타벅스 리저브™</a></li>' +
-    //'								<li><a href="/coffee/reserve_magazine_list.do">RESERVE MAGAZINE</a></li>' +
+    //'								<li class="gnb_sub_ttl"><a href="/coffee/reserve_info">스타벅스 리저브™</a></li>' +
+    //'								<li><a href="/coffee/reserve_magazine_list">RESERVE MAGAZINE</a></li>' +
     //'							</ul>' +
     '							<ul>' +
-    '								<li class="gnb_sub_ttl"><a href="/coffee/espresso.do">에스프레소 음료</a></li>' +
-    '								<li><a href="/coffee/doppio.do">도피오</a></li>' +
-    '								<li><a href="/coffee/espresso_macchiato.do">에스프레소 마키아또</a></li>' +
-    '								<li><a href="/coffee/americano.do">아메리카노</a></li>' +
-    '								<li><a href="/coffee/caramel_macchato.do">마키아또</a></li>' +
-    '								<li><a href="/coffee/cappuccino.do">카푸치노</a></li>' +
-    '								<li><a href="/coffee/latte.do">라떼</a></li>' +
-    '								<li><a href="/coffee/mocha.do">모카</a></li>' +
-    //'								<li><a href="/coffee/flat_white.do">리스트레또 비안코</a></li>' + // 20210914 삭제
+    '								<li class="gnb_sub_ttl"><a href="/coffee/espresso">에스프레소 음료</a></li>' +
+    '								<li><a href="/coffee/doppio">도피오</a></li>' +
+    '								<li><a href="/coffee/espresso_macchiato">에스프레소 마키아또</a></li>' +
+    '								<li><a href="/coffee/americano">아메리카노</a></li>' +
+    '								<li><a href="/coffee/caramel_macchato">마키아또</a></li>' +
+    '								<li><a href="/coffee/cappuccino">카푸치노</a></li>' +
+    '								<li><a href="/coffee/latte">라떼</a></li>' +
+    '								<li><a href="/coffee/mocha">모카</a></li>' +
+    //'								<li><a href="/coffee/flat_white">리스트레또 비안코</a></li>' + // 20210914 삭제
     '							</ul>' +
     //'							<ul>' +
-    //'								<li class="gnb_sub_ttl"><a href="/coffee/higher_enjoy.do">최상의 커피를 즐기는 법</a></li>' +
-    //'								<li><a href="/coffee/higher_enjoy.do">커피 프레스</a></li>' +
-    //'								<li><a href="/coffee/higher_enjoy.do?PACKAGE=01">푸어 오버</a></li>' +
-    //'								<li><a href="/coffee/higher_enjoy.do?PACKAGE=02">아이스 푸어 오버</a></li>' +
-    //'								<li><a href="/coffee/higher_enjoy.do?PACKAGE=03">커피 메이커</a></li>' +
-    //'								<li><a href="/coffee/higher_enjoy.do?PACKAGE=04">리저브를 매장에서 다양하게 즐기는 법</a></li>' +
+    //'								<li class="gnb_sub_ttl"><a href="/coffee/higher_enjoy">최상의 커피를 즐기는 법</a></li>' +
+    //'								<li><a href="/coffee/higher_enjoy">커피 프레스</a></li>' +
+    //'								<li><a href="/coffee/higher_enjoy?PACKAGE=01">푸어 오버</a></li>' +
+    //'								<li><a href="/coffee/higher_enjoy?PACKAGE=02">아이스 푸어 오버</a></li>' +
+    //'								<li><a href="/coffee/higher_enjoy?PACKAGE=03">커피 메이커</a></li>' +
+    //'								<li><a href="/coffee/higher_enjoy?PACKAGE=04">리저브를 매장에서 다양하게 즐기는 법</a></li>' +
     //'							</ul>' +
     //'							<ul>' +
     								//  20210914 수정
-    //'								<li class="gnb_sub_ttl"><a href="/coffee/story.do">커피 이야기</a></li>' +
-    //'								<li><a href="/coffee/story.do">농장에서 우리의 손으로</a></li>' +
-    //'								<li><a href="/coffee/story.do?PACKAGE=01">에스프레소 초이스</a></li>' +
-    //'								<li><a href="/coffee/story.do?PACKAGE=02">최상의 아라비카 원두</a></li>' +
-    //'								<li><a href="/coffee/story.do?PACKAGE=03">스타벅스 로스트 스펙트럼</a></li>' +
-    //'								<li><a href="/coffee/story.do?PACKAGE=05">스타벅스 디카페인</a></li>' +
-    //'								<li><a href="/coffee/story.do?PACKAGE=04">클로버® 커피 추출 시스템</a></li>' +
+    //'								<li class="gnb_sub_ttl"><a href="/coffee/story">커피 이야기</a></li>' +
+    //'								<li><a href="/coffee/story">농장에서 우리의 손으로</a></li>' +
+    //'								<li><a href="/coffee/story?PACKAGE=01">에스프레소 초이스</a></li>' +
+    //'								<li><a href="/coffee/story?PACKAGE=02">최상의 아라비카 원두</a></li>' +
+    //'								<li><a href="/coffee/story?PACKAGE=03">스타벅스 로스트 스펙트럼</a></li>' +
+    //'								<li><a href="/coffee/story?PACKAGE=05">스타벅스 디카페인</a></li>' +
+    //'								<li><a href="/coffee/story?PACKAGE=04">클로버® 커피 추출 시스템</a></li>' +
 									//  e:20210914 수정
     //'							</ul>' +
     '						</div>' +
@@ -78,54 +78,54 @@ $(document).ready(function () {
     '					<div class="gnb_sub">' +
     '						<div class="gnb_sub_inner">' +
     '							<ul>' +
-    '								<li class="gnb_sub_ttl"><a href="/menu/drink_list.do">음료</a></li>' +
-    '								<li><a href="/menu/drink_list.do?CATE_CD=product_cold_brew">콜드 브루</a></li>' +
-    '								<li><a href="/menu/drink_list.do?CATE_CD=product_brood">브루드 커피</a></li>' +
-    '								<li><a href="/menu/drink_list.do?CATE_CD=product_espresso">에스프레소</a></li>' +
-    '								<li><a href="/menu/drink_list.do?CATE_CD=product_frappuccino">프라푸치노</a></li>' +
-    '								<li><a href="/menu/drink_list.do?CATE_CD=product_blended">블렌디드</a></li>' +
-    '								<li><a href="/menu/drink_list.do?CATE_CD=product_fizzo">스타벅스 피지오</a></li>' +
-    '								<li><a href="/menu/drink_list.do?CATE_CD=product_tea">티(티바나)</a></li>' +
-    '								<li><a href="/menu/drink_list.do?CATE_CD=product_etc">기타 제조 음료</a></li>' +
-    '								<li><a href="/menu/drink_list.do?CATE_CD=product_juice">스타벅스 주스(병음료)</a></li>' +
+    '								<li class="gnb_sub_ttl"><a href="/menu/drink_list">음료</a></li>' +
+    '								<li><a href="/menu/drink_list?CATE_CD=product_cold_brew">콜드 브루</a></li>' +
+    '								<li><a href="/menu/drink_list?CATE_CD=product_brood">브루드 커피</a></li>' +
+    '								<li><a href="/menu/drink_list?CATE_CD=product_espresso">에스프레소</a></li>' +
+    '								<li><a href="/menu/drink_list?CATE_CD=product_frappuccino">프라푸치노</a></li>' +
+    '								<li><a href="/menu/drink_list?CATE_CD=product_blended">블렌디드</a></li>' +
+    '								<li><a href="/menu/drink_list?CATE_CD=product_fizzo">스타벅스 피지오</a></li>' +
+    '								<li><a href="/menu/drink_list?CATE_CD=product_tea">티(티바나)</a></li>' +
+    '								<li><a href="/menu/drink_list?CATE_CD=product_etc">기타 제조 음료</a></li>' +
+    '								<li><a href="/menu/drink_list?CATE_CD=product_juice">스타벅스 주스(병음료)</a></li>' +
     '							</ul>' +
     '							<ul>' +
-    '								<li class="gnb_sub_ttl"><a href="/menu/food_list.do">푸드</a></li>' +
-    '								<li><a href="/menu/food_list.do?CATE_CD=product_bakery">브레드</a></li>' +
-    '								<li><a href="/menu/food_list.do?CATE_CD=product_cake">케이크</a></li>' +
-    '								<li><a href="/menu/food_list.do?CATE_CD=product_sandwich">샌드위치 & 샐러드</a></li>' +
-    '								<li><a href="/menu/food_list.do?CATE_CD=product_wram_food">따뜻한 푸드</a></li>' +
-    '								<li><a href="/menu/food_list.do?CATE_CD=product_fruit_yogurt">과일 & 요거트</a></li>' +
-    '								<li><a href="/menu/food_list.do?CATE_CD=product_snack">스낵 & 미니 디저트</a></li>' +
-    '								<li><a href="/menu/food_list.do?CATE_CD=product_icecream">아이스크림</a></li>' +
-    //'								<li><a href="/menu/food_list.do?CATE_CD=product_etc">기타 푸드</a></li>' +
+    '								<li class="gnb_sub_ttl"><a href="/menu/food_list">푸드</a></li>' +
+    '								<li><a href="/menu/food_list?CATE_CD=product_bakery">브레드</a></li>' +
+    '								<li><a href="/menu/food_list?CATE_CD=product_cake">케이크</a></li>' +
+    '								<li><a href="/menu/food_list?CATE_CD=product_sandwich">샌드위치 & 샐러드</a></li>' +
+    '								<li><a href="/menu/food_list?CATE_CD=product_wram_food">따뜻한 푸드</a></li>' +
+    '								<li><a href="/menu/food_list?CATE_CD=product_fruit_yogurt">과일 & 요거트</a></li>' +
+    '								<li><a href="/menu/food_list?CATE_CD=product_snack">스낵 & 미니 디저트</a></li>' +
+    '								<li><a href="/menu/food_list?CATE_CD=product_icecream">아이스크림</a></li>' +
+    //'								<li><a href="/menu/food_list?CATE_CD=product_etc">기타 푸드</a></li>' +
     '							</ul>' +
     '							<ul>' +
-    '								<li class="gnb_sub_ttl"><a href="/menu/product_list.do">상품</a></li>' +
-    '								<li><a href="/menu/product_list.do?CATE_CD=product_mug">머그</a></li>' +
-    '								<li><a href="/menu/product_list.do?CATE_CD=product_glass">글라스</a></li>' +
-    '								<li><a href="/menu/product_list.do?CATE_CD=product_plastic">플라스틱 텀블러</a></li>' +
-    '								<li><a href="/menu/product_list.do?CATE_CD=product_stainless">스테인리스 텀블러</a></li>' +
-    '								<li><a href="/menu/product_list.do?CATE_CD=product_vacuum">보온병</a></li>' +
-    '								<li><a href="/menu/product_list.do?CATE_CD=product_accessories">액세서리</a></li>' +
-    '								<li><a href="/menu/product_list.do?CATE_CD=product_present">선물세트</a></li>' +
-    '								<li><a href="/menu/product_list.do?CATE_CD=product_coffee">커피 용품</a></li>' +
-    '								<li><a href="/menu/product_list.do?CATE_CD=product_teaPackage">패키지 티(티바나)</a></li>' +
-    //'								<li><a href="/menu/product_list.do?CATE_CD=product_planner">스타벅스 플래너</a></li>' + 20210602 삭제
+    '								<li class="gnb_sub_ttl"><a href="/menu/product_list">상품</a></li>' +
+    '								<li><a href="/menu/product_list?CATE_CD=product_mug">머그</a></li>' +
+    '								<li><a href="/menu/product_list?CATE_CD=product_glass">글라스</a></li>' +
+    '								<li><a href="/menu/product_list?CATE_CD=product_plastic">플라스틱 텀블러</a></li>' +
+    '								<li><a href="/menu/product_list?CATE_CD=product_stainless">스테인리스 텀블러</a></li>' +
+    '								<li><a href="/menu/product_list?CATE_CD=product_vacuum">보온병</a></li>' +
+    '								<li><a href="/menu/product_list?CATE_CD=product_accessories">액세서리</a></li>' +
+    '								<li><a href="/menu/product_list?CATE_CD=product_present">선물세트</a></li>' +
+    '								<li><a href="/menu/product_list?CATE_CD=product_coffee">커피 용품</a></li>' +
+    '								<li><a href="/menu/product_list?CATE_CD=product_teaPackage">패키지 티(티바나)</a></li>' +
+    //'								<li><a href="/menu/product_list?CATE_CD=product_planner">스타벅스 플래너</a></li>' + 20210602 삭제
     '							</ul>' +
     //'							<ul>' +
-    //'								<li class="gnb_sub_ttl"><a href="/menu/card_list.do">카드</a></li>' +
-    //'								<li><a href="/menu/card_list.do?CATE_CD=product_offline">실물카드</a></li>' +
-    //'								<li><a href="/menu/card_list.do?CATE_CD=product_egift">e-Gift 카드</a></li>' +
+    //'								<li class="gnb_sub_ttl"><a href="/menu/card_list">카드</a></li>' +
+    //'								<li><a href="/menu/card_list?CATE_CD=product_offline">실물카드</a></li>' +
+    //'								<li><a href="/menu/card_list?CATE_CD=product_egift">e-Gift 카드</a></li>' +
     //'							</ul>' +
     //'							<ul>' +
-    //'								<li class="gnb_sub_ttl"><a href="/wholecake/reserve_cake01.do">온라인 케익 예약</a></li>' +
+    //'								<li class="gnb_sub_ttl"><a href="/wholecake/reserve_cake01">온라인 케익 예약</a></li>' +
     //'							</ul>' +
     //'							<ul>' +
     //'								<li class="gnb_sub_ttl"><a>메뉴 이야기</a></li>' +
-    //'								<li><a href="/store/store_nitro_coldbrew.do">나이트로 콜드브루</a></li>' +
-    //'								<li><a href="/store/store_coldbrew.do">콜드 브루</a></li>' +
-    //'								<li><a href="/menuStory/teavana.do">스타벅스 티바나</a></li>' +
+    //'								<li><a href="/store/store_nitro_coldbrew">나이트로 콜드브루</a></li>' +
+    //'								<li><a href="/store/store_coldbrew">콜드 브루</a></li>' +
+    //'								<li><a href="/menuStory/teavana">스타벅스 티바나</a></li>' +
     //'							</ul>' +
     '						</div>' +
     '					</div>' +
@@ -135,7 +135,7 @@ $(document).ready(function () {
     '							<div class="gnb_sub_tx_left">' +
     '								<h3><a href="#">나이트로 콜드 브루 <img alt="" src="//image.istarbucks.co.kr/common/img/common/icon_gnb_new.png"></a></h3>' +
     '								<p class="gnb_sub_ex_txt">나이트로 커피 정통의 물결치듯 흘러내리는 캐스케이딩과 부드러운 크림을 경험하세요. </p>' +
-    //'								<h3><a href="/wholecake/reserve_cake01.do">스타벅스 케익 온라인 예약</a></h3>' +
+    //'								<h3><a href="/wholecake/reserve_cake01">스타벅스 케익 온라인 예약</a></h3>' +
     //'								<p class="gnb_sub_ex_txt">기념하고 싶은 날. 스타벅스 케익이 더 특별한 하루를 만들어 드립니다.</p>' +
     '							</div>' +
     '							<div class="gnb_sub_tx_right">' +
@@ -152,24 +152,24 @@ $(document).ready(function () {
     '					<div class="gnb_sub">' +
     '						<div class="gnb_sub_inner">' +
     '							<ul>' +
-    '								<li class="gnb_sub_ttl"><a href="/store/store_map.do">매장 찾기</a></li>' +
-    '								<li><a href="/store/store_map.do?disp=quick">퀵 검색</a></li>' +
-    '								<li><a href="/store/store_map.do?disp=locale">지역 검색</a></li>' +
+    '								<li class="gnb_sub_ttl"><a href="/store/store_map">매장 찾기</a></li>' +
+    '								<li><a href="/store/store_map?disp=quick">퀵 검색</a></li>' +
+    '								<li><a href="/store/store_map?disp=locale">지역 검색</a></li>' +
     '							</ul>' +
     '							<ul>' +
-    '								<li class="gnb_sub_ttl"><a href="/store/store_drive.do">드라이브 스루 매장</a></li>' +
+    '								<li class="gnb_sub_ttl"><a href="/store/store_drive">드라이브 스루 매장</a></li>' +
     '							</ul>' +
     '							<ul>' +
-    '								<li class="gnb_sub_ttl"><a href="/store/store_reserve.do">스타벅스 리저브™ 매장</a></li>' +
+    '								<li class="gnb_sub_ttl"><a href="/store/store_reserve">스타벅스 리저브™ 매장</a></li>' +
     '							</ul>' +
     '							<ul>' +
-    '								<li class="gnb_sub_ttl"><a href="/store/store_community.do">커뮤니티 스토어 매장</a></li>' +
+    '								<li class="gnb_sub_ttl"><a href="/store/store_community">커뮤니티 스토어 매장</a></li>' +
     '							</ul>' +
     //'							<ul>' +
     //'								<li class="gnb_sub_ttl"><a>매장 이야기</a></li>' +
-//    '								<li><a href="/store/store_cheongdam.do">청담스타</a></li>' + 20210727 메뉴 비노출
-    //'								<li><a href="/store/store_star_field.do">티바나 바 매장</a></li>' +
-//    '								<li><a href="/store/store_park.do">파미에파크</a></li>' + 20210727 메뉴 비노출
+//    '								<li><a href="/store/store_cheongdam">청담스타</a></li>' + 20210727 메뉴 비노출
+    //'								<li><a href="/store/store_star_field">티바나 바 매장</a></li>' +
+//    '								<li><a href="/store/store_park">파미에파크</a></li>' + 20210727 메뉴 비노출
     //'							</ul>' +
     '						</div>' +
     '					</div>' +
@@ -179,7 +179,7 @@ $(document).ready(function () {
     '							<div class="gnb_sub_tx_left">' +
     '								<h3><a href="#">매장찾기</a></h3>' +
     '								<p class="gnb_sub_ex_txt">보다 빠르게 매장을 찾아보세요.</p>' +
-//    '								<h3><a href="/whats_new/newsView.do?cate=&seq=3572">이대R점 <img alt="" src="//image.istarbucks.co.kr/common/img/common/icon_gnb_new.png"></a></h3>' + 20210727 메뉴 비노출
+//    '								<h3><a href="/whats_new/newsView?cate=&seq=3572">이대R점 <img alt="" src="//image.istarbucks.co.kr/common/img/common/icon_gnb_new.png"></a></h3>' + 20210727 메뉴 비노출
 //    '								<p class="gnb_sub_ex_txt">1호점 특화 MD와 티바나 티, 최고의 리저브 커피를 만나보세요.</p>' + 20210727 메뉴 비노출
     '							</div>' +
     '							<div class="gnb_sub_tx_right">' +
@@ -195,10 +195,10 @@ $(document).ready(function () {
     //'					<div class="gnb_sub">' +
     //'						<div class="gnb_sub_inner">' +
     //'							<ul>' +
-    //'								<li class="gnb_sub_ttl"><a href="/responsibility/starbucks_shared_planet.do">사회공헌 캠페인 소개</a></li>' + // 20210820 메뉴명 수정
+    //'								<li class="gnb_sub_ttl"><a href="/responsibility/starbucks_shared_planet">사회공헌 캠페인 소개</a></li>' + // 20210820 메뉴명 수정
     //'							</ul>' +
     //'							<ul>' +
-    //'								<li class="gnb_sub_ttl"><a href="/responsibility/hope_delivery.do">지역 사회 참여 활동</a></li>' +
+    //'								<li class="gnb_sub_ttl"><a href="/responsibility/hope_delivery">지역 사회 참여 활동</a></li>' +
     //'								<li><a href="/responsibility/hope_delivery.do">희망배달 캠페인</a></li>' +
     //'								<li><a href="/responsibility/talent_donation.do">재능기부 카페 소식</a></li>' +
     //'								<li><a href="/responsibility/community_store.do">커뮤니티 스토어</a></li>' +
@@ -246,11 +246,11 @@ $(document).ready(function () {
     '					<div class="gnb_sub">' +
     '						<div class="gnb_sub_inner">' +
     '							<ul>' +
-    '								<li class="gnb_sub_ttl"><a href="/msr/msreward/about.do">스타벅스 리워드</a></li>' + // 스타벅스 리워드 수정
-    '								<li><a href="/msr/msreward/about.do">스타벅스 리워드 소개</a></li>' + // 스타벅스 리워드 수정
-    '								<li><a href="/msr/msreward/level_benefit.do">등급 및 혜택</a></li>' +
-    '								<li><a href="/msr/msreward/star.do">스타벅스 별</a></li>' +
-    //'								<li><a href="/community/faq.do?menu_cd=STB2703&cate=F17">자주 하는 질문</a></li>' + //20210809 수정
+    '								<li class="gnb_sub_ttl"><a href="/msr/msreward/about">스타벅스 리워드</a></li>' + // 스타벅스 리워드 수정
+    '								<li><a href="/msr/msreward/about">스타벅스 리워드 소개</a></li>' + // 스타벅스 리워드 수정
+    '								<li><a href="/msr/msreward/level_benefit">등급 및 혜택</a></li>' +
+    '								<li><a href="/msr/msreward/star">스타벅스 별</a></li>' +
+    //'								<li><a href="/community/faq?menu_cd=STB2703&cate=F17">자주 하는 질문</a></li>' + //20210809 수정
     '							</ul>' +
     //'							<ul>' +
     //'								<li class="gnb_sub_ttl"><a href="/msr/scard/about.do">스타벅스 카드</a></li>' +
@@ -262,10 +262,10 @@ $(document).ready(function () {
     //'								<li><a href="/community/faq.do?menu_cd=STB2703&cate=F05">자주 하는 질문</a></li>' +  //20210809 수정
     //'							</ul>' +
     '							<ul>' +
-    '								<li class="gnb_sub_ttl"><a href="/msr/sceGift/egift_information.do">스타벅스 e-Gift Card</a></li>' +
-    '								<li><a href="/msr/sceGift/egift_information.do">스타벅스 e-Gift Card 소개</a></li>' +
-    '								<li><a href="/msr/sceGift/msr_useguide.do">이용안내</a></li>' +
-    '								<li><a href="/msr/sceGift/gift_step1.do" required="login">선물하기</a></li>' +
+    '								<li class="gnb_sub_ttl"><a href="/msr/sceGift/egift_information">스타벅스 e-Gift Card</a></li>' +
+    '								<li><a href="/msr/sceGift/egift_information">스타벅스 e-Gift Card 소개</a></li>' +
+    '								<li><a href="/msr/sceGift/msr_useguide">이용안내</a></li>' +
+    '								<li><a href="/msr/sceGift/gift_step1" required="login">선물하기</a></li>' +
     //'								<li><a href="/community/faq.do?menu_cd=STB2703&cate=F22">자주 하는 질문</a></li>' + //20210809 수정
     '							</ul>' +
     '						</div>' +
@@ -438,7 +438,7 @@ if (!(typeof eFrequencyYn === 'undefined') && eFrequencyYn == 'Y') {
       e.preventDefault();
       if (pattern_check("#totalSearch", "검색어를  입력하세요.", "허용되지 않은 문자입니다.", getPattern('BASIC3')) == false) { return; }
       var search_word = encodeURI(encodeURIComponent($("#totalSearch").val()));
-      location.href = "/search/search.do?search=" + search_word;
+      location.href = "/search/search?search=" + search_word;
     }
   });
 
