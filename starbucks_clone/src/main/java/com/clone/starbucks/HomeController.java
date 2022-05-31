@@ -228,7 +228,11 @@ public class HomeController {
 	//footer/etc
 	@RequestMapping(value="etc_coming_route")
 	public String footer_etc_comingroute() {
+<<<<<<< HEAD
 		return "footer/etc/coming_route";
+=======
+		return "footer/etc/comingroute";
+>>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
 	}
 	
 	@RequestMapping(value="etc_hotline")
@@ -515,11 +519,19 @@ public class HomeController {
 		return "msr/scard/register_inquiry";
 	}
 	
+<<<<<<< HEAD
 	/*@RequestMapping(value="scard_scard_gallery")
 	public String scard_scard_gallery() {
 		return "msr/scard/scard_gallery";
 	}
 	*/
+=======
+	/*
+	 * @RequestMapping(value="scard_scard_gallery") public String
+	 * scard_scard_gallery() { return "msr/scard/scard_gallery"; }
+	 */
+	
+>>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
 	@RequestMapping(value="sceGift_egift_information")
 	public String sceGift_egift_information() {
 		return "msr/sceGift/egift_information";
