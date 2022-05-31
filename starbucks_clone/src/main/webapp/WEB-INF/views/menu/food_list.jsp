@@ -992,8 +992,8 @@ var eFrequencyPlannerYn = 'Y';
 									</table>
 									<div class="m_coffee_info">
 									</div>
-								</dd>
-							</dl> -->
+								</dd> -->
+							</dl>
 						</div>
 					</div>
 					<!-- 음료 리스트(카테고리 별) end -->
@@ -2112,7 +2112,6 @@ var eFrequencyPlannerYn = 'Y';
         <script type="text/x-jquery-tmpl" id="tpl_productNutTr">
             <tr>
                 <td>${product_NM}</td>
-                
             </tr>
         </script>
         <script type="text/x-jquery-tmpl" id="tpl_productNutMob">
@@ -2121,7 +2120,6 @@ var eFrequencyPlannerYn = 'Y';
                 <li>
                     <dl>
                         <dt>칼로리(Kcal)</dt>
-                        
                     </dl>
                 </li>
                 <li>
@@ -2139,7 +2137,6 @@ var eFrequencyPlannerYn = 'Y';
                 <li>
                     <dl>
                         <dt>당류(g)</dt>
-                        
                     </dl>
                 </li>
                 <li>

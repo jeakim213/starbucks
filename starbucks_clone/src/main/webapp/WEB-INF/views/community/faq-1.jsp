@@ -2,7 +2,6 @@
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="ko">
-
 	<head>
 		
 
@@ -37,7 +36,7 @@
 
 <!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-	<link href="/common/css_ie/style.css" rel="stylesheet">
+	<link href="common/css_ie/style.css" rel="stylesheet">
 	<script>
 		document.createElement('header');
 		document.createElement('nav');
@@ -69,15 +68,29 @@ var eFrequencySeq = '172';
 var eFrequencyPlannerYn = 'Y';
 </script>
 
-		<link href="common/css/style_coffee.css" rel="stylesheet">
-		<!--[if lt IE 9]>
-		<link href="/common/css_ie/style_main.css" rel="stylesheet">
-		<link href="/common/css_ie/style_coffee.css" rel="stylesheet">
-		<![endif]-->
+		<link href="common/css/style_main-1.css" rel="stylesheet">
+		<link href="common/css/style_msr-1.css" rel="stylesheet">
+		<style type="text/css">
+			.msr_faq_wrap > dd > ul > li.li2 {width:100%}
+		</style>
 	</head>
-
 	<body>
-		<div id="wrap">
+		
+		<script type="text/javascript">
+			var $vo = {};
+				$vo.menu_cd 		  = "STB2703";
+				$vo.cate			  = "F05";
+				$vo.searchKeyword	  = "";
+				$vo.pageIndex		  = "1";
+				
+				
+			var $init = {};
+				$init.category = null;
+				$init.setCategoryCode = null;				
+				$init.setCategoryName = null;
+		</script>
+	
+		<div class="pop_dimm"></div>
 			
 <script>
 //appId      : '1012019678818238',
@@ -221,6 +234,7 @@ var eFrequencyPlannerYn = 'Y';
 						</div>
 						<div class="notice_icon3">
 							<a href="my/ecoupon">
+
 								<p>
 									<span class="validCoupontCnt">0</span>
 								</p>
@@ -249,6 +263,7 @@ var eFrequencyPlannerYn = 'Y';
 							<ul>
 								<li><a href="javascript:$.loginLib.showLayerLogin();">로그인</a></li>
 								<li><a href="mem/join">회원가입</a></li>
+
 							</ul>
 						</div>
 					</div>
@@ -341,11 +356,13 @@ var eFrequencyPlannerYn = 'Y';
 									<li><a href="my/ecoupon?t=REG" required="login">등록하기</a></li>
 									<li><a href="my/ecoupon?t=GIFT" required="login">선물하기</a></li>
 									<li><a href="my/ecoupon?t=USE" required="login">사용하기</a></li>
+
 								</ul>
 							</li>
 							<li><a href="my/calendar" required="login">My 캘린더</a></li>
 							<!-- <li><a href="my/drink_shop" required="login">My 음료/매장</a></li> -->
 							<li><a href="my/my_menu" required="login">My 메뉴</a></li>
+
 							
 							
 							<li>
@@ -366,41 +383,44 @@ var eFrequencyPlannerYn = 'Y';
 									<li><a href="my/myinfo_modify_login" required="login">개인정보확인 및 수정</a></li>
 									<li><a href="my/myinfo_out" required="login">회원 탈퇴</a></li>
 									<li><a href="my/myinfo_modify_pwd" required="login">비밀번호 변경</a></li>
+
 								</ul>
 							</li>
 						</ul>
 						<ul>
 							<li class="mob_gnb_ttl2"><a role="button" class="en" href="javascript:void(0);">COFFEE<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 --></li>
-							<li><a href="index">한눈에 보기</a></li>
+							<li><a href="coffee/index">한눈에 보기</a></li>
 							<li>
 								<a role="button" href="javascript:void(0);">커피<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 -->
 								<ul>
-									<li><a href="product_list">스타벅스 원두</a></li>
-									<li><a href="product_list-1?PACKAGE=01">스타벅스 비아</a></li>
+									<li><a href="coffee/product_list">스타벅스 원두</a></li>
+									<li><a href="coffee/product_list-1?PACKAGE=01">스타벅스 비아</a></li>
 									<!-- <li><a href="coffee/product_list?PACKAGE=02">스타벅스 오리가미</a></li> 20210915 삭제 -->
-									<li><a href="product_list-2?PACKAGE=05">스타벅스앳홈 by 캡슐</a></li><!-- 20210915 추가 -->
+
+									<li><a href="coffee/product_list-2?PACKAGE=05">스타벅스앳홈 by 캡슐</a></li><!-- 20210915 추가 -->
 								</ul>
 							</li>
-							<li><a href="productFinder">나와 어울리는 커피</a></li>
+							<li><a href="coffee/productFinder">나와 어울리는 커피</a></li>
 							<li>
 								<a role="button" href="javascript:void(0);">스타벅스 리저브™<span class="mob_gnb_arrow_down"></span></a>
 								<ul>
-									<li><a href="reserve_info">ABOUT</a></li>
-									<li><a href="reserve_magazine_list">RESERVE MAGAZINE</a></li>
+									<li><a href="coffee/reserve_info">ABOUT</a></li>
+									<li><a href="coffee/reserve_magazine_list">RESERVE MAGAZINE</a></li>
 								</ul>
 							</li>
 							<li>
 								<a role="button" href="javascript:void(0);">에스프레소 음료<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가  -->
 								<ul>
-									<li><a href="doppio">도피오</a></li>
-									<li><a href="espresso_macchiato">에스프레소 마키아또</a></li>
-									<li><a href="americano">아메리카노</a></li>
-									<li><a href="caramel_macchato">마키아또</a></li>
-									<li><a href="cappuccino">카푸치노</a></li>
-									<li><a href="latte">라떼</a></li>
-									<li><a href="mocha">모카</a></li>
+									<li><a href="coffee/doppio">도피오</a></li>
+									<li><a href="coffee/espresso_macchiato">에스프레소 마키아또</a></li>
+									<li><a href="coffee/americano">아메리카노</a></li>
+									<li><a href="coffee/caramel_macchato">마키아또</a></li>
+									<li><a href="coffee/cappuccino">카푸치노</a></li>
+									<li><a href="coffee/latte">라떼</a></li>
+									<li><a href="coffee/mocha">모카</a></li>
 									<!-- <li><a href="javascript:void(0);">더블샷</a></li> -->
 									<!-- <li><a href="coffee/flat_white">리스트레또 비안코</a></li> 20210914 삭제 -->
+
 									<!-- <li class="mgnb_gold"><a href="javascript:void(0);">·에스프레소 초이스</a></li>
 									<li class="mgnb_gold"><a href="javascript:void(0);">·프로모션 상품</a></li>
 									<li class="mgnb_gold"><a href="javascript:void(0);">·브런치 유어 웨이</a></li> -->
@@ -409,24 +429,25 @@ var eFrequencyPlannerYn = 'Y';
 							<li>
 								<a role="button" href="javascript:void(0);">최상의 커피를 즐기는 법<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가  -->
 								<ul>
-									<li><a href="higher_enjoy">커피 프레스</a></li>
-									<li><a href="higher_enjoy-1?PACKAGE=01">푸어 오버</a></li>
-									<li><a href="higher_enjoy-2?PACKAGE=02">아이스 푸어 오버</a></li>
-									<li><a href="higher_enjoy-3?PACKAGE=03">커피 메이커</a></li>
-									<li><a href="higher_enjoy-4?PACKAGE=04">리저브를 매장에서 다양하게 즐기는 법</a></li>
+									<li><a href="coffee/higher_enjoy">커피 프레스</a></li>
+									<li><a href="coffee/higher_enjoy-1?PACKAGE=01">푸어 오버</a></li>
+									<li><a href="coffee/higher_enjoy-2?PACKAGE=02">아이스 푸어 오버</a></li>
+									<li><a href="coffee/higher_enjoy-3?PACKAGE=03">커피 메이커</a></li>
+									<li><a href="coffee/higher_enjoy-4?PACKAGE=04">리저브를 매장에서 다양하게 즐기는 법</a></li>
 								</ul>
 							</li>
 							<li>
 								<a role="button" href="javascript:void(0);">커피 이야기<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 -->
 								<ul>
 									<!-- 20210914 수정 -->
-									<li><a href="story">농장에서 우리의 손으로</a></li>
+									<li><a href="coffee/story">농장에서 우리의 손으로</a></li>
 									<!-- <li><a href="coffee/story?PACKAGE=01">에스프레소 초이스</a></li> -->
-									<li><a href="story-1?PACKAGE=02">최상의 아라비카 원두</a></li>
-									<li><a href="story-2?PACKAGE=03">스타벅스 로스트 스펙트럼</a></li>
+
+									<li><a href="coffee/story-1?PACKAGE=02">최상의 아라비카 원두</a></li>
+									<li><a href="coffee/story-2?PACKAGE=03">스타벅스 로스트 스펙트럼</a></li>
 									<!-- <li><a href="javascript:void(0);">추출방식 알아보기</a></li> -->
-									<li><a href="story-3?PACKAGE=04">스타벅스 디카페인</a></li>
-									<li><a href="story-4?PACKAGE=05">클로버® 커피 추출 시스템</a></li>
+									<li><a href="coffee/story-3?PACKAGE=04">스타벅스 디카페인</a></li>
+									<li><a href="coffee/story-4?PACKAGE=05">클로버® 커피 추출 시스템</a></li>
 									<!-- //20210914 수정 -->
 								</ul>
 							</li>
@@ -461,6 +482,7 @@ var eFrequencyPlannerYn = 'Y';
 									<li><a href="menu/food_list-6?CATE_CD=product_snack">스낵 &amp; 미니 디저트</a></li>
 									<li><a href="menu/food_list-7?CATE_CD=product_icecream">아이스크림</a></li>
                                     <!-- <li><a href="menu/food_list?CATE_CD=product_etc">기타 푸드</a></li> -->
+
 								</ul>
 							</li>
 							<li>
@@ -477,6 +499,7 @@ var eFrequencyPlannerYn = 'Y';
 									<li><a href="menu/product_list-8?CATE_CD=product_coffee">커피 용품</a></li>
 									<li><a href="menu/product_list-9?CATE_CD=product_teaPackage">패키지 티(티바나)</a></li>
 									<!-- <li><a href="menu/product_list?CATE_CD=product_planner">스타벅스 플래너</a></li> --> <!-- 20210602 삭제 -->
+
 								</ul>
 							</li>
 							
@@ -500,6 +523,7 @@ var eFrequencyPlannerYn = 'Y';
 									<!-- <li><a href="store/store_cheongdam">청담스타</a></li> 20210727 메뉴 비노출 -->
 									<li><a href="store/store_star_field">티바나 바 매장</a></li>
 									<!-- <li><a href="store/store_park">파미에파크</a></li> 20210727 메뉴 비노출 -->
+
 								</ul>
 							</li>
 						</ul>
@@ -513,7 +537,7 @@ var eFrequencyPlannerYn = 'Y';
 									<li><a href="msr/msreward/about">스타벅스 리워드 소개</a></li> <!-- 스타벅스 리워드 수정 -->
 									<li><a href="msr/msreward/level_benefit">등급 및 혜택</a></li>
 									<li><a href="msr/msreward/star">스타벅스 별</a></li>
-									<li><a href="community/faq?menu_cd=STB2703&cate=F17">자주 하는 질문</a></li> <!-- 20210809 수정 -->
+									<li><a href="faq?menu_cd=STB2703&cate=F17">자주 하는 질문</a></li> <!-- 20210809 수정 -->
 								</ul>
 							</li>
 							<li>
@@ -524,7 +548,7 @@ var eFrequencyPlannerYn = 'Y';
 									<li><a href="msr/scard/register_inquiry">등록 및 조회</a></li>
 									<li><a href="msr/scard/charge_information">충전 및 이용안내</a></li>
 									<li><a href="msr/scard/lost_report">분실신고/환불신청</a></li>
-									<li><a href="community/faq-1?menu_cd=STB2703&cate=F05">자주 하는 질문</a></li> <!-- 20210809 수정 -->
+									<li><a href="faq-1?menu_cd=STB2703&cate=F05">자주 하는 질문</a></li> <!-- 20210809 수정 -->
 								</ul>
 							</li>
 							<li>
@@ -533,13 +557,14 @@ var eFrequencyPlannerYn = 'Y';
 									<li><a href="msr/sceGift/egift_information">스타벅스 e-Gift Card 소개</a></li>
 									<li><a href="msr/sceGift/msr_useguide">이용안내</a></li>
 									<li><a href="msr/sceGift/gift_step1" required="login">선물하기</a></li>
-									<li><a href="community/faq-2?menu_cd=STB2703&cate=F22">자주 하는 질문</a></li> <!-- 20210809 수정 -->
+									<li><a href="faq-2?menu_cd=STB2703&cate=F22">자주 하는 질문</a></li> <!-- 20210809 수정 -->
 								</ul>
 							</li>
 						</ul>
 						<ul>
 							<li class="mob_gnb_ttl2"><a role="button" class="en" href="javascript:void(0);">WHAT'S NEW<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 --></li>
 							<li><a href="whats_new/index">한눈에 보기</a></li>
+
 							<li>
 								<a role="button" href="javascript:void(0);">이벤트<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 --> <!-- 20210304 메뉴명변경 -->
 								<ul>
@@ -614,52 +639,55 @@ var eFrequencyPlannerYn = 'Y';
 	</div>
 </div>			
 
+			<!-- 서브 타이틀 -->
+			<div class="sub_tit_wrap">
+				<div class="sub_tit_inner">
+					<h2><img src="common/img/msr/msreward/msr_tit2.jpg?v=210810" alt="자주 하는 질문"></h2> <!-- 20210809 수정 -->
+					<ul class="smap">
+						<li><a href="javascript:void(0)"><img src="common/img/common/icon_home.png" alt="홈으로"></a></li>
+						<li><img class="arrow" src="common/img/common/icon_arrow.png" alt="하위메뉴"></li>
+						<li class="en"><a href="javascript:void(0)" class="subHeadMnu1">WHAT'S NEW</a></li>
+						<li><img class="arrow" src="common/img/common/icon_arrow.png" alt="하위메뉴"></li>
+						<li><a href="javascript:void(0)" class="subHeadMnu2">자주 하는 질문</a></li> <!-- 211221 수정 -->
+					</ul>
+				</div>
+			</div>
+			<!-- 서브 타이틀 end -->
+						
 			<div id="container">
-				<!-- 서브 타이틀 -->
-				<div class="sub_tit_wrap">
-					<div class="sub_tit_inner">
-						<h2><img src="common/img/coffee/espresso/mocha_ttl.jpg" alt="모카"></h2>
-						<ul class="smap">
-							<li><a href="index.htm"><img src="common/img/common/icon_home.png" alt="홈으로"></a></li>
-							<li><img class="arrow" src="common/img/common/icon_arrow.png" alt="하위메뉴"></li>
-							<li class="en"><a href="espresso">COFFEE</a></li>
-							<li><img class="arrow" src="common/img/common/icon_arrow.png" alt="하위메뉴"></li>
-							<li><a href="espresso">에스프레소 음료</a></li>
-							<li><img class="arrow" src="common/img/common/icon_arrow.png" alt="하위메뉴"></li>
-							<li><a href="mocha" class="this">모카</a></li>
+				<!-- 자주하는 질문 -->
+				<section class="msr_section">
+					<p class="msr_t1"><span class="subHeadMnu2"></span>에 대한 궁금점이 많으신가요?고객님의 문의사항에 대한 답변을 빠르게 찾으실 수 있습니다.</p>
+					<div class="faq_sch_wrap">
+						<form action="" method="post">
+							<fieldset>
+								<legend class="hid">스타벅스 리워드 자주하는 질문 검색</legend> <!-- 스타벅스 리워드 수정 -->
+								<div class="select_box select_box01" style="display:none">
+									<label class="value" for="msr_faq_01">전체</label>
+									<select title="자주하는 질문 검색 종류" id="msr_faq_01">
+										<option value="전체">전체</option>
+										<option value="자주하는 질문1">자주하는 질문1</option>
+										<option value="자주하는 질문2">자주하는 질문2</option>
+									</select>
+								</div>
+								<div class="msr_sch_input">
+									<input type="text" name="msr_bar01" id="msr_bar01"> <a href="javascript:void(0)" class="sch_btn">검색</a>
+								</div>
+							</fieldset>
+						</form>
+					</div>
+					<dl class="msr_faq_wrap">
+
+					</dl>
+					<div class="faq_pagination">
+						<ul class="pager">
+
 						</ul>
 					</div>
-				</div>
-				<!-- 서브 타이틀 end -->
-				<!-- 상단 커피 -->
-				<section class="cf_espressoTop_wrap">
-					<article class="cf_espressoTop_inner">
-						<p class="cf_espressoClasslcs_img"><img src="common/img/coffee/espresso/mocha_img01.jpg" alt="mocha"></p>
-						<dl class="cf_espressoClasslcs_info">
-							<dt>“모카는 초콜릿의 달콤함과 커피의 쌉싸름한 맛을 동시에 느낄 수 있습니다.”</dt><!-- 20210914 수정 -->
-							<dd>								
-								<p>갓 추출한 에스프레소에 모카 시럽을 넣어 잘 섞어줍니다. 여기에 스팀 밀크를 추가하여 진한 커피 맛과 달콤한 초콜릿 맛이 잘 조화되도록 합니다. <br>더욱 달콤한 맛을 원한다면 휘핑크림을 올려 즐겨보세요.</p><!-- 20210914 수정 -->
-							</dd>
-						</dl>
-					</article>
 				</section>
-				<!-- 상단 end -->
-				<!-- 하단 -->
-				<!-- 제품 상세보기 하단공통 -->
-				<div class="productView_footmenu">
-					<div class="productView_footmenu_inner">						
-						<div class="productView_bottom">
-							<p class="tit">관련 제품</p>
-							<div class="productRel_wrap">
-                                <ul class="productRel_ul">
-                                <li>                 <dl>                     <dt><a href="javascript:void(0)" class="goView" prod="110566"><img src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[110566]_20210415134334280.jpg" alt="아이스 카페 모카"></a></dt>                     <dd>                         <p class="t1">아이스 카페 모카</p>                         <p class="t2">진한 초콜릿 모카 시럽과 풍부한 에스프레소를 신선한 우유 그리고 얼음과 섞어 휘핑크림으로 마무리한 음료로 진한 에스프레소와 초콜릿 맛이 어우러진 커피</p>                         <p class="more_btn"><a href="javascript:void(0)" class="goView" prod="110566"><img src="//image.istarbucks.co.kr/common/img/coffee/cf_more_btn.png" alt="자세히 보기"></a></p>                     </dd>                 </dl>             </li><li>                 <dl>                     <dt><a href="javascript:void(0)" class="goView" prod="110572"><img src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[110572]_20210415155545375.jpg" alt="아이스 화이트 초콜릿 모카"></a></dt>                     <dd>                         <p class="t1">아이스 화이트 초콜릿 모카</p>                         <p class="t2">달콤하고 부드러운 화이트 초콜릿 시럽과 에스프레소를 신선한 우유 그리고 얼음과 섞어 휘핑크림으로 마무리한 음료로 달콤함과 강렬한 에스프레소가 부드럽게 어우러진 커피</p>                         <p class="more_btn"><a href="javascript:void(0)" class="goView" prod="110572"><img src="//image.istarbucks.co.kr/common/img/coffee/cf_more_btn.png" alt="자세히 보기"></a></p>                     </dd>                 </dl>             </li><li>                 <dl>                     <dt><a href="javascript:void(0)" class="goView" prod="46"><img src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[46]_20210415134438165.jpg" alt="카페 모카"></a></dt>                     <dd>                         <p class="t1">카페 모카</p>                         <p class="t2">진한 초콜릿 모카 시럽과 풍부한 에스프레소를 스팀 밀크와 섞어 휘핑크림으로 마무리한 음료로 진한 에스프레소와 초콜릿 맛이 어우러진 커피</p>                         <p class="more_btn"><a href="javascript:void(0)" class="goView" prod="46"><img src="//image.istarbucks.co.kr/common/img/coffee/cf_more_btn.png" alt="자세히 보기"></a></p>                     </dd>                 </dl>             </li><li>                 <dl>                     <dt><a href="javascript:void(0)" class="goView" prod="128192"><img src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[128192]_20210415155639126.jpg" alt="화이트 초콜릿 모카"></a></dt>                     <dd>                         <p class="t1">화이트 초콜릿 모카</p>                         <p class="t2">달콤하고 부드러운 화이트 초콜릿 시럽과 에스프레소를 스팀 밀크와 섞어 휘핑크림으로 마무리한 음료로 달콤함과 강렬한 에스프레소가 부드럽게 어우러진 커피</p>                         <p class="more_btn"><a href="javascript:void(0)" class="goView" prod="128192"><img src="//image.istarbucks.co.kr/common/img/coffee/cf_more_btn.png" alt="자세히 보기"></a></p>                     </dd>                 </dl>             </li></ul>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- 제품 상세보기 하단공통 end -->
-				<!-- 하단 end -->
+				<!-- 자주하는 질문 end -->			
 			</div>
+			<!-- footer -->
 			
 
 
@@ -729,6 +757,7 @@ var eFrequencyPlannerYn = 'Y';
 							<a href="javascript:$.loginLib.logout();" class="sign_out" style="display:none;">Sign Out</a>
 						</li>
 						<li class="last"><a href="mem/join1">Join Us</a></li>
+
 					</ul>
 				</div>
 				<!-- 수상내역 -->
@@ -846,9 +875,9 @@ var eFrequencyPlannerYn = 'Y';
 			<!-- <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script> -->
 			
 			<!--
-			<script src="/common/js/swiper.jquery.min.js"></script>
-			<script src="/common/js/swiper.min.js"></script>
-			<script src="/common/js/util.js"></script>
+			<script src="common/js/swiper.jquery.min.js"></script>
+			<script src="common/js/swiper.min.js"></script>
+			<script src="common/js/util.js"></script>
 			-->
 			
 		
@@ -946,19 +975,23 @@ var eFrequencyPlannerYn = 'Y';
 							if (m_jsonRewardSummary.cardInfo.cardNumber == "") {
 								if (location.href.indexOf("my/") > -1) {
 									var url = "my/mycard_none";
+
 									
 									$('a[data-href="my/mycard_index"]').attr("data-href", url);
 									$('a[data-href="my/mycard"]').attr("data-href", url);
 									$('a[data-href="my/mycard_charge"]').attr("data-href", url);
 									$('a[data-href="my/mycard_lost"]').attr("data-href", url);
+
 								}
 							}
 							
 							// 로그인 상태에 따라 등록 및 조회 페이지 링크 변경
 							if (m_jsonRewardSummary.msrMemberYn == "Y") {
 								$('a[href="msr/scard/register_inquiry"]').attr("href", "my/mycard_info_input");
+
 							} else {
 								$('a[href="msr/scard/register_inquiry"]').attr("href", "my/reward");
+
 							}
 							
 							clearInterval(itvChangeLink);
@@ -968,6 +1001,7 @@ var eFrequencyPlannerYn = 'Y';
 					$('#goPage').bind('click', function(){
 						if (myWindow > 640) {
 							location.href="footer/co_sales/index";
+
 						}
 					});
 					
@@ -1012,6 +1046,7 @@ var eFrequencyPlannerYn = 'Y';
                             		url = location.href;
                             	}  
                             	location.href = "login/login?redirect_url=" + encodeURIComponent(url);
+
                     			
                     		}else{
                     			//MSR 회원 여부 체크
@@ -1042,6 +1077,7 @@ var eFrequencyPlannerYn = 'Y';
                 function fn_showrewardTumblerMsrCheckPopup(obj){
                 	if( obj.msrMemberYn == "Y"){ /*msr 회원일 경우 페이지 이동*/
                 		location.href = "my/reward_tumbler";
+
                     }else{/* msr 비회원일 경우 팝업창 노출 */
                         $('#msrCheckPop_rewardTumbler').fadeIn();
                         $('.dt_pop_up_dimm').fadeIn();
@@ -1050,6 +1086,7 @@ var eFrequencyPlannerYn = 'Y';
                         $('#tumblerPopConfirmBtn').on('click', function(){
                         	// msr 비회원일 경우 카드 등록 페이지로 이동
                         	location.href = "my/mycard_info_input";
+
                         });
                     }
                 }
@@ -1111,100 +1148,9 @@ var eFrequencyPlannerYn = 'Y';
 				});
 			</script>
 		
-            <form name="drinkListForm" method="post">
-                <input type="hidden" name="product_cd">
-            </form>
-		<script src="common/js/coffee.js"></script>
-		<script src="common/js/jquery.ezmark.min-1.js"></script>		
-		<script>
-			$(document).ready(function(){
-
-				/* 150517 추가 - 문진욱 */
-
-				if (myWindow > 960) {
-
-					var faSlider = $('.footer_awards_slider').bxSlider({
-						minSlides:4,
-						maxSlides:6,
-						slideWidth:189,
-						slideMargin:0,
-						controls:false,
-						auto:true,
-						autoControls:true,
-						autoControlsCombine:true,
-						pause:2000
-					});
-
-				} else if ((myWindow > 640) && (myWindow <= 960)) {
-					var faSlider = $('.footer_awards_slider').bxSlider({
-						minSlides:3,
-						maxSlides:3,
-						slideWidth:210,
-						slideMargin:0,
-						controls:false,
-						auto:true,
-						autoControls:true,
-						autoControlsCombine:true,
-						pause:2000
-					});
-				} else if (myWindow <= 640) {
-					var faSlider = $('.footer_awards_slider').bxSlider({
-						minSlides:1,
-						maxSlides:1,
-						slideWidth:300,
-						slideMargin:0,
-						controls:false,
-						auto:true,
-						autoControls:true,
-						autoControlsCombine:true,
-						pause:2000
-					});
-				}
-
-				/* 150517 추가 - 문진욱 end */
-                
-                getProductList('W0000118');
-
-            });
-            
-            function getProductList(tmp_cate) {
-
-                var option = {
-                        'CATE_CD' : tmp_cate
-                };
-                __ajaxCall('/menu/productListAjax', option , true, "JSON", "POST", 
-                function(data) {
-                    if(data.list.length > 0) {
-                        $('#tpl_productLi').tmpl(data.list).appendTo($('.productRel_ul'));
-                        
-                        $('.goView').bind('click', function() {
-                            product_cd = $(this).attr('prod');
-                            f = document.drinkListForm;
-                            f.action = "menu/drink_view";
-                            f.product_cd.value = product_cd;
-                            f.submit();
-                        });
-                    } else {
-                        $('.productView_footmenu').hide();
-                    }
-                },
-                function() {
-                });
-
-            }
-        </script>
-        <script type="text/x-jquery-tmpl" id="tpl_productLi">
-            <li>
-                <dl>
-                    <dt><a href="javascript:void(0)" class="goView" prod="${product_CD}"><img src="${img_UPLOAD_PATH.replace("www", "image")}${file_PATH}" alt="${product_NM}"></a></dt>
-                    <dd>
-                        <p class="t1">${product_NM}</p>
-                        <p class="t2">${content}</p>
-                        <p class="more_btn"><a href="javascript:void(0)" class="goView" prod="${product_CD}"><img src="//image.istarbucks.co.kr/common/img/coffee/cf_more_btn.png" alt="자세히 보기"></a></p>
-                    </dd>
-                </dl>
-            </li>
-        </script>
-	</div></body>
+			<!-- footer end -->
+			
+			<script src="common/js/bbs/bbs.js?v=220122"></script>
+	</body>
 
 </html>

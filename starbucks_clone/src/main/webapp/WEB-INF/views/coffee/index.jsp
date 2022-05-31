@@ -69,9 +69,11 @@ var eFrequencySeq = '172';
 var eFrequencyPlannerYn = 'Y';
 </script>
 
+		<link href="common/css/style_menu.css" rel="stylesheet">
 		<link href="common/css/style_coffee.css" rel="stylesheet">
 		<!--[if lt IE 9]>
 		<link href="/common/css_ie/style_main.css" rel="stylesheet">
+		<link href="/common/css_ie/style_menu.css" rel="stylesheet">
 		<link href="/common/css_ie/style_coffee.css" rel="stylesheet">
 		<![endif]-->
 	</head>
@@ -618,47 +620,205 @@ var eFrequencyPlannerYn = 'Y';
 				<!-- 서브 타이틀 -->
 				<div class="sub_tit_wrap">
 					<div class="sub_tit_inner">
-						<h2><img src="common/img/coffee/espresso/mocha_ttl.jpg" alt="모카"></h2>
+						<h2><img src="//image.istarbucks.co.kr/common/img/coffee/coffee_tit.jpg" alt="COFFEE"></h2>
 						<ul class="smap">
-							<li><a href="index.htm"><img src="common/img/common/icon_home.png" alt="홈으로"></a></li>
-							<li><img class="arrow" src="common/img/common/icon_arrow.png" alt="하위메뉴"></li>
-							<li class="en"><a href="espresso">COFFEE</a></li>
-							<li><img class="arrow" src="common/img/common/icon_arrow.png" alt="하위메뉴"></li>
-							<li><a href="espresso">에스프레소 음료</a></li>
-							<li><img class="arrow" src="common/img/common/icon_arrow.png" alt="하위메뉴"></li>
-							<li><a href="mocha" class="this">모카</a></li>
+							<li><a href="/"><img src="//image.istarbucks.co.kr/common/img/common/icon_home.png" alt="홈으로"></a></li>
+							<li><img class="arrow" src="//image.istarbucks.co.kr/common/img/common/icon_arrow.png" alt="하위메뉴"></li>						
+							<li class="en"><a href="/coffee/index.do" class="this ">COFFEE</a></li>
 						</ul>
 					</div>
 				</div>
 				<!-- 서브 타이틀 end -->
-				<!-- 상단 커피 -->
-				<section class="cf_espressoTop_wrap">
-					<article class="cf_espressoTop_inner">
-						<p class="cf_espressoClasslcs_img"><img src="common/img/coffee/espresso/mocha_img01.jpg" alt="mocha"></p>
-						<dl class="cf_espressoClasslcs_info">
-							<dt>“모카는 초콜릿의 달콤함과 커피의 쌉싸름한 맛을 동시에 느낄 수 있습니다.”</dt><!-- 20210914 수정 -->
-							<dd>								
-								<p>갓 추출한 에스프레소에 모카 시럽을 넣어 잘 섞어줍니다. 여기에 스팀 밀크를 추가하여 진한 커피 맛과 달콤한 초콜릿 맛이 잘 조화되도록 합니다. <br>더욱 달콤한 맛을 원한다면 휘핑크림을 올려 즐겨보세요.</p><!-- 20210914 수정 -->
-							</dd>
-						</dl>
-					</article>
-				</section>
-				<!-- 상단 end -->
-				<!-- 하단 -->
-				<!-- 제품 상세보기 하단공통 -->
-				<div class="productView_footmenu">
-					<div class="productView_footmenu_inner">						
-						<div class="productView_bottom">
-							<p class="tit">관련 제품</p>
-							<div class="productRel_wrap">
-                                <ul class="productRel_ul">
-                                <li>                 <dl>                     <dt><a href="javascript:void(0)" class="goView" prod="110566"><img src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[110566]_20210415134334280.jpg" alt="아이스 카페 모카"></a></dt>                     <dd>                         <p class="t1">아이스 카페 모카</p>                         <p class="t2">진한 초콜릿 모카 시럽과 풍부한 에스프레소를 신선한 우유 그리고 얼음과 섞어 휘핑크림으로 마무리한 음료로 진한 에스프레소와 초콜릿 맛이 어우러진 커피</p>                         <p class="more_btn"><a href="javascript:void(0)" class="goView" prod="110566"><img src="//image.istarbucks.co.kr/common/img/coffee/cf_more_btn.png" alt="자세히 보기"></a></p>                     </dd>                 </dl>             </li><li>                 <dl>                     <dt><a href="javascript:void(0)" class="goView" prod="110572"><img src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[110572]_20210415155545375.jpg" alt="아이스 화이트 초콜릿 모카"></a></dt>                     <dd>                         <p class="t1">아이스 화이트 초콜릿 모카</p>                         <p class="t2">달콤하고 부드러운 화이트 초콜릿 시럽과 에스프레소를 신선한 우유 그리고 얼음과 섞어 휘핑크림으로 마무리한 음료로 달콤함과 강렬한 에스프레소가 부드럽게 어우러진 커피</p>                         <p class="more_btn"><a href="javascript:void(0)" class="goView" prod="110572"><img src="//image.istarbucks.co.kr/common/img/coffee/cf_more_btn.png" alt="자세히 보기"></a></p>                     </dd>                 </dl>             </li><li>                 <dl>                     <dt><a href="javascript:void(0)" class="goView" prod="46"><img src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[46]_20210415134438165.jpg" alt="카페 모카"></a></dt>                     <dd>                         <p class="t1">카페 모카</p>                         <p class="t2">진한 초콜릿 모카 시럽과 풍부한 에스프레소를 스팀 밀크와 섞어 휘핑크림으로 마무리한 음료로 진한 에스프레소와 초콜릿 맛이 어우러진 커피</p>                         <p class="more_btn"><a href="javascript:void(0)" class="goView" prod="46"><img src="//image.istarbucks.co.kr/common/img/coffee/cf_more_btn.png" alt="자세히 보기"></a></p>                     </dd>                 </dl>             </li><li>                 <dl>                     <dt><a href="javascript:void(0)" class="goView" prod="128192"><img src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[128192]_20210415155639126.jpg" alt="화이트 초콜릿 모카"></a></dt>                     <dd>                         <p class="t1">화이트 초콜릿 모카</p>                         <p class="t2">달콤하고 부드러운 화이트 초콜릿 시럽과 에스프레소를 스팀 밀크와 섞어 휘핑크림으로 마무리한 음료로 달콤함과 강렬한 에스프레소가 부드럽게 어우러진 커피</p>                         <p class="more_btn"><a href="javascript:void(0)" class="goView" prod="128192"><img src="//image.istarbucks.co.kr/common/img/coffee/cf_more_btn.png" alt="자세히 보기"></a></p>                     </dd>                 </dl>             </li></ul>
-							</div>
+				<!-- 서브 슬라이드 영역 -->
+				<div class="coffeeSlideArea">
+					<div class="bxslide-main">
+						<div class="bx-wrapper" style="max-width: 100%;"><div class="bx-viewport" style="width: 100%; overflow: hidden; position: relative; height: 200px;"><ul class="coffee_slider" style="width: auto; position: relative;">
+						<li style="float: none; list-style: none; position: absolute; width: 921px; z-index: 50; display: list-time;"><div style="background-image: url(https://image.istarbucks.co.kr/upload/banner/fs8Fa0_20220411134500434.jpg); background-size: cover; background-repeat: no-repeat;"><a href="https://www.starbucks.co.kr/whats_new/campaign_view.do?pro_seq=1992"></a></div></li><li style="float: none; list-style: none; position: absolute; width: 921px; z-index: 0; display: none;"><div style="background-image: url(https://image.istarbucks.co.kr/upload/banner/Y7YBKr_20220404160515035.jpg); background-size: cover; background-repeat: no-repeat;"><a href="https://www.starbucks.co.kr/whats_new/newsView.do?cate=&amp;seq=4496"></a></div></li></ul></div><div class="bx-controls bx-has-controls-direction"><div class="bx-controls-direction"><a class="bx-prev" href="">Prev</a><a class="bx-next" href="">Next</a></div></div></div>
+						<div class="coffee_slider_control_pager">
+							<div class="coffee_slider_controls"><div class="bx-controls-auto"><div class="bx-controls-auto-item"><a class="bx-stop" href="">Stop</a></div></div></div>
+							<div class="coffee_slider_pagers"><div class="bx-pager bx-default-pager"><div class="bx-pager-item"><a href="" data-slide-index="0" class="bx-pager-link active">1</a></div><div class="bx-pager-item"><a href="" data-slide-index="1" class="bx-pager-link">2</a></div></div></div>
 						</div>
 					</div>
+					<!-- 150708 DOM 수정 - 투명한 버튼으로 수정 -->
+					<p id="prevBtn">
+						<a href="javascript:void(0)">
+							<img alt="" class="arrow_off" src="//image.istarbucks.co.kr/common/img/util/mscard_arrow_l_off.png" style="display: block;">
+							<img alt="" class="arrow_on" src="//image.istarbucks.co.kr/common/img/util/mscard_arrow_l_on.png">
+						</a>
+					</p>
+					<p id="nextBtn">
+						<a href="javascript:void(0)">
+							<img alt="" class="arrow_off" src="//image.istarbucks.co.kr/common/img/util/mscard_arrow_r_off.png" style="display: block;">
+							<img alt="" class="arrow_on" src="//image.istarbucks.co.kr/common/img/util/mscard_arrow_r_on.png">
+						</a>
+					</p>
+					<!-- 150708 DOM 수정 - 투명한 버튼으로 수정 -->		
 				</div>
-				<!-- 제품 상세보기 하단공통 end -->
-				<!-- 하단 end -->
+					<!-- 150708 DOM 수정 - 투명한 버튼으로 수정 -->		
+				</div>
+				<!-- jsp 수정 : 태그 추가 -->
+				<div class="m_main_slide">
+					<ul class="m_main_slider">
+					</ul>
+					<div class="m_main_controller m_respon_controller">
+						<div class="m_main_controls"></div>
+						<div class="m_main_pagers"></div>
+					</div>
+					<!-- p id="m_prevBtn"><a href="javascript:void(0)">이전 버튼</a></p>
+					<p id="m_nextBtn"><a href="javascript:void(0)">다음 버튼</a></p -->
+				</div>
+				<!-- // jsp 수정 : 태그 추가 -->
+				<!-- 서브 슬라이드 영역 end -->
+
+				<!-- news -->
+				
+				
+				
+				<div class="newsArea">
+                    <div class="newsArea_left"></div>
+                    <div class="newsArea_right"></div>
+                    <div class="newsArea_bg">
+                        <div class="newsArea_bgl">
+                            <dl>
+								<dt>
+									<img class="w_pic" src="common/img/menu/news_title.png" alt="보도자료">
+									<img class="m_pic" src="common/img/common/icon_board_speaker-1.png" alt="">
+								</dt><!-- jsp 수정 - 이미지 및 클래스 추가 -->
+								<dd>
+									<ul class="news_result" style="direction: ltr; font-size: 13px; color: rgb(255, 255, 255);"><li style="overflow: hidden; height: 0.6125px; padding-top: 0px; margin-top: 0px; padding-bottom: 0px; margin-bottom: 0px;"><a href="javascript:pageViewBodo(4576)">스타벅스, ‘라벤더 블론드 스타벅스 더블 샷’ 입소문 타고 인기 급상승</a></li><li style="overflow: hidden; height: 19.4181px; padding-top: 0px; margin-top: 0px; padding-bottom: 0px; margin-bottom: 0px;"><a href="javascript:pageViewBodo(4572)">스타벅스, 창원NC파크R점 확장 오픈하며 스타벅스 테라스 전용 세트 출시</a></li><li style="display: none;"><a href="javascript:pageViewBodo(4563)">스타벅스, 2027년까지 커피찌꺼기 재활용률 100%에 도전 </a></li><li style="display: none;"><a href="javascript:pageViewBodo(4560)">1만명 고객 참여한 ‘다다익선 캠페인’, 스타벅스 개인컵 이용 건수도 53% 증가</a></li><li style="display: none;"><a href="javascript:pageViewBodo(4578)">스타벅스 코리아 개점 23주년 맞아 전국 23개 숲 공원돌보미 캠페인 전개</a></li></ul>
+								</dd>
+							</dl>
+                            <p class="btn"><a href="footer/company/news_list"><img src="common/img/coffee/icon_coffee_notice_more.png" alt="보도자료 바로가기"></a></p>
+                        </div>
+                        <div class="newsArea_bgr">
+                            <p class="tit"><img class="w_pic" src="common/img/menu/useInfo_txt.png" alt="새로워진 스타벅스 웹사이트 이용안내"><img class="m_pic" src="common/img/menu/m_useInfo_txt.png" alt="새로워진 스타벅스 웹사이트 이용안내"></p><!-- jsp 수정 - 이미지 및 클래스 추가 --> 
+                            <p class="btn"><a href="util/web_tip"><img src="common/img/coffee/icon_coffee_notice_more.png" alt="새로워진 스타벅스 웹사이트 이용안내 바로가기"></a></p>
+                        </div>
+                    </div>
+                </div>
+				<!-- news end -->
+
+				<!-- 나와 어울리는 커피 찾기 -->
+				<section class="coffee_choice_wrap">
+					<div class="coffee_wrap_inner">
+						<img class="m_pic" src="common/img/coffee/m_coffee_bimg1.jpg" alt="">
+						<p class="coffee_choice_txt"><img class="w_pic" src="common/img/coffee/coffee_choice_txt.png" alt="나에게 어울리는 커피는? 다양한 풍미의 커피를 즐길 수 있는 스타벅스. 많은 커피 중에 나에게 어울리는 커피는?혹은 내가 자주 찾는 취향의 커피가 궁금하다면? 스타벅스가 여러분에게 어울리는 커피를 찾아드립니다."><img class="m_pic" src="common/img/coffee/m_coffee_btxt1.png" alt=""></p>
+						<div class="coffee_choice_btn"><a href="productFinder">자세히 보기</a></div>
+					</div>
+				</section>
+				<!-- 나와 어울리는 커피 찾기 end -->
+
+				<!-- 스타벅스 리저브 -->
+				<section class="coffee_reserve_wrap">
+					<div class="coffee_wrap_inner">
+						<img class="m_pic" src="//image.istarbucks.co.kr/common/img/coffee/m_coffee_bimg2.jpg" alt="">
+						<p class="coffee_reserve_txt"><img class="w_pic" src="//image.istarbucks.co.kr/common/img/coffee/coffee_reserve_txt.png" alt="스타벅스 리저브 단일 원산지 원두를 사용한 프리미엄 커피 최고의 커피를 찾기 위해 세계 곳곳을 여행하고 있는 스타벅스가 진귀하고 이국적인 프리미엄 커피를 소개합니다. 격조 높은 원두와 함께 차별화된 커피 경험, 스타벅스 리저브에서 누려보세요."><img class="m_pic" src="//image.istarbucks.co.kr/common/img/coffee/m_coffee_btxt2.png" alt=""></p>
+						<div class="coffee_reserve_btn"><a href="/coffee/reserve_info.do">자세히 보기</a></div>
+					</div>
+				</section>
+				<!-- 스타벅스 리저브 end -->
+
+				<!-- 에스프레소 음료 -->
+				<section class="coffee_espresso_wrap">
+					<div class="coffee_wrap_inner">
+						<img class="m_pic" src="common/img/coffee/m_coffee_bimg3.jpg" alt="">
+						<p class="coffee_espresso_txt"><img class="w_pic" src="common/img/coffee/coffee_espresso_txt.png" alt="에스프레소 음료 스타벅스만의 특별한 에스프레소로 만들어진 음료 순수하고 강렬한 에스프레소 풍미의 도피오, 완벽하게 만들어진 부드러운 크림 블렌드의 라떼  등 에스프레소로 즐길 수 있는 음료들을 만나보세요."><img class="m_pic" src="common/img/coffee/m_coffee_btxt3.png" alt=""></p>
+						<div class="coffee_espresso_btn"><a href="espresso">자세히 보기</a></div>
+					</div>
+				</section>
+				<!-- 에스프레소 음료 end -->
+
+				<!-- 최상의 커피를 즐기는 법 -->
+				<section class="coffee_best_wrap">
+					<div class="coffee_wrap_inner">
+						<img class="m_pic" src="common/img/coffee/m_coffee_bimg4.jpg" alt="">
+						<p class="coffee_best_txt"><img class="w_pic" src="common/img/coffee/coffee_best_txt.png" alt="최상의 커피를 즐기는 법 최상의 커피를 만나는 다양한 방법 커피 프레스, 푸어 오버, 아이스 푸어 오버, 커피 브루어 등 여러가지 방법을 통해 다양한 풍미의 커피를 언제 어디서든 최상의 맛으로 즐겨보세요."><img class="m_pic" src="common/img/coffee/m_coffee_btxt4.png" alt=""></p>
+						<div class="coffee_best_btn"><a href="higher_enjoy">자세히 보기</a></div>
+					</div>
+				</section>
+				<!-- 최상의 커피를 즐기는 법 end -->
+				
+				<!-- 커피 이야기 -->
+				<section class="coffee_hs_wrap">
+					<div class="coffee_wrap_inner">
+						<img class="m_pic" src="common/img/coffee/m_coffee_bimg5.jpg" alt="">
+						<p class="coffee_hs_txt"><img class="w_pic" src="common/img/coffee/coffee_hs_txt.png" alt="커피 이야기 스타벅스의 노하우를 담은 커피 은은하고 부드러운 블론드 로스트, 균형 잡힌 미디엄 로스트, 강한 풍미의 다크 로스트로 분류되는 스타벅스 로스트 스팩트럼으로 당신에게 꼭 맞는 커피를 찾아보세요!"><img class="m_pic" src="common/img/coffee/m_coffee_btxt5.png" alt=""></p>
+						<div class="coffee_hs_btn"><a href="story">자세히 보기</a></div>
+					</div>
+				</section>
+				<!-- 커피 이야기  end -->
+				
+				<!-- coffee_slid_bottom 슬라이드-->
+				<!-- 서브 슬라이드 영역 -->
+				<!--  div class="coffee_bottomSlideArea">
+					<div class="bxslide-main">
+						<ul class="coffee_bottom_slider">
+							<li class="slide-main_01">
+								<div class="bg"></div>
+								<div class="text">
+									<img src="/common/img/coffee/coffee_slid_bottom_text01.png" alt="스타벅스 로스트 스펙트럼 여러분에게 맞는 풍미와 강도를 찾아보세요. 다년 간의 연구와 장인정신으로 탄생한 스타벅스 로스트 스펙트럼은 은은하고 부드러운 블론드 로스트, 균형잡힌 미디엄 로스트, 강한 풍미의 다크 로스트로 분류됩니다.">
+								</div>
+								<div class="btn_text"><a href="coffee/story">자세히 보기</a></div>
+							</li>
+							<li class="slide-main_02">
+								<div class="bg"></div>
+								<div class="text">
+									<img src="/common/img/coffee/coffee_slid_bottom_text02.png" alt="">
+								</div>
+								<div class="btn_text"><a href="coffee/reserve_info">자세히 보기</a></div>
+							</li>
+							<li class="slide-main_03">
+								<div class="bg"></div>
+								<div class="text">
+									<img src="/common/img/coffee/coffee_slid_bottom_text03.png" alt="">
+								</div>
+								<div class="btn_text"><a href="coffee/espresso">자세히 보기</a></div>
+							</li>
+						</ul>
+						<div class="coffee_bottom_slider_control_pager">
+							<div class="coffee_bottom_slider_controls"></div>
+							<div class="coffee_bottom_slider_pagers"></div>
+						</div>
+					</div>
+					<p id="prevBtn2">
+						<a href="javascript:void(0)">
+							<img alt="" class="arrow_off" src="/common/img/util/mscard_arrow_l_off.png">
+							<img alt="" class="arrow_on" src="/common/img/util/mscard_arrow_l_on.png">
+						</a>
+					</p>
+					<p id="nextBtn2">
+						<a href="javascript:void(0)">
+							<img alt="" class="arrow_off" src="/common/img/util/mscard_arrow_r_off.png">
+							<img alt="" class="arrow_on" src="/common/img/util/mscard_arrow_r_on.png">
+						</a>
+					</p>		
+				</div>
+				<div class="m_main_b_slide">
+					<ul class="m_main_b_slider">
+						<li>
+							<img src="/common/img/coffee/m_coffee_bimg5.jpg" alt="" />
+							<p class="txt"><img src="/common/img/coffee/m_coffee_btxt5.png" alt="" /></p>
+							<p class="btn"><a href="javascript:void(0)">자세히 보기</a></p>
+						</li>
+						<li>
+							<img src="/common/img/coffee/m_coffee_bimg5.jpg" alt="" />
+							<p class="txt"><img src="/common/img/coffee/m_coffee_btxt5.png" alt="" /></p>
+							<p class="btn"><a href="javascript:void(0)">자세히 보기</a></p>
+						</li>
+						<li>
+							<img src="/common/img/coffee/m_coffee_bimg5.jpg" alt="" />
+							<p class="txt"><img src="/common/img/coffee/m_coffee_btxt5.png" alt="" /></p>
+							<p class="btn"><a href="javascript:void(0)">자세히 보기</a></p>
+						</li>
+					</ul>
+					<div class="m_main_b_controller">
+						<div class="m_main_b_controls"></div>
+						<div class="m_main_b_pagers"></div>
+					</div>
+					<p id="m_prevBtn"><a href="javascript:void(0)">이전 버튼</a></p>
+					<p id="m_nextBtn"><a href="javascript:void(0)">다음 버튼</a></p>
+				</div -->		
+
 			</div>
 			
 
@@ -1111,100 +1271,262 @@ var eFrequencyPlannerYn = 'Y';
 				});
 			</script>
 		
-            <form name="drinkListForm" method="post">
-                <input type="hidden" name="product_cd">
-            </form>
-		<script src="common/js/coffee.js"></script>
-		<script src="common/js/jquery.ezmark.min-1.js"></script>		
+		<script src="common/js/coffee.js"></script>	
+		<script src="common/js/jquery.ezmark.min-1.js"></script>	
 		<script>
-			$(document).ready(function(){
+		$(document).ready(function(){
 
-				/* 150517 추가 - 문진욱 */
+            var ytbArr = new Array();
+            var option = {
+                    'MENU_CD' : "STB3131"
+            };
+            __ajaxCall('/banner/getBannerList', option , true, "JSON", "POST", 
+            function(data) {
+                if(data.list.length > 0) {
+                    
+                    $.each( data.list, function(x, y) {
+                        tmpStr = "";
+                        m_tmpStr = "";
+                        tmpTarget = "";
+                        m_tmpTarget = "";
 
-				if (myWindow > 960) {
+                        if(y.banner_GBN == "I") {
+	                        tmpStr += '<li style="background-color: '+y.simg_NM+'"><div style="background-image: url('+y.img_UPLOAD_PATH.replace("www", "image")+'/upload/banner/'+y.img_NM+'); background-size: cover; background-repeat: no-repeat;">';
+	                        if(y.links != "") {
+	                            if(y.banner_TARGET == "Y") {
+	                                tmpTarget = "target='_blank'";
+	                            }
+	                            tmpStr += '<a href="'+y.links+'" '+tmpTarget+'></a>';
+	                        }
+	                        tmpStr += '</div></li>';
+	                        
+	                        
+	                        m_tmpStr += '<li>';
+	                        if(y.links != "") {
+	                            if(y.banner_TARGET == "Y") {
+	                                m_tmpTarget = "target='_blank'";
+	                            }
+	                            m_tmpStr += '<a href="'+y.links+'" '+m_tmpTarget+'>';
+	                        }
+	                        m_tmpStr += '<img src="'+y.img_UPLOAD_PATH.replace("www", "image")+'/upload/banner/'+y.m_IMG_NM+'" alt="'+y.alt_MSG+'">';
+	                        if(y.links != "") {
+	                            m_tmpStr += '</a>';
+	                        }
+                        } else if(y.banner_GBN == "M") {
+                            tmpStr += '<li style="background-color: '+y.simg_NM+'"><div class="video"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/'+y.youtube+'?wmode=transparent" frameborder="0" allowfullscreen></iframe></div></li>';
+                            m_tmpStr += '<li class="respon_video"><div class="video"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/'+y.youtube+'?wmode=transparent" frameborder="0" allowfullscreen></iframe></div></li>';
 
-					var faSlider = $('.footer_awards_slider').bxSlider({
-						minSlides:4,
-						maxSlides:6,
-						slideWidth:189,
-						slideMargin:0,
-						controls:false,
-						auto:true,
-						autoControls:true,
-						autoControlsCombine:true,
-						pause:2000
-					});
-
-				} else if ((myWindow > 640) && (myWindow <= 960)) {
-					var faSlider = $('.footer_awards_slider').bxSlider({
-						minSlides:3,
-						maxSlides:3,
-						slideWidth:210,
-						slideMargin:0,
-						controls:false,
-						auto:true,
-						autoControls:true,
-						autoControlsCombine:true,
-						pause:2000
-					});
-				} else if (myWindow <= 640) {
-					var faSlider = $('.footer_awards_slider').bxSlider({
-						minSlides:1,
-						maxSlides:1,
-						slideWidth:300,
-						slideMargin:0,
-						controls:false,
-						auto:true,
-						autoControls:true,
-						autoControlsCombine:true,
-						pause:2000
-					});
-				}
-
-				/* 150517 추가 - 문진욱 end */
-                
-                getProductList('W0000118');
-
-            });
-            
-            function getProductList(tmp_cate) {
-
-                var option = {
-                        'CATE_CD' : tmp_cate
-                };
-                __ajaxCall('/menu/productListAjax', option , true, "JSON", "POST", 
-                function(data) {
-                    if(data.list.length > 0) {
-                        $('#tpl_productLi').tmpl(data.list).appendTo($('.productRel_ul'));
+                            ytbArr.push('<iframe width="100%" height="100%" src="https://www.youtube.com/embed/'+y.youtube+'?wmode=transparent" frameborder="0" allowfullscreen></iframe>');
+                        }                        
                         
-                        $('.goView').bind('click', function() {
-                            product_cd = $(this).attr('prod');
-                            f = document.drinkListForm;
-                            f.action = "menu/drink_view";
-                            f.product_cd.value = product_cd;
-                            f.submit();
-                        });
-                    } else {
-                        $('.productView_footmenu').hide();
-                    }
-                },
-                function() {
-                });
+                        $('.coffee_slider').append(tmpStr);
+                        $('.m_main_slider').append(m_tmpStr);
+                        
+                    });
 
-            }
-        </script>
-        <script type="text/x-jquery-tmpl" id="tpl_productLi">
-            <li>
-                <dl>
-                    <dt><a href="javascript:void(0)" class="goView" prod="${product_CD}"><img src="${img_UPLOAD_PATH.replace("www", "image")}${file_PATH}" alt="${product_NM}"></a></dt>
-                    <dd>
-                        <p class="t1">${product_NM}</p>
-                        <p class="t2">${content}</p>
-                        <p class="more_btn"><a href="javascript:void(0)" class="goView" prod="${product_CD}"><img src="//image.istarbucks.co.kr/common/img/coffee/cf_more_btn.png" alt="자세히 보기"></a></p>
-                    </dd>
-                </dl>
-            </li>
-        </script>
+                    var coffeeSlide = $('.coffee_slider').bxSlider({
+                        pause: 5000,
+                        speed: 2000,
+                        mode: 'fade',
+                        controls: true,
+                        autoControls: true,
+                        autoControlsCombine:true,
+                        auto: true,
+                        pager: true,
+                        pagerSelector:'.coffee_slider_pagers',
+                        autoControlsSelector:'.coffee_slider_controls',
+                        autoHover: true
+                    });
+
+                    $("#prevBtn a").on("click",function(e){
+                        coffeeSlide.goToPrevSlide();
+                        e.preventDefault();
+                    });
+
+                    $("#nextBtn a").on("click",function(e){
+                        coffeeSlide.goToNextSlide();
+                        e.preventDefault();
+                    });
+
+                    var m_slider = $('.m_main_slider').bxSlider({
+                        pause: 5000,
+                        speed: 2000,
+                        auto: true,
+                        pager: true,
+                        controls: true,
+                        autoControls: true,
+                        autoControlsCombine: true,
+                        pagerSelector: '.m_main_pagers',
+                        autoControlsSelector: '.m_main_controls'
+                    });
+
+                    $("#m_prevBtn a").on("click",function(e){
+                        m_slider.goToPrevSlide();
+                        e.preventDefault();
+                    });
+
+                    $("#m_nextBtn a").on("click",function(e){
+                        m_slider.goToNextSlide();
+                        e.preventDefault();
+                    });
+                }
+            },
+            function() {
+            });
+
+			$('.coffee_bottom_slider li').eq(0).css({'background-color':'#cdb78e'});
+			$('.coffee_bottom_slider li').eq(1).css({'background-color':'#ab946b'});
+			$('.coffee_bottom_slider li').eq(2).css({'background-color':'#ab946b'});
+
+			$('.coffee_bottom_slider li').eq(0).children('div.bg').css({
+				'background-image':'url("//image.istarbucks.co.kr/common/img/coffee/coffee_slid_bottom_01.jpg")',
+				'background-size':'cover',
+				'background-repeat':'no-repeat'
+			});
+			$('.coffee_bottom_slider li').eq(1).children('div.bg').css({
+				'background-image':'url("//image.istarbucks.co.kr/common/img/coffee/coffee_slid_bottom_02.jpg")',
+				'background-size':'cover',
+				'background-repeat':'no-repeat'
+			});
+			$('.coffee_bottom_slider li').eq(2).children('div.bg').css({
+				'background-image':'url("//image.istarbucks.co.kr/common/img/coffee/coffee_slid_bottom_03.jpg")',
+				'background-size':'cover',
+				'background-repeat':'no-repeat'
+			});
+
+			var coffee_bottomSlide = $('.coffee_bottom_slider').bxSlider({
+				pause: 5000,
+				speed: 2000,
+				mode: 'fade',
+				controls: true,
+				autoControls: true,
+				autoControlsCombine:true,
+				auto: true,
+				pager: true,
+				pagerSelector:'.coffee_bottom_slider_pagers',
+				autoControlsSelector:'.coffee_bottom_slider_controls',
+				autoHover: true
+			});
+
+			$("#prevBtn2 a").on("click",function(e){
+				coffee_bottomSlide.goToPrevSlide();
+				e.preventDefault();
+			});
+
+			$("#nextBtn2 a").on("click",function(e){
+				coffee_bottomSlide.goToNextSlide();
+				e.preventDefault();
+			});
+		});
+
+		/* 150517 추가 - 문진욱 */
+
+		if (myWindow > 960) {
+
+			var faSlider = $('.footer_awards_slider').bxSlider({
+				minSlides:4,
+				maxSlides:6,
+				slideWidth:189,
+				slideMargin:0,
+				controls:false,
+				auto:true,
+				autoControls:true,
+				autoControlsCombine:true,
+				pause:2000
+			});
+
+		} else if ((myWindow > 640) && (myWindow <= 960)) {
+			var faSlider = $('.footer_awards_slider').bxSlider({
+				minSlides:3,
+				maxSlides:3,
+				slideWidth:210,
+				slideMargin:0,
+				controls:false,
+				auto:true,
+				autoControls:true,
+				autoControlsCombine:true,
+				pause:2000
+			});
+		} else if (myWindow <= 640) {
+			var faSlider = $('.footer_awards_slider').bxSlider({
+				minSlides:1,
+				maxSlides:1,
+				slideWidth:300,
+				slideMargin:0,
+				controls:false,
+				auto:true,
+				autoControls:true,
+				autoControlsCombine:true,
+				pause:2000
+			});
+		}
+
+		/* 150517 추가 - 문진욱 end */
+		
+		// jsp 추가 - 성연욱
+		$(window).load(function(){
+			var m_b_slider = $('.m_main_b_slider').bxSlider({
+				pause: 5000,
+				speed: 2000,
+				// mode: 'fade',
+				auto: true,
+				pager: true,
+				controls: true,
+				autoControls: true,
+				autoControlsCombine: true,
+				pagerSelector: '.m_main_b_pagers',
+				autoControlsSelector: '.m_main_b_controls'
+			});
+
+			$("#mb_prevBtn a").on("click",function(e){
+				m_b_slider.goToPrevSlide();
+				e.preventDefault();
+			});
+
+			$("#mb_nextBtn a").on("click",function(e){
+				m_b_slider.goToNextSlide();
+				e.preventDefault();
+			});
+		});
+		// jsp 추가 - 성연욱 end
+		
+		// 150708 DOM 수정 - 투명한 버튼으로 수정
+		$('.coffeeSlideArea #prevBtn img').bind('mouseenter', function(){
+			$('.coffeeSlideArea #prevBtn img.arrow_off').fadeOut(300);
+		});
+
+		$('.coffeeSlideArea #prevBtn img').bind('mouseleave', function(){
+			$('.coffeeSlideArea #prevBtn img.arrow_off').fadeIn();
+		});
+
+		$('.coffeeSlideArea #nextBtn img').bind('mouseenter', function(){
+			$('.coffeeSlideArea #nextBtn img.arrow_off').fadeOut(300);
+		});
+
+		$('.coffeeSlideArea #nextBtn img').bind('mouseleave', function(){
+			$('.coffeeSlideArea #nextBtn img.arrow_off').fadeIn();
+		});
+
+		$('.coffee_bottomSlideArea #prevBtn2 img').bind('mouseenter', function(){
+			$('.coffee_bottomSlideArea #prevBtn2 img.arrow_off').fadeOut(300);
+		});
+
+		$('.coffee_bottomSlideArea #prevBtn2 img').bind('mouseleave', function(){
+			$('.coffee_bottomSlideArea #prevBtn2 img.arrow_off').fadeIn();
+		});
+
+		$('.coffee_bottomSlideArea #nextBtn2 img').bind('mouseenter', function(){
+			$('.coffee_bottomSlideArea #nextBtn2 img.arrow_off').fadeOut(300);
+		});
+
+		$('.coffee_bottomSlideArea #nextBtn2 img').bind('mouseleave', function(){
+			$('.coffee_bottomSlideArea #nextBtn2 img.arrow_off').fadeIn();
+		});
+		// 150708 DOM 수정 - 투명한 버튼으로 수정 end
+
+</script>
+        <script src="common/js/inewsticker.js"></script>
+        <script src="common/js/bbs/main_rolling.js"></script>
 	</div></body>
 
 </html>

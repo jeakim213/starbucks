@@ -1127,18 +1127,7 @@ var eFrequencyPlannerYn = 'Y';
 </script>
 
 
-				<!-- 배너 슬라이더 -->
-				<section class="bnr_slider_wrap">
-					<p class="store_bnr_tit">매장에서 진행되는 이벤트</p>
-					<ul>
-					</ul>
-					<div class="bnr_slider_control_pager">
-						<div class="bnr_slider_controls"></div>
-						<div class="bnr_slider_pagers"></div>
-					</div>
-				</section>
-				<p class="store_no_event" style="display: none;">진행중인 이벤트가 없습니다.</p>
-				<!-- 배너 슬라이더 end -->
+				
 			</div>
 			<!-- container end -->
             <form name="promotionListForm" method="post">
