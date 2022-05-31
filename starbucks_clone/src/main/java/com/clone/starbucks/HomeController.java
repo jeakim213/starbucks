@@ -5,6 +5,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.Locale;
 
+import org.apache.ibatis.annotations.Param;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.core.io.ClassPathResource;
@@ -176,46 +177,63 @@ public class HomeController {
 		return "menu/drink_view_coldbrew2";
 	}
 	
-	@RequestMapping(value="menu_food_list")
+	@RequestMapping(value="menu/food_list")
 	public String food_list() {
 		return "menu/food_list";
 	}
 	
-	@RequestMapping(value="menu_food_list_1")
-	public String food_list_1() {
+	@RequestMapping(value="menu_food_list_1") //카테고리 코드를 받아 해당 카테고리만 뿌린다.
+	public String food_list_1(String CATE_CD) {
 		return "menu/food_list-1";
 	}
 	
 	@RequestMapping(value="menu_food_list_2")
-	public String food_list_2() {
+	public String food_list_2(String CATE_CD) {
 		return "menu/food_list-2";
 	}
 	
 	@RequestMapping(value="menu_food_list_3")
-	public String food_list_3() {
+	public String food_list_3(String CATE_CD) {
 		return "menu/food_list-3";
 	}
 	
 	@RequestMapping(value="menu_food_list_4")
-	public String food_list_4() {
+	public String food_list_4(String CATE_CD) {
 		return "menu/food_list-4";
 	}
 	
 	@RequestMapping(value="menu_food_list_5")
-	public String food_list_5() {
+	public String food_list_5(String CATE_CD) {
 		return "menu/food_list-5";
 	}
 	
 	@RequestMapping(value="menu_food_list_6")
-	public String food_list_6() {
+	public String food_list_6(String CATE_CD) {
 		return "menu/food_list-6";
 	}
 	
 	@RequestMapping(value="menu_food_list_7")
-	public String food_list_7() {
+	public String food_list_7(String CATE_CD) {
 		return "menu/food_list-7";
 	}
 	
+	
+	//0531 13 다정
+	@RequestMapping(value="food_view")
+	public String food_view() {
+		return "menu/food_view";
+	}
+	
+	//0531 14 다정
+	@RequestMapping(value="product_view")
+	public String product_view() {
+		return "menu/product_view";
+	}
+	
+	@RequestMapping(value="drink_view")
+	public String drink_view() {
+		return "menu/drink_view";
+	}
 	
 	//0531 다정
 	@RequestMapping(value="orderList")

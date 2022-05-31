@@ -647,7 +647,8 @@ var eFrequencyPlannerYn = 'Y';
                             <div class="myAssignZone">
                                 <h4>소시지&amp;올리브 미니 파이<br><span>Sausage&amp;Olive Mini Pie</span></h4>
                                 <p class="t1">통통한 미니 소시지와 그린 올리브를 패스츄리에 토핑하여 골라 먹는 재미를 더한 미니 파이로 세이보리하고 고소한 풍미가 매력적인 스낵 브레드입니다.</p>
-                                <div class="myDrink"><a href="javascript:void(0)" role="button" title="나만의 푸드 등록 옵션">나만의 푸드로 등록</a><!-- 접근성_20171123 role, title 추가 --></div>
+                                <!-- 0531 다정 나만의 푸드로 등록->구매하기로 변경 -->
+                                <div class="myDrink"><a href="javascript:void(0)" role="button" title="구매 및 담기">구매 및 담기</a><!-- 접근성_20171123 role, title 추가 --></div>
                             </div>
                             <div class="m_view_slide">
                                 <div class="bx-wrapper" style="max-width: 100%;"><div class="bx-viewport" style="width: 100%; overflow: hidden; position: relative; height: 0px;"><ul class="m_view_slider" style="width: 315%; position: relative; transition-duration: 0s; transform: translate3d(0px, 0px, 0px);"><li style="float: left; list-style: none; position: relative; width: 100px;" class="bx-clone"><img class="m_view_img" src="https://image.istarbucks.co.kr/upload/store/skuimg/2022/04/[9300000004025]_20220406130412481.jpg" data-zoom-image="https://image.istarbucks.co.kr/upload/store/skuimg/2022/04/[9300000004025]_20220406130412481.jpg" alt=""></li>
@@ -756,7 +757,7 @@ var eFrequencyPlannerYn = 'Y';
                                 <!-- <a href="javascript:void(0)"> --><!-- 접근성_20171123 이동 페이지 없을 시 anchor tag 제거 -->
                                     <li>해당 상품과 관련된 진행 중인 프로모션이 없습니다.</li>
                                 </ul>
-                                <p class="more"><a href="whats_new/campaign_list"><img src="//image.istarbucks.co.kr/common/img/menu/news_more.png" alt="프로모션 새소식 더보기"></a></p>
+                                <p class="more"><a href="#"><img src="//image.istarbucks.co.kr/common/img/menu/news_more.png" alt="프로모션 새소식 더보기"></a></p>
                             </div>
                             <!-- <div class="productView_top_right">
                                 <dl>
@@ -849,23 +850,35 @@ var eFrequencyPlannerYn = 'Y';
 						</ul>
 						<ul>
 							<li class="footer_menu_ttl"><a class="en" href="javascript:void(0);">COMPANY<span class="footer_arrow_down"></span></a></li>
-							<li><a href="#">한눈에 보기</a></li>
-							<li><a href="#">스타벅스 사명</a></li>
-							<li><a href="#">스타벅스 소개</a></li>
-							<li><a href="#">국내 뉴스룸</a></li>
-							<li><a href="#">세계의 스타벅스</a></li>
+							<li><a href="footer/company/index">한눈에 보기</a></li>
+							<li><a href="footer/company/mission">스타벅스 사명</a></li>
+							<li class="footer_2depth_ttl"><a href="javascript:void(0)">스타벅스 소개<span class="footer_arrow_down"></span></a>
+								<ul>
+									<li><a href="footer/company/starbucks_information">스타벅스 코리아</a></li> <!-- 220118 수정 -->
+									<li><a href="footer/company/starbucks_history">주요 연혁</a></li> <!-- 202107 수정 -->
+									<li><a href="footer/company/starbucks_story">스타벅스 이야기</a></li>
+								</ul>
+							</li>
+							<li><a href="footer/company/news_list">국내 뉴스룸</a></li>
+							<li><a href="footer/company/global_starbucks">세계의 스타벅스</a></li>
 							<!-- 160811 메뉴 추가 -->
-							<li><a href="#">글로벌 뉴스룸</a></li>
+							<li><a href="https://news.starbucks.com" target="_blank">글로벌 뉴스룸</a></li>
 							<!-- 160811 메뉴 추가 end -->
 						</ul>
 						<ul>
-							<li class="footer_menu_ttl"><a class="en" href="#">CORPORATE SALES<span class="footer_arrow_down"></span></a></li>
-							<li><a href="#">단체 및 기업 구매 안내</a></li>
+							<li class="footer_menu_ttl"><a class="en" id="goPage" href="javascript:void(0);">CORPORATE SALES<span class="footer_arrow_down"></span></a></li>
+							<li><a href="footer/co_sales/index">단체 및 기업 구매 안내</a></li>
+							<!-- <li><a href="footer/co_sales/sbcard_egift">스타벅스 <span class="en">e-Gift Card</span></a></li> -->
+							<!-- <li><a href="footer/co_sales/sbcard">스타벅스 카드</a></li> -->
+							<!-- <li><a href="footer/co_sales/co-branded"><span class="en">Co-branded</span> 카드</a></li> -->
+							<!-- <li><a href="footer/co_sales/sb_product">스타벅스 상품</a></li> -->
+							<!-- <li><a href="footer/co_sales/sbgift_certificate">스타벅스 상품권</a></li> -->
 						</ul>
 						<ul>
 							<li class="footer_menu_ttl"><a class="en" href="javascript:void(0);">PARTNERSHIP<span class="footer_arrow_down"></span></a></li>
-							<li><a href="#">신규 입점 제의</a></li>
-							<li><a href="#">협력 고객사 등록신청</a></li>
+							<li><a href="footer/partnership/new_partner">신규 입점 제의</a></li>
+							<!-- <li><a href="footer/partnership/portal_systems">협력사 포털 시스템</a></li> -->
+							<li><a href="srm/login">협력 고객사 등록신청</a></li>
 						</ul>
 						<ul>
 							<li class="footer_menu_ttl"><a class="en" href="javascript:void(0);">ONLINE COMMUNITY<span class="footer_arrow_down"></span></a></li>
@@ -876,8 +889,8 @@ var eFrequencyPlannerYn = 'Y';
 						</ul>
 						<ul>
 							<li class="footer_menu_ttl"><a class="en" href="javascript:void(0);">RECRUIT<span class="footer_arrow_down"></span></a></li>
-							<li><a href="#">채용 소개</a></li>
-							<li><a href="#">채용 지원하기</a></li><!-- 20210927 수정 -->
+							<li><a href="footer/recruit/index">채용 소개</a></li>
+							<li><a href="http://job.shinsegae.com/recruit_info/notice/notice02_view.jsp?notino=5924" target="_blank">채용 지원하기</a></li><!-- 20210927 수정 -->
 						</ul>
 					</div>
 				</div>
@@ -947,19 +960,19 @@ var eFrequencyPlannerYn = 'Y';
 				
 				<!-- 150517 추가 - 문진욱 -->
 				<aside class="copyright">
-					<a class="c_00b050" href="#">개인정보처리방침</a>
-					<a href="#" class="mbn">영상정보처리기기 운영관리 방침</a>
-					<a href="#">홈페이지 이용약관</a>
-					<a href="#" class="mbn">위치정보 이용약관</a>
-					<a href="#" class="mbn">스타벅스 카드 이용약관</a>
-					<a href="#" class="mbn">비회원 이용약관</a>
+					<a class="c_00b050" href="footer/etc/privacy">개인정보처리방침</a>
+					<a href="footer/etc/rules_vod" class="mbn">영상정보처리기기 운영관리 방침</a>
+					<a href="footer/etc/rules">홈페이지 이용약관</a>
+					<a href="footer/etc/rules_loc" class="mbn">위치정보 이용약관</a>
+					<a href="footer/etc/rules_msr" class="mbn">스타벅스 카드 이용약관</a>
+					<a href="footer/etc/rules_non" class="mbn">비회원 이용약관</a>
 					<span class="br"><!-- 150713 삭제  구명준  <a href="javascript:void(0);">위치정보 이용약관</a> -->
-					<a href="#">My DT Pass 서비스 이용약관</a></span> <!-- 20200914 mdp 추가 -->
-					<a href="#" class="last">윤리경영 핫라인</a>
+					<a href="footer/etc/rules_mdp">My DT Pass 서비스 이용약관</a></span> <!-- 20200914 mdp 추가 -->
+					<a href="footer/etc/hotline" class="last">윤리경영 핫라인</a>
 					<br>
-					<a class="btned_link" href="#">찾아오시는 길</a>
-					<a class="btned_link" href="#">신규입점제의</a>
-					<a class="btned_link" href="#">사이트 맵</a><br>
+					<a class="btned_link" href="footer/etc/coming_route">찾아오시는 길</a>
+					<a class="btned_link" href="footer/partnership/new_partner">신규입점제의</a>
+					<a class="btned_link" href="footer/etc/sitemap">사이트 맵</a><br>
 					<ul class="copy_menu">
 						<li>사업자등록번호 : 201-81-21515</li>
 						<li>주식회사 에스씨케이컴퍼니 대표이사 : 송 데이비드 호섭</li> <!-- 220105 수정 -->
