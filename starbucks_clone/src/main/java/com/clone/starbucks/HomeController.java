@@ -193,6 +193,23 @@ public class HomeController {
 	}
 	
 	
+	//0531 13 다정
+	@RequestMapping(value="food_view")
+	public String food_view() {
+		return "menu/food_view";
+	}
+	
+	//0531 14 다정
+	@RequestMapping(value="product_view")
+	public String product_view() {
+		return "menu/product_view";
+	}
+	
+	@RequestMapping(value="drink_view")
+	public String drink_view() {
+		return "menu/drink_view";
+	}
+	
 	//0531 다정
 	@RequestMapping(value="orderList")
 	public String orderList() {

@@ -652,7 +652,7 @@ var eFrequencyPlannerYn = 'Y';
 							<p class="tit">관련 제품</p>
 							<div class="productRel_wrap">
                                 <ul class="productRel_ul">
-                                <li>                 <dl>                     <dt><a href="javascript:void(0)" class="goView" prod="25"><img src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[25]_20210415144211211.jpg" alt="에스프레소 마키아또"></a></dt>                     <dd>                         <p class="t1">에스프레소 마키아또</p>                         <p class="t2">신선한 에스프레소 샷에 우유 거품을 살짝 얹은 커피 음료로써, 강렬한 에스프레소의 맛과 우유의 부드러움을 같이 즐길 수 있는 커피 음료</p>                         <p class="more_btn"><a href="javascript:void(0)" class="goView" prod="25"><img src="//image.istarbucks.co.kr/common/img/coffee/cf_more_btn.png" alt="자세히 보기"></a></p>                     </dd>                 </dl>             </li></ul>
+                                <li>                 <dl>                     <dt><a href="javascript:void(0)" class="goView" prod="25"><img src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[25]_20210415144211211.jpg" alt="에스프레소 마키아또"></a></dt>                     <dd>                         <p class="t1">에스프레소 마키아또</p>                         <p class="t2">신선한 에스프레소 샷에 우유 거품을 살짝 얹은 커피 음료로써, 강렬한 에스프레소의 맛과 우유의 부드러움을 같이 즐길 수 있는 커피 음료</p>                         <p class="more_btn"><a href="javascript:void(0)" class="goView" prod="25"></a></p>                     </dd>                 </dl>             </li></ul>
 							</div>
 						</div>
 					</div>
