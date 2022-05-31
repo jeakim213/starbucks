@@ -337,20 +337,10 @@ var eFrequencyPlannerYn = 'Y';
 									<li><a href="my/ecoupon?t=USE" required="login">사용하기</a></li>
 								</ul>
 							</li>
-							<li><a href="calendar" required="login">My 캘린더</a></li>
 							<!-- <li><a href="my/drink_shop" required="login">My 음료/매장</a></li> -->
 							<li><a href="my/my_menu" required="login">My 메뉴</a></li>
 							
 							
-							<li>
-								<a role="button" href="javascript:void(0);">My e-프리퀀시<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 -->
-								<ul>
-									<li><a href="eFreq/guide?promoSeq=172">이용안내</a></li>
-									<li><a href="eFreq/status-1?promoSeq=172" required="login">이용현황</a></li>
-								</ul>
-							</li>
-							
-									<li><a href="vocList" required="login">My 고객의 소리</a></li>
 							<li><a href="eReceiptList" required="login">전자영수증</a></li>
 							<li class="msRnb_btn"><a href="javascript:void(0);" onclick="fn_rewardTumblerMsrCheck();">개인컵 리워드 설정</a></li>
 							<li><a href="login/login" required="login">My DT Pass</a></li>

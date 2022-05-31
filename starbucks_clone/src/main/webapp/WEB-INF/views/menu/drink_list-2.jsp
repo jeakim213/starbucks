@@ -1,4 +1,5 @@
-﻿<%@ page language="java" contentType="text/html; charset=UTF-8"
+﻿<%@page isELIgnored="true" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
 
@@ -633,8 +634,13 @@ var eFrequencyPlannerYn = 'Y';
 					<!-- 분류 보기 -->
 					<div class="product_kind_wrap">
 						<p class="tit">분류 보기</p>
-						<div class="product_kind_btn"><a href="javascript:void(0)" role="button"><!-- 접근성_20171123 role 추가 --><img src="common/img/menu/list_up_btn.png" alt="분류보기 메뉴 접기"><!-- 접근성_20171123 alt 값 추가 + menu.js--></a></div>
-						<div class="product_toggle_wrap">
+						<div class="product_kind_btn">
+                     <!-- 0530 예은 수정 _ 메뉴 펼치기 -->
+                        <a href="javascript:void(0)" role="button">
+                        <img src="//image.istarbucks.co.kr/common/img/menu/list_up_btn.png" alt="분류보기 메뉴 접기"><!-- 접근성_20171123 role 추가 --></a>
+                        <!-- 접근성_20171123 alt 값 추가 + menu.js-->
+                        </div>
+                  <div class="product_toggle_wrap" display="block";>
 							<dl class="product_kind_tab">
 								<dt class="dt1"><a href="javascript:void(0)" id="categoryTab" class="selected" role="button" title="카테고리별 음료선택">카테고리</a></dt><!-- 접근성_20171123 role, title 추가 -->
 								<dd>
@@ -782,7 +788,7 @@ var eFrequencyPlannerYn = 'Y';
 									</div>
 									<!-- 160928 검색결과 없을 때 end -->
 								</dd>
-								<dt class="dt2"><a href="javascript:void(0);" class="a2" role="button">영양정보로 보기</a><!-- 접근성_20171123 role 추가 --></dt>
+								<!-- <dt class="dt2"><a href="javascript:void(0);" class="a2" role="button">영양정보로 보기</a>접근성_20171123 role 추가</dt>
 								<dd>
 									<h3>콜드 브루 커피</h3>
 									<table summary="콜드 브루 커피 영양정보" class="coffeeInfo mb60">
@@ -1045,7 +1051,7 @@ var eFrequencyPlannerYn = 'Y';
                                     <div class="m_coffee_info">
                                     </div>
 								</dd>
-							</dl>
+							</dl> -->
 						</div>
 					</div>
 					<!-- 음료 리스트(카테고리 별) end -->
@@ -2083,12 +2089,6 @@ var eFrequencyPlannerYn = 'Y';
         <script type="text/x-jquery-tmpl" id="tpl_productNutTr">
             <tr>
                 <td>${product_NM}</td>
-                <td>${convertInfoText(kcal)}</td>
-                <td>${convertInfoText(sugars)}</td>
-                <td>${convertInfoText(protein)}</td>
-                <td>${convertInfoText(sodium)}</td>
-                <td>${convertInfoText(sat_FAT)}</td>
-                <td>${convertInfoText(caffeine)}</td>
             </tr>
         </script>
         <script type="text/x-jquery-tmpl" id="tpl_productNutMob">
@@ -2097,37 +2097,31 @@ var eFrequencyPlannerYn = 'Y';
                 <li>
                     <dl>
                         <dt>칼로리(Kcal)</dt>
-                        <dd>${convertInfoText(kcal)}</dd>
                     </dl>
                 </li>
                 <li>
                     <dl>
                         <dt>당류(g)</dt>
-                        <dd>${convertInfoText(sugars)}</dd>
                     </dl>
                 </li>
                 <li>
                     <dl>
                         <dt>단백질(g)</dt>
-                        <dd>${convertInfoText(protein)}</dd>
                     </dl>
                 </li>
                 <li>
                     <dl>
                         <dt>나트륨(mg)</dt>
-                        <dd>${convertInfoText(sodium)}</dd>
                     </dl>
                 </li>
                 <li>
                     <dl>
                         <dt>포화지방(g)</dt>
-                        <dd>${convertInfoText(sat_FAT)}</dd>
                     </dl>
                 </li>
                 <li>
                     <dl>
                         <dt>카페인(mg)</dt>
-                        <dd>${convertInfoText(caffeine)}</dd>
                     </dl>
                 </li>
             </ul>

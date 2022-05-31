@@ -653,14 +653,14 @@ var eFrequencyPlannerYn = 'Y';
 			<div class="layer_floating">
 				
 					<div class="badge_cont1">
-						<a href="whats_new/newsView?seq=4514">
+						<a href="#">
 							<img src="upload/banner/floatingbnr/WIP8gI_20220412094131003.png" alt="Find Yout Taste, 좋아하는 걸 좋아해" class="pc-badge">
 							<img src="upload/banner/floatingbnr/WIP8gI_20220412094134198.png" alt="Find Yout Taste, 좋아하는 걸 좋아해" class="mobile-badge">
 						</a>
 					</div>
 				
 					<div class="badge_cont2">
-						<a href="https://www.starbucks.co.kr/plcc/promotionView?eventCode=STH02">
+						<a href="#">
 							<img src="upload/banner/floatingbnr/1R97kl_20220429161554431.png" alt="PLCC 스타벅스 현대카드 5월 1차 프로모션" class="pc-badge">
 							<img src="upload/banner/floatingbnr/1R97kl_20220429161605625.png" alt="PLCC 스타벅스 현대카드 5월 1차 프로모션" class="mobile-badge">
 						</a>
@@ -790,12 +790,12 @@ var eFrequencyPlannerYn = 'Y';
 								</dd>
 							</dl>
 							<p class="line_notice_inner_r">
-								<span><a href="javascript:void(0);" title="공지사항 더보기">더보기</a><!-- 접근성_20171201 title 추가 --></span>
+								<span><a href="#" title="공지사항 더보기">더보기</a><!-- 접근성_20171201 title 추가 --></span>
 							</p>
 						</div>
 					</div>
 					<div class="line_notice_bgr">
-						<a href="javascript:void(0);">
+						<a href="#">
 							<p class="prom_ttl">스타벅스 프로모션</p>
 							<span class="btn_prom"><img src="common/img/common/btn_prom_down.png" alt="스타벅스 프로모션 펼쳐보기" role="button"><!-- 접근성_20171201 alt, role 추가 --></span><!-- 150818 성연욱 수정 -->
 						</a>
@@ -1003,7 +1003,7 @@ var eFrequencyPlannerYn = 'Y';
             <img src="upload/common/img/main/2022/2022_Summer1_bean_text.png" alt="블랙 세서미의 고소한 풍미와 마쉬멜로의 끝맛이 조화로운 시즌 한정 원두를 만나보세요." class="pc-bean-txt">
             <img src="upload/common/img/main/2022/m_2022_Summer1_bean_text.png" alt="블랙 세서미의 고소한 풍미와 마쉬멜로의 끝맛이 조화로운 시즌 한정 원두를 만나보세요." class="m-bean-txt">
             <div class="btn_bean_detail">
-                <a href="coffee/product_view?PRODUCT_CD=11104968">자세히 보기</a>
+                <a href="#">자세히 보기</a>
             </div> 		
         </div>
     </div>
@@ -1228,7 +1228,7 @@ var eFrequencyPlannerYn = 'Y';
                     
                     <div class="reserve_detail-btn_wrap">					
                         <div class="reserve_detail-btn">
-                            <a href="coffee/reserve_magazine_list">자세히 보기</a>
+                            <a href="#">자세히 보기</a>
                         </div>
                     </div>
                 </div>

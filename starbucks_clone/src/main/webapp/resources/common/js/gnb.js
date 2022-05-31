@@ -4,7 +4,7 @@ $(document).ready(function () {
     '		<ul>' +
     '			<!-- COFFEE -->' +
     '			<li class="gnb_nav01">' +
-    '				<h2><a href="/coffee/index.do">COFFEE</a></h2>' +
+    '				<h2><a href="#">COFFEE</a></h2>' +
     '				<div class="gnb_sub_wrap">' +
     '					<div class="gnb_sub">' +
     '						<div class="gnb_sub_inner">' +
@@ -18,10 +18,10 @@ $(document).ready(function () {
     '							<ul>' +
     '								<li class="gnb_sub_ttl"><a href="/coffee/productFinder.do">나와 어울리는 커피</a></li>' +
     '							</ul>' +
-    '							<ul>' +
-    '								<li class="gnb_sub_ttl"><a href="/coffee/reserve_info.do">스타벅스 리저브™</a></li>' +
-    '								<li><a href="/coffee/reserve_magazine_list.do">RESERVE MAGAZINE</a></li>' +
-    '							</ul>' +
+    //'							<ul>' +
+    //'								<li class="gnb_sub_ttl"><a href="/coffee/reserve_info.do">스타벅스 리저브™</a></li>' +
+    //'								<li><a href="/coffee/reserve_magazine_list.do">RESERVE MAGAZINE</a></li>' +
+    //'							</ul>' +
     '							<ul>' +
     '								<li class="gnb_sub_ttl"><a href="/coffee/espresso.do">에스프레소 음료</a></li>' +
     '								<li><a href="/coffee/doppio.do">도피오</a></li>' +
@@ -33,34 +33,34 @@ $(document).ready(function () {
     '								<li><a href="/coffee/mocha.do">모카</a></li>' +
     //'								<li><a href="/coffee/flat_white.do">리스트레또 비안코</a></li>' + // 20210914 삭제
     '							</ul>' +
-    '							<ul>' +
-    '								<li class="gnb_sub_ttl"><a href="/coffee/higher_enjoy.do">최상의 커피를 즐기는 법</a></li>' +
-    '								<li><a href="/coffee/higher_enjoy.do">커피 프레스</a></li>' +
-    '								<li><a href="/coffee/higher_enjoy.do?PACKAGE=01">푸어 오버</a></li>' +
-    '								<li><a href="/coffee/higher_enjoy.do?PACKAGE=02">아이스 푸어 오버</a></li>' +
-    '								<li><a href="/coffee/higher_enjoy.do?PACKAGE=03">커피 메이커</a></li>' +
-    '								<li><a href="/coffee/higher_enjoy.do?PACKAGE=04">리저브를 매장에서 다양하게 즐기는 법</a></li>' +
-    '							</ul>' +
-    '							<ul>' +
+    //'							<ul>' +
+    //'								<li class="gnb_sub_ttl"><a href="/coffee/higher_enjoy.do">최상의 커피를 즐기는 법</a></li>' +
+    //'								<li><a href="/coffee/higher_enjoy.do">커피 프레스</a></li>' +
+    //'								<li><a href="/coffee/higher_enjoy.do?PACKAGE=01">푸어 오버</a></li>' +
+    //'								<li><a href="/coffee/higher_enjoy.do?PACKAGE=02">아이스 푸어 오버</a></li>' +
+    //'								<li><a href="/coffee/higher_enjoy.do?PACKAGE=03">커피 메이커</a></li>' +
+    //'								<li><a href="/coffee/higher_enjoy.do?PACKAGE=04">리저브를 매장에서 다양하게 즐기는 법</a></li>' +
+    //'							</ul>' +
+    //'							<ul>' +
     								//  20210914 수정
-    '								<li class="gnb_sub_ttl"><a href="/coffee/story.do">커피 이야기</a></li>' +
-    '								<li><a href="/coffee/story.do">농장에서 우리의 손으로</a></li>' +
+    //'								<li class="gnb_sub_ttl"><a href="/coffee/story.do">커피 이야기</a></li>' +
+    //'								<li><a href="/coffee/story.do">농장에서 우리의 손으로</a></li>' +
     //'								<li><a href="/coffee/story.do?PACKAGE=01">에스프레소 초이스</a></li>' +
-    '								<li><a href="/coffee/story.do?PACKAGE=02">최상의 아라비카 원두</a></li>' +
-    '								<li><a href="/coffee/story.do?PACKAGE=03">스타벅스 로스트 스펙트럼</a></li>' +
-    '								<li><a href="/coffee/story.do?PACKAGE=05">스타벅스 디카페인</a></li>' +
-    '								<li><a href="/coffee/story.do?PACKAGE=04">클로버® 커피 추출 시스템</a></li>' +
+    //'								<li><a href="/coffee/story.do?PACKAGE=02">최상의 아라비카 원두</a></li>' +
+    //'								<li><a href="/coffee/story.do?PACKAGE=03">스타벅스 로스트 스펙트럼</a></li>' +
+    //'								<li><a href="/coffee/story.do?PACKAGE=05">스타벅스 디카페인</a></li>' +
+    //'								<li><a href="/coffee/story.do?PACKAGE=04">클로버® 커피 추출 시스템</a></li>' +
 									//  e:20210914 수정
-    '							</ul>' +
+    //'							</ul>' +
     '						</div>' +
     '					</div>' +
     '					<!-- 텍스쳐 bg -->' +
     '					<div class="gnb_sub_txbg">' +
     '						<div class="gnb_sub_tx_inner">' +
     '							<div class="gnb_sub_tx_left">' +
-    '								<h3><a href="/coffee/productFinder.do">나와 어울리는 커피 찾기</a></h3>' +
+    '								<h3><a href="#">나와 어울리는 커피 찾기</a></h3>' +
     '								<p class="gnb_sub_ex_txt">스타벅스가 여러분에게 어울리는 커피를 찾아드립니다.</p>' +
-    '								<h3><a href="/coffee/higher_enjoy.do">최상의 커피를 즐기는 법</a></h3>' +
+    '								<h3><a href="#">최상의 커피를 즐기는 법</a></h3>' +
     '								<p class="gnb_sub_ex_txt">여러가지 방법을 통해 다양한 풍미의 커피를 즐겨보세요.</p>' +
     '							</div>' +
     '							<div class="gnb_sub_tx_right">' +
@@ -73,7 +73,7 @@ $(document).ready(function () {
     '			<!-- COFFEE end -->' +
     '			<!-- MENU -->' +
     '			<li class="gnb_nav02">' +
-    '				<h2><a href="/menu/index.do">MENU</a></h2>' +
+    '				<h2><a href="#">MENU</a></h2>' +
     '				<div class="gnb_sub_wrap">' +
     '					<div class="gnb_sub">' +
     '						<div class="gnb_sub_inner">' +
@@ -133,7 +133,7 @@ $(document).ready(function () {
     '					<div class="gnb_sub_txbg">' +
     '						<div class="gnb_sub_tx_inner">' +
     '							<div class="gnb_sub_tx_left">' +
-    '								<h3><a href="/store/store_nitro_coldbrew.do">나이트로 콜드 브루 <img alt="" src="//image.istarbucks.co.kr/common/img/common/icon_gnb_new.png"></a></h3>' +
+    '								<h3><a href="#">나이트로 콜드 브루 <img alt="" src="//image.istarbucks.co.kr/common/img/common/icon_gnb_new.png"></a></h3>' +
     '								<p class="gnb_sub_ex_txt">나이트로 커피 정통의 물결치듯 흘러내리는 캐스케이딩과 부드러운 크림을 경험하세요. </p>' +
     //'								<h3><a href="/wholecake/reserve_cake01.do">스타벅스 케익 온라인 예약</a></h3>' +
     //'								<p class="gnb_sub_ex_txt">기념하고 싶은 날. 스타벅스 케익이 더 특별한 하루를 만들어 드립니다.</p>' +
@@ -147,7 +147,7 @@ $(document).ready(function () {
     '			</li>' +
     '			<!-- MENU end -->' +
     '			<li class="gnb_nav03">' +
-    '				<h2><a href="/store/index.do">STORE</a></h2>' +
+    '				<h2><a href="#">STORE</a></h2>' +
     '				<div class="gnb_sub_wrap">' +
     '					<div class="gnb_sub">' +
     '						<div class="gnb_sub_inner">' +
@@ -165,19 +165,19 @@ $(document).ready(function () {
     '							<ul>' +
     '								<li class="gnb_sub_ttl"><a href="/store/store_community.do">커뮤니티 스토어 매장</a></li>' +
     '							</ul>' +
-    '							<ul>' +
-    '								<li class="gnb_sub_ttl"><a>매장 이야기</a></li>' +
+    //'							<ul>' +
+    //'								<li class="gnb_sub_ttl"><a>매장 이야기</a></li>' +
 //    '								<li><a href="/store/store_cheongdam.do">청담스타</a></li>' + 20210727 메뉴 비노출
-    '								<li><a href="/store/store_star_field.do">티바나 바 매장</a></li>' +
+    //'								<li><a href="/store/store_star_field.do">티바나 바 매장</a></li>' +
 //    '								<li><a href="/store/store_park.do">파미에파크</a></li>' + 20210727 메뉴 비노출
-    '							</ul>' +
+    //'							</ul>' +
     '						</div>' +
     '					</div>' +
     '					<!-- 텍스쳐 bg -->' +
     '					<div class="gnb_sub_txbg">' +
     '						<div class="gnb_sub_tx_inner">' +
     '							<div class="gnb_sub_tx_left">' +
-    '								<h3><a href="/store/store_map.do">매장찾기</a></h3>' +
+    '								<h3><a href="#">매장찾기</a></h3>' +
     '								<p class="gnb_sub_ex_txt">보다 빠르게 매장을 찾아보세요.</p>' +
 //    '								<h3><a href="/whats_new/newsView.do?cate=&seq=3572">이대R점 <img alt="" src="//image.istarbucks.co.kr/common/img/common/icon_gnb_new.png"></a></h3>' + 20210727 메뉴 비노출
 //    '								<p class="gnb_sub_ex_txt">1호점 특화 MD와 티바나 티, 최고의 리저브 커피를 만나보세요.</p>' + 20210727 메뉴 비노출
@@ -190,7 +190,7 @@ $(document).ready(function () {
     '				</div>' +
     '			</li>' +
     //'			<li class="gnb_nav04">' +
-    //'				<h2><a href="/responsibility/index.do">RESPONSIBILITY</a></h2>' +
+    //'				<h2><a href="#">RESPONSIBILITY</a></h2>' +
     //'				<div class="gnb_sub_wrap">' +
     //'					<div class="gnb_sub">' +
     //'						<div class="gnb_sub_inner">' +
@@ -241,7 +241,7 @@ $(document).ready(function () {
     //'				</div>' +
     //'			</li>' +
     '			<li class="gnb_nav05">' +
-    '				<h2><a href="/msr/index.do">STARBUCKS REWARDS</a></h2>' + // 스타벅스 리워드 수정
+    '				<h2><a href="#">STARBUCKS REWARDS</a></h2>' + // 스타벅스 리워드 수정
     '				<div class="gnb_sub_wrap">' +
     '					<div class="gnb_sub">' +
     '						<div class="gnb_sub_inner">' +
@@ -250,23 +250,23 @@ $(document).ready(function () {
     '								<li><a href="/msr/msreward/about.do">스타벅스 리워드 소개</a></li>' + // 스타벅스 리워드 수정
     '								<li><a href="/msr/msreward/level_benefit.do">등급 및 혜택</a></li>' +
     '								<li><a href="/msr/msreward/star.do">스타벅스 별</a></li>' +
-    '								<li><a href="/community/faq.do?menu_cd=STB2703&cate=F17">자주 하는 질문</a></li>' + //20210809 수정
+    //'								<li><a href="/community/faq.do?menu_cd=STB2703&cate=F17">자주 하는 질문</a></li>' + //20210809 수정
     '							</ul>' +
-    '							<ul>' +
-    '								<li class="gnb_sub_ttl"><a href="/msr/scard/about.do">스타벅스 카드</a></li>' +
-    '								<li><a href="/msr/scard/about.do">스타벅스 카드 소개</a></li>' +
-    '								<li><a href="/msr/scard/scard_gallery.do">스타벅스 카드 갤러리</a></li>' +
-    '								<li><a href="/msr/scard/register_inquiry.do">등록 및 조회</a></li>' +
-    '								<li><a href="/msr/scard/charge_information.do">충전 및 이용안내</a></li>' +
-    '								<li><a href="/msr/scard/lost_report.do">분실신고/환불신청</a></li>' +
-    '								<li><a href="/community/faq.do?menu_cd=STB2703&cate=F05">자주 하는 질문</a></li>' +  //20210809 수정
-    '							</ul>' +
+    //'							<ul>' +
+    //'								<li class="gnb_sub_ttl"><a href="/msr/scard/about.do">스타벅스 카드</a></li>' +
+    //'								<li><a href="/msr/scard/about.do">스타벅스 카드 소개</a></li>' +
+    //'								<li><a href="/msr/scard/scard_gallery.do">스타벅스 카드 갤러리</a></li>' +
+    //'								<li><a href="/msr/scard/register_inquiry.do">등록 및 조회</a></li>' +
+    //'								<li><a href="/msr/scard/charge_information.do">충전 및 이용안내</a></li>' +
+    //'								<li><a href="/msr/scard/lost_report.do">분실신고/환불신청</a></li>' +
+    //'								<li><a href="/community/faq.do?menu_cd=STB2703&cate=F05">자주 하는 질문</a></li>' +  //20210809 수정
+    //'							</ul>' +
     '							<ul>' +
     '								<li class="gnb_sub_ttl"><a href="/msr/sceGift/egift_information.do">스타벅스 e-Gift Card</a></li>' +
     '								<li><a href="/msr/sceGift/egift_information.do">스타벅스 e-Gift Card 소개</a></li>' +
     '								<li><a href="/msr/sceGift/msr_useguide.do">이용안내</a></li>' +
     '								<li><a href="/msr/sceGift/gift_step1.do" required="login">선물하기</a></li>' +
-    '								<li><a href="/community/faq.do?menu_cd=STB2703&cate=F22">자주 하는 질문</a></li>' + //20210809 수정
+    //'								<li><a href="/community/faq.do?menu_cd=STB2703&cate=F22">자주 하는 질문</a></li>' + //20210809 수정
     '							</ul>' +
     '						</div>' +
     '					</div>' +
@@ -274,7 +274,7 @@ $(document).ready(function () {
     '					<div class="gnb_sub_txbg">' +
     '						<div class="gnb_sub_tx_inner">' +
     '							<div class="gnb_sub_tx_left">' +
-    '								<h3><a href="/msr/scard/register_inquiry.do">스타벅스 카드 등록하기</a></h3>' +
+    '								<h3><a href="#">스타벅스 카드 등록하기</a></h3>' +
     '								<p class="gnb_sub_ex_txt">카드 등록 후 리워드 서비스를 누리고 사용내역도 조회해보세요.</p>' +
     '							</div>' +
     '							<div class="gnb_sub_tx_right">' +
@@ -284,8 +284,8 @@ $(document).ready(function () {
     '					<!-- 텍스쳐 bg end -->' +
     '				</div>' +
     '			</li>' +
-    '			<li class="gnb_nav06">' +
-    '				<h2><a href="/whats_new/index.do">WHAT&#39;S NEW</a></h2>' +
+/*    '			<li class="gnb_nav06">' +
+    '				<h2><a href="#">WHAT&#39;S NEW</a></h2>' +
     '				<div class="gnb_sub_wrap">' +
     '					<div class="gnb_sub">' +
     '						<div class="gnb_sub_inner">' +
@@ -347,7 +347,7 @@ if (!(typeof eFrequencyYn === 'undefined') && eFrequencyYn == 'Y') {
     '					</div>' +
     '					<!-- 텍스쳐 bg end -->' +
     '				</div>' +
-    '			</li>' +
+    '			</li>' +*/
     '		</ul>';
 
   $('.gnb_nav_inner, .sdown_gnb_nav_inner, .sub_gnb_nav_inner').append(function () {

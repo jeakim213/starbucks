@@ -28,6 +28,7 @@ public class HomeController {
 	@RequestMapping(value="americano")
 	public String americano() {
 		return "coffee/americano";
+	
 	}
 	
 	@RequestMapping(value="cappuccino")
@@ -59,6 +60,7 @@ public class HomeController {
 
 	}
 	
+<<<<<<< HEAD
 
 	@RequestMapping(value="admin_5")
 	public String admin_5() {
@@ -71,6 +73,48 @@ public class HomeController {
 	public String admin_6() {
 		return "my/admin_6";
 
+=======
+	@RequestMapping(value="latte")
+	public String latte() {
+		return "coffee/latte";
+	}
+	
+	@RequestMapping(value="mocha")
+	public String mocha() {
+		return "coffee/mocha";
+	}
+	
+	@RequestMapping(value="product_list")
+	   public String coffee_product_list() {
+	      return "coffee/product_list";
+	   }
+	
+	@RequestMapping(value="product_list_1")
+	public String coffee_product_list_1() {
+		return "coffee/product_list-1";
+	}
+	
+	@RequestMapping(value="product_list_2")
+	public String coffee_product_list_2() {
+		return "coffee/product_list-2";
+	}
+	
+	@RequestMapping(value="productFinder")
+	public String productFinder() {
+		return "coffee/productFinder";
+	}
+	
+	//footer/co_sales
+	//login
+	@RequestMapping(value="login_login")
+	public String login() {
+		return "login/login";
+	}
+	//menu
+	@RequestMapping(value="menu_drink_list")
+	public String drink_list() {
+		return "menu/drink_list";
+>>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
 	}
 	
 	@RequestMapping(value="menu_drink_list_1")
@@ -167,10 +211,14 @@ public class HomeController {
 		return "menu/food_list-7";
 	}
 	
-	@RequestMapping(value="menu_index")
-	public String menu_index() {
-		return "menu/index";
+	
+	//0531 다정
+	@RequestMapping(value="orderList")
+	public String orderList() {
+		return "menu/orderList";
 	}
+	
+	
 	
 	@RequestMapping(value="menu_myOrder")
 	public String menu_myOrder() {
@@ -262,6 +310,7 @@ public class HomeController {
 	public String scard_register_inquiry() {
 		return "msr/scard/register_inquiry";
 	}
+<<<<<<< HEAD
 	
 
 	/*@RequestMapping(value="scard_scard_gallery")
@@ -269,6 +318,8 @@ public class HomeController {
 		return "msr/scard/scard_gallery";
 	}
 	*/
+=======
+>>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
 
 	@RequestMapping(value="sceGift_egift_information")
 	public String sceGift_egift_information() {
@@ -284,18 +335,7 @@ public class HomeController {
 	public String sceGift_msr_useguide() {
 		return "msr/sceGift/msr_useguide";
 	}
-	
-	@RequestMapping(value="msr_index")
-	public String msr_index() {
-		return "msr/index";
-	}
-	
-	
 	//my
-	@RequestMapping(value="calendar")
-	public String calendar() {
-		return "my/calendar";
-	}
 
 	@RequestMapping(value="egiftCard_shopping_bag")
 	public String egiftCard_shopping_bag() {
@@ -362,18 +402,7 @@ public class HomeController {
 		return "my/reward";
 	}
 	
-	@RequestMapping(value="vocList")
-	public String vocList() {
-		return "my/vocList";
-	}
-	
-	
 	//store
-	
-	@RequestMapping(value="store_index")
-	public String store_index() {
-		return "store/index";
-	}
 	
 	@RequestMapping(value="store_community")
 	public String store_community() {
@@ -411,8 +440,8 @@ public class HomeController {
 		return "store/store_star_field";
 	}
 	
-	//util
 	
+<<<<<<< HEAD
 	@RequestMapping(value="util_app_tip")
 	public String app_tip() {
 		return "util/app_tip";
@@ -462,5 +491,7 @@ public class HomeController {
 	public String campaign_list_1() {
 		return "whats_new/campaign_list-1";
 	}
+=======
+>>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
 	
 }
