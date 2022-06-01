@@ -34,12 +34,26 @@ public class HomeController {
 		return "index";
 	}
 	
+	//admin
+	@RequestMapping(value="memberListForm")
+	public String memberListForm() {
+		return "admin/memberListForm";
+	}
+	
+	@RequestMapping(value="userInfoForm")
+	public String userInfoForm() {
+		return "admin/userInfoForm";
+	}
+	
+	@RequestMapping(value="modifyCheckForm")
+	public String modifyCheckForm() {
+		return "admin/modifyCheckForm";
+	}
 	
 	//coffee
 	@RequestMapping(value="americano")
 	public String americano() {
 		return "coffee/americano";
-	
 	}
 	
 	@RequestMapping(value="cappuccino")
@@ -56,30 +70,6 @@ public class HomeController {
 	public String doppio() {
 		return "coffee/doppio";
 	}
-	
-	@RequestMapping(value="admin_3")
-	public String admin_3() {
-		return "my/admin_3";
-
-	}
-	
-	@RequestMapping(value="admin_4")
-	public String admin_4() {
-		return "my/admin_4";
-
-	}
-	
-	@RequestMapping(value="admin_5")
-	public String admin_5() {
-		return "my/admin_5";
-
-	}
-
-	@RequestMapping(value="admin_6")
-	public String admin_6() {
-		return "my/admin_6";
-	}
-
 	
 	@RequestMapping(value="latte")
 	public String latte() {
