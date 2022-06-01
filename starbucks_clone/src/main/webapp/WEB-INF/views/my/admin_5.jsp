@@ -24,7 +24,7 @@
 
 <title id="titleJoin">My Starbucks | Starbucks Korea</title> <!-- 220117 수정 -->
 <link rel="shortcut icon" href="https://image.istarbucks.co.kr/common/img/common/favicon.ico?v=200828" type="image/ico"> <!-- 20200827 파비콘 교체 및 CDN 변수처리 -->
-<link href="common/css/reset_admin.css" rel="stylesheet">
+<link href="common/css/reset_admin_5.css" rel="stylesheet">
 <link href="common/css/style.css?v=210721" rel="stylesheet">
 <link href="common/css/jquery.bxslider.css" rel="stylesheet">
 <link href="common/css/idangerous.swiper.css" rel="stylesheet">
@@ -700,11 +700,11 @@ var eFrequencyPlannerYn = 'Y';
                     
                     
                     	<!-- 관리자 -->
-                    	<div class="admin_index">
+                    	<div id="user_info">
 <c:url var="root" value="/" />
 	<center>
 		<h3><font color="green" id="msg">${msg }</font></h3>
-		<table style="width: 450px; border: 1px solid green;">
+		<table style="width: 450px; border: 1px;>
 			<tr>
 				<td colspan=2 align="center" style="height: 40px; padding-top: 15px;">
 					<h2>회원 정보</h2>

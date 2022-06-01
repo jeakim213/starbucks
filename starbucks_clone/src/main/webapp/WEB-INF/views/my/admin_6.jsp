@@ -4,7 +4,7 @@
 <c:url var="root" value="/" />
 	<center>
 		<h3><font color="green" id="msg">${msg }</font></h3>
-		<table style="width: 450px; border: 1px solid green;">
+		<table style="width: 450px; border: 1">
 			<tr>
 				<td colspan=2 align="center" style="height: 40px; padding-top: 15px;">
 					<h2>회원 정보</h2>
