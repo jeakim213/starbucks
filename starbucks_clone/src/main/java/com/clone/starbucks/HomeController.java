@@ -219,26 +219,37 @@ public class HomeController {
 	
 	
 	//0531 13 다정
-	@RequestMapping(value="food_view")
+	@RequestMapping(value="menu_food_view")
 	public String food_view() {
 		return "menu/food_view";
 	}
 	
 	//0531 14 다정
-	@RequestMapping(value="product_view")
+	@RequestMapping(value="menu_product_view")
 	public String product_view() {
 		return "menu/product_view";
 	}
 	
-	@RequestMapping(value="drink_view")
+	@RequestMapping(value="menu_drink_view")
 	public String drink_view() {
 		return "menu/drink_view";
 	}
 	
 	//0531 다정
-	@RequestMapping(value="orderList")
+	@RequestMapping(value="menu_orderList")
 	public String orderList() {
 		return "menu/orderList";
+	}
+	
+	//0601 다정
+	@RequestMapping(value="menu_starbucksCard")
+	public String starbucksCard() {
+		return "menu/starbucksCard";
+	}
+	
+	@RequestMapping(value="menu_coupon_popup")
+	public String coupon_popup(){
+		return "menu/coupon_popup";
 	}
 	
 	
