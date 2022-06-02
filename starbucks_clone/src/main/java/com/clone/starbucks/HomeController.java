@@ -51,7 +51,6 @@ public class HomeController {
 		return "admin/modifyCheckForm";
 	}
 	
-<<<<<<< HEAD
 	//0601 다정 커피
 	@RequestMapping(value="saleChart-1")
 	public String saleChart1() {
@@ -70,11 +69,6 @@ public class HomeController {
 		return "admin/saleChart-3";
 	}
 	
-	
-	
-	//coffee
-	@RequestMapping(value="americano")
-=======
 	@RequestMapping(value="memberModifyForm")
 	public String memberModifyForm() {
 		return "admin/memberModifyForm";
@@ -87,7 +81,6 @@ public class HomeController {
 	
 	// coffee
 	@RequestMapping(value = "coffee/americano")
->>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
 	public String americano() {
 		return "coffee/americano";
 	}
