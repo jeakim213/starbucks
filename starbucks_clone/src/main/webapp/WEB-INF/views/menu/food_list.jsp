@@ -1,7 +1,5 @@
 ﻿<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@page isELIgnored="true" %>
-
 
 <!DOCTYPE html>
 <html lang="ko">
@@ -25,17 +23,17 @@
 <meta property="og:description" content="Starbucks">
 
 <title id="titleJoin">Starbucks Korea</title> <!-- 220117 수정 -->
-<link rel="shortcut icon" href="common/img/common/favicon.ico?v=200828" type="image/ico"> <!-- 20200827 파비콘 교체 및 CDN 변수처리 -->
-<link href="common/css/reset.css" rel="stylesheet">
-<link href="common/css/style.css?v=210721" rel="stylesheet">
-<link href="common/css/jquery.bxslider.css" rel="stylesheet">
-<link href="common/css/idangerous.swiper.css" rel="stylesheet">
-<link href="common/css/idangerous.swiper.scrollbar.css" rel="stylesheet">
-<link href="common/css/jquery.mCustomScrollbar.css" rel="stylesheet">
-<link href="common/css/jquery.scrollbar.css" rel="stylesheet">
-<link href="common/css/jquery-ui.css" rel="stylesheet">
-<link href="common/css/ezmark.css" rel="stylesheet">
-<link href="common/css/style_dt.css?v=20191211" rel="stylesheet"> <!-- 20191211 수정 -->
+<link rel="shortcut icon" href="../common/img/common/favicon.ico?v=200828" type="image/ico"> <!-- 20200827 파비콘 교체 및 CDN 변수처리 -->
+<link href="../common/css/reset.css" rel="stylesheet">
+<link href="../common/css/style.css?v=210721" rel="stylesheet">
+<link href="../common/css/jquery.bxslider.css" rel="stylesheet">
+<link href="../common/css/idangerous.swiper.css" rel="stylesheet">
+<link href="../common/css/idangerous.swiper.scrollbar.css" rel="stylesheet">
+<link href="../common/css/jquery.mCustomScrollbar.css" rel="stylesheet">
+<link href="../common/css/jquery.scrollbar.css" rel="stylesheet">
+<link href="../common/css/jquery-ui.css" rel="stylesheet">
+<link href="../common/css/ezmark.css" rel="stylesheet">
+<link href="../common/css/style_dt.css?v=20191211" rel="stylesheet"> <!-- 20191211 수정 -->
 
 <!--[if lt IE 9]>
 	<script src="/html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -71,8 +69,8 @@ var eFrequencySeq = '172';
 var eFrequencyPlannerYn = 'Y';
 </script>
 
-        <link href="common/css/style_menu.css" rel="stylesheet">
-        <link href="common/css/ezmark.css" rel="stylesheet">
+        <link href="../common/css/style_menu.css" rel="stylesheet">
+        <link href="../common/css/ezmark.css" rel="stylesheet">
 	</head>
 	<body>
 		<div id="wrap">
@@ -128,7 +126,7 @@ var eFrequencyPlannerYn = 'Y';
 					<!-- 유저인포 -->
 					<div class="user_greet">
 						<div class="user_pic_area">
-							<img alt="사용자 아이디" src="common/img/common/user_pic_sample.jpg">
+							<img alt="사용자 아이디" src="../common/img/common/user_pic_sample.jpg">
 							<p class="msr_user_mask msr_user_mask01"></p>
 							<p class="msr_user_mask msr_user_mask02"></p>
 							<p class="msr_user_mask msr_user_mask03"></p>
@@ -177,13 +175,13 @@ var eFrequencyPlannerYn = 'Y';
 							<img alt="카드이름">
 						</div>
 						<div class="mycard_area2">
-							<img alt="카드이름" src="common/img/common/mycard2.png">
+							<img alt="카드이름" src="../common/img/common/mycard2.png">
 							<p class="num"><!-- 1234-1234-1234-1234 --></p>
 							<p class="barcord"><!-- <img src="/image.istarbucks.co.kr/common/img/common/bacord.png" alt=""> --></p>
 						</div>
 						<div class="mycard_one">
 							<!-- <div class="front"> -->
-							<img src="common/img/common/payment_icon1.png" alt="">
+							<img src="../common/img/common/payment_icon1.png" alt="">
 							<!-- </div> -->
 							<!-- <div class="back"><img src="/image.istarbucks.co.kr/common/img/common/payment_icon1.png" alt=""></div> -->
 						</div>
@@ -198,7 +196,7 @@ var eFrequencyPlannerYn = 'Y';
 					<!-- 일반회원 -->
 					<div class="sb_card_regi">
 						<a href="javascript:void(0);">
-							<p class="icon_add_card" onclick="location.href = '/my/mycard_info_input';"><img alt="카드등록 아이콘" src="common/img/common/icon_add_card.png"></p>
+							<p class="icon_add_card" onclick="location.href = '/my/mycard_info_input';"><img alt="카드등록 아이콘" src="../common/img/common/icon_add_card.png"></p>
 							<p class="sb_card_regi_txt"><strong>스타벅스 카드 등록</strong><br>카드를 등록하시고<br>다양한 리워드를<br>만나보세요.</p>
 						</a>
 					</div>
@@ -616,12 +614,12 @@ var eFrequencyPlannerYn = 'Y';
 				<!-- 서브 타이틀 -->
 				<div class="sub_tit_wrap">
 					<div class="sub_tit_inner">
-						<h2><img src="common/img/menu/menu_tit2.jpg" alt="푸드"></h2>
+						<h2><img src="../common/img/menu/menu_tit2.jpg" alt="푸드"></h2>
 						<ul class="smap">
-							<li><a href="index.htm"><img src="common/img/common/icon_home.png" alt="홈으로"></a></li>
-							<li><img class="arrow" src="common/img/common/icon_arrow.png" alt="하위메뉴"></li>
+							<li><a href="index.htm"><img src="../common/img/common/icon_home.png" alt="홈으로"></a></li>
+							<li><img class="arrow" src="../common/img/common/icon_arrow.png" alt="하위메뉴"></li>
 							<li class="en"><a href="index">MENU</a></li>
-							<li><img class="arrow" src="common/img/common/icon_arrow.png" alt="하위메뉴"></li>
+							<li><img class="arrow" src="../common/img/common/icon_arrow.png" alt="하위메뉴"></li>
 							<li><a href="food_list" class="this">푸드</a></li>
 						</ul>
 					</div>
@@ -667,7 +665,7 @@ var eFrequencyPlannerYn = 'Y';
 											
 												
 													
-														<li><a href="javascript:void(0)" role="button"><img src="upload/banner/themebnr/fs8Fa0_20220411135156312.jpg" alt="서머1 프로모션" data-sbseq="W0000416" style="width: 335px; height: 90px"></a></li>
+														<li><a href="javascript:void(0)" role="button"><img src="../upload/banner/themebnr/fs8Fa0_20220411135156312.jpg" alt="서머1 프로모션" data-sbseq="W0000416" style="width: 335px; height: 90px"></a></li>
 													
 													
 													
@@ -675,7 +673,7 @@ var eFrequencyPlannerYn = 'Y';
 											
 												
 													
-														<li><a href="javascript:void(0)" role="button"><img src="upload/banner/themebnr/bnr_brunch_menu.jpg" alt="브런치 유어 웨이" data-sbseq="W0000126" style="width: 335px; height: 90px"></a></li>
+														<li><a href="javascript:void(0)" role="button"><img src="../upload/banner/themebnr/bnr_brunch_menu.jpg" alt="브런치 유어 웨이" data-sbseq="W0000126" style="width: 335px; height: 90px"></a></li>
 													
 													
 													
@@ -683,7 +681,7 @@ var eFrequencyPlannerYn = 'Y';
 											
 												
 													
-														<li><a href="javascript:void(0)" role="button"><img src="upload/banner/themebnr/everland_r.jpg" alt="용인에버랜드" data-sbseq="W0000299" style="width: 335px; height: 90px"></a></li>
+														<li><a href="javascript:void(0)" role="button"><img src="../upload/banner/themebnr/everland_r.jpg" alt="용인에버랜드" data-sbseq="W0000299" style="width: 335px; height: 90px"></a></li>
 													
 													
 													
@@ -691,7 +689,7 @@ var eFrequencyPlannerYn = 'Y';
 											
 												
 													
-														<li><a href="javascript:void(0)" role="button"><img src="upload/banner/themebnr/zoLvJ7_20220425160901260.jpg" alt="스타벅스 홀케이크" data-sbseq="W0000074" style="width: 335px; height: 90px"></a></li>
+														<li><a href="javascript:void(0)" role="button"><img src="../upload/banner/themebnr/zoLvJ7_20220425160901260.jpg" alt="스타벅스 홀케이크" data-sbseq="W0000074" style="width: 335px; height: 90px"></a></li>
 													
 													
 													
@@ -699,7 +697,7 @@ var eFrequencyPlannerYn = 'Y';
 											
 												
 													
-														<li><a href="javascript:void(0)" role="button"><img src="upload/banner/themebnr/200731_jeju.jpg" alt="제주 푸드" data-sbseq="W0000347" style="width: 335px; height: 90px"></a></li>
+														<li><a href="javascript:void(0)" role="button"><img src="../upload/banner/themebnr/200731_jeju.jpg" alt="제주 푸드" data-sbseq="W0000347" style="width: 335px; height: 90px"></a></li>
 													
 													
 													
@@ -707,7 +705,7 @@ var eFrequencyPlannerYn = 'Y';
 											
 												
 													
-														<li><a href="javascript:void(0)" role="button"><img src="upload/banner/themebnr/AeBB4X_20210819095142136.jpg" alt="플랜트 베이스드 푸드" data-sbseq="W0000390" style="width: 335px; height: 90px"></a></li>
+														<li><a href="javascript:void(0)" role="button"><img src="../upload/banner/themebnr/AeBB4X_20210819095142136.jpg" alt="플랜트 베이스드 푸드" data-sbseq="W0000390" style="width: 335px; height: 90px"></a></li>
 													
 													
 													
@@ -1173,36 +1171,36 @@ var eFrequencyPlannerYn = 'Y';
 			<!-- footer end -->
 		
 			
-			<script src="common/js/jquery-1.10.2.min.js"></script>
-			<script src="common/js/%40common.js"></script>
-			<script src="common/js/jquery-ui.min.js?v=220207"></script>
-			<script src="common/js/idangerous.swiper-2.1.min.js"></script>
-			<script src="common/js/idangerous.swiper.scrollbar-2.1.js"></script>
-			<script src="common/js/jquery.bxslider.min.js"></script>
-			<script src="common/js/skdslider.min.js"></script>
-			<script src="common/js/jquery.drive.js"></script>
-			<script src="common/js/jquery.easing-1.3.min.js"></script>
-			<script src="common/js/jquery.elevatezoom.js"></script>
-			<script src="common/js/jquery.flip.js"></script>
-			<script src="common/js/jquery.jsmovie.1.4.4.min.js"></script>
-			<script src="common/js/jquery.mCustomScrollbar.concat.js"></script>
-			<script src="common/js/jquery.number.min.js"></script>
-			<script src="common/js/jquery.rotate.2.3.js"></script>
-			<script src="common/js/jquery.scrollbar.js"></script>
-			<script src="common/js/jquery.scrollTo-1.4.2-min.js"></script>
-			<script src="common/js/jquery.superscrollorama.js"></script>						
-			<script src="common/js/jquery.transform2d.js"></script>
-			<script src="common/js/jquery.transform3d.js"></script>			
-			<script src="common/js/greensock/TweenMax.min.js"></script>
-			<script src="common/js/masonry.pkgd.js"></script>
-			<script src="common/js/common.js"></script>
-			<script src="common/js/gnb.js?v=220502"></script>
-			<script src="common/js/header.js?v=200915"></script>
-			<script src="common/js/footer.js?v=210818"></script>
+			<script src="../common/js/jquery-1.10.2.min.js"></script>
+			<script src="../common/js/@common.js"></script>
+			<script src="../common/js/jquery-ui.min.js?v=220207"></script>
+			<script src="../common/js/idangerous.swiper-2.1.min.js"></script>
+			<script src="../common/js/idangerous.swiper.scrollbar-2.1.js"></script>
+			<script src="../common/js/jquery.bxslider.min.js"></script>
+			<script src="../common/js/skdslider.min.js"></script>
+			<script src="../common/js/jquery.drive.js"></script>
+			<script src="../common/js/jquery.easing-1.3.min.js"></script>
+			<script src="../common/js/jquery.elevatezoom.js"></script>
+			<script src="../common/js/jquery.flip.js"></script>
+			<script src="../common/js/jquery.jsmovie.1.4.4.min.js"></script>
+			<script src="../common/js/jquery.mCustomScrollbar.concat.js"></script>
+			<script src="../common/js/jquery.number.min.js"></script>
+			<script src="../common/js/jquery.rotate.2.3.js"></script>
+			<script src="../common/js/jquery.scrollbar.js"></script>
+			<script src="../common/js/jquery.scrollTo-1.4.2-min.js"></script>
+			<script src="../common/js/jquery.superscrollorama.js"></script>						
+			<script src="../common/js/jquery.transform2d.js"></script>
+			<script src="../common/js/jquery.transform3d.js"></script>			
+			<script src="../common/js/greensock/TweenMax.min.js"></script>
+			<script src="../common/js/masonry.pkgd.js"></script>
+			<script src="../common/js/common.js"></script>
+			<script src="../common/js/gnb.js?v=220502"></script>
+			<script src="../common/js/header.js?v=200915"></script>
+			<script src="../common/js/footer.js?v=210818"></script>
 
-			<script src="common/js/jquery.tmpl.js"></script>
-			<script src="common/js/jquery.tmplPlus.min.js"></script>
-			<script src="common/js/jquery.ezmark.min.js"></script>
+			<script src="../common/js/jquery.tmpl.js"></script>
+			<script src="../common/js/jquery.tmplPlus.min.js"></script>
+			<script src="../common/js/jquery.ezmark.min.js"></script>
 			<!-- <script src="/developers.kakao.com/sdk/js/kakao.min.js"></script> -->
 			
 			<!--
@@ -1212,8 +1210,8 @@ var eFrequencyPlannerYn = 'Y';
 			-->
 			
 		
-			<script src="common/js/openevent/openevent.js"></script>
-			<script src="common/js/open_event_control.js"></script>
+			<script src="../common/js/openevent/openevent.js"></script>
+			<script src="../common/js/open_event_control.js"></script>
 			<script type="text/javascript">
 				
 				var mrSlider;
@@ -1422,7 +1420,7 @@ var eFrequencyPlannerYn = 'Y';
                 /* 개인컵 리워드 e */
 			</script>
 
-			<script src="common/js/jquery.transit.min.js"></script>
+			<script src="../common/js/jquery.transit.min.js"></script>
 			<script>
 				// 150805 DOM 수정
 				$('div.msr_card_zone').bind('click', function(){
@@ -1459,7 +1457,7 @@ var eFrequencyPlannerYn = 'Y';
 				$('.mycard_one').seqfx();
 			</script>
 						
-			<script src='/common/js/makePCookie.js'></script>
+			<script src='../common/js/makePCookie.js'></script>
 		
 			<script>
 				$(document).ready(function () {
@@ -1479,16 +1477,15 @@ var eFrequencyPlannerYn = 'Y';
 			<input type="hidden" name="selIndex" id="selIndex" value="">
 		</div>
 		
-		<script src="common/js/jquery.ezmark.min-1.js"></script>
-        <script src="common/js/menu.js"></script>
-        <script src="common/js/jquery.async.min.js"></script>
+		<script src="../common/js/jquery.ezmark.min-1.js"></script>
+        <script src="../common/js/menu.js"></script>
+        <script src="../common/js/jquery.async.min.js"></script>
         
         <script>
 			var $PREVIEW = "";
 			var $CATE_CD = "";
 			var dataCnt = 0; // 160928 상세검색 결과 값
 			$(document).ready(function(){
-				
 				
 			    setTimeout(function(){
 					if ( $('#themeType').val() == 'THEME'  ) {
@@ -1579,7 +1576,8 @@ var eFrequencyPlannerYn = 'Y';
 				$('.product_select_wrap input[type=checkbox]').bind('click', function(e) {
 					cate_chk_idx = $('.product_select_wrap input[type=checkbox]').index($(this));
 					cate_chk_stat = $(this).is(':checked');
-					
+					console.log('바인드쪽 showProductList부르기 전'+cate_chk_idx);
+					console.log('바인드쪽 showProductList부르기 전'+cate_chk_stat);
 					if(cate_chk_idx == 0 && cate_chk_stat) {
                         $('.product_select_wrap input[type=checkbox]').not(':eq(0)').removeAttr('checked');
 						$('.product_select_wrap input[type=checkbox]').not(':eq(0)').trigger('change');
@@ -1647,9 +1645,9 @@ var eFrequencyPlannerYn = 'Y';
 				}
 			});
 	           
-           function showMenuDetail(chkTmp, cls) {
-               
-               var $sel = $('.' + cls);
+           function showMenuDetail(chkTmp, cls) { //showMenuDetail(chkTmp, "product_bakery");
+               console.log('showMenuDetail' + showMenuDetail);
+           	   var $sel = $('.' + cls);
                
                if(chkTmp == true) {
                    $sel.children('.menuDataSet').each(function() {
@@ -1776,11 +1774,12 @@ var eFrequencyPlannerYn = 'Y';
 				
                 var url = '/menu/productListAjax';
     			
-                   url = ${pageContext.request.contextPath} + '/upload/json/menu/' + pro_seq + '.json';
+                     url = '${pageContext.request.contextPath}' + '/upload/json/menu/' + pro_seq + '.json';
                 
                 __ajaxCall(url, option , true, "JSON", "POST",
                 function(data) {
                     if(data.list.length > 0) {
+                    	console.log('확인'+"pro_SEQ".indexOf(data.list[1]));
                        // $('#tpl_serviceProductList').tmpl(data.list).appendTo($('#product_view_tab03 .product_list > dl > dd > ul'));
                         $('#tpl_serviceProductList').tmpl(data.list).appendTo($('.product_view_tab.product_view_tab02 .product_list > dl > dd > ul'));
                         $('a.goServiceView').unbind('click').bind('click', function() {
@@ -1788,13 +1787,13 @@ var eFrequencyPlannerYn = 'Y';
                             f_cate = $(this).attr('f_cate');
                             f = document.foodListForm;
                             if(f_cate == "W0000001") {
-                                f.action = "menu/drink_view";
+                                f.action = "drink_view";
                             } else if(f_cate == "W0000012") {
-                                f.action = "menu/food_view";
+                                f.action = "food_view";
                             } else if(f_cate == "W0000022") {
-                                f.action = "menu/product_view";
+                                f.action = "product_view";
                             } else {
-                                f.action = "menu/food_view";
+                                f.action = "food_view";
                             }
                             f.product_cd.value = product_cd;
                             f.submit();
@@ -1846,13 +1845,12 @@ var eFrequencyPlannerYn = 'Y';
 					
 	                var url = '/menu/productListAjax';
 	    			
-	                   url = ${pageContext.request.contextPath} + '/upload/json/menu/' + cngCateCode + '.json';
+	                  url = '${pageContext.request.contextPath}' + '/upload/json/menu/' + cngCateCode + '.json';
 	                
 	                __ajaxCall(url, option , true, "JSON", "POST", 
 	                function(data) {
                         if(data.list.length > 0) {
-	                		
-	                		$('.product_view_tab.product_view_tab01 .product_list > dl > dd').eq(~~cateEq - 1).find('ul').eq(0).empty('');
+                        	$('.product_view_tab.product_view_tab01 .product_list > dl > dd').eq(~~cateEq - 1).find('ul').eq(0).empty('');
 	                		$('#tpl_productPicList').tmpl(data.list).appendTo($('.product_view_tab.product_view_tab01 .product_list > dl > dd').eq(~~cateEq - 1).find('ul').eq(0));
 	                        $('.product_view_tab.product_view_tab01 .product_list > dl > dt').eq(~~cateEq - 1).show();
 	                        $('.product_view_tab.product_view_tab01 .product_list > dl > dd').eq(~~cateEq - 1).show();
@@ -1864,7 +1862,7 @@ var eFrequencyPlannerYn = 'Y';
 		                    $('a.goFoodView').unbind('click').bind('click', function() {
 		                    	product_cd = $(this).attr('prod');
 		                    	f = document.foodListForm;
-		                    	f.action = "menu/food_view";
+		                    	f.action = "food_view";
 		                    	f.product_cd.value = product_cd;
 		                        f.submit();
 		                    });
@@ -1917,7 +1915,7 @@ var eFrequencyPlannerYn = 'Y';
             		tmp_cate = $(this).attr('id');
             		cngCateCode = getCateCodeCng(tmp_cate);
                     cate_chk_stat = $(this).is(':checked');
-                    
+                    console.log('showProductList cate_chk_stat : '+cate_chk_stat);
                     if(cngCateCode != "") {
 	                    if(chk_idx == 0) {
 	                        if(cate_chk_stat) {
@@ -1925,7 +1923,7 @@ var eFrequencyPlannerYn = 'Y';
 	                            //var idx = $('#product_view_tab01 .product_list > dl > dd > ul').index($(this));
 	                        	$('.product_view_tab.product_view_tab01 .product_list > dl > dd > ul').each(function() {
 	                        		var idx = $('.product_view_tab.product_view_tab01 .product_list > dl > dd > ul').index($(this));
-	                        		if( $(this)() != "" ) {
+	                        		if($(this) != "") {
 	                                    /* $('#product_view_tab01 .product_list > dl > dt').eq(idx).show();
 	                                    $('#product_view_tab01 .product_list > dl > dd').eq(idx).show(); */
 	                        			$('.product_view_tab.product_view_tab01 .product_list > dl > dt').eq(idx).show();
@@ -1989,7 +1987,7 @@ var eFrequencyPlannerYn = 'Y';
 		                            $('#product_view_tab01 .product_list > dl > dt').eq(chk_idx - 1).show();
 		                            $('#product_view_tab01 .product_list > dl > dd').eq(chk_idx - 1).show();
                                 } */
-                                if( $.trim($('.product_view_tab.product_view_tab01 .product_list > dl > dd').eq(chk_idx - 1).find('ul')()) != "" ) {
+                                if( $.trim($('.product_view_tab.product_view_tab01 .product_list > dl > dd').eq(chk_idx - 1).find('ul')) != "" ) {
 		                            $('.product_view_tab.product_view_tab01 .product_list > dl > dt').eq(chk_idx - 1).show();
 		                            $('.product_view_tab.product_view_tab01 .product_list > dl > dd').eq(chk_idx - 1).show();
 
@@ -2043,10 +2041,10 @@ var eFrequencyPlannerYn = 'Y';
 			}
 		</script>
         <script type="text/x-jquery-tmpl" id="tpl_productPicList">
-            <li class="menuDataSet" new="${newicon}" sell="${sell_CAT}" recomm="${recomm}" sold="${sold_OUT}" premier="${premier}">
+            <li class="menuDataSet" new="\${newicon}" sell="\${sell_CAT}" recomm="\${recomm}" sold="\${sold_OUT}" premier="\${premier}">
                 <dl>
                     <dt>
-                        <a href="javascript:void(0)" class="goFoodView" prod="${product_CD}"><img src="${img_UPLOAD_PATH.replace("www", "image")}${file_PATH}" alt="${product_NM}"></a>
+                        <a href="javascript:void(0)" class="goFoodView" prod="\${product_CD}"><img src="\${img_UPLOAD_PATH.replace("www", "image")}\${file_PATH}" alt="\${product_NM}"></a>
                         {{if newicon == 'Y' || sell_CAT == '1' || recomm != '0' || sold_OUT == 'Y' || premier == 'Y'}}
                         <ul>
                             {{if newicon == 'Y'}}
@@ -2067,7 +2065,7 @@ var eFrequencyPlannerYn = 'Y';
                         </ul>
                         {{/if}}
                     </dt>
-                    <dd>${product_NM}</dd>
+                    <dd>\${product_NM}</dd>
                 </dl>
             </li>
         </script>
@@ -2097,12 +2095,12 @@ var eFrequencyPlannerYn = 'Y';
         </script>
         <script type="text/x-jquery-tmpl" id="tpl_productNutTr">
             <tr>
-                <td>${product_NM}</td>
-                <td>${convertInfoText(kcal)}</td>
-                <td>${convertInfoText(sat_FAT)}</td>
-                <td>${convertInfoText(sodium)}</td>
-                <td>${convertInfoText(sugars)}</td>
-                <td>${convertInfoText(protein)}</td>
+                <td>\${product_NM}</td>
+                <td>\${convertInfoText(kcal)}</td>
+                <td>\${convertInfoText(sat_FAT)}</td>
+                <td>\${convertInfoText(sodium)}</td>
+                <td>\${convertInfoText(sugars)}</td>
+                <td>\${convertInfoText(protein)}</td>
             </tr>
         </script>
         <script type="text/x-jquery-tmpl" id="tpl_productNutMob">
@@ -2111,31 +2109,31 @@ var eFrequencyPlannerYn = 'Y';
                 <li>
                     <dl>
                         <dt>칼로리(Kcal)</dt>
-                        <dd>${convertInfoText(kcal)}</dd>
+                        <dd>\${convertInfoText(kcal)}</dd>
                     </dl>
                 </li>
                 <li>
                     <dl>
                         <dt>포화지방(g)</dt>
-                        <dd>${convertInfoText(sat_FAT)}</dd>
+                        <dd>\${convertInfoText(sat_FAT)}</dd>
                     </dl>
                 </li>
                 <li>
                     <dl>
                         <dt>나트륨(mg)</dt>
-                        <dd>${convertInfoText(sodium)}</dd>
+                        <dd>\${convertInfoText(sodium)}</dd>
                     </dl>
                 </li>
                 <li>
                     <dl>
                         <dt>당류(g)</dt>
-                        <dd>${convertInfoText(sugars)}</dd>
+                        <dd>\${convertInfoText(sugars)}</dd>
                     </dl>
                 </li>
                 <li>
                     <dl>
                         <dt>단백질(g)</dt>
-                        <dd>${convertInfoText(protein)}</dd>
+                        <dd>\${convertInfoText(protein)}</dd>
                     </dl>
                 </li>
             </ul>
@@ -2144,12 +2142,12 @@ var eFrequencyPlannerYn = 'Y';
             <li>
                 <dl>
                     <dt>
-                        <a href="javascript:void(0)" class="goServiceView" prod="${product_CD}" f_cate="${f_CATE_CD}"><img src="${img_UPLOAD_PATH.replace("www", "image")}${file_PATH}" alt="${product_NM}"></a>
+                        <a href="javascript:void(0)" class="goServiceView" prod="\${product_CD}" f_cate="\${f_CATE_CD}"><img src="\${img_UPLOAD_PATH.replace("www", "image")}\${file_PATH}" alt="\${product_NM}"></a>
                     </dt>
-                    <dd>${product_NM}</dd>
+                    <dd>\${product_NM}</dd>
                 </dl>
             </li>
         </script>
-		<script src="common/js/menu/patch4sm.js"></script>
+		<script src="../common/js/menu/patch4sm.js"></script>
 	</body>
 </html>

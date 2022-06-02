@@ -1,7 +1,8 @@
 ﻿<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <html lang="ko"><head>
-        
+ 
 
 
 
@@ -19,18 +20,18 @@
 <meta property="og:image" content="https://image.istarbucks.co.kr/common/img/kakaotalk.png">
 <meta property="og:description" content="Starbucks">
 
-<title id="titleJoin">My Starbucks | Starbucks Korea</title> <!-- 220117 수정 -->
+<title id="titleJoin">Product 매출현황 | Starbucks Korea</title> <!-- 220117 수정 -->
 <link rel="shortcut icon" href="https://image.istarbucks.co.kr/common/img/common/favicon.ico?v=200828" type="image/ico"> <!-- 20200827 파비콘 교체 및 CDN 변수처리 -->
-<link href="common/css/reset.css" rel="stylesheet">
-<link href="common/css/style.css?v=210721" rel="stylesheet">
-<link href="common/css/jquery.bxslider.css" rel="stylesheet">
-<link href="common/css/idangerous.swiper.css" rel="stylesheet">
-<link href="common/css/idangerous.swiper.scrollbar.css" rel="stylesheet">
-<link href="common/css/jquery.mCustomScrollbar.css" rel="stylesheet">
-<link href="common/css/jquery.scrollbar.css" rel="stylesheet">
-<link href="common/css/jquery-ui.css" rel="stylesheet">
-<link href="common/css/ezmark.css" rel="stylesheet">
-<link href="common/css/style_dt.css?v=20191211" rel="stylesheet"> <!-- 20191211 수정 -->
+<link href="../common/css/reset.css" rel="stylesheet">
+<link href="../common/css/style.css?v=210721" rel="stylesheet">
+<link href="../common/css/jquery.bxslider.css" rel="stylesheet">
+<link href="../common/css/idangerous.swiper.css" rel="stylesheet">
+<link href="../common/css/idangerous.swiper.scrollbar.css" rel="stylesheet">
+<link href="../common/css/jquery.mCustomScrollbar.css" rel="stylesheet">
+<link href="../common/css/jquery.scrollbar.css" rel="stylesheet">
+<link href="../common/css/jquery-ui.css" rel="stylesheet">
+<link href="../common/css/ezmark.css" rel="stylesheet">
+<link href="../common/css/style_dt.css?v=20191211" rel="stylesheet"> <!-- 20191211 수정 -->
 
 <!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -59,6 +60,110 @@
 
 
 
+<!-- 0602 다정 차트 디자인 -->
+
+<!-- sale 판매금액 -->
+<style type="text/css">
+	#sale_container {
+	    height: 400px;
+	}
+	
+	.highcharts-figure,
+	.highcharts-data-table table {
+	    min-width: 320px;
+	    max-width: 800px;
+	    margin: 1em auto;
+	}
+	
+	.highcharts-data-table table {
+	    font-family: Verdana, sans-serif;
+	    border-collapse: collapse;
+	    border: 1px solid #ebebeb;
+	    margin: 10px auto;
+	    text-align: center;
+	    width: 100%;
+	    max-width: 500px;
+	}
+	
+	.highcharts-data-table caption {
+	    padding: 1em 0;
+	    font-size: 1.2em;
+	    color: #555;
+	}
+	
+	.highcharts-data-table th {
+	    font-weight: 600;
+	    padding: 0.5em;
+	}
+	
+	.highcharts-data-table td,
+	.highcharts-data-table th,
+	.highcharts-data-table caption {
+	    padding: 0.5em;
+	}
+	
+	.highcharts-data-table thead tr,
+	.highcharts-data-table tr:nth-child(even) {
+	    background: #f8f8f8;
+	}
+	
+	.highcharts-data-table tr:hover {
+	    background: #f1f7ff;
+	}
+</style>
+
+<!-- popular 인기상품 -->
+<style type="text/css">
+    .highcharts-figure,
+    .highcharts-data-table table {
+        min-width: 320px;
+        max-width: 660px;
+        margin: 1em auto;
+    }
+
+    .highcharts-data-table table {
+        font-family: Verdana, sans-serif;
+        border-collapse: collapse;
+        border: 1px solid #ebebeb;
+        margin: 10px auto;
+        text-align: center;
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .highcharts-data-table caption {
+        padding: 1em 0;
+        font-size: 1.2em;
+        color: #555;
+    }
+
+    .highcharts-data-table th {
+        font-weight: 600;
+        padding: 0.5em;
+    }
+
+    .highcharts-data-table td,
+    .highcharts-data-table th,
+    .highcharts-data-table caption {
+        padding: 0.5em;
+    }
+
+    .highcharts-data-table thead tr,
+    .highcharts-data-table tr:nth-child(even) {
+        background: #f8f8f8;
+    }
+
+    .highcharts-data-table tr:hover {
+        background: #f1f7ff;
+    }
+</style>
+
+
+
+
+
+
+
 
 <script type="text/javascript">
 var eFrequencyYn = 'Y';
@@ -67,12 +172,17 @@ var eFrequencyPlannerYn = 'Y';
 </script>
 
         
-        <link href="common/css/style_util.css?v=210316" rel="stylesheet">
-    <style type="text/css" data-fbcssmodules="css:fb.css.base css:fb.css.dialog css:fb.css.iframewidget css:fb.css.customer_chat_plugin_iframe">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+<link href="../common/css/style_util.css?v=210316" rel="stylesheet">
+<style type="text/css" data-fbcssmodules="css:fb.css.base css:fb.css.dialog css:fb.css.iframewidget css:fb.css.customer_chat_plugin_iframe">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
 .fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_dialog_advanced{border-radius:8px;padding:10px}.fb_dialog_content{background:#fff;color:#373737}.fb_dialog_close_icon{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{left:5px;right:auto;top:5px}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{height:100%;left:0;margin:0;overflow:visible;position:absolute;top:-10000px;transform:none;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{background:none;height:auto;min-height:initial;min-width:initial;width:auto}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{clear:both;color:#fff;display:block;font-size:18px;padding-top:20px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .4);bottom:0;left:0;min-height:100%;position:absolute;right:0;top:0;width:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_mobile .fb_dialog_iframe{position:sticky;top:0}.fb_dialog_content .dialog_header{background:linear-gradient(from(#738aba), to(#2c4987));border-bottom:1px solid;border-color:#043b87;box-shadow:white 0 1px 1px -1px inset;color:#fff;font:bold 14px Helvetica, sans-serif;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:linear-gradient(from(#4267B2), to(#2a4887));background-clip:padding-box;border:1px solid #29487d;border-radius:3px;display:inline-block;line-height:18px;margin-top:3px;max-width:85px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{background:none;border:none;color:#fff;font:bold 12px Helvetica, sans-serif;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #4a4a4a;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f5f6f7;border:1px solid #4a4a4a;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-position:50% 50%;background-repeat:no-repeat;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
 .fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}
 .fb_mpn_mobile_landing_page_slide_out{animation-duration:200ms;animation-name:fb_mpn_landing_page_slide_out;transition-timing-function:ease-in}.fb_mpn_mobile_landing_page_slide_out_from_left{animation-duration:200ms;animation-name:fb_mpn_landing_page_slide_out_from_left;transition-timing-function:ease-in}.fb_mpn_mobile_landing_page_slide_up{animation-duration:500ms;animation-name:fb_mpn_landing_page_slide_up;transition-timing-function:ease-in}.fb_mpn_mobile_bounce_in{animation-duration:300ms;animation-name:fb_mpn_bounce_in;transition-timing-function:ease-in}.fb_mpn_mobile_bounce_out{animation-duration:300ms;animation-name:fb_mpn_bounce_out;transition-timing-function:ease-in}.fb_mpn_mobile_bounce_out_v2{animation-duration:300ms;animation-name:fb_mpn_fade_out;transition-timing-function:ease-in}.fb_customer_chat_bounce_in_v2{animation-duration:300ms;animation-name:fb_bounce_in_v2;transition-timing-function:ease-in}.fb_customer_chat_bounce_in_from_left{animation-duration:300ms;animation-name:fb_bounce_in_from_left;transition-timing-function:ease-in}.fb_customer_chat_bounce_out_v2{animation-duration:300ms;animation-name:fb_bounce_out_v2;transition-timing-function:ease-in}.fb_customer_chat_bounce_out_from_left{animation-duration:300ms;animation-name:fb_bounce_out_from_left;transition-timing-function:ease-in}.fb_invisible_flow{display:inherit;height:0;overflow-x:hidden;width:0}@keyframes fb_mpn_landing_page_slide_out{0%{margin:0 12px;width:100% - 24px}60%{border-radius:18px}100%{border-radius:50%;margin:0 24px;width:60px}}@keyframes fb_mpn_landing_page_slide_out_from_left{0%{left:12px;width:100% - 24px}60%{border-radius:18px}100%{border-radius:50%;left:12px;width:60px}}@keyframes fb_mpn_landing_page_slide_up{0%{bottom:0;opacity:0}100%{bottom:24px;opacity:1}}@keyframes fb_mpn_bounce_in{0%{opacity:.5;top:100%}100%{opacity:1;top:0}}@keyframes fb_mpn_fade_out{0%{bottom:30px;opacity:1}100%{bottom:0;opacity:0}}@keyframes fb_mpn_bounce_out{0%{opacity:1;top:0}100%{opacity:.5;top:100%}}@keyframes fb_bounce_in_v2{0%{opacity:0;transform:scale(0, 0);transform-origin:bottom right}50%{transform:scale(1.03, 1.03);transform-origin:bottom right}100%{opacity:1;transform:scale(1, 1);transform-origin:bottom right}}@keyframes fb_bounce_in_from_left{0%{opacity:0;transform:scale(0, 0);transform-origin:bottom left}50%{transform:scale(1.03, 1.03);transform-origin:bottom left}100%{opacity:1;transform:scale(1, 1);transform-origin:bottom left}}@keyframes fb_bounce_out_v2{0%{opacity:1;transform:scale(1, 1);transform-origin:bottom right}100%{opacity:0;transform:scale(0, 0);transform-origin:bottom right}}@keyframes fb_bounce_out_from_left{0%{opacity:1;transform:scale(1, 1);transform-origin:bottom left}100%{opacity:0;transform:scale(0, 0);transform-origin:bottom left}}@keyframes slideInFromBottom{0%{opacity:.1;transform:translateY(100%)}100%{opacity:1;transform:translateY(0)}}@keyframes slideInFromBottomDelay{0%{opacity:0;transform:translateY(100%)}97%{opacity:0;transform:translateY(100%)}100%{opacity:1;transform:translateY(0)}}</style></head>
-    <body class="vsc-initialized" style=""><div class="loading_dimm" style="display:none; z-index:20000;"></div><div class="loading_img" style="display:none; z-index:20001;"></div>
+
+
+
+
+<!-- 바디 -->
+<body class="vsc-initialized" style=""><div class="loading_dimm" style="display:none; z-index:20000;"></div><div class="loading_img" style="display:none; z-index:20001;"></div>
         <div id="wrap">
             
 <script>
@@ -654,13 +764,10 @@ var eFrequencyPlannerYn = 'Y';
 	<li class="util_nav01 sign_out" style=""><a href="javascript:void(0);">Sign out</a></li>
 	<li class="util_nav01 sign_in" style="display: none;"><a href="javascript:void(0);">Sign In</a></li>
 	<li class="util_nav02"><a href="javascript:void(0);" required="login" data-href="my/index">My Starbucks</a></li>
-	<li class="util_nav03"><a href="util/index">Customer Service &amp; Ideas</a></li>
+	<li class="util_nav03"><a href="menu/orderList">Order</a></li>
 	<li class="util_nav04"><a href="store/store_map">Find a Store</a></li>
 </ul>
 				</nav>
-				<p class="btn_search">
-					<a href="javascript:void(0);"><img alt="통합검색" src="//image.istarbucks.co.kr/common/img/common/icon_magnifier_black.png"></a>
-				<label for="totalSearch" class="a11y">통합검색</label><input id="totalSearch" placeholder="통합검색" type="text"></p>
 				<a href="javascript:void(0);" class="rCup3_wrap" role="button" title="마이 리워드 레이어 열기"><!-- 접근성_20171201 class, role, title 추가 --><span class="rCup3" style="width: 53px; height: 45px; overflow: hidden;"><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/001.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/002.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/003.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/004.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/005.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/006.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/007.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/008.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/009.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/010.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/011.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/012.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/013.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/014.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/015.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/016.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/017.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/018.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/019.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/020.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/021.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/022.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/023.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/024.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/025.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/026.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/027.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/028.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/029.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/030.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/031.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/032.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/033.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/034.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/035.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/036.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/037.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/038.png&quot;);"></div><div class="jsMovieFrame" style="display: block; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/039.png&quot;);"></div><div id="jsMovie_event_overlay" style="width: 53px; height: 90px; margin-top: -90px;"></div><div id="jsMovie_image_preload_container"><img src="//image.istarbucks.co.kr/common/img/common/rcup/login/001.png" alt="" style="height: 1px; width: 1px;"></div></span></a><!-- 150714 DOM 수정 - 떨어지는 메뉴 부분에 jsMovie 추가 -->
 			</div>
 			<nav class="sub_gnb_nav">
@@ -672,7 +779,7 @@ var eFrequencyPlannerYn = 'Y';
 </div>			
 
 
-            <div id="container">
+<div id="container">
                 <!-- 서브 타이틀 -->
                 
 <header class="ms_sub_tit_wrap">
@@ -680,7 +787,7 @@ var eFrequencyPlannerYn = 'Y';
 		<div class="ms_sub_tit_inner">
 			
 			<ul class="smap">
-				<li><a href="/"><img src="//image.istarbucks.co.kr/common/img/common/icon_home_w.png" alt="홈으로"></a></li>
+				<li><a href="/r"><img src="//image.istarbucks.co.kr/common/img/common/icon_home_w.png" alt="홈으로"></a></li>
 				<li><img class="arrow" src="//image.istarbucks.co.kr/common/img/common/icon_arrow_w.png" alt="작은 맵 화살표"></li>
 				<li><a href="my/index">My Starbucks</a></li>
 				
@@ -689,12 +796,387 @@ var eFrequencyPlannerYn = 'Y';
 		</div>
 	</div>
 </header>
-                <!-- 서브 타이틀 end -->
-                
-                <!-- 내용 -->
-                <div class="ms_cont_wrap">
-                    <div class="ms_cont">
+<!-- 서브 타이틀 end -->
 
+<!-- 내용 -->
+<div class="ms_cont_wrap">
+    <div class="ms_cont">
+                    
+<!-- 관리자 -->
+
+
+<!-- 금액 매출 -->
+	<img src="common/img/admin/sales_title.png" style="width: 100px;"><br>
+	<img src="common/img/admin/product_1.png" style="width: 60px;"><br><br><br>
+	
+	
+		<div style="text-align: center; margin: auto; font-size: 20px;"><b>- PRODUCT 월별 총 판매 금액 -</b> </div><hr>
+	
+	
+	
+	<!-- 0602 다정 차트 스크립트 -->
+		<script src="../common/js/admin/highcharts.js"></script>
+		<script src="https://code.highcharts.com/highcharts-more.js"></script>
+		<script src="https://code.highcharts.com/modules/exporting.js"></script>
+		<script src="https://code.highcharts.com/modules/export-data.js"></script>
+		<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+		
+		
+		<figure class="highcharts-figure">
+	    <div id="sale_container"></div>
+	    <!-- <p class="highcharts-description">
+	        Chart with buttons to modify options, showing how options can be changed
+	        on the fly. This flexibility allows for more dynamic charts.
+	    </p> -->
+	
+	    <!-- <button id="plain">Plain</button> -->
+	   <!--  <button id="inverted">Inverted</button>
+	    <button id="polar">Polar</button> -->
+		</figure>
+
+
+
+
+<script type="text/javascript">
+	const chart = Highcharts.chart('sale_container', {
+	    title: {
+	        text: 'Product Sale Chart'
+	    },
+	    subtitle: {
+	        text: ''
+	    },
+	    xAxis: {
+	        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+	    },
+	    series: [{
+	        type: 'column',
+	        colorByPoint: false,
+	        data: [235, 643, 345, 352, 543, 123, 253, 352, 562, 234, 623, 442],
+	        showInLegend: false
+	    }]
+	});
+</script>	
+<br><br><br><br><br>
+
+
+
+
+
+
+
+
+
+<div style="text-align: center; margin: auto; font-size: 20px;"><b>- PRODUCT 인기 순위 -</b> </div><hr>
+
+<!-- 인기 판매 순위 -->
+ <figure class="highcharts-figure">
+     <div id="popular_container"></div>
+     
+ </figure>
+
+  <script type="text/javascript">
+     // Create the chart
+     Highcharts.chart('popular_container', {
+         chart: {
+             type: 'pie'
+         },
+         title: {
+             text: 'Starbucks Popular PRODUCT Rank'
+         },
+         subtitle: {
+             text: ''
+         },
+
+         accessibility: {
+             announceNewData: {
+                 enabled: true
+             },
+             point: {
+                 valueSuffix: '%'
+             }
+         },
+
+         plotOptions: {
+             series: {
+                 dataLabels: {
+                     enabled: true,
+                     format: '{point.name}: {point.y:.1f}%'
+                 }
+             }
+         },
+
+         tooltip: {
+             headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
+             pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.2f}%</b> of total<br/>'
+         },
+
+         series: [
+             {
+                 name: "Browsers",
+                 colorByPoint: true,
+                 data: [
+                     {
+                         name: "Chrome",
+                         y: 62.74,
+                         drilldown: "Chrome"
+                     },
+                     {
+                         name: "Firefox",
+                         y: 10.57,
+                         drilldown: "Firefox"
+                     },
+                     {
+                         name: "Internet Explorer",
+                         y: 7.23,
+                         drilldown: "Internet Explorer"
+                     },
+                     {
+                         name: "Safari",
+                         y: 5.58,
+                         drilldown: "Safari"
+                     },
+                     {
+                         name: "Edge",
+                         y: 4.02,
+                         drilldown: "Edge"
+                     },
+                     {
+                         name: "Opera",
+                         y: 1.92,
+                         drilldown: "Opera"
+                     },
+                     {
+                         name: "Other",
+                         y: 7.62,
+                         drilldown: null
+                     }
+                 ]
+             }
+         ],
+         drilldown: {
+             series: [
+                 {
+                     name: "Chrome",
+                     id: "Chrome",
+                     data: [
+                         [
+                             "v65.0",
+                             0.1
+                         ],
+                         [
+                             "v64.0",
+                             1.3
+                         ],
+                         [
+                             "v63.0",
+                             53.02
+                         ],
+                         [
+                             "v62.0",
+                             1.4
+                         ],
+                         [
+                             "v61.0",
+                             0.88
+                         ],
+                         [
+                             "v60.0",
+                             0.56
+                         ],
+                         [
+                             "v59.0",
+                             0.45
+                         ],
+                         [
+                             "v58.0",
+                             0.49
+                         ],
+                         [
+                             "v57.0",
+                             0.32
+                         ],
+                         [
+                             "v56.0",
+                             0.29
+                         ],
+                         [
+                             "v55.0",
+                             0.79
+                         ],
+                         [
+                             "v54.0",
+                             0.18
+                         ],
+                         [
+                             "v51.0",
+                             0.13
+                         ],
+                         [
+                             "v49.0",
+                             2.16
+                         ],
+                         [
+                             "v48.0",
+                             0.13
+                         ],
+                         [
+                             "v47.0",
+                             0.11
+                         ],
+                         [
+                             "v43.0",
+                             0.17
+                         ],
+                         [
+                             "v29.0",
+                             0.26
+                         ]
+                     ]
+                 },
+                 {
+                     name: "Firefox",
+                     id: "Firefox",
+                     data: [
+                         [
+                             "v58.0",
+                             1.02
+                         ],
+                         [
+                             "v57.0",
+                             7.36
+                         ],
+                         [
+                             "v56.0",
+                             0.35
+                         ],
+                         [
+                             "v55.0",
+                             0.11
+                         ],
+                         [
+                             "v54.0",
+                             0.1
+                         ],
+                         [
+                             "v52.0",
+                             0.95
+                         ],
+                         [
+                             "v51.0",
+                             0.15
+                         ],
+                         [
+                             "v50.0",
+                             0.1
+                         ],
+                         [
+                             "v48.0",
+                             0.31
+                         ],
+                         [
+                             "v47.0",
+                             0.12
+                         ]
+                     ]
+                 },
+                 {
+                     name: "Internet Explorer",
+                     id: "Internet Explorer",
+                     data: [
+                         [
+                             "v11.0",
+                             6.2
+                         ],
+                         [
+                             "v10.0",
+                             0.29
+                         ],
+                         [
+                             "v9.0",
+                             0.27
+                         ],
+                         [
+                             "v8.0",
+                             0.47
+                         ]
+                     ]
+                 },
+                 {
+                     name: "Safari",
+                     id: "Safari",
+                     data: [
+                         [
+                             "v11.0",
+                             3.39
+                         ],
+                         [
+                             "v10.1",
+                             0.96
+                         ],
+                         [
+                             "v10.0",
+                             0.36
+                         ],
+                         [
+                             "v9.1",
+                             0.54
+                         ],
+                         [
+                             "v9.0",
+                             0.13
+                         ],
+                         [
+                             "v5.1",
+                             0.2
+                         ]
+                     ]
+                 },
+                 {
+                     name: "Edge",
+                     id: "Edge",
+                     data: [
+                         [
+                             "v16",
+                             2.6
+                         ],
+                         [
+                             "v15",
+                             0.92
+                         ],
+                         [
+                             "v14",
+                             0.4
+                         ],
+                         [
+                             "v13",
+                             0.1
+                         ]
+                     ]
+                 },
+                 {
+                     name: "Opera",
+                     id: "Opera",
+                     data: [
+                         [
+                             "v50.0",
+                             0.96
+                         ],
+                         [
+                             "v49.0",
+                             0.82
+                         ],
+                         [
+                             "v12.1",
+                             0.14
+                         ]
+                     ]
+                 }
+             ]
+         }
+     });
+ </script>
+
+ 
                         <!-- msr 회원 -->
                         <div class="msr_user_index" style="display: none;">
                             <!-- 유저정보 -->
@@ -893,25 +1375,17 @@ var eFrequencyPlannerYn = 'Y';
 		</li> -->
 		
 		<li>
-			<a href="javascript:void(0);">사용자 관리<span class="sbox_arrow_down"></span></a>
+			<a href="javascript:void(0);">회원 관리<span class="sbox_arrow_down"></span></a>
 			<ul>
-				<li><a href="javascript:void(0);" required="login" data-href="my/reward">· 사용자 정보 수정</a></li>
-				<li><a href="javascript:void(0);" required="login" data-href="my/reward_star_history">· 사용자 정보 삭제</a></li>
-			</ul>
-		</li>
-		<li>
-			<a href="javascript:void(0);">상품<span class="sbox_arrow_down"></span></a>
-			<ul>
-				<li><a href="javascript:void(0);" required="login" data-href="my/reward">· 상품 등록</a></li>
-				<li><a href="javascript:void(0);" required="login" data-href="my/reward_star_history">· 상품 수정</a></li>
-				<li><a href="javascript:void(0);" required="login" data-href="my/reward_star_history">· 상품 삭제</a></li>
+				<li><a href="javascript:void(0);" required="login" data-href="my/reward">· 회원 목록</a></li>
 			</ul>
 		</li>
 		<li>
 			<a href="javascript:void(0);">매출현황<span class="sbox_arrow_down"></span></a>
 			<ul>
-				<li><a href="javascript:void(0);" required="login" data-href="my/reward">· 시간별 인기상품 분석</a></li>
-				<li><a href="javascript:void(0);" required="login" data-href="my/reward_star_history">· 누적 인기상품 분석</a></li>
+				<li><a href="saleChart-1" <%-- required="login" --%> data-href="admin/saleChart-1">· COFFEE 매출 분석</a></li>
+				<li><a href="saleChart-2" <%-- required="login" --%> data-href="admin/saleChart-2">· FOOD 매출 분석</a></li>
+				<li><a href="saleChart-3" <%-- required="login" --%> data-href="admin/saleChart-3">· PRODUCT 매출 분석</a></li>
 			</ul>
 		</li>
 	</ul>
@@ -947,35 +1421,23 @@ var eFrequencyPlannerYn = 'Y';
 						</ul>
 						<ul>
 							<li class="footer_menu_ttl"><a class="en" href="javascript:void(0);">COMPANY<span class="footer_arrow_down"></span></a></li>
-							<li><a href="footer/company/index">한눈에 보기</a></li>
-							<li><a href="footer/company/mission">스타벅스 사명</a></li>
-							<li class="footer_2depth_ttl"><a href="javascript:void(0)">스타벅스 소개<span class="footer_arrow_down"></span></a>
-								<ul>
-									<li><a href="footer/company/starbucks_information">스타벅스 코리아</a></li> <!-- 220118 수정 -->
-									<li><a href="footer/company/starbucks_history">주요 연혁</a></li> <!-- 202107 수정 -->
-									<li><a href="footer/company/starbucks_story">스타벅스 이야기</a></li>
-								</ul>
-							</li>
-							<li><a href="footer/company/news_list">국내 뉴스룸</a></li>
-							<li><a href="footer/company/global_starbucks">세계의 스타벅스</a></li>
+							<li><a href="#">한눈에 보기</a></li>
+							<li><a href="#">스타벅스 사명</a></li>
+							<li><a href="#">스타벅스 소개</a></li>
+							<li><a href="#">국내 뉴스룸</a></li>
+							<li><a href="#">세계의 스타벅스</a></li>
 							<!-- 160811 메뉴 추가 -->
-							<li><a href="https://news.starbucks.com" target="_blank">글로벌 뉴스룸</a></li>
+							<li><a href="#">글로벌 뉴스룸</a></li>
 							<!-- 160811 메뉴 추가 end -->
 						</ul>
 						<ul>
-							<li class="footer_menu_ttl"><a class="en" id="goPage" href="javascript:void(0);">CORPORATE SALES<span class="footer_arrow_down"></span></a></li>
-							<li><a href="footer/co_sales/index">단체 및 기업 구매 안내</a></li>
-							<!-- <li><a href="footer/co_sales/sbcard_egift">스타벅스 <span class="en">e-Gift Card</span></a></li> -->
-							<!-- <li><a href="footer/co_sales/sbcard">스타벅스 카드</a></li> -->
-							<!-- <li><a href="footer/co_sales/co-branded"><span class="en">Co-branded</span> 카드</a></li> -->
-							<!-- <li><a href="footer/co_sales/sb_product">스타벅스 상품</a></li> -->
-							<!-- <li><a href="footer/co_sales/sbgift_certificate">스타벅스 상품권</a></li> -->
+							<li class="footer_menu_ttl"><a class="en" href="#">CORPORATE SALES<span class="footer_arrow_down"></span></a></li>
+							<li><a href="#">단체 및 기업 구매 안내</a></li>
 						</ul>
 						<ul>
 							<li class="footer_menu_ttl"><a class="en" href="javascript:void(0);">PARTNERSHIP<span class="footer_arrow_down"></span></a></li>
-							<li><a href="footer/partnership/new_partner">신규 입점 제의</a></li>
-							<!-- <li><a href="footer/partnership/portal_systems">협력사 포털 시스템</a></li> -->
-							<li><a href="srm/login">협력 고객사 등록신청</a></li>
+							<li><a href="#">신규 입점 제의</a></li>
+							<li><a href="#">협력 고객사 등록신청</a></li>
 						</ul>
 						<ul>
 							<li class="footer_menu_ttl"><a class="en" href="javascript:void(0);">ONLINE COMMUNITY<span class="footer_arrow_down"></span></a></li>
@@ -986,8 +1448,8 @@ var eFrequencyPlannerYn = 'Y';
 						</ul>
 						<ul>
 							<li class="footer_menu_ttl"><a class="en" href="javascript:void(0);">RECRUIT<span class="footer_arrow_down"></span></a></li>
-							<li><a href="footer/recruit/index">채용 소개</a></li>
-							<li><a href="http://job.shinsegae.com/recruit_info/notice/notice02_view.jsp?notino=5924" target="_blank">채용 지원하기</a></li><!-- 20210927 수정 -->
+							<li><a href="#">채용 소개</a></li>
+							<li><a href="#">채용 지원하기</a></li><!-- 20210927 수정 -->
 						</ul>
 					</div>
 				</div>
@@ -1002,15 +1464,15 @@ var eFrequencyPlannerYn = 'Y';
 					</ul>
 				</div>
 				<!-- 수상내역 -->
-				<div class="footer_awards_wrap">
-					<div class="footer_awards_wrap_inner">		<ul class="footer_awards_slider">			<li><a taget="_blank" href="javascript:void(0);"><img alt="여섯가족부 2020 대한민국 일자리대상 여성가족부장관상" src="//image.istarbucks.co.kr/common/img/footer/footer_award23.jpg"></a></li>			<li><a taget="_blank" href="javascript:void(0);"><img alt="행정안전부 2020 소방의 날 행정안전부장관 표창" src="//image.istarbucks.co.kr/common/img/footer/footer_award24.jpg"></a></li>			<li><a taget="_blank" href="javascript:void(0);"><img alt="농림축산식품부 2020 대한민국 커피산업대상 농림축산식품부 장관상" src="//image.istarbucks.co.kr/common/img/footer/footer_award25.jpg"></a></li>			<li><a taget="_blank" href="javascript:void(0);"><img alt="산업통상자원부 2020 대한민국 중소중견기업혁신 대상 국회산업통상자원중소벤처위원회장상" src="//image.istarbucks.co.kr/common/img/footer/footer_award26.jpg"></a></li>			<li><a taget="_blank" href="javascript:void(0);"><img alt="일자리위원회 2020 대한민국 일자리 유공 표창 대통령직속 일자리위원회 부위원장상" src="//image.istarbucks.co.kr/common/img/footer/footer_award27.jpg"></a></li>			<li><a taget="_blank" href="javascript:void(0);"><img alt="동반성장위원회 2020 사랑나눔 사회공헌대상 동반성장위원회 위원장상" src="//image.istarbucks.co.kr/common/img/footer/footer_award28.jpg"></a></li>		</ul>
-						<div class="footer_slider_controller">
-							<div class="footer_slider_controls"></div>
-							<div class="footer_slider_pagers"></div>
-						</div>
-					</div>
-				</div>
-				<!-- 수상내역 end -->
+            <div class="footer_awards_wrap">
+               <div class="footer_awards_wrap_inner">
+                  <div class="footer_slider_controller">
+                     <div class="footer_slider_controls"></div>
+                     <div class="footer_slider_pagers"></div>
+                  </div>
+               </div>
+            </div>
+            <!-- 수상내역 end -->
                 
                 <!-- Express DT MSR 회원 확인 Popup -->
 				<div class="dtPop ecoPop" id="msrCheckPop" style="display: none; margin-top: -51px;">
@@ -1057,20 +1519,19 @@ var eFrequencyPlannerYn = 'Y';
 				
 				<!-- 150517 추가 - 문진욱 -->
 				<aside class="copyright">
-				<a class="c_00b050" href="#">개인정보처리방침</a>
-					<a class="c_00b050" href="footer/etc/privacy">개인정보처리방침</a>
-					<a href="footer/etc/rules_vod" class="mbn">영상정보처리기기 운영관리 방침</a>
-					<a href="footer/etc/rules">홈페이지 이용약관</a>
-					<a href="footer/etc/rules_loc" class="mbn">위치정보 이용약관</a>
-					<a href="footer/etc/rules_msr" class="mbn">스타벅스 카드 이용약관</a>
-					<a href="footer/etc/rules_non" class="mbn">비회원 이용약관</a>
+					<a class="c_00b050" href="#">개인정보처리방침</a>
+					<a href="#" class="mbn">영상정보처리기기 운영관리 방침</a>
+					<a href="#">홈페이지 이용약관</a>
+					<a href="#" class="mbn">위치정보 이용약관</a>
+					<a href="#" class="mbn">스타벅스 카드 이용약관</a>
+					<a href="#" class="mbn">비회원 이용약관</a>
 					<span class="br"><!-- 150713 삭제  구명준  <a href="javascript:void(0);">위치정보 이용약관</a> -->
-					<a href="footer/etc/rules_mdp">My DT Pass 서비스 이용약관</a></span> <!-- 20200914 mdp 추가 -->
-					<a href="footer/etc/hotline" class="last">윤리경영 핫라인</a>
+					<a href="#">My DT Pass 서비스 이용약관</a></span> <!-- 20200914 mdp 추가 -->
+					<a href="#" class="last">윤리경영 핫라인</a>
 					<br>
-					<a class="btned_link" href="footer/etc/coming_route">찾아오시는 길</a>
-					<a class="btned_link" href="footer/partnership/new_partner">신규입점제의</a>
-					<a class="btned_link" href="footer/etc/sitemap">사이트 맵</a><br>
+					<a class="btned_link" href="#">찾아오시는 길</a>
+					<a class="btned_link" href="#">신규입점제의</a>
+					<a class="btned_link" href="#">사이트 맵</a><br>
 					<ul class="copy_menu">
 						<li>사업자등록번호 : 201-81-21515</li>
 						<li>주식회사 에스씨케이컴퍼니 대표이사 : 송 데이비드 호섭</li> <!-- 220105 수정 -->
@@ -1107,8 +1568,8 @@ var eFrequencyPlannerYn = 'Y';
 			<script src="//image.istarbucks.co.kr/common/js/greensock/TweenMax.min.js"></script>
 			<script src="//image.istarbucks.co.kr/common/js/masonry.pkgd.js"></script>
 			<script src="//image.istarbucks.co.kr/common/js/common.js"></script>
-			<script src="common/js/gnb.js?v=220502"></script>
-			<script src="common/js/header.js?v=200915"></script>
+			<script src="../common/js/gnb.js?v=220502"></script>
+			<script src="../common/js/header.js?v=200915"></script>
 			<script src="//image.istarbucks.co.kr/common/js/footer.js?v=210818"></script>
 
 			<script src="//image.istarbucks.co.kr/common/js/jquery.tmpl.js"></script>
@@ -1117,9 +1578,9 @@ var eFrequencyPlannerYn = 'Y';
 			<!-- <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script> -->
 			
 			<!--
-			<script src="common/js/swiper.jquery.min.js"></script>
-			<script src="common/js/swiper.min.js"></script>
-			<script src="common/js/util.js"></script>
+			<script src="../common/js/swiper.jquery.min.js"></script>
+			<script src="../common/js/swiper.min.js"></script>
+			<script src="../common/js/util.js"></script>
 			-->
 			
 		
@@ -1394,9 +1855,9 @@ var eFrequencyPlannerYn = 'Y';
                 	$(".my_ms_evbnr").prepend('<a href="eFreq/index" required="login"><img alt="" src="//image.istarbucks.co.kr/common/img/util/ms_efreq_bn.jpg"></a><br /><br />');
                 }                
             </script>
-            <script src="common/js/common_jhp.js"></script>
-            <script src="common/js/my/index.js?v=210420"></script>
-            <script src="common/js/my/index_level_web.js"></script>
+            <script src="../common/js/common_jhp.js"></script>
+            <script src="../common/js/my/index.js?v=210420"></script>
+            <script src="../common/js/my/index_level_web.js"></script>
         </div>
 
     
