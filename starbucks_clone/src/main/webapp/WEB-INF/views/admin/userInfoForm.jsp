@@ -22,7 +22,7 @@
 
 <title id="titleJoin">My Starbucks | Starbucks Korea</title> <!-- 220117 수정 -->
 <link rel="shortcut icon" href="https://image.istarbucks.co.kr/common/img/common/favicon.ico?v=200828" type="image/ico"> <!-- 20200827 파비콘 교체 및 CDN 변수처리 -->
-<link href="common/css/admin_userInfoForm.css" rel="stylesheet">
+<link href="common/css/admin_userInfo_2.css" rel="stylesheet">
 <link href="common/css/style.css?v=210721" rel="stylesheet">
 <link href="common/css/jquery.bxslider.css" rel="stylesheet">
 <link href="common/css/idangerous.swiper.css" rel="stylesheet">
@@ -655,13 +655,10 @@ var eFrequencyPlannerYn = 'Y';
 	<li class="util_nav01 sign_out" style=""><a href="javascript:void(0);">Sign out</a></li>
 	<li class="util_nav01 sign_in" style="display: none;"><a href="javascript:void(0);">Sign In</a></li>
 	<li class="util_nav02"><a href="javascript:void(0);" required="login" data-href="my/index">My Starbucks</a></li>
-	<li class="util_nav03"><a href="util/index">Customer Service &amp; Ideas</a></li>
+	<li class="util_nav03"><a href="menu/orderList">Order</a></li>
 	<li class="util_nav04"><a href="store/store_map">Find a Store</a></li>
 </ul>
 				</nav>
-				<p class="btn_search">
-					<a href="javascript:void(0);"><img alt="통합검색" src="//image.istarbucks.co.kr/common/img/common/icon_magnifier_black.png"></a>
-				<label for="totalSearch" class="a11y">통합검색</label><input id="totalSearch" placeholder="통합검색" type="text"></p>
 				<a href="javascript:void(0);" class="rCup3_wrap" role="button" title="마이 리워드 레이어 열기"><!-- 접근성_20171201 class, role, title 추가 --><span class="rCup3" style="width: 53px; height: 45px; overflow: hidden;"><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/001.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/002.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/003.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/004.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/005.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/006.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/007.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/008.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/009.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/010.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/011.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/012.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/013.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/014.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/015.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/016.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/017.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/018.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/019.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/020.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/021.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/022.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/023.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/024.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/025.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/026.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/027.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/028.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/029.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/030.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/031.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/032.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/033.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/034.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/035.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/036.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/037.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/038.png&quot;);"></div><div class="jsMovieFrame" style="display: block; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/039.png&quot;);"></div><div id="jsMovie_event_overlay" style="width: 53px; height: 90px; margin-top: -90px;"></div><div id="jsMovie_image_preload_container"><img src="//image.istarbucks.co.kr/common/img/common/rcup/login/001.png" alt="" style="height: 1px; width: 1px;"></div></span></a><!-- 150714 DOM 수정 - 떨어지는 메뉴 부분에 jsMovie 추가 -->
 			</div>
 			<nav class="sub_gnb_nav">
@@ -708,12 +705,11 @@ var eFrequencyPlannerYn = 'Y';
 <c:url var="root" value="/" />
 
 	<center>
-		<h3><font color="#036635" id="msg">${msg }</font></h3>
+		<%-- <h3><font color="#036635" id="msg">${msg }</font></h3> --%>
 		<table border="1" style="width: 450px;">
 			<tr>
 				<td colspan=2 align="center" style="height: 40px; padding: 10px;">
 					<h2>회원 정보</h2>
-					<h3><font color="#036635">로그인 계정: ${sessionScope.id }</font></h3>
 				</td>
 			</tr>
 			<tr>
@@ -721,8 +717,8 @@ var eFrequencyPlannerYn = 'Y';
 				<td style="width: 250px; height: 40px;" align="center" valign="center">${user.id }</td>
 			</tr>
 			<tr>
-				<td style="width: 100px; height: 40px;" align="center" valign="center"><b>이메일</b></td>
-				<td style="width: 250px; height: 40px;" align="center" valign="center">${user.email }</td>
+				<td style="width: 100px; height: 40px;" align="center" valign="center"><b>닉네임</b></td>
+				<td style="width: 250px; height: 40px;" align="center" valign="center">${user.nickname }</td>
 			</tr>
 			<tr>
 				<td style="width: 100px; height: 40px;" align="center" valign="center"><b>성별</b></td>
@@ -733,22 +729,101 @@ var eFrequencyPlannerYn = 'Y';
 					<c:when test="${user.gender == 'w'}">
 						<td style="width: 250px; height: 40px;" align="center" valign="center">여</td>
 					</c:when>
-					<c:otherwise>
-						<td style="width: 250px; height: 40px;" align="center" valign="center">선택 안 함</td>
-					</c:otherwise>
 				</c:choose>
 			</tr>
 			<tr>
-				<td style="width: 100px; height: 40px;" align="center" valign="center"><b>주소</b></td>
+				<td style="width: 100px; height: 40px;" align="center" valign="center"><b>생년월일</b></td>
 				<td style="width: 250px; height: 40px;" align="center" valign="center">
-					${user.addr1}&nbsp;&nbsp;${user.addr2 }
+					${user.birthyear }${user.birthmonth }${user.birthday }
 				</td>
+			</tr>
+			<tr>
+				<td style="width: 100px; height: 40px;" align="center" valign="center"><b>전화번호</b></td>
+				<td style="width: 250px; height: 40px;" align="center" valign="center">${user.phone }</td>
+			</tr>
+			<%-- <tr>
+				<td style="width: 100px; height: 40px;" align="center" valign="center"><b>SMS 수신</b></td>
+				<c:choose>
+					<c:when test="${user.event_sms == 'y'}">
+						<td style="width: 250px; height: 40px;" align="center" valign="center">동의</td>
+					</c:when>
+					<c:when test="${user.event_sms == 'n'}">
+						<td style="width: 250px; height: 40px;" align="center" valign="center">비동의</td>
+					</c:when>
+				</c:choose>
+			</tr> --%>
+			<tr>
+				<td style="width: 100px; height: 40px;" align="center" valign="center"><b>이메일</b></td>
+				<td style="width: 250px; height: 40px;" align="center" valign="center">${user.email }</td>
+			</tr>
+			<%-- <tr>
+				<td style="width: 100px; height: 40px;" align="center" valign="center"><b>email 수신</b></td>
+				<c:choose>
+					<c:when test="${user.event_e == 'y'}">
+						<td style="width: 250px; height: 40px;" align="center" valign="center">동의</td>
+					</c:when>
+					<c:when test="${user.event_e == 'n'}">
+						<td style="width: 250px; height: 40px;" align="center" valign="center">비동의</td>
+					</c:when>
+				</c:choose>
+			</tr> --%>
+			<tr>
+				<td style="width: 100px; height: 40px;" align="center" valign="center"><b>SMS/E-mail<br>수신 동의</b></td>
+				<c:choose>
+					<c:when test="${user.event_sms == 'y' && user.event_e == 'y'}">
+						<td style="width: 250px; height: 40px;" align="center" valign="center">
+							<input type="checkbox" name="event_sms" value="y" checked disabled="disabled">&nbsp;SMS&nbsp;&nbsp;
+							<input type="checkbox" name="event_e" value="y" checked disabled="disabled">&nbsp;E-mail
+						</td>
+					</c:when>
+					<c:when test="${user.event_sms == 'y' && user.event_e == 'n'}">
+						<td style="width: 250px; height: 40px;" align="center" valign="center">
+							<input type="checkbox" name="event_sms" value="y" checked disabled="disabled">&nbsp;SMS&nbsp;&nbsp;
+							<input type="checkbox" name="event_e" value="n" disabled="disabled">&nbsp;E-mail
+						</td>
+					</c:when>
+					<c:when test="${user.event_sms == 'n' && user.event_e == 'y'}">
+						<td style="width: 250px; height: 40px;" align="center" valign="center">
+							<input type="checkbox" name="event_sms" value="n" disabled="disabled">&nbsp;SMS&nbsp;&nbsp;
+							<input type="checkbox" name="event_e" value="y" checked disabled="disabled">&nbsp;E-mail
+						</td>
+					</c:when>
+					<%-- <c:when test="${user.event_sms == 'n' && user.event_e == 'n'}">
+						<td style="width: 250px; height: 40px;" align="center" valign="center">
+							<input type="checkbox" name="event_sms" value="n" disabled="disabled">&nbsp;SMS&nbsp;&nbsp;
+							<input type="checkbox" name="event_e" value="n" disabled="disabled">&nbsp;E-mail
+						</td>
+					</c:when> --%>
+					<c:otherwise>
+						<td style="width: 250px; height: 40px;" align="center" valign="center">
+							<input type="checkbox" name="event_sms" value="n" disabled="disabled">&nbsp;SMS&nbsp;&nbsp;
+							<input type="checkbox" name="event_e" value="n" checked disabled="disabled">&nbsp;E-mail
+						</td>
+					</c:otherwise>
+					
+				</c:choose>
+			</tr>
+			<tr>
+				<td style="width: 100px; height: 40px;" align="center" valign="center"><b>등급</b></td>
+				<td style="width: 250px; height: 40px;" align="center" valign="center">${user.grade }</td>
+			</tr>
+			<tr>
+				<td style="width: 100px; height: 40px;" align="center" valign="center"><b>별</b></td>
+				<td style="width: 250px; height: 40px;" align="center" valign="center">${user.star }</td>
+			</tr>
+			<tr>
+				<td style="width: 100px; height: 40px;" align="center" valign="center"><b>개인컵</b></td>
+				<td style="width: 250px; height: 40px;" align="center" valign="center">${user.cupreward }</td>
 			</tr>
 		</table>
 		<div style="width: 450px; text-align: right; margin: 2px;">
-			<button onclick="location.href='modifyCheckForm'">수정</button>
+			<%-- <button onclick="location.href='${root}index?formpath=modifyCheck&modifyId=${user.id }'">수정</button>
 			<button onclick="location.href='${root}index?formpath=memberDelete&modifyId=${user.id }'">삭제</button>
-			<button onclick="location.href='memberListProc'">목록</button>
+			<button onclick="location.href='memberListProc'">목록</button> --%>
+			
+			<button onclick="location.href='modifyCheckForm'">수정</button>
+			<button onclick="location.href='deleteCheckForm'">삭제</button>
+			<button onclick="location.href='memberListForm'">목록</button>
 		</div>
 	</center>
 
@@ -951,18 +1026,9 @@ var eFrequencyPlannerYn = 'Y';
 		</li> -->
 		
 		<li>
-			<a href="javascript:void(0);">사용자 관리<span class="sbox_arrow_down"></span></a>
+			<a href="javascript:void(0);">회원 관리<span class="sbox_arrow_down"></span></a>
 			<ul>
-				<li><a href="javascript:void(0);" required="login" data-href="my/reward">· 사용자 정보 수정</a></li>
-				<li><a href="javascript:void(0);" required="login" data-href="my/reward_star_history">· 사용자 정보 삭제</a></li>
-			</ul>
-		</li>
-		<li>
-			<a href="javascript:void(0);">상품<span class="sbox_arrow_down"></span></a>
-			<ul>
-				<li><a href="javascript:void(0);" required="login" data-href="my/reward">· 상품 등록</a></li>
-				<li><a href="javascript:void(0);" required="login" data-href="my/reward_star_history">· 상품 수정</a></li>
-				<li><a href="javascript:void(0);" required="login" data-href="my/reward_star_history">· 상품 삭제</a></li>
+				<li><a href="memberListForm" required="" data-href="">· 회원 목록</a></li>
 			</ul>
 		</li>
 		<li>
