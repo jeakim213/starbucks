@@ -969,7 +969,7 @@ var eFrequencyPlannerYn = 'Y';
 		</li> -->
 		
 		<li>
-			<a href="javascript:void(0);">사용자 관리<span class="sbox_arrow_down"></span></a>
+			<a href="javascript:void(0);">회원 관리<span class="sbox_arrow_down"></span></a>
 			<ul>
 				<li><a href="memberListForm" required="" data-href="">· 회원 목록</a></li>
 			</ul>
