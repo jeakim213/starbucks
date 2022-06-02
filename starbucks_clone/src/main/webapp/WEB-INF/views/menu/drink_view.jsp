@@ -1,4 +1,3 @@
-<%@page isELIgnored="true" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
@@ -26,20 +25,20 @@
 
 <title id="titleJoin">롤린 민트 초코 콜드 브루 | Starbucks Korea</title> <!-- 220117 수정 -->
 <link rel="shortcut icon" href="https://image.istarbucks.co.kr/common/img/common/favicon.ico?v=200828" type="image/ico"> <!-- 20200827 파비콘 교체 및 CDN 변수처리 -->
-<link href="common/css/reset.css" rel="stylesheet">
-<link href="common/css/style.css?v=210721" rel="stylesheet">
-<link href="common/css/jquery.bxslider.css" rel="stylesheet">
-<link href="common/css/idangerous.swiper.css" rel="stylesheet">
-<link href="common/css/idangerous.swiper.scrollbar.css" rel="stylesheet">
-<link href="common/css/jquery.mCustomScrollbar.css" rel="stylesheet">
-<link href="common/css/jquery.scrollbar.css" rel="stylesheet">
-<link href="common/css/jquery-ui.css" rel="stylesheet">
-<link href="common/css/ezmark.css" rel="stylesheet">
-<link href="common/css/style_dt.css?v=20191211" rel="stylesheet"> <!-- 20191211 수정 -->
+<link href="../common/css/reset.css" rel="stylesheet">
+<link href="../common/css/style.css?v=210721" rel="stylesheet">
+<link href="../common/css/jquery.bxslider.css" rel="stylesheet">
+<link href="../common/css/idangerous.swiper.css" rel="stylesheet">
+<link href="../common/css/idangerous.swiper.scrollbar.css" rel="stylesheet">
+<link href="../common/css/jquery.mCustomScrollbar.css" rel="stylesheet">
+<link href="../common/css/jquery.scrollbar.css" rel="stylesheet">
+<link href="../common/css/jquery-ui.css" rel="stylesheet">
+<link href="../common/css/ezmark.css" rel="stylesheet">
+<link href="../common/css/style_dt.css?v=20191211" rel="stylesheet"> <!-- 20191211 수정 -->
 
 <!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-	<link href="common/css_ie/style.css" rel="stylesheet">
+	<link href="../common/css_ie/style.css" rel="stylesheet">
 	<script>
 		document.createElement('header');
 		document.createElement('nav');
@@ -71,7 +70,7 @@ var eFrequencySeq = '172';
 var eFrequencyPlannerYn = 'Y';
 </script>
 
-        <link href="common/css/style_menu.css" rel="stylesheet">
+        <link href="../common/css/style_menu.css" rel="stylesheet">
 	<style type="text/css" data-fbcssmodules="css:fb.css.base css:fb.css.dialog css:fb.css.iframewidget css:fb.css.customer_chat_plugin_iframe">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
 .fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_dialog_advanced{border-radius:8px;padding:10px}.fb_dialog_content{background:#fff;color:#373737}.fb_dialog_close_icon{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{left:5px;right:auto;top:5px}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{height:100%;left:0;margin:0;overflow:visible;position:absolute;top:-10000px;transform:none;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{background:none;height:auto;min-height:initial;min-width:initial;width:auto}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{clear:both;color:#fff;display:block;font-size:18px;padding-top:20px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .4);bottom:0;left:0;min-height:100%;position:absolute;right:0;top:0;width:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_mobile .fb_dialog_iframe{position:sticky;top:0}.fb_dialog_content .dialog_header{background:linear-gradient(from(#738aba), to(#2c4987));border-bottom:1px solid;border-color:#043b87;box-shadow:white 0 1px 1px -1px inset;color:#fff;font:bold 14px Helvetica, sans-serif;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:linear-gradient(from(#4267B2), to(#2a4887));background-clip:padding-box;border:1px solid #29487d;border-radius:3px;display:inline-block;line-height:18px;margin-top:3px;max-width:85px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{background:none;border:none;color:#fff;font:bold 12px Helvetica, sans-serif;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #4a4a4a;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f5f6f7;border:1px solid #4a4a4a;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-position:50% 50%;background-repeat:no-repeat;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
 .fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}
@@ -824,9 +823,6 @@ var eFrequencyPlannerYn = 'Y';
 										 <!-- 20160905 티바나 관련 추가 -->
 										<p class="bnr_coldbrew_wrap bnr_teavana" style="display:none;"><a href="menuStory/teavana"><img src="//image.istarbucks.co.kr/common/img/menu/bnr_teavana_1907.jpg" alt="티바나 소개 페이지 바로가기"></a></p>
 										<!-- 20160905 티바나 관련 추가 end -->
-										<!-- 콜드브루 배너 추가 -->
-										<p class="bnr_coldbrew_wrap bnr_coldbrew" style="display:none;"><a href="store/store_coldbrew"><img src="common/img/menu/bnr_coldbrew.png" alt="콜드브루 소개 페이지 바로가기"><!-- 접근성_20171123 alt 추가 --></a></p>
-										<!-- 콜드브루 배너 추가 end -->
 									</div>
 								</fieldset>
 							</form>
@@ -1071,8 +1067,8 @@ var eFrequencyPlannerYn = 'Y';
 			<script src="//image.istarbucks.co.kr/common/js/greensock/TweenMax.min.js"></script>
 			<script src="//image.istarbucks.co.kr/common/js/masonry.pkgd.js"></script>
 			<script src="//image.istarbucks.co.kr/common/js/common.js"></script>
-			<script src="common/js/gnb.js?v=220502"></script>
-			<script src="common/js/header.js?v=200915"></script>
+			<script src="../common/js/gnb.js?v=220502"></script>
+			<script src="../common/js/header.js?v=200915"></script>
 			<script src="//image.istarbucks.co.kr/common/js/footer.js?v=210818"></script>
 
 			<script src="//image.istarbucks.co.kr/common/js/jquery.tmpl.js"></script>
@@ -1081,9 +1077,9 @@ var eFrequencyPlannerYn = 'Y';
 			<!-- <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script> -->
 			
 			<!--
-			<script src="common/js/swiper.jquery.min.js"></script>
-			<script src="common/js/swiper.min.js"></script>
-			<script src="common/js/util.js"></script>
+			<script src="../common/js/swiper.jquery.min.js"></script>
+			<script src="../common/js/swiper.min.js"></script>
+			<script src="../common/js/util.js"></script>
 			-->
 			
 		
@@ -1346,15 +1342,15 @@ var eFrequencyPlannerYn = 'Y';
 				});
 			</script>
 		
-        <script src="common/js/menu.js"></script>
+        <script src="../common/js/menu.js"></script>
 		<script>
 			$(document).ready(function(){
 	            
 	            //$.openevent.getStamp('H');
 
 				$(document).on("change", ".select_box select", function(){
-					$(this).prev()($(this).find("option:selected").text());
-				}).prev()(function() {
+					$(this).prev($(this).find("option:selected").text());
+				}).prev(function() {
 					return $(this).next().find("option:selected").text();
 				});
 
@@ -1399,7 +1395,7 @@ var eFrequencyPlannerYn = 'Y';
 			    });
 
 			});
-			var $PRODUCT_CD = "9200000003988";
+			var $PRODUCT_CD = ${product_cd};
 			
 			if(!($PRODUCT_CD) || $PRODUCT_CD == "") {
 				alert("정상적인 접근이 아닙니다.");
@@ -1417,7 +1413,8 @@ var eFrequencyPlannerYn = 'Y';
 			
 			function getDataInfo() {
                 var option = {
-                        'product_cd' : $PRODUCT_CD
+                        'product_cd' : $PRODUCT_CD,
+                        'product_cate' : "drink"
                 };
                 __ajaxCall('/menu/productViewAjax', option , true, "JSON", "POST", 
                 function(data) {
@@ -1428,8 +1425,8 @@ var eFrequencyPlannerYn = 'Y';
                 	}
                 	
                 	getFileInfo();
-                    getPairInfo();
-                    getPromotion();
+                    //getPairInfo();
+                    //getPromotion();
                 	
                     $('div.myAssignZone > h4')(data.view.product_NM + '<br /><span></span>');
                     $('div.myAssignZone > h4 > span').text(data.view.product_ENGNM);
@@ -1559,7 +1556,7 @@ var eFrequencyPlannerYn = 'Y';
                     }
 				}).trigger("change");
                     
-                    
+                    //SNS안함
                     $('.product_sns_wrap li').on('click', function() {
                     	var snsType = $(this).data('sns');
                         
@@ -1675,6 +1672,7 @@ var eFrequencyPlannerYn = 'Y';
                 });
             }
             
+            //관련제품 안함
             function getPairInfo() {
             	
             	$('div.productView_bottom').hide();
@@ -1724,88 +1722,31 @@ var eFrequencyPlannerYn = 'Y';
                 });
             }
             
-            function getPromotion() {
-                /*
-                var option = {
-                        'PRODUCT_CD' : $PRODUCT_CD
-                };
-                __ajaxCall('/menu/productPromotionAjax', option , true, "JSON", "POST", 
-                function(data) {
-                    if(data.promotion.length > 0) {
-                        $('ul.promotionList').empty();
-                        $('#tpl_promotionLi').tmpl(data.promotion).appendTo($('ul.promotionList'));
-                        
-                        $('.promotionLi').unbind('click').bind('click', function() {
-                        	pro_seq = $(this).attr('prod');
-                            f = document.drinkViewForm;
-                            f.action = "whats_new/campaign_view";
-                            f.pro_seq.value = pro_seq;
-                            f.submit();
-                        });
-                    }
-                },
-                function() {
-                });
-                */
-                /* if ("9200000000041|9200000000038".indexOf($PRODUCT_CD) > -1) {
-                	$('ul.promotionList')('<li><a href="whats_new/newsView?cate=&seq=2543">콜드 브루</a></li>');
-                }
-                if ("8015050003|8015050004|8015050005|8015050002|8015050001|8015010067|8015010068|8015010069|8015020071|8015020072|8015020070|8015020069|11055891|11055881|8015010065|8015010066|8015020064|5650004176|5650004178|11055905".indexOf($PRODUCT_CD) > -1) {
-                	$('ul.promotionList')('<li><a href="whats_new/campaign_view?pro_seq=1150">2016 서머1 프로모션</a></li>');
-                }
-                if ("136712|136715|136719|136722|168110".indexOf($PRODUCT_CD) > -1) {
-                	$('ul.promotionList')('<li><a href="whats_new/campaign_view?pro_seq=1133">2016 체리블라썸 프로모션</a></li>');
-                }
-                if ("9200000000001|9200000000004|136758|136761|9200000000008".indexOf($PRODUCT_CD) > -1) {
-                	$('ul.promotionList')('<li><a href="whats_new/campaign_view?pro_seq=1126">2016 Spring 프로모션</a></li>');
-                }
-                if ("136827|136830|136834|136837".indexOf($PRODUCT_CD) > -1) {
-                	$('ul.promotionList')('<li><a href="whats_new/campaign_view?pro_seq=1104">2016 뉴이어 프로모션</a></li>');
-                }
-                if ("9200000000038|9200000000041|9200000000064|9200000000067".indexOf($PRODUCT_CD) > -1) {
-                	$('ul.promotionList')('<li><a href="whats_new/campaign_view?pro_seq=1173">2016 서머2 프로모션</a></li>');
-                } 
-                if ("9200000000044|9200000000073|9200000000070".indexOf($PRODUCT_CD) > -1) {
-                	$('ul.promotionList')('<li><a href="whats_new/campaign_view?pro_seq=1190">2016 서머3 프로모션</a></li>');
-                }
-                if ("9200000000170|9200000000173|9200000000187|9200000000190".indexOf($PRODUCT_CD) > -1) {
-                	$('ul.promotionList')('<li><a href="whats_new/campaign_view?pro_seq=1204">오텀1 프로모션</a></li>');
-                }
-                if ("9200000000177|9200000000180|9200000000183".indexOf($PRODUCT_CD) > -1) {
-                	$('ul.promotionList')('<li><a href="whats_new/campaign_view?pro_seq=1218">오텀2 프로모션</a></li>');
-                }
-                if ("9200000000048|9200000000051|9200000000054|9200000000334|9200000000337|9200000000091|9200000000094|9200000000097".indexOf($PRODUCT_CD) > -1) {
-                	$('ul.promotionList')('<li><a href="whats_new/campaign_view?pro_seq=1225">2016 크리스마스1 프로모션</a></li>');
-                }
-                if ("9200000000334|9200000000180".indexOf($PRODUCT_CD) > -1) {
-                	$('ul.promotionList')('<li><a href="whats_new/campaign_view?pro_seq=1240">크리스마스2 프로모션</a></li>');
-                }*/
-            }
 		</script>
         <script type="text/x-jquery-tmpl" id="tpl_productFileLi">
-            <li><a href="javascript:void(0)" data-image="${img_UPLOAD_PATH.replace("www", "image")}${file_PATH}" data-zoom-image="${img_UPLOAD_PATH.replace("www", "image")}${file_PATH}" class="elevatezoom-gallery"><img src="${img_UPLOAD_PATH.replace("www", "image")}${file_PATH}" alt="상세이미지 ${img_ORDER}번"></a></li>
+            <li><a href="javascript:void(0)" data-image="\${img_UPLOAD_PATH.replace("www", "image")}\${file_PATH}" data-zoom-image="\${img_UPLOAD_PATH.replace("www", "image")}\${file_PATH}" class="elevatezoom-gallery"><img src="\${img_UPLOAD_PATH.replace("www", "image")}\${file_PATH}" alt="상세이미지 \${img_ORDER}번"></a></li>
         </script>
         <script type="text/x-jquery-tmpl" id="tpl_productMobLi">
-            <li><img class="m_view_img" src="${img_UPLOAD_PATH.replace("www", "image")}${file_PATH}" data-zoom-image="${img_UPLOAD_PATH.replace("www", "image")}${file_PATH}" alt="" /></li>
+            <li><img class="m_view_img" src="\${img_UPLOAD_PATH.replace("www", "image")}\${file_PATH}" data-zoom-image="\${img_UPLOAD_PATH.replace("www", "image")}\${file_PATH}" alt="" /></li>
         </script>
         <script type="text/x-jquery-tmpl" id="tpl_productPairLi">
             <li>
                 <dl>
-                    <dt><a href="javascript:void(0)" prod="${product_CD}" cate="${f_CATE_CD}"><img src="${img_UPLOAD_PATH.replace("www", "image")}${file_PATH}" alt="${product_NM}"></a></dt>
+                    <dt><a href="javascript:void(0)" prod="\${product_CD}" cate="\${f_CATE_CD}"><img src="\${img_UPLOAD_PATH.replace("www", "image")}\${file_PATH}" alt="\${product_NM}"></a></dt>
                     <dd>
-                        <p class="t1">${product_NM}</p>
-                        <p class="t2">${content}</p>
-                        <p class="more_btn"><a href="javascript:void(0)" prod="${product_CD}" cate="${f_CATE_CD}"><img src="//image.istarbucks.co.kr/common/img/common/detail_view.png" alt="${product_NM} 자세히 보기" /></a></p>
+                        <p class="t1">\${product_NM}</p>
+                        <p class="t2">\${content}</p>
+                        <p class="more_btn"><a href="javascript:void(0)" prod="\${product_CD}" cate="\${f_CATE_CD}"><img src="//image.istarbucks.co.kr/common/img/common/detail_view.png" alt="\${product_NM} 자세히 보기" /></a></p>
                     </dd>
                 </dl>
             </li>
         </script>
         <script type="text/x-jquery-tmpl" id="tpl_promotionLi">
-            <li><a href="javascript:void(0)" class="promotionLi" prod="${pro_SEQ}">${product_NM}</a></li>
+            <li><a href="javascript:void(0)" class="promotionLi" prod="\${pro_SEQ}">\${product_NM}</a></li>
         </script>
 		</div>
 		
-		<script src="common/js/common_jhp.js"></script>
+		<script src="../common/js/common_jhp.js"></script>
 		
 
 <!-- 150902 DOM 수정 -->
@@ -1813,7 +1754,7 @@ var eFrequencyPlannerYn = 'Y';
 <div class="only_my_drink" style="display:none;" role="dialog" aria-hidden="true"><!-- 접근성_20171123 role, aria 추가 -->
 	<div class="only_my_head">
 		<p class="tit">나만의 음료</p>
-		<p class="close"><a href="javascript:void(0)" class="btn_close" role="button"><!-- 접근성_20171123 role 추가 --><img src="common/img/util/btn_closesa.png" alt="팝업 닫기"></a></p>
+		<p class="close"><a href="javascript:void(0)" class="btn_close" role="button"><!-- 접근성_20171123 role 추가 --><img src="../common/img/util/btn_closesa.png" alt="팝업 닫기"></a></p>
 	</div>
 	<!-- Step 1 -->
 	<div class="only_my_cont my_drink_step1">
@@ -1882,7 +1823,6 @@ var eFrequencyPlannerYn = 'Y';
 				-->
 				</select>
 			</div>
-			<p class="btn_ps_opt"><a href="javascript:void(0)" role="button">퍼스널 옵션&nbsp;&nbsp;<!-- 접근성_20171123 role 추가 --><img src="common/img/menu/ps_opt_arrow.png" alt=""></a></p>
 		</div>
 		<ul class="btn_list">
 			<li class="li1"><a href="javascript:void(0)" class="btn_go_my_drink_step3" role="button">나만의 음료에 등록</a></li><!-- 접근성_20171123 role 추가 -->
@@ -1918,7 +1858,7 @@ var eFrequencyPlannerYn = 'Y';
 <div class="only_my_drink2" style="display:none;" role="dialog" aria-hidden="true"><!-- 접근성_20171123 role, aria 추가 -->
 	<div class="only_my_head">
 		<p class="tit">나만의 음료 이름을 지어보세요</p>
-		<p class="close"><a href="javascript:void(0)" class="btn_close" role="button"><!-- 접근성_20171123 role 추가 --><img src="common/img/util/btn_closesa.png" alt="팝업 닫기"></a></p>
+		<p class="close"><a href="javascript:void(0)" class="btn_close" role="button"><!-- 접근성_20171123 role 추가 --><img src="../common/img/util/btn_closesa.png" alt="팝업 닫기"></a></p>
 	</div>
 	<div class="only_my_cont">
 		<p class="drink2_cont_input"><label for="nickname" class="a11y">음료이름</label><!-- 접근성_20171123 label 추가 --><input type="text" id="nickname"></p>
@@ -1933,31 +1873,31 @@ var eFrequencyPlannerYn = 'Y';
 <!-- 150902 DOM 수정 end -->
 	
 <script type="text/x-jquery-tmpl" id="categoryList">
-	<li><input type="radio" name="my_kind" id="my_kind_${categoryCode}" value="${categoryCode}"> <label for="my_kind_${categoryCode}">${categoryName}</label></li>
+	<li><input type="radio" name="my_kind" id="my_kind_\${categoryCode}" value="\${categoryCode}"> <label for="my_kind_\${categoryCode}">\${categoryName}</label></li>
 </script>
 <script type="text/x-jquery-tmpl" id="menuList">
    	<li>
 		<dl>
-			<dt><a href="javascript:void(0)" class="btn_go_my_drink_step2" data-idx="${$item.getMenuListIdx1}" data-skuno="${delegateSku.skuNo}"><img src="${delegateSku.skuImgUrl}" alt="${delegateSku.skuName}"></a></dt>
-			<dd><a href="javascript:void(0)" class="btn_go_my_drink_step2" data-idx="${$item.getMenuListIdx2}" data-skuno="${delegateSku.skuNo}">${delegateSku.skuName}</a></dd>
+			<dt><a href="javascript:void(0)" class="btn_go_my_drink_step2" data-idx="\${$item.getMenuListIdx1}" data-skuno="\${delegateSku.skuNo}"><img src="\${delegateSku.skuImgUrl}" alt="\${delegateSku.skuName}"></a></dt>
+			<dd><a href="javascript:void(0)" class="btn_go_my_drink_step2" data-idx="\${$item.getMenuListIdx2}" data-skuno="\${delegateSku.skuNo}">\${delegateSku.skuName}</a></dd>
 		</dl>
 	</li>
 </script>
 <script type="text/x-jquery-tmpl" id="psOptCateList">
 	<li>
 		<!-- 150915 구명준 -->
-		<p class="name">${categoryName}<br><span>${engCategoryName}</span></p>
+		<p class="name">\${categoryName}<br><span>\${engCategoryName}</span></p>
 		<!-- 150915 구명준 end -->
 		<p class="btn"><a href="javascript:void(0)" role="button">상세옵션</a></p>
-		<div class="hidden_opt" data-optiontype="${engCategoryName.toUpperCase()}">
+		<div class="hidden_opt" data-optiontype="\${engCategoryName.toUpperCase()}">
 			<!-- 150904 수정 -->
-			<p class="hidden_info">${categoryDesc}</p>
+			<p class="hidden_info">\${categoryDesc}</p>
 			<!-- 150904 수정 end -->
 			{{html $item.getHtmlDefaultOptions}}
 			{{html $item.getHtmlAddedOptions}}
 			<div class="btns">
 				<ul>
-					<li class="li1"><a href="javascript:void(0)" class="btn_save_ps_opt_cst_sku_list" data-categoryname="${categoryName}" data-applytype1="${applyType1}" title="${categoryName} 옵션 적용" role="button">적용하기</a></li>
+					<li class="li1"><a href="javascript:void(0)" class="btn_save_ps_opt_cst_sku_list" data-categoryname="\${categoryName}" data-applytype1="\${applyType1}" title="\${categoryName} 옵션 적용" role="button">적용하기</a></li>
 					<li class="li2"><a href="javascript:void(0)" class="btn_init_ps_opt_cst_sku_list" title="${categoryName} 옵션 초기화" role="button">초기화</a></li>
 				</ul>
 			</div>
@@ -2445,7 +2385,7 @@ var eFrequencyPlannerYn = 'Y';
 		}
 		
 		html += '	<p class="p2" data-applytype2="' + _cateListRow.applyType2 + '" data-stdrecipeflag="' + _cateListRow.stdRecipeFlag + '">';
-		html += '		<a href="javascript:void(0)" class="btn_minus" data-minqty="' + minQty + '"><img src="common/img/menu/minus.jpg" alt="'+skuListRow.skuName+' 수량 감소"></a>';
+		html += '		<a href="javascript:void(0)" class="btn_minus" data-minqty="' + minQty + '"><img src="../common/img/menu/minus.jpg" alt="'+skuListRow.skuName+' 수량 감소"></a>';
 		html += '		<a class="num" href="javascript:void(0)"';
 		html += '			data-skuno="' + skuListRow.skuNo + '"';
 		html += '			data-skuname="' + skuListRow.skuName + '"';
@@ -2455,7 +2395,7 @@ var eFrequencyPlannerYn = 'Y';
 		html += '			data-customgrp="' + skuListRow.customGrp + '"';
 		html += '			tabindex="-1" aria-hidden="true" role="presentation"';
 		html += '		>' + baseQty + '</a>';
-		html += '		<a href="javascript:void(0)" class="btn_plus" data-maxqty="' + _cateListRow.maxQty + '" data-maxqtymsg="' + _cateListRow.maxQtyMsg + '"><img src="common/img/menu/plus.jpg" alt="'+skuListRow.skuName+' 수량 증가"></a>';
+		html += '		<a href="javascript:void(0)" class="btn_plus" data-maxqty="' + _cateListRow.maxQty + '" data-maxqtymsg="' + _cateListRow.maxQtyMsg + '"><img src="../common/img/menu/plus.jpg" alt="'+skuListRow.skuName+' 수량 증가"></a>';
 		html += '	</p>';
 		
 		return html;

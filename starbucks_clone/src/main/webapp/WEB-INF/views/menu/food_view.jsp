@@ -20,22 +20,22 @@
 <meta property="og:image" content="https://image.istarbucks.co.kr/common/img/kakaotalk.png">
 <meta property="og:description" content="Starbucks">
 
-<title id="titleJoin">소시지&amp;올리브 미니 파이 | Starbucks Korea</title> <!-- 220117 수정 -->
+<title id="titleJoin"> | Starbucks Korea</title> <!-- 220117 수정 -->
 <link rel="shortcut icon" href="https://image.istarbucks.co.kr/common/img/common/favicon.ico?v=200828" type="image/ico"> <!-- 20200827 파비콘 교체 및 CDN 변수처리 -->
-<link href="common/css/reset.css" rel="stylesheet">
-<link href="common/css/style.css?v=210721" rel="stylesheet">
-<link href="common/css/jquery.bxslider.css" rel="stylesheet">
-<link href="common/css/idangerous.swiper.css" rel="stylesheet">
-<link href="common/css/idangerous.swiper.scrollbar.css" rel="stylesheet">
-<link href="common/css/jquery.mCustomScrollbar.css" rel="stylesheet">
-<link href="common/css/jquery.scrollbar.css" rel="stylesheet">
-<link href="common/css/jquery-ui.css" rel="stylesheet">
-<link href="common/css/ezmark.css" rel="stylesheet">
-<link href="common/css/style_dt.css?v=20191211" rel="stylesheet"> <!-- 20191211 수정 -->
+<link href="../common/css/reset.css" rel="stylesheet">
+<link href="../common/css/style.css?v=210721" rel="stylesheet">
+<link href="../common/css/jquery.bxslider.css" rel="stylesheet">
+<link href="../common/css/idangerous.swiper.css" rel="stylesheet">
+<link href="../common/css/idangerous.swiper.scrollbar.css" rel="stylesheet">
+<link href="../common/css/jquery.mCustomScrollbar.css" rel="stylesheet">
+<link href="../common/css/jquery.scrollbar.css" rel="stylesheet">
+<link href="../common/css/jquery-ui.css" rel="stylesheet">
+<link href="../common/css/ezmark.css" rel="stylesheet">
+<link href="../common/css/style_dt.css?v=20191211" rel="stylesheet"> <!-- 20191211 수정 -->
 
 <!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-	<link href="common/css_ie/style.css" rel="stylesheet">
+	<link href="../common/css_ie/style.css" rel="stylesheet">
 	<script>
 		document.createElement('header');
 		document.createElement('nav');
@@ -67,7 +67,7 @@ var eFrequencySeq = '172';
 var eFrequencyPlannerYn = 'Y';
 </script>
 
-        <link href="common/css/style_menu.css" rel="stylesheet">
+        <link href="../common/css/style_menu.css" rel="stylesheet">
 	<style type="text/css" data-fbcssmodules="css:fb.css.base css:fb.css.dialog css:fb.css.iframewidget css:fb.css.customer_chat_plugin_iframe">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
 .fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_dialog_advanced{border-radius:8px;padding:10px}.fb_dialog_content{background:#fff;color:#373737}.fb_dialog_close_icon{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{left:5px;right:auto;top:5px}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{height:100%;left:0;margin:0;overflow:visible;position:absolute;top:-10000px;transform:none;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{background:none;height:auto;min-height:initial;min-width:initial;width:auto}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{clear:both;color:#fff;display:block;font-size:18px;padding-top:20px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .4);bottom:0;left:0;min-height:100%;position:absolute;right:0;top:0;width:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_mobile .fb_dialog_iframe{position:sticky;top:0}.fb_dialog_content .dialog_header{background:linear-gradient(from(#738aba), to(#2c4987));border-bottom:1px solid;border-color:#043b87;box-shadow:white 0 1px 1px -1px inset;color:#fff;font:bold 14px Helvetica, sans-serif;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:linear-gradient(from(#4267B2), to(#2a4887));background-clip:padding-box;border:1px solid #29487d;border-radius:3px;display:inline-block;line-height:18px;margin-top:3px;max-width:85px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{background:none;border:none;color:#fff;font:bold 12px Helvetica, sans-serif;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #4a4a4a;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f5f6f7;border:1px solid #4a4a4a;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-position:50% 50%;background-repeat:no-repeat;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
 .fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}
@@ -621,9 +621,9 @@ var eFrequencyPlannerYn = 'Y';
                             <li><img class="arrow" src="//image.istarbucks.co.kr/common/img/common/icon_arrow.png" alt="하위메뉴"></li>
                             <li><a href="menu/food_list">푸드</a></li>
                             <li><img class="arrow" src="//image.istarbucks.co.kr/common/img/common/icon_arrow.png" alt="하위메뉴"></li>
-                            <li><a href="menu/food_list" class="cate">2022 Summer 1</a></li>
+                            <li><a href="menu/food_list" class="cate"></a></li>
                             <li><img class="arrow" src="//image.istarbucks.co.kr/common/img/common/icon_arrow.png" alt="하위메뉴"></li>
-                            <li><a href="javascript:void(0)" class="this">소시지&amp;올리브 미니 파이</a></li>
+                            <li><a href="javascript:void(0)" class="this"></a></li>
                         </ul>
                     </div>
                 </div>
@@ -642,8 +642,8 @@ var eFrequencyPlannerYn = 'Y';
                         </div>
                         <div class="product_view_detail">
                             <div class="myAssignZone">
-                                <h4>소시지&amp;올리브 미니 파이<br><span>Sausage&amp;Olive Mini Pie</span></h4>
-                                <p class="t1">통통한 미니 소시지와 그린 올리브를 패스츄리에 토핑하여 골라 먹는 재미를 더한 미니 파이로 세이보리하고 고소한 풍미가 매력적인 스낵 브레드입니다.</p>
+                                <h4><br><span></span></h4>
+                                <p class="t1"></p>
                                 <!-- 0531 다정 나만의 푸드로 등록->구매하기로 변경 -->
                                 <div class="myDrink"><a href="javascript:void(0)" role="button" title="구매 및 담기">구매 및 담기</a><!-- 접근성_20171123 role, title 추가 --></div>
                             </div>
@@ -663,70 +663,70 @@ var eFrequencyPlannerYn = 'Y';
                                     <div class="product_view_info">
                                         <div class="product_info_head">
                                             <p class="tit">제품 영양 정보</p>
-                                            <span class="unit">125(g)</span>
+                                            <span class="unit"></span>
                                         </div>
                                         <div class="product_info_content">
                                             <ul>
                                                 <li>
                                                     <dl>
                                                         <dt>1회 제공량 (kcal)</dt>
-                                                        <dd>545</dd>
+                                                        <dd></dd>
                                                     </dl>
                                                 </li>
                                                 <li style="display: none;">
                                                     <dl>
                                                         <dt>지방 (g)</dt>
-                                                        <dd>43</dd>
+                                                        <dd></dd>
                                                     </dl>
                                                 </li>
                                                 <li>
                                                     <dl>
                                                         <dt>포화지방 (g)</dt>
-                                                        <dd>18</dd>
+                                                        <dd></dd>
                                                     </dl>
                                                 </li>
                                                 <li style="display: none;">
                                                     <dl>
                                                         <dt>트랜스지방 (g)</dt>
-                                                        <dd>0.7</dd>
+                                                        <dd></dd>
                                                     </dl>
                                                 </li>
                                                 <li class="last" style="display: none;">
                                                     <dl>
                                                         <dt>콜레스테롤 (mg)</dt>
-                                                        <dd>95</dd>
+                                                        <dd></dd>
                                                     </dl>
                                                 </li>
                                             <li class="last">
                                                     <dl>
                                                         <dt>나트륨 (mg)</dt>
-                                                        <dd>980</dd>
+                                                        <dd></dd>
                                                     </dl>
                                                 </li></ul>
                                             <ul>
                                                 <li>
                                                     <dl>
                                                         <dt>당류 (g)</dt>
-                                                        <dd>9</dd>
+                                                        <dd></dd>
                                                     </dl>
                                                 </li>
                                                 <li style="display: none;">
                                                     <dl>
                                                         <dt>탄수화물 (g)</dt>
-                                                        <dd>29</dd>
+                                                        <dd></dd>
                                                     </dl>
                                                 </li>
                                                 <li>
                                                     <dl>
                                                         <dt>단백질 (g)</dt>
-                                                        <dd>11</dd>
+                                                        <dd></dd>
                                                     </dl>
                                                 </li>
                                                 
                                             </ul>
                                         </div>
                                         <div class="product_factor">
-                                            <p>알레르기 유발요인 : 대두 / 우유 / 난류 / 밀 / 돼지고기 / 쇠고기</p>
+                                            <p></p>
                                         </div>
                                         <div class="product_sns_wrap">
                                             <ul class="product_sns">
@@ -1006,8 +1006,8 @@ var eFrequencyPlannerYn = 'Y';
 			<script src="//image.istarbucks.co.kr/common/js/greensock/TweenMax.min.js"></script>
 			<script src="//image.istarbucks.co.kr/common/js/masonry.pkgd.js"></script>
 			<script src="//image.istarbucks.co.kr/common/js/common.js"></script>
-			<script src="common/js/gnb.js?v=220502"></script>
-			<script src="common/js/header.js?v=200915"></script>
+			<script src="../common/js/gnb.js?v=220502"></script>
+			<script src="../common/js/header.js?v=200915"></script>
 			<script src="//image.istarbucks.co.kr/common/js/footer.js?v=210818"></script>
 
 			<script src="//image.istarbucks.co.kr/common/js/jquery.tmpl.js"></script>
@@ -1016,9 +1016,9 @@ var eFrequencyPlannerYn = 'Y';
 			<!-- <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script> -->
 			
 			<!--
-			<script src="common/js/swiper.jquery.min.js"></script>
-			<script src="common/js/swiper.min.js"></script>
-			<script src="common/js/util.js"></script>
+			<script src="../common/js/swiper.jquery.min.js"></script>
+			<script src="../common/js/swiper.min.js"></script>
+			<script src="../common/js/util.js"></script>
 			-->
 			
 		
@@ -1281,8 +1281,8 @@ var eFrequencyPlannerYn = 'Y';
 				});
 			</script>
 		
-        <script src="common/js/menu.js"></script>
-        <script src="common/js/common_jhp.js"></script>
+        <script src="../common/js/menu.js"></script>
+        <script src="../common/js/common_jhp.js"></script>
 		<script>
 			$(document).ready(function(){
 	            
@@ -1290,14 +1290,14 @@ var eFrequencyPlannerYn = 'Y';
 
 
 				$(".select_box select").on("change",function(){
-					$(this).prev()($(this).find("option:selected").text());
-				}).prev()(function() {
+					$(this).prev($(this).find("option:selected").text());
+				}).prev(function() {
 					return $(this).next().find("option:selected").text();
 				});
 				
 			    getDataInfo();
 			});
-		    var $PRODUCT_CD = "9300000004025";
+		    var $PRODUCT_CD = ${product_cd};//여기바꿈
             
             if(!($PRODUCT_CD) || $PRODUCT_CD == "") {
                 alert("정상적인 접근이 아닙니다.");
@@ -1306,7 +1306,8 @@ var eFrequencyPlannerYn = 'Y';
 			
 			function getDataInfo() {
                 var option = {
-                        'product_cd' : $PRODUCT_CD
+                        'product_cd' : $PRODUCT_CD,
+                        'product_cate' : "food"
                 };
                 __ajaxCall('/menu/productViewAjax', option , true, "JSON", "POST", 
                 function(data) {
@@ -1317,8 +1318,8 @@ var eFrequencyPlannerYn = 'Y';
                     }
 
                 	getFileInfo();
-                    getPairInfo();
-                    getPromotion();
+                    //여기바꿈 관련제품 쓸지안쓸지 모름. getPairInfo();
+      	            //여기바꿈 프로모션 지움. 스크립트도 찾아지움getPromotion();
                     
                 	//[161203] 홀케이크은 나만의 푸드 버튼이 출력 되지 않게..
                 	if ("9300000000536|9300000000539|9300000000538|9300000000537|9300000000108|9300000000109|5120007089|9300000000110|5120007090".indexOf($PRODUCT_CD) > -1) { 
@@ -1408,9 +1409,10 @@ var eFrequencyPlannerYn = 'Y';
                     }
                     
                     if(data.view.unit != "" && data.view.standard != "") {
-                    	$('.unit').text(data.view.standard + '(' + data.view.unit + ')');
+                    	$('.unit').text(data.view.standard + '(' + data.view.unit + ')'); //제품영양정보
                     }
                     
+                    //트위터 페이스북 공유...x
                     $('.product_sns_wrap li').on('click', function() {
                     	var snsType = $(this).data('sns');
                         
@@ -1571,75 +1573,27 @@ var eFrequencyPlannerYn = 'Y';
                 });
             }
             
-            function getPromotion() {
-                /*
-                var option = {
-                        'PRODUCT_CD' : $PRODUCT_CD
-                };
-                __ajaxCall('/menu/productPromotionAjax', option , true, "JSON", "POST", 
-                function(data) {
-                    if(data.promotion.length > 0) {
-                        $('ul.promotionList').empty();
-                        $('#tpl_promotionLi').tmpl(data.promotion).appendTo($('ul.promotionList'));
-                        
-                        $('.promotionLi').unbind('click').bind('click', function() {
-                            pro_seq = $(this).attr('prod');
-                            f = document.drinkViewForm;
-                            f.action = "whats_new/campaign_view";
-                            f.pro_seq.value = pro_seq;
-                            f.submit();
-                        });
-                    }
-                },
-                function() {
-                });
-                */
-               /*  if ("9300000000035|9300000000036|9300000000037".indexOf($PRODUCT_CD) > -1) {
-                	$('ul.promotionList')('<li><a href="whats_new/campaign_view?pro_seq=1133">2016 체리블라썸 프로모션</a></li>');
-                }
-                if ("9300000000011|5110001104|9300000000016|9300000000017".indexOf($PRODUCT_CD) > -1) {
-                	$('ul.promotionList')('<li><a href="whats_new/campaign_view?pro_seq=1126">2016 Spring 프로모션</a></li>');
-                }
-                if ("5110007202".indexOf($PRODUCT_CD) > -1) {
-                	$('ul.promotionList')('<li><a href="whats_new/campaign_view?pro_seq=1113">럭키 몽키 케익 보너스 스타 이벤트</a></li>');
-                }
-                if ("5110007201|5110007199|5110007197|5110009105".indexOf($PRODUCT_CD) > -1) {
-                	$('ul.promotionList')('<li><a href="whats_new/campaign_view?pro_seq=1104">2016 뉴이어 프로모션</a></li>');
-                }
-                if ("9300000000277|9300000000114".indexOf($PRODUCT_CD) > -1) {
-                	$('ul.promotionList')('<li><a href="whats_new/campaign_view?pro_seq=1173">2016 서머2 프로모션</a></li>');
-                } */
-                if ("9300000000278|9300000000291|9300000000337".indexOf($PRODUCT_CD) > -1) {
-                	$('ul.promotionList')('<li><a href="whats_new/campaign_view?pro_seq=1190">2016 서머3 프로모션</a></li>');
-                }
-                if ("9300000000497|9300000000498".indexOf($PRODUCT_CD) > -1) {
-                	$('ul.promotionList')('<li><a href="whats_new/campaign_view?pro_seq=1204">오텀1 프로모션</a></li>');
-                }
-                if ("9300000000533|9300000000534|9300000000532|9300000000535".indexOf($PRODUCT_CD) > -1) {
-                	$('ul.promotionList')('<li><a href="whats_new/campaign_view?pro_seq=1225">2016 크리스마스1 프로모션</a></li>');
-                }
-            }
 		</script>
         <script type="text/x-jquery-tmpl" id="tpl_productFileLi">
-            <li><a href="javascript:void(0)" data-image="${img_UPLOAD_PATH.replace("www", "image")}${file_PATH}" data-zoom-image="${img_UPLOAD_PATH.replace("www", "image")}${file_PATH}" class="elevatezoom-gallery"><img src="${img_UPLOAD_PATH.replace("www", "image")}${file_PATH}" alt="상세이미지 ${img_ORDER}번"></a></li>
+            <li><a href="javascript:void(0)" data-image="\${img_UPLOAD_PATH.replace("www", "image")}\${file_PATH}" data-zoom-image="\${img_UPLOAD_PATH.replace("www", "image")}\${file_PATH}" class="elevatezoom-gallery"><img src="\${img_UPLOAD_PATH.replace("www", "image")}\${file_PATH}" alt="상세이미지 \${img_ORDER}번"></a></li>
         </script>
         <script type="text/x-jquery-tmpl" id="tpl_productMobLi">
-            <li><img class="m_view_img" src="${img_UPLOAD_PATH.replace("www", "image")}${file_PATH}" data-zoom-image="${img_UPLOAD_PATH.replace("www", "image")}${file_PATH}" alt="" /></li>
+            <li><img class="m_view_img" src="\${img_UPLOAD_PATH.replace("www", "image")}\${file_PATH}" data-zoom-image="\${img_UPLOAD_PATH.replace("www", "image")}\${file_PATH}" alt="" /></li>
         </script>
         <script type="text/x-jquery-tmpl" id="tpl_productPairLi">
             <li>
                 <dl>
-                    <dt><a href="javascript:void(0)" prod="${product_CD}" cate="${f_CATE_CD}"><img src="${img_UPLOAD_PATH.replace("www", "image")}${file_PATH}" alt="${product_NM}"></a></dt>
+                    <dt><a href="javascript:void(0)" prod="\${product_CD}" cate="\${f_CATE_CD}"><img src="\${img_UPLOAD_PATH.replace("www", "image")}\${file_PATH}" alt="\${product_NM}"></a></dt>
                     <dd>
-                        <p class="t1">${product_NM}</p>
-                        <p class="t2">${content}</p>
-                        <p class="more_btn"><a href="javascript:void(0)" prod="${product_CD}" cate="${f_CATE_CD}"><img src="//image.istarbucks.co.kr/common/img/common/detail_view.png" alt="${product_NM} 자세히 보기" /></a></p>
+                        <p class="t1">\${product_NM}</p>
+                        <p class="t2">\${content}</p>
+                        <p class="more_btn"><a href="javascript:void(0)" prod="\${product_CD}" cate="\${f_CATE_CD}"><img src="//image.istarbucks.co.kr/common/img/common/detail_view.png" alt="\${product_NM} 자세히 보기" /></a></p>
                     </dd>
                 </dl>
             </li>
         </script>
         <script type="text/x-jquery-tmpl" id="tpl_promotionLi">
-            <li><a href="javascript:void(0)" class="promotionLi" prod="${pro_SEQ}">${product_NM}</a></li>
+            <li><a href="javascript:void(0)" class="promotionLi" prod="\${pro_SEQ}">\${product_NM}</a></li>
         </script>
 		</div>
 		
@@ -1650,7 +1604,7 @@ var eFrequencyPlannerYn = 'Y';
 <div class="only_my_drink" style="display:none;" aria-labelledby="tit_my_food" role="dialog" aria-hidden="true"><!-- 접근성_20171123 aria, role 추가 -->
 	<div class="only_my_head">
 		<p class="tit">나만의 푸드</p>
-		<p class="close"><a href="javascript:void(0)" class="btn_close" role="button"><img src="common/img/util/btn_closesa.png" alt="팝업 닫기"></a><!-- 접근성_20171123 role 추가 --></p>
+		<p class="close"><a href="javascript:void(0)" class="btn_close" role="button"><img src="../common/img/util/btn_closesa.png" alt="팝업 닫기"></a><!-- 접근성_20171123 role 추가 --></p>
 	</div>
 	<!-- Step 1 -->
 	<div class="only_my_cont my_drink_step1">
@@ -1722,7 +1676,7 @@ var eFrequencyPlannerYn = 'Y';
 <div class="only_my_drink2" style="display:none;" role="dialog" aria-hidden="true"><!-- 접근성_20171123 aria, role 추가 -->
 	<div class="only_my_head">
 		<p class="tit">나만의 푸드 이름을 지어보세요</p>
-		<p class="close"><a href="javascript:void(0)" class="btn_close" role="button"><img src="common/img/util/btn_closesa.png" alt="팝업 닫기"><!-- 접근성_20171123 role 추가 --></a></p>
+		<p class="close"><a href="javascript:void(0)" class="btn_close" role="button"><img src="../common/img/util/btn_closesa.png" alt="팝업 닫기"><!-- 접근성_20171123 role 추가 --></a></p>
 	</div>
 	<div class="only_my_cont">
 		<p class="drink2_cont_input"><input type="text" id="nickname" title="메뉴이름"></p>
@@ -1737,31 +1691,31 @@ var eFrequencyPlannerYn = 'Y';
 <!-- 150902 DOM 수정 end -->
 	
 <script type="text/x-jquery-tmpl" id="categoryList">
-	<li><input type="radio" name="my_kind" id="my_kind_${categoryCode}" value="${categoryCode}"> <label for="my_kind_${categoryCode}">${categoryName}</label></li>
+	<li><input type="radio" name="my_kind" id="my_kind_\${categoryCode}" value="\${categoryCode}"> <label for="my_kind_\${categoryCode}">\${categoryName}</label></li>
 </script>
 <script type="text/x-jquery-tmpl" id="menuList">
    	<li>
 		<dl>
-			<dt><a href="javascript:void(0)" class="btn_go_my_drink_step2" data-idx="${$item.getMenuListIdx1}" data-skuno="${delegateSku.skuNo}"><img src="${delegateSku.skuImgUrl}" alt=""></a></dt>
-			<dd><a href="javascript:void(0)" class="btn_go_my_drink_step2" data-idx="${$item.getMenuListIdx2}" data-skuno="${delegateSku.skuNo}">${delegateSku.skuName}</a></dd>
+			<dt><a href="javascript:void(0)" class="btn_go_my_drink_step2" data-idx="\${$item.getMenuListIdx1}" data-skuno="\${delegateSku.skuNo}"><img src="\${delegateSku.skuImgUrl}" alt=""></a></dt>
+			<dd><a href="javascript:void(0)" class="btn_go_my_drink_step2" data-idx="\${$item.getMenuListIdx2}" data-skuno="\${delegateSku.skuNo}">\${delegateSku.skuName}</a></dd>
 		</dl>
 	</li>
 </script>
 <script type="text/x-jquery-tmpl" id="psOptCateList">
 	<li>
 		<!-- 150915 구명준 -->
-		<p class="name">${categoryName}<br><span>${engCategoryName}</span></p>
+		<p class="name">\${categoryName}<br><span>\${engCategoryName}</span></p>
 		<!-- 150915 구명준 end -->
 		<p class="btn"><a href="javascript:void(0)" role="button">상세옵션</a></p><!-- 접근성_20171123 role 추가, text 수정 -->
-		<div class="hidden_opt" data-optiontype="${engCategoryName.toUpperCase()}">
+		<div class="hidden_opt" data-optiontype="\${engCategoryName.toUpperCase()}">
 			<!-- 150904 수정 -->
-			<p class="hidden_info">${categoryDesc}</p>
+			<p class="hidden_info">\${categoryDesc}</p>
 			<!-- 150904 수정 end -->
-			{{html $item.getHtmlDefaultOptions}}
-			{{html $item.getHtmlAddedOptions}}
+			{{html \$item.getHtmlDefaultOptions}}
+			{{html \$item.getHtmlAddedOptions}}
 			<div class="btns">
 				<ul>
-					<li class="li1"><a href="javascript:void(0)" class="btn_save_ps_opt_cst_sku_list" data-categoryname="${categoryName}" data-applytype1="${applyType1}" title=" 옵션 적용" role="button">적용하기</a><!-- 접근성_20171123 title,role 추가 --></li>
+					<li class="li1"><a href="javascript:void(0)" class="btn_save_ps_opt_cst_sku_list" data-categoryname="\${categoryName}" data-applytype1="\${applyType1}" title=" 옵션 적용" role="button">적용하기</a><!-- 접근성_20171123 title,role 추가 --></li>
 					<li class="li2"><a href="javascript:void(0)" class="btn_init_ps_opt_cst_sku_list" title=" 옵션 초기화" role="button">초기화</a></li>
 				</ul>
 			</div>
