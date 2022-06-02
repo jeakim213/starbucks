@@ -34,12 +34,37 @@ public class HomeController {
 	public String home(Locale locale, Model model) {
 		return "index";
 	}
-
+	
+	//admin
+	@RequestMapping(value="memberListForm")
+	public String memberListForm() {
+		return "admin/memberListForm";
+	}
+	
+	@RequestMapping(value="userInfoForm")
+	public String userInfoForm() {
+		return "admin/userInfoForm";
+	}
+	
+	@RequestMapping(value="modifyCheckForm")
+	public String modifyCheckForm() {
+		return "admin/modifyCheckForm";
+	}
+	
+	@RequestMapping(value="memberModifyForm")
+	public String memberModifyForm() {
+		return "admin/memberModifyForm";
+	}
+	
+	@RequestMapping(value="deleteCheckForm")
+	public String deleteCheckForm() {
+		return "admin/deleteCheckForm";
+	}
+	
 	// coffee
 	@RequestMapping(value = "coffee/americano")
 	public String americano() {
 		return "coffee/americano";
-
 	}
 
 	@RequestMapping(value = "coffee/cappuccino")
@@ -200,10 +225,26 @@ public class HomeController {
 	}
 
 	@RequestMapping(value = "menu/product_list")
-	public String product_list() {
-		return "menu/product_list";
+	public String product_view() {
+		return "menu/product_view";
 	}
-
+	
+	@RequestMapping(value="menu/drink_view")
+	public String drink_view() {
+		return "menu/drink_view";
+	}
+	
+	//0601 다정
+	@RequestMapping(value="menu/starbucksCard")
+	public String starbucksCard() {
+		return "menu/starbucksCard";
+	}
+	
+	@RequestMapping(value="menu/coupon_popup")
+	public String coupon_popup(){
+		return "menu/coupon_popup";
+	}
+	
 	@RequestMapping(value = "menu/product_list_1")
 	public String product_list_1() {
 		return "menu/product_list-1";

@@ -1,10 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <html lang="ko"><head>
         
-<style>
-	#searchBtn {width:}
-</style>
 
 
 
@@ -24,7 +22,7 @@
 
 <title id="titleJoin">My Starbucks | Starbucks Korea</title> <!-- 220117 수정 -->
 <link rel="shortcut icon" href="https://image.istarbucks.co.kr/common/img/common/favicon.ico?v=200828" type="image/ico"> <!-- 20200827 파비콘 교체 및 CDN 변수처리 -->
-<link href="common/css/reset_admin_5.css" rel="stylesheet">
+<link href="common/css/admin_userInfo_2.css" rel="stylesheet">
 <link href="common/css/style.css?v=210721" rel="stylesheet">
 <link href="common/css/jquery.bxslider.css" rel="stylesheet">
 <link href="common/css/idangerous.swiper.css" rel="stylesheet">
@@ -657,13 +655,10 @@ var eFrequencyPlannerYn = 'Y';
 	<li class="util_nav01 sign_out" style=""><a href="javascript:void(0);">Sign out</a></li>
 	<li class="util_nav01 sign_in" style="display: none;"><a href="javascript:void(0);">Sign In</a></li>
 	<li class="util_nav02"><a href="javascript:void(0);" required="login" data-href="my/index">My Starbucks</a></li>
-	<li class="util_nav03"><a href="util/index">Customer Service &amp; Ideas</a></li>
+	<li class="util_nav03"><a href="menu/orderList">Order</a></li>
 	<li class="util_nav04"><a href="store/store_map">Find a Store</a></li>
 </ul>
 				</nav>
-				<p class="btn_search">
-					<a href="javascript:void(0);"><img alt="통합검색" src="//image.istarbucks.co.kr/common/img/common/icon_magnifier_black.png"></a>
-				<label for="totalSearch" class="a11y">통합검색</label><input id="totalSearch" placeholder="통합검색" type="text"></p>
 				<a href="javascript:void(0);" class="rCup3_wrap" role="button" title="마이 리워드 레이어 열기"><!-- 접근성_20171201 class, role, title 추가 --><span class="rCup3" style="width: 53px; height: 45px; overflow: hidden;"><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/001.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/002.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/003.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/004.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/005.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/006.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/007.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/008.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/009.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/010.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/011.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/012.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/013.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/014.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/015.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/016.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/017.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/018.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/019.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/020.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/021.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/022.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/023.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/024.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/025.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/026.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/027.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/028.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/029.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/030.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/031.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/032.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/033.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/034.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/035.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/036.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/037.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/038.png&quot;);"></div><div class="jsMovieFrame" style="display: block; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/login/039.png&quot;);"></div><div id="jsMovie_event_overlay" style="width: 53px; height: 90px; margin-top: -90px;"></div><div id="jsMovie_image_preload_container"><img src="//image.istarbucks.co.kr/common/img/common/rcup/login/001.png" alt="" style="height: 1px; width: 1px;"></div></span></a><!-- 150714 DOM 수정 - 떨어지는 메뉴 부분에 jsMovie 추가 -->
 			</div>
 			<nav class="sub_gnb_nav">
@@ -699,16 +694,22 @@ var eFrequencyPlannerYn = 'Y';
                     <div class="ms_cont">
                     
                     
-                    	<!-- 관리자 -->
-                    	<div id="user_info">
+<!-- 관리자 -->
+
+<%-- <c:if test="${empty sessionScope.id }">
+	<script>
+		location.href = 'index?formpath=login'
+	</script>
+</c:if> --%>
+
 <c:url var="root" value="/" />
+
 	<center>
-		<h3><font color="green" id="msg">${msg }</font></h3>
-		<table style="width: 450px; border: 1px;>
+		<%-- <h3><font color="#036635" id="msg">${msg }</font></h3> --%>
+		<table border="1" style="width: 450px;">
 			<tr>
-				<td colspan=2 align="center" style="height: 40px; padding-top: 15px;">
+				<td colspan=2 align="center" style="height: 40px; padding: 10px;">
 					<h2>회원 정보</h2>
-					<h3><font color="green">로그인 계정: ${sessionScope.id }</font></h3>
 				</td>
 			</tr>
 			<tr>
@@ -716,8 +717,8 @@ var eFrequencyPlannerYn = 'Y';
 				<td style="width: 250px; height: 40px;" align="center" valign="center">${user.id }</td>
 			</tr>
 			<tr>
-				<td style="width: 100px; height: 40px;" align="center" valign="center"><b>이메일</b></td>
-				<td style="width: 250px; height: 40px;" align="center" valign="center">${user.email }</td>
+				<td style="width: 100px; height: 40px;" align="center" valign="center"><b>닉네임</b></td>
+				<td style="width: 250px; height: 40px;" align="center" valign="center">${user.nickname }</td>
 			</tr>
 			<tr>
 				<td style="width: 100px; height: 40px;" align="center" valign="center"><b>성별</b></td>
@@ -728,28 +729,103 @@ var eFrequencyPlannerYn = 'Y';
 					<c:when test="${user.gender == 'w'}">
 						<td style="width: 250px; height: 40px;" align="center" valign="center">여</td>
 					</c:when>
-					<c:otherwise>
-						<td style="width: 250px; height: 40px;" align="center" valign="center">선택 안 함</td>
-					</c:otherwise>
 				</c:choose>
 			</tr>
 			<tr>
-				<td style="width: 100px; height: 40px;" align="center" valign="center"><b>주소</b></td>
+				<td style="width: 100px; height: 40px;" align="center" valign="center"><b>생년월일</b></td>
 				<td style="width: 250px; height: 40px;" align="center" valign="center">
-					${user.addr1}&nbsp;&nbsp;${user.addr2 }
+					${user.birthyear }${user.birthmonth }${user.birthday }
 				</td>
 			</tr>
 			<tr>
-				<td colspan=2 align="right">
-					<button onclick="location.href='${root}index?formpath=modifyCheck&modifyId=${user.id }'">수정</button>
-					<button onclick="location.href='${root}index?formpath=memberDelete&modifyId=${user.id }'">삭제</button>
-					<button onclick="location.href='memberListProc'">목록</button>
-				</td>
+				<td style="width: 100px; height: 40px;" align="center" valign="center"><b>전화번호</b></td>
+				<td style="width: 250px; height: 40px;" align="center" valign="center">${user.phone }</td>
+			</tr>
+			<%-- <tr>
+				<td style="width: 100px; height: 40px;" align="center" valign="center"><b>SMS 수신</b></td>
+				<c:choose>
+					<c:when test="${user.event_sms == 'y'}">
+						<td style="width: 250px; height: 40px;" align="center" valign="center">동의</td>
+					</c:when>
+					<c:when test="${user.event_sms == 'n'}">
+						<td style="width: 250px; height: 40px;" align="center" valign="center">비동의</td>
+					</c:when>
+				</c:choose>
+			</tr> --%>
+			<tr>
+				<td style="width: 100px; height: 40px;" align="center" valign="center"><b>이메일</b></td>
+				<td style="width: 250px; height: 40px;" align="center" valign="center">${user.email }</td>
+			</tr>
+			<%-- <tr>
+				<td style="width: 100px; height: 40px;" align="center" valign="center"><b>email 수신</b></td>
+				<c:choose>
+					<c:when test="${user.event_e == 'y'}">
+						<td style="width: 250px; height: 40px;" align="center" valign="center">동의</td>
+					</c:when>
+					<c:when test="${user.event_e == 'n'}">
+						<td style="width: 250px; height: 40px;" align="center" valign="center">비동의</td>
+					</c:when>
+				</c:choose>
+			</tr> --%>
+			<tr>
+				<td style="width: 100px; height: 40px;" align="center" valign="center"><b>SMS/E-mail<br>수신 동의</b></td>
+				<c:choose>
+					<c:when test="${user.event_sms == 'y' && user.event_e == 'y'}">
+						<td style="width: 250px; height: 40px;" align="center" valign="center">
+							<input type="checkbox" name="event_sms" value="y" checked disabled="disabled">&nbsp;SMS&nbsp;&nbsp;
+							<input type="checkbox" name="event_e" value="y" checked disabled="disabled">&nbsp;E-mail
+						</td>
+					</c:when>
+					<c:when test="${user.event_sms == 'y' && user.event_e == 'n'}">
+						<td style="width: 250px; height: 40px;" align="center" valign="center">
+							<input type="checkbox" name="event_sms" value="y" checked disabled="disabled">&nbsp;SMS&nbsp;&nbsp;
+							<input type="checkbox" name="event_e" value="n" disabled="disabled">&nbsp;E-mail
+						</td>
+					</c:when>
+					<c:when test="${user.event_sms == 'n' && user.event_e == 'y'}">
+						<td style="width: 250px; height: 40px;" align="center" valign="center">
+							<input type="checkbox" name="event_sms" value="n" disabled="disabled">&nbsp;SMS&nbsp;&nbsp;
+							<input type="checkbox" name="event_e" value="y" checked disabled="disabled">&nbsp;E-mail
+						</td>
+					</c:when>
+					<%-- <c:when test="${user.event_sms == 'n' && user.event_e == 'n'}">
+						<td style="width: 250px; height: 40px;" align="center" valign="center">
+							<input type="checkbox" name="event_sms" value="n" disabled="disabled">&nbsp;SMS&nbsp;&nbsp;
+							<input type="checkbox" name="event_e" value="n" disabled="disabled">&nbsp;E-mail
+						</td>
+					</c:when> --%>
+					<c:otherwise>
+						<td style="width: 250px; height: 40px;" align="center" valign="center">
+							<input type="checkbox" name="event_sms" value="n" disabled="disabled">&nbsp;SMS&nbsp;&nbsp;
+							<input type="checkbox" name="event_e" value="n" checked disabled="disabled">&nbsp;E-mail
+						</td>
+					</c:otherwise>
+					
+				</c:choose>
+			</tr>
+			<tr>
+				<td style="width: 100px; height: 40px;" align="center" valign="center"><b>등급</b></td>
+				<td style="width: 250px; height: 40px;" align="center" valign="center">${user.grade }</td>
+			</tr>
+			<tr>
+				<td style="width: 100px; height: 40px;" align="center" valign="center"><b>별</b></td>
+				<td style="width: 250px; height: 40px;" align="center" valign="center">${user.star }</td>
+			</tr>
+			<tr>
+				<td style="width: 100px; height: 40px;" align="center" valign="center"><b>개인컵</b></td>
+				<td style="width: 250px; height: 40px;" align="center" valign="center">${user.cupreward }</td>
 			</tr>
 		</table>
+		<div style="width: 450px; text-align: right; margin: 2px;">
+			<%-- <button onclick="location.href='${root}index?formpath=modifyCheck&modifyId=${user.id }'">수정</button>
+			<button onclick="location.href='${root}index?formpath=memberDelete&modifyId=${user.id }'">삭제</button>
+			<button onclick="location.href='memberListProc'">목록</button> --%>
+			
+			<button onclick="location.href='modifyCheckForm'">수정</button>
+			<button onclick="location.href='deleteCheckForm'">삭제</button>
+			<button onclick="location.href='memberListForm'">목록</button>
+		</div>
 	</center>
-							
-                    	</div>
 
                        
                         <!-- msr 회원 -->
@@ -950,18 +1026,9 @@ var eFrequencyPlannerYn = 'Y';
 		</li> -->
 		
 		<li>
-			<a href="javascript:void(0);">사용자 관리<span class="sbox_arrow_down"></span></a>
+			<a href="javascript:void(0);">회원 관리<span class="sbox_arrow_down"></span></a>
 			<ul>
-				<li><a href="javascript:void(0);" required="login" data-href="my/reward">· 사용자 정보 수정</a></li>
-				<li><a href="javascript:void(0);" required="login" data-href="my/reward_star_history">· 사용자 정보 삭제</a></li>
-			</ul>
-		</li>
-		<li>
-			<a href="javascript:void(0);">상품<span class="sbox_arrow_down"></span></a>
-			<ul>
-				<li><a href="javascript:void(0);" required="login" data-href="my/reward">· 상품 등록</a></li>
-				<li><a href="javascript:void(0);" required="login" data-href="my/reward_star_history">· 상품 수정</a></li>
-				<li><a href="javascript:void(0);" required="login" data-href="my/reward_star_history">· 상품 삭제</a></li>
+				<li><a href="memberListForm" required="" data-href="">· 회원 목록</a></li>
 			</ul>
 		</li>
 		<li>
@@ -1004,35 +1071,23 @@ var eFrequencyPlannerYn = 'Y';
 						</ul>
 						<ul>
 							<li class="footer_menu_ttl"><a class="en" href="javascript:void(0);">COMPANY<span class="footer_arrow_down"></span></a></li>
-							<li><a href="footer/company/index">한눈에 보기</a></li>
-							<li><a href="footer/company/mission">스타벅스 사명</a></li>
-							<li class="footer_2depth_ttl"><a href="javascript:void(0)">스타벅스 소개<span class="footer_arrow_down"></span></a>
-								<ul>
-									<li><a href="footer/company/starbucks_information">스타벅스 코리아</a></li> <!-- 220118 수정 -->
-									<li><a href="footer/company/starbucks_history">주요 연혁</a></li> <!-- 202107 수정 -->
-									<li><a href="footer/company/starbucks_story">스타벅스 이야기</a></li>
-								</ul>
-							</li>
-							<li><a href="footer/company/news_list">국내 뉴스룸</a></li>
-							<li><a href="footer/company/global_starbucks">세계의 스타벅스</a></li>
+							<li><a href="#">한눈에 보기</a></li>
+							<li><a href="#">스타벅스 사명</a></li>
+							<li><a href="#">스타벅스 소개</a></li>
+							<li><a href="#">국내 뉴스룸</a></li>
+							<li><a href="#">세계의 스타벅스</a></li>
 							<!-- 160811 메뉴 추가 -->
-							<li><a href="https://news.starbucks.com" target="_blank">글로벌 뉴스룸</a></li>
+							<li><a href="#">글로벌 뉴스룸</a></li>
 							<!-- 160811 메뉴 추가 end -->
 						</ul>
 						<ul>
-							<li class="footer_menu_ttl"><a class="en" id="goPage" href="javascript:void(0);">CORPORATE SALES<span class="footer_arrow_down"></span></a></li>
-							<li><a href="footer/co_sales/index">단체 및 기업 구매 안내</a></li>
-							<!-- <li><a href="footer/co_sales/sbcard_egift">스타벅스 <span class="en">e-Gift Card</span></a></li> -->
-							<!-- <li><a href="footer/co_sales/sbcard">스타벅스 카드</a></li> -->
-							<!-- <li><a href="footer/co_sales/co-branded"><span class="en">Co-branded</span> 카드</a></li> -->
-							<!-- <li><a href="footer/co_sales/sb_product">스타벅스 상품</a></li> -->
-							<!-- <li><a href="footer/co_sales/sbgift_certificate">스타벅스 상품권</a></li> -->
+							<li class="footer_menu_ttl"><a class="en" href="#">CORPORATE SALES<span class="footer_arrow_down"></span></a></li>
+							<li><a href="#">단체 및 기업 구매 안내</a></li>
 						</ul>
 						<ul>
 							<li class="footer_menu_ttl"><a class="en" href="javascript:void(0);">PARTNERSHIP<span class="footer_arrow_down"></span></a></li>
-							<li><a href="footer/partnership/new_partner">신규 입점 제의</a></li>
-							<!-- <li><a href="footer/partnership/portal_systems">협력사 포털 시스템</a></li> -->
-							<li><a href="srm/login">협력 고객사 등록신청</a></li>
+							<li><a href="#">신규 입점 제의</a></li>
+							<li><a href="#">협력 고객사 등록신청</a></li>
 						</ul>
 						<ul>
 							<li class="footer_menu_ttl"><a class="en" href="javascript:void(0);">ONLINE COMMUNITY<span class="footer_arrow_down"></span></a></li>
@@ -1043,8 +1098,8 @@ var eFrequencyPlannerYn = 'Y';
 						</ul>
 						<ul>
 							<li class="footer_menu_ttl"><a class="en" href="javascript:void(0);">RECRUIT<span class="footer_arrow_down"></span></a></li>
-							<li><a href="footer/recruit/index">채용 소개</a></li>
-							<li><a href="http://job.shinsegae.com/recruit_info/notice/notice02_view.jsp?notino=5924" target="_blank">채용 지원하기</a></li><!-- 20210927 수정 -->
+							<li><a href="#">채용 소개</a></li>
+							<li><a href="#">채용 지원하기</a></li><!-- 20210927 수정 -->
 						</ul>
 					</div>
 				</div>
@@ -1059,15 +1114,15 @@ var eFrequencyPlannerYn = 'Y';
 					</ul>
 				</div>
 				<!-- 수상내역 -->
-				<div class="footer_awards_wrap">
-					<div class="footer_awards_wrap_inner">		<ul class="footer_awards_slider">			<li><a taget="_blank" href="javascript:void(0);"><img alt="여섯가족부 2020 대한민국 일자리대상 여성가족부장관상" src="//image.istarbucks.co.kr/common/img/footer/footer_award23.jpg"></a></li>			<li><a taget="_blank" href="javascript:void(0);"><img alt="행정안전부 2020 소방의 날 행정안전부장관 표창" src="//image.istarbucks.co.kr/common/img/footer/footer_award24.jpg"></a></li>			<li><a taget="_blank" href="javascript:void(0);"><img alt="농림축산식품부 2020 대한민국 커피산업대상 농림축산식품부 장관상" src="//image.istarbucks.co.kr/common/img/footer/footer_award25.jpg"></a></li>			<li><a taget="_blank" href="javascript:void(0);"><img alt="산업통상자원부 2020 대한민국 중소중견기업혁신 대상 국회산업통상자원중소벤처위원회장상" src="//image.istarbucks.co.kr/common/img/footer/footer_award26.jpg"></a></li>			<li><a taget="_blank" href="javascript:void(0);"><img alt="일자리위원회 2020 대한민국 일자리 유공 표창 대통령직속 일자리위원회 부위원장상" src="//image.istarbucks.co.kr/common/img/footer/footer_award27.jpg"></a></li>			<li><a taget="_blank" href="javascript:void(0);"><img alt="동반성장위원회 2020 사랑나눔 사회공헌대상 동반성장위원회 위원장상" src="//image.istarbucks.co.kr/common/img/footer/footer_award28.jpg"></a></li>		</ul>
-						<div class="footer_slider_controller">
-							<div class="footer_slider_controls"></div>
-							<div class="footer_slider_pagers"></div>
-						</div>
-					</div>
-				</div>
-				<!-- 수상내역 end -->
+            <div class="footer_awards_wrap">
+               <div class="footer_awards_wrap_inner">
+                  <div class="footer_slider_controller">
+                     <div class="footer_slider_controls"></div>
+                     <div class="footer_slider_pagers"></div>
+                  </div>
+               </div>
+            </div>
+            <!-- 수상내역 end -->
                 
                 <!-- Express DT MSR 회원 확인 Popup -->
 				<div class="dtPop ecoPop" id="msrCheckPop" style="display: none; margin-top: -51px;">
@@ -1114,19 +1169,19 @@ var eFrequencyPlannerYn = 'Y';
 				
 				<!-- 150517 추가 - 문진욱 -->
 				<aside class="copyright">
-					<a class="c_00b050" href="footer/etc/privacy">개인정보처리방침</a>
-					<a href="footer/etc/rules_vod" class="mbn">영상정보처리기기 운영관리 방침</a>
-					<a href="footer/etc/rules">홈페이지 이용약관</a>
-					<a href="footer/etc/rules_loc" class="mbn">위치정보 이용약관</a>
-					<a href="footer/etc/rules_msr" class="mbn">스타벅스 카드 이용약관</a>
-					<a href="footer/etc/rules_non" class="mbn">비회원 이용약관</a>
+					<a class="c_00b050" href="#">개인정보처리방침</a>
+					<a href="#" class="mbn">영상정보처리기기 운영관리 방침</a>
+					<a href="#">홈페이지 이용약관</a>
+					<a href="#" class="mbn">위치정보 이용약관</a>
+					<a href="#" class="mbn">스타벅스 카드 이용약관</a>
+					<a href="#" class="mbn">비회원 이용약관</a>
 					<span class="br"><!-- 150713 삭제  구명준  <a href="javascript:void(0);">위치정보 이용약관</a> -->
-					<a href="footer/etc/rules_mdp">My DT Pass 서비스 이용약관</a></span> <!-- 20200914 mdp 추가 -->
-					<a href="footer/etc/hotline" class="last">윤리경영 핫라인</a>
+					<a href="#">My DT Pass 서비스 이용약관</a></span> <!-- 20200914 mdp 추가 -->
+					<a href="#" class="last">윤리경영 핫라인</a>
 					<br>
-					<a class="btned_link" href="footer/etc/coming_route">찾아오시는 길</a>
-					<a class="btned_link" href="footer/partnership/new_partner">신규입점제의</a>
-					<a class="btned_link" href="footer/etc/sitemap">사이트 맵</a><br>
+					<a class="btned_link" href="#">찾아오시는 길</a>
+					<a class="btned_link" href="#">신규입점제의</a>
+					<a class="btned_link" href="#">사이트 맵</a><br>
 					<ul class="copy_menu">
 						<li>사업자등록번호 : 201-81-21515</li>
 						<li>주식회사 에스씨케이컴퍼니 대표이사 : 송 데이비드 호섭</li> <!-- 220105 수정 -->
