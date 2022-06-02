@@ -199,7 +199,7 @@ public class HomeController {
 		return "menu/food_list";
 	}
 
-	@RequestMapping(value = "menu/food_list_1") // 카테고리 코드를 받아 해당 카테고리만 뿌린다.
+	@RequestMapping(value = "menu/food_list_1") // 카테고리 코드를 받아 해당 카테고리만 뿌린다
 	public String food_list_1(String CATE_CD) {
 		return "menu/food_list-1";
 	}
