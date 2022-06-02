@@ -50,7 +50,7 @@ public class HomeController {
 	public String modifyCheckForm() {
 		return "admin/modifyCheckForm";
 	}
-
+	
 	//0601 다정 커피
 	@RequestMapping(value="saleChart-1")
 	public String saleChart1() {
@@ -69,8 +69,10 @@ public class HomeController {
 		return "admin/saleChart-3";
 	}
 	
+	
+	
 	@RequestMapping(value="memberModifyForm")
-	public String memberModifyForm() {
+	public String memberModifyWForm() {
 		return "admin/memberModifyForm";
 	}
 	
@@ -325,10 +327,10 @@ public class HomeController {
 		return "menu/myOrder";
 	}
 
-//	@RequestMapping(value = "menu/coupon_popup")
-//	public String menu_coupon_popup() {
-//		return "menu/coupon_popup";
-//	}
+	@RequestMapping(value = "menu/coupon_popup")
+	public String menu_coupon_popup() {
+		return "menu/coupon_popup";
+	}
 
 	// msr
 	@RequestMapping(value = "msreward/about")
