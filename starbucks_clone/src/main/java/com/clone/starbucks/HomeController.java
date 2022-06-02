@@ -50,6 +50,16 @@ public class HomeController {
 		return "admin/modifyCheckForm";
 	}
 	
+	@RequestMapping(value="memberModifyForm")
+	public String memberModifyForm() {
+		return "admin/memberModifyForm";
+	}
+	
+	@RequestMapping(value="deleteCheckForm")
+	public String deleteCheckForm() {
+		return "admin/deleteCheckForm";
+	}
+	
 	//coffee
 	@RequestMapping(value="americano")
 	public String americano() {
