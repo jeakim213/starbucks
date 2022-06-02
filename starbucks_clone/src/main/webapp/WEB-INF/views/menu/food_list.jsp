@@ -594,13 +594,11 @@ var eFrequencyPlannerYn = 'Y';
 	<li class="util_nav01 sign_out" style="display:none;"><a href="javascript:void(0);">Sign out</a></li>
 	<li class="util_nav01 sign_in"><a href="javascript:void(0);">Sign In</a></li>
 	<li class="util_nav02"><a href="my/index" required="login">My Starbucks</a></li>
-	<li class="util_nav03"><a href="util/index">Customer Service & Ideas</a></li>
+	<li class="util_nav03"><a href="menu/orderList">Order</a></li>
 	<li class="util_nav04"><a href="store/store_map">Find a Store</a></li>
 </ul>
 				</nav>
-				<p class="btn_search">
-					<a href="javascript:void(0);"><img alt="통합검색" src="common/img/common/icon_magnifier_black.png"></a>
-				</p>
+				
 				<a href="javascript:void(0);" class="rCup3_wrap" role="button" title="마이 리워드 레이어 열기"><!-- 접근성_20171201 class, role, title 추가 --><span class="rCup3"></span></a><!-- 150714 DOM 수정 - 떨어지는 메뉴 부분에 jsMovie 추가 -->
 			</div>
 			<nav class="sub_gnb_nav">
@@ -730,7 +728,7 @@ var eFrequencyPlannerYn = 'Y';
 							<div id="mn_select_wrap">
 								<p class="cf_s_p"><input type="button" class="select" title="상세분류 옵션 선택하기"><span class="cf_s_span">상세분류</span> </p>
 								<ul class="opt">
-										    <li><span><input type="checkbox" name="select_kind1-1" id="select_kind1-1" data-target="new"> <label class="mark01" for="select_kind1-1">신규 출시된 메뉴</label></span></li>
+									<li><span><input type="checkbox" name="select_kind1-1" id="select_kind1-1" data-target="new"> <label class="mark01" for="select_kind1-1">신규 출시된 메뉴</label></span></li>
 									<li><span><input type="checkbox" name="select_kind1-2" id="select_kind1-2" data-target="sell"> <label class="mark02" for="select_kind1-2">한정기간 출시되는 시즌성 메뉴</label></span></li>
 								</ul>
 							</div>
@@ -992,13 +990,8 @@ var eFrequencyPlannerYn = 'Y';
 									</table>
 									<div class="m_coffee_info">
 									</div>
-<<<<<<< HEAD
 								</dd> -->
 							</dl>
-=======
-								</dd>
-							</dl> -->
->>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
 						</div>
 					</div>
 					<!-- 음료 리스트(카테고리 별) end -->
@@ -1056,35 +1049,23 @@ var eFrequencyPlannerYn = 'Y';
 						</ul>
 						<ul>
 							<li class="footer_menu_ttl"><a class="en" href="javascript:void(0);">COMPANY<span class="footer_arrow_down"></span></a></li>
-							<li><a href="footer/company/index">한눈에 보기</a></li>
-							<li><a href="footer/company/mission">스타벅스 사명</a></li>
-							<li class="footer_2depth_ttl"><a href="javascript:void(0)">스타벅스 소개<span class="footer_arrow_down"></span></a>
-								<ul>
-									<li><a href="footer/company/starbucks_information">스타벅스 코리아</a></li> <!-- 220118 수정 -->
-									<li><a href="footer/company/starbucks_history">주요 연혁</a></li> <!-- 202107 수정 -->
-									<li><a href="footer/company/starbucks_story">스타벅스 이야기</a></li>
-								</ul>
-							</li>
-							<li><a href="footer/company/news_list">국내 뉴스룸</a></li>
-							<li><a href="footer/company/global_starbucks">세계의 스타벅스</a></li>
+							<li><a href="#">한눈에 보기</a></li>
+							<li><a href="#">스타벅스 사명</a></li>
+							<li><a href="#">스타벅스 소개</a></li>
+							<li><a href="#">국내 뉴스룸</a></li>
+							<li><a href="#">세계의 스타벅스</a></li>
 							<!-- 160811 메뉴 추가 -->
-							<li><a href="https://news.starbucks.com" target="_blank">글로벌 뉴스룸</a></li>
+							<li><a href="#">글로벌 뉴스룸</a></li>
 							<!-- 160811 메뉴 추가 end -->
 						</ul>
 						<ul>
-							<li class="footer_menu_ttl"><a class="en" id="goPage" href="javascript:void(0);">CORPORATE SALES<span class="footer_arrow_down"></span></a></li>
-							<li><a href="footer/co_sales/index">단체 및 기업 구매 안내</a></li>
-							<!-- <li><a href="footer/co_sales/sbcard_egift">스타벅스 <span class="en">e-Gift Card</span></a></li> -->
-							<!-- <li><a href="footer/co_sales/sbcard">스타벅스 카드</a></li> -->
-							<!-- <li><a href="footer/co_sales/co-branded"><span class="en">Co-branded</span> 카드</a></li> -->
-							<!-- <li><a href="footer/co_sales/sb_product">스타벅스 상품</a></li> -->
-							<!-- <li><a href="footer/co_sales/sbgift_certificate">스타벅스 상품권</a></li> -->
+							<li class="footer_menu_ttl"><a class="en" href="#">CORPORATE SALES<span class="footer_arrow_down"></span></a></li>
+							<li><a href="#">단체 및 기업 구매 안내</a></li>
 						</ul>
 						<ul>
 							<li class="footer_menu_ttl"><a class="en" href="javascript:void(0);">PARTNERSHIP<span class="footer_arrow_down"></span></a></li>
-							<li><a href="footer/partnership/new_partner">신규 입점 제의</a></li>
-							<!-- <li><a href="footer/partnership/portal_systems">협력사 포털 시스템</a></li> -->
-							<li><a href="srm/login">협력 고객사 등록신청</a></li>
+							<li><a href="#">신규 입점 제의</a></li>
+							<li><a href="#">협력 고객사 등록신청</a></li>
 						</ul>
 						<ul>
 							<li class="footer_menu_ttl"><a class="en" href="javascript:void(0);">ONLINE COMMUNITY<span class="footer_arrow_down"></span></a></li>
@@ -1095,8 +1076,8 @@ var eFrequencyPlannerYn = 'Y';
 						</ul>
 						<ul>
 							<li class="footer_menu_ttl"><a class="en" href="javascript:void(0);">RECRUIT<span class="footer_arrow_down"></span></a></li>
-							<li><a href="footer/recruit/index">채용 소개</a></li>
-							<li><a href="http://job.shinsegae.com/recruit_info/notice/notice02_view.jsp?notino=5924" target="_blank">채용 지원하기</a></li><!-- 20210927 수정 -->
+							<li><a href="#">채용 소개</a></li>
+							<li><a href="#">채용 지원하기</a></li><!-- 20210927 수정 -->
 						</ul>
 					</div>
 				</div>
@@ -1166,19 +1147,19 @@ var eFrequencyPlannerYn = 'Y';
 				
 				<!-- 150517 추가 - 문진욱 -->
 				<aside class="copyright">
-					<a class="c_00b050" href="footer/etc/privacy">개인정보처리방침</a>
-					<a href="footer/etc/rules_vod" class="mbn">영상정보처리기기 운영관리 방침</a>
-					<a href="footer/etc/rules">홈페이지 이용약관</a>
-					<a href="footer/etc/rules_loc" class="mbn">위치정보 이용약관</a>
-					<a href="footer/etc/rules_msr" class="mbn">스타벅스 카드 이용약관</a>
-					<a href="footer/etc/rules_non" class="mbn">비회원 이용약관</a>
+					<a class="c_00b050" href="#">개인정보처리방침</a>
+					<a href="#" class="mbn">영상정보처리기기 운영관리 방침</a>
+					<a href="#">홈페이지 이용약관</a>
+					<a href="#" class="mbn">위치정보 이용약관</a>
+					<a href="#" class="mbn">스타벅스 카드 이용약관</a>
+					<a href="#" class="mbn">비회원 이용약관</a>
 					<span class="br"><!-- 150713 삭제  구명준  <a href="javascript:void(0);">위치정보 이용약관</a> -->
-					<a href="footer/etc/rules_mdp">My DT Pass 서비스 이용약관</a></span> <!-- 20200914 mdp 추가 -->
-					<a href="footer/etc/hotline" class="last">윤리경영 핫라인</a>
+					<a href="#">My DT Pass 서비스 이용약관</a></span> <!-- 20200914 mdp 추가 -->
+					<a href="#" class="last">윤리경영 핫라인</a>
 					<br>
-					<a class="btned_link" href="footer/etc/coming_route">찾아오시는 길</a>
-					<a class="btned_link" href="footer/partnership/new_partner">신규입점제의</a>
-					<a class="btned_link" href="footer/etc/sitemap">사이트 맵</a><br>
+					<a class="btned_link" href="#">찾아오시는 길</a>
+					<a class="btned_link" href="#">신규입점제의</a>
+					<a class="btned_link" href="#">사이트 맵</a><br>
 					<ul class="copy_menu">
 						<li>사업자등록번호 : 201-81-21515</li>
 						<li>주식회사 에스씨케이컴퍼니 대표이사 : 송 데이비드 호섭</li> <!-- 220105 수정 -->
@@ -1482,7 +1463,7 @@ var eFrequencyPlannerYn = 'Y';
 		
 			<script>
 				$(document).ready(function () {
-					$('a[href*="card_list"] , a[href*="drink_list"] , a[href*="food_list"] , a[href*="product_list"]').on("click", function () {
+					$('a[href*="carsssd_list"] , a[href*="drink_list"] , a[href*="food_list"] , a[href*="product_list"]').on("click", function () {
 						Cookies.deleteCookie("MENU_TAB");
 						Cookies.deleteCookie("MENU_CATE");
 						Cookies.deleteCookie("MENU_OPT");
@@ -1795,7 +1776,7 @@ var eFrequencyPlannerYn = 'Y';
 				
                 var url = '/menu/productListAjax';
     			
-                   url = '/upload/json/menu/' + pro_seq + '.js';
+                   url = ${pageContext.request.contextPath} + '/upload/json/menu/' + pro_seq + '.json';
                 
                 __ajaxCall(url, option , true, "JSON", "POST",
                 function(data) {
@@ -1865,7 +1846,7 @@ var eFrequencyPlannerYn = 'Y';
 					
 	                var url = '/menu/productListAjax';
 	    			
-	                   url = '/upload/json/menu/' + cngCateCode + '.js';
+	                   url = ${pageContext.request.contextPath} + '/upload/json/menu/' + cngCateCode + '.json';
 	                
 	                __ajaxCall(url, option , true, "JSON", "POST", 
 	                function(data) {
@@ -2117,11 +2098,11 @@ var eFrequencyPlannerYn = 'Y';
         <script type="text/x-jquery-tmpl" id="tpl_productNutTr">
             <tr>
                 <td>${product_NM}</td>
-<<<<<<< HEAD
-               
-=======
-                
->>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
+                <td>${convertInfoText(kcal)}</td>
+                <td>${convertInfoText(sat_FAT)}</td>
+                <td>${convertInfoText(sodium)}</td>
+                <td>${convertInfoText(sugars)}</td>
+                <td>${convertInfoText(protein)}</td>
             </tr>
         </script>
         <script type="text/x-jquery-tmpl" id="tpl_productNutMob">
@@ -2130,39 +2111,31 @@ var eFrequencyPlannerYn = 'Y';
                 <li>
                     <dl>
                         <dt>칼로리(Kcal)</dt>
-<<<<<<< HEAD
-                       
-=======
-                        
->>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
+                        <dd>${convertInfoText(kcal)}</dd>
                     </dl>
                 </li>
                 <li>
                     <dl>
                         <dt>포화지방(g)</dt>
-                        
+                        <dd>${convertInfoText(sat_FAT)}</dd>
                     </dl>
                 </li>
                 <li>
                     <dl>
                         <dt>나트륨(mg)</dt>
-                       
+                        <dd>${convertInfoText(sodium)}</dd>
                     </dl>
                 </li>
                 <li>
                     <dl>
                         <dt>당류(g)</dt>
-<<<<<<< HEAD
-                       
-=======
-                        
->>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
+                        <dd>${convertInfoText(sugars)}</dd>
                     </dl>
                 </li>
                 <li>
                     <dl>
                         <dt>단백질(g)</dt>
-                        
+                        <dd>${convertInfoText(protein)}</dd>
                     </dl>
                 </li>
             </ul>

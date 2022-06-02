@@ -597,14 +597,12 @@ var eFrequencyPlannerYn = 'Y';
 	<li class="util_nav01 sign_out" style="display:none;"><a href="javascript:void(0);">Sign out</a></li>
 	<li class="util_nav01 sign_in"><a href="javascript:void(0);">Sign In</a></li>
 	<li class="util_nav02"><a href="my/index" required="login">My Starbucks</a></li>
-	<li class="util_nav03"><a href="util/index">Customer Service & Ideas</a></li>
+	<li class="util_nav03"><a href="menu/orderList">Order</a></li>
 	<li class="util_nav04"><a href="store/store_map">Find a Store</a></li>
 </ul>
 				</nav>
-				<p class="btn_search">
-					<a href="javascript:void(0);"><img alt="통합검색" src="common/img/common/icon_magnifier_black.png"></a>
-				</p>
-				<a href="javascript:void(0);" class="rCup3_wrap" role="button" title="마이 리워드 레이어 열기"><!-- 접근성_20171201 class, role, title 추가 --><span class="rCup3"></span></a><!-- 150714 DOM 수정 - 떨어지는 메뉴 부분에 jsMovie 추가 -->
+				
+				<!-- <a href="javascript:void(0);" class="rCup3_wrap" role="button" title="마이 리워드 레이어 열기">접근성_20171201 class, role, title 추가<span class="rCup3"></span></a>150714 DOM 수정 - 떨어지는 메뉴 부분에 jsMovie 추가 -->
 			</div>
 			<nav class="sub_gnb_nav">
 				<div class="sub_gnb_nav_inner">
@@ -653,9 +651,14 @@ var eFrequencyPlannerYn = 'Y';
 							<p class="tit">관련 제품</p>
 							<div class="productRel_wrap">
                                 <ul class="productRel_ul">
-                                <li><dl><dt><a href="javascript:void(0)" class="goView" prod="110563"><img src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[110563]_20210426095937808.jpg" alt="아이스 카페 아메리카노"></a></dt>                     <dd>                         <p class="t1">아이스 카페 아메리카노</p>                         <p class="t2">진한 에스프레소에 시원한 정수물과 얼음을 더하여 스타벅스의 깔끔하고 강렬한 에스프레소를 가장 부드럽고 시원하게 즐길 수 있는 커피</p>
-                                <p class="more_btn"><a href="javascript:void(0)" class="goView" prod="110563"><img src="//image.istarbucks.co.kr/common/img/coffee/cf_more_btn.png" alt="자세히 보기"></a></p>                     </dd>                 </dl>             </li>
-                                <li>                 <dl>                     <dt><a href="javascript:void(0)" class="goView" prod="94"><img src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[94]_20210430103337006.jpg" alt="카페 아메리카노"></a></dt>                     <dd>                         <p class="t1">카페 아메리카노</p>                         <p class="t2">진한 에스프레소와 뜨거운 물을 섞어 스타벅스의 깔끔하고 강렬한 에스프레소를 가장 부드럽게 잘 느낄 수 있는 커피 </p>                         <p class="more_btn"><a href="javascript:void(0)" class="goView" prod="94"><img src="//image.istarbucks.co.kr/common/img/coffee/cf_more_btn.png" alt="자세히 보기"></a></p>                     </dd>                 </dl>             </li>
+                                <li>
+                                	<dl>
+                                		<dt>
+                                			<a href="javascript:void(0)" class="goView" prod="110563"><img src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[110563]_20210426095937808.jpg" alt="아이스 카페 아메리카노"></a></dt>                     <dd>                         <p class="t1">아이스 카페 아메리카노</p>                         <p class="t2">진한 에스프레소에 시원한 정수물과 얼음을 더하여 스타벅스의 깔끔하고 강렬한 에스프레소를 가장 부드럽고 시원하게 즐길 수 있는 커피</p>
+                                		<p class="more_btn">
+                                			<a href="javascript:void(0)" class="goView" prod="110563"></a>
+                                		</p>                     </dd>                 </dl>             </li>
+                                <li>                 <dl>                     <dt><a href="javascript:void(0)" class="goView" prod="94"><img src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[94]_20210430103337006.jpg" alt="카페 아메리카노"></a></dt>                     <dd>                         <p class="t1">카페 아메리카노</p>                         <p class="t2">진한 에스프레소와 뜨거운 물을 섞어 스타벅스의 깔끔하고 강렬한 에스프레소를 가장 부드럽게 잘 느낄 수 있는 커피 </p>                         <p class="more_btn"><a href="javascript:void(0)" class="goView" prod="94"></a></p>                     </dd>                 </dl>             </li>
 						</div>
 					</div>
 				</div>

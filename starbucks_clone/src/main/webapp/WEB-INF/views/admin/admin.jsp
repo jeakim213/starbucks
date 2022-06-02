@@ -1,10 +1,8 @@
 ﻿<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <html lang="ko"><head>
-        
-<style>
-	#searchBtn {width:}
-</style>
+ 
 
 
 
@@ -24,7 +22,7 @@
 
 <title id="titleJoin">My Starbucks | Starbucks Korea</title> <!-- 220117 수정 -->
 <link rel="shortcut icon" href="https://image.istarbucks.co.kr/common/img/common/favicon.ico?v=200828" type="image/ico"> <!-- 20200827 파비콘 교체 및 CDN 변수처리 -->
-<link href="common/css/reset_admin.css" rel="stylesheet">
+<link href="common/css/reset.css" rel="stylesheet">
 <link href="common/css/style.css?v=210721" rel="stylesheet">
 <link href="common/css/jquery.bxslider.css" rel="stylesheet">
 <link href="common/css/idangerous.swiper.css" rel="stylesheet">
@@ -699,69 +697,9 @@ var eFrequencyPlannerYn = 'Y';
                     <div class="ms_cont">
                     
                     
-                    	<!-- 관리자 -->
-<div  class="admin_index">
-	<c:url var="root" value="/" />
-	<!-- 테이블 -->
-	
-	<c:if test="${empty sessionScope.id }">
-	<!-- <script>
-	location.href = 'index?formpath=login';
-	</script> -->
-	</c:if>
-	
-	<center>
-	
-		<table style="width: 800px;">
-			<tr>
-				<td align="center" colspan=4><h2>회원 관리</h2></td>
-			</tr>
-			<tr>
-				<td><hr></td>
-			</tr>
-		</table>
-	
-		<table style="width: 800px;">
-			<thead>
-				<tr>
-					<th style="width: 100px; height:20px;" align="left">아이디</th>
-					<th style="width: 50px; height:20px;" align="left">등급</th>
-					<th style="width: 50px; height:20px;" align="left">이름</th>
-					<th style="width: 100px; height:20px;" align="left">가입일</th>
-				</tr>
-			</thead>
-			<tr>
-				<td align="center" colspan=4><hr></td>
-			</tr>
-			<c:forEach var="db" items="${list}">
-			<tr>
-				<td style="width: 100px; height:40px;" align="left">
-					<a href="userInfoProc?id=${db.id}">${db.id}</a>
-				</td>
-				<td style="width: 50px; height:40px;" align="left">${db.grade}</td>
-				<td style="width: 50px; height:40px;" align="left">${db.name}</td>
-				<td style="width: 100px; height:40px;" align="left">${db.date}</td>
-			</tr>
-			</c:forEach>
-			<tr>
-				<td colspan=4><hr></td>
-			</tr>
-		</table>
-			이전 1 2 3 4 다음
-		<table>
-			<tr>
-				<td>
-					<select>
-						<option>아이디</option>
-						<option>이메일</option>
-					</select>
-					<input type=text id="search" name='search'/>
-					<button name='searchBtn'>검색</button>
-				</td>
-			</tr>
-		</table>
-	</center>					
-</div>
+	<!-- 관리자 -->
+					
+
 
                        
                         <!-- msr 회원 -->
@@ -962,18 +900,9 @@ var eFrequencyPlannerYn = 'Y';
 		</li> -->
 		
 		<li>
-			<a href="javascript:void(0);">사용자 관리<span class="sbox_arrow_down"></span></a>
+			<a href="javascript:void(0);">회원 관리<span class="sbox_arrow_down"></span></a>
 			<ul>
-				<li><a href="javascript:void(0);" required="login" data-href="my/reward">· 사용자 정보 수정</a></li>
-				<li><a href="javascript:void(0);" required="login" data-href="my/reward_star_history">· 사용자 정보 삭제</a></li>
-			</ul>
-		</li>
-		<li>
-			<a href="javascript:void(0);">상품<span class="sbox_arrow_down"></span></a>
-			<ul>
-				<li><a href="javascript:void(0);" required="login" data-href="my/reward">· 상품 등록</a></li>
-				<li><a href="javascript:void(0);" required="login" data-href="my/reward_star_history">· 상품 수정</a></li>
-				<li><a href="javascript:void(0);" required="login" data-href="my/reward_star_history">· 상품 삭제</a></li>
+				<li><a href="javascript:void(0);" required="login" data-href="my/reward">· 회원 목록</a></li>
 			</ul>
 		</li>
 		<li>
@@ -1016,35 +945,23 @@ var eFrequencyPlannerYn = 'Y';
 						</ul>
 						<ul>
 							<li class="footer_menu_ttl"><a class="en" href="javascript:void(0);">COMPANY<span class="footer_arrow_down"></span></a></li>
-							<li><a href="footer/company/index">한눈에 보기</a></li>
-							<li><a href="footer/company/mission">스타벅스 사명</a></li>
-							<li class="footer_2depth_ttl"><a href="javascript:void(0)">스타벅스 소개<span class="footer_arrow_down"></span></a>
-								<ul>
-									<li><a href="footer/company/starbucks_information">스타벅스 코리아</a></li> <!-- 220118 수정 -->
-									<li><a href="footer/company/starbucks_history">주요 연혁</a></li> <!-- 202107 수정 -->
-									<li><a href="footer/company/starbucks_story">스타벅스 이야기</a></li>
-								</ul>
-							</li>
-							<li><a href="footer/company/news_list">국내 뉴스룸</a></li>
-							<li><a href="footer/company/global_starbucks">세계의 스타벅스</a></li>
+							<li><a href="#">한눈에 보기</a></li>
+							<li><a href="#">스타벅스 사명</a></li>
+							<li><a href="#">스타벅스 소개</a></li>
+							<li><a href="#">국내 뉴스룸</a></li>
+							<li><a href="#">세계의 스타벅스</a></li>
 							<!-- 160811 메뉴 추가 -->
-							<li><a href="https://news.starbucks.com" target="_blank">글로벌 뉴스룸</a></li>
+							<li><a href="#">글로벌 뉴스룸</a></li>
 							<!-- 160811 메뉴 추가 end -->
 						</ul>
 						<ul>
-							<li class="footer_menu_ttl"><a class="en" id="goPage" href="javascript:void(0);">CORPORATE SALES<span class="footer_arrow_down"></span></a></li>
-							<li><a href="footer/co_sales/index">단체 및 기업 구매 안내</a></li>
-							<!-- <li><a href="footer/co_sales/sbcard_egift">스타벅스 <span class="en">e-Gift Card</span></a></li> -->
-							<!-- <li><a href="footer/co_sales/sbcard">스타벅스 카드</a></li> -->
-							<!-- <li><a href="footer/co_sales/co-branded"><span class="en">Co-branded</span> 카드</a></li> -->
-							<!-- <li><a href="footer/co_sales/sb_product">스타벅스 상품</a></li> -->
-							<!-- <li><a href="footer/co_sales/sbgift_certificate">스타벅스 상품권</a></li> -->
+							<li class="footer_menu_ttl"><a class="en" href="#">CORPORATE SALES<span class="footer_arrow_down"></span></a></li>
+							<li><a href="#">단체 및 기업 구매 안내</a></li>
 						</ul>
 						<ul>
 							<li class="footer_menu_ttl"><a class="en" href="javascript:void(0);">PARTNERSHIP<span class="footer_arrow_down"></span></a></li>
-							<li><a href="footer/partnership/new_partner">신규 입점 제의</a></li>
-							<!-- <li><a href="footer/partnership/portal_systems">협력사 포털 시스템</a></li> -->
-							<li><a href="srm/login">협력 고객사 등록신청</a></li>
+							<li><a href="#">신규 입점 제의</a></li>
+							<li><a href="#">협력 고객사 등록신청</a></li>
 						</ul>
 						<ul>
 							<li class="footer_menu_ttl"><a class="en" href="javascript:void(0);">ONLINE COMMUNITY<span class="footer_arrow_down"></span></a></li>
@@ -1055,8 +972,8 @@ var eFrequencyPlannerYn = 'Y';
 						</ul>
 						<ul>
 							<li class="footer_menu_ttl"><a class="en" href="javascript:void(0);">RECRUIT<span class="footer_arrow_down"></span></a></li>
-							<li><a href="footer/recruit/index">채용 소개</a></li>
-							<li><a href="http://job.shinsegae.com/recruit_info/notice/notice02_view.jsp?notino=5924" target="_blank">채용 지원하기</a></li><!-- 20210927 수정 -->
+							<li><a href="#">채용 소개</a></li>
+							<li><a href="#">채용 지원하기</a></li><!-- 20210927 수정 -->
 						</ul>
 					</div>
 				</div>
@@ -1071,15 +988,15 @@ var eFrequencyPlannerYn = 'Y';
 					</ul>
 				</div>
 				<!-- 수상내역 -->
-				<div class="footer_awards_wrap">
-					<div class="footer_awards_wrap_inner">		<ul class="footer_awards_slider">			<li><a taget="_blank" href="javascript:void(0);"><img alt="여섯가족부 2020 대한민국 일자리대상 여성가족부장관상" src="//image.istarbucks.co.kr/common/img/footer/footer_award23.jpg"></a></li>			<li><a taget="_blank" href="javascript:void(0);"><img alt="행정안전부 2020 소방의 날 행정안전부장관 표창" src="//image.istarbucks.co.kr/common/img/footer/footer_award24.jpg"></a></li>			<li><a taget="_blank" href="javascript:void(0);"><img alt="농림축산식품부 2020 대한민국 커피산업대상 농림축산식품부 장관상" src="//image.istarbucks.co.kr/common/img/footer/footer_award25.jpg"></a></li>			<li><a taget="_blank" href="javascript:void(0);"><img alt="산업통상자원부 2020 대한민국 중소중견기업혁신 대상 국회산업통상자원중소벤처위원회장상" src="//image.istarbucks.co.kr/common/img/footer/footer_award26.jpg"></a></li>			<li><a taget="_blank" href="javascript:void(0);"><img alt="일자리위원회 2020 대한민국 일자리 유공 표창 대통령직속 일자리위원회 부위원장상" src="//image.istarbucks.co.kr/common/img/footer/footer_award27.jpg"></a></li>			<li><a taget="_blank" href="javascript:void(0);"><img alt="동반성장위원회 2020 사랑나눔 사회공헌대상 동반성장위원회 위원장상" src="//image.istarbucks.co.kr/common/img/footer/footer_award28.jpg"></a></li>		</ul>
-						<div class="footer_slider_controller">
-							<div class="footer_slider_controls"></div>
-							<div class="footer_slider_pagers"></div>
-						</div>
-					</div>
-				</div>
-				<!-- 수상내역 end -->
+            <div class="footer_awards_wrap">
+               <div class="footer_awards_wrap_inner">
+                  <div class="footer_slider_controller">
+                     <div class="footer_slider_controls"></div>
+                     <div class="footer_slider_pagers"></div>
+                  </div>
+               </div>
+            </div>
+            <!-- 수상내역 end -->
                 
                 <!-- Express DT MSR 회원 확인 Popup -->
 				<div class="dtPop ecoPop" id="msrCheckPop" style="display: none; margin-top: -51px;">
@@ -1126,19 +1043,19 @@ var eFrequencyPlannerYn = 'Y';
 				
 				<!-- 150517 추가 - 문진욱 -->
 				<aside class="copyright">
-					<a class="c_00b050" href="footer/etc/privacy">개인정보처리방침</a>
-					<a href="footer/etc/rules_vod" class="mbn">영상정보처리기기 운영관리 방침</a>
-					<a href="footer/etc/rules">홈페이지 이용약관</a>
-					<a href="footer/etc/rules_loc" class="mbn">위치정보 이용약관</a>
-					<a href="footer/etc/rules_msr" class="mbn">스타벅스 카드 이용약관</a>
-					<a href="footer/etc/rules_non" class="mbn">비회원 이용약관</a>
+					<a class="c_00b050" href="#">개인정보처리방침</a>
+					<a href="#" class="mbn">영상정보처리기기 운영관리 방침</a>
+					<a href="#">홈페이지 이용약관</a>
+					<a href="#" class="mbn">위치정보 이용약관</a>
+					<a href="#" class="mbn">스타벅스 카드 이용약관</a>
+					<a href="#" class="mbn">비회원 이용약관</a>
 					<span class="br"><!-- 150713 삭제  구명준  <a href="javascript:void(0);">위치정보 이용약관</a> -->
-					<a href="footer/etc/rules_mdp">My DT Pass 서비스 이용약관</a></span> <!-- 20200914 mdp 추가 -->
-					<a href="footer/etc/hotline" class="last">윤리경영 핫라인</a>
+					<a href="#">My DT Pass 서비스 이용약관</a></span> <!-- 20200914 mdp 추가 -->
+					<a href="#" class="last">윤리경영 핫라인</a>
 					<br>
-					<a class="btned_link" href="footer/etc/coming_route">찾아오시는 길</a>
-					<a class="btned_link" href="footer/partnership/new_partner">신규입점제의</a>
-					<a class="btned_link" href="footer/etc/sitemap">사이트 맵</a><br>
+					<a class="btned_link" href="#">찾아오시는 길</a>
+					<a class="btned_link" href="#">신규입점제의</a>
+					<a class="btned_link" href="#">사이트 맵</a><br>
 					<ul class="copy_menu">
 						<li>사업자등록번호 : 201-81-21515</li>
 						<li>주식회사 에스씨케이컴퍼니 대표이사 : 송 데이비드 호섭</li> <!-- 220105 수정 -->
