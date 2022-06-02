@@ -665,14 +665,14 @@ var eFrequencyPlannerYn = 'Y';
 								</tbody>	
 								</table>
 								<br>
-								<input type="button" class="btn_coupon" value="쿠폰 검색"><br>
+								<input type="button" class="btn_coupon" value="쿠폰 검색" onclick="window.open('menu_coupon_popup','COUPON 적용하기','width=700 ,height=315 ,location=no,status=no, scrollbars=yes')"><br>
 							</div>
 						</div>
 						<div class="order_pay" style="margin-bottom: 50px;">
 							<h3>결제수단</h3><br>
 							<div class="order_pay_inner" style="text-align: center;">
-								<input type="button" value="스타벅스 카드" class="btn_pay" style="background: #006633; color: white">
-								<input type="button" value="Kakao Pay" class="btn_pay" style="background: #fae100;"><br>
+								<input type="button" value="스타벅스 카드" class="btn_pay" style="background: #006633; color: white" onclick="window.open('menu_starbucksCard','카드 선택하기','width=700 ,height=700 ,location=no,status=no, scrollbars=yes')">
+								<input type="button" value="Kakao Pay" class="btn_pay" style="background: #fae100;" onclick="kakaoPay()"><br>
 								<!-- <input type="image" src="common/img/menu/icon_kakaoPay.png"> -->
 							</div>
 						</div>

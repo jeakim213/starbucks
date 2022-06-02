@@ -674,7 +674,7 @@ var eFrequencyPlannerYn = 'Y';
 										</td>
 										<td style="vertical-align: middle;">
 											<select name="count" id="Sausage&Olive Mini Pie"><!-- id에서 el태그로 이름불러오기 -->
-												<option>수량선택</option>
+												<option value="">수량선택</option>
 												<option value="1">1개</option>
 												<option value="2">2개</option>
 												<option value="3">3개</option>
@@ -706,7 +706,7 @@ var eFrequencyPlannerYn = 'Y';
 										</td>
 										<td style="vertical-align: middle;">
 											<select name="count" id="Tiramisu Cream Danish">
-												<option>수량선택</option>
+												<option value="">수량선택</option>
 												<option value="1">1개</option>
 												<option value="2">2개</option>
 												<option value="3">3개</option>

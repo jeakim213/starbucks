@@ -69,14 +69,12 @@ var eFrequencyPlannerYn = 'Y';
 		<link href="common/css/skdslider.css?r=1abii2" rel="stylesheet">
 		<link href="common/css/ezmark-1.css?r=1abii2" rel="stylesheet">
 	</head>
-	<body>
-		
+	
+	<!-- 예은 수정 -->
+	<body style>
+		<div class="loading_dimm" style="z-index: 20000; display: none;"></div>
+		<div class="loading_img" style="z-index: 20001; width: 70px; height: 76px; overflow: hidden; display: none;"><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading01.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading02.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading03.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading04.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading05.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading06.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading07.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading08.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading09.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading10.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading11.png&quot;);"></div><div class="jsMovieFrame" style="display: block; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading12.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading13.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading14.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading15.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading16.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading17.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading18.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading19.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading20.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading21.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading22.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading23.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading24.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading25.png&quot;);"></div><div id="jsMovie_event_overlay" style="width: 70px; height: 152px; margin-top: -152px;"></div><div id="jsMovie_image_preload_container"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading01.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading02.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading03.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading04.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading05.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading06.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading07.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading08.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading09.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading10.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading11.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading12.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading13.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading14.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading15.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading16.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading17.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading18.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading19.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading20.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading21.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading22.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading23.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading24.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading25.png" alt="" style="height: 1px; width: 1px;"></div></div>
 		<div class="pop_up_dimm" style="display:none"></div>
-				
-		 		
-		
-		
-		
 		<div id="wrap">
 			
 <script>
@@ -625,18 +623,20 @@ var eFrequencyPlannerYn = 'Y';
 								<!-- 길찾기 수정 - 160422 -->
 								<section class="find_store_wrap">
 									<header class="find_store_header">
-										<h2 class="btn_find_store"><a href="javascript:void(0);">매장찾기</a></h2>
+										<h2 class="btn_find_store">
+										<a href="javascript:void(0);">매장찾기</a>
+										</h2>
 									</header>
 									<article class="find_store_cont">
 										<header class="find_store_cont_header">
 											<p class="btn_opt_chk"><a href="javascript:void(0);">옵션 선택</a></p>
 											<span class="map_layer_toggle"><a href="javascript:void(0);">열기</a></span>
 										</header>
-										<article class="store_map_layer_cont">
+										<article class="store_map_layer_cont" style="display: block;">
 											<header class="quick_search">
-												<h3 class="on"><a href="javascript:void(0);">퀵 검색</a></h3>
+												<h3 class><a href="javascript:void(0);">퀵 검색</a></h3>
 											</header>
-											<article>
+											<article style="display:none;">
 												<div class="quick_search_input">
 													<div class="quick_search_inner">
 														<input placeholder="매장명 또는 주소" title="퀵 검색" type="text" name="quickSearchText" id="quickSearchText">
@@ -653,34 +653,76 @@ var eFrequencyPlannerYn = 'Y';
 													<!-- 검색결과 없는 경우 -->
 													<!--p class="no_result">검색 결과가 없습니다.</p-->
 													<!-- 검색결과 있는 경우 -->
-													<div class="result_list scrollbar-inner quickScrollWrap">
-														<ul class="quickSearchResultBox">
-														</ul>
+													<div class="result_list scrollbar-inner quickScrollWrap mCustomScrollbar _mCS_1 mCS_no_scrollbar">
+														<div id="mCSB_1" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside" tabindex="0">
+															<div id="mCSB_1_container" class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y" style="position:relative; top:0; left:0;" dir="ltr">
+																<ul class="quickSearchResultBox"></ul>
+															</div>
+															<div id="mCSB_1_scrollbar_vertical" class="mCSB_scrollTools mCSB_1_scrollbar mCS-light mCSB_scrollTools_vertical" style="display: none;">
+																<div class="mCSB_draggerContainer">
+																<div id="mCSB_1_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 30px; top: 0px;" oncontextmenu="return false;">
+																	<div class="mCSB_dragger_bar" style="line-height: 30px;"></div>
+																</div>
+																<div class="mCSB_draggerRail"></div>
+															</div>
+														</div>
 													</div>
 												</div>
 											</article>
 											<header class="loca_search">
-												<h3><a href="javascript:void(0);">지역 검색</a></h3>
+												<h3 class="on">
+													<a href="javascript:void(0);">지역 검색</a></h3>
 											</header>
-											<article>
+											<article style="display: block;">
 												<div class="loca_step1">
 													<div class="loca_step1_ttl">STEP 1 : 시/도를 선택해 주세요.</div>
 													<div class="loca_step1_cont">
 														<ul class="sido_arae_box">
+															<li><a href="javascript:void(0);" class="set_sido_cd_btn" data-sidocd="01">서울</a></li>
+															<li><a href="javascript:void(0);" class="set_sido_cd_btn" data-sidocd="08">경기</a></li>
+															<li><a href="javascript:void(0);" class="set_sido_cd_btn" data-sidocd="02">광주</a></li>
+															<li><a href="javascript:void(0);" class="set_sido_cd_btn" data-sidocd="03">대구</a></li>
+															<li><a href="javascript:void(0);" class="set_sido_cd_btn" data-sidocd="04">대전</a></li>
+															<li><a href="javascript:void(0);" class="set_sido_cd_btn" data-sidocd="05">부산</a></li>
+															<li><a href="javascript:void(0);" class="set_sido_cd_btn" data-sidocd="06">울산</a></li>
+															<li><a href="javascript:void(0);" class="set_sido_cd_btn" data-sidocd="07">인천</a></li>
+															<li><a href="javascript:void(0);" class="set_sido_cd_btn" data-sidocd="09">강원</a></li>
+															<li><a href="javascript:void(0);" class="set_sido_cd_btn" data-sidocd="10">경남</a></li>
+															<li><a href="javascript:void(0);" class="set_sido_cd_btn" data-sidocd="11">경북</a></li>
+															<li><a href="javascript:void(0);" class="set_sido_cd_btn" data-sidocd="12">전남</a></li>
+															<li><a href="javascript:void(0);" class="set_sido_cd_btn" data-sidocd="13">전북</a></li>
+															<li><a href="javascript:void(0);" class="set_sido_cd_btn" data-sidocd="14">충남</a></li>
+															<li><a href="javascript:void(0);" class="set_sido_cd_btn" data-sidocd="15">충북</a></li>
+															<li><a href="javascript:void(0);" class="set_sido_cd_btn" data-sidocd="16">제주</a></li>
+															<li><a href="javascript:void(0);" class="set_sido_cd_btn" data-sidocd="17">세종</a></li>
 														</ul>
 													</div>
 												</div>
-												<div class="loca_step2">
+												<div class="loca_step2" style="display: none;">
 													<div class="loca_step2_ttl">STEP 2 : 구/군을 선택해 주세요.</div>
-													<div class="result_num_wrap3"><a class="btn_prev" href="javascript:void(0);">앞으로</a><strong class="sidoSelectName">서울</strong></div>
+													<div class="result_num_wrap3">
+														<a class="btn_prev" href="javascript:void(0);">앞으로</a>
+														<strong class="sidoSelectName">서울</strong>
+													</div>
 													<div class="loca_step2_cont">
-														<div class="loca_step2_frame scrollbar-inner">
-															<ul class="gugun_arae_box">
-															</ul>
+														<div class="loca_step2_frame scrollbar-inner mCustomScrollbar _mCS_2 mCS_no_scrollbar">
+															<div id="mCSB_2" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside" tabindex="0">
+																<div id="mCSB_2_container" class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y" style="position:relative; top:0; left:0;" dir="ltr">
+																	<ul class="gugun_arae_box"></ul>
+															</div>
+															<div id="mCSB_2_scrollbar_vertical" class="mCSB_scrollTools mCSB_2_scrollbar mCS-light mCSB_scrollTools_vertical" style="display: none;">
+																<div class="mCSB_draggerContainer">
+																	<div id="mCSB_2_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 30px; top: 0px;" oncontextmenu="return false;">
+																		<div class="mCSB_dragger_bar" style="line-height: 30px;"></div>
+																	</div>
+																<div class="mCSB_draggerRail"></div>
+															</div>
 														</div>
 													</div>
 												</div>
-												<div class="loca_step3">
+											</div>
+										</div>
+												<div class="loca_step3" style="display : none;">
 													<div class="result_num_wrap">
 														<!-- 검색결과 없는 경우 -->
 														<!--strong>검색 결과</strong>(<span class="en t_006633">0</span>개)-->
@@ -691,17 +733,31 @@ var eFrequencyPlannerYn = 'Y';
 														<!-- 검색결과 없는 경우 -->
 														<!--p class="no_result">검색 결과가 없습니다.</p-->
 														<!-- 검색결과 있는 경우 -->
-														<div class="result_list scrollbar-inner">
+														<div class="result_list scrollbar-inner mCustomScrollbar _mCS_3 mCS_no_scrollbar">
+															<div id="mCSB_3" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside" tabindex="0">
+																<div id="mCSB_3_container" class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y" style="position:relative; top:0; left:0;" dir="ltr">
 															<ul class="quickSearchResultBoxSidoGugun">
 															</ul>
 														</div>
+													<div id="mCSB_3_scrollbar_vertical" class="mCSB_scrollTools mCSB_3_scrollbar mCS-light mCSB_scrollTools_vertical" style="display: none;">
+														<div class="mCSB_draggerContainer">
+															<div id="mCSB_3_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 30px; top: 0px;" oncontextmenu="return false;">
+																<div class="mCSB_dragger_bar" style="line-height: 30px;"></div>
+															</div>
+																<div class="mCSB_draggerRail"></div>
+															</div>
+														</div>
 													</div>
 												</div>
-											</article>
-										</article>
+											</div>
+										</div>
+									</article>
+								</article>
 									</article>
 									<header class="find_road_header">
-										<h2 class="btn_find_road"><a href="javascript:void(0);">길찾기</a></h2>
+										<h2 class="btn_find_road">
+										<a href="javascript:void(0);">길찾기</a>
+										</h2>
 									</header>
 									<article class="find_road_cont">
 										<header class="find_road_cont_header">
@@ -783,9 +839,11 @@ var eFrequencyPlannerYn = 'Y';
 													<header class="transfer_method_tab1">
 														<h3><a class="road_find_btn roadFindStartBtn" data-target="car" href="javascript:void(0);">자동차</a></h3>
 													</header>
-													<article class="transfer_method_cont1">
-														<div class="desti_top_wrap carFindRoad" style="display:none">
-															<strong class="desti_top_ttl car_find_endName">스타벅스 영풍문고점</strong>
+													<article class="transfer_method_cont1 mCustomScrollbar _mCS_4 mCS_no_scrollbar">
+														<div id="mCSB_4" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside" tabindex="0">
+															<div id="mCSB_4_container" class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y" style="position:relative; top:0; left:0;" dir="ltr">
+																<div class="desti_top_wrap carFindRoad" style="display:none">
+																	<strong class="desti_top_ttl car_find_endName">스타벅스 영풍문고점</strong>
 															<p class="desti_top_dist">
 																<span class="car_find_min"></span>&nbsp;&nbsp;<strong class="car_find_lengtn"></strong>km
 															</p>
@@ -807,38 +865,61 @@ var eFrequencyPlannerYn = 'Y';
 															<dt>도착</dt>
 															<dd><p class="car_find_endName"></p></dd>
 														</dl>
-													</article>
-													<header class="transfer_method_tab2">
-														<h3><a class="road_find_btn roadFindStartBtn" data-target="transport" href="javascript:void(0);">대중교통</a></h3>
-													</header>
-													<article class="transfer_method_cont2" style="display:none">
-														<div class="desti_top_wrap 	carFindRoad" style="display:none">
-															<strong class="desti_top_ttl car_find_endName">스타벅스 영풍문고점</strong> 
-															<p class="desti_top_dist trafficViewInfo">전체:00 | 버스:00 | 지하철:00 | 버스+지하철:00</p>
-															<!--p class="desti_top_dist"><strong>8</strong>분&nbsp;&nbsp;<strong>1.7</strong>km</p-->
+													</div>
+													<div id="mCSB_4_scrollbar_vertical" class="mCSB_scrollTools mCSB_4_scrollbar mCS-light mCSB_scrollTools_vertical" style="display: none;">
+														<div class="mCSB_draggerContainer">
+															<div id="mCSB_4_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 30px; top: 0px;" oncontextmenu="return false;">
+																<div class="mCSB_dragger_bar" style="line-height: 30px;"></div>
+															</div>
+																<div class="mCSB_draggerRail"></div>
+															</div>
 														</div>
+													</div>
+												</article>
+													<header class="transfer_method_tab2">
+														<h3>
+															<a class="road_find_btn roadFindStartBtn" data-target="transport" href="javascript:void(0);">대중교통</a>
+														</h3>
+													</header>
+													<article class="transfer_method_cont2 mCustomScrollbar _mCS_5 mCS_no_scrollbar" style="display:none">
+														<div id="mCSB_5" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside" tabindex="0">
+															<div id="mCSB_5_container" class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y" style="position:relative; top:0; left:0;" dir="ltr">
+																<div class="desti_top_wrap 	carFindRoad" style="display:none">
+																	<strong class="desti_top_ttl car_find_endName">스타벅스 영풍문고점</strong> 
+																	<p class="desti_top_dist trafficViewInfo">전체:00 | 버스:00 | 지하철:00 | 버스+지하철:00</p>
+																	<!--p class="desti_top_dist"><strong>8</strong>분&nbsp;&nbsp;<strong>1.7</strong>km</p-->
+																</div>
 														
-														<div class="desti_top_wrap carFindRoadErr" style="display:none">
+															<div class="desti_top_wrap carFindRoadErr" style="display:none">
 															<p class="icon_exclam">직선거리가 <strong>30km</strong> 이내인 경우에 한하여 도보 찾기 결과를 제공합니다.</p>
 														</div>														
 
-														<div class="trafficSummery">
-														
-														
+															<div class="trafficSummery"></div>
 														</div>
-														
-														
-																												
+														<div id="mCSB_5_scrollbar_vertical" class="mCSB_scrollTools mCSB_5_scrollbar mCS-light mCSB_scrollTools_vertical" style="display: none;">
+															<div class="mCSB_draggerContainer">
+																<div id="mCSB_5_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 30px; top: 0px;" oncontextmenu="return false;">
+																	<div class="mCSB_dragger_bar" style="line-height: 30px;"></div>
+																</div>
+																<div class="mCSB_draggerRail"></div>
+																</div>
+															</div>
+														</div>
 													</article>
-													
+														
 													
 													<header class="transfer_method_tab3">
 														<h3><a class="road_find_btn roadFindStartBtn" data-target="foot" href="javascript:void(0);">도보</a></h3>
 													</header>
-													<article class="transfer_method_cont3" style="display:none">
-														<div class="desti_top_wrap carFindRoad" style="display:none">
-															<strong class="desti_top_ttl foot_find_endName">스타벅스 영풍문고점</strong>
-															<p class="desti_top_dist"><span class="foot_find_min"></span>&nbsp;&nbsp;<strong class="foot_find_lengtn"></strong>km</p>
+													<article class="transfer_method_cont3 mCustomScrollbar _mCS_6 mCS_no_scrollbar" style="display: block;">
+														<div id="mCSB_6" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside" tabindex="0">
+															<div id="mCSB_6_container" class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y" style="position:relative; top:0; left:0;" dir="ltr">
+																<div class="desti_top_wrap carFindRoad" style="display:none">
+																	<strong class="desti_top_ttl foot_find_endName">스타벅스 영풍문고점</strong>
+																	<p class="desti_top_dist">
+																		<span class="foot_find_min"></span>
+																		&nbsp;&nbsp;
+																		<strong class="foot_find_lengtn"></strong>km</p>
 														</div>
 														<div class="desti_top_wrap carFindRoadErr" style="display:none">
 															<p class="icon_exclam">직선거리가 <strong>30km</strong> 이내인 경우에 한하여 도보 찾기 결과를 제공합니다.</p>
@@ -848,14 +929,22 @@ var eFrequencyPlannerYn = 'Y';
 															<dt>출발</dt>
 															<dd><p class="foot_find_startName"></p></dd>
 														</dl>
-														<ul class="road_found_list">
-															
-														</ul>
+														<ul class="road_found_list"></ul>
 														<dl class="bg_start_desti carFindRoad" style="display:none">
 															<dt>도착</dt>
 															<dd><p class="foot_find_endName"></p></dd>
 														</dl>														
-													</article>
+													</div>
+													<div id="mCSB_6_scrollbar_vertical" class="mCSB_scrollTools mCSB_6_scrollbar mCS-light mCSB_scrollTools_vertical" style="display: none;">
+														<div class="mCSB_draggerContainer">
+															<div id="mCSB_6_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 30px; top: 0px;" oncontextmenu="return false;">
+																<div class="mCSB_dragger_bar" style="line-height: 30px;"></div>
+															</div>
+															<div class="mCSB_draggerRail"></div>
+														</div>
+													</div>
+												</div>
+											</article>
 												</section>
 											</div>
 										</article>
@@ -870,10 +959,10 @@ var eFrequencyPlannerYn = 'Y';
 </div>
 
 
-<section class="store_map_wrap" id="storeMap" style="display:block">
+<section class="store_map_wrap" id="storeMap" style="display: block; position: relative; overflow: hidden; background: url(&quot;https://t1.daumcdn.net/mapjsapi/images/2x/bg_tile.png&quot;);">
 
 	<!-- 길찾기 추가 -->
-	<div class="inmap_short_info_wrap" sid="-1">
+	<div class="inmap_short_info_wrap" sid="-1" style="display:none" >
 		<div class="iTrafficSubView1" style="display:none">
 			<div class="inmap_short_info_l">
 				<p class="public_trans_time"><strong class="iv_t_time">11</strong>(도보 <span class="iv_t_walk"></span>, <span class="iv_t_transfer"></span>)</p>
@@ -893,10 +982,10 @@ var eFrequencyPlannerYn = 'Y';
 
 	</div>
 	<!-- 길찾기 추가 end -->
-
+<!-- 예은 -->
 	<form method="post">
 		<fieldset>
-			<p class="btn_opt_chk btn_opt_chk1"><a href="javascript:void(0);">검색 옵션</a></p>
+			<p class="btn_opt_chk btn_opt_chk1" style="display: none;"><a href="javascript:void(0);">검색 옵션</a></p>
 			<!-- 옵션선택 -->
 			<div class="opt_select_pop">
 				<div class="opt_select_ttl">옵션 선택<a href="javascript:void(0);" class="optionViewClose">닫기</a></div>
@@ -908,7 +997,9 @@ var eFrequencyPlannerYn = 'Y';
 				</ul>
 				
 								
-				<div class="opt_select_cont scrollbar-inner">
+				<div class="opt_select_cont scrollbar-inner mCustomScrollbar _mCS_7 mCS_no_scrollbar">
+					<div id="mCSB_7" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside" tabindex="0">
+						<div id="mCSB_7_container" class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y" style="position:relative; top:0; left:0;" dir="ltr">
 				
 					<!-- 150904 수정 -->
 					<div class="all_store_wrap">
@@ -1041,7 +1132,37 @@ var eFrequencyPlannerYn = 'Y';
 	
 	<!-- 150805 추가 구명준 -->
 	<!-- p class="btn_opt_chk btn_opt_chk3"><a href="javascript:void(0);">옵션 선택</a></p -->
+<div style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; touch-action: none; cursor: url(&quot;https://t1.daumcdn.net/mapjsapi/images/cursor/openhand.cur.ico&quot;) 7 5, url(&quot;https://t1.daumcdn.net/mapjsapi/images/cursor/openhand.cur.ico&quot;), default;">
+	<div style="position: absolute;">
+	<div style="position: absolute; z-index: 0; left: 0px; top: 0px;"></div>
+	<div style="position: absolute; z-index: 1; left: 0px; top: 0px;"></div>
+	<div style="position: absolute; z-index: 1;"></div>
+	<div style="position: absolute; z-index: 1; width: 1519px; height: 631px;"></div>
+	<div style="position: absolute; z-index: 1;">
+		<svg version="1.1" style="stroke: none; stroke-dashoffset: 0.5; stroke-linejoin: round; fill: none; transform: translateZ(0px); position: absolute; left: -3038px; top: -1262px; width: 7595px; height: 3155px;" viewBox="0 0 7595 3155">
+			<defs></defs>
+		</svg>
+	</div>
+		<div style="position: absolute; z-index: 1; width: 100%; height: 0px; transform: translateZ(0px);">
+		</div>
+	</div>
+</div>
+	<div style="position: absolute; cursor: default; z-index: 1; margin: 0px 6px; height: 19px; line-height: 14px; left: 0px; bottom: 0px; color: rgb(0, 0, 0);">
+		<div style="color: rgb(0, 0, 0); text-align: center; font-size: 10px; float: left;">
+			<div style="float: left; margin: 2px 3px 0px 4px; height: 6px; transition: width 0.1s ease 0s; border-top: none rgb(0, 0, 0); border-right: 2px solid rgb(0, 0, 0); border-bottom: 2px solid rgb(0, 0, 0); border-left: 2px solid rgb(0, 0, 0); border-image: initial; width: 46px;"></div>
+		<div style="float: left; margin: 0px 4px 0px 0px; font-family: AppleSDGothicNeo-Regular, 돋움, dotum, sans-serif; font-weight: bold; color: rgb(0, 0, 0);">50m</div>
+	</div>
+		<div style="margin: 0px 4px; float: left;">
+			<a target="_blank" href="http://map.kakao.com/" title="Kakao 지도로 보시려면 클릭하세요." style="float: left; width: 32px; height: 10px;">
+				<img src="https://t1.daumcdn.net/mapjsapi/images/m_bi_b.png" alt="Kakao 지도로 이동" style="float: left; width: 32px; height: 10px; border: none;">
+			</a>
+			<div style="font: 11px / 11px Arial, Tahoma, Dotum, sans-serif; float: left;"></div>
+		</div>
+	</div>
+	<div style="cursor: auto; position: absolute; z-index: 2; left: 0px; top: 0px;"></div>
 </section>
+
+	
 <!-- 스토어 맵 end -->
 
 <script type="text/javascript">
@@ -1604,10 +1725,10 @@ var eFrequencyPlannerYn = 'Y';
 			var $store_pop = "window";
 			</script>
 			
-
-
-<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=247bf84c5755624615df524ae2cfc331&libraries=services"></script>
-<script src="common/js/jquery.async.min.js"></script>
+<!-- 0601 예은 수정 -->
+<script type="text/javascript" src="v2/maps/sdk.js?appkey=247bf84c5755624615df524ae2cfc331" &libraries="LIBRARY"></script>
+			<script charset="UTF-8" src="https://t1.daumcdn.net/mapjsapi/js/main/4.4.3/kakao.js"></script>
+			<script src="common/js/jquery.async.min.js"></script>
 
 
 <script src="common/js/store/store_map.js?v=20190129"></script>
@@ -1670,9 +1791,9 @@ var eFrequencyPlannerYn = 'Y';
 					$('.find_store_header h2.btn_find_store a').click(function(){
 						
 						$parentMenuType = "A";
-
+		
 						$(".btn_storemap_quick").show();
-						
+									
 						$(this).css({
 							'background':'url("common/img/store/btn_find_store_on.png") center center no-repeat #006633'
 						});
@@ -1777,17 +1898,21 @@ var eFrequencyPlannerYn = 'Y';
 					
 					
 					$('.find_road_header h2.btn_find_road a').click(function(){
+						//0601 예은 이미지없어!
 						
 						$parentMenuType = "B";
 						$(".btn_storemap_quick").hide();
 						$roadResult = false;
 						$(this).css({
-							'background':'url("common/img/store/btn_find_road_on.png") center center no-repeat #006633'
+							'background':'url("common/img/store/btn_find_road_on.png") center center no-repeat #006633',
+							
 						});
 						$('.find_store_header h2.btn_find_store a').css({
+							
 							'background':'url("common/img/store/btn_find_store_off.png") center center no-repeat #f4f4f2'
-						});
-
+						}); 
+						
+					
 				
 						var myWin = $(window).width();
 						if (myWin <= 640) 
@@ -1800,7 +1925,7 @@ var eFrequencyPlannerYn = 'Y';
 							$('.find_store_cont').hide();
 							$(".store_map_layer_cont").hide();
 							$(".road_map_layer_cont").show();
-						
+							
 							roadMapShow = false;
 						}
 						else
@@ -1813,7 +1938,7 @@ var eFrequencyPlannerYn = 'Y';
 							$('.find_store_cont').hide();
 							$(".store_map_layer_cont").hide();
 							$(".road_map_layer_cont").show();
-						
+							
 							roadMapShow = false;
 						}
 
@@ -2791,5 +2916,7 @@ var eFrequencyPlannerYn = 'Y';
 		</script>
 		<script src="common/js/store/store_view.js?v=210423"></script>
 </div>
+	<div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div></div></div></div>
+
 </body>
 </html>
