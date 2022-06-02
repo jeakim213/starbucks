@@ -789,7 +789,30 @@ var eFrequencyPlannerYn = 'Y';
 		</tr>
 		<tr>
 			<td width=90 align='right' height=40>등급</td>
-			<td><input class="text" type=text name='email' value="${user.email }"/></td>
+			<td>
+				<c:choose>
+					<c:when test="${user.grade == 'wc' }">
+						<input class="radio" type=radio name='grade' value='wc' checked="checked"/>Welcome&nbsp;
+						<input type=radio name='grade' value='gr'/>&nbsp;Green&nbsp;
+						<input type=radio name='grade' value='gd'/>&nbsp;Gold
+					</c:when>
+					<c:when test="${user.grade == 'gr' }">
+						<input class="radio" type=radio name='grade' value='wc'/>Welcome&nbsp;
+						<input type=radio name='grade' value='gr' checked="checked"/>&nbsp;Green&nbsp;
+						<input type=radio name='grade' value='gd'/>&nbsp;Gold
+					</c:when>
+					<%-- <c:when test="${user.grade == 'gd' }">
+						<input class="radio" type=radio name='grade' value='wc'/>Welcome&nbsp;
+						<input type=radio name='grade' value='gr'/>&nbsp;Green&nbsp;
+						<input type=radio name='grade' value='gd' checked="checked"/>&nbsp;Gold
+					</c:when> --%>
+					<c:otherwise>
+						<input class="radio" type=radio name='grade' value='wc'/>Welcome&nbsp;
+						<input type=radio name='grade' value='gr'/>&nbsp;Green&nbsp;
+						<input type=radio name='grade' value='gd' checked="checked"/>&nbsp;Gold
+					</c:otherwise>
+				</c:choose>
+			</td>
 		</tr>
 		<tr>
 			<td width=90 align='right' height=40>별</td>
@@ -797,7 +820,25 @@ var eFrequencyPlannerYn = 'Y';
 		</tr>
 		<tr>
 			<td width=90 align='right' height=40>개인컵</td>
-			<td><input class="text" type=text name='email' value="${user.email }"/></td>
+			<td>
+				<c:choose>
+					<c:when test="${user.cupreward == 'e' }">
+						<input class="radio" type=radio name='cupreward' value='e' checked="checked"/>에코 보너스 스타 적립&nbsp;
+						<input type=radio name='cupreward' value='s'>&nbsp;300원 할인&nbsp;
+						<input type=radio name='cupreward' value='n'>&nbsp;선택 안 함
+					</c:when>
+					<c:when test="${user.cupreward == 's' }">
+						<input class="radio" type=radio name='cupreward' value='e'/>에코 보너스 스타 적립&nbsp;
+						<input type=radio name='cupreward' value='s' checked="checked"/>&nbsp;300원 할인&nbsp;
+						<input type=radio name='cupreward' value='n'/>&nbsp;선택 안함
+					</c:when>
+					<c:otherwise>
+						<input class="radio" type=radio name='cupreward' value='e'/>에코 보너스 스타 적립&nbsp;
+						<input type=radio name='cupreward' value='s'/>&nbsp;300원 할인&nbsp;
+						<input type=radio name='cupreward' value='n' checked="checked"/>&nbsp;선택 안함
+					</c:otherwise>
+				</c:choose>
+			</td>
 		</tr>
 		<tr>
 			<td align='center' height=40 colspan=4>
