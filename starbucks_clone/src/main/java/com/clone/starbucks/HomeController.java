@@ -1,14 +1,25 @@
 package com.clone.starbucks;
 
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.Locale;
 
+import org.apache.ibatis.annotations.Param;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.google.gson.Gson;
+import com.google.gson.JsonObject;
 
 /**
  * Handles requests for the application home page.
@@ -23,12 +34,26 @@ public class HomeController {
 		return "index";
 	}
 	
+	//admin
+	@RequestMapping(value="memberListForm")
+	public String memberListForm() {
+		return "admin/memberListForm";
+	}
+	
+	@RequestMapping(value="userInfoForm")
+	public String userInfoForm() {
+		return "admin/userInfoForm";
+	}
+	
+	@RequestMapping(value="modifyCheckForm")
+	public String modifyCheckForm() {
+		return "admin/modifyCheckForm";
+	}
 	
 	//coffee
 	@RequestMapping(value="americano")
 	public String americano() {
 		return "coffee/americano";
-	
 	}
 	
 	@RequestMapping(value="cappuccino")
@@ -45,7 +70,15 @@ public class HomeController {
 	public String doppio() {
 		return "coffee/doppio";
 	}
+<<<<<<< HEAD
 	
+=======
+<<<<<<< HEAD
+
+=======
+	
+>>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
+>>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
 	@RequestMapping(value="latte")
 	public String latte() {
 		return "coffee/latte";
@@ -76,7 +109,7 @@ public class HomeController {
 		return "coffee/productFinder";
 	}
 	
-	//footer/co_sales
+	
 	//login
 	@RequestMapping(value="login_login")
 	public String login() {
@@ -142,51 +175,79 @@ public class HomeController {
 		return "menu/drink_view_coldbrew2";
 	}
 	
-	@RequestMapping(value="menu_food_list")
+	@RequestMapping(value="menu/food_list")
 	public String food_list() {
 		return "menu/food_list";
 	}
 	
-	@RequestMapping(value="menu_food_list_1")
-	public String food_list_1() {
+	@RequestMapping(value="menu_food_list_1") //카테고리 코드를 받아 해당 카테고리만 뿌린다.
+	public String food_list_1(String CATE_CD) {
 		return "menu/food_list-1";
 	}
 	
 	@RequestMapping(value="menu_food_list_2")
-	public String food_list_2() {
+	public String food_list_2(String CATE_CD) {
 		return "menu/food_list-2";
 	}
 	
 	@RequestMapping(value="menu_food_list_3")
-	public String food_list_3() {
+	public String food_list_3(String CATE_CD) {
 		return "menu/food_list-3";
 	}
 	
 	@RequestMapping(value="menu_food_list_4")
-	public String food_list_4() {
+	public String food_list_4(String CATE_CD) {
 		return "menu/food_list-4";
 	}
 	
 	@RequestMapping(value="menu_food_list_5")
-	public String food_list_5() {
+	public String food_list_5(String CATE_CD) {
 		return "menu/food_list-5";
 	}
 	
 	@RequestMapping(value="menu_food_list_6")
-	public String food_list_6() {
+	public String food_list_6(String CATE_CD) {
 		return "menu/food_list-6";
 	}
 	
 	@RequestMapping(value="menu_food_list_7")
-	public String food_list_7() {
+	public String food_list_7(String CATE_CD) {
 		return "menu/food_list-7";
 	}
 	
 	
+	//0531 13 다정
+	@RequestMapping(value="menu_food_view")
+	public String food_view() {
+		return "menu/food_view";
+	}
+	
+	//0531 14 다정
+	@RequestMapping(value="menu_product_view")
+	public String product_view() {
+		return "menu/product_view";
+	}
+	
+	@RequestMapping(value="menu_drink_view")
+	public String drink_view() {
+		return "menu/drink_view";
+	}
+	
 	//0531 다정
-	@RequestMapping(value="orderList")
+	@RequestMapping(value="menu_orderList")
 	public String orderList() {
 		return "menu/orderList";
+	}
+	
+	//0601 다정
+	@RequestMapping(value="menu_starbucksCard")
+	public String starbucksCard() {
+		return "menu/starbucksCard";
+	}
+	
+	@RequestMapping(value="menu_coupon_popup")
+	public String coupon_popup(){
+		return "menu/coupon_popup";
 	}
 	
 	
@@ -281,13 +342,27 @@ public class HomeController {
 	public String scard_register_inquiry() {
 		return "msr/scard/register_inquiry";
 	}
+<<<<<<< HEAD
 	
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
 
+>>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
+
+<<<<<<< HEAD
+=======
 	/*@RequestMapping(value="scard_scard_gallery")
 	public String scard_scard_gallery() {
 		return "msr/scard/scard_gallery";
 	}
 	*/
+<<<<<<< HEAD
+=======
+
+>>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
+>>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
 
 	@RequestMapping(value="sceGift_egift_information")
 	public String sceGift_egift_information() {
@@ -303,7 +378,36 @@ public class HomeController {
 	public String sceGift_msr_useguide() {
 		return "msr/sceGift/msr_useguide";
 	}
+	
 	//my
+	
+	
+
+	@RequestMapping(value="admin_3")
+	public String admin_3() {
+		return "my/admin_3";
+
+	}
+	
+
+	@RequestMapping(value="admin_4")
+	public String admin_4() {
+		return "my/admin_4";
+
+	}
+	
+
+	@RequestMapping(value="admin_5")
+	public String admin_5() {
+		return "my/admin_5";
+
+	}
+	
+
+	@RequestMapping(value="admin_6")
+	public String admin_6() {
+		return "my/admin_6";
+	}
 
 	@RequestMapping(value="admin_3")
 	public String admin_3() {
@@ -426,10 +530,81 @@ public class HomeController {
 	public String store_reserve() {
 		return "store/store_reserve";
 	}
+<<<<<<< HEAD
+
+
+=======
 	
 	@RequestMapping(value="store_star_field")
 	public String store_star_field() {
 		return "store/store_star_field";
 	}
 	
+<<<<<<< HEAD
+=======
+	@RequestMapping(value="util_app_tip")
+	public String app_tip() {
+		return "util/app_tip";
+	}
+	
+	@RequestMapping(value="util_faq")
+	public String faq() {
+		return "util/faq";
+	}
+	
+	@RequestMapping(value="faq_1")
+	public String faq_1() {
+		return "community/faq-1";
+	}
+	
+	@RequestMapping(value="util_guest_eReceipt")
+	public String guest_eReceipt() {
+		return "util/guest_eReceipt";
+	}
+	
+	@RequestMapping(value="util_online_survey")
+	public String online_survey() {
+		return "util/online_survey";
+	}
+	
+	@RequestMapping(value="util_partnership_card")
+	public String partnership_card() {
+		return "util/partnership_card";
+	}
+	
+	@RequestMapping(value="util_storecareList")
+	public String storecareList() {
+		return "util/storecareList";
+	}
+	
+	@RequestMapping(value="util_web_tip")
+	public String web_tip() {
+		return "util/web_tip";
+	}
+	
+	//whats_new
+	@RequestMapping(value="whats_new_campaign_list")
+	public String campaign_list() {
+		return "whats_new/campaign_list";
+	}
+	
+	@RequestMapping(value="whats_new_campaign_list_1")
+	public String campaign_list_1() {
+		return "whats_new/campaign_list-1";
+	}
+>>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
+	
+	//ajax-지혜
+	@ResponseBody
+	@PostMapping(value="upload/json/menu/{path}")//, produces="application/json; charset=UTF-8"
+	public String ajaxMapping(@PathVariable String path) throws FileNotFoundException, IOException {
+		String mappingPath = "upload/json/menu/" + path + ".json";
+		System.out.println(path);
+		ClassPathResource resource = new ClassPathResource(mappingPath);
+		FileReader reader = new FileReader(resource.getFile());
+		Gson gson = new Gson();
+		JsonObject obj = gson.fromJson(reader, JsonObject.class);
+		return obj.toString();
+	}
+>>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
 }

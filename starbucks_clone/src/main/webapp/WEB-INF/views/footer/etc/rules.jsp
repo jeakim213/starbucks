@@ -443,7 +443,7 @@ var eFrequencyPlannerYn = 'Y';
 							<p class="msr_user_mask msr_user_mask04"></p>
 						</div>
 						<p class="user_greet_txt"><strong><!-- 홍길동 --></strong>님, 안녕하세요!</p>
-						<p class="msr_btn_setting"><a href="/my/myinfo_modify_login">개인정보 수정</a></p>
+						<p class="msr_btn_setting"><a href="my/myinfo_modify_login">개인정보 수정</a></p>
 					</div>
 					<!-- 유저인포 end -->
 					<span class="msr_sep_line"></span>
@@ -451,7 +451,7 @@ var eFrequencyPlannerYn = 'Y';
 					<!-- 유저레벨 -->
 					<!-- MSR 회원 -->
 					<div class="user_level" style="display:none;">
-						<a href="/my/reward">
+						<a href="my/reward">
 							<p class="level_star_bg en">0</p>
 							<p class="user_level_txt"><!-- <strong class="t_ac8432 en userGrade">Gold Level</strong><br /><strong>무료음료</strong> 획득 별까지<br><strong class="necessaryStar">0개</strong> 남았습니다. --></p>
 						</a>
@@ -460,7 +460,7 @@ var eFrequencyPlannerYn = 'Y';
 					
 					<!-- 일반회원 -->
 					<div class="msr_lead">
-						<a href="/msr/msreward/level_benefit">
+						<a href="msr/msreward/level_benefit">
 							<p class="icon_msr_cup"></p>
 							<p class="msr_lead_txt"><strong>스타벅스 리워드</strong><br>혜택에 편리함까지 더한<br>스타벅스 리워드를<br>즐겨보세요.</p> <!-- 스타벅스 리워드 수정 -->
 						</a>
@@ -477,7 +477,7 @@ var eFrequencyPlannerYn = 'Y';
 						<p class="msr_card_area" onclick="location.href = '/my/mycard_index';" style="cursor:pointer;"><img alt=""></p>
 						<p class="card_info_txt">잔액 <strong class="en balance">0</strong>원</p>
 						<!-- 150924 - 다른카드보기버튼 추가 -->
-						<p class="btn_other_more"><a href="/my/mycard_index">다른 카드 보기</a></p>
+						<p class="btn_other_more"><a href="my/mycard_index">다른 카드 보기</a></p>
 						<!-- 150924 - 다른카드보기버튼 추가 ebd -->
 					</div>
 					<div class="msr_card_zone m_card_pic">
@@ -497,7 +497,7 @@ var eFrequencyPlannerYn = 'Y';
 						</div>
 						<p class="mycard_money_result">잔액 <span class="en balance"><!-- 550,000 --></span>원</p>
 						<!-- 150924 - 다른카드보기버튼 추가 -->
-						<p class="btn_other_more"><a href="/my/mycard_index">다른 카드 보기</a></p>
+						<p class="btn_other_more"><a href="my/mycard_index">다른 카드 보기</a></p>
 						<!-- 150924 - 다른카드보기버튼 추가 ebd -->
 					</div>
 					<!-- 150805 DOM 수정 -->
@@ -520,13 +520,13 @@ var eFrequencyPlannerYn = 'Y';
 					<!-- 알림아이콘 -->
 					<div class="notice_icons">
 						<div class="notice_icon2">
-							<a href="/my/calendar">
+							<a href="my/calendar">
 								<p></p>
 								<span>캘린더</span>
 							</a>
 						</div>
 						<div class="notice_icon3">
-							<a href="/my/ecoupon">
+							<a href="my/ecoupon">
 								<p>
 									<span class="validCoupontCnt">0</span>
 								</p>
@@ -536,7 +536,7 @@ var eFrequencyPlannerYn = 'Y';
 						
 						<!-- 20170510 추가 : 아이콘추가 -->
 						<div class="notice_icon4">
-							<a href="/eFreq/status?TYPE=BARCODE">
+							<a href="eFreq/status?TYPE=BARCODE">
 								<p></p>
 								<span>e-프리퀀시<br>바코드</span>
 							</a>
@@ -554,7 +554,7 @@ var eFrequencyPlannerYn = 'Y';
 						<div class="msr_nologin_btns">
 							<ul>
 								<li><a href="javascript:$.loginLib.showLayerLogin();">로그인</a></li>
-								<li><a href="/mem/join">회원가입</a></li>
+								<li><a href="mem/join">회원가입</a></li>
 							</ul>
 						</div>
 					</div>
@@ -563,14 +563,14 @@ var eFrequencyPlannerYn = 'Y';
 						<i class="icon_sbcard_lead"></i>
 						<p class="sbcard_lead_txt"><strong>스타벅스 카드를 가지고 계신가요?</strong><br>스타벅스 카드를 등록하시면, 스타벅스 리워드 만의<br>특별한 혜택을 누릴 수 있습니다.</p> <!-- 스타벅스 리워드 수정 -->
 						<p class="btn_sbcard_regi">
-							<a href="/my/mycard_info_input">카드 등록</a>
+							<a href="my/mycard_info_input">카드 등록</a>
 						</p>
 					</div>
 					<!-- 160628 수정 -->
 					<div class="top_msr_nologin_b">
 						<p class="egift_lead_txt"><strong>스타벅스 카드가 없으신가요?</strong><br>스타벅스 매장에서 구매하시거나,<br>PC/모바일웹, 스타벅스 앱에서<br>e-Gift를 “나에게 선물하기”로 구매 후,<br>편리하게 등록하세요!<br>스타벅스 리워드의 특별한 혜택! 생일 쿠폰을 드립니다!</p>
 						<p class="btn_egift_regi">
-							<a href="/msr/sceGift/gift_step1">e-Gift 선물하기</a>
+							<a href="msr/sceGift/gift_step1">e-Gift 선물하기</a>
 						</p>
 					</div>
 					<!-- 160628 수정 end -->
@@ -594,8 +594,8 @@ var eFrequencyPlannerYn = 'Y';
 				<nav class="tablet_gnb_sep">
 					<ul>
 						<li class="tablet_gnb01"><a href="javascript:void(0);" role="button" title="마이 리워드 레이어 열기"><!-- 접근성_20171106 role, title 추가 --><span class="rCup2" style="width: 90px; height: 90px; overflow: hidden;"><div class="jsMovieFrame" style="display: none; width: 90px; height: 90px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup_m/logout/001.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 90px; height: 90px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup_m/logout/002.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 90px; height: 90px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup_m/logout/003.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 90px; height: 90px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup_m/logout/004.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 90px; height: 90px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup_m/logout/005.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 90px; height: 90px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup_m/logout/006.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 90px; height: 90px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup_m/logout/007.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 90px; height: 90px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup_m/logout/008.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 90px; height: 90px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup_m/logout/009.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 90px; height: 90px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup_m/logout/010.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 90px; height: 90px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup_m/logout/011.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 90px; height: 90px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup_m/logout/012.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 90px; height: 90px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup_m/logout/013.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 90px; height: 90px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup_m/logout/014.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 90px; height: 90px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup_m/logout/015.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 90px; height: 90px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup_m/logout/016.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 90px; height: 90px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup_m/logout/017.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 90px; height: 90px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup_m/logout/018.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 90px; height: 90px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup_m/logout/019.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 90px; height: 90px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup_m/logout/020.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 90px; height: 90px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup_m/logout/021.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 90px; height: 90px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup_m/logout/022.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 90px; height: 90px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup_m/logout/023.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 90px; height: 90px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup_m/logout/024.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 90px; height: 90px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup_m/logout/025.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 90px; height: 90px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup_m/logout/026.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 90px; height: 90px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup_m/logout/027.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 90px; height: 90px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup_m/logout/028.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 90px; height: 90px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup_m/logout/029.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 90px; height: 90px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup_m/logout/030.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 90px; height: 90px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup_m/logout/031.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 90px; height: 90px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup_m/logout/032.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 90px; height: 90px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup_m/logout/033.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 90px; height: 90px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup_m/logout/034.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 90px; height: 90px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup_m/logout/035.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 90px; height: 90px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup_m/logout/036.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 90px; height: 90px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup_m/logout/037.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 90px; height: 90px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup_m/logout/038.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 90px; height: 90px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup_m/logout/039.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 90px; height: 90px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup_m/logout/040.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 90px; height: 90px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup_m/logout/041.png&quot;);"></div><div class="jsMovieFrame" style="display: block; width: 90px; height: 90px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup_m/logout/042.png&quot;);"></div><div id="jsMovie_event_overlay" style="width: 90px; height: 180px; margin-top: -180px;"></div><div id="jsMovie_image_preload_container"><img src="//image.istarbucks.co.kr/common/img/common/rcup_m/logout/001.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/rcup/logout/002.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/rcup_m/logout/002.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/rcup/logout/003.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/rcup_m/logout/003.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/rcup/logout/004.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/rcup_m/logout/004.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/rcup/logout/005.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/rcup_m/logout/005.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/rcup/logout/006.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/rcup_m/logout/006.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/rcup/logout/007.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/rcup_m/logout/007.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/rcup_m/logout/008.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/rcup/logout/008.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/rcup_m/logout/009.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/rcup/logout/009.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/rcup_m/logout/010.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/rcup/logout/010.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/rcup_m/logout/011.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/rcup/logout/011.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/rcup_m/logout/012.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/rcup/logout/012.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/rcup/logout/013.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/rcup_m/logout/013.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/rcup/logout/014.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/rcup_m/logout/014.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/rcup/logout/015.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/rcup/logout/016.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/rcup_m/logout/015.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/rcup/logout/017.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/rcup_m/logout/016.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/rcup/logout/018.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/rcup/logout/019.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/rcup_m/logout/017.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/rcup/logout/020.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/rcup_m/logout/018.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/rcup/logout/021.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/rcup/logout/022.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/rcup/logout/023.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/rcup_m/logout/019.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/rcup/logout/024.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/rcup_m/logout/020.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/rcup/logout/025.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/rcup_m/logout/021.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/rcup/logout/026.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/rcup_m/logout/022.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/rcup/logout/027.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/rcup/logout/028.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/rcup_m/logout/023.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/rcup/logout/029.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/rcup_m/logout/024.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/rcup/logout/030.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/rcup/logout/031.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/rcup_m/logout/025.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/rcup_m/logout/026.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/rcup/logout/032.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/rcup_m/logout/027.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/rcup/logout/033.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/rcup_m/logout/028.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/rcup/logout/034.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/rcup_m/logout/029.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/rcup/logout/035.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/rcup_m/logout/030.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/rcup/logout/036.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/rcup_m/logout/031.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/rcup/logout/037.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/rcup_m/logout/032.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/rcup_m/logout/033.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/rcup/logout/038.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/rcup_m/logout/034.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/rcup/logout/039.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/rcup_m/logout/035.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/rcup_m/logout/036.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/rcup_m/logout/037.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/rcup_m/logout/038.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/rcup_m/logout/039.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/rcup_m/logout/040.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/rcup_m/logout/041.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/rcup_m/logout/042.png" alt="" style="height: 1px; width: 1px;"></div></span></a></li><!-- 150709 클레스 수정 -->
-						<li class="tablet_gnb02"><a href="javascript:void(0);" required="login" data-href="/my/index"><span class="a11y">마이스타벅스</span></a><!-- 접근성_20171106 span추가 --></li>
-						<li class="tablet_gnb03"><a href="/store/store_map"><span class="a11y">매장찾기</span></a><!-- 접근성_20171106 span추가 --></li>
+						<li class="tablet_gnb02"><a href="javascript:void(0);" required="login" data-href="my/index"><span class="a11y">마이스타벅스</span></a><!-- 접근성_20171106 span추가 --></li>
+						<li class="tablet_gnb03"><a href="store/store_map"><span class="a11y">매장찾기</span></a><!-- 접근성_20171106 span추가 --></li>
 						<li class="tablet_gnb04"><a href="javascript:void(0);"><span class="a11y" role="button">메뉴열기</span></a><!-- 접근성_20171106 span추가 --></li>
 					</ul>
 				</nav>
@@ -616,97 +616,97 @@ var eFrequencyPlannerYn = 'Y';
 					<nav class="mob_gnb_menus">
 						<ul>
 							<li class="mob_gnb_ttl1" style="display: list-item;"><a role="button" class="en" href="javascript:void(0);">My Starbucks<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 --></li>
-							<li style="display: none;"><a href="/my/index">한눈에 보기</a></li>
+							<li style="display: none;"><a href="my/index">한눈에 보기</a></li>
 							<li style="display: none;">
 								<a role="button" href="javascript:void(0);">My 리워드<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 -->
 								<ul>
-									<li style="display: none;"><a href="javascript:void(0);" required="login" data-href="/my/reward">리워드 및 혜택</a></li>
-									<li style="display: none;"><a href="javascript:void(0);" required="login" data-href="/my/reward_star_history">별 히스토리</a></li>
+									<li style="display: none;"><a href="javascript:void(0);" required="login" data-href="my/reward">리워드 및 혜택</a></li>
+									<li style="display: none;"><a href="javascript:void(0);" required="login" data-href="my/reward_star_history">별 히스토리</a></li>
 								</ul>
 							</li>
 							<li style="display: none;">
 								<a role="button" href="javascript:void(0);">My 스타벅스 카드<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 -->
 								<ul>
-									<li style="display: none;"><a href="javascript:void(0);" required="login" data-href="/my/mycard_index">보유 카드</a></li>
-									<li style="display: none;"><a href="javascript:void(0);" required="login" data-href="/my/mycard_info_input">카드 등록</a></li>
-									<li style="display: none;"><a href="javascript:void(0);" required="login" data-href="/my/mycard_charge">카드 충전</a></li>
-									<li style="display: none;"><a href="javascript:void(0);" required="login" data-href="/my/mycard_lost">분실신고/잔액이전</a></li>
+									<li style="display: none;"><a href="javascript:void(0);" required="login" data-href="my/mycard_index">보유 카드</a></li>
+									<li style="display: none;"><a href="javascript:void(0);" required="login" data-href="my/mycard_info_input">카드 등록</a></li>
+									<li style="display: none;"><a href="javascript:void(0);" required="login" data-href="my/mycard_charge">카드 충전</a></li>
+									<li style="display: none;"><a href="javascript:void(0);" required="login" data-href="my/mycard_lost">분실신고/잔액이전</a></li>
 								</ul>
 							</li>
 							<li style="display: none;">
 								<a role="button" href="javascript:void(0);">My 스타벅스 e-Gift Card<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 -->
 								<ul>
-									<li style="display: none;"><a href="javascript:void(0);" required="login" data-href="/msr/sceGift/gift_step1">선물하기</a></li>
-									<li style="display: none;"><a href="javascript:void(0);" required="login" data-href="/my/egiftCard">선물 내역</a></li>
-									<li style="display: none;"><a href="javascript:void(0);" required="login" data-href="/my/egiftCard_shopping_bag">장바구니 내역</a></li>
+									<li style="display: none;"><a href="javascript:void(0);" required="login" data-href="msr/sceGift/gift_step1">선물하기</a></li>
+									<li style="display: none;"><a href="javascript:void(0);" required="login" data-href="my/egiftCard">선물 내역</a></li>
+									<li style="display: none;"><a href="javascript:void(0);" required="login" data-href="my/egiftCard_shopping_bag">장바구니 내역</a></li>
 								</ul>
 							</li>
 							<li style="display: none;">
 								<a role="button" href="javascript:void(0);">My 쿠폰<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 -->
 								<ul>
-									<li style="display: none;"><a href="javascript:void(0);" required="login" data-href="/my/ecoupon?t=REG">등록하기</a></li>
-									<li style="display: none;"><a href="javascript:void(0);" required="login" data-href="/my/ecoupon?t=GIFT">선물하기</a></li>
-									<li style="display: none;"><a href="javascript:void(0);" required="login" data-href="/my/ecoupon?t=USE">사용하기</a></li>
+									<li style="display: none;"><a href="javascript:void(0);" required="login" data-href="my/ecoupon?t=REG">등록하기</a></li>
+									<li style="display: none;"><a href="javascript:void(0);" required="login" data-href="my/ecoupon?t=GIFT">선물하기</a></li>
+									<li style="display: none;"><a href="javascript:void(0);" required="login" data-href="my/ecoupon?t=USE">사용하기</a></li>
 								</ul>
 							</li>
-							<li style="display: none;"><a href="javascript:void(0);" required="login" data-href="/my/calendar">My 캘린더</a></li>
-							<!-- <li><a href="/my/drink_shop" required="login">My 음료/매장</a></li> -->
-							<li style="display: none;"><a href="javascript:void(0);" required="login" data-href="/my/my_menu">My 메뉴</a></li>
+							<li style="display: none;"><a href="javascript:void(0);" required="login" data-href="my/calendar">My 캘린더</a></li>
+							<!-- <li><a href="my/drink_shop" required="login">My 음료/매장</a></li> -->
+							<li style="display: none;"><a href="javascript:void(0);" required="login" data-href="my/my_menu">My 메뉴</a></li>
 							
 							
 							<li style="display: none;">
 								<a role="button" href="javascript:void(0);">My e-프리퀀시<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 -->
 								<ul>
-									<li style="display: none;"><a href="/eFreq/guide?promoSeq=172">이용안내</a></li>
-									<li style="display: none;"><a href="javascript:void(0);" required="login" data-href="/eFreq/status?promoSeq=172">이용현황</a></li>
+									<li style="display: none;"><a href="eFreq/guide?promoSeq=172">이용안내</a></li>
+									<li style="display: none;"><a href="javascript:void(0);" required="login" data-href="eFreq/status?promoSeq=172">이용현황</a></li>
 								</ul>
 							</li>
 							
-									<li style="display: none;"><a href="javascript:void(0);" required="login" data-href="/my/vocList">My 고객의 소리</a></li>
-							<li style="display: none;"><a href="javascript:void(0);" required="login" data-href="/my/eReceiptList">전자영수증</a></li>
+									<li style="display: none;"><a href="javascript:void(0);" required="login" data-href="my/vocList">My 고객의 소리</a></li>
+							<li style="display: none;"><a href="javascript:void(0);" required="login" data-href="my/eReceiptList">전자영수증</a></li>
 							<li class="msRnb_btn" style="display: none;"><a href="javascript:void(0);" onclick="fn_rewardTumblerMsrCheck();">개인컵 리워드 설정</a></li>
-							<li style="display: none;"><a href="javascript:void(0);" required="login" data-href="/edt/expressDtList">My DT Pass</a></li>
+							<li style="display: none;"><a href="javascript:void(0);" required="login" data-href="edt/expressDtList">My DT Pass</a></li>
 							<li style="display: none;">
 								<a role="button" href="javascript:void(0);">개인정보관리<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 -->
 								<ul>
-									<li style="display: none;"><a href="javascript:void(0);" required="login" data-href="/my/myinfo_modify_login">개인정보확인 및 수정</a></li>
-									<li style="display: none;"><a href="javascript:void(0);" required="login" data-href="/my/myinfo_out">회원 탈퇴</a></li>
-									<li style="display: none;"><a href="javascript:void(0);" required="login" data-href="/my/myinfo_modify_pwd">비밀번호 변경</a></li>
+									<li style="display: none;"><a href="javascript:void(0);" required="login" data-href="my/myinfo_modify_login">개인정보확인 및 수정</a></li>
+									<li style="display: none;"><a href="javascript:void(0);" required="login" data-href="my/myinfo_out">회원 탈퇴</a></li>
+									<li style="display: none;"><a href="javascript:void(0);" required="login" data-href="my/myinfo_modify_pwd">비밀번호 변경</a></li>
 								</ul>
 							</li>
 						</ul>
 						<ul>
 							<li class="mob_gnb_ttl2" style="display: list-item;"><a role="button" class="en" href="javascript:void(0);">COFFEE<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 --></li>
-							<li style="display: none;"><a href="/coffee/index">한눈에 보기</a></li>
+							<li style="display: none;"><a href="coffee/index">한눈에 보기</a></li>
 							<li style="display: none;">
 								<a role="button" href="javascript:void(0);">커피<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 -->
 								<ul>
-									<li style="display: none;"><a href="/coffee/product_list">스타벅스 원두</a></li>
-									<li style="display: none;"><a href="/coffee/product_list?PACKAGE=01">스타벅스 비아</a></li>
-									<!-- <li><a href="/coffee/product_list?PACKAGE=02">스타벅스 오리가미</a></li> 20210915 삭제 -->
-									<li style="display: none;"><a href="/coffee/product_list?PACKAGE=05">스타벅스앳홈 by 캡슐</a></li><!-- 20210915 추가 -->
+									<li style="display: none;"><a href="coffee/product_list">스타벅스 원두</a></li>
+									<li style="display: none;"><a href="coffee/product_list?PACKAGE=01">스타벅스 비아</a></li>
+									<!-- <li><a href="coffee/product_list?PACKAGE=02">스타벅스 오리가미</a></li> 20210915 삭제 -->
+									<li style="display: none;"><a href="coffee/product_list?PACKAGE=05">스타벅스앳홈 by 캡슐</a></li><!-- 20210915 추가 -->
 								</ul>
 							</li>
-							<li style="display: none;"><a href="/coffee/productFinder">나와 어울리는 커피</a></li>
+							<li style="display: none;"><a href="coffee/productFinder">나와 어울리는 커피</a></li>
 							<li style="display: none;">
 								<a role="button" href="javascript:void(0);">스타벅스 리저브™<span class="mob_gnb_arrow_down"></span></a>
 								<ul>
-									<li style="display: none;"><a href="/coffee/reserve_info">ABOUT</a></li>
-									<li style="display: none;"><a href="/coffee/reserve_magazine_list">RESERVE MAGAZINE</a></li>
+									<li style="display: none;"><a href="coffee/reserve_info">ABOUT</a></li>
+									<li style="display: none;"><a href="coffee/reserve_magazine_list">RESERVE MAGAZINE</a></li>
 								</ul>
 							</li>
 							<li style="display: none;">
 								<a role="button" href="javascript:void(0);">에스프레소 음료<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가  -->
 								<ul>
-									<li style="display: none;"><a href="/coffee/doppio">도피오</a></li>
-									<li style="display: none;"><a href="/coffee/espresso_macchiato">에스프레소 마키아또</a></li>
-									<li style="display: none;"><a href="/coffee/americano">아메리카노</a></li>
-									<li style="display: none;"><a href="/coffee/caramel_macchato">마키아또</a></li>
-									<li style="display: none;"><a href="/coffee/cappuccino">카푸치노</a></li>
-									<li style="display: none;"><a href="/coffee/latte">라떼</a></li>
-									<li style="display: none;"><a href="/coffee/mocha">모카</a></li>
+									<li style="display: none;"><a href="coffee/doppio">도피오</a></li>
+									<li style="display: none;"><a href="coffee/espresso_macchiato">에스프레소 마키아또</a></li>
+									<li style="display: none;"><a href="coffee/americano">아메리카노</a></li>
+									<li style="display: none;"><a href="coffee/caramel_macchato">마키아또</a></li>
+									<li style="display: none;"><a href="coffee/cappuccino">카푸치노</a></li>
+									<li style="display: none;"><a href="coffee/latte">라떼</a></li>
+									<li style="display: none;"><a href="coffee/mocha">모카</a></li>
 									<!-- <li><a href="javascript:void(0);">더블샷</a></li> -->
-									<!-- <li><a href="/coffee/flat_white">리스트레또 비안코</a></li> 20210914 삭제 -->
+									<!-- <li><a href="coffee/flat_white">리스트레또 비안코</a></li> 20210914 삭제 -->
 									<!-- <li class="mgnb_gold"><a href="javascript:void(0);">·에스프레소 초이스</a></li>
 									<li class="mgnb_gold"><a href="javascript:void(0);">·프로모션 상품</a></li>
 									<li class="mgnb_gold"><a href="javascript:void(0);">·브런치 유어 웨이</a></li> -->
@@ -715,82 +715,82 @@ var eFrequencyPlannerYn = 'Y';
 							<li style="display: none;">
 								<a role="button" href="javascript:void(0);">최상의 커피를 즐기는 법<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가  -->
 								<ul>
-									<li style="display: none;"><a href="/coffee/higher_enjoy">커피 프레스</a></li>
-									<li style="display: none;"><a href="/coffee/higher_enjoy?PACKAGE=01">푸어 오버</a></li>
-									<li style="display: none;"><a href="/coffee/higher_enjoy?PACKAGE=02">아이스 푸어 오버</a></li>
-									<li style="display: none;"><a href="/coffee/higher_enjoy?PACKAGE=03">커피 메이커</a></li>
-									<li style="display: none;"><a href="/coffee/higher_enjoy?PACKAGE=04">리저브를 매장에서 다양하게 즐기는 법</a></li>
+									<li style="display: none;"><a href="coffee/higher_enjoy">커피 프레스</a></li>
+									<li style="display: none;"><a href="coffee/higher_enjoy?PACKAGE=01">푸어 오버</a></li>
+									<li style="display: none;"><a href="coffee/higher_enjoy?PACKAGE=02">아이스 푸어 오버</a></li>
+									<li style="display: none;"><a href="coffee/higher_enjoy?PACKAGE=03">커피 메이커</a></li>
+									<li style="display: none;"><a href="coffee/higher_enjoy?PACKAGE=04">리저브를 매장에서 다양하게 즐기는 법</a></li>
 								</ul>
 							</li>
 							<li style="display: none;">
 								<a role="button" href="javascript:void(0);">커피 이야기<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 -->
 								<ul>
 									<!-- 20210914 수정 -->
-									<li style="display: none;"><a href="/coffee/story">농장에서 우리의 손으로</a></li>
-									<!-- <li><a href="/coffee/story?PACKAGE=01">에스프레소 초이스</a></li> -->
-									<li style="display: none;"><a href="/coffee/story?PACKAGE=02">최상의 아라비카 원두</a></li>
-									<li style="display: none;"><a href="/coffee/story?PACKAGE=03">스타벅스 로스트 스펙트럼</a></li>
+									<li style="display: none;"><a href="coffee/story">농장에서 우리의 손으로</a></li>
+									<!-- <li><a href="coffee/story?PACKAGE=01">에스프레소 초이스</a></li> -->
+									<li style="display: none;"><a href="coffee/story?PACKAGE=02">최상의 아라비카 원두</a></li>
+									<li style="display: none;"><a href="coffee/story?PACKAGE=03">스타벅스 로스트 스펙트럼</a></li>
 									<!-- <li><a href="javascript:void(0);">추출방식 알아보기</a></li> -->
-									<li style="display: none;"><a href="/coffee/story?PACKAGE=04">스타벅스 디카페인</a></li>
-									<li style="display: none;"><a href="/coffee/story?PACKAGE=05">클로버® 커피 추출 시스템</a></li>
+									<li style="display: none;"><a href="coffee/story?PACKAGE=04">스타벅스 디카페인</a></li>
+									<li style="display: none;"><a href="coffee/story?PACKAGE=05">클로버® 커피 추출 시스템</a></li>
 									<!-- //20210914 수정 -->
 								</ul>
 							</li>
 						</ul>
 						<ul>
 							<li class="mob_gnb_ttl2" style="display: list-item;"><a role="button" class="en" href="javascript:void(0);">MENU<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 --></li>
-							<li style="display: none;"><a href="/menu/index">한눈에 보기</a></li>
+							<li style="display: none;"><a href="menu/index">한눈에 보기</a></li>
 							<li style="display: none;">
 								<a role="button" href="javascript:void(0);">음료<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 -->
 								<ul>
-									<li style="display: none;"><a href="/menu/drink_list">전체보기</a></li>
-									<li style="display: none;"><a href="/menu/drink_list?CATE_CD=product_cold_brew">콜드 브루</a></li>
-									<li style="display: none;"><a href="/menu/drink_list?CATE_CD=product_brood">브루드 커피</a></li>
-									<li style="display: none;"><a href="/menu/drink_list?CATE_CD=product_espresso">에스프레소</a></li>
-									<li style="display: none;"><a href="/menu/drink_list?CATE_CD=product_frappuccino">프라푸치노</a></li>
-									<li style="display: none;"><a href="/menu/drink_list?CATE_CD=product_blended">블렌디드</a></li>
-									<li style="display: none;"><a href="/menu/drink_list?CATE_CD=product_fizzo">스타벅스 피지오</a></li>
-									<li style="display: none;"><a href="/menu/drink_list?CATE_CD=product_tea">티(티바나)</a></li>
-									<li style="display: none;"><a href="/menu/drink_list?CATE_CD=product_etc">기타 제조 음료</a></li>
-									<li style="display: none;"><a href="/menu/drink_list?CATE_CD=product_juice">스타벅스 주스(병음료)</a></li>
+									<li style="display: none;"><a href="menu/drink_list">전체보기</a></li>
+									<li style="display: none;"><a href="menu/drink_list?CATE_CD=product_cold_brew">콜드 브루</a></li>
+									<li style="display: none;"><a href="menu/drink_list?CATE_CD=product_brood">브루드 커피</a></li>
+									<li style="display: none;"><a href="menu/drink_list?CATE_CD=product_espresso">에스프레소</a></li>
+									<li style="display: none;"><a href="menu/drink_list?CATE_CD=product_frappuccino">프라푸치노</a></li>
+									<li style="display: none;"><a href="menu/drink_list?CATE_CD=product_blended">블렌디드</a></li>
+									<li style="display: none;"><a href="menu/drink_list?CATE_CD=product_fizzo">스타벅스 피지오</a></li>
+									<li style="display: none;"><a href="menu/drink_list?CATE_CD=product_tea">티(티바나)</a></li>
+									<li style="display: none;"><a href="menu/drink_list?CATE_CD=product_etc">기타 제조 음료</a></li>
+									<li style="display: none;"><a href="menu/drink_list?CATE_CD=product_juice">스타벅스 주스(병음료)</a></li>
 								</ul>
 							</li>
 							<li style="display: none;">
 								<a role="button" href="javascript:void(0);">푸드<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 -->
 								<ul>
-									<li style="display: none;"><a href="/menu/food_list">전체보기</a></li>
-									<li style="display: none;"><a href="/menu/food_list?CATE_CD=product_bakery">브레드</a></li>
-									<li style="display: none;"><a href="/menu/food_list?CATE_CD=product_cake">케이크</a></li>
-									<li style="display: none;"><a href="/menu/food_list?CATE_CD=product_sandwich">샌드위치 &amp; 샐러드</a></li>
-									<li style="display: none;"><a href="/menu/food_list?CATE_CD=product_wram_food">따뜻한 푸드</a></li>
-									<li style="display: none;"><a href="/menu/food_list?CATE_CD=product_fruit_yogurt">과일 &amp; 요거트</a></li>
-									<li style="display: none;"><a href="/menu/food_list?CATE_CD=product_snack">스낵 &amp; 미니 디저트</a></li>
-									<li style="display: none;"><a href="/menu/food_list?CATE_CD=product_icecream">아이스크림</a></li>
-                                    <!-- <li><a href="/menu/food_list?CATE_CD=product_etc">기타 푸드</a></li> -->
+									<li style="display: none;"><a href="menu/food_list">전체보기</a></li>
+									<li style="display: none;"><a href="menu/food_list?CATE_CD=product_bakery">브레드</a></li>
+									<li style="display: none;"><a href="menu/food_list?CATE_CD=product_cake">케이크</a></li>
+									<li style="display: none;"><a href="menu/food_list?CATE_CD=product_sandwich">샌드위치 &amp; 샐러드</a></li>
+									<li style="display: none;"><a href="menu/food_list?CATE_CD=product_wram_food">따뜻한 푸드</a></li>
+									<li style="display: none;"><a href="menu/food_list?CATE_CD=product_fruit_yogurt">과일 &amp; 요거트</a></li>
+									<li style="display: none;"><a href="menu/food_list?CATE_CD=product_snack">스낵 &amp; 미니 디저트</a></li>
+									<li style="display: none;"><a href="menu/food_list?CATE_CD=product_icecream">아이스크림</a></li>
+                                    <!-- <li><a href="menu/food_list?CATE_CD=product_etc">기타 푸드</a></li> -->
 								</ul>
 							</li>
 							<li style="display: none;">
 								<a role="button" href="javascript:void(0);">상품<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 -->
 								<ul>
-									<li style="display: none;"><a href="/menu/product_list">전체보기</a></li>
-									<li style="display: none;"><a href="/menu/product_list?CATE_CD=product_mug">머그</a></li>
-									<li style="display: none;"><a href="/menu/product_list?CATE_CD=product_glass">글라스</a></li>
-									<li style="display: none;"><a href="/menu/product_list?CATE_CD=product_plastic">플라스틱 텀블러</a></li>
-									<li style="display: none;"><a href="/menu/product_list?CATE_CD=product_stainless">스테인리스 텀블러</a></li>
-									<li style="display: none;"><a href="/menu/product_list?CATE_CD=product_vacuum">보온병</a></li>
-									<li style="display: none;"><a href="/menu/product_list?CATE_CD=product_accessories">액세서리</a></li>
-									<li style="display: none;"><a href="/menu/product_list?CATE_CD=product_present">선물세트</a></li>
-									<li style="display: none;"><a href="/menu/product_list?CATE_CD=product_coffee">커피 용품</a></li>
-									<li style="display: none;"><a href="/menu/product_list?CATE_CD=product_teaPackage">패키지 티(티바나)</a></li>
-									<!-- <li><a href="/menu/product_list?CATE_CD=product_planner">스타벅스 플래너</a></li> --> <!-- 20210602 삭제 -->
+									<li style="display: none;"><a href="menu/product_list">전체보기</a></li>
+									<li style="display: none;"><a href="menu/product_list?CATE_CD=product_mug">머그</a></li>
+									<li style="display: none;"><a href="menu/product_list?CATE_CD=product_glass">글라스</a></li>
+									<li style="display: none;"><a href="menu/product_list?CATE_CD=product_plastic">플라스틱 텀블러</a></li>
+									<li style="display: none;"><a href="menu/product_list?CATE_CD=product_stainless">스테인리스 텀블러</a></li>
+									<li style="display: none;"><a href="menu/product_list?CATE_CD=product_vacuum">보온병</a></li>
+									<li style="display: none;"><a href="menu/product_list?CATE_CD=product_accessories">액세서리</a></li>
+									<li style="display: none;"><a href="menu/product_list?CATE_CD=product_present">선물세트</a></li>
+									<li style="display: none;"><a href="menu/product_list?CATE_CD=product_coffee">커피 용품</a></li>
+									<li style="display: none;"><a href="menu/product_list?CATE_CD=product_teaPackage">패키지 티(티바나)</a></li>
+									<!-- <li><a href="menu/product_list?CATE_CD=product_planner">스타벅스 플래너</a></li> --> <!-- 20210602 삭제 -->
 								</ul>
 							</li>
 							<li style="display: none;">
 								<a role="button" href="javascript:void(0);">카드<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 -->
 								<ul>
-									<li style="display: none;"><a href="/menu/card_list">전체보기</a></li>
-									<li style="display: none;"><a href="/menu/card_list?CATE_CD=product_offline">실물카드</a></li>
-									<li style="display: none;"><a href="/menu/card_list?CATE_CD=product_egift">e-Gift 카드</a></li>
+									<li style="display: none;"><a href="menu/card_list">전체보기</a></li>
+									<li style="display: none;"><a href="menu/card_list?CATE_CD=product_offline">실물카드</a></li>
+									<li style="display: none;"><a href="menu/card_list?CATE_CD=product_egift">e-Gift 카드</a></li>
 								</ul>
 							</li>
 							<!-- <li>
@@ -804,142 +804,142 @@ var eFrequencyPlannerYn = 'Y';
 							<li style="display: none;">
 								<a role="button" href="javascript:void(0);">메뉴 이야기<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 -->
 								<ul>
-									<li style="display: none;"><a href="/store/store_nitro_coldbrew">나이트로 콜드브루</a></li>
-									<li style="display: none;"><a href="/store/store_coldbrew">콜드 브루</a></li>
-									<li style="display: none;"><a href="/menuStory/teavana">스타벅스 티바나</a></li>
+									<li style="display: none;"><a href="store/store_nitro_coldbrew">나이트로 콜드브루</a></li>
+									<li style="display: none;"><a href="store/store_coldbrew">콜드 브루</a></li>
+									<li style="display: none;"><a href="menuStory/teavana">스타벅스 티바나</a></li>
 								</ul>
 							</li>
 						</ul>
 						<ul>
 							<li class="mob_gnb_ttl2" style="display: list-item;"><a role="button" class="en" href="javascript:void(0);">STORE<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 --></li>
-							<li style="display: none;"><a href="/store/index">한눈에 보기</a></li>
+							<li style="display: none;"><a href="store/index">한눈에 보기</a></li>
 							<li style="display: none;">
 								<a role="button" href="javascript:void(0);">매장 찾기<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 -->
 								<ul>
-									<li style="display: none;"><a href="/store/store_map?disp=quick">빠른 검색</a></li>
-									<li style="display: none;"><a href="/store/store_map?disp=locale">지역 검색</a></li>
+									<li style="display: none;"><a href="store/store_map?disp=quick">빠른 검색</a></li>
+									<li style="display: none;"><a href="store/store_map?disp=locale">지역 검색</a></li>
 								</ul>
 							</li>
-							<li style="display: none;"><a href="/store/store_drive">드라이브 스루 매장</a></li>
-							<li style="display: none;"><a href="/store/store_reserve">스타벅스 리저브™ 매장</a></li>
-							<li style="display: none;"><a href="/store/store_community">커뮤니티 스토어 매장</a></li>
+							<li style="display: none;"><a href="store/store_drive">드라이브 스루 매장</a></li>
+							<li style="display: none;"><a href="store/store_reserve">스타벅스 리저브™ 매장</a></li>
+							<li style="display: none;"><a href="store/store_community">커뮤니티 스토어 매장</a></li>
 							<li style="display: none;">
 								<a role="button" href="javascript:void(0);">매장 이야기<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 -->
 								<ul>
-									<!-- <li><a href="/store/store_cheongdam">청담스타</a></li> 20210727 메뉴 비노출 -->
-									<li style="display: none;"><a href="/store/store_star_field">티바나 바 매장</a></li>
-									<!-- <li><a href="/store/store_park">파미에파크</a></li> 20210727 메뉴 비노출 -->
+									<!-- <li><a href="store/store_cheongdam">청담스타</a></li> 20210727 메뉴 비노출 -->
+									<li style="display: none;"><a href="store/store_star_field">티바나 바 매장</a></li>
+									<!-- <li><a href="store/store_park">파미에파크</a></li> 20210727 메뉴 비노출 -->
 								</ul>
 							</li>
 						</ul>
 						<ul>
 							<li class="mob_gnb_ttl2" style="display: list-item;"><a role="button" class="en" href="javascript:void(0);">RESPONSIBILITY<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 --></li>
-							<li style="display: none;"><a href="/responsibility/index">한눈에 보기</a></li>
-							<li style="display: none;"><a href="/responsibility/starbucks_shared_planet">사회공헌 캠페인 소개</a></li> <!-- 20210820 메뉴명 수정 -->
+							<li style="display: none;"><a href="responsibility/index">한눈에 보기</a></li>
+							<li style="display: none;"><a href="responsibility/starbucks_shared_planet">사회공헌 캠페인 소개</a></li> <!-- 20210820 메뉴명 수정 -->
 							<li style="display: none;">
 								<a role="button" href="javascript:void(0);">지역 사회 참여 활동<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 -->
 								<ul>
-									<li style="display: none;"><a href="/responsibility/hope_delivery">희망배달 캠페인</a></li>
-									<li style="display: none;"><a href="/responsibility/talent_donation">재능기부 카페 소식</a></li>
-									<li style="display: none;"><a href="/responsibility/community_store">커뮤니티 스토어</a></li>
-									<li style="display: none;"><a href="/responsibility/youth_resource">청년 지원 프로그램</a></li><!-- 202107 메뉴명 수정 -->
-									<li style="display: none;"><a href="/responsibility/our_agriculture">우리 농산물 사랑 캠페인</a></li>
-									<li style="display: none;"><a href="/responsibility/our_culture_defend">우리 문화 지키기</a></li>
+									<li style="display: none;"><a href="responsibility/hope_delivery">희망배달 캠페인</a></li>
+									<li style="display: none;"><a href="responsibility/talent_donation">재능기부 카페 소식</a></li>
+									<li style="display: none;"><a href="responsibility/community_store">커뮤니티 스토어</a></li>
+									<li style="display: none;"><a href="responsibility/youth_resource">청년 지원 프로그램</a></li><!-- 202107 메뉴명 수정 -->
+									<li style="display: none;"><a href="responsibility/our_agriculture">우리 농산물 사랑 캠페인</a></li>
+									<li style="display: none;"><a href="responsibility/our_culture_defend">우리 문화 지키기</a></li>
 								</ul>
 							</li>
 							<li style="display: none;">
 								<a role="button" href="javascript:void(0);">환경보호 활동<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 -->
 								<ul>
-									<li style="display: none;"><a href="/responsibility/environment">친환경 활동</a></li><!-- 202107 메뉴명 수정 -->
-									<li style="display: none;"><a href="/responsibility/no_disposable_cup">일회용 컵 없는 매장</a></li>
-									<li style="display: none;"><a href="/responsibility/bean_recycling">커피 원두 재활용</a></li>
+									<li style="display: none;"><a href="responsibility/environment">친환경 활동</a></li><!-- 202107 메뉴명 수정 -->
+									<li style="display: none;"><a href="responsibility/no_disposable_cup">일회용 컵 없는 매장</a></li>
+									<li style="display: none;"><a href="responsibility/bean_recycling">커피 원두 재활용</a></li>
 								</ul>
 							</li>
 							<li style="display: none;">
 								<a role="button" href="javascript:void(0);">윤리 구매<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 -->
 								<ul>
-									<li style="display: none;"><a href="/responsibility/ethically_sourcing">윤리적 원두 구매</a></li>
-									<li style="display: none;"><a href="/responsibility/fair_trade">공정무역 인증</a></li>
-									<li style="display: none;"><a href="/responsibility/farmer_support">커피 농가 지원 활동</a></li>
+									<li style="display: none;"><a href="responsibility/ethically_sourcing">윤리적 원두 구매</a></li>
+									<li style="display: none;"><a href="responsibility/fair_trade">공정무역 인증</a></li>
+									<li style="display: none;"><a href="responsibility/farmer_support">커피 농가 지원 활동</a></li>
 								</ul>
 							</li>
 							<li style="display: none;">
 								<a role="button" href="javascript:void(0);">글로벌 사회 공헌<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 -->
 								<ul>
-									<li style="display: none;"><a href="/responsibility/sp_ethical_management">윤리경영 보고서</a></li>
-									<li style="display: none;"><a href="/responsibility/starbucks_foundation">스타벅스 재단</a></li>
-									<li style="display: none;"><a href="/responsibility/sp_global_month">지구촌 봉사의 달</a></li>
+									<li style="display: none;"><a href="responsibility/sp_ethical_management">윤리경영 보고서</a></li>
+									<li style="display: none;"><a href="responsibility/starbucks_foundation">스타벅스 재단</a></li>
+									<li style="display: none;"><a href="responsibility/sp_global_month">지구촌 봉사의 달</a></li>
 								</ul>
 							</li>
 						</ul>
 						<ul>
 							<li class="mob_gnb_ttl2" style="display: list-item;"><a role="button" class="en" href="javascript:void(0);">Starbucks Rewards<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 --></li>  <!-- 스타벅스 리워드 수정 -->
-							<li style="display: none;"><a href="/msr/index">한눈에 보기</a></li>
+							<li style="display: none;"><a href="msr/index">한눈에 보기</a></li>
 							<li style="display: none;">
 								<a role="button" href="javascript:void(0);">스타벅스 리워드<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 --> <!-- 스타벅스 리워드 수정 -->
 								<ul>
-									<li style="display: none;"><a href="/msr/msreward/about">스타벅스 리워드 소개</a></li> <!-- 스타벅스 리워드 수정 -->
-									<li style="display: none;"><a href="/msr/msreward/level_benefit">등급 및 혜택</a></li>
-									<li style="display: none;"><a href="/msr/msreward/star">스타벅스 별</a></li>
-									<li style="display: none;"><a href="/community/faq?menu_cd=STB2703&amp;cate=F17">자주 하는 질문</a></li> <!-- 20210809 수정 -->
+									<li style="display: none;"><a href="msr/msreward/about">스타벅스 리워드 소개</a></li> <!-- 스타벅스 리워드 수정 -->
+									<li style="display: none;"><a href="msr/msreward/level_benefit">등급 및 혜택</a></li>
+									<li style="display: none;"><a href="msr/msreward/star">스타벅스 별</a></li>
+									<li style="display: none;"><a href="community/faq?menu_cd=STB2703&amp;cate=F17">자주 하는 질문</a></li> <!-- 20210809 수정 -->
 								</ul>
 							</li>
 							<li style="display: none;">
 								<a role="button" href="javascript:void(0);">스타벅스 카드<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 -->
 								<ul>
-									<li style="display: none;"><a href="/msr/scard/about">스타벅스 카드 소개</a></li>
-									<li style="display: none;"><a href="/msr/scard/scard_gallery">스타벅스 카드 갤러리</a></li>
-									<li style="display: none;"><a href="/msr/scard/register_inquiry">등록 및 조회</a></li>
-									<li style="display: none;"><a href="/msr/scard/charge_information">충전 및 이용안내</a></li>
-									<li style="display: none;"><a href="/msr/scard/lost_report">분실신고/환불신청</a></li>
-									<li style="display: none;"><a href="/community/faq?menu_cd=STB2703&amp;cate=F05">자주 하는 질문</a></li> <!-- 20210809 수정 -->
+									<li style="display: none;"><a href="msr/scard/about">스타벅스 카드 소개</a></li>
+									<li style="display: none;"><a href="msr/scard/scard_gallery">스타벅스 카드 갤러리</a></li>
+									<li style="display: none;"><a href="msr/scard/register_inquiry">등록 및 조회</a></li>
+									<li style="display: none;"><a href="msr/scard/charge_information">충전 및 이용안내</a></li>
+									<li style="display: none;"><a href="msr/scard/lost_report">분실신고/환불신청</a></li>
+									<li style="display: none;"><a href="community/faq?menu_cd=STB2703&amp;cate=F05">자주 하는 질문</a></li> <!-- 20210809 수정 -->
 								</ul>
 							</li>
 							<li style="display: none;">
 								<a role="button" href="javascript:void(0);">스타벅스 e-Gift Card<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 -->
 								<ul>
-									<li style="display: none;"><a href="/msr/sceGift/egift_information">스타벅스 e-Gift Card 소개</a></li>
-									<li style="display: none;"><a href="/msr/sceGift/msr_useguide">이용안내</a></li>
-									<li style="display: none;"><a href="javascript:void(0);" required="login" data-href="/msr/sceGift/gift_step1">선물하기</a></li>
-									<li style="display: none;"><a href="/community/faq?menu_cd=STB2703&amp;cate=F22">자주 하는 질문</a></li> <!-- 20210809 수정 -->
+									<li style="display: none;"><a href="msr/sceGift/egift_information">스타벅스 e-Gift Card 소개</a></li>
+									<li style="display: none;"><a href="msr/sceGift/msr_useguide">이용안내</a></li>
+									<li style="display: none;"><a href="javascript:void(0);" required="login" data-href="msr/sceGift/gift_step1">선물하기</a></li>
+									<li style="display: none;"><a href="community/faq?menu_cd=STB2703&amp;cate=F22">자주 하는 질문</a></li> <!-- 20210809 수정 -->
 								</ul>
 							</li>
 						</ul>
 						<ul>
 							<li class="mob_gnb_ttl2" style="display: list-item;"><a role="button" class="en" href="javascript:void(0);">WHAT'S NEW<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 --></li>
-							<li style="display: none;"><a href="/whats_new/index">한눈에 보기</a></li>
+							<li style="display: none;"><a href="whats_new/index">한눈에 보기</a></li>
 							<li style="display: none;">
 								<a role="button" href="javascript:void(0);">이벤트<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 --> <!-- 20210304 메뉴명변경 -->
 								<ul>
-									<li style="display: none;"><a href="/whats_new/campaign_list">전체</a></li>
-									<li style="display: none;"><a href="/whats_new/campaign_list?menu_cd=STB2812">스타벅스 카드</a></li>
-									<li style="display: none;"><a href="/whats_new/campaign_list?menu_cd=STB2813">스타벅스 리워드</a></li> <!-- 스타벅스 리워드 수정 -->
-									<li style="display: none;"><a href="/whats_new/campaign_list?menu_cd=STB2814">온라인</a></li>
+									<li style="display: none;"><a href="whats_new/campaign_list">전체</a></li>
+									<li style="display: none;"><a href="whats_new/campaign_list?menu_cd=STB2812">스타벅스 카드</a></li>
+									<li style="display: none;"><a href="whats_new/campaign_list?menu_cd=STB2813">스타벅스 리워드</a></li> <!-- 스타벅스 리워드 수정 -->
+									<li style="display: none;"><a href="whats_new/campaign_list?menu_cd=STB2814">온라인</a></li>
 									
 									
-										<li style="display: none;"><a href="/whats_new/eFreq_gift">e-프리퀀시 증정품</a></li> <!-- 20210423 메뉴명, 경로 수정 -->
+										<li style="display: none;"><a href="whats_new/eFreq_gift">e-프리퀀시 증정품</a></li> <!-- 20210423 메뉴명, 경로 수정 -->
 									
 								</ul>
 							</li>
 							<li style="display: none;">
 								<a role="button" href="javascript:void(0);">뉴스<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 --> <!-- 20210304 메뉴명변경 -->
 								<ul>
-									<li style="display: none;"><a href="/whats_new/news_list">전체</a></li>
-									<li style="display: none;"><a href="/whats_new/news_list?cate=N01">상품 출시</a></li>
-									<li style="display: none;"><a href="/whats_new/news_list?cate=N02">스타벅스와 문화</a></li>
-									<li style="display: none;"><a href="/whats_new/news_list?cate=N03">스타벅스 사회공헌</a></li>
-									<li style="display: none;"><a href="/whats_new/news_list?cate=N04">스타벅스 카드출시</a></li>
+									<li style="display: none;"><a href="whats_new/news_list">전체</a></li>
+									<li style="display: none;"><a href="whats_new/news_list?cate=N01">상품 출시</a></li>
+									<li style="display: none;"><a href="whats_new/news_list?cate=N02">스타벅스와 문화</a></li>
+									<li style="display: none;"><a href="whats_new/news_list?cate=N03">스타벅스 사회공헌</a></li>
+									<li style="display: none;"><a href="whats_new/news_list?cate=N04">스타벅스 카드출시</a></li>
 								</ul>
 							</li>
 							<li style="display: none;">
 								<a role="button" href="javascript:void(0);">매장별 이벤트<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 -->
 								<ul>
-									<li style="display: none;"><a href="/whats_new/store_event_list">일반 매장</a></li>
-									<li style="display: none;"><a href="/whats_new/store_event_list?search_date=1&amp;tab=1">신규 매장</a></li>
+									<li style="display: none;"><a href="whats_new/store_event_list">일반 매장</a></li>
+									<li style="display: none;"><a href="whats_new/store_event_list?search_date=1&amp;tab=1">신규 매장</a></li>
 								</ul>
 							</li>
-							<li style="display: none;"><a href="/whats_new/notice_list">공지사항</a></li>
-							<li style="display: none;"><a href="/whats_new/wallpaper">월페이퍼</a></li>
+							<li style="display: none;"><a href="whats_new/notice_list">공지사항</a></li>
+							<li style="display: none;"><a href="whats_new/wallpaper">월페이퍼</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -963,18 +963,16 @@ var eFrequencyPlannerYn = 'Y';
 <ul>
 	<li class="util_nav01 sign_out" style="display:none;"><a href="javascript:void(0);">Sign out</a></li>
 	<li class="util_nav01 sign_in"><a href="javascript:void(0);">Sign In</a></li>
-	<li class="util_nav02"><a href="javascript:void(0);" required="login" data-href="/my/index">My Starbucks</a></li>
-	<li class="util_nav03"><a href="/util/index">Customer Service &amp; Ideas</a></li>
-	<li class="util_nav04"><a href="/store/store_map">Find a Store</a></li>
+	<li class="util_nav02"><a href="javascript:void(0);" required="login" data-href="my/index">My Starbucks</a></li>
+	<li class="util_nav03"><a href="menu/orderList">Order</a></li>
+	<li class="util_nav04"><a href="store/store_map">Find a Store</a></li>
 </ul>
 				</nav>
-				<p class="btn_search">
-					<a href="javascript:void(0);"><img alt="통합검색" src="//image.istarbucks.co.kr/common/img/common/icon_magnifier_black.png"></a>
-				<label for="totalSearch" class="a11y">통합검색</label><input id="totalSearch" placeholder="통합검색" type="text"></p>
+				
 				<a href="javascript:void(0);" class="rCup3_wrap" role="button" title="마이 리워드 레이어 열기"><!-- 접근성_20171201 class, role, title 추가 --><span class="rCup3" style="width: 53px; height: 45px; overflow: hidden;"><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/logout/001.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/logout/002.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/logout/003.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/logout/004.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/logout/005.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/logout/006.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/logout/007.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/logout/008.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/logout/009.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/logout/010.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/logout/011.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/logout/012.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/logout/013.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/logout/014.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/logout/015.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/logout/016.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/logout/017.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/logout/018.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/logout/019.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/logout/020.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/logout/021.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/logout/022.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/logout/023.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/logout/024.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/logout/025.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/logout/026.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/logout/027.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/logout/028.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/logout/029.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/logout/030.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/logout/031.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/logout/032.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/logout/033.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/logout/034.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/logout/035.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/logout/036.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/logout/037.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/logout/038.png&quot;);"></div><div class="jsMovieFrame" style="display: block; width: 53px; height: 45px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/rcup/logout/039.png&quot;);"></div><div id="jsMovie_event_overlay" style="width: 53px; height: 90px; margin-top: -90px;"></div><div id="jsMovie_image_preload_container"><img src="//image.istarbucks.co.kr/common/img/common/rcup/logout/001.png" alt="" style="height: 1px; width: 1px;"></div></span></a><!-- 150714 DOM 수정 - 떨어지는 메뉴 부분에 jsMovie 추가 -->
 			</div>
 			<nav class="sub_gnb_nav">
-				<div class="sub_gnb_nav_inner">		<ul>			<!-- COFFEE -->			<li class="gnb_nav01">				<h2><a href="/coffee/index">COFFEE</a></h2>				<div class="gnb_sub_wrap">					<div class="gnb_sub">						<div class="gnb_sub_inner">							<ul>								<li class="gnb_sub_ttl"><a href="/coffee/product_list">커피</a></li>								<li><a href="/coffee/product_list">스타벅스 원두</a></li>								<li><a href="/coffee/product_list?PACKAGE=01">스타벅스 비아</a></li>								<li><a href="/coffee/product_list?PACKAGE=05">스타벅스앳홈 by 캡슐</a></li>							</ul>							<ul>								<li class="gnb_sub_ttl"><a href="/coffee/productFinder">나와 어울리는 커피</a></li>							</ul>							<ul>								<li class="gnb_sub_ttl"><a href="/coffee/reserve_info">스타벅스 리저브™</a></li>								<li><a href="/coffee/reserve_magazine_list">RESERVE MAGAZINE</a></li>							</ul>							<ul>								<li class="gnb_sub_ttl"><a href="/coffee/espresso">에스프레소 음료</a></li>								<li><a href="/coffee/doppio">도피오</a></li>								<li><a href="/coffee/espresso_macchiato">에스프레소 마키아또</a></li>								<li><a href="/coffee/americano">아메리카노</a></li>								<li><a href="/coffee/caramel_macchato">마키아또</a></li>								<li><a href="/coffee/cappuccino">카푸치노</a></li>								<li><a href="/coffee/latte">라떼</a></li>								<li><a href="/coffee/mocha">모카</a></li>							</ul>							<ul style="clear: both;">								<li class="gnb_sub_ttl"><a href="/coffee/higher_enjoy">최상의 커피를 즐기는 법</a></li>								<li><a href="/coffee/higher_enjoy">커피 프레스</a></li>								<li><a href="/coffee/higher_enjoy?PACKAGE=01">푸어 오버</a></li>								<li><a href="/coffee/higher_enjoy?PACKAGE=02">아이스 푸어 오버</a></li>								<li><a href="/coffee/higher_enjoy?PACKAGE=03">커피 메이커</a></li>								<li><a href="/coffee/higher_enjoy?PACKAGE=04">리저브를 매장에서 다양하게 즐기는 법</a></li>							</ul>							<ul>								<li class="gnb_sub_ttl"><a href="/coffee/story">커피 이야기</a></li>								<li><a href="/coffee/story">농장에서 우리의 손으로</a></li>								<li><a href="/coffee/story?PACKAGE=02">최상의 아라비카 원두</a></li>								<li><a href="/coffee/story?PACKAGE=03">스타벅스 로스트 스펙트럼</a></li>								<li><a href="/coffee/story?PACKAGE=05">스타벅스 디카페인</a></li>								<li><a href="/coffee/story?PACKAGE=04">클로버® 커피 추출 시스템</a></li>							</ul>						</div>					</div>					<!-- 텍스쳐 bg -->					<div class="gnb_sub_txbg">						<div class="gnb_sub_tx_inner">							<div class="gnb_sub_tx_left">								<h3><a href="/coffee/productFinder">나와 어울리는 커피 찾기</a></h3>								<p class="gnb_sub_ex_txt">스타벅스가 여러분에게 어울리는 커피를 찾아드립니다.</p>								<h3><a href="/coffee/higher_enjoy">최상의 커피를 즐기는 법</a></h3>								<p class="gnb_sub_ex_txt">여러가지 방법을 통해 다양한 풍미의 커피를 즐겨보세요.</p>							</div>							<div class="gnb_sub_tx_right">							</div>						</div>					</div>					<!-- 텍스쳐 bg end -->				</div>			</li>			<!-- COFFEE end -->			<!-- MENU -->			<li class="gnb_nav02">				<h2><a href="/menu/index">MENU</a></h2>				<div class="gnb_sub_wrap">					<div class="gnb_sub">						<div class="gnb_sub_inner">							<ul>								<li class="gnb_sub_ttl"><a href="/menu/drink_list">음료</a></li>								<li><a href="/menu/drink_list?CATE_CD=product_cold_brew">콜드 브루</a></li>								<li><a href="/menu/drink_list?CATE_CD=product_brood">브루드 커피</a></li>								<li><a href="/menu/drink_list?CATE_CD=product_espresso">에스프레소</a></li>								<li><a href="/menu/drink_list?CATE_CD=product_frappuccino">프라푸치노</a></li>								<li><a href="/menu/drink_list?CATE_CD=product_blended">블렌디드</a></li>								<li><a href="/menu/drink_list?CATE_CD=product_fizzo">스타벅스 피지오</a></li>								<li><a href="/menu/drink_list?CATE_CD=product_tea">티(티바나)</a></li>								<li><a href="/menu/drink_list?CATE_CD=product_etc">기타 제조 음료</a></li>								<li><a href="/menu/drink_list?CATE_CD=product_juice">스타벅스 주스(병음료)</a></li>							</ul>							<ul>								<li class="gnb_sub_ttl"><a href="/menu/food_list">푸드</a></li>								<li><a href="/menu/food_list?CATE_CD=product_bakery">브레드</a></li>								<li><a href="/menu/food_list?CATE_CD=product_cake">케이크</a></li>								<li><a href="/menu/food_list?CATE_CD=product_sandwich">샌드위치 &amp; 샐러드</a></li>								<li><a href="/menu/food_list?CATE_CD=product_wram_food">따뜻한 푸드</a></li>								<li><a href="/menu/food_list?CATE_CD=product_fruit_yogurt">과일 &amp; 요거트</a></li>								<li><a href="/menu/food_list?CATE_CD=product_snack">스낵 &amp; 미니 디저트</a></li>								<li><a href="/menu/food_list?CATE_CD=product_icecream">아이스크림</a></li>							</ul>							<ul>								<li class="gnb_sub_ttl"><a href="/menu/product_list">상품</a></li>								<li><a href="/menu/product_list?CATE_CD=product_mug">머그</a></li>								<li><a href="/menu/product_list?CATE_CD=product_glass">글라스</a></li>								<li><a href="/menu/product_list?CATE_CD=product_plastic">플라스틱 텀블러</a></li>								<li><a href="/menu/product_list?CATE_CD=product_stainless">스테인리스 텀블러</a></li>								<li><a href="/menu/product_list?CATE_CD=product_vacuum">보온병</a></li>								<li><a href="/menu/product_list?CATE_CD=product_accessories">액세서리</a></li>								<li><a href="/menu/product_list?CATE_CD=product_present">선물세트</a></li>								<li><a href="/menu/product_list?CATE_CD=product_coffee">커피 용품</a></li>								<li><a href="/menu/product_list?CATE_CD=product_teaPackage">패키지 티(티바나)</a></li>							</ul>							<ul>								<li class="gnb_sub_ttl"><a href="/menu/card_list">카드</a></li>								<li><a href="/menu/card_list?CATE_CD=product_offline">실물카드</a></li>								<li><a href="/menu/card_list?CATE_CD=product_egift">e-Gift 카드</a></li>							</ul>							<ul style="clear: both;">								<li class="gnb_sub_ttl"><a>메뉴 이야기</a></li>								<li><a href="/store/store_nitro_coldbrew">나이트로 콜드브루</a></li>								<li><a href="/store/store_coldbrew">콜드 브루</a></li>								<li><a href="/menuStory/teavana">스타벅스 티바나</a></li>							</ul>						</div>					</div>					<!-- 텍스쳐 bg -->					<div class="gnb_sub_txbg">						<div class="gnb_sub_tx_inner">							<div class="gnb_sub_tx_left">								<h3><a href="/store/store_nitro_coldbrew">나이트로 콜드 브루 <img alt="" src="//image.istarbucks.co.kr/common/img/common/icon_gnb_new.png"></a></h3>								<p class="gnb_sub_ex_txt">나이트로 커피 정통의 물결치듯 흘러내리는 캐스케이딩과 부드러운 크림을 경험하세요. </p>							</div>							<div class="gnb_sub_tx_right">							</div>						</div>					</div>					<!-- 텍스쳐 bg end -->				</div>			</li>			<!-- MENU end -->			<li class="gnb_nav03">				<h2><a href="/store/index">STORE</a></h2>				<div class="gnb_sub_wrap">					<div class="gnb_sub">						<div class="gnb_sub_inner">							<ul>								<li class="gnb_sub_ttl"><a href="/store/store_map">매장 찾기</a></li>								<li><a href="/store/store_map?disp=quick">퀵 검색</a></li>								<li><a href="/store/store_map?disp=locale">지역 검색</a></li>							</ul>							<ul>								<li class="gnb_sub_ttl"><a href="/store/store_drive">드라이브 스루 매장</a></li>							</ul>							<ul>								<li class="gnb_sub_ttl"><a href="/store/store_reserve">스타벅스 리저브™ 매장</a></li>							</ul>							<ul>								<li class="gnb_sub_ttl"><a href="/store/store_community">커뮤니티 스토어 매장</a></li>							</ul>							<ul style="clear: both;">								<li class="gnb_sub_ttl"><a>매장 이야기</a></li>								<li><a href="/store/store_star_field">티바나 바 매장</a></li>							</ul>						</div>					</div>					<!-- 텍스쳐 bg -->					<div class="gnb_sub_txbg">						<div class="gnb_sub_tx_inner">							<div class="gnb_sub_tx_left">								<h3><a href="/store/store_map">매장찾기</a></h3>								<p class="gnb_sub_ex_txt">보다 빠르게 매장을 찾아보세요.</p>							</div>							<div class="gnb_sub_tx_right">							</div>						</div>					</div>					<!-- 텍스쳐 bg end -->				</div>			</li>			<li class="gnb_nav04">				<h2><a href="/responsibility/index">RESPONSIBILITY</a></h2>				<div class="gnb_sub_wrap">					<div class="gnb_sub">						<div class="gnb_sub_inner">							<ul>								<li class="gnb_sub_ttl"><a href="/responsibility/starbucks_shared_planet">사회공헌 캠페인 소개</a></li>							</ul>							<ul>								<li class="gnb_sub_ttl"><a href="/responsibility/hope_delivery">지역 사회 참여 활동</a></li>								<li><a href="/responsibility/hope_delivery">희망배달 캠페인</a></li>								<li><a href="/responsibility/talent_donation">재능기부 카페 소식</a></li>								<li><a href="/responsibility/community_store">커뮤니티 스토어</a></li>								<li><a href="/responsibility/youth_resource">청년 지원 프로그램</a></li>								<li><a href="/responsibility/our_agriculture">우리 농산물 사랑 캠페인</a></li>								<li><a href="/responsibility/our_culture_defend">우리 문화 지키기</a></li>							</ul>							<ul>								<li class="gnb_sub_ttl"><a href="/responsibility/environment">환경보호 활동</a></li>								<li><a href="/responsibility/environment">친환경 활동</a></li>								<li><a href="/responsibility/no_disposable_cup">일회용 컵 없는 매장</a></li>								<li><a href="/responsibility/bean_recycling">커피 원두 재활용</a></li>							</ul>							<ul>								<li class="gnb_sub_ttl"><a href="/responsibility/ethically_sourcing">윤리 구매</a></li>								<li><a href="/responsibility/ethically_sourcing">윤리적 원두 구매</a></li>								<li><a href="/responsibility/fair_trade">공정무역 인증</a></li>								<li><a href="/responsibility/farmer_support">커피 농가 지원 활동</a></li>							</ul>							<ul style="clear: both;">								<li class="gnb_sub_ttl"><a href="/responsibility/sp_ethical_management">글로벌 사회 공헌</a></li>								<li><a href="/responsibility/sp_ethical_management">윤리경영 보고서</a></li>								<li><a href="/responsibility/starbucks_foundation">스타벅스 재단</a></li>								<li><a href="/responsibility/sp_global_month">지구촌 봉사의 달</a></li>							</ul>						</div>					</div>					<!-- 텍스쳐 bg -->					<div class="gnb_sub_txbg">						<div class="gnb_sub_tx_inner">							<div class="gnb_sub_tx_left">							</div>							<div class="gnb_sub_tx_right">							</div>						</div>					</div>					<!-- 텍스쳐 bg end -->				</div>			</li>			<li class="gnb_nav05">				<h2><a href="/msr/index">STARBUCKS REWARDS</a></h2>				<div class="gnb_sub_wrap">					<div class="gnb_sub">						<div class="gnb_sub_inner">							<ul>								<li class="gnb_sub_ttl"><a href="/msr/msreward/about">스타벅스 리워드</a></li>								<li><a href="/msr/msreward/about">스타벅스 리워드 소개</a></li>								<li><a href="/msr/msreward/level_benefit">등급 및 혜택</a></li>								<li><a href="/msr/msreward/star">스타벅스 별</a></li>								<li><a href="/community/faq?menu_cd=STB2703&amp;cate=F17">자주 하는 질문</a></li>							</ul>							<ul>								<li class="gnb_sub_ttl"><a href="/msr/scard/about">스타벅스 카드</a></li>								<li><a href="/msr/scard/about">스타벅스 카드 소개</a></li>								<li><a href="/msr/scard/scard_gallery">스타벅스 카드 갤러리</a></li>								<li><a href="/msr/scard/register_inquiry">등록 및 조회</a></li>								<li><a href="/msr/scard/charge_information">충전 및 이용안내</a></li>								<li><a href="/msr/scard/lost_report">분실신고/환불신청</a></li>								<li><a href="/community/faq?menu_cd=STB2703&amp;cate=F05">자주 하는 질문</a></li>							</ul>							<ul>								<li class="gnb_sub_ttl"><a href="/msr/sceGift/egift_information">스타벅스 e-Gift Card</a></li>								<li><a href="/msr/sceGift/egift_information">스타벅스 e-Gift Card 소개</a></li>								<li><a href="/msr/sceGift/msr_useguide">이용안내</a></li>								<li><a href="javascript:void(0);" required="login" data-href="/msr/sceGift/gift_step1">선물하기</a></li>								<li><a href="/community/faq?menu_cd=STB2703&amp;cate=F22">자주 하는 질문</a></li>							</ul>						</div>					</div>					<!-- 텍스쳐 bg -->					<div class="gnb_sub_txbg">						<div class="gnb_sub_tx_inner">							<div class="gnb_sub_tx_left">								<h3><a href="/msr/scard/register_inquiry">스타벅스 카드 등록하기</a></h3>								<p class="gnb_sub_ex_txt">카드 등록 후 리워드 서비스를 누리고 사용내역도 조회해보세요.</p>							</div>							<div class="gnb_sub_tx_right">							</div>						</div>					</div>					<!-- 텍스쳐 bg end -->				</div>			</li>			<li class="gnb_nav06">				<h2><a href="/whats_new/index">WHAT'S NEW</a></h2>				<div class="gnb_sub_wrap">					<div class="gnb_sub">						<div class="gnb_sub_inner">							<ul>								<li class="gnb_sub_ttl"><a href="/whats_new/campaign_list">이벤트</a></li>								<li><a href="/whats_new/campaign_list">전체</a></li>								<li><a href="/whats_new/campaign_list?menu_cd=STB2812">스타벅스 카드</a></li>								<li><a href="/whats_new/campaign_list?menu_cd=STB2813">스타벅스 리워드</a></li>								<li><a href="/whats_new/campaign_list?menu_cd=STB2814">온라인</a></li>								<li><a href="/whats_new/eFreq_gift">e-프리퀀시 증정품</a></li>							</ul>							<ul>								<li class="gnb_sub_ttl"><a href="/whats_new/news_list">뉴스</a></li>								<li><a href="/whats_new/news_list">전체</a></li>								<li><a href="/whats_new/news_list?cate=N01">상품 출시</a></li>								<li><a href="/whats_new/news_list?cate=N02">스타벅스와 문화</a></li>								<li><a href="/whats_new/news_list?cate=N03">스타벅스 사회공헌</a></li>								<li><a href="/whats_new/news_list?cate=N04">스타벅스 카드출시</a></li>							</ul>							<ul>								<li class="gnb_sub_ttl"><a href="/whats_new/store_event_list">매장별 이벤트</a></li>								<li><a href="/whats_new/store_event_list">일반 매장</a></li>								<li><a href="/whats_new/store_event_list?search_date=1&amp;tab=1">신규 매장</a></li>							</ul>							<ul>								<li class="gnb_sub_ttl"><a href="/eFreq/guide?promoSeq=172">e-프리퀀시</a></li>								<li><a href="/eFreq/guide?promoSeq=172">이용안내</a></li>								<li><a href="javascript:void(0);" required="login" data-href="/eFreq/status?promoSeq=172">이용현황</a></li>							</ul>							<ul style="clear: both;">								<li class="gnb_sub_ttl"><a href="/whats_new/notice_list">공지사항</a></li>							</ul>							<ul>								<li class="gnb_sub_ttl"><a href="/whats_new/wallpaper">월페이퍼</a></li>							</ul>						</div>					</div>					<!-- 텍스쳐 bg -->					<div class="gnb_sub_txbg">						<div class="gnb_sub_tx_inner">							<div class="gnb_sub_tx_left">								<h3><a href="/whats_new/store_event_list">매장별 이벤트</a></h3>								<p class="gnb_sub_ex_txt">스타벅스의 매장 이벤트 정보를 확인 하실 수 있습니다.</p>								<h3><a href="/whats_new/wallpaper">월페이퍼</a></h3>								<p class="gnb_sub_ex_txt">매월 업데이트되는 월페이퍼(PC/Mobile)로 스타벅스를 더욱 가깝게 즐겨보세요!</p>							</div>							<div class="gnb_sub_tx_right">							</div>						</div>					</div>					<!-- 텍스쳐 bg end -->				</div>			</li>		</ul></div>
+				<div class="sub_gnb_nav_inner">		<ul>			<!-- COFFEE -->			<li class="gnb_nav01">				<h2><a href="coffee/index">COFFEE</a></h2>				<div class="gnb_sub_wrap">					<div class="gnb_sub">						<div class="gnb_sub_inner">							<ul>								<li class="gnb_sub_ttl"><a href="coffee/product_list">커피</a></li>								<li><a href="coffee/product_list">스타벅스 원두</a></li>								<li><a href="coffee/product_list?PACKAGE=01">스타벅스 비아</a></li>								<li><a href="coffee/product_list?PACKAGE=05">스타벅스앳홈 by 캡슐</a></li>							</ul>							<ul>								<li class="gnb_sub_ttl"><a href="coffee/productFinder">나와 어울리는 커피</a></li>							</ul>							<ul>								<li class="gnb_sub_ttl"><a href="coffee/reserve_info">스타벅스 리저브™</a></li>								<li><a href="coffee/reserve_magazine_list">RESERVE MAGAZINE</a></li>							</ul>							<ul>								<li class="gnb_sub_ttl"><a href="coffee/espresso">에스프레소 음료</a></li>								<li><a href="coffee/doppio">도피오</a></li>								<li><a href="coffee/espresso_macchiato">에스프레소 마키아또</a></li>								<li><a href="coffee/americano">아메리카노</a></li>								<li><a href="coffee/caramel_macchato">마키아또</a></li>								<li><a href="coffee/cappuccino">카푸치노</a></li>								<li><a href="coffee/latte">라떼</a></li>								<li><a href="coffee/mocha">모카</a></li>							</ul>							<ul style="clear: both;">								<li class="gnb_sub_ttl"><a href="coffee/higher_enjoy">최상의 커피를 즐기는 법</a></li>								<li><a href="coffee/higher_enjoy">커피 프레스</a></li>								<li><a href="coffee/higher_enjoy?PACKAGE=01">푸어 오버</a></li>								<li><a href="coffee/higher_enjoy?PACKAGE=02">아이스 푸어 오버</a></li>								<li><a href="coffee/higher_enjoy?PACKAGE=03">커피 메이커</a></li>								<li><a href="coffee/higher_enjoy?PACKAGE=04">리저브를 매장에서 다양하게 즐기는 법</a></li>							</ul>							<ul>								<li class="gnb_sub_ttl"><a href="coffee/story">커피 이야기</a></li>								<li><a href="coffee/story">농장에서 우리의 손으로</a></li>								<li><a href="coffee/story?PACKAGE=02">최상의 아라비카 원두</a></li>								<li><a href="coffee/story?PACKAGE=03">스타벅스 로스트 스펙트럼</a></li>								<li><a href="coffee/story?PACKAGE=05">스타벅스 디카페인</a></li>								<li><a href="coffee/story?PACKAGE=04">클로버® 커피 추출 시스템</a></li>							</ul>						</div>					</div>					<!-- 텍스쳐 bg -->					<div class="gnb_sub_txbg">						<div class="gnb_sub_tx_inner">							<div class="gnb_sub_tx_left">								<h3><a href="coffee/productFinder">나와 어울리는 커피 찾기</a></h3>								<p class="gnb_sub_ex_txt">스타벅스가 여러분에게 어울리는 커피를 찾아드립니다.</p>								<h3><a href="coffee/higher_enjoy">최상의 커피를 즐기는 법</a></h3>								<p class="gnb_sub_ex_txt">여러가지 방법을 통해 다양한 풍미의 커피를 즐겨보세요.</p>							</div>							<div class="gnb_sub_tx_right">							</div>						</div>					</div>					<!-- 텍스쳐 bg end -->				</div>			</li>			<!-- COFFEE end -->			<!-- MENU -->			<li class="gnb_nav02">				<h2><a href="menu/index">MENU</a></h2>				<div class="gnb_sub_wrap">					<div class="gnb_sub">						<div class="gnb_sub_inner">							<ul>								<li class="gnb_sub_ttl"><a href="menu/drink_list">음료</a></li>								<li><a href="menu/drink_list?CATE_CD=product_cold_brew">콜드 브루</a></li>								<li><a href="menu/drink_list?CATE_CD=product_brood">브루드 커피</a></li>								<li><a href="menu/drink_list?CATE_CD=product_espresso">에스프레소</a></li>								<li><a href="menu/drink_list?CATE_CD=product_frappuccino">프라푸치노</a></li>								<li><a href="menu/drink_list?CATE_CD=product_blended">블렌디드</a></li>								<li><a href="menu/drink_list?CATE_CD=product_fizzo">스타벅스 피지오</a></li>								<li><a href="menu/drink_list?CATE_CD=product_tea">티(티바나)</a></li>								<li><a href="menu/drink_list?CATE_CD=product_etc">기타 제조 음료</a></li>								<li><a href="menu/drink_list?CATE_CD=product_juice">스타벅스 주스(병음료)</a></li>							</ul>							<ul>								<li class="gnb_sub_ttl"><a href="menu/food_list">푸드</a></li>								<li><a href="menu/food_list?CATE_CD=product_bakery">브레드</a></li>								<li><a href="menu/food_list?CATE_CD=product_cake">케이크</a></li>								<li><a href="menu/food_list?CATE_CD=product_sandwich">샌드위치 &amp; 샐러드</a></li>								<li><a href="menu/food_list?CATE_CD=product_wram_food">따뜻한 푸드</a></li>								<li><a href="menu/food_list?CATE_CD=product_fruit_yogurt">과일 &amp; 요거트</a></li>								<li><a href="menu/food_list?CATE_CD=product_snack">스낵 &amp; 미니 디저트</a></li>								<li><a href="menu/food_list?CATE_CD=product_icecream">아이스크림</a></li>							</ul>							<ul>								<li class="gnb_sub_ttl"><a href="menu/product_list">상품</a></li>								<li><a href="menu/product_list?CATE_CD=product_mug">머그</a></li>								<li><a href="menu/product_list?CATE_CD=product_glass">글라스</a></li>								<li><a href="menu/product_list?CATE_CD=product_plastic">플라스틱 텀블러</a></li>								<li><a href="menu/product_list?CATE_CD=product_stainless">스테인리스 텀블러</a></li>								<li><a href="menu/product_list?CATE_CD=product_vacuum">보온병</a></li>								<li><a href="menu/product_list?CATE_CD=product_accessories">액세서리</a></li>								<li><a href="menu/product_list?CATE_CD=product_present">선물세트</a></li>								<li><a href="menu/product_list?CATE_CD=product_coffee">커피 용품</a></li>								<li><a href="menu/product_list?CATE_CD=product_teaPackage">패키지 티(티바나)</a></li>							</ul>							<ul>								<li class="gnb_sub_ttl"><a href="menu/card_list">카드</a></li>								<li><a href="menu/card_list?CATE_CD=product_offline">실물카드</a></li>								<li><a href="menu/card_list?CATE_CD=product_egift">e-Gift 카드</a></li>							</ul>							<ul style="clear: both;">								<li class="gnb_sub_ttl"><a>메뉴 이야기</a></li>								<li><a href="store/store_nitro_coldbrew">나이트로 콜드브루</a></li>								<li><a href="store/store_coldbrew">콜드 브루</a></li>								<li><a href="menuStory/teavana">스타벅스 티바나</a></li>							</ul>						</div>					</div>					<!-- 텍스쳐 bg -->					<div class="gnb_sub_txbg">						<div class="gnb_sub_tx_inner">							<div class="gnb_sub_tx_left">								<h3><a href="store/store_nitro_coldbrew">나이트로 콜드 브루 <img alt="" src="//image.istarbucks.co.kr/common/img/common/icon_gnb_new.png"></a></h3>								<p class="gnb_sub_ex_txt">나이트로 커피 정통의 물결치듯 흘러내리는 캐스케이딩과 부드러운 크림을 경험하세요. </p>							</div>							<div class="gnb_sub_tx_right">							</div>						</div>					</div>					<!-- 텍스쳐 bg end -->				</div>			</li>			<!-- MENU end -->			<li class="gnb_nav03">				<h2><a href="store/index">STORE</a></h2>				<div class="gnb_sub_wrap">					<div class="gnb_sub">						<div class="gnb_sub_inner">							<ul>								<li class="gnb_sub_ttl"><a href="store/store_map">매장 찾기</a></li>								<li><a href="store/store_map?disp=quick">퀵 검색</a></li>								<li><a href="store/store_map?disp=locale">지역 검색</a></li>							</ul>							<ul>								<li class="gnb_sub_ttl"><a href="store/store_drive">드라이브 스루 매장</a></li>							</ul>							<ul>								<li class="gnb_sub_ttl"><a href="store/store_reserve">스타벅스 리저브™ 매장</a></li>							</ul>							<ul>								<li class="gnb_sub_ttl"><a href="store/store_community">커뮤니티 스토어 매장</a></li>							</ul>							<ul style="clear: both;">								<li class="gnb_sub_ttl"><a>매장 이야기</a></li>								<li><a href="store/store_star_field">티바나 바 매장</a></li>							</ul>						</div>					</div>					<!-- 텍스쳐 bg -->					<div class="gnb_sub_txbg">						<div class="gnb_sub_tx_inner">							<div class="gnb_sub_tx_left">								<h3><a href="store/store_map">매장찾기</a></h3>								<p class="gnb_sub_ex_txt">보다 빠르게 매장을 찾아보세요.</p>							</div>							<div class="gnb_sub_tx_right">							</div>						</div>					</div>					<!-- 텍스쳐 bg end -->				</div>			</li>			<li class="gnb_nav04">				<h2><a href="responsibility/index">RESPONSIBILITY</a></h2>				<div class="gnb_sub_wrap">					<div class="gnb_sub">						<div class="gnb_sub_inner">							<ul>								<li class="gnb_sub_ttl"><a href="responsibility/starbucks_shared_planet">사회공헌 캠페인 소개</a></li>							</ul>							<ul>								<li class="gnb_sub_ttl"><a href="responsibility/hope_delivery">지역 사회 참여 활동</a></li>								<li><a href="responsibility/hope_delivery">희망배달 캠페인</a></li>								<li><a href="responsibility/talent_donation">재능기부 카페 소식</a></li>								<li><a href="responsibility/community_store">커뮤니티 스토어</a></li>								<li><a href="responsibility/youth_resource">청년 지원 프로그램</a></li>								<li><a href="responsibility/our_agriculture">우리 농산물 사랑 캠페인</a></li>								<li><a href="responsibility/our_culture_defend">우리 문화 지키기</a></li>							</ul>							<ul>								<li class="gnb_sub_ttl"><a href="responsibility/environment">환경보호 활동</a></li>								<li><a href="responsibility/environment">친환경 활동</a></li>								<li><a href="responsibility/no_disposable_cup">일회용 컵 없는 매장</a></li>								<li><a href="responsibility/bean_recycling">커피 원두 재활용</a></li>							</ul>							<ul>								<li class="gnb_sub_ttl"><a href="responsibility/ethically_sourcing">윤리 구매</a></li>								<li><a href="responsibility/ethically_sourcing">윤리적 원두 구매</a></li>								<li><a href="responsibility/fair_trade">공정무역 인증</a></li>								<li><a href="responsibility/farmer_support">커피 농가 지원 활동</a></li>							</ul>							<ul style="clear: both;">								<li class="gnb_sub_ttl"><a href="responsibility/sp_ethical_management">글로벌 사회 공헌</a></li>								<li><a href="responsibility/sp_ethical_management">윤리경영 보고서</a></li>								<li><a href="responsibility/starbucks_foundation">스타벅스 재단</a></li>								<li><a href="responsibility/sp_global_month">지구촌 봉사의 달</a></li>							</ul>						</div>					</div>					<!-- 텍스쳐 bg -->					<div class="gnb_sub_txbg">						<div class="gnb_sub_tx_inner">							<div class="gnb_sub_tx_left">							</div>							<div class="gnb_sub_tx_right">							</div>						</div>					</div>					<!-- 텍스쳐 bg end -->				</div>			</li>			<li class="gnb_nav05">				<h2><a href="msr/index">STARBUCKS REWARDS</a></h2>				<div class="gnb_sub_wrap">					<div class="gnb_sub">						<div class="gnb_sub_inner">							<ul>								<li class="gnb_sub_ttl"><a href="msr/msreward/about">스타벅스 리워드</a></li>								<li><a href="msr/msreward/about">스타벅스 리워드 소개</a></li>								<li><a href="msr/msreward/level_benefit">등급 및 혜택</a></li>								<li><a href="msr/msreward/star">스타벅스 별</a></li>								<li><a href="community/faq?menu_cd=STB2703&amp;cate=F17">자주 하는 질문</a></li>							</ul>							<ul>								<li class="gnb_sub_ttl"><a href="msr/scard/about">스타벅스 카드</a></li>								<li><a href="msr/scard/about">스타벅스 카드 소개</a></li>								<li><a href="msr/scard/scard_gallery">스타벅스 카드 갤러리</a></li>								<li><a href="msr/scard/register_inquiry">등록 및 조회</a></li>								<li><a href="msr/scard/charge_information">충전 및 이용안내</a></li>								<li><a href="msr/scard/lost_report">분실신고/환불신청</a></li>								<li><a href="community/faq?menu_cd=STB2703&amp;cate=F05">자주 하는 질문</a></li>							</ul>							<ul>								<li class="gnb_sub_ttl"><a href="msr/sceGift/egift_information">스타벅스 e-Gift Card</a></li>								<li><a href="msr/sceGift/egift_information">스타벅스 e-Gift Card 소개</a></li>								<li><a href="msr/sceGift/msr_useguide">이용안내</a></li>								<li><a href="javascript:void(0);" required="login" data-href="msr/sceGift/gift_step1">선물하기</a></li>								<li><a href="community/faq?menu_cd=STB2703&amp;cate=F22">자주 하는 질문</a></li>							</ul>						</div>					</div>					<!-- 텍스쳐 bg -->					<div class="gnb_sub_txbg">						<div class="gnb_sub_tx_inner">							<div class="gnb_sub_tx_left">								<h3><a href="msr/scard/register_inquiry">스타벅스 카드 등록하기</a></h3>								<p class="gnb_sub_ex_txt">카드 등록 후 리워드 서비스를 누리고 사용내역도 조회해보세요.</p>							</div>							<div class="gnb_sub_tx_right">							</div>						</div>					</div>					<!-- 텍스쳐 bg end -->				</div>			</li>			<li class="gnb_nav06">				<h2><a href="whats_new/index">WHAT'S NEW</a></h2>				<div class="gnb_sub_wrap">					<div class="gnb_sub">						<div class="gnb_sub_inner">							<ul>								<li class="gnb_sub_ttl"><a href="whats_new/campaign_list">이벤트</a></li>								<li><a href="whats_new/campaign_list">전체</a></li>								<li><a href="whats_new/campaign_list?menu_cd=STB2812">스타벅스 카드</a></li>								<li><a href="whats_new/campaign_list?menu_cd=STB2813">스타벅스 리워드</a></li>								<li><a href="whats_new/campaign_list?menu_cd=STB2814">온라인</a></li>								<li><a href="whats_new/eFreq_gift">e-프리퀀시 증정품</a></li>							</ul>							<ul>								<li class="gnb_sub_ttl"><a href="whats_new/news_list">뉴스</a></li>								<li><a href="whats_new/news_list">전체</a></li>								<li><a href="whats_new/news_list?cate=N01">상품 출시</a></li>								<li><a href="whats_new/news_list?cate=N02">스타벅스와 문화</a></li>								<li><a href="whats_new/news_list?cate=N03">스타벅스 사회공헌</a></li>								<li><a href="whats_new/news_list?cate=N04">스타벅스 카드출시</a></li>							</ul>							<ul>								<li class="gnb_sub_ttl"><a href="whats_new/store_event_list">매장별 이벤트</a></li>								<li><a href="whats_new/store_event_list">일반 매장</a></li>								<li><a href="whats_new/store_event_list?search_date=1&amp;tab=1">신규 매장</a></li>							</ul>							<ul>								<li class="gnb_sub_ttl"><a href="eFreq/guide?promoSeq=172">e-프리퀀시</a></li>								<li><a href="eFreq/guide?promoSeq=172">이용안내</a></li>								<li><a href="javascript:void(0);" required="login" data-href="eFreq/status?promoSeq=172">이용현황</a></li>							</ul>							<ul style="clear: both;">								<li class="gnb_sub_ttl"><a href="whats_new/notice_list">공지사항</a></li>							</ul>							<ul>								<li class="gnb_sub_ttl"><a href="whats_new/wallpaper">월페이퍼</a></li>							</ul>						</div>					</div>					<!-- 텍스쳐 bg -->					<div class="gnb_sub_txbg">						<div class="gnb_sub_tx_inner">							<div class="gnb_sub_tx_left">								<h3><a href="whats_new/store_event_list">매장별 이벤트</a></h3>								<p class="gnb_sub_ex_txt">스타벅스의 매장 이벤트 정보를 확인 하실 수 있습니다.</p>								<h3><a href="whats_new/wallpaper">월페이퍼</a></h3>								<p class="gnb_sub_ex_txt">매월 업데이트되는 월페이퍼(PC/Mobile)로 스타벅스를 더욱 가깝게 즐겨보세요!</p>							</div>							<div class="gnb_sub_tx_right">							</div>						</div>					</div>					<!-- 텍스쳐 bg end -->				</div>			</li>		</ul></div>
 			</nav>
 		</div>
 		<!-- 서브 gnb end -->
@@ -986,13 +984,13 @@ var eFrequencyPlannerYn = 'Y';
 				<header class="ms_sub_tit_wrap">
 					<div class="ms_sub_tit_bg">
 						<div class="ms_sub_tit_inner">
-							<h4><img alt="이용약관" src="/common/img/footer/etc/tit3.png"></h4>
+							<h4><img alt="이용약관" src="common/img/footer/etc/tit3.png"></h4>
 							<ul class="smap">
-								<li><a href="/"><img src="/common/img/common/icon_home_w.png" alt="홈으로"></a></li>
-								<li><img class="arrow" src="/common/img/common/icon_arrow_w.png" alt="하위메뉴"></li>
-								<li><a href="/footer/etc/privacy"><span class="en">ETC</span></a></li>
-								<li><img class="arrow" src="/common/img/common/icon_arrow_w.png" alt="하위메뉴"></li>
-								<li><a href="/footer/etc/rules">이용약관</a></li>
+								<li><a href="/"><img src="common/img/common/icon_home_w.png" alt="홈으로"></a></li>
+								<li><img class="arrow" src="common/img/common/icon_arrow_w.png" alt="하위메뉴"></li>
+								<li><a href="footer/etc/privacy"><span class="en">ETC</span></a></li>
+								<li><img class="arrow" src="common/img/common/icon_arrow_w.png" alt="하위메뉴"></li>
+								<li><a href="footer/etc/rules">이용약관</a></li>
 							</ul>
 						</div>
 					</div>
@@ -2241,31 +2239,31 @@ var eFrequencyPlannerYn = 'Y';
         <li>
             <a href="javascript:void(0);">개인정보 처리방침<span class="sbox_arrow_down"></span></a> <!-- 20211213 수정 -->
             <ul>
-				<li><a href="/footer/etc/privacy">· 개인정보 처리방침</a></li>
-				<li><a href="/footer/etc/privacy_board_list">· 개인정보처리의 업무위탁관련</a></li>
+				<li><a href="footer/etc/privacy">· 개인정보 처리방침</a></li>
+				<li><a href="footer/etc/privacy_board_list">· 개인정보처리의 업무위탁관련</a></li>
 			</ul>
         </li>
         <li>
-            <a href="/footer/etc/rules_vod">영상정보처리기기<br>운영관리 방침</a>
+            <a href="footer/etc/rules_vod">영상정보처리기기<br>운영관리 방침</a>
         </li>
         <li>
             <a href="javascript:void(0);">이용약관<span class="sbox_arrow_down"></span></a>
             <ul>
-                <li><a href="/footer/etc/rules">· 홈페이지 이용약관</a></li>
-                <li><a href="/footer/etc/rules_loc">· 위치정보 이용약관</a></li>
-                <li><a href="/footer/etc/rules_msr">· 스타벅스 카드 이용약관</a></li>
-                <li><a href="/footer/etc/rules_non">· 비회원 이용약관</a></li>
-                <li><a href="/footer/etc/rules_mdp">· My DT Pass 서비스 이용약관</a></li> 
+                <li><a href="footer/etc/rules">· 홈페이지 이용약관</a></li>
+                <li><a href="footer/etc/rules_loc">· 위치정보 이용약관</a></li>
+                <li><a href="footer/etc/rules_msr">· 스타벅스 카드 이용약관</a></li>
+                <li><a href="footer/etc/rules_non">· 비회원 이용약관</a></li>
+                <li><a href="footer/etc/rules_mdp">· My DT Pass 서비스 이용약관</a></li> 
             </ul>
         </li>
         <li>
-            <a href="/footer/etc/hotline">윤리경영 핫라인</a>
+            <a href="footer/etc/hotline">윤리경영 핫라인</a>
         </li>
         <li>
-            <a href="/footer/etc/coming_route">찾아오시는 길</a>
+            <a href="footer/etc/coming_route">찾아오시는 길</a>
         </li>
         <li>
-            <a href="/footer/etc/sitemap">사이트 맵</a>
+            <a href="footer/etc/sitemap">사이트 맵</a>
         </li>
     </ul>
 </nav>

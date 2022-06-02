@@ -597,13 +597,10 @@ var eFrequencyPlannerYn = 'Y';
 	<li class="util_nav01 sign_out" style="display:none;"><a href="javascript:void(0);">Sign out</a></li>
 	<li class="util_nav01 sign_in"><a href="javascript:void(0);">Sign In</a></li>
 	<li class="util_nav02"><a href="my/index" required="login">My Starbucks</a></li>
-	<li class="util_nav03"><a href="util/index">Customer Service & Ideas</a></li>
+	<li class="util_nav03"><a href="menu/orderList">Order</a></li>
 	<li class="util_nav04"><a href="store/store_map">Find a Store</a></li>
 </ul>
 				</nav>
-				<p class="btn_search">
-					<a href="javascript:void(0);"><img alt="통합검색" src="common/img/common/icon_magnifier_black.png"></a>
-				</p>
 				<a href="javascript:void(0);" class="rCup3_wrap" role="button" title="마이 리워드 레이어 열기"><!-- 접근성_20171201 class, role, title 추가 --><span class="rCup3"></span></a><!-- 150714 DOM 수정 - 떨어지는 메뉴 부분에 jsMovie 추가 -->
 			</div>
 			<nav class="sub_gnb_nav">
@@ -653,7 +650,7 @@ var eFrequencyPlannerYn = 'Y';
 							<p class="tit">관련 제품</p>
 							<div class="productRel_wrap"> 
 								<ul class="productRel_ul">
-								<li>                 <dl>                     <dt><a href="javascript:void(0)" class="goView" prod="30"><img src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[30]_20210415144252244.jpg" alt="에스프레소 콘 파나"></a></dt>                     <dd>                         <p class="t1">에스프레소 콘 파나</p>                         <p class="t2">신선한 에스프레소 샷에 풍부한 휘핑크림을 얹은 커피 음료로서, 뜨거운 커피의 맛과 차갑고 달콤한 생크림의 맛을 같이 즐길 수 있는 커피 음료</p>                         <p class="more_btn"><a href="javascript:void(0)" class="goView" prod="30"><img src="//image.istarbucks.co.kr/common/img/coffee/cf_more_btn.png" alt="자세히 보기"></a></p>                     </dd>                 </dl>             </li></ul>
+								<li>                 <dl>                     <dt><a href="javascript:void(0)" class="goView" prod="30"><img src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[30]_20210415144252244.jpg" alt="에스프레소 콘 파나"></a></dt>                     <dd>                         <p class="t1">에스프레소 콘 파나</p>                         <p class="t2">신선한 에스프레소 샷에 풍부한 휘핑크림을 얹은 커피 음료로서, 뜨거운 커피의 맛과 차갑고 달콤한 생크림의 맛을 같이 즐길 수 있는 커피 음료</p>                         <p class="more_btn"><a href="javascript:void(0)" class="goView" prod="30"></a></p>                     </dd>                 </dl>             </li></ul>
 							</div>
 						</div>
 					</div>
