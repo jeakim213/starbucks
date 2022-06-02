@@ -1,5 +1,4 @@
-﻿<%@page isELIgnored="true" %>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+﻿<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
 
@@ -26,21 +25,21 @@
 <meta property="og:description" content="Starbucks">
 
 <title id="titleJoin">Starbucks Korea</title> <!-- 220117 수정 -->
-<link rel="shortcut icon" href="common/img/common/favicon.ico?v=200828" type="image/ico"> <!-- 20200827 파비콘 교체 및 CDN 변수처리 -->
-<link href="common/css/reset.css" rel="stylesheet">
-<link href="common/css/style.css?v=210721" rel="stylesheet">
-<link href="common/css/jquery.bxslider.css" rel="stylesheet">
-<link href="common/css/idangerous.swiper.css" rel="stylesheet">
-<link href="common/css/idangerous.swiper.scrollbar.css" rel="stylesheet">
-<link href="common/css/jquery.mCustomScrollbar.css" rel="stylesheet">
-<link href="common/css/jquery.scrollbar.css" rel="stylesheet">
-<link href="common/css/jquery-ui.css" rel="stylesheet">
-<link href="common/css/ezmark.css" rel="stylesheet">
-<link href="common/css/style_dt.css?v=20191211" rel="stylesheet"> <!-- 20191211 수정 -->
+<link rel="shortcut icon" href="../common/img/common/favicon.ico?v=200828" type="image/ico"> <!-- 20200827 파비콘 교체 및 CDN 변수처리 -->
+<link href="../common/css/reset.css" rel="stylesheet">
+<link href="../common/css/style.css?v=210721" rel="stylesheet">
+<link href="../common/css/jquery.bxslider.css" rel="stylesheet">
+<link href="../common/css/idangerous.swiper.css" rel="stylesheet">
+<link href="../common/css/idangerous.swiper.scrollbar.css" rel="stylesheet">
+<link href="../common/css/jquery.mCustomScrollbar.css" rel="stylesheet">
+<link href="../common/css/jquery.scrollbar.css" rel="stylesheet">
+<link href="../common/css/jquery-ui.css" rel="stylesheet">
+<link href="../common/css/ezmark.css" rel="stylesheet">
+<link href="../common/css/style_dt.css?v=20191211" rel="stylesheet"> <!-- 20191211 수정 -->
 
 <!--[if lt IE 9]>
 	<script src="/html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-	<link href="common/css_ie/style.css" rel="stylesheet">
+	<link href="../common/css_ie/style.css" rel="stylesheet">
 	<script>
 		document.createElement('header');
 		document.createElement('nav');
@@ -72,8 +71,8 @@ var eFrequencySeq = '172';
 var eFrequencyPlannerYn = 'Y';
 </script>
 
-        <link href="common/css/style_menu.css" rel="stylesheet">
-        <link href="common/css/ezmark.css" rel="stylesheet">
+        <link href="../common/css/style_menu.css" rel="stylesheet">
+        <link href="../common/css/ezmark.css" rel="stylesheet">
 	</head>
 	<body>
 		<div id="wrap">
@@ -129,7 +128,7 @@ var eFrequencyPlannerYn = 'Y';
 					<!-- 유저인포 -->
 					<div class="user_greet">
 						<div class="user_pic_area">
-							<img alt="사용자 아이디" src="common/img/common/user_pic_sample.jpg">
+							<img alt="사용자 아이디" src="../common/img/common/user_pic_sample.jpg">
 							<p class="msr_user_mask msr_user_mask01"></p>
 							<p class="msr_user_mask msr_user_mask02"></p>
 							<p class="msr_user_mask msr_user_mask03"></p>
@@ -167,7 +166,7 @@ var eFrequencyPlannerYn = 'Y';
 					<!-- MSR 회원 -->
 					<!-- 150805 DOM 수정 -->
 					<div class="msr_card_info w_card_pic">
-						<p class="msr_card_area" onclick="location.href = '/my/mycard_index';" style="cursor:pointer;"><img alt=""></p>
+						<p class="msr_card_area" onclick="location.href = 'my/mycard_index';" style="cursor:pointer;"><img alt=""></p>
 						<p class="card_info_txt">잔액 <strong class="en balance">0</strong>원</p>
 						<!-- 150924 - 다른카드보기버튼 추가 -->
 						<p class="btn_other_more"><a href="my/mycard_index">다른 카드 보기</a></p>
@@ -178,13 +177,13 @@ var eFrequencyPlannerYn = 'Y';
 							<img alt="카드이름">
 						</div>
 						<div class="mycard_area2">
-							<img alt="카드이름" src="common/img/common/mycard2.png">
+							<img alt="카드이름" src="../common/img/common/mycard2.png">
 							<p class="num"><!-- 1234-1234-1234-1234 --></p>
 							<p class="barcord"><!-- <img src="/image.istarbucks.co.kr/common/img/common/bacord.png" alt=""> --></p>
 						</div>
 						<div class="mycard_one">
 							<!-- <div class="front"> -->
-							<img src="common/img/common/payment_icon1.png" alt="">
+							<img src="../common/img/common/payment_icon1.png" alt="">
 							<!-- </div> -->
 							<!-- <div class="back"><img src="/image.istarbucks.co.kr/common/img/common/payment_icon1.png" alt=""></div> -->
 						</div>
@@ -199,7 +198,7 @@ var eFrequencyPlannerYn = 'Y';
 					<!-- 일반회원 -->
 					<div class="sb_card_regi">
 						<a href="javascript:void(0);">
-							<p class="icon_add_card" onclick="location.href = '/my/mycard_info_input';"><img alt="카드등록 아이콘" src="common/img/common/icon_add_card.png"></p>
+							<p class="icon_add_card" onclick="location.href = '/my/mycard_info_input';"><img alt="카드등록 아이콘" src="../common/img/common/icon_add_card.png"></p>
 							<p class="sb_card_regi_txt"><strong>스타벅스 카드 등록</strong><br>카드를 등록하시고<br>다양한 리워드를<br>만나보세요.</p>
 						</a>
 					</div>
@@ -617,12 +616,12 @@ var eFrequencyPlannerYn = 'Y';
 				<!-- 서브 타이틀 -->
 				<div class="sub_tit_wrap">
 					<div class="sub_tit_inner">
-						<h2><img src="common/img/menu/menu_tit1.jpg" alt="음료"></h2>
+						<h2><img src="../common/img/menu/menu_tit1.jpg" alt="음료"></h2>
 						<ul class="smap">
-							<li><a href="index.htm"><img src="common/img/common/icon_home.png" alt="홈으로"></a></li>
-							<li><img class="arrow" src="common/img/common/icon_arrow.png" alt="하위메뉴"></li>
+							<li><a href="index.htm"><img src="../common/img/common/icon_home.png" alt="홈으로"></a></li>
+							<li><img class="arrow" src="../common/img/common/icon_arrow.png" alt="하위메뉴"></li>
 							<li class="en"><a href="index">MENU</a></li>
-							<li><img class="arrow" src="common/img/common/icon_arrow.png" alt="하위메뉴"></li>
+							<li><img class="arrow" src="../common/img/common/icon_arrow.png" alt="하위메뉴"></li>
 							<li><a href="drink_list" class="this">음료</a></li>
 						</ul>
 					</div>
@@ -669,7 +668,7 @@ var eFrequencyPlannerYn = 'Y';
 										
 											
 												
-													<li><a href="javascript:void(0)" role="button"><img src="upload/banner/themebnr/fs8Fa0_20220411135107927.jpg" alt="서머1 프로모션" data-sbseq="W0000415" style="width: 335px; height: 90px"></a></li>
+													<li><a href="javascript:void(0)" role="button"><img src="../upload/banner/themebnr/fs8Fa0_20220411135107927.jpg" alt="서머1 프로모션" data-sbseq="W0000415" style="width: 335px; height: 90px"></a></li>
 												
 												
 												
@@ -702,7 +701,7 @@ var eFrequencyPlannerYn = 'Y';
 										<dl>
 											<!-- 콜드 브루 커피 -->
 											<dt><a href="javascript:void(0);">콜드 브루 커피</a>
-												<i class="summaryIcon"><img src="common/img/menu/logo_decaf.png" alt=""></i><span class="summary">디카페인 에스프레소 샷 추가 가능 (일부 음료 제외)</span>
+												<i class="summaryIcon"><img src="../common/img/menu/logo_decaf.png" alt=""></i><span class="summary">디카페인 에스프레소 샷 추가 가능 (일부 음료 제외)</span>
 											</dt>
 											<dd>
 												<ul class="product_cold_brew">
@@ -711,7 +710,7 @@ var eFrequencyPlannerYn = 'Y';
 											
 											<!-- 브루드 커피 -->
 											<dt><a href="javascript:void(0);">브루드 커피</a>
-												<i class="summaryIcon"><img src="common/img/menu/logo_decaf.png" alt=""></i><span class="summary">디카페인 에스프레소 샷 추가 가능 (일부 음료 제외)</span>
+												<i class="summaryIcon"><img src="../common/img/menu/logo_decaf.png" alt=""></i><span class="summary">디카페인 에스프레소 샷 추가 가능 (일부 음료 제외)</span>
 											</dt>
 											<dd>
 												<ul class="product_brood">
@@ -720,7 +719,7 @@ var eFrequencyPlannerYn = 'Y';
 
 											<!-- 에스프레소 -->
 											<dt><a href="javascript:void(0)">에스프레소</a>
-												<i class="summaryIcon"><img src="common/img/menu/logo_decaf.png" alt=""></i><span class="summary">디카페인 에스프레소 샷 선택 가능 (일부 음료 제외)</span>
+												<i class="summaryIcon"><img src="../common/img/menu/logo_decaf.png" alt=""></i><span class="summary">디카페인 에스프레소 샷 선택 가능 (일부 음료 제외)</span>
 											</dt>
 											<dd>
 												<ul class="product_espresso">
@@ -729,7 +728,7 @@ var eFrequencyPlannerYn = 'Y';
 
 											<!-- 프라푸치노 -->
 											<dt><a href="javascript:void(0)">프라푸치노</a>
-												<i class="summaryIcon"><img src="common/img/menu/logo_decaf.png" alt=""></i><span class="summary">디카페인 에스프레소 샷 추가 가능 (일부 음료 제외)</span>
+												<i class="summaryIcon"><img src="../common/img/menu/logo_decaf.png" alt=""></i><span class="summary">디카페인 에스프레소 샷 추가 가능 (일부 음료 제외)</span>
 											</dt>
 											<dd>
 												<ul class="product_frappuccino">
@@ -738,7 +737,7 @@ var eFrequencyPlannerYn = 'Y';
 
 											<!-- 블렌디드 -->
 											<dt><a href="javascript:void(0)">블렌디드</a>
-												<i class="summaryIcon"><img src="common/img/menu/logo_decaf.png" alt=""></i><span class="summary">디카페인 에스프레소 샷 추가 가능 (일부 음료 제외)</span>
+												<i class="summaryIcon"><img src="../common/img/menu/logo_decaf.png" alt=""></i><span class="summary">디카페인 에스프레소 샷 추가 가능 (일부 음료 제외)</span>
 											</dt>
 											<dd>
 												<ul class="product_blended">
@@ -747,7 +746,7 @@ var eFrequencyPlannerYn = 'Y';
 
 											<!-- 스타벅스 피지오 -->
 											<dt><a href="javascript:void(0)">스타벅스 피지오</a>
-												<i class="summaryIcon"><img src="common/img/menu/logo_decaf.png" alt=""></i><span class="summary">디카페인 에스프레소 샷 추가 가능 (일부 음료 제외)</span>
+												<i class="summaryIcon"><img src="../common/img/menu/logo_decaf.png" alt=""></i><span class="summary">디카페인 에스프레소 샷 추가 가능 (일부 음료 제외)</span>
 											</dt>
 											<dd>
 												<ul class="product_fizzo">
@@ -756,7 +755,7 @@ var eFrequencyPlannerYn = 'Y';
 
 											<!-- 티 -->
 											<dt><a href="javascript:void(0)">티(티바나)</a>
-												<i class="summaryIcon"><img src="common/img/menu/logo_decaf.png" alt=""></i><span class="summary">디카페인 에스프레소 샷 추가 가능 (일부 음료 제외)</span>
+												<i class="summaryIcon"><img src="../common/img/menu/logo_decaf.png" alt=""></i><span class="summary">디카페인 에스프레소 샷 추가 가능 (일부 음료 제외)</span>
 											</dt>
 											<dd>
 												<ul class="product_tea">
@@ -765,7 +764,7 @@ var eFrequencyPlannerYn = 'Y';
 
 											<!-- 기타 제조 음료 -->
 											<dt><a href="javascript:void(0)">기타 제조 음료</a>
-												<i class="summaryIcon"><img src="common/img/menu/logo_decaf.png" alt=""></i><span class="summary">디카페인 에스프레소 샷 추가 가능 (일부 음료 제외)</span>
+												<i class="summaryIcon"><img src="../common/img/menu/logo_decaf.png" alt=""></i><span class="summary">디카페인 에스프레소 샷 추가 가능 (일부 음료 제외)</span>
 											</dt>
 											<dd>
 												<ul class="product_etc">
@@ -1230,47 +1229,47 @@ var eFrequencyPlannerYn = 'Y';
 			<!-- footer end -->
 		
 			
-			<script src="common/js/jquery-1.10.2.min.js"></script>
-			<script src="common/js/%40common.js"></script>
-			<script src="common/js/jquery-ui.min.js?v=220207"></script>
-			<script src="common/js/idangerous.swiper-2.1.min.js"></script>
-			<script src="common/js/idangerous.swiper.scrollbar-2.1.js"></script>
-			<script src="common/js/jquery.bxslider.min.js"></script>
-			<script src="common/js/skdslider.min.js"></script>
-			<script src="common/js/jquery.drive.js"></script>
-			<script src="common/js/jquery.easing-1.3.min.js"></script>
-			<script src="common/js/jquery.elevatezoom.js"></script>
-			<script src="common/js/jquery.flip.js"></script>
-			<script src="common/js/jquery.jsmovie.1.4.4.min.js"></script>
-			<script src="common/js/jquery.mCustomScrollbar.concat.js"></script>
-			<script src="common/js/jquery.number.min.js"></script>
-			<script src="common/js/jquery.rotate.2.3.js"></script>
-			<script src="common/js/jquery.scrollbar.js"></script>
-			<script src="common/js/jquery.scrollTo-1.4.2-min.js"></script>
-			<script src="common/js/jquery.superscrollorama.js"></script>						
-			<script src="common/js/jquery.transform2d.js"></script>
-			<script src="common/js/jquery.transform3d.js"></script>			
-			<script src="common/js/greensock/TweenMax.min.js"></script>
-			<script src="common/js/masonry.pkgd.js"></script>
-			<script src="common/js/common.js"></script>
-			<script src="common/js/gnb.js?v=220502"></script>
-			<script src="common/js/header.js?v=200915"></script>
-			<script src="common/js/footer.js?v=210818"></script>
+			<script src="../common/js/jquery-1.10.2.min.js"></script>
+			<script src="../common/js/@common.js"></script>
+			<script src="../common/js/jquery-ui.min.js?v=220207"></script>
+			<script src="../common/js/idangerous.swiper-2.1.min.js"></script>
+			<script src="../common/js/idangerous.swiper.scrollbar-2.1.js"></script>
+			<script src="../common/js/jquery.bxslider.min.js"></script>
+			<script src="../common/js/skdslider.min.js"></script>
+			<script src="../common/js/jquery.drive.js"></script>
+			<script src="../common/js/jquery.easing-1.3.min.js"></script>
+			<script src="../common/js/jquery.elevatezoom.js"></script>
+			<script src="../common/js/jquery.flip.js"></script>
+			<script src="../common/js/jquery.jsmovie.1.4.4.min.js"></script>
+			<script src="../common/js/jquery.mCustomScrollbar.concat.js"></script>
+			<script src="../common/js/jquery.number.min.js"></script>
+			<script src="../common/js/jquery.rotate.2.3.js"></script>
+			<script src="../common/js/jquery.scrollbar.js"></script>
+			<script src="../common/js/jquery.scrollTo-1.4.2-min.js"></script>
+			<script src="../common/js/jquery.superscrollorama.js"></script>						
+			<script src="../common/js/jquery.transform2d.js"></script>
+			<script src="../common/js/jquery.transform3d.js"></script>			
+			<script src="../common/js/greensock/TweenMax.min.js"></script>
+			<script src="../common/js/masonry.pkgd.js"></script>
+			<script src="../common/js/common.js"></script>
+			<script src="../common/js/gnb.js?v=220502"></script>
+			<script src="../common/js/header.js?v=200915"></script>
+			<script src="../common/js/footer.js?v=210818"></script>
 
-			<script src="common/js/jquery.tmpl.js"></script>
-			<script src="common/js/jquery.tmplPlus.min.js"></script>
-			<script src="common/js/jquery.ezmark.min.js"></script>
+			<script src="../common/js/jquery.tmpl.js"></script>
+			<script src="../common/js/jquery.tmplPlus.min.js"></script>
+			<script src="../common/js/jquery.ezmark.min.js"></script>
 			<!-- <script src="/developers.kakao.com/sdk/js/kakao.min.js"></script> -->
 			
 			<!--
-			<script src="common/js/swiper.jquery.min.js"></script>
-			<script src="common/js/swiper.min.js"></script>
-			<script src="common/js/util.js"></script>
+			<script src="../common/js/swiper.jquery.min.js"></script>
+			<script src="../common/js/swiper.min.js"></script>
+			<script src="../common/js/util.js"></script>
 			-->
 			
 		
-			<script src="common/js/openevent/openevent.js"></script>
-			<script src="common/js/open_event_control.js"></script>
+			<script src="../common/js/openevent/openevent.js"></script>
+			<script src="../common/js/open_event_control.js"></script>
 			<script type="text/javascript">
 				
 				var mrSlider;
@@ -1479,7 +1478,7 @@ var eFrequencyPlannerYn = 'Y';
                 /* 개인컵 리워드 e */
 			</script>
 
-			<script src="common/js/jquery.transit.min.js"></script>
+			<script src="../common/js/jquery.transit.min.js"></script>
 			<script>
 				// 150805 DOM 수정
 				$('div.msr_card_zone').bind('click', function(){
@@ -1516,7 +1515,7 @@ var eFrequencyPlannerYn = 'Y';
 				$('.mycard_one').seqfx();
 			</script>
 						
-			<script src='/common/js/makePCookie.js'></script>
+			<script src='../common/js/makePCookie.js'></script>
 		
 			<script>
 				$(document).ready(function () {
@@ -1536,9 +1535,9 @@ var eFrequencyPlannerYn = 'Y';
 			<input type="hidden" name="selIndex" id="selIndex" value="">
 		</div>
 		
-		<script src="common/js/jquery.ezmark.min-1.js"></script>
-        <script src="common/js/menu.js"></script>
-        <script src="common/js/jquery.async.min.js"></script>
+		<script src="../common/js/jquery.ezmark.min-1.js"></script>
+        <script src="../common/js/menu.js"></script>
+        <script src="../common/js/jquery.async.min.js"></script>
         
 		<script>
 		   var $PREVIEW = "";
@@ -1802,7 +1801,7 @@ var eFrequencyPlannerYn = 'Y';
                 
                 var url = '/menu/productListAjax';
     			
-                   url = '/upload/json/menu/' + pro_seq + '.js';
+                   url = '${pageContext.request.contextPath}' + '/upload/json/menu/' + pro_seq + '.json';
                 
                 __ajaxCall(url, option , true, "JSON", "POST",
                 function(data) {
@@ -1814,13 +1813,13 @@ var eFrequencyPlannerYn = 'Y';
                             f_cate = $(this).attr('f_cate');
                             f = document.drinkListForm;
                             if(f_cate == "W0000001") {
-                                f.action = "menu/drink_view";
+                                f.action = "drink_view";
                             } else if(f_cate == "W0000012") {
-                                f.action = "menu/food_view";
+                                f.action = "food_view";
                             } else if(f_cate == "W0000022") {
-                                f.action = "menu/product_view";
+                                f.action = "product_view";
                             } else {
-                                f.action = "menu/drink_view";
+                                f.action = "drink_view";
                             }
                             f.product_cd.value = product_cd;
                             f.submit();
@@ -1874,7 +1873,7 @@ var eFrequencyPlannerYn = 'Y';
 					
 	                var url = '/menu/productListAjax';
 	    			
-	                   url = '/upload/json/menu/' + cngCateCode + '.js';
+	                   url = '${pageContext.request.contextPath}' + '/upload/json/menu/' + cngCateCode + '.json';
 	                
 	                __ajaxCall(url, option , true, "JSON", "POST", 
 	                function(data) {
@@ -1887,7 +1886,7 @@ var eFrequencyPlannerYn = 'Y';
                             $('a.goDrinkView').unbind('click').bind('click', function() {
                                 product_cd = $(this).attr('prod');
                                 f = document.drinkListForm;
-                                f.action = "menu/drink_view";
+                                f.action = "drink_view";
                                 f.product_cd.value = product_cd;
                                 f.submit();
                             });
@@ -2047,10 +2046,10 @@ var eFrequencyPlannerYn = 'Y';
 			}
 		</script>
         <script type="text/x-jquery-tmpl" id="tpl_productPicList">
-            <li class="menuDataSet" new="${newicon}" sell="${sell_CAT}" recomm="${recomm}" sold="${sold_OUT}">
+            <li class="menuDataSet" new="\${newicon}" sell="\${sell_CAT}" recomm="\${recomm}" sold="\${sold_OUT}">
                 <dl>
                     <dt>
-                        <a href="javascript:void(0)" class="goDrinkView" prod="${product_CD}"><img src="${img_UPLOAD_PATH.replace("www", "image")}${file_PATH}" alt="${product_NM}"></a>
+                        <a href="javascript:void(0)" class="goDrinkView" prod="\${product_CD}"><img src="\${img_UPLOAD_PATH.replace("www", "image")}\${file_PATH}" alt="\${product_NM}"></a>
                         {{if newicon == 'Y' || sell_CAT == '1' || recomm != '0' || sold_OUT == 'Y'}}
                         <ul>
                             {{if newicon == 'Y'}}
@@ -2068,47 +2067,58 @@ var eFrequencyPlannerYn = 'Y';
                         </ul>
                         {{/if}}
                     </dt>
-                    <dd>${product_NM}</dd>
+                    <dd>\${product_NM}</dd>
                 </dl>
             </li>
         </script>
         <script type="text/x-jquery-tmpl" id="tpl_productNutTr">
             <tr>
-                <td>${product_NM}</td>
-                
+                <td>\${product_NM}</td>
+                <td>\${convertInfoText(kcal)}</td>
+                <td>\${convertInfoText(sugars)}</td>
+                <td>\${convertInfoText(protein)}</td>
+                <td>\${convertInfoText(sodium)}</td>
+                <td>\${convertInfoText(sat_FAT)}</td>
+                <td>\${convertInfoText(caffeine)}</td>
             </tr>
         </script>
         <script type="text/x-jquery-tmpl" id="tpl_productNutMob">
-            <p class="tit">${product_NM}</p>
+            <p class="tit">\${product_NM}</p>
             <ul>
                 <li>
                     <dl>
                         <dt>칼로리(Kcal)</dt>
+						<dd>\${convertInfoText(kcal)}</dd>
                     </dl>
                 </li>
                 <li>
                     <dl>
                         <dt>당류(g)</dt>
+						<dd>\${convertInfoText(sugars)}</dd>
                     </dl>
                 </li>
                 <li>
                     <dl>
                         <dt>단백질(g)</dt>
+						<dd>\${convertInfoText(protein)}</dd>
                     </dl>
                 </li>
                 <li>
                     <dl>
                         <dt>나트륨(mg)</dt>
+						<dd>\${convertInfoText(sodium)}</dd>
                     </dl>
                 </li>
                 <li>
                     <dl>
                         <dt>포화지방(g)</dt>
+						<dd>\${convertInfoText(sat_FAT)}</dd>
                     </dl>
                 </li>
                 <li>
                     <dl>
                         <dt>카페인(mg)</dt>
+						<dd>\${convertInfoText(caffeine)}</dd>
                     </dl>
                 </li>
             </ul>
@@ -2120,11 +2130,11 @@ var eFrequencyPlannerYn = 'Y';
                     <dt>
                         <a href="javascript:void(0)" class="goServiceView" prod="${product_CD}" f_cate="${f_CATE_CD}"><img src="${img_UPLOAD_PATH.replace("www", "image")}${file_PATH}" alt="${product_NM}"></a>
                     </dt>
-                    <dd>${product_NM}</dd>
+                    <dd>\${product_NM}</dd>
                 </dl>
             </li>
         </script>
         
-        <script src="common/js/menu/patch4sm.js"></script>
+        <script src="../common/js/menu/patch4sm.js"></script>
 	</body>
 </html>
