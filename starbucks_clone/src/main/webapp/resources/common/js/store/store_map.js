@@ -14,10 +14,6 @@ $(document).ready(function () {
           mapTypeId: daum.maps.MapTypeId.ROADMAP // 지도종류
         };
       $map.map = new daum.maps.Map($map.mapContainer, $map.mapOption);
-  	  //설아 추가
-  	  $map.relayout();  // 지도의 크기가 변동이 있을 경우 함수 호출
-      $map.setCenter(new daum.maps.LatLng(33.450701, 126.570657));
-
 
       if ($drag) {
 
