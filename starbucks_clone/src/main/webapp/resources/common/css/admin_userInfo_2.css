@@ -20,3 +20,4 @@ sub {font-size: 10px}
 .pointFont{font-size:17px !important; font-weight:bold !important} /*20180320 추가*/
 .ir_type01 {position:absolute; top:0px; left:-10000px;font-size:0;line-height:0;}/*20180803 추가*/
 button {width: 104px; height: 30px; background-color: #036635; color: white; border-radius: 2px; border: none; margin-top: 2px;}
+.user_check {font-size: 12px;}

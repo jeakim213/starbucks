@@ -705,7 +705,7 @@ var eFrequencyPlannerYn = 'Y';
 	
 		<table style="width: 800px;">
 			<tr>
-				<td align="center" colspan=4><h2>회원 목록</h2></td>
+				<td align="center" colspan=3><h2>회원 목록</h2></td>
 			</tr>
 			<tr>
 				<td><hr></td>
@@ -717,12 +717,11 @@ var eFrequencyPlannerYn = 'Y';
 				<tr>
 					<th style="width: 100px; height:20px;" align="left">아이디</th>
 					<th style="width: 50px; height:20px;" align="left">등급</th>
-					<th style="width: 50px; height:20px;" align="left">이름</th>
 					<th style="width: 100px; height:20px;" align="left">가입일</th>
 				</tr>
 			</thead>
 			<tr>
-				<td align="center" colspan=4><hr></td>
+				<td align="center" colspan=3><hr></td>
 			</tr>
 			<c:forEach var="db" items="${sessionScope.list }">
 				<tr>
@@ -730,12 +729,11 @@ var eFrequencyPlannerYn = 'Y';
 						<a href="userInfoProc?id=${db.id}">${db.id }</a>
 					</td>
 					<td style="width: 50px; height:40px;" align="left">${db.grade}</td>
-					<td style="width: 50px; height:40px;" align="left">${db.name}</td>
-					<td style="width: 100px; height:40px;" align="left">${db.date}</td>
+					<td style="width: 100px; height:40px;" align="left">${db.registerdate}</td>
 				</tr>
 			</c:forEach>
 			<tr>
-				<td colspan=4><hr></td>
+				<td colspan=3><hr></td>
 			</tr>
 		</table>
 			이전 1 2 3 4 다음
@@ -747,7 +745,6 @@ var eFrequencyPlannerYn = 'Y';
 						<select name="select">
 							<option value="">전체</option>
 							<option value="id">아이디</option>
-							<option value="email">이메일</option>
 						</select>
 						<input type=text name='search'/>
 						<button name='searchBtn'>검색</button>
