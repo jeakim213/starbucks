@@ -69,8 +69,10 @@ public class HomeController {
 		return "admin/saleChart-3";
 	}
 	
+	
+	
 	@RequestMapping(value="memberModifyForm")
-	public String memberModifyForm() {
+	public String memberModifyWForm() {
 		return "admin/memberModifyForm";
 	}
 	
@@ -99,13 +101,8 @@ public class HomeController {
 	public String doppio() {
 		return "coffee/doppio";
 	}
-<<<<<<< HEAD
-	
-	@RequestMapping(value="latte")
-=======
 
 	@RequestMapping(value = "coffee/latte")
->>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
 	public String latte() {
 		return "coffee/latte";
 	}
@@ -194,10 +191,11 @@ public class HomeController {
 	}
 
 	@RequestMapping(value = "menu/drink_view")
-	public String drink_view(String product_cd, Model model) {
+	public String drink_view_coldbrew(String product_cd, Model model) {
 		model.addAttribute("product_cd", product_cd);
 		return "menu/drink_view";
 	}
+	// menu/drink_view_coldbrew1은 삭제페이지라고 들어서 매핑 안함(추후 menu 부분 jsp 정리 필요!)
 
 	@RequestMapping(value = "menu/food_list")
 	public String food_list() {
@@ -251,10 +249,20 @@ public class HomeController {
 		return "menu/product_view";
 	}
 	
+	@RequestMapping(value="menu/drink_view")
+	public String drink_view() {
+		return "menu/drink_view";
+	}
+	
 	//0601 다정
 	@RequestMapping(value="menu/starbucksCard")
 	public String starbucksCard() {
 		return "menu/starbucksCard";
+	}
+	
+	@RequestMapping(value="menu/coupon_popup")
+	public String coupon_popup(){
+		return "menu/coupon_popup";
 	}
 	
 	@RequestMapping(value = "menu/product_list_1")
@@ -325,7 +333,7 @@ public class HomeController {
 	}
 
 	// msr
-	@RequestMapping(value = "msr/msreward/about")
+	@RequestMapping(value = "msreward/about")
 	public String msreward_about() {
 		return "msr/msreward/about";
 	}
@@ -359,23 +367,13 @@ public class HomeController {
 	public String scard_register_inquiry() {
 		return "msr/scard/register_inquiry";
 	}
-<<<<<<< HEAD
 	/*@RequestMapping(value="scard_scard_gallery")
 	public String scard_scard_gallery() {
 		return "msr/scard/scard_gallery";
 	}
 	*/
 
-	@RequestMapping(value="sceGift_egift_information")
-=======
-
-	/*
-	 * @RequestMapping(value="scard_scard_gallery") public String
-	 * scard_scard_gallery() { return "msr/scard/scard_gallery"; }
-	 */
-
 	@RequestMapping(value = "msr/sceGift/egift_information")
->>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
 	public String sceGift_egift_information() {
 		return "msr/sceGift/egift_information";
 	}
@@ -390,10 +388,6 @@ public class HomeController {
 		return "msr/sceGift/msr_useguide";
 	}
 
-<<<<<<< HEAD
-
-	@RequestMapping(value="admin_3")
-=======
 	// my
 	@RequestMapping(value = "admin_1")
 	public String admin_1() {
@@ -406,7 +400,6 @@ public class HomeController {
 	}
 	
 	@RequestMapping(value = "admin_3")
->>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
 	public String admin_3() {
 		return "my/admin_3";
 	}
@@ -415,33 +408,18 @@ public class HomeController {
 	public String admin_4() {
 		return "my/admin_4";
 	}
-<<<<<<< HEAD
 	
-	@RequestMapping(value="admin_5")
-=======
-
 	@RequestMapping(value = "admin_5")
->>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
 	public String admin_5() {
 		return "my/admin_5";
 	}
-<<<<<<< HEAD
 	
-	@RequestMapping(value="admin_6")
-=======
-
 	@RequestMapping(value = "admin_6")
->>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
 	public String admin_6() {
 		return "my/admin_6";
 	}
-<<<<<<< HEAD
-	
-	@RequestMapping(value="egiftCard_shopping_bag")
-=======
 
 	@RequestMapping(value = "my/egiftCard_shopping_bag")
->>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
 	public String egiftCard_shopping_bag() {
 		return "my/egiftCard_shopping_bag";
 	}
@@ -537,11 +515,7 @@ public class HomeController {
 		return "store/store_reserve";
 	}
 
-<<<<<<< HEAD
-	@RequestMapping(value="store_star_field")
-=======
 	@RequestMapping(value = "store/store_star_field")
->>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
 	public String store_star_field() {
 		return "store/store_star_field";
 	}
@@ -595,15 +569,8 @@ public class HomeController {
 		return "";
 	}
 	
-<<<<<<< HEAD
-	@RequestMapping(value="whats_new_campaign_list_1")
-	public String campaign_list_1() {
-		return "whats_new/campaign_list-1";
-	}
 	
 	//ajax-지혜
-=======
->>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
 	@ResponseBody
 	@PostMapping(value = "upload/json/menu/{path}", produces = "application/json; charset=UTF-8")
 	public String ajaxJson(@PathVariable String path) throws FileNotFoundException, IOException {
