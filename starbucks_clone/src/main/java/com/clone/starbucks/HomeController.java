@@ -36,21 +36,31 @@ public class HomeController {
 	}
 	
 	//admin
-	@RequestMapping(value="memberListForm")
+	@RequestMapping(value="admin/memberListForm")
 	public String memberListForm() {
 		return "admin/memberListForm";
 	}
 	
-	@RequestMapping(value="userInfoForm")
+	@RequestMapping(value="admin/userInfoForm")
 	public String userInfoForm() {
 		return "admin/userInfoForm";
 	}
 	
-	@RequestMapping(value="modifyCheckForm")
+	@RequestMapping(value="admin/modifyCheckForm")
 	public String modifyCheckForm() {
 		return "admin/modifyCheckForm";
 	}
 	
+	@RequestMapping(value="admin/memberModifyForm")
+	public String memberModifyForm() {
+		return "admin/memberModifyForm";
+	}
+	
+	@RequestMapping(value="admin/deleteCheckForm")
+	public String deleteCheckForm() {
+		return "admin/deleteCheckForm";
+	}
+
 	//0601 다정 커피
 	@RequestMapping(value="saleChart-1")
 	public String saleChart1() {
@@ -67,18 +77,6 @@ public class HomeController {
 	@RequestMapping(value="saleChart-3")
 	public String saleChart3() {
 		return "admin/saleChart-3";
-	}
-	
-	
-	
-	@RequestMapping(value="memberModifyForm")
-	public String memberModifyWForm() {
-		return "admin/memberModifyForm";
-	}
-	
-	@RequestMapping(value="deleteCheckForm")
-	public String deleteCheckForm() {
-		return "admin/deleteCheckForm";
 	}
 	
 	// coffee
@@ -202,7 +200,7 @@ public class HomeController {
 		return "menu/food_list";
 	}
 
-	@RequestMapping(value = "menu/food_list_1") // 카테고리 코드를 받아 해당 카테고리만 뿌린다.
+	@RequestMapping(value = "menu/food_list_1") // 카테고리 코드를 받아 해당 카테고리만 뿌린다
 	public String food_list_1(String CATE_CD) {
 		return "menu/food_list-1";
 	}
