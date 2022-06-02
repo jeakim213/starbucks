@@ -785,7 +785,8 @@ var eFrequencyPlannerYn = 'Y';
 								</span>
 								<p>Starbucks Reserve™ Store</p>
 							</dt>
-							<dd>전국의 스타벅스 리저브 매장 <span class="store_reserve_count_text">곳</span>을 확인해 보세요!</dd>
+							<!-- 0601예은_ 문구 수정-->
+							<dd>스타벅스 리저브 매장을 확인해 보세요!</dd>
 						</dl>
 					</article>
 				</section>
