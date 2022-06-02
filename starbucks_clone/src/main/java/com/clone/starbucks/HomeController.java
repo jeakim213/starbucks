@@ -50,6 +50,26 @@ public class HomeController {
 		return "admin/modifyCheckForm";
 	}
 	
+	//0601 다정 커피
+	@RequestMapping(value="saleChart-1")
+	public String saleChart1() {
+		return "admin/saleChart-1";
+	}
+	
+	//0602 다정 푸드
+	@RequestMapping(value="saleChart-2")
+	public String saleChart2() {
+		return "admin/saleChart-2";
+	}
+	
+	//프로덕트
+	@RequestMapping(value="saleChart-3")
+	public String saleChart3() {
+		return "admin/saleChart-3";
+	}
+	
+	
+	
 	//coffee
 	@RequestMapping(value="americano")
 	public String americano() {
