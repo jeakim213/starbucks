@@ -20,7 +20,7 @@ sub {font-size: 10px}
 .fontBold {font-weight: bold}
 .pointFont{font-size:17px !important; font-weight:bold !important} /*20180320 추가*/
 .ir_type01 {position:absolute; top:0px; left:-10000px;font-size:0;line-height:0;}/*20180803 추가*/
-button {width: 121px; height: 30px; background-color: #036635; color: white; border-radius: 2px; border: none;}
-.text {margin-left: 5px; height: 20px;}
+button {width: 168px; height: 30px; background-color: #036635; color: white; border-radius: 2px; border: none;}
+.text {margin-left: 5px; height: 20px; width: 335px;}
 .radio {margin-left: 5px;}
 .h2 {margin-bottom: 20px;}

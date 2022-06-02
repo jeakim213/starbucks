@@ -22,7 +22,7 @@
 
 <title id="titleJoin">My Starbucks | Starbucks Korea</title> <!-- 220117 수정 -->
 <link rel="shortcut icon" href="https://image.istarbucks.co.kr/common/img/common/favicon.ico?v=200828" type="image/ico"> <!-- 20200827 파비콘 교체 및 CDN 변수처리 -->
-<link href="common/css/admin_memberModify.css" rel="stylesheet">
+<link href="common/css/admin_memberModify_1.css" rel="stylesheet">
 <link href="common/css/style.css?v=210721" rel="stylesheet">
 <link href="common/css/jquery.bxslider.css" rel="stylesheet">
 <link href="common/css/idangerous.swiper.css" rel="stylesheet">
@@ -747,11 +747,11 @@ var eFrequencyPlannerYn = 'Y';
 			<td><input class="text" type=text name='pw' placeholder='패스워드 입력'/></td>
 		</tr>
 		<tr>
-			<td width=90 align='right' height=40>이름</td>
+			<td width=90 align='right' height=35>이름</td>
 			<td><input class="text" type=text name='email' value="${user.email }"/></td>
 		</tr>
 		<tr>
-			<td width=90 align='right' width=120>성 별</td>
+			<td width=90 align='right' height=30>성별</td>
 			<td>
 				<c:choose>
 					<c:when test="${user.gender == 'm' }">
@@ -773,9 +773,6 @@ var eFrequencyPlannerYn = 'Y';
 			</td>
 		</tr>
 		<tr>
-			<td align='right' height=15></td>
-		</tr>
-		<tr>
 			<td width=90 align='right' height=40>전화번호</td>
 			<td><input class="text" type=text name='email' value="${user.email }"/></td>
 		</tr>
@@ -784,11 +781,11 @@ var eFrequencyPlannerYn = 'Y';
 			<td><input class="text" type=text name='email' value="${user.email }"/></td>
 		</tr>
 		<tr>
-			<td width=90 align='right' height=40>닉네임</td>
+			<td width=90 align='right' height=35>닉네임</td>
 			<td><input class="text" type=text name='email' value="${user.email }"/></td>
 		</tr>
 		<tr>
-			<td width=90 align='right' height=40>등급</td>
+			<td width=90 align='right' height=30>등급</td>
 			<td>
 				<c:choose>
 					<c:when test="${user.grade == 'wc' }">
@@ -815,11 +812,11 @@ var eFrequencyPlannerYn = 'Y';
 			</td>
 		</tr>
 		<tr>
-			<td width=90 align='right' height=40>별</td>
+			<td width=90 align='right' height=35>별</td>
 			<td><input class="text" type=text name='email' value="${user.email }"/></td>
 		</tr>
 		<tr>
-			<td width=90 align='right' height=40>개인컵</td>
+			<td width=90 align='right' height=30>개인컵</td>
 			<td>
 				<c:choose>
 					<c:when test="${user.cupreward == 'e' }">
@@ -841,7 +838,7 @@ var eFrequencyPlannerYn = 'Y';
 			</td>
 		</tr>
 		<tr>
-			<td align='center' height=40 colspan=4>
+			<td align='right' height=40 colspan=4>
 				<button type="submit" onclick="location.href='userInfoForm'">수정 완료</button>
 				<button type="reset">취소</button>	 
 			</td>
