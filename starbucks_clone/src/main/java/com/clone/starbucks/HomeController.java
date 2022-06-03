@@ -101,6 +101,16 @@ public class HomeController {
 	public String doppio() {
 		return "coffee/doppio";
 	}
+	
+	@RequestMapping(value = "coffee/espresso_macchiato")
+	public String espresso_macchiato() {
+		return "coffee/espresso_macchiato";
+	}
+	
+	@RequestMapping(value = "coffee/espresso")
+	public String espresso() {
+		return "coffee/espresso";
+	}
 
 	@RequestMapping(value = "coffee/latte")
 	public String latte() {
@@ -145,7 +155,7 @@ public class HomeController {
 		return "menu/drink_list";
 	}
 
-	@RequestMapping(value = "menu/drink_list-1")
+	@RequestMapping(value = "menu/drink_list_1")
 	public String drink_list_1() {
 		return "menu/drink_list-1";
 	}
@@ -190,6 +200,7 @@ public class HomeController {
 		return "menu/drink_list-9";
 	}
 
+
 	@RequestMapping(value = "menu/drink_view")
 	public String drink_view(String product_cd, Model model) {
 		model.addAttribute("product_cd", product_cd);
@@ -201,7 +212,7 @@ public class HomeController {
 		return "menu/food_list";
 	}
 
-	@RequestMapping(value = "menu/food_list_1") // 카테고리 코드를 받아 해당 카테고리만 뿌린다.
+	@RequestMapping(value = "menu/food_list_1") // 카테고리 코드를 받아 해당 카테고리만 뿌린다
 	public String food_list_1(String CATE_CD) {
 		return "menu/food_list-1";
 	}
@@ -288,7 +299,7 @@ public class HomeController {
 		return "menu/product_list-8";
 	}
 
-	@RequestMapping(value = "menu/product_list-9")
+	@RequestMapping(value = "menu/product_list_9")
 	public String product_list_9() {
 		return "menu/product_list-9";
 	}
@@ -498,10 +509,6 @@ public class HomeController {
 		return "store/store_reserve";
 	}
 
-	@RequestMapping(value = "store/store_star_field")
-	public String store_star_field() {
-		return "store/store_star_field";
-	}
 
 	@RequestMapping(value = "util/app_tip")
 	public String app_tip() {
@@ -665,4 +672,47 @@ public class HomeController {
 		JsonObject obj = gson.fromJson(reader, JsonObject.class);
 		return obj.toString();
 	}
+	
+	@ResponseBody // 맵 시,도 리스트-예은
+	@PostMapping(value = "store/getSidoList", produces = "application/json; charset=UTF-8")
+	public String getSidoList(HttpServletRequest request) throws FileNotFoundException, IOException {
+		String mappingPath = "upload/json/store/map/.json";
+		ClassPathResource resource = new ClassPathResource(mappingPath);
+		FileReader reader = new FileReader(resource.getFile());
+		Gson gson = new Gson();
+		JsonObject obj = gson.fromJson(reader, JsonObject.class);
+		//불러오는 조건문
+		
+		return obj.toString();
+		
+		
+	}
+	
+	
+	@ResponseBody // 맵 구,군 리스트-예은
+	@PostMapping(value = "store/getGugunList", produces = "application/json; charset=UTF-8")
+	public String getGugunList(HttpServletRequest request) throws FileNotFoundException, IOException {
+		String sido_cd = request.getParameter("sido_cd");
+		String mappingPath = "upload/json/store/map/.json";
+		ClassPathResource resource = new ClassPathResource(mappingPath);
+		FileReader reader = new FileReader(resource.getFile());
+		Gson gson = new Gson();
+		JsonObject obj = gson.fromJson(reader, JsonObject.class);
+		return obj.toString();
+	}
+	
+	@ResponseBody // 맵 스토어 리스트-예은
+	@PostMapping(value = "store/getStore", produces = "application/json; charset=UTF-8")
+	public String getStore(HttpServletRequest request) throws FileNotFoundException, IOException {
+		String store_search = request.getParameter("$search");
+		System.out.println(store_search);
+		String mappingPath = "upload/json/store/storelist/.json";
+		ClassPathResource resource = new ClassPathResource(mappingPath);
+		FileReader reader = new FileReader(resource.getFile());
+		Gson gson = new Gson();
+		JsonObject obj = gson.fromJson(reader, JsonObject.class);
+		return obj.toString();
+	}
+	
+	
 }

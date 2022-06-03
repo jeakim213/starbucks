@@ -7,8 +7,6 @@ $(document).ready(function () {
   $.daum = {
     init: function ()	//지도 생성
     {
-
-
       $map.mapContainer = document.getElementById('storeMap'), // 지도를 표시할 div 
         $map.mapOption = {
           center: new daum.maps.LatLng(37.56682, 126.97865), // 지도의 중심좌표
@@ -41,6 +39,7 @@ $(document).ready(function () {
                 $search.iend = "20";
                 //$.storemap.checkbox_init();
                 $.storemap.setStoreInfo();
+                
               });
             }
           }
@@ -72,6 +71,7 @@ $(document).ready(function () {
     ,
     setLevel: function (level) {
       $map.map.setLevel($mapSize);
+
     }
     ,
     setBounds: function () {
@@ -125,6 +125,7 @@ $(document).ready(function () {
       if(marker.Zb) marker.Zb.alt = marker.Zb.title; // 접근성_20171127 alt 추가
       $marker[$arrIndex] = marker;
       //$bounds.extend(markerPosition);
+
       var infowindow = "";
       infowindow = new daum.maps.InfoWindow({
         content: $content,
