@@ -24,21 +24,21 @@
 <meta property="og:description" content="Starbucks">
 
 <title id="titleJoin">Starbucks Korea</title> <!-- 220117 수정 -->
-<link rel="shortcut icon" href="common/img/common/favicon.ico?v=200828" type="image/ico"> <!-- 20200827 파비콘 교체 및 CDN 변수처리 -->
-<link href="common/css/reset.css" rel="stylesheet">
-<link href="common/css/style.css?v=210721" rel="stylesheet">
-<link href="common/css/jquery.bxslider.css" rel="stylesheet">
-<link href="common/css/idangerous.swiper.css" rel="stylesheet">
-<link href="common/css/idangerous.swiper.scrollbar.css" rel="stylesheet">
-<link href="common/css/jquery.mCustomScrollbar.css" rel="stylesheet">
-<link href="common/css/jquery.scrollbar.css" rel="stylesheet">
-<link href="common/css/jquery-ui.css" rel="stylesheet">
-<link href="common/css/ezmark.css" rel="stylesheet">
-<link href="common/css/style_dt.css?v=20191211" rel="stylesheet"> <!-- 20191211 수정 -->
+<link rel="shortcut icon" href="../common/img/common/favicon.ico?v=200828" type="image/ico"> <!-- 20200827 파비콘 교체 및 CDN 변수처리 -->
+<link href="../common/css/reset.css" rel="stylesheet">
+<link href="../common/css/style.css?v=210721" rel="stylesheet">
+<link href="../common/css/jquery.bxslider.css" rel="stylesheet">
+<link href="../common/css/idangerous.swiper.css" rel="stylesheet">
+<link href="../common/css/idangerous.swiper.scrollbar.css" rel="stylesheet">
+<link href="../common/css/jquery.mCustomScrollbar.css" rel="stylesheet">
+<link href="../common/css/jquery.scrollbar.css" rel="stylesheet">
+<link href="../common/css/jquery-ui.css" rel="stylesheet">
+<link href="../common/css/ezmark.css" rel="stylesheet">
+<link href="../common/css/style_dt.css?v=20191211" rel="stylesheet"> <!-- 20191211 수정 -->
 
 <!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-	<link href="common/css_ie/style.css" rel="stylesheet">
+	<link href="../common/css_ie/style.css" rel="stylesheet">
 	<script>
 		document.createElement('header');
 		document.createElement('nav');
@@ -70,12 +70,12 @@ var eFrequencySeq = '172';
 var eFrequencyPlannerYn = 'Y';
 </script>
 
-		<link href="common/css/style_main-2.css?r=1abii2" rel="stylesheet">
-		<link href="common/css/style_whatsnew.css?r=1abii2" rel="stylesheet">
-		<link href="common/css/style_find_road.css?v=210423" rel="stylesheet">
-		<link href="common/css/style_util.css?v=210316" rel="stylesheet">
-		<link href="common/css/skdslider.css?r=1abii2" rel="stylesheet">
-		<link href="common/css/ezmark-1.css?r=1abii2" rel="stylesheet">
+		<link href="../common/css/style_main-2.css?r=1abii2" rel="stylesheet">
+		<link href="../common/css/style_whatsnew.css?r=1abii2" rel="stylesheet">
+		<link href="../common/css/style_find_road.css?v=210423" rel="stylesheet">
+		<link href="../common/css/style_util.css?v=210316" rel="stylesheet">
+		<link href="../common/css/skdslider.css?r=1abii2" rel="stylesheet">
+		<link href="../common/css/ezmark-1.css?r=1abii2" rel="stylesheet">
 	</head>
 	<body>
 		
@@ -138,7 +138,7 @@ var eFrequencyPlannerYn = 'Y';
 					<!-- 유저인포 -->
 					<div class="user_greet">
 						<div class="user_pic_area">
-							<img alt="사용자 아이디" src="common/img/common/user_pic_sample.jpg">
+							<img alt="사용자 아이디" src="../common/img/common/user_pic_sample.jpg">
 							<p class="msr_user_mask msr_user_mask01"></p>
 							<p class="msr_user_mask msr_user_mask02"></p>
 							<p class="msr_user_mask msr_user_mask03"></p>
@@ -187,13 +187,13 @@ var eFrequencyPlannerYn = 'Y';
 							<img alt="카드이름">
 						</div>
 						<div class="mycard_area2">
-							<img alt="카드이름" src="common/img/common/mycard2.png">
+							<img alt="카드이름" src="../common/img/common/mycard2.png">
 							<p class="num"><!-- 1234-1234-1234-1234 --></p>
 							<p class="barcord"><!-- <img src="//image.istarbucks.co.kr/common/img/common/bacord.png" alt=""> --></p>
 						</div>
 						<div class="mycard_one">
 							<!-- <div class="front"> -->
-							<img src="common/img/common/payment_icon1.png" alt="">
+							<img src="../common/img/common/payment_icon1.png" alt="">
 							<!-- </div> -->
 							<!-- <div class="back"><img src="//image.istarbucks.co.kr/common/img/common/payment_icon1.png" alt=""></div> -->
 						</div>
@@ -208,7 +208,7 @@ var eFrequencyPlannerYn = 'Y';
 					<!-- 일반회원 -->
 					<div class="sb_card_regi">
 						<a href="javascript:void(0);">
-							<p class="icon_add_card" onclick="location.href = '/my/mycard_info_input';"><img alt="카드등록 아이콘" src="common/img/common/icon_add_card.png"></p>
+							<p class="icon_add_card" onclick="location.href = '/my/mycard_info_input';"><img alt="카드등록 아이콘" src="../common/img/common/icon_add_card.png"></p>
 							<p class="sb_card_regi_txt"><strong>스타벅스 카드 등록</strong><br>카드를 등록하시고<br>다양한 리워드를<br>만나보세요.</p>
 						</a>
 					</div>
@@ -1044,7 +1044,7 @@ var eFrequencyPlannerYn = 'Y';
 	</form>
 
 	<!-- 150904 수정 -->
-	<p class="btn_storemap_quick"><a href="javascript:void(0);"><img src="common/img/store/btn_quick.png" alt="현재 위치 중심으로 지도이동"></a></p> <!-- 접근성_20171127 alt 추가 -->
+	<p class="btn_storemap_quick"><a href="javascript:void(0);"><img src="../common/img/store/btn_quick.png" alt="현재 위치 중심으로 지도이동"></a></p> <!-- 접근성_20171127 alt 추가 -->
 	
 	
 	<!-- 150805 추가 구명준 -->
@@ -1059,8 +1059,8 @@ var eFrequencyPlannerYn = 'Y';
 	var $ps;
 	
 	var $pin = {};
-		$pin.store 	 = "common/img/store/pin/pin_reg_on.png";
-		$pin.reserve = "common/img/store/pin/pin_res_on.png";
+		$pin.store 	 = "../common/img/store/pin/pin_reg_on.png";
+		$pin.reserve = "../common/img/store/pin/pin_res_on.png";
 		
 	var $marker = new Array();
 	var $bounds;
@@ -1294,47 +1294,47 @@ var eFrequencyPlannerYn = 'Y';
 			<!-- footer end -->
 		
 			
-			<script src="common/js/jquery-1.10.2.min.js"></script>
-			<script src="common/js/%40common.js"></script>
-			<script src="common/js/jquery-ui.min.js?v=220207"></script>
-			<script src="common/js/idangerous.swiper-2.1.min.js"></script>
-			<script src="common/js/idangerous.swiper.scrollbar-2.1.js"></script>
-			<script src="common/js/jquery.bxslider.min.js"></script>
-			<script src="common/js/skdslider.min.js"></script>
-			<script src="common/js/jquery.drive.js"></script>
-			<script src="common/js/jquery.easing-1.3.min.js"></script>
-			<script src="common/js/jquery.elevatezoom.js"></script>
-			<script src="common/js/jquery.flip.js"></script>
-			<script src="common/js/jquery.jsmovie.1.4.4.min.js"></script>
-			<script src="common/js/jquery.mCustomScrollbar.concat.js"></script>
-			<script src="common/js/jquery.number.min.js"></script>
-			<script src="common/js/jquery.rotate.2.3.js"></script>
-			<script src="common/js/jquery.scrollbar.js"></script>
-			<script src="common/js/jquery.scrollTo-1.4.2-min.js"></script>
-			<script src="common/js/jquery.superscrollorama.js"></script>						
-			<script src="common/js/jquery.transform2d.js"></script>
-			<script src="common/js/jquery.transform3d.js"></script>			
-			<script src="common/js/greensock/TweenMax.min.js"></script>
-			<script src="common/js/masonry.pkgd.js"></script>
-			<script src="common/js/common.js"></script>
-			<script src="common/js/gnb.js?v=220502"></script>
-			<script src="common/js/header.js?v=200915"></script>
-			<script src="common/js/footer.js?v=210818"></script>
+			<script src="../common/js/jquery-1.10.2.min.js"></script>
+			<script src="../common/js/%40common.js"></script>
+			<script src="../common/js/jquery-ui.min.js?v=220207"></script>
+			<script src="../common/js/idangerous.swiper-2.1.min.js"></script>
+			<script src="../common/js/idangerous.swiper.scrollbar-2.1.js"></script>
+			<script src="../common/js/jquery.bxslider.min.js"></script>
+			<script src="../common/js/skdslider.min.js"></script>
+			<script src="../common/js/jquery.drive.js"></script>
+			<script src="../common/js/jquery.easing-1.3.min.js"></script>
+			<script src="../common/js/jquery.elevatezoom.js"></script>
+			<script src="../common/js/jquery.flip.js"></script>
+			<script src="../common/js/jquery.jsmovie.1.4.4.min.js"></script>
+			<script src="../common/js/jquery.mCustomScrollbar.concat.js"></script>
+			<script src="../common/js/jquery.number.min.js"></script>
+			<script src="../common/js/jquery.rotate.2.3.js"></script>
+			<script src="../common/js/jquery.scrollbar.js"></script>
+			<script src="../common/js/jquery.scrollTo-1.4.2-min.js"></script>
+			<script src="../common/js/jquery.superscrollorama.js"></script>						
+			<script src="../common/js/jquery.transform2d.js"></script>
+			<script src="../common/js/jquery.transform3d.js"></script>			
+			<script src="../common/js/greensock/TweenMax.min.js"></script>
+			<script src="../common/js/masonry.pkgd.js"></script>
+			<script src="../common/js/common.js"></script>
+			<script src="../common/js/gnb.js?v=220502"></script>
+			<script src="../common/js/header.js?v=200915"></script>
+			<script src="../common/js/footer.js?v=210818"></script>
 
-			<script src="common/js/jquery.tmpl.js"></script>
-			<script src="common/js/jquery.tmplPlus.min.js"></script>
-			<script src="common/js/jquery.ezmark.min.js"></script>
+			<script src="../common/js/jquery.tmpl.js"></script>
+			<script src="../common/js/jquery.tmplPlus.min.js"></script>
+			<script src="../common/js/jquery.ezmark.min.js"></script>
 			<!-- <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script> -->
 			
 			<!--
-			<script src="common/js/swiper.jquery.min.js"></script>
-			<script src="common/js/swiper.min.js"></script>
-			<script src="common/js/util.js"></script>
+			<script src="../common/js/swiper.jquery.min.js"></script>
+			<script src="../common/js/swiper.min.js"></script>
+			<script src="../common/js/util.js"></script>
 			-->
 			
 		
-			<script src="common/js/openevent/openevent.js"></script>
-			<script src="common/js/open_event_control.js"></script>
+			<script src="../common/js/openevent/openevent.js"></script>
+			<script src="../common/js/open_event_control.js"></script>
 			<script type="text/javascript">
 				
 				var mrSlider;
@@ -1543,7 +1543,7 @@ var eFrequencyPlannerYn = 'Y';
                 /* 개인컵 리워드 e */
 			</script>
 
-			<script src="common/js/jquery.transit.min.js"></script>
+			<script src="../common/js/jquery.transit.min.js"></script>
 			<script>
 				// 150805 DOM 수정
 				$('div.msr_card_zone').bind('click', function(){
@@ -1580,7 +1580,7 @@ var eFrequencyPlannerYn = 'Y';
 				$('.mycard_one').seqfx();
 			</script>
 						
-			<script src='common/js/makePCookie.js'></script>
+			<script src='../common/js/makePCookie.js'></script>
 		
 			<script>
 				$(document).ready(function () {
@@ -1592,10 +1592,10 @@ var eFrequencyPlannerYn = 'Y';
 				});
 			</script>
 		
-			<script src="common/js/jquery.superscrollorama-1.js"></script>			
-			<script src="common/js/whatsnew.js"></script>
-			<script src="common/js/jquery.ezmark.min-1.js"></script>
-			<script src="common/js/common_jhp.js"></script>
+			<script src="../common/js/jquery.superscrollorama-1.js"></script>			
+			<script src="../common/js/whatsnew.js"></script>
+			<script src="../common/js/jquery.ezmark.min-1.js"></script>
+			<script src="../common/js/common_jhp.js"></script>
 			
 			
 			<script>
@@ -1614,14 +1614,15 @@ var eFrequencyPlannerYn = 'Y';
 			
 
 
-<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=247bf84c5755624615df524ae2cfc331&libraries=services"></script>
-<script src="common/js/jquery.async.min.js"></script>
+<script type="text/javascript" src="../common/js/v2/maps/sdk.js?appkey=247bf84c5755624615df524ae2cfc331" &libraries="LIBRARY"></script>
+<script charset="UTF-8" src="https://t1.daumcdn.net/mapjsapi/js/main/4.4.3/kakao.js"></script>
+<script src="../common/js/jquery.async.min.js"></script>
 
 
-<script src="common/js/store/store_map.js?v=20190129"></script>
-<script src="common/js/store/store_core.js?v=210802"></script>
-<script src="common/js/store/store_map_page.js?v=210423"></script>
-			<script src="common/js/store/store_map_road.js?v=210316"></script> 
+<script src="../common/js/store/store_map.js?v=20190129"></script>
+<script src="../common/js/store/store_core.js?v=210802"></script>
+<script src="../common/js/store/store_map_page.js?v=210423"></script>
+			<script src="../common/js/store/store_map_road.js?v=210316"></script> 
 			<script type="text/javascript">
 				//20150816
 				//20150816-2
@@ -1682,10 +1683,10 @@ var eFrequencyPlannerYn = 'Y';
 						$(".btn_storemap_quick").show();
 						
 						$(this).css({
-							'background':'url("common/img/store/btn_find_store_on.png") center center no-repeat #006633'
+							'background':'url("../common/img/store/btn_find_store_on.png") center center no-repeat #006633'
 						});
 						$('.find_road_header h2.btn_find_road a').css({
-							'background':'url("common/img/store/btn_find_road_off.png") center center no-repeat #f4f4f2'
+							'background':'url("../common/img/store/btn_find_road_off.png") center center no-repeat #f4f4f2'
 						});
 						
 						
@@ -1790,10 +1791,10 @@ var eFrequencyPlannerYn = 'Y';
 						$(".btn_storemap_quick").hide();
 						$roadResult = false;
 						$(this).css({
-							'background':'url("common/img/store/btn_find_road_on.png") center center no-repeat #006633'
+							'background':'url("../common/img/store/btn_find_road_on.png") center center no-repeat #006633'
 						});
 						$('.find_store_header h2.btn_find_store a').css({
-							'background':'url("common/img/store/btn_find_store_off.png") center center no-repeat #f4f4f2'
+							'background':'url("../common/img/store/btn_find_store_off.png") center center no-repeat #f4f4f2'
 						});
 
 				
@@ -2570,7 +2571,7 @@ var eFrequencyPlannerYn = 'Y';
 			</script>
 			
 
-		<script src="sdk/js/kakao.min.js"></script>
+		<script src="../common/js/sdk/js/kakao.min.js"></script>
 		<script>
 		Kakao.init('fbd2116d4434a7441d5caa4bb4c5456e');
 		</script>
@@ -2584,9 +2585,9 @@ var eFrequencyPlannerYn = 'Y';
 						<h6>${s_name} {{html $item.getNewIcon()}}</h6>
 						<div class="asm_stitle">
 						<ul class="my_sns_list">
-							<li class="btn_f"><a href="javascript:void(0);" class="storeFbBtn" data-caption="스타벅스코리아" data-image="${$item.getImage()}" data-link="${$item.link()}" data-title="스타벅스 ${s_name}" data-description="${notice}" ><img src="common/img/util/reward/btn_f.gif" alt="패이스북"></a></li>
+							<li class="btn_f"><a href="javascript:void(0);" class="storeFbBtn" data-caption="스타벅스코리아" data-image="${$item.getImage()}" data-link="${$item.link()}" data-title="스타벅스 ${s_name}" data-description="${notice}" ><img src="../common/img/util/reward/btn_f.gif" alt="패이스북"></a></li>
 						
-							<li class="btn_kakao mobileKaKaoTalk"><a href="javascript:void(0);" class="storeKakaoTalkBtn" data-image="${$item.getImage()}" data-description="${notice}" data-btn="스타벅스 매장찾기" data-link="${$item.link()}" ><img src="common/img/util/reward/btn_kakao.png" alt="카카오톡"></a></li>
+							<li class="btn_kakao mobileKaKaoTalk"><a href="javascript:void(0);" class="storeKakaoTalkBtn" data-image="${$item.getImage()}" data-description="${notice}" data-btn="스타벅스 매장찾기" data-link="${$item.link()}" ><img src="../common/img/util/reward/btn_kakao.png" alt="카카오톡"></a></li>
 						</ul>
 						<p>${notice}</p>
 						</div>
@@ -2654,7 +2655,7 @@ var eFrequencyPlannerYn = 'Y';
 									</dl>
 								</div>
 								<ul class="pop_btns_zon2">
-									<li class="btn_f" style="display:"><a href="javascript:void(0);" class="storeFbBtn" data-caption="스타벅스코리아" data-image="${$item.getImage()}" data-link="${$item.link()}" data-title="스타벅스 ${s_name}" data-description="${notice}" ><img src="common/img/util/reward/btn_f.gif" alt="패이스북"></a></li>
+									<li class="btn_f" style="display:"><a href="javascript:void(0);" class="storeFbBtn" data-caption="스타벅스코리아" data-image="${$item.getImage()}" data-link="${$item.link()}" data-title="스타벅스 ${s_name}" data-description="${notice}" ><img src="../common/img/util/reward/btn_f.gif" alt="패이스북"></a></li>
 									
 								</ul>
 								<div class="shopArea_infoWrap">
@@ -2797,7 +2798,7 @@ var eFrequencyPlannerYn = 'Y';
 	
 				</dl>			
 		</script>
-		<script src="common/js/store/store_view.js?v=210423"></script>
+		<script src="../common/js/store/store_view.js?v=210423"></script>
 			
 			
 		</div>

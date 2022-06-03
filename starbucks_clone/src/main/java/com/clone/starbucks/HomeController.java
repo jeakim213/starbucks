@@ -99,6 +99,16 @@ public class HomeController {
 	public String doppio() {
 		return "coffee/doppio";
 	}
+	
+	@RequestMapping(value = "coffee/espresso_macchiato")
+	public String espresso_macchiato() {
+		return "coffee/espresso_macchiato";
+	}
+	
+	@RequestMapping(value = "coffee/espresso")
+	public String espresso() {
+		return "coffee/espresso";
+	}
 
 	@RequestMapping(value = "coffee/latte")
 	public String latte() {
@@ -143,7 +153,7 @@ public class HomeController {
 		return "menu/drink_list";
 	}
 
-	@RequestMapping(value = "menu/drink_list-1")
+	@RequestMapping(value = "menu/drink_list_1")
 	public String drink_list_1() {
 		return "menu/drink_list-1";
 	}
@@ -292,7 +302,7 @@ public class HomeController {
 		return "menu/product_list-8";
 	}
 
-	@RequestMapping(value = "menu/product_list-9")
+	@RequestMapping(value = "menu/product_list_9")
 	public String product_list_9() {
 		return "menu/product_list-9";
 	}

@@ -22,21 +22,21 @@
 <meta property="og:description" content="Starbucks">
 
 <title id="titleJoin">Starbucks Korea</title> <!-- 220117 수정 -->
-<link rel="shortcut icon" href="common/img/common/favicon.ico?v=200828" type="image/ico"> <!-- 20200827 파비콘 교체 및 CDN 변수처리 -->
-<link href="common/css/reset.css" rel="stylesheet">
-<link href="common/css/style.css?v=210721" rel="stylesheet">
-<link href="common/css/jquery.bxslider.css" rel="stylesheet">
-<link href="common/css/idangerous.swiper.css" rel="stylesheet">
-<link href="common/css/idangerous.swiper.scrollbar.css" rel="stylesheet">
-<link href="common/css/jquery.mCustomScrollbar.css" rel="stylesheet">
-<link href="common/css/jquery.scrollbar.css" rel="stylesheet">
-<link href="common/css/jquery-ui.css" rel="stylesheet">
-<link href="common/css/ezmark.css" rel="stylesheet">
-<link href="common/css/style_dt.css?v=20191211" rel="stylesheet"> <!-- 20191211 수정 -->
+<link rel="shortcut icon" href="../common/img/common/favicon.ico?v=200828" type="image/ico"> <!-- 20200827 파비콘 교체 및 CDN 변수처리 -->
+<link href="../common/css/reset.css" rel="stylesheet">
+<link href="../common/css/style.css?v=210721" rel="stylesheet">
+<link href="../common/css/jquery.bxslider.css" rel="stylesheet">
+<link href="../common/css/idangerous.swiper.css" rel="stylesheet">
+<link href="../common/css/idangerous.swiper.scrollbar.css" rel="stylesheet">
+<link href="../common/css/jquery.mCustomScrollbar.css" rel="stylesheet">
+<link href="../common/css/jquery.scrollbar.css" rel="stylesheet">
+<link href="../common/css/jquery-ui.css" rel="stylesheet">
+<link href="../common/css/ezmark.css" rel="stylesheet">
+<link href="../common/css/style_dt.css?v=20191211" rel="stylesheet"> <!-- 20191211 수정 -->
 
 <!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-	<link href="common/css_ie/style.css" rel="stylesheet">
+	<link href="../common/css_ie/style.css" rel="stylesheet">
 	<script>
 		document.createElement('header');
 		document.createElement('nav');
@@ -68,13 +68,13 @@ var eFrequencySeq = '172';
 var eFrequencyPlannerYn = 'Y';
 </script>
 
-		<link href="common/css/style_main-1.css" rel="stylesheet">
-		<link href="common/css/style_whatsnew-2.css" rel="stylesheet">
-		<link href="common/css/style_store-2.css?v=210222" rel="stylesheet"><!-- 20201223 css 수정 -->
-		<link href="common/css/swiper.css" rel="stylesheet"><!-- 20180110 css 추가 -->
-		<link href="common/css/style_util-2.css" rel="stylesheet">
-		<link href="common/css/skdslider-1.css" rel="stylesheet">
-		<link href="common/css/jquery.mCustomScrollbar.css" rel="stylesheet"><!-- 150710 DOM 수정 - 지도 영역 -->
+		<link href="../common/css/style_main-1.css" rel="stylesheet">
+		<link href="../common/css/style_whatsnew-2.css" rel="stylesheet">
+		<link href="../common/css/style_store-2.css?v=210222" rel="stylesheet"><!-- 20201223 css 수정 -->
+		<link href="../common/css/swiper.css" rel="stylesheet"><!-- 20180110 css 추가 -->
+		<link href="../common/css/style_util-2.css" rel="stylesheet">
+		<link href="../common/css/skdslider-1.css" rel="stylesheet">
+		<link href="../common/css/jquery.mCustomScrollbar.css" rel="stylesheet"><!-- 150710 DOM 수정 - 지도 영역 -->
 	</head>
 	<body>
 		<div id="wrap">
@@ -130,7 +130,7 @@ var eFrequencyPlannerYn = 'Y';
 					<!-- 유저인포 -->
 					<div class="user_greet">
 						<div class="user_pic_area">
-							<img alt="사용자 아이디" src="common/img/common/user_pic_sample.jpg">
+							<img alt="사용자 아이디" src="../common/img/common/user_pic_sample.jpg">
 							<p class="msr_user_mask msr_user_mask01"></p>
 							<p class="msr_user_mask msr_user_mask02"></p>
 							<p class="msr_user_mask msr_user_mask03"></p>
@@ -179,13 +179,13 @@ var eFrequencyPlannerYn = 'Y';
 							<img alt="카드이름">
 						</div>
 						<div class="mycard_area2">
-							<img alt="카드이름" src="common/img/common/mycard2.png">
+							<img alt="카드이름" src="../common/img/common/mycard2.png">
 							<p class="num"><!-- 1234-1234-1234-1234 --></p>
 							<p class="barcord"><!-- <img src="//image.istarbucks.co.kr/common/img/common/bacord.png" alt=""> --></p>
 						</div>
 						<div class="mycard_one">
 							<!-- <div class="front"> -->
-							<img src="common/img/common/payment_icon1.png" alt="">
+							<img src="../common/img/common/payment_icon1.png" alt="">
 							<!-- </div> -->
 							<!-- <div class="back"><img src="//image.istarbucks.co.kr/common/img/common/payment_icon1.png" alt=""></div> -->
 						</div>
@@ -200,7 +200,7 @@ var eFrequencyPlannerYn = 'Y';
 					<!-- 일반회원 -->
 					<div class="sb_card_regi">
 						<a href="javascript:void(0);">
-							<p class="icon_add_card" onclick="location.href = '/my/mycard_info_input';"><img alt="카드등록 아이콘" src="common/img/common/icon_add_card.png"></p>
+							<p class="icon_add_card" onclick="location.href = '/my/mycard_info_input';"><img alt="카드등록 아이콘" src="../common/img/common/icon_add_card.png"></p>
 							<p class="sb_card_regi_txt"><strong>스타벅스 카드 등록</strong><br>카드를 등록하시고<br>다양한 리워드를<br>만나보세요.</p>
 						</a>
 					</div>
@@ -617,12 +617,12 @@ var eFrequencyPlannerYn = 'Y';
 			<div id="container" class="reserveStoreWrap">  <!-- 20171714 수정 : reserveStoreWrap 클래스 추가 -->
 				<div class="sub_tit_wrap">
 					<div class="sub_tit_inner">
-						<h2><img src="common/img/store/reserve_store_tit01.jpg?v=210802" alt="스타벅스 리저브 매장"></h2> <!-- 20210727 수정 -->
+						<h2><img src="../common/img/store/reserve_store_tit01.jpg?v=210802" alt="스타벅스 리저브 매장"></h2> <!-- 20210727 수정 -->
 						<ul class="smap">
-							<li><a href="javascript:void(0)"><img src="common/img/common/icon_home.png" alt="홈으로"></a></li>						
-							<li><img class="arrow" src="common/img/common/icon_arrow.png" alt="하위메뉴"></li>
+							<li><a href="javascript:void(0)"><img src="../common/img/common/icon_home.png" alt="홈으로"></a></li>						
+							<li><img class="arrow" src="../common/img/common/icon_arrow.png" alt="하위메뉴"></li>
 							<li class="en"><a href="javascript:void(0)">STORE</a></li>
-							<li><img class="arrow" src="common/img/common/icon_arrow.png" alt="하위메뉴"></li>
+							<li><img class="arrow" src="../common/img/common/icon_arrow.png" alt="하위메뉴"></li>
 							<li><a href="javascript:void(0)" class="this">스타벅스 리저브 매장</a></li>
 						</ul>
 					</div>
@@ -632,7 +632,7 @@ var eFrequencyPlannerYn = 'Y';
 				<section class="reserve_store_full">
 					<div class="st_cont">
 						<p class="f_img">
-							<img src="common/img/store/reserve_store_fimg01.png" alt="스타벅스 리저브 매장">
+							<img src="../common/img/store/reserve_store_fimg01.png" alt="스타벅스 리저브 매장">
 						</p>
 						<article class="f_text">
 							<h3>스타벅스 리저브™ 매장에서 프리미엄 커피를 만나다.</h3>
@@ -657,7 +657,7 @@ var eFrequencyPlannerYn = 'Y';
 				
 				
 					<style type="text/css">
-						article.reserveStore_middle01 {background-image: url('upload/banner/reservebnr/Y7YBKr_20220404155751368.png');  }
+						article.reserveStore_middle01 {background-image: url('../common/img/upload/banner/reservebnr/Y7YBKr_20220404155751368.png');  }
 					</style>
 
 					<section class="reserve_store_middle01">
@@ -683,8 +683,8 @@ var eFrequencyPlannerYn = 'Y';
 						<div class="st_cont">
 							<h3>다양한 추출방식으로 즐기는 리저브</h3>
 						<p class="f_img m_t30">
-								<img class="w_pic" src="common/img/store/reserve_store_fimg03.jpg?v=210823" alt="스타벅스 리저브 매장"> <!-- 20210818 수정 -->
-								<img class="m_pic" src="common/img/store/m_reserve_store_fimg03.jpg?v=210823" alt="스타벅스 리저브 매장"> <!-- 20210818 수정 -->
+								<img class="w_pic" src="../common/img/store/reserve_store_fimg03.jpg?v=210823" alt="스타벅스 리저브 매장"> <!-- 20210818 수정 -->
+								<img class="m_pic" src="../common/img/store/m_reserve_store_fimg03.jpg?v=210823" alt="스타벅스 리저브 매장"> <!-- 20210818 수정 -->
 							</p>
 						</div>	
 				</section>
@@ -695,7 +695,7 @@ var eFrequencyPlannerYn = 'Y';
 						<h3 class="en" style="display:none;">다양한 추출방식으로 즐기는 리저브</h3>
 						<!-- 1 -->	
 						<article class="reserveStore_bottom01">
-							<p><img class="m_pic" src="common/img/store/m_reserveStore_bottom01.jpg" alt="클로버 커피 추출 시스템"></p>
+							<p><img class="m_pic" src="../common/img/store/m_reserveStore_bottom01.jpg" alt="클로버 커피 추출 시스템"></p>
 							<h4>클로버&reg; 커피 추출 시스템</h4>
 							<dl class="rs_bottom01">
 								<dt>"커피 추출 방식의 판도를 바꾸는 혁신을 경험해보세요"</dt>
@@ -707,7 +707,7 @@ var eFrequencyPlannerYn = 'Y';
 						<!-- 1 end -->
 						<!-- 2 -->
 						<article class="reserveStore_bottom02">
-							<p><img class="m_pic" src="common/img/store/m_reserve_img03.jpg" alt="클로버 커피 추출 시스템"></p>
+							<p><img class="m_pic" src="../common/img/store/m_reserve_img03.jpg" alt="클로버 커피 추출 시스템"></p>
 							<!-- 20170713추가 -->
 							<h4>그외 추출 시스템</h4> 
 							<dl class="rs_bottom02">
@@ -779,7 +779,7 @@ var eFrequencyPlannerYn = 'Y';
 						<dl>
 							<dt>
 								<span class="reserve_store_ico">
-									<img src="common/img/store/reserve_store_icon.png" alt="리저브">
+									<img src="../common/img/store/reserve_store_icon.png" alt="리저브">
 								</span>
 								<p>Starbucks Reserve™ Store</p>
 							</dt>
@@ -964,47 +964,47 @@ var eFrequencyPlannerYn = 'Y';
 			<!-- footer end -->
 		
 			
-			<script src="common/js/jquery-1.10.2.min.js"></script>
-			<script src="common/js/%40common.js"></script>
-			<script src="common/js/jquery-ui.min.js?v=220207"></script>
-			<script src="common/js/idangerous.swiper-2.1.min.js"></script>
-			<script src="common/js/idangerous.swiper.scrollbar-2.1.js"></script>
-			<script src="common/js/jquery.bxslider.min.js"></script>
-			<script src="common/js/skdslider.min.js"></script>
-			<script src="common/js/jquery.drive.js"></script>
-			<script src="common/js/jquery.easing-1.3.min.js"></script>
-			<script src="common/js/jquery.elevatezoom.js"></script>
-			<script src="common/js/jquery.flip.js"></script>
-			<script src="common/js/jquery.jsmovie.1.4.4.min.js"></script>
-			<script src="common/js/jquery.mCustomScrollbar.concat.js"></script>
-			<script src="common/js/jquery.number.min.js"></script>
-			<script src="common/js/jquery.rotate.2.3.js"></script>
-			<script src="common/js/jquery.scrollbar.js"></script>
-			<script src="common/js/jquery.scrollTo-1.4.2-min.js"></script>
-			<script src="common/js/jquery.superscrollorama.js"></script>						
-			<script src="common/js/jquery.transform2d.js"></script>
-			<script src="common/js/jquery.transform3d.js"></script>			
-			<script src="common/js/greensock/TweenMax.min.js"></script>
-			<script src="common/js/masonry.pkgd.js"></script>
-			<script src="common/js/common.js"></script>
-			<script src="common/js/gnb.js?v=220502"></script>
-			<script src="common/js/header.js?v=200915"></script>
-			<script src="common/js/footer.js?v=210818"></script>
+			<script src="../common/js/jquery-1.10.2.min.js"></script>
+			<script src="../common/js/%40common.js"></script>
+			<script src="../common/js/jquery-ui.min.js?v=220207"></script>
+			<script src="../common/js/idangerous.swiper-2.1.min.js"></script>
+			<script src="../common/js/idangerous.swiper.scrollbar-2.1.js"></script>
+			<script src="../common/js/jquery.bxslider.min.js"></script>
+			<script src="../common/js/skdslider.min.js"></script>
+			<script src="../common/js/jquery.drive.js"></script>
+			<script src="../common/js/jquery.easing-1.3.min.js"></script>
+			<script src="../common/js/jquery.elevatezoom.js"></script>
+			<script src="../common/js/jquery.flip.js"></script>
+			<script src="../common/js/jquery.jsmovie.1.4.4.min.js"></script>
+			<script src="../common/js/jquery.mCustomScrollbar.concat.js"></script>
+			<script src="../common/js/jquery.number.min.js"></script>
+			<script src="../common/js/jquery.rotate.2.3.js"></script>
+			<script src="../common/js/jquery.scrollbar.js"></script>
+			<script src="../common/js/jquery.scrollTo-1.4.2-min.js"></script>
+			<script src="../common/js/jquery.superscrollorama.js"></script>						
+			<script src="../common/js/jquery.transform2d.js"></script>
+			<script src="../common/js/jquery.transform3d.js"></script>			
+			<script src="../common/js/greensock/TweenMax.min.js"></script>
+			<script src="../common/js/masonry.pkgd.js"></script>
+			<script src="../common/js/common.js"></script>
+			<script src="../common/js/gnb.js?v=220502"></script>
+			<script src="../common/js/header.js?v=200915"></script>
+			<script src="../common/js/footer.js?v=210818"></script>
 
-			<script src="common/js/jquery.tmpl.js"></script>
-			<script src="common/js/jquery.tmplPlus.min.js"></script>
-			<script src="common/js/jquery.ezmark.min.js"></script>
+			<script src="../common/js/jquery.tmpl.js"></script>
+			<script src="../common/js/jquery.tmplPlus.min.js"></script>
+			<script src="../common/js/jquery.ezmark.min.js"></script>
 			<!-- <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script> -->
 			
 			<!--
-			<script src="common/js/swiper.jquery.min.js"></script>
-			<script src="common/js/swiper.min.js"></script>
-			<script src="common/js/util.js"></script>
+			<script src="../common/js/swiper.jquery.min.js"></script>
+			<script src="../common/js/swiper.min.js"></script>
+			<script src="../common/js/util.js"></script>
 			-->
 			
 		
-			<script src="common/js/openevent/openevent.js"></script>
-			<script src="common/js/open_event_control.js"></script>
+			<script src="../common/js/openevent/openevent.js"></script>
+			<script src="../common/js/open_event_control.js"></script>
 			<script type="text/javascript">
 				
 				var mrSlider;
@@ -1213,7 +1213,7 @@ var eFrequencyPlannerYn = 'Y';
                 /* 개인컵 리워드 e */
 			</script>
 
-			<script src="common/js/jquery.transit.min.js"></script>
+			<script src="../common/js/jquery.transit.min.js"></script>
 			<script>
 				// 150805 DOM 수정
 				$('div.msr_card_zone').bind('click', function(){
@@ -1250,7 +1250,7 @@ var eFrequencyPlannerYn = 'Y';
 				$('.mycard_one').seqfx();
 			</script>
 						
-			<script src='common/js/makePCookie.js'></script>
+			<script src='../common/js/makePCookie.js'></script>
 		
 			<script>
 				$(document).ready(function () {
@@ -1262,14 +1262,14 @@ var eFrequencyPlannerYn = 'Y';
 				});
 			</script>
 		
-			<script src="common/js/jquery.superscrollorama-1.js"></script>			
-			<script src="common/js/whatsnew.js"></script>
-			<script src="common/js/jquery.ezmark.min-1.js"></script>
-			<script src="common/js/jquery.drive-1.js"></script>			
-			<script type="text/javascript" src="v2/maps/sdk.js?appkey=247bf84c5755624615df524ae2cfc331"></script>
-			<script src="common/js/swiper.min.js"></script><!-- 20180110 js 추가 -->
-			<script src="common/js/jquery.async.min.js"></script>
-			<script src="common/js/jquery.mCustomScrollbar.concat-1.js"></script><!-- 150710 DOM 수정 - 지도 영역 -->
+			<script src="../common/js/jquery.superscrollorama-1.js"></script>			
+			<script src="../common/js/whatsnew.js"></script>
+			<script src="../common/js/jquery.ezmark.min-1.js"></script>
+			<script src="../common/js/jquery.drive-1.js"></script>			
+			<script type="text/javascript" src="../common/js/v2/maps/sdk.js?appkey=247bf84c5755624615df524ae2cfc331"></script>
+			<script src="../common/js/swiper.min.js"></script><!-- 20180110 js 추가 -->
+			<script src="../common/js/jquery.async.min.js"></script>
+			<script src="../common/js/jquery.mCustomScrollbar.concat-1.js"></script><!-- 150710 DOM 수정 - 지도 영역 -->
 			<script>
 				var $geo = {};
 				var $map = {};
@@ -1533,9 +1533,9 @@ var eFrequencyPlannerYn = 'Y';
                 }
 			</script>
 			
-			<script src="common/js/store/store_map-1.js"></script>
-			<script src="common/js/store/store_core.js?v=210802"></script>
-			<script src="common/js/store/store_map_reserve.js"></script>		
+			<script src="../common/js/store/store_map-1.js"></script>
+			<script src="../common/js/store/store_core.js?v=210802"></script>
+			<script src="../common/js/store/store_map_reserve.js"></script>		
 			
 
             
@@ -1558,7 +1558,7 @@ var eFrequencyPlannerYn = 'Y';
 			
 			
 
-		<script src="sdk/js/kakao.min.js"></script>
+		<script src="../common/js/sdk/js/kakao.min.js"></script>
 		<script>
 		Kakao.init('fbd2116d4434a7441d5caa4bb4c5456e');
 		</script>
@@ -1572,9 +1572,9 @@ var eFrequencyPlannerYn = 'Y';
 						<h6>${s_name} {{html $item.getNewIcon()}}</h6>
 						<div class="asm_stitle">
 						<ul class="my_sns_list">
-							<li class="btn_f"><a href="javascript:void(0);" class="storeFbBtn" data-caption="스타벅스코리아" data-image="${$item.getImage()}" data-link="${$item.link()}" data-title="스타벅스 ${s_name}" data-description="${notice}" ><img src="common/img/util/reward/btn_f.gif" alt="패이스북"></a></li>
+							<li class="btn_f"><a href="javascript:void(0);" class="storeFbBtn" data-caption="스타벅스코리아" data-image="${$item.getImage()}" data-link="${$item.link()}" data-title="스타벅스 ${s_name}" data-description="${notice}" ><img src="../common/img/util/reward/btn_f.gif" alt="패이스북"></a></li>
 						
-							<li class="btn_kakao mobileKaKaoTalk"><a href="javascript:void(0);" class="storeKakaoTalkBtn" data-image="${$item.getImage()}" data-description="${notice}" data-btn="스타벅스 매장찾기" data-link="${$item.link()}" ><img src="common/img/util/reward/btn_kakao.png" alt="카카오톡"></a></li>
+							<li class="btn_kakao mobileKaKaoTalk"><a href="javascript:void(0);" class="storeKakaoTalkBtn" data-image="${$item.getImage()}" data-description="${notice}" data-btn="스타벅스 매장찾기" data-link="${$item.link()}" ><img src="../common/img/util/reward/btn_kakao.png" alt="카카오톡"></a></li>
 						</ul>
 						<p>${notice}</p>
 						</div>
@@ -1642,7 +1642,7 @@ var eFrequencyPlannerYn = 'Y';
 									</dl>
 								</div>
 								<ul class="pop_btns_zon2">
-									<li class="btn_f" style="display:"><a href="javascript:void(0);" class="storeFbBtn" data-caption="스타벅스코리아" data-image="${$item.getImage()}" data-link="${$item.link()}" data-title="스타벅스 ${s_name}" data-description="${notice}" ><img src="common/img/util/reward/btn_f.gif" alt="패이스북"></a></li>
+									<li class="btn_f" style="display:"><a href="javascript:void(0);" class="storeFbBtn" data-caption="스타벅스코리아" data-image="${$item.getImage()}" data-link="${$item.link()}" data-title="스타벅스 ${s_name}" data-description="${notice}" ><img src="../common/img/util/reward/btn_f.gif" alt="패이스북"></a></li>
 									
 								</ul>
 								<div class="shopArea_infoWrap">
@@ -1785,7 +1785,7 @@ var eFrequencyPlannerYn = 'Y';
 	
 				</dl>			
 		</script>
-		<script src="common/js/store/store_view.js?v=210423"></script>			
+		<script src="../common/js/store/store_view.js?v=210423"></script>			
 
 		</div>
 	</body>
