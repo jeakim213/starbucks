@@ -36,21 +36,31 @@ public class HomeController {
 	}
 	
 	//admin
-	@RequestMapping(value="memberListForm")
+	@RequestMapping(value="admin/memberListForm")
 	public String memberListForm() {
 		return "admin/memberListForm";
 	}
 	
-	@RequestMapping(value="userInfoForm")
+	@RequestMapping(value="admin/userInfoForm")
 	public String userInfoForm() {
 		return "admin/userInfoForm";
 	}
 	
-	@RequestMapping(value="modifyCheckForm")
+	@RequestMapping(value="admin/modifyCheckForm")
 	public String modifyCheckForm() {
 		return "admin/modifyCheckForm";
 	}
 	
+	@RequestMapping(value="admin/memberModifyForm")
+	public String memberModifyForm() {
+		return "admin/memberModifyForm";
+	}
+	
+	@RequestMapping(value="admin/deleteCheckForm")
+	public String deleteCheckForm() {
+		return "admin/deleteCheckForm";
+	}
+
 	//0601 다정 커피
 	@RequestMapping(value="saleChart-1")
 	public String saleChart1() {
@@ -67,16 +77,6 @@ public class HomeController {
 	@RequestMapping(value="saleChart-3")
 	public String saleChart3() {
 		return "admin/saleChart-3";
-	}
-	
-	@RequestMapping(value="memberModifyForm")
-	public String memberModifyForm() {
-		return "admin/memberModifyForm";
-	}
-	
-	@RequestMapping(value="deleteCheckForm")
-	public String deleteCheckForm() {
-		return "admin/deleteCheckForm";
 	}
 	
 	// coffee
@@ -199,10 +199,11 @@ public class HomeController {
 	}
 
 	@RequestMapping(value = "menu/drink_view")
-	public String drink_view(String product_cd, Model model) {
+	public String drink_view_coldbrew(String product_cd, Model model) {
 		model.addAttribute("product_cd", product_cd);
 		return "menu/drink_view";
 	}
+	// menu/drink_view_coldbrew1은 삭제페이지라고 들어서 매핑 안함(추후 menu 부분 jsp 정리 필요!)
 
 	@RequestMapping(value = "menu/food_list")
 	public String food_list() {
@@ -256,10 +257,20 @@ public class HomeController {
 		return "menu/product_view";
 	}
 	
+	@RequestMapping(value="menu/drink_view")
+	public String drink_view() {
+		return "menu/drink_view";
+	}
+	
 	//0601 다정
 	@RequestMapping(value="menu/starbucksCard")
 	public String starbucksCard() {
 		return "menu/starbucksCard";
+	}
+	
+	@RequestMapping(value="menu/coupon_popup")
+	public String coupon_popup(){
+		return "menu/coupon_popup";
 	}
 	
 	@RequestMapping(value = "menu/product_list_1")
@@ -330,7 +341,7 @@ public class HomeController {
 	}
 
 	// msr
-	@RequestMapping(value = "msr/msreward/about")
+	@RequestMapping(value = "msreward/about")
 	public String msreward_about() {
 		return "msr/msreward/about";
 	}
@@ -364,11 +375,6 @@ public class HomeController {
 	public String scard_register_inquiry() {
 		return "msr/scard/register_inquiry";
 	}
-
-	/*
-	 * @RequestMapping(value="scard_scard_gallery") public String
-	 * scard_scard_gallery() { return "msr/scard/scard_gallery"; }
-	 */
 
 	@RequestMapping(value = "msr/sceGift/egift_information")
 	public String sceGift_egift_information() {
@@ -405,12 +411,12 @@ public class HomeController {
 	public String admin_4() {
 		return "my/admin_4";
 	}
-
+	
 	@RequestMapping(value = "admin_5")
 	public String admin_5() {
 		return "my/admin_5";
 	}
-
+	
 	@RequestMapping(value = "admin_6")
 	public String admin_6() {
 		return "my/admin_6";
@@ -512,6 +518,7 @@ public class HomeController {
 		return "store/store_reserve";
 	}
 
+
 	@RequestMapping(value = "store/store_star_field")
 	public String store_star_field() {
 		return "store/store_star_field";
@@ -565,7 +572,8 @@ public class HomeController {
 		//답 : _response.result_code == "SUCCESS" json필요 data, result_code, error_msg, list
 		return "";
 	}
-	
+
+	//ajax-지혜
 	@ResponseBody
 	@PostMapping(value = "upload/json/menu/{path}", produces = "application/json; charset=UTF-8")
 	public String ajaxJson(@PathVariable String path) throws FileNotFoundException, IOException {
