@@ -1145,7 +1145,7 @@ var eFrequencyPlannerYn = 'Y';
 	</div>
 		<div style="position: absolute; z-index: 1; width: 100%; height: 0px; transform: translateZ(0px);">
 			<div style="position: absolute; margin: -55px 0px 0px -16px; z-index: 0; left: -2653px; top: 6289px;">
-			<!-- 예은_아니 이미지 왜안나옴? ㅗㅗㅗㅗ -->
+			<!-- 예은_아니 이미지 왜안나옴? -->
 				<img draggable="false" src="common/img/store/pin/pin_start.png" alt="" title="" style="min-width: 0px; min-height: 0px; max-width: 99999px; max-height: none; border: 0px; display: block; position: absolute; user-select: none; -webkit-user-drag: none; clip: rect(0px, 38px, 60px, 0px); top: 0px; left: 0px; width: 38px; height: 60px;"></div>
 		</div>
 	</div>

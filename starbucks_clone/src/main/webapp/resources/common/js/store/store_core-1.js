@@ -585,7 +585,7 @@
 			
 			/** ajax 캐시문제를 해결하기 **/
 			var rndCod = randomString();
-			var storeInterfaceUrl = "/store/getStore?r="+rndCod;
+			var storeInterfaceUrl = "${pageContext.request.contextPath}/store/getStore?r="+rndCod;
 
 			__ajaxCall( storeInterfaceUrl ,$search, true, "json", "post",
 					function (_response) 
@@ -1243,7 +1243,7 @@
         	$.template( "sidoUiCtrl", tempSido );
         	$.template( "gugunUiCtrl", tempGugun );
       		
-			__ajaxCall("/store/getSidoList", {}, true, "json", "post",
+			__ajaxCall("${pageContext.request.contextPath}/store/getSidoList", {}, true, "json", "post",
 					function (_response) 
 					{
         				if ( _response.list.length > 0 )
@@ -1299,7 +1299,7 @@
             					}
             					else
             					{
-                					__ajaxCall("/store/getGugunList", {"sido_cd":sido}, true, "json", "post",
+                					__ajaxCall("${pageContext.request.contextPath}/store/getGugunList", {"sido_cd":sido}, true, "json", "post",
                 							function (_response) 
                 							{
                 								$(".gugun_arae_box").html("");

@@ -1,5 +1,5 @@
 {
-    "list_Seoul": [
+    "서울": [
         {
             "seq": 0,
             "sido_cd": null,
@@ -3276,7 +3276,8 @@
             "t48": 0
         }
     ],
-    "list_Gyeonggi": [
+    
+    "경기": [
         {
             "seq": 0,
             "sido_cd": null,
@@ -8780,7 +8781,8 @@
             "t48": 0
         }
     ],
-    "list_Gwangju": [
+    
+    "광주": [
         {
             "seq": 0,
             "sido_cd": null,
@@ -9437,7 +9439,8 @@
             "t48": 0
         }
     ],
-    "list_Daegu": [
+    
+    "대구": [
         {
             "seq": 0,
             "sido_cd": null,
@@ -10487,7 +10490,8 @@
             "t48": 0
         }
     ],
-    "list_Daejeon": [
+    
+    "대전": [
         {
             "seq": 0,
             "sido_cd": null,
@@ -11144,7 +11148,8 @@
             "t48": 0
         }
     ],
-    "list_Busan": [
+    
+    "부산": [
         {
             "seq": 0,
             "sido_cd": null,
@@ -13242,7 +13247,8 @@
             "t48": 0
         }
     ],
-    "list_Ulsan": [
+    
+    "울산": [
         {
             "seq": 0,
             "sido_cd": null,
@@ -13899,7 +13905,8 @@
             "t48": 0
         }
     ],
-    "list_Incheon": [
+    
+    "인천": [
         {
             "seq": 0,
             "sido_cd": null,
@@ -15211,7 +15218,8 @@
             "t48": 0
         }
     ],
-    "list_GangWon": [
+    
+    "강원": [
         {
             "seq": 0,
             "sido_cd": null,
@@ -17571,7 +17579,8 @@
             "t48": 0
         }
     ],
-    "list_GyeongNam": [
+    
+    "경남": [
         {
             "seq": 0,
             "sido_cd": null,
@@ -20193,7 +20202,8 @@
             "t48": 0
         }
     ],
-    "list_GyeongBuk": [
+    
+    "경북": [
         {
             "seq": 0,
             "sido_cd": null,
@@ -23339,7 +23349,8 @@
             "t48": 0
         }
     ],
-    "list_JeonNam": [
+    
+    "전남": [
         {
             "seq": 0,
             "sido_cd": null,
@@ -26223,7 +26234,8 @@
             "t48": 0
         }
     ],
-    "list_JeonBuk": [
+    
+    "전북": [
         {
             "seq": 0,
             "sido_cd": null,
@@ -28190,7 +28202,8 @@
             "t48": 0
         }
     ],
-    "list_ChungNam": [
+    
+    "충남": [
         {
             "seq": 0,
             "sido_cd": null,
@@ -30419,7 +30432,8 @@
             "t48": 0
         }
     ],
-    "list_ChungBuk": [
+    
+    "충북": [
         {
             "seq": 0,
             "sido_cd": null,
@@ -32255,7 +32269,8 @@
             "t48": 0
         }
     ],
-    "list_Jeju": [
+    
+    "제주": [
         {
             "seq": 0,
             "sido_cd": null,

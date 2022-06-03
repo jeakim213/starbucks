@@ -3,10 +3,12 @@ package com.clone.starbucks;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.List;
 import java.util.Locale;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.apache.ibatis.annotations.Mapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.core.io.ClassPathResource;
@@ -19,7 +21,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.google.gson.Gson;
+import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 
 /**
  * Handles requests for the application home page.
@@ -668,6 +672,16 @@ public class HomeController {
 		JsonObject obj = gson.fromJson(reader, JsonObject.class);
 		//불러오는 조건문
 		
+		JsonArray arr = obj.getAsJsonArray("sido_cd");
+		for(int i = 0; i < arr.size(); i++) {
+			JsonObject tmp = (JsonObject) arr.get(i);
+			String sido = tmp.get("sido_cd").getAsString();
+		}
+		
+		
+		
+		
+		
 		return obj.toString();
 		
 		
@@ -683,6 +697,8 @@ public class HomeController {
 		FileReader reader = new FileReader(resource.getFile());
 		Gson gson = new Gson();
 		JsonObject obj = gson.fromJson(reader, JsonObject.class);
+		
+		
 		return obj.toString();
 	}
 	
