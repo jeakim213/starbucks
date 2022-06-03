@@ -23,17 +23,17 @@
 <meta property="og:description" content="Starbucks">
 
 <title id="titleJoin">Starbucks Korea</title> <!-- 220117 수정 -->
-<link rel="shortcut icon" href="common/img/common/favicon.ico?v=200828" type="image/ico"> <!-- 20200827 파비콘 교체 및 CDN 변수처리 -->
-<link href="common/css/reset.css" rel="stylesheet">
-<link href="common/css/style.css?v=210721" rel="stylesheet">
-<link href="common/css/jquery.bxslider.css" rel="stylesheet">
-<link href="common/css/idangerous.swiper.css" rel="stylesheet">
-<link href="common/css/idangerous.swiper.scrollbar.css" rel="stylesheet">
-<link href="common/css/jquery.mCustomScrollbar.css" rel="stylesheet">
-<link href="common/css/jquery.scrollbar.css" rel="stylesheet">
-<link href="common/css/jquery-ui.css" rel="stylesheet">
-<link href="common/css/ezmark.css" rel="stylesheet">
-<link href="common/css/style_dt.css?v=20191211" rel="stylesheet"> <!-- 20191211 수정 -->
+<link rel="shortcut icon" href="../common/img/common/favicon.ico?v=200828" type="image/ico"> <!-- 20200827 파비콘 교체 및 CDN 변수처리 -->
+<link href="../common/css/reset.css" rel="stylesheet">
+<link href="../common/css/style.css?v=210721" rel="stylesheet">
+<link href="../common/css/jquery.bxslider.css" rel="stylesheet">
+<link href="../common/css/idangerous.swiper.css" rel="stylesheet">
+<link href="../common/css/idangerous.swiper.scrollbar.css" rel="stylesheet">
+<link href="../common/css/jquery.mCustomScrollbar.css" rel="stylesheet">
+<link href="../common/css/jquery.scrollbar.css" rel="stylesheet">
+<link href="../common/css/jquery-ui.css" rel="stylesheet">
+<link href="../common/css/ezmark.css" rel="stylesheet">
+<link href="../common/css/style_dt.css?v=20191211" rel="stylesheet"> <!-- 20191211 수정 -->
 
 <!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -69,7 +69,7 @@ var eFrequencySeq = '172';
 var eFrequencyPlannerYn = 'Y';
 </script>
 
-		<link href="common/css/style_coffee-2.css?v=210917" rel="stylesheet">
+		<link href="../common/css/style_coffee-2.css?v=210917" rel="stylesheet">
 		<!--[if lt IE 9]>
 		<link href="/common/css_ie/style_main.css" rel="stylesheet">
 		<link href="/common/css_ie/style_coffee.css" rel="stylesheet">
@@ -130,7 +130,7 @@ var eFrequencyPlannerYn = 'Y';
 					<!-- 유저인포 -->
 					<div class="user_greet">
 						<div class="user_pic_area">
-							<img alt="사용자 아이디" src="common/img/common/user_pic_sample.jpg">
+							<img alt="사용자 아이디" src="../common/img/common/user_pic_sample.jpg">
 							<p class="msr_user_mask msr_user_mask01"></p>
 							<p class="msr_user_mask msr_user_mask02"></p>
 							<p class="msr_user_mask msr_user_mask03"></p>
@@ -179,13 +179,13 @@ var eFrequencyPlannerYn = 'Y';
 							<img alt="카드이름">
 						</div>
 						<div class="mycard_area2">
-							<img alt="카드이름" src="common/img/common/mycard2.png">
+							<img alt="카드이름" src="../common/img/common/mycard2.png">
 							<p class="num"><!-- 1234-1234-1234-1234 --></p>
 							<p class="barcord"><!-- <img src="//image.istarbucks.co.kr/common/img/common/bacord.png" alt=""> --></p>
 						</div>
 						<div class="mycard_one">
 							<!-- <div class="front"> -->
-							<img src="common/img/common/payment_icon1.png" alt="">
+							<img src="../common/img/common/payment_icon1.png" alt="">
 							<!-- </div> -->
 							<!-- <div class="back"><img src="//image.istarbucks.co.kr/common/img/common/payment_icon1.png" alt=""></div> -->
 						</div>
@@ -200,7 +200,7 @@ var eFrequencyPlannerYn = 'Y';
 					<!-- 일반회원 -->
 					<div class="sb_card_regi">
 						<a href="javascript:void(0);">
-							<p class="icon_add_card" onclick="location.href = '/my/mycard_info_input';"><img alt="카드등록 아이콘" src="common/img/common/icon_add_card.png"></p>
+							<p class="icon_add_card" onclick="location.href = '/my/mycard_info_input';"><img alt="카드등록 아이콘" src="../common/img/common/icon_add_card.png"></p>
 							<p class="sb_card_regi_txt"><strong>스타벅스 카드 등록</strong><br>카드를 등록하시고<br>다양한 리워드를<br>만나보세요.</p>
 						</a>
 					</div>
@@ -616,12 +616,12 @@ var eFrequencyPlannerYn = 'Y';
 				<!-- 서브 타이틀 -->
 				<div class="sub_tit_wrap">
 					<div class="sub_tit_inner">
-						<h2><img src="common/img/coffee/espresso/espresso_ttl.jpg" alt="에스프레소 음료"></h2>
+						<h2><img src="../common/img/coffee/espresso/espresso_ttl.jpg" alt="에스프레소 음료"></h2>
 						<ul class="smap">
-							<li><a href="index.htm"><img src="common/img/common/icon_home.png" alt="홈으로"></a></li>
-							<li><img class="arrow" src="common/img/common/icon_arrow.png" alt="하위메뉴"></li>
+							<li><a href="index.htm"><img src="../common/img/common/icon_home.png" alt="홈으로"></a></li>
+							<li><img class="arrow" src="../common/img/common/icon_arrow.png" alt="하위메뉴"></li>
 							<li class="en"><a href="espresso">COFFEE</a></li>
-							<li><img class="arrow" src="common/img/common/icon_arrow.png" alt="하위메뉴"></li>
+							<li><img class="arrow" src="../common/img/common/icon_arrow.png" alt="하위메뉴"></li>
 							<li><a href="espresso" class="this">에스프레소 음료</a></li>
 						</ul>
 					</div>
@@ -630,7 +630,7 @@ var eFrequencyPlannerYn = 'Y';
 				<!-- 상단 커피 -->
 				<section class="cf_espressoTop_wrap">
 					<article class="cf_espressoTop_inner">
-						<p class="cf_espressoClasslcs_img"><img src="common/img/coffee/espresso/espresso_classlcs_img01.jpg?v=210917" alt="espresso Classlcs"></p><!-- 20210914 수정 -->
+						<p class="cf_espressoClasslcs_img"><img src="../common/img/coffee/espresso/espresso_classlcs_img01.jpg?v=210917" alt="espresso Classlcs"></p><!-- 20210914 수정 -->
 						<dl class="cf_espressoClasslcs_info">
 							<dt>“오늘날, 스타벅스에 있어 꼼꼼하고 세심한 노력은 다양한 음료 메뉴만큼이나 중요합니다. ”</dt>
 							<dd>
@@ -648,7 +648,7 @@ var eFrequencyPlannerYn = 'Y';
 							<li>
 								<a href="doppio">
 									<dl>
-										<dt><img src="common/img/coffee/espresso/espresso_list_img01.jpg" alt="doppio"></dt>
+										<dt><img src="../common/img/coffee/espresso/espresso_list_img01.jpg" alt="doppio"></dt>
 										<dd>도피오는 에스프레소를 2샷으로 추출한 음료입니다. <br>스타벅스 음료의 가장 핵심이자 중요한 에스프레소입니다.</dd><!-- 20210914 수정 -->
 									</dl>
 								</a>
@@ -656,7 +656,7 @@ var eFrequencyPlannerYn = 'Y';
 							<li>
 								<a href="espresso_macchiato">
 									<dl>
-										<dt><img src="common/img/coffee/espresso/espresso_list_img02.jpg" alt="espresso macchiato"></dt>
+										<dt><img src="../common/img/coffee/espresso/espresso_list_img02.jpg" alt="espresso macchiato"></dt>
 										<dd>에스프레소 마키아또는 깊고 강렬한 에스프레소 샷에 <br>우유 거품이 살짝 올라간 음료입니다.</dd><!-- 20210914 수정 -->
 									</dl>
 								</a>
@@ -664,7 +664,7 @@ var eFrequencyPlannerYn = 'Y';
 							<li>
 								<a href="americano">
 									<dl>
-										<dt><img src="common/img/coffee/espresso/espresso_list_img03.jpg" alt="americano"></dt>
+										<dt><img src="../common/img/coffee/espresso/espresso_list_img03.jpg" alt="americano"></dt>
 										<dd>진한 에스프레소에 뜨거운 물을 부어 만든 아메리카노는 <br>에스프레소의 진한 풍미와 원두의 다크한 맛을 느낄 수 <br>있습니다.</dd><!-- 20210914 수정 -->
 									</dl>
 								</a>
@@ -672,7 +672,7 @@ var eFrequencyPlannerYn = 'Y';
 							<li>
 								<a href="caramel_macchato">
 									<dl>
-										<dt><img src="common/img/coffee/espresso/espresso_list_img04.jpg" alt="caramel macchato"></dt>
+										<dt><img src="../common/img/coffee/espresso/espresso_list_img04.jpg" alt="caramel macchato"></dt>
 										<dd>마키아또는 스타벅스 에스프레소, 스팀, 밀크, 부드러운 <br>우유거품에 달콤한 드리즐로 마무리하여 달콤한 끝 맛을 <br>느낄 수 있는 음료입니다.</dd><!-- 20210914 수정 -->
 									</dl>
 								</a>
@@ -680,7 +680,7 @@ var eFrequencyPlannerYn = 'Y';
 							<li>
 								<a href="cappuccino">
 									<dl>
-										<dt><img src="common/img/coffee/espresso/espresso_list_img05.jpg" alt="cappuccino"></dt>
+										<dt><img src="../common/img/coffee/espresso/espresso_list_img05.jpg" alt="cappuccino"></dt>
 										<dd>두텁게 쌓은 우유거품 아래에 다크하고 진한 에스프레소가 <br>숨어진 카푸치노는 바리스타의 숙련된 솜씨를 느낄 수 있는 <br>음료입니다.</dd><!-- 20210914 수정 -->
 									</dl>
 								</a>
@@ -688,7 +688,7 @@ var eFrequencyPlannerYn = 'Y';
 							<li>
 								<a href="latte">
 									<dl>
-										<dt><img src="common/img/coffee/espresso/espresso_list_img06.jpg" alt="latte"></dt>
+										<dt><img src="../common/img/coffee/espresso/espresso_list_img06.jpg" alt="latte"></dt>
 										<dd>진한 에스프레소와 부드러운 스팀 밀크가 섞인 라떼는 <br>더하고자 하는 어떠한 맛과도 잘 어울리는 음료입니다.</dd><!-- 20210914 수정 -->
 									</dl>
 								</a>
@@ -696,7 +696,7 @@ var eFrequencyPlannerYn = 'Y';
 							<li>
 								<a href="mocha">
 									<dl>
-										<dt><img src="common/img/coffee/espresso/espresso_list_img07.jpg" alt="모카 "></dt>										
+										<dt><img src="../common/img/coffee/espresso/espresso_list_img07.jpg" alt="모카 "></dt>										
 										<dd>모카는 달콤 쌉싸름한 초콜릿이 진한 에스프레소와 스팀 밀크에 <br>혼합되어 달콤함이 부각되는 음료입니다.</dd><!-- 20210914 수정 -->
 									</dl>
 								</a>
@@ -867,36 +867,36 @@ var eFrequencyPlannerYn = 'Y';
 			<!-- footer end -->
 		
 			
-			<script src="common/js/jquery-1.10.2.min.js"></script>
-			<script src="common/js/%40common.js"></script>
-			<script src="common/js/jquery-ui.min.js?v=220207"></script>
-			<script src="common/js/idangerous.swiper-2.1.min.js"></script>
-			<script src="common/js/idangerous.swiper.scrollbar-2.1.js"></script>
-			<script src="common/js/jquery.bxslider.min.js"></script>
-			<script src="common/js/skdslider.min.js"></script>
-			<script src="common/js/jquery.drive.js"></script>
-			<script src="common/js/jquery.easing-1.3.min.js"></script>
-			<script src="common/js/jquery.elevatezoom.js"></script>
-			<script src="common/js/jquery.flip.js"></script>
-			<script src="common/js/jquery.jsmovie.1.4.4.min.js"></script>
-			<script src="common/js/jquery.mCustomScrollbar.concat.js"></script>
-			<script src="common/js/jquery.number.min.js"></script>
-			<script src="common/js/jquery.rotate.2.3.js"></script>
-			<script src="common/js/jquery.scrollbar.js"></script>
-			<script src="common/js/jquery.scrollTo-1.4.2-min.js"></script>
-			<script src="common/js/jquery.superscrollorama.js"></script>						
-			<script src="common/js/jquery.transform2d.js"></script>
-			<script src="common/js/jquery.transform3d.js"></script>			
-			<script src="common/js/greensock/TweenMax.min.js"></script>
-			<script src="common/js/masonry.pkgd.js"></script>
-			<script src="common/js/common.js"></script>
-			<script src="common/js/gnb.js?v=220502"></script>
-			<script src="common/js/header.js?v=200915"></script>
-			<script src="common/js/footer.js?v=210818"></script>
+			<script src="../common/js/jquery-1.10.2.min.js"></script>
+			<script src="../common/js/%40common.js"></script>
+			<script src="../common/js/jquery-ui.min.js?v=220207"></script>
+			<script src="../common/js/idangerous.swiper-2.1.min.js"></script>
+			<script src="../common/js/idangerous.swiper.scrollbar-2.1.js"></script>
+			<script src="../common/js/jquery.bxslider.min.js"></script>
+			<script src="../common/js/skdslider.min.js"></script>
+			<script src="../common/js/jquery.drive.js"></script>
+			<script src="../common/js/jquery.easing-1.3.min.js"></script>
+			<script src="../common/js/jquery.elevatezoom.js"></script>
+			<script src="../common/js/jquery.flip.js"></script>
+			<script src="../common/js/jquery.jsmovie.1.4.4.min.js"></script>
+			<script src="../common/js/jquery.mCustomScrollbar.concat.js"></script>
+			<script src="../common/js/jquery.number.min.js"></script>
+			<script src="../common/js/jquery.rotate.2.3.js"></script>
+			<script src="../common/js/jquery.scrollbar.js"></script>
+			<script src="../common/js/jquery.scrollTo-1.4.2-min.js"></script>
+			<script src="../common/js/jquery.superscrollorama.js"></script>						
+			<script src="../common/js/jquery.transform2d.js"></script>
+			<script src="../common/js/jquery.transform3d.js"></script>			
+			<script src="../common/js/greensock/TweenMax.min.js"></script>
+			<script src="../common/js/masonry.pkgd.js"></script>
+			<script src="../common/js/common.js"></script>
+			<script src="../common/js/gnb.js?v=220502"></script>
+			<script src="../common/js/header.js?v=200915"></script>
+			<script src="../common/js/footer.js?v=210818"></script>
 
-			<script src="common/js/jquery.tmpl.js"></script>
-			<script src="common/js/jquery.tmplPlus.min.js"></script>
-			<script src="common/js/jquery.ezmark.min.js"></script>
+			<script src="../common/js/jquery.tmpl.js"></script>
+			<script src="../common/js/jquery.tmplPlus.min.js"></script>
+			<script src="../common/js/jquery.ezmark.min.js"></script>
 			<!-- <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script> -->
 			
 			<!--
@@ -906,8 +906,8 @@ var eFrequencyPlannerYn = 'Y';
 			-->
 			
 		
-			<script src="common/js/openevent/openevent.js"></script>
-			<script src="common/js/open_event_control.js"></script>
+			<script src="../common/js/openevent/openevent.js"></script>
+			<script src="../common/js/open_event_control.js"></script>
 			<script type="text/javascript">
 				
 				var mrSlider;
@@ -1116,7 +1116,7 @@ var eFrequencyPlannerYn = 'Y';
                 /* 개인컵 리워드 e */
 			</script>
 
-			<script src="common/js/jquery.transit.min.js"></script>
+			<script src="../common/js/jquery.transit.min.js"></script>
 			<script>
 				// 150805 DOM 수정
 				$('div.msr_card_zone').bind('click', function(){
@@ -1153,7 +1153,7 @@ var eFrequencyPlannerYn = 'Y';
 				$('.mycard_one').seqfx();
 			</script>
 						
-			<script src='common/js/makePCookie.js'></script>
+			<script src='../common/js/makePCookie.js'></script>
 		
 			<script>
 				$(document).ready(function () {
@@ -1165,8 +1165,8 @@ var eFrequencyPlannerYn = 'Y';
 				});
 			</script>
 		
-		<script src="common/js/coffee.js"></script>
-		<script src="common/js/jquery.ezmark.min-1.js"></script>		
+		<script src="../common/js/coffee.js"></script>
+		<script src="../common/js/jquery.ezmark.min-1.js"></script>		
 		<script>
 			$(document).ready(function(){
 

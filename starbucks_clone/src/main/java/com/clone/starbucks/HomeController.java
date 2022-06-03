@@ -99,6 +99,16 @@ public class HomeController {
 	public String doppio() {
 		return "coffee/doppio";
 	}
+	
+	@RequestMapping(value = "coffee/espresso_macchiato")
+	public String espresso_macchiato() {
+		return "coffee/espresso_macchiato";
+	}
+	
+	@RequestMapping(value = "coffee/espresso")
+	public String espresso() {
+		return "coffee/espresso";
+	}
 
 	@RequestMapping(value = "coffee/latte")
 	public String latte() {
@@ -143,7 +153,7 @@ public class HomeController {
 		return "menu/drink_list";
 	}
 
-	@RequestMapping(value = "menu/drink_list-1")
+	@RequestMapping(value = "menu/drink_list_1")
 	public String drink_list_1() {
 		return "menu/drink_list-1";
 	}
@@ -292,7 +302,7 @@ public class HomeController {
 		return "menu/product_list-8";
 	}
 
-	@RequestMapping(value = "menu/product_list-9")
+	@RequestMapping(value = "menu/product_list_9")
 	public String product_list_9() {
 		return "menu/product_list-9";
 	}
@@ -354,11 +364,6 @@ public class HomeController {
 	public String scard_register_inquiry() {
 		return "msr/scard/register_inquiry";
 	}
-
-	/*
-	 * @RequestMapping(value="scard_scard_gallery") public String
-	 * scard_scard_gallery() { return "msr/scard/scard_gallery"; }
-	 */
 
 	@RequestMapping(value = "msr/sceGift/egift_information")
 	public String sceGift_egift_information() {
@@ -502,10 +507,6 @@ public class HomeController {
 		return "store/store_reserve";
 	}
 
-	@RequestMapping(value = "store/store_star_field")
-	public String store_star_field() {
-		return "store/store_star_field";
-	}
 
 	@RequestMapping(value = "util/app_tip")
 	public String app_tip() {
@@ -555,7 +556,10 @@ public class HomeController {
 		//답 : _response.result_code == "SUCCESS" json필요 data, result_code, error_msg, list
 		return "";
 	}
-	
+
+
+	//ajax-지혜
+
 	@ResponseBody
 	@PostMapping(value = "upload/json/menu/{path}", produces = "application/json; charset=UTF-8")
 	public String ajaxJson(@PathVariable String path) throws FileNotFoundException, IOException {
