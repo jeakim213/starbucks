@@ -198,6 +198,7 @@ public class HomeController {
 		return "menu/drink_list-9";
 	}
 
+
 	@RequestMapping(value = "menu/drink_view")
 	public String drink_view(String product_cd, Model model) {
 		model.addAttribute("product_cd", product_cd);
@@ -322,11 +323,6 @@ public class HomeController {
 	@RequestMapping(value = "menu/myOrder")
 	public String menu_myOrder() {
 		return "menu/myOrder";
-	}
-
-	@RequestMapping(value = "menu/coupon_popup")
-	public String menu_coupon_popup() {
-		return "menu/coupon_popup";
 	}
 
 	// msr
