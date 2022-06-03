@@ -647,7 +647,7 @@ var eFrequencyPlannerYn = 'Y';
 													<!-- 검색결과 없는 경우 -->
 													<!--strong>검색 결과</strong>(<span class="en t_006633">0</span>개)-->
 													<!-- 검색결과 있는 경우 -->
-													<strong class="quickSearchResultCtn"></strong> (검색 결과 <span class="en t_006633 resultCtnNumberTab1">0</span>개)<br>
+													<strong class="quickSearchResultCtn"></strong> (검색 결과 <span class="en t_006633 resultCtnNumberTab1"></span>개)<br>
 												</div>
 												<div class="result_list_wrap">
 													<!-- 검색결과 없는 경우 -->

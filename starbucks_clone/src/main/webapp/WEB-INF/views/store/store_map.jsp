@@ -135,11 +135,8 @@ var eFrequencyPlannerYn = 'Y';
 					<!-- 유저인포 -->
 					<div class="user_greet">
 						<div class="user_pic_area">
-<<<<<<< HEAD
 							<img alt="사용자 아이디" src="../common/img/common/user_pic_sample.jpg">
-=======
-							<img alt="사용자 아이디" src="//image.istarbucks.co.kr/common/img/common/user_pic_sample.jpg">
->>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
+
 							<p class="msr_user_mask msr_user_mask01"></p>
 							<p class="msr_user_mask msr_user_mask02"></p>
 							<p class="msr_user_mask msr_user_mask03"></p>
@@ -188,21 +185,15 @@ var eFrequencyPlannerYn = 'Y';
 							<img alt="카드이름">
 						</div>
 						<div class="mycard_area2">
-<<<<<<< HEAD
 							<img alt="카드이름" src="../common/img/common/mycard2.png">
-=======
-							<img alt="카드이름" src="//image.istarbucks.co.kr/common/img/common/mycard2.png">
->>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
+
 							<p class="num"><!-- 1234-1234-1234-1234 --></p>
 							<p class="barcord"><!-- <img src="//image.istarbucks.co.kr/common/img/common/bacord.png" alt=""> --></p>
 						</div>
 						<div class="mycard_one" style="transform: rotateY(358.638deg);">
 							<!-- <div class="front"> -->
-<<<<<<< HEAD
 							<img src="../common/img/common/payment_icon1.png" alt="">
-=======
-							<img src="//image.istarbucks.co.kr/common/img/common/payment_icon1.png" alt="">
->>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
+
 							<!-- </div> -->
 							<!-- <div class="back"><img src="//image.istarbucks.co.kr/common/img/common/payment_icon1.png" alt=""></div> -->
 						</div>
@@ -217,11 +208,8 @@ var eFrequencyPlannerYn = 'Y';
 					<!-- 일반회원 -->
 					<div class="sb_card_regi">
 						<a href="javascript:void(0);">
-<<<<<<< HEAD
 							<p class="icon_add_card" onclick="location.href = '/my/mycard_info_input';"><img alt="카드등록 아이콘" src="../common/img/common/icon_add_card.png"></p>
-=======
-							<p class="icon_add_card" onclick="location.href = '/my/mycard_info_input';"><img alt="카드등록 아이콘" src="//image.istarbucks.co.kr/common/img/common/icon_add_card.png"></p>
->>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
+
 							<p class="sb_card_regi_txt"><strong>스타벅스 카드 등록</strong><br>카드를 등록하시고<br>다양한 리워드를<br>만나보세요.</p>
 						</a>
 					</div>
@@ -732,7 +720,7 @@ var eFrequencyPlannerYn = 'Y';
 													<!-- 검색결과 없는 경우 -->
 													<!--strong>검색 결과</strong>(<span class="en t_006633">0</span>개)-->
 													<!-- 검색결과 있는 경우 -->
-													<strong class="quickSearchResultCtn"></strong> (검색 결과 <span class="en t_006633 resultCtnNumberTab1">10</span>개)<br>
+													<strong class="quickSearchResultCtn"></strong> (검색 결과 <span class="en t_006633 resultCtnNumberTab1"></span>개)<br>
 												</div>
 												<div class="result_list_wrap" style="height: 305px;">
 													<!-- 검색결과 없는 경우 -->
@@ -1129,14 +1117,9 @@ var eFrequencyPlannerYn = 'Y';
 					</form>
 
 	<!-- 150904 수정 -->
-<<<<<<< HEAD
 	<p class="btn_storemap_quick"><a href="javascript:void(0);"><img src="../common/img/store/btn_quick.png" alt="현재 위치 중심으로 지도이동"></a></p> <!-- 접근성_20171127 alt 추가 -->
-	
-	
-=======
-	<p class="btn_storemap_quick"><a href="javascript:void(0);"><img src="common/img/store/btn_quick.png" alt="현재 위치 중심으로 지도이동"></a></p>
+
 	<!-- 접근성_20171127 alt 추가 -->
->>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
 	<!-- 150805 추가 구명준 -->
 <div style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; touch-action: none; cursor: url(&quot;https://t1.daumcdn.net/mapjsapi/images/cursor/openhand.cur.ico&quot;) 7 5, url(&quot;https://t1.daumcdn.net/mapjsapi/images/cursor/openhand.cur.ico&quot;), default;">
 	<div style="position: absolute;">
@@ -1398,8 +1381,7 @@ var eFrequencyPlannerYn = 'Y';
 			</footer>
 			<!-- footer end -->
 		
-			
-<<<<<<< HEAD
+
 			<script src="../common/js/jquery-1.10.2.min.js"></script>
 			<script src="../common/js/%40common.js"></script>
 			<script src="../common/js/jquery-ui.min.js?v=220207"></script>
@@ -1426,44 +1408,10 @@ var eFrequencyPlannerYn = 'Y';
 			<script src="../common/js/gnb.js?v=220502"></script>
 			<script src="../common/js/header.js?v=200915"></script>
 			<script src="../common/js/footer.js?v=210818"></script>
-=======
-			<script src="//image.istarbucks.co.kr/common/js/jquery-1.10.2.min.js"></script>
-			<script src="https://image.istarbucks.co.kr/common/js/@common.js"></script>
-			<script src="https://image.istarbucks.co.kr/common/js/jquery-ui.min.js?v=220207"></script>
-			<script src="//image.istarbucks.co.kr/common/js/idangerous.swiper-2.1.min.js"></script>
-			<script src="//image.istarbucks.co.kr/common/js/idangerous.swiper.scrollbar-2.1.js"></script>
-			<script src="//image.istarbucks.co.kr/common/js/jquery.bxslider.min.js"></script>
-			<script src="//image.istarbucks.co.kr/common/js/skdslider.min.js"></script>
-			<script src="//image.istarbucks.co.kr/common/js/jquery.drive.js"></script>
-			<script src="//image.istarbucks.co.kr/common/js/jquery.easing-1.3.min.js"></script>
-			<script src="//image.istarbucks.co.kr/common/js/jquery.elevatezoom.js"></script>
-			<script src="//image.istarbucks.co.kr/common/js/jquery.flip.js"></script>
-			<script src="//image.istarbucks.co.kr/common/js/jquery.jsmovie.1.4.4.min.js"></script>
-			<script src="//image.istarbucks.co.kr/common/js/jquery.mCustomScrollbar.concat.js"></script>
-			<script src="//image.istarbucks.co.kr/common/js/jquery.number.min.js"></script>
-			<script src="//image.istarbucks.co.kr/common/js/jquery.rotate.2.3.js"></script>
-			<script src="//image.istarbucks.co.kr/common/js/jquery.scrollbar.js"></script>
-			<script src="//image.istarbucks.co.kr/common/js/jquery.scrollTo-1.4.2-min.js"></script>
-			<script src="//image.istarbucks.co.kr/common/js/jquery.superscrollorama.js"></script>						
-			<script src="//image.istarbucks.co.kr/common/js/jquery.transform2d.js"></script>
-			<script src="//image.istarbucks.co.kr/common/js/jquery.transform3d.js"></script>			
-			<script src="//image.istarbucks.co.kr/common/js/greensock/TweenMax.min.js"></script>
-			<script src="//image.istarbucks.co.kr/common/js/masonry.pkgd.js"></script>
-			<script src="//image.istarbucks.co.kr/common/js/common.js"></script>
-			<script src="common/js/gnb.js?v=220502"></script>
-			<script src="common/js/header.js?v=200915"></script>
-			<script src="//image.istarbucks.co.kr/common/js/footer.js?v=210818"></script>
->>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
-
-<<<<<<< HEAD
 			<script src="../common/js/jquery.tmpl.js"></script>
 			<script src="../common/js/jquery.tmplPlus.min.js"></script>
 			<script src="../common/js/jquery.ezmark.min.js"></script>
-=======
-			<script src="//image.istarbucks.co.kr/common/js/jquery.tmpl.js"></script>
-			<script src="//image.istarbucks.co.kr/common/js/jquery.tmplPlus.min.js"></script>
-			<script src="//image.istarbucks.co.kr/common/js/jquery.ezmark.min.js"></script>
->>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
+
 			<!-- <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script> -->
 			
 			<!--
@@ -1473,13 +1421,9 @@ var eFrequencyPlannerYn = 'Y';
 			-->
 			
 		
-<<<<<<< HEAD
 			<script src="../common/js/openevent/openevent.js"></script>
 			<script src="../common/js/open_event_control.js"></script>
-=======
-			<script src="//image.istarbucks.co.kr/common/js/openevent/openevent.js"></script>
-			<script src="//image.istarbucks.co.kr/common/js/open_event_control.js"></script>
->>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
+
 			<script type="text/javascript">
 				
 				var mrSlider;
@@ -1688,11 +1632,9 @@ var eFrequencyPlannerYn = 'Y';
                 /* 개인컵 리워드 e */
 			</script>
 
-<<<<<<< HEAD
+
 			<script src="../common/js/jquery.transit.min.js"></script>
-=======
-			<script src="//image.istarbucks.co.kr/common/js/jquery.transit.min.js"></script>
->>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
+
 			<script>
 				// 150805 DOM 수정
 				$('div.msr_card_zone').bind('click', function(){
@@ -1729,11 +1671,8 @@ var eFrequencyPlannerYn = 'Y';
 				$('.mycard_one').seqfx();
 			</script>
 						
-<<<<<<< HEAD
 			<script src='../common/js/makePCookie.js'></script>
-=======
-			<script src="//image.istarbucks.co.kr/common/js/makePCookie.js"></script>
->>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
+
 		
 			<script>
 				$(document).ready(function () {
@@ -1745,17 +1684,11 @@ var eFrequencyPlannerYn = 'Y';
 				});
 			</script>
 		
-<<<<<<< HEAD
 			<script src="../common/js/jquery.superscrollorama-1.js"></script>			
 			<script src="../common/js/whatsnew.js"></script>
 			<script src="../common/js/jquery.ezmark.min-1.js"></script>
 			<script src="../common/js/common_jhp.js"></script>
-=======
-			<script src="common/js/jquery.superscrollorama.js"></script>			
-			<script src="common/js/whatsnew.js"></script>
-			<script src="common/js/jquery.ezmark.min.js"></script>
-			<script src="common/js/common_jhp.js"></script>
->>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
+
 			
 			
 			<script>
@@ -1774,24 +1707,17 @@ var eFrequencyPlannerYn = 'Y';
 			
 
 
-<<<<<<< HEAD
+<!-- 0601 예은 수정 -->
 <script type="text/javascript" src="../common/js/v2/maps/sdk.js?appkey=247bf84c5755624615df524ae2cfc331" &libraries="LIBRARY"></script>
 <script charset="UTF-8" src="https://t1.daumcdn.net/mapjsapi/js/main/4.4.3/kakao.js"></script>
 <script src="../common/js/jquery.async.min.js"></script>
-=======
-<!-- 0601 예은 수정 -->
-<script type="text/javascript" src="v2/maps/sdk.js?appkey=247bf84c5755624615df524ae2cfc331" &libraries="LIBRARY"></script>
-			<script charset="UTF-8" src="https://t1.daumcdn.net/mapjsapi/js/main/4.4.3/kakao.js"></script>
-			<script src="common/js/jquery.async.min.js"></script>
 
-
->>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
 
 
 <script src="../common/js/store/store_map.js?v=20190129"></script>
 <script src="../common/js/store/store_core.js?v=210802"></script>
 <script src="../common/js/store/store_map_page.js?v=210423"></script>
-			<script src="../common/js/store/store_map_road.js?v=210316"></script> 
+<script src="../common/js/store/store_map_road.js?v=210316"></script> 
 			<script type="text/javascript">
 				//20150816
 				//20150816-2
@@ -2738,18 +2664,13 @@ var eFrequencyPlannerYn = 'Y';
 				    </a>
 				</li>
 			</script>
-			
-<<<<<<< HEAD
+
 
 		<script src="../common/js/sdk/js/kakao.min.js"></script>
 		<script>
 		Kakao.init('fbd2116d4434a7441d5caa4bb4c5456e');
 		</script>
 		
-=======
-		<script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
-		<script>Kakao.init('fbd2116d4434a7441d5caa4bb4c5456e');</script>
->>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
 		
 		<script type="text/x-jquery-tepl" id="storeViewWrapBox">
 			<!-- (My 음료/매장) 매장 상세 정보 팝업 -->
@@ -2972,14 +2893,10 @@ var eFrequencyPlannerYn = 'Y';
 	
 				</dl>			
 		</script>
-<<<<<<< HEAD
 		<script src="../common/js/store/store_view.js?v=210423"></script>
 			
 			
 		</div>
-=======
-		<script src="common/js/store/store_view.js?v=210423"></script></div>
-		<div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div></div></div></div>
->>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
+
 	</body>
 </html>

@@ -252,8 +252,8 @@ public class HomeController {
 	}
 
 	@RequestMapping(value = "menu/product_list")
-	public String product_view() {
-		return "menu/product_view";
+	public String product_list() {
+		return "menu/product_list";
 	}
 	
 	//0601 다정
