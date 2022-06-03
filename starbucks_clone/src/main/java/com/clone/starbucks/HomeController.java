@@ -36,31 +36,21 @@ public class HomeController {
 	}
 	
 	//admin
-	@RequestMapping(value="admin/memberListForm")
+	@RequestMapping(value="memberListForm")
 	public String memberListForm() {
 		return "admin/memberListForm";
 	}
 	
-	@RequestMapping(value="admin/userInfoForm")
+	@RequestMapping(value="userInfoForm")
 	public String userInfoForm() {
 		return "admin/userInfoForm";
 	}
 	
-	@RequestMapping(value="admin/modifyCheckForm")
+	@RequestMapping(value="modifyCheckForm")
 	public String modifyCheckForm() {
 		return "admin/modifyCheckForm";
 	}
 	
-	@RequestMapping(value="admin/memberModifyForm")
-	public String memberModifyForm() {
-		return "admin/memberModifyForm";
-	}
-	
-	@RequestMapping(value="admin/deleteCheckForm")
-	public String deleteCheckForm() {
-		return "admin/deleteCheckForm";
-	}
-
 	//0601 다정 커피
 	@RequestMapping(value="saleChart-1")
 	public String saleChart1() {
@@ -77,6 +67,16 @@ public class HomeController {
 	@RequestMapping(value="saleChart-3")
 	public String saleChart3() {
 		return "admin/saleChart-3";
+	}
+	
+	@RequestMapping(value="memberModifyForm")
+	public String memberModifyForm() {
+		return "admin/memberModifyForm";
+	}
+	
+	@RequestMapping(value="deleteCheckForm")
+	public String deleteCheckForm() {
+		return "admin/deleteCheckForm";
 	}
 	
 	// coffee
@@ -100,11 +100,7 @@ public class HomeController {
 		return "coffee/doppio";
 	}
 
-<<<<<<< HEAD
-	@RequestMapping(value="latte")
-=======
 	@RequestMapping(value = "coffee/latte")
->>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
 	public String latte() {
 		return "coffee/latte";
 	}
@@ -193,11 +189,10 @@ public class HomeController {
 	}
 
 	@RequestMapping(value = "menu/drink_view")
-	public String drink_view_coldbrew(String product_cd, Model model) {
+	public String drink_view(String product_cd, Model model) {
 		model.addAttribute("product_cd", product_cd);
 		return "menu/drink_view";
 	}
-	// menu/drink_view_coldbrew1은 삭제페이지라고 들어서 매핑 안함(추후 menu 부분 jsp 정리 필요!)
 
 	@RequestMapping(value = "menu/food_list")
 	public String food_list() {
@@ -251,20 +246,10 @@ public class HomeController {
 		return "menu/product_view";
 	}
 	
-	@RequestMapping(value="menu/drink_view")
-	public String drink_view() {
-		return "menu/drink_view";
-	}
-	
 	//0601 다정
 	@RequestMapping(value="menu/starbucksCard")
 	public String starbucksCard() {
 		return "menu/starbucksCard";
-	}
-	
-	@RequestMapping(value="menu/coupon_popup")
-	public String coupon_popup(){
-		return "menu/coupon_popup";
 	}
 	
 	@RequestMapping(value = "menu/product_list_1")
@@ -335,7 +320,7 @@ public class HomeController {
 	}
 
 	// msr
-	@RequestMapping(value = "msreward/about")
+	@RequestMapping(value = "msr/msreward/about")
 	public String msreward_about() {
 		return "msr/msreward/about";
 	}
@@ -369,19 +354,13 @@ public class HomeController {
 	public String scard_register_inquiry() {
 		return "msr/scard/register_inquiry";
 	}
-<<<<<<< HEAD
 
-
-	@RequestMapping(value="sceGift_egift_information")
-=======
-	/*@RequestMapping(value="scard_scard_gallery")
-	public String scard_scard_gallery() {
-		return "msr/scard/scard_gallery";
-	}
-	*/
+	/*
+	 * @RequestMapping(value="scard_scard_gallery") public String
+	 * scard_scard_gallery() { return "msr/scard/scard_gallery"; }
+	 */
 
 	@RequestMapping(value = "msr/sceGift/egift_information")
->>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
 	public String sceGift_egift_information() {
 		return "msr/sceGift/egift_information";
 	}
@@ -416,12 +395,12 @@ public class HomeController {
 	public String admin_4() {
 		return "my/admin_4";
 	}
-	
+
 	@RequestMapping(value = "admin_5")
 	public String admin_5() {
 		return "my/admin_5";
 	}
-	
+
 	@RequestMapping(value = "admin_6")
 	public String admin_6() {
 		return "my/admin_6";
@@ -523,12 +502,7 @@ public class HomeController {
 		return "store/store_reserve";
 	}
 
-<<<<<<< HEAD
-	
-	@RequestMapping(value="store_star_field")
-=======
 	@RequestMapping(value = "store/store_star_field")
->>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
 	public String store_star_field() {
 		return "store/store_star_field";
 	}
@@ -582,15 +556,6 @@ public class HomeController {
 		return "";
 	}
 	
-<<<<<<< HEAD
-	@RequestMapping(value="whats_new_campaign_list_1")
-	public String campaign_list_1() {
-		return "whats_new/campaign_list-1";
-	}
-=======
->>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
-	
-	//ajax-지혜
 	@ResponseBody
 	@PostMapping(value = "upload/json/menu/{path}", produces = "application/json; charset=UTF-8")
 	public String ajaxJson(@PathVariable String path) throws FileNotFoundException, IOException {
@@ -692,4 +657,47 @@ public class HomeController {
 		JsonObject obj = gson.fromJson(reader, JsonObject.class);
 		return obj.toString();
 	}
+	
+	@ResponseBody // 맵 시,도 리스트-예은
+	@PostMapping(value = "store/getSidoList", produces = "application/json; charset=UTF-8")
+	public String getSidoList(HttpServletRequest request) throws FileNotFoundException, IOException {
+		String mappingPath = "upload/json/store/map/.json";
+		ClassPathResource resource = new ClassPathResource(mappingPath);
+		FileReader reader = new FileReader(resource.getFile());
+		Gson gson = new Gson();
+		JsonObject obj = gson.fromJson(reader, JsonObject.class);
+		//불러오는 조건문
+		
+		return obj.toString();
+		
+		
+	}
+	
+	
+	@ResponseBody // 맵 구,군 리스트-예은
+	@PostMapping(value = "store/getGugunList", produces = "application/json; charset=UTF-8")
+	public String getGugunList(HttpServletRequest request) throws FileNotFoundException, IOException {
+		String sido_cd = request.getParameter("sido_cd");
+		String mappingPath = "upload/json/store/map/.json";
+		ClassPathResource resource = new ClassPathResource(mappingPath);
+		FileReader reader = new FileReader(resource.getFile());
+		Gson gson = new Gson();
+		JsonObject obj = gson.fromJson(reader, JsonObject.class);
+		return obj.toString();
+	}
+	
+	@ResponseBody // 맵 스토어 리스트-예은
+	@PostMapping(value = "store/getStore", produces = "application/json; charset=UTF-8")
+	public String getStore(HttpServletRequest request) throws FileNotFoundException, IOException {
+		String store_search = request.getParameter("$search");
+		System.out.println(store_search);
+		String mappingPath = "upload/json/store/storelist/.json";
+		ClassPathResource resource = new ClassPathResource(mappingPath);
+		FileReader reader = new FileReader(resource.getFile());
+		Gson gson = new Gson();
+		JsonObject obj = gson.fromJson(reader, JsonObject.class);
+		return obj.toString();
+	}
+	
+	
 }
