@@ -198,11 +198,11 @@ public class HomeController {
 		return "menu/drink_list-9";
 	}
 
-	@RequestMapping(value = "menu/drink_view")
-	public String drink_view_coldbrew(String product_cd, Model model) {
-		model.addAttribute("product_cd", product_cd);
-		return "menu/drink_view";
-	}
+   @RequestMapping(value = "menu/drink_view")
+   public String drink_view(String product_cd, Model model) {
+      model.addAttribute("product_cd", product_cd);
+      return "menu/drink_view";
+   }
 	// menu/drink_view_coldbrew1은 삭제페이지라고 들어서 매핑 안함(추후 menu 부분 jsp 정리 필요!)
 
 	@RequestMapping(value = "menu/food_list")
@@ -253,15 +253,11 @@ public class HomeController {
 	}
 
 	@RequestMapping(value = "menu/product_list")
-	public String product_view() {
-		return "menu/product_view";
+	public String product_list() {
+		return "menu/product_list";
 	}
 	
-	@RequestMapping(value="menu/drink_view")
-	public String drink_view() {
-		return "menu/drink_view";
-	}
-	
+
 	//0601 다정
 	@RequestMapping(value="menu/starbucksCard")
 	public String starbucksCard() {
@@ -333,11 +329,6 @@ public class HomeController {
 	@RequestMapping(value = "menu/myOrder")
 	public String menu_myOrder() {
 		return "menu/myOrder";
-	}
-
-	@RequestMapping(value = "menu/coupon_popup")
-	public String menu_coupon_popup() {
-		return "menu/coupon_popup";
 	}
 
 	// msr
