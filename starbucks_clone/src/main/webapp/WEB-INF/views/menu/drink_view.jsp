@@ -23,7 +23,7 @@
 <meta property="og:image" content="https://image.istarbucks.co.kr/common/img/kakaotalk.png">
 <meta property="og:description" content="Starbucks">
 
-<title id="titleJoin">롤린 민트 초코 콜드 브루 | Starbucks Korea</title> <!-- 220117 수정 -->
+<title id="titleJoin"></title> <!-- 220117 수정 -->
 <link rel="shortcut icon" href="https://image.istarbucks.co.kr/common/img/common/favicon.ico?v=200828" type="image/ico"> <!-- 20200827 파비콘 교체 및 CDN 변수처리 -->
 <link href="../common/css/reset.css" rel="stylesheet">
 <link href="../common/css/style.css?v=210721" rel="stylesheet">
@@ -526,20 +526,6 @@ var eFrequencyPlannerYn = 'Y';
 							</li>
 						</ul>
 						<ul>
-							<li class="mob_gnb_ttl2" style="display: list-item;"><a role="button" class="en" href="javascript:void(0);">RESPONSIBILITY<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 --></li>
-							<li style="display: none;"><a href="responsibility/index">한눈에 보기</a></li>
-							<li style="display: none;"><a href="responsibility/starbucks_shared_planet">사회공헌 캠페인 소개</a></li> <!-- 20210820 메뉴명 수정 -->
-							<li style="display: none;">
-								<a role="button" href="javascript:void(0);">지역 사회 참여 활동<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 -->
-								<ul>
-									<li style="display: none;"><a href="responsibility/hope_delivery">희망배달 캠페인</a></li>
-									<li style="display: none;"><a href="responsibility/talent_donation">재능기부 카페 소식</a></li>
-									<li style="display: none;"><a href="responsibility/community_store">커뮤니티 스토어</a></li>
-									<li style="display: none;"><a href="responsibility/youth_resource">청년 지원 프로그램</a></li><!-- 202107 메뉴명 수정 -->
-									<li style="display: none;"><a href="responsibility/our_agriculture">우리 농산물 사랑 캠페인</a></li>
-									<li style="display: none;"><a href="responsibility/our_culture_defend">우리 문화 지키기</a></li>
-								</ul>
-							</li>
 							<li style="display: none;">
 								<a role="button" href="javascript:void(0);">환경보호 활동<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 -->
 								<ul>
@@ -685,9 +671,9 @@ var eFrequencyPlannerYn = 'Y';
 							<li><img class="arrow" src="//image.istarbucks.co.kr/common/img/common/icon_arrow.png" alt="하위메뉴"></li>
 							<li><a href="menu/drink_list">음료</a></li>
 							<li><img class="arrow" src="//image.istarbucks.co.kr/common/img/common/icon_arrow.png" alt="하위메뉴"></li>
-							<li><a href="menu/drink_list" class="cate">2022 Summer 1</a></li>
+							<li><a href="menu/drink_list" class="cate"></a></li>
 							<li><img class="arrow" src="//image.istarbucks.co.kr/common/img/common/icon_arrow.png" alt="하위메뉴"></li>
-							<li><a href="javascript:void(0)" class="this">롤린 민트 초코 콜드 브루</a></li>
+							<li><a href="javascript:void(0)" class="this"></a></li>
 						</ul>
 					</div>
 				</div>
@@ -706,11 +692,8 @@ var eFrequencyPlannerYn = 'Y';
 						</div>
 						<div class="product_view_detail">
 							<div class="myAssignZone">
-								<h4>롤린 민트 초코 콜드 브루<br><span>Rollin Mint Choco Cold Brew</span></h4>
-								<p class="t1">스타벅스의 콜드 브루와 은은한 민트 초코 베이스로
-<br>누구나 즐길 수 있는 여름 음료.
-<br>손목의 스냅을 춤을 추듯 가볍게 돌려 음료를 섞어서
-<br>빨대 없이 즐겨 보세요.</p>
+								<h4><br><span></span></h4>
+								<p class="t1"></p>
 								
 								<div class="myDrink"><a href="javascript:void(0)" role="button" title="구매 및 담기">구매 및 담기</a><!-- 접근성_20171123 role, title 추가 --></div>
 								
@@ -733,7 +716,7 @@ var eFrequencyPlannerYn = 'Y';
 											<p class="tit">제품 영양 정보</p>
 											<div class="product_select_wrap2">
 												
-                                                <div class="selectTxt2" id="product_info01">Tall(톨) / 355ml (12 fl oz)</div>
+                                                <div class="selectTxt2" id="product_info01"></div>
                                                 
 												<div class="select_box select_box04" style="display:none;" id="productSelectBox">
 													<label class="value" for="product_info02">일반</label>
@@ -828,10 +811,7 @@ var eFrequencyPlannerYn = 'Y';
 							</form>
 						</div>
 					</div>
-					<div class="product_view_wrap2">스타벅스의 콜드 브루와 은은한 민트 초코 베이스로
-<br>누구나 즐길 수 있는 여름 음료.
-<br>손목의 스냅을 춤을 추듯 가볍게 돌려 음료를 섞어서
-<br>빨대 없이 즐겨 보세요.</div>
+					<div class="product_view_wrap2"></div>
 					<!-- 제품 상세보기 end -->
 				</div>
 				<!-- 제품 상세보기 하단공통 -->
@@ -1395,7 +1375,7 @@ var eFrequencyPlannerYn = 'Y';
 			    });
 
 			});
-			var $PRODUCT_CD = ${product_cd};
+			var $PRODUCT_CD = '${product_cd}';
 			
 			if(!($PRODUCT_CD) || $PRODUCT_CD == "") {
 				alert("정상적인 접근이 아닙니다.");
@@ -1416,7 +1396,7 @@ var eFrequencyPlannerYn = 'Y';
                         'product_cd' : $PRODUCT_CD,
                         'product_cate' : "drink"
                 };
-                __ajaxCall('/menu/productViewAjax', option , true, "JSON", "POST", 
+                __ajaxCall('${pageContext.request.contextPath}/menu/productViewAjax', option , true, "JSON", "POST", 
                 function(data) {
                 	if (typeof data.view === 'undefined' || data.view == null) {
                 		alert("조회 불가능한 상품입니다.");
@@ -1427,8 +1407,8 @@ var eFrequencyPlannerYn = 'Y';
                 	getFileInfo();
                     //getPairInfo();
                     //getPromotion();
-                	
-                    $('div.myAssignZone > h4')(data.view.product_NM + '<br /><span></span>');
+                	$(h4.data.view.product_NM + '<br /><span></span>').appendTo('div.myAssignZone');
+                    $(data.view.product_NM + '<br /><span></span>').appendTo('div.myAssignZone > h4');
                     $('div.myAssignZone > h4 > span').text(data.view.product_ENGNM);
 					$('div.myAssignZone > .t1')(data.view.content.replace(/\n/gi, '<br />'));
                     $('div.product_view_wrap2')(data.view.recommend.replace(/\n/gi, '<br />'));
