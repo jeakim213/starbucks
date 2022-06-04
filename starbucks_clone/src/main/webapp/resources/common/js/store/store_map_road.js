@@ -4379,7 +4379,7 @@ function sbSearchPlace(search)
 	$search.new_bool=0;		
 	
 	var rndCod = randomString();
-	var storeInterfaceUrl = "/store/getStore.do?r="+rndCod;
+	var storeInterfaceUrl = "${pageContext.request.contextPath}/store/getStore?r="+rndCod;
 	
 	$(".carFindRoad").hide();
 	$(".carFindRoadErr").hide();

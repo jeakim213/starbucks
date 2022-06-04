@@ -16,8 +16,8 @@
 
 	    <resources mapping="/resources/**" location="/resources/" />
 	    <resources mapping="/img/event/**" location="/WEB-INF/views/img/event/" />
-	    <resources mapping="/img/util/csi/**" location="/resources/common/img/util/csi" />
   		<resources mapping="/common/**" location="/resources/common/" />
+  		<resources mapping="/common/img/store/pin/**" location="/resources/common/img/store/" />
 		<resources mapping="/css/**" location="/resources/common/css/" />
 		<resources mapping="/fonts/**" location="/resources/common/fonts/" />
 		<resources mapping="/img/**" location="/resources/common/img/" />
