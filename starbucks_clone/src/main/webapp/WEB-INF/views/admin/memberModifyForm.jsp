@@ -35,7 +35,7 @@
 
 <!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-	<link href="common/css_ie/style.css" rel="stylesheet">
+	<link href="../common/css_ie/style.css" rel="stylesheet">
 	<script>
 		document.createElement('header');
 		document.createElement('nav');
@@ -895,7 +895,7 @@ var eFrequencyPlannerYn = 'Y';
                                 	</p>
                                 	<!-- 20200805 PLCC 추가 -->
                                		<div class="plcc-logo" style="display:none;">
-                               			<img src="common/img/util/plcc-logo.png" alt="Hyundai Card + STARBUCKS">
+                               			<img src="../common/img/util/plcc-logo.png" alt="Hyundai Card + STARBUCKS">
                                		</div>
                                 	<figure class="en ms_user_starbg"><span class="totalStar"><!-- 3 --></span></figure>
                                     <p class="ms_user_stat_notice"><!-- <strong>27</strong>개의 별이 더 모이면<br><strong class="en t_715d39">Gold Level</strong>만의 특별한 혜택이! --></p>
@@ -904,7 +904,7 @@ var eFrequencyPlannerYn = 'Y';
                                     <p class="ms_user_stat"><span><strong class="userName">이*<!-- 홍길동 --></strong> 님은</span> <span>현재 <strong class="en userGrade"><!-- Green Level --></strong>이십니다.</span></p>
                                     <!-- 20200805 PLCC 추가 -->
                                		<div class="plcc-logo" style="display:none;">
-                               			<img src="common/img/util/plcc-logo.png" alt="Hyundai Card + STARBUCKS">
+                               			<img src="../common/img/util/plcc-logo.png" alt="Hyundai Card + STARBUCKS">
                                		</div>
                                     <div class="ms_user_stat_btns">
                                         <ul>

@@ -744,7 +744,8 @@ var eFrequencyPlannerYn = 'Y';
 													<div class="loca_step2_ttl">STEP 2 : 구/군을 선택해 주세요.</div>
 													<div class="result_num_wrap3">
 														<a class="btn_prev" href="javascript:void(0);">앞으로</a>
-														<strong class="sidoSelectName">서울</strong>
+														<!-- 예은 -->
+														<strong class="sidoSelectName"><!-- 서울 --></strong>
 													</div>
 													<div class="loca_step2_cont">
 														<div class="loca_step2_frame scrollbar-inner mCustomScrollbar _mCS_2 mCS_no_scrollbar">
