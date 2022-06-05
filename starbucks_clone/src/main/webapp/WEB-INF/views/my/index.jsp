@@ -776,8 +776,8 @@ var eFrequencyPlannerYn = 'Y';
                                		<div class="plcc-logo" style="display:none;">
                                			<img src="/common/img/util/plcc-logo.png" alt="Hyundai Card + STARBUCKS">
                                		</div>
-                                	<figure class="en ms_user_starbg"><span class="totalStar">${ }</span></figure>
-                                    <p class="ms_user_stat_notice"><strong class="en t_bd9b60"><!--OOO Level --></strong>을 유지 중 입니다.<br>무료음료 쿠폰 발행까지 ${ }개의 별이 남았습니다.</p>
+                                	<figure class="en ms_user_starbg"><span class="totalStar"></span></figure>
+                                    <p class="ms_user_stat_notice"><strong class="en t_bd9b60"><!--OOO Level --></strong>을 유지 중 입니다.<br>무료음료 쿠폰 발행까지 개의 별이 남았습니다.</p>
                                 </article>
                                 <article class="ms_user_info_right">
                                     <p class="ms_user_stat"><span><strong class="userName"><!-- 홍길동 --></strong> 님은</span> <span>현재 <strong class="en userGrade t_bd9b60"><!--OOO Level --></strong>이십니다.</span></p>
@@ -814,7 +814,7 @@ var eFrequencyPlannerYn = 'Y';
                                 <div class="my_ms_card_inner">
                                     <header>
                                         <h5><span class="en">My</span> 스타벅스 카드</h5>
-                                        <p class="recent_card">총 보유카드 : ${ }장</p>
+                                        <p class="recent_card">총 보유카드 : 장</p>
                                         <aside>
                                             <span><strong class="curSlideNo">1<!-- 카드 --></strong>/<span class="totalCnt">2<!-- 카드 --></span></span>
                                             <p>

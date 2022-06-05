@@ -600,9 +600,9 @@ public class HomeController {
 		JsonObject result = new JsonObject();
 		JsonElement cd = obj.get(product_cd);
 		result.add("view", cd);
-		//result.add("view", info);
 		return result.toString();
 	}
+	
 	@ResponseBody // 파일이미지-지혜
 	@PostMapping(value = "menu/productFileAjax", produces = "application/json; charset=UTF-8")
 	public String productFileAjax(HttpServletRequest request) throws FileNotFoundException, IOException {
@@ -620,22 +620,15 @@ public class HomeController {
 		FileReader reader = new FileReader(resource.getFile());
 		Gson gson = new Gson();
 		JsonObject obj = gson.fromJson(reader, JsonObject.class);
-		//찾기
-		//JsonObject result = 
-		
-		return "";
+		JsonObject result = new JsonObject();
+		JsonElement cd = obj.get(product_cd);
+		result.add("file", cd);
+		if(product_cate.equals("product")) return result.toString();
+		StringBuffer strbuffer = new StringBuffer(result.toString());
+		strbuffer.insert(8, "[");
+		strbuffer.insert(strbuffer.length()-1, "]");
+		return strbuffer.toString();
 	}
-
-//	@ResponseBody  //관련제품
-//	@PostMapping(value="menu/productPairAjax", produces="application/json; charset=UTF-8")
-//	public String productPairAjax(@PathVariable String path) throws FileNotFoundException, IOException {
-//		String mappingPath = "upload/json/menu/" + path + ".json";
-//		ClassPathResource resource = new ClassPathResource(mappingPath);
-//		FileReader reader = new FileReader(resource.getFile());
-//		Gson gson = new Gson();
-//		JsonObject obj = gson.fromJson(reader, JsonObject.class);
-//		return obj.toString();
-//	}
 	
 	@ResponseBody // 나만의 음료 찾기-지혜
 	@PostMapping(value = "menu/getMsrXoCategoryList", produces = "application/json; charset=UTF-8")
