@@ -1801,7 +1801,7 @@ var eFrequencyPlannerYn = 'Y';
                 
                 var url = '/menu/productListAjax';
     			
-                   url = '${pageContext.request.contextPath}' + '/upload/json/menu/' + pro_seq + '.json';
+                   url = '${pageContext.request.contextPath}/upload/json/menu/' + pro_seq + '.json';
                 
                 __ajaxCall(url, option , true, "JSON", "POST",
                 function(data) {
