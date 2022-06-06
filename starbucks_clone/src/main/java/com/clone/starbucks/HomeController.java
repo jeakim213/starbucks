@@ -728,15 +728,20 @@ public class HomeController {
 	}
 	
 	@ResponseBody // 나와 어울리는 커피 찾기 - 다정 Ajax
-	@PostMapping(value = "menu/getCoffeeFinder", produces = "application/json; charset=UTF-8")
+	@PostMapping(value = "coffee/getCoffeeFinderAjax", produces = "application/json; charset=UTF-8")
 	public String getCoffeeFinder(HttpServletRequest request) throws FileNotFoundException, IOException {
-		String product_cd = request.getParameter("product_cd");
+		//0606 다정
+		String cate_cd = request.getParameter("${COFFEE_TASTE1}-${COFFEE_FEEL}-${COFFEE_INTEN}");
 		String mappingPath = "upload/json/coffee/.json";
 		ClassPathResource resource = new ClassPathResource(mappingPath);
 		FileReader reader = new FileReader(resource.getFile());
 		Gson gson = new Gson();
 		JsonObject obj = gson.fromJson(reader, JsonObject.class);
-		return obj.toString();
+		JsonObject result = new JsonObject();
+		JsonElement cate = obj.get(cate_cd);
+		result.add("cate", cate);
+		
+		return result.toString();
 	}
 	
 	
