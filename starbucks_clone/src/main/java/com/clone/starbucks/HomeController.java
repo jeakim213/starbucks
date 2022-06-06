@@ -139,6 +139,11 @@ public class HomeController {
 	public String productFinder() {
 		return "coffee/productFinder";
 	}
+	
+	@RequestMapping(value="coffee/productFinderView")
+	public String productFinderView() {
+		return "coffee/productFinderView";
+	}
 
 	// footer/co_sales
 	// login
@@ -692,6 +697,18 @@ public class HomeController {
 		String store_search = request.getParameter("$search");
 		System.out.println(store_search);
 		String mappingPath = "upload/json/store/storelist/.json";
+		ClassPathResource resource = new ClassPathResource(mappingPath);
+		FileReader reader = new FileReader(resource.getFile());
+		Gson gson = new Gson();
+		JsonObject obj = gson.fromJson(reader, JsonObject.class);
+		return obj.toString();
+	}
+	
+	@ResponseBody // 나와 어울리는 커피 찾기 - 다정 Ajax
+	@PostMapping(value = "menu/getCoffeeFinder", produces = "application/json; charset=UTF-8")
+	public String getCoffeeFinder(HttpServletRequest request) throws FileNotFoundException, IOException {
+		String product_cd = request.getParameter("product_cd");
+		String mappingPath = "upload/json/coffee/.json";
 		ClassPathResource resource = new ClassPathResource(mappingPath);
 		FileReader reader = new FileReader(resource.getFile());
 		Gson gson = new Gson();
