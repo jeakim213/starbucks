@@ -1416,7 +1416,7 @@ var eFrequencyPlannerYn = 'Y';
                 	/* 로그인 체크  */
                 	$.ajax({
                     	type: 'post',
-                    	url : '/edt/edtCheckLogin',
+                    	url : '${pageContext.request.contextPath}/edt/edtCheckLogin',
                     	data : {},
                     	dataType : 'json',
                     	jsonp : 'callback',
@@ -1802,7 +1802,6 @@ var eFrequencyPlannerYn = 'Y';
                 var url = '/menu/productListAjax';
     			
                    url = '${pageContext.request.contextPath}/upload/json/menu/' + pro_seq + '.json';
-                
                 __ajaxCall(url, option , true, "JSON", "POST",
                 function(data) {
                     if(data.list.length > 0) {                    	
@@ -1873,7 +1872,7 @@ var eFrequencyPlannerYn = 'Y';
 					
 	                var url = '/menu/productListAjax';
 	    			
-	                   url = '${pageContext.request.contextPath}' + '/upload/json/menu/' + cngCateCode + '.json';
+	                   url = '${pageContext.request.contextPath}/upload/json/menu/' + cngCateCode + '.json';
 	                
 	                __ajaxCall(url, option , true, "JSON", "POST", 
 	                function(data) {
