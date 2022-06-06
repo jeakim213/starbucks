@@ -33,6 +33,7 @@
 		<resources mapping="/upload/prcmcard/**" location="/WEB-INF/views/upload/prcmcard/" />
 		<resources mapping="/img/util/csi/**" location="/resources/common/img/util/csi" />
 
+
 	<!-- Resolves views selected for rendering by @Controllers to .jsp resources in the /WEB-INF/views directory -->
 	<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<beans:property name="prefix" value="/WEB-INF/views/" />

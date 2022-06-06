@@ -42,47 +42,47 @@ public class HomeController {
 	}
 	
 	//admin
-	@RequestMapping(value="memberListForm")
+	@RequestMapping(value="admin/memberListForm")
 	public String memberListForm() {
 		return "admin/memberListForm";
 	}
 	
-	@RequestMapping(value="userInfoForm")
+	@RequestMapping(value="admin/userInfoForm")
 	public String userInfoForm() {
 		return "admin/userInfoForm";
 	}
 	
-	@RequestMapping(value="modifyCheckForm")
+	@RequestMapping(value="admin/modifyCheckForm")
 	public String modifyCheckForm() {
 		return "admin/modifyCheckForm";
 	}
 	
+	@RequestMapping(value="admin/memberModifyForm")
+	public String memberModifyForm() {
+		return "admin/memberModifyForm";
+	}
+	
+	@RequestMapping(value="admin/deleteCheckForm")
+	public String deleteCheckForm() {
+		return "admin/deleteCheckForm";
+	}
+	
 	//0601 다정 커피
-	@RequestMapping(value="saleChart-1")
+	@RequestMapping(value="admin/saleChart-1")
 	public String saleChart1() {
 		return "admin/saleChart-1";
 	}
 	
 	//0602 다정 푸드
-	@RequestMapping(value="saleChart-2")
+	@RequestMapping(value="admin/saleChart-2")
 	public String saleChart2() {
 		return "admin/saleChart-2";
 	}
 	
 	//프로덕트
-	@RequestMapping(value="saleChart-3")
+	@RequestMapping(value="admin/saleChart-3")
 	public String saleChart3() {
 		return "admin/saleChart-3";
-	}
-	
-	@RequestMapping(value="memberModifyForm")
-	public String memberModifyForm() {
-		return "admin/memberModifyForm";
-	}
-	
-	@RequestMapping(value="deleteCheckForm")
-	public String deleteCheckForm() {
-		return "admin/deleteCheckForm";
 	}
 	
 	// coffee
@@ -144,6 +144,11 @@ public class HomeController {
 	@RequestMapping(value = "coffee/productFinder")
 	public String productFinder() {
 		return "coffee/productFinder";
+	}
+	
+	@RequestMapping(value="coffee/productFinderView")
+	public String productFinderView() {
+		return "coffee/productFinderView";
 	}
 
 	// footer/co_sales
@@ -604,9 +609,9 @@ public class HomeController {
 		JsonObject result = new JsonObject();
 		JsonElement cd = obj.get(product_cd);
 		result.add("view", cd);
-		//result.add("view", info);
 		return result.toString();
 	}
+	
 	@ResponseBody // 파일이미지-지혜
 	@PostMapping(value = "menu/productFileAjax", produces = "application/json; charset=UTF-8")
 	public String productFileAjax(HttpServletRequest request) throws FileNotFoundException, IOException {
@@ -624,22 +629,15 @@ public class HomeController {
 		FileReader reader = new FileReader(resource.getFile());
 		Gson gson = new Gson();
 		JsonObject obj = gson.fromJson(reader, JsonObject.class);
-		//찾기
-		//JsonObject result = 
-		
-		return "";
+		JsonObject result = new JsonObject();
+		JsonElement cd = obj.get(product_cd);
+		result.add("file", cd);
+		if(product_cate.equals("product")) return result.toString();
+		StringBuffer strbuffer = new StringBuffer(result.toString());
+		strbuffer.insert(8, "[");
+		strbuffer.insert(strbuffer.length()-1, "]");
+		return strbuffer.toString();
 	}
-
-//	@ResponseBody  //관련제품
-//	@PostMapping(value="menu/productPairAjax", produces="application/json; charset=UTF-8")
-//	public String productPairAjax(@PathVariable String path) throws FileNotFoundException, IOException {
-//		String mappingPath = "upload/json/menu/" + path + ".json";
-//		ClassPathResource resource = new ClassPathResource(mappingPath);
-//		FileReader reader = new FileReader(resource.getFile());
-//		Gson gson = new Gson();
-//		JsonObject obj = gson.fromJson(reader, JsonObject.class);
-//		return obj.toString();
-//	}
 	
 	@ResponseBody // 나만의 음료 찾기-지혜
 	@PostMapping(value = "menu/getMsrXoCategoryList", produces = "application/json; charset=UTF-8")
@@ -722,6 +720,18 @@ public class HomeController {
 		JsonElement cd = obj.get(gugun_cd);
 		result.add("list", cd);
 		return result.toString();
+	}
+	
+	@ResponseBody // 나와 어울리는 커피 찾기 - 다정 Ajax
+	@PostMapping(value = "menu/getCoffeeFinder", produces = "application/json; charset=UTF-8")
+	public String getCoffeeFinder(HttpServletRequest request) throws FileNotFoundException, IOException {
+		String product_cd = request.getParameter("product_cd");
+		String mappingPath = "upload/json/coffee/.json";
+		ClassPathResource resource = new ClassPathResource(mappingPath);
+		FileReader reader = new FileReader(resource.getFile());
+		Gson gson = new Gson();
+		JsonObject obj = gson.fromJson(reader, JsonObject.class);
+		return obj.toString();
 	}
 	
 	

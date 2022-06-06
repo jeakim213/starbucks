@@ -35,7 +35,7 @@
 
 <!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-	<link href="common/css_ie/style.css" rel="stylesheet">
+	<link href="../common/css_ie/style.css" rel="stylesheet">
 	<script>
 		document.createElement('header');
 		document.createElement('nav');
@@ -806,8 +806,8 @@ var eFrequencyPlannerYn = 'Y';
 
 
 <!-- 금액 매출 -->
-	<img src="common/img/admin/sales_title.png" style="width: 100px;"><br>
-	<img src="common/img/admin/food.png" style="width: 60px;"><br><br><br>
+	<img src="../common/img/admin/sales_title.png" style="width: 100px;"><br>
+	<img src="../common/img/admin/food.png" style="width: 60px;"><br><br><br>
 	
 	
 		<div style="text-align: center; margin: auto; font-size: 20px;"><b>- FOOD 월별 총 판매 금액 -</b> </div><hr>
@@ -815,7 +815,11 @@ var eFrequencyPlannerYn = 'Y';
 	
 	
 	<!-- 0602 다정 차트 스크립트 -->
+<<<<<<< HEAD
+		<script src="../../common/js/admin/highcharts.js"></script>
+=======
 		<script src="../common/js/admin/highcharts.js"></script>
+>>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
 		<script src="https://code.highcharts.com/highcharts-more.js"></script>
 		<script src="https://code.highcharts.com/modules/exporting.js"></script>
 		<script src="https://code.highcharts.com/modules/export-data.js"></script>
@@ -1190,7 +1194,7 @@ var eFrequencyPlannerYn = 'Y';
                                 	</p>
                                 	<!-- 20200805 PLCC 추가 -->
                                		<div class="plcc-logo" style="display:none;">
-                               			<img src="common/img/util/plcc-logo.png" alt="Hyundai Card + STARBUCKS">
+                               			<img src="../common/img/util/plcc-logo.png" alt="Hyundai Card + STARBUCKS">
                                		</div>
                                 	<figure class="en ms_user_starbg"><span class="totalStar"><!-- 3 --></span></figure>
                                     <p class="ms_user_stat_notice"><!-- <strong>27</strong>개의 별이 더 모이면<br><strong class="en t_715d39">Gold Level</strong>만의 특별한 혜택이! --></p>
@@ -1199,7 +1203,7 @@ var eFrequencyPlannerYn = 'Y';
                                     <p class="ms_user_stat"><span><strong class="userName">이*<!-- 홍길동 --></strong> 님은</span> <span>현재 <strong class="en userGrade"><!-- Green Level --></strong>이십니다.</span></p>
                                     <!-- 20200805 PLCC 추가 -->
                                		<div class="plcc-logo" style="display:none;">
-                               			<img src="common/img/util/plcc-logo.png" alt="Hyundai Card + STARBUCKS">
+                               			<img src="../common/img/util/plcc-logo.png" alt="Hyundai Card + STARBUCKS">
                                		</div>
                                     <div class="ms_user_stat_btns">
                                         <ul>
