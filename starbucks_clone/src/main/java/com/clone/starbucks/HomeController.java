@@ -18,14 +18,12 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
-<<<<<<< HEAD
-=======
 import com.google.gson.JsonElement;
->>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
@@ -679,57 +677,51 @@ public class HomeController {
 		return obj.toString();
 	}
 	
-	@ResponseBody // 맵 시,도 리스트-예은
-	@PostMapping(value = "store/getSidoList", produces = "application/json; charset=UTF-8")
+	@ResponseBody // step1. 시,도 리스트-예은
+	@PostMapping(value = "upload/json/store/map/getSidoList", produces = "application/json; charset=UTF-8")
 	public String getSidoList(HttpServletRequest request) throws FileNotFoundException, IOException {
-		String mappingPath = "upload/json/store/map/.json";
+		String mappingPath = "upload/json/store/map/getSidoList.json";
 		ClassPathResource resource = new ClassPathResource(mappingPath);
 		FileReader reader = new FileReader(resource.getFile());
 		Gson gson = new Gson();
 		JsonObject obj = gson.fromJson(reader, JsonObject.class);
-		//불러오는 조건문
-		
-		JsonArray arr = obj.getAsJsonArray("sido_cd");
-		for(int i = 0; i < arr.size(); i++) {
-			JsonObject tmp = (JsonObject) arr.get(i);
-			String sido = tmp.get("sido_cd").getAsString();
-		}
-		
-		
-		
-		
-		
 		return obj.toString();
 		
 		
 	}
 	
 	
-	@ResponseBody // 맵 구,군 리스트-예은
-	@PostMapping(value = "store/getGugunList", produces = "application/json; charset=UTF-8")
+	@ResponseBody // step2. 구,군 리스트-예은
+	@PostMapping(value = "upload/json/store/map/getGugunList", produces = "application/json; charset=UTF-8")
 	public String getGugunList(HttpServletRequest request) throws FileNotFoundException, IOException {
-		String sido_cd = request.getParameter("sido_cd");
-		String mappingPath = "upload/json/store/map/.json";
+		String sido_nm = request.getParameter("sido_nm");
+		String mappingPath = "upload/json/store/map/getGugunList.json";
 		ClassPathResource resource = new ClassPathResource(mappingPath);
 		FileReader reader = new FileReader(resource.getFile());
 		Gson gson = new Gson();
 		JsonObject obj = gson.fromJson(reader, JsonObject.class);
 		
-		
-		return obj.toString();
+		JsonObject result = new JsonObject();
+		JsonElement cd = obj.get(sido_nm);
+		result.add("list", cd);
+	
+		return result.toString();
 	}
 	
-	@ResponseBody // 맵 스토어 리스트-예은
-	@PostMapping(value = "store/getStore", produces = "application/json; charset=UTF-8")
-	public String getStore(HttpServletRequest request) throws FileNotFoundException, IOException {
-		String store_search = request.getParameter("$search");
-		System.out.println(store_search);
+	@ResponseBody // step3. 스토어 리스트-예은
+	@PostMapping(value = "upload/json/store/storelist/{path}", produces = "application/json; charset=UTF-8")
+	public String getStore(@PathVariable("path") String path, HttpServletRequest request) throws FileNotFoundException, IOException {
+		String gugun_cd = request.getParameter("gugun_code");
 		String mappingPath = "upload/json/store/storelist/.json";
 		ClassPathResource resource = new ClassPathResource(mappingPath);
 		FileReader reader = new FileReader(resource.getFile());
 		Gson gson = new Gson();
 		JsonObject obj = gson.fromJson(reader, JsonObject.class);
-		return obj.toString();
+		
+		JsonObject result = new JsonObject();
+		JsonElement cd = obj.get(gugun_cd);
+		result.add("list", cd);
+		return result.toString();
 	}
 	
 	
