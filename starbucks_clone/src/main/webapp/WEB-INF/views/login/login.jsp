@@ -23,19 +23,6 @@
 <meta property="og:description" content="Starbucks">
 
 <title id="titleJoin">Starbucks Korea</title> <!-- 220117 수정 -->
-<<<<<<< HEAD
-<link rel="shortcut icon" href=../common/img/common/favicon.ico?v=200828" type="image/ico"> <!-- 20200827 파비콘 교체 및 CDN 변수처리 -->
-<link href=../common/css/reset.css" rel="stylesheet">
-<link href=../common/css/style.css?v=210721" rel="stylesheet">
-<link href=../common/css/jquery.bxslider.css" rel="stylesheet">
-<link href=../common/css/idangerous.swiper.css" rel="stylesheet">
-<link href=../common/css/idangerous.swiper.scrollbar.css" rel="stylesheet">
-<link href=../common/css/jquery.mCustomScrollbar.css" rel="stylesheet">
-<link href=../common/css/jquery.scrollbar.css" rel="stylesheet">
-<link href=../common/css/jquery-ui.css" rel="stylesheet">
-<link href=../common/css/ezmark.css" rel="stylesheet">
-<link href=../common/css/style_dt.css?v=20191211" rel="stylesheet"> <!-- 20191211 수정 -->
-=======
 <link rel="shortcut icon" href="../common/img/common/favicon.ico?v=200828" type="image/ico"> <!-- 20200827 파비콘 교체 및 CDN 변수처리 -->
 <link href="../common/css/reset.css" rel="stylesheet">
 <link href="../common/css/style.css?v=210721" rel="stylesheet">
@@ -47,7 +34,6 @@
 <link href="../common/css/jquery-ui.css" rel="stylesheet">
 <link href="../common/css/ezmark.css" rel="stylesheet">
 <link href="../common/css/style_dt.css?v=20191211" rel="stylesheet"> <!-- 20191211 수정 -->
->>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
 
 <!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -83,14 +69,8 @@ var eFrequencySeq = '172';
 var eFrequencyPlannerYn = 'Y';
 </script>
 
-
-<<<<<<< HEAD
-	<link href=../common/css/style_mem.css?v=161014" rel="stylesheet">
-	<link href=../common/css/style_util-2.css" rel="stylesheet">
-=======
-	<link href="../common/css/style_mem.css?v=161014" rel="stylesheet">
-	<link href="../common/css/style_util-2.css" rel="stylesheet">
->>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
+<link href="../common/css/style_mem.css?v=161014" rel="stylesheet">
+<link href="../common/css/style_util-2.css" rel="stylesheet">
 </head>
 <body>
 	<!-- 150827 계정 통합 안내 팝업 추가 - 구명준 -->
@@ -334,7 +314,7 @@ var eFrequencyPlannerYn = 'Y';
 					<!-- 일반회원 -->
 					<div class="sb_card_regi">
 						<a href="javascript:void(0);">
-							<p class="icon_add_card" onclick="location.href = '/my/mycard_info_input';"><img alt="카드등록 아이콘" src="../common/img/common/icon_add_card.png"></p>
+							<p class="icon_add_card" onclick="location.href = 'my/mycard_info_input';"><img alt="카드등록 아이콘" src="../common/img/common/icon_add_card.png"></p>
 							<p class="sb_card_regi_txt"><strong>스타벅스 카드 등록</strong><br>카드를 등록하시고<br>다양한 리워드를<br>만나보세요.</p>
 						</a>
 					</div>
@@ -738,6 +718,8 @@ var eFrequencyPlannerYn = 'Y';
 			</div>
 			<nav class="sub_gnb_nav">
 				<div class="sub_gnb_nav_inner">
+				
+				
 				</div>
 			</nav>
 		</div>
@@ -766,7 +748,7 @@ var eFrequencyPlannerYn = 'Y';
 				<!-- 내용 -->
 				<div class="find_mem_wrap mem_wrap2"><!-- jsp 수정 : 클래스명 추가 -->
 					<!-- 20160804 수정 -->
-					<div class="find_mem_inner">
+					<div class="find_mem_inner" style="margin:auto">
 						
 						<form id="frmLogin" action="login/login_proc" method="post">
 							<fieldset>
@@ -1283,11 +1265,7 @@ var eFrequencyPlannerYn = 'Y';
                 /* 개인컵 리워드 e */
 			</script>
 
-<<<<<<< HEAD
-			<script src=../common/js/jquery.transit.min.js"></script>
-=======
 			<script src="../common/js/jquery.transit.min.js"></script>
->>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
 			<script>
 				// 150805 DOM 수정
 				$('div.msr_card_zone').bind('click', function(){
@@ -1335,20 +1313,13 @@ var eFrequencyPlannerYn = 'Y';
 					});
 				});
 			</script>
-		
-<<<<<<< HEAD
-		<script src=../common/js/common_jhp-1.js?v=161014"></script>
-=======
+
 		<script src="../common/js/common_jhp-1.js?v=161014"></script>
->>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
 		<script>
 			m_strTargetUrl = '/edt/expressDtList';
 		</script>
-<<<<<<< HEAD
-		<script src=../common/js/login/login.js?v=200807"></script>
-=======
+
 		<script src="../common/js/login/login.js?v=200807"></script>
->>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
 	</div>
 </body>
 </html>
