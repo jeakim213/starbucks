@@ -39,7 +39,7 @@ function setEvent() {
 function login() {
 	var user_id  = $("#txt_user_id").val();
 	var user_pwd = $("#txt_user_pwd").val();
-	
+
 	try {
 		user_id  = user_id.trim();
 		user_pwd = user_pwd.trim();
@@ -126,6 +126,7 @@ function login() {
 function setCaptcha() {
 	var nLoginHistoryCnt = 0;
 	var captchaYn = "N";
+
 	
 	___ajaxCall("/interface/getLoginHistoryCnt.do", {}, false, "json", "post"
 		,function (_response) {
@@ -252,7 +253,7 @@ function doNext() {
 function showDoubleJoinDetail() {
 	var user_id = $(this).data("id");
 	var user_nm = $(this).data("name");
-	
+
 	var objParam = {
 		 "user_id" : user_id
 		,"user_nm" : user_nm
