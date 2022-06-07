@@ -1,0 +1,11 @@
+{
+  "result_code": "SUCCESS",
+  "error_msg": "",
+  "alert_msg": "",
+  "location_href": "",
+  "location_replace": "",
+  "custom_script": "",
+  "total_cnt": 0,
+  "data": "{  \"categoryCode\" : \"C0000038\",  \"categoryName\" : \"기타\",  \"engCategoryName\" : \"??????????\",  \"applyType1\" : \"02\",  \"applyType2\" : \"\",  \"level\" : \"1\",  \"categoryDesc\" : \"\",  \"categoryList\" : [ {    \"categoryCode\" : \"C0000635\",    \"categoryName\" : \"민트 초콜릿 칩 파우더\",    \"engCategoryName\" : \"\",    \"applyType1\" : \"01\",    \"applyType2\" : \"01\",    \"level\" : \"2\",    \"categoryDesc\" : \"\",    \"maxQty\" : \"0\",    \"maxQtyMsg\" : \"\",    \"stdRecipeFlag\" : \"Y\",    \"payType\" : \"\",    \"customGrp\" : \"C\",    \"btnStatus\" : \"U\",    \"skuList\" : [ {      \"skuNo\" : \"9900000000984\",      \"skuName\" : \"민트 초콜릿 칩 파우더 적게\",      \"baseQty\" : \"0\",      \"stdRecipeFlag\" : \"N\",      \"calories\" : \"0\",      \"price\" : \"0\",      \"callingName\" : \"라이트민트초콜릿칩파우더\",      \"callingSeq\" : \"1004\",      \"payType\" : \"\",      \"customGrp\" : \"C\",      \"btnStatus\" : \"U\",      \"markingName\" : \"Lt-MCP\",      \"markingSeq\" : \"1004\",      \"skuNameShort\" : \"적게\"    }, {      \"skuNo\" : \"9900000000983\",      \"skuName\" : \"민트 초콜릿 칩 파우더\",      \"baseQty\" : \"2\",      \"stdRecipeFlag\" : \"Y\",      \"calories\" : \"0\",      \"price\" : \"0\",      \"callingName\" : \"민트초콜릿칩파우더\",      \"callingSeq\" : \"1004\",      \"payType\" : \"\",      \"customGrp\" : \"C\",      \"btnStatus\" : \"U\",      \"markingName\" : \"MCP\",      \"markingSeq\" : \"1004\",      \"skuNameShort\" : \"보통\"    } ]  } ]}",
+  "result_api_code": ""
+}
