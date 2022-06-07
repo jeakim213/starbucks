@@ -710,7 +710,8 @@ public class HomeController {
 
 	      String sido_cd = request.getParameter("p_sido_cd");
 	      String gugun_cd = request.getParameter("p_gugun_cd");
-	      
+	      System.out.println();
+	      System.out.println(gugun_cd);
 	      
 	      String mappingPath = "upload/json/store/storelist/getStore_"+sido_cd+".json";
 	      
@@ -720,15 +721,20 @@ public class HomeController {
 	      Gson gson = new Gson();
 	      JsonObject obj = gson.fromJson(reader,JsonObject.class);
 	      //System.out.println(obj.size());
-	      String key_nm = "list";
-	      String ggg = "gugun_code";
-	      JsonElement list = obj.get(key_nm);
-	      JsonArray arr = list.getAsJsonArray();
-	      
+	      JsonElement list = obj.get("list");
+	      JsonArray arrlist = list.getAsJsonArray();
+	      JsonArray arr = new JsonArray();
+	      for(int i=0; i < arrlist.size(); i++) {
+	    	  JsonObject tmp = arrlist.get(i).getAsJsonObject();
+	    	  String gugun = tmp.get("gugun_code").toString();
+	    	  if(gugun.contains(sido_cd))
+	    		  System.out.println(tmp);
+	    		  arr.add(tmp);
+	      }
 	      
 	      JsonObject result = new JsonObject();
 	      
-	      result.add("list", list);
+	      result.add("list", arr);
 	   
 	      return result.toString();
 
@@ -752,7 +758,6 @@ public class HomeController {
 		result.add("cate", cate);
 		return result.toString();
 	}
-	
 	
 }
 

@@ -718,6 +718,8 @@ var eFrequencyPlannerYn = 'Y';
 			</div>
 			<nav class="sub_gnb_nav">
 				<div class="sub_gnb_nav_inner">
+				
+				
 				</div>
 			</nav>
 		</div>
