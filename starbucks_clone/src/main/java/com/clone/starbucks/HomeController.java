@@ -3,9 +3,16 @@ package com.clone.starbucks;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
 import java.util.Locale;
+import java.util.Map;
+import java.util.stream.IntStream;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -19,6 +26,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.google.gson.Gson;
+import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
@@ -689,7 +697,6 @@ public class HomeController {
 		FileReader reader = new FileReader(resource.getFile());
 		Gson gson = new Gson();
 		JsonObject obj = gson.fromJson(reader, JsonObject.class);
-		
 		JsonObject result = new JsonObject();
 		JsonElement cd = obj.get(sido_nm);
 		result.add("list", cd);
@@ -698,19 +705,34 @@ public class HomeController {
 	}
 	
 	@ResponseBody // step3. 스토어 리스트-예은
-	@PostMapping(value = "upload/json/store/storelist/{path}", produces = "application/json; charset=UTF-8")
-	public String getStore(@PathVariable("path") String path, HttpServletRequest request) throws FileNotFoundException, IOException {
-		String gugun_cd = request.getParameter("gugun_code");
-		String mappingPath = "upload/json/store/storelist/.json";
-		ClassPathResource resource = new ClassPathResource(mappingPath);
-		FileReader reader = new FileReader(resource.getFile());
-		Gson gson = new Gson();
-		JsonObject obj = gson.fromJson(reader, JsonObject.class);
-		JsonObject result = new JsonObject();
-		JsonElement cd = obj.get(gugun_cd);
-		result.add("list", cd);
-		return result.toString();
-	}
+	   @PostMapping(value = "upload/json/store/storelist/getStore{code}", produces = "application/json; charset=UTF-8")
+	   public String getStore(HttpServletRequest request,@PathVariable String code) throws FileNotFoundException, IOException {
+
+	      String sido_cd = request.getParameter("p_sido_cd");
+	      String gugun_cd = request.getParameter("p_gugun_cd");
+	      
+	      
+	      String mappingPath = "upload/json/store/storelist/getStore_"+sido_cd+".json";
+	      
+	      
+	      ClassPathResource resource = new ClassPathResource(mappingPath);
+	      FileReader reader = new FileReader(resource.getFile());
+	      Gson gson = new Gson();
+	      JsonObject obj = gson.fromJson(reader,JsonObject.class);
+	      //System.out.println(obj.size());
+	      String key_nm = "list";
+	      String ggg = "gugun_code";
+	      JsonElement list = obj.get(key_nm);
+	      JsonArray arr = list.getAsJsonArray();
+	      
+	      
+	      JsonObject result = new JsonObject();
+	      
+	      result.add("list", list);
+	   
+	      return result.toString();
+
+	   }
 	
 	@ResponseBody // 나와 어울리는 커피 찾기 - 다정 Ajax
 	@PostMapping(value = "coffee/getCoffeeFinderAjax", produces = "application/json; charset=UTF-8")
@@ -733,3 +755,4 @@ public class HomeController {
 	
 	
 }
+

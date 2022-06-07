@@ -243,6 +243,7 @@ function addZero(number, length) {
 function ___ajaxCall(_strUrl, _objParams, _bAsync, _strDataType, _strMethod, _fnSuccess, _fnError) {
 	if (!_strDataType) _strDataType = "json";
 	if (!_strMethod)   _strMethod   = "get";
+	//이단
 	if (!_fnError) {
 		_fnError = function(_error) {
 			alert("처리 중 오류가 발생 했습니다.\n이용에 불편을 드려 죄송합니다.");
