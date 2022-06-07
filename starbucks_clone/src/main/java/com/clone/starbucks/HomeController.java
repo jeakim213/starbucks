@@ -683,10 +683,7 @@ public class HomeController {
 		Gson gson = new Gson();
 		JsonObject obj = gson.fromJson(reader, JsonObject.class);
 		return obj.toString();
-		
-		
 	}
-	
 	
 	@ResponseBody // step2. 구,군 리스트-예은
 	@PostMapping(value = "upload/json/store/map/getGugunList", produces = "application/json; charset=UTF-8")
@@ -704,41 +701,58 @@ public class HomeController {
 		return result.toString();
 	}
 	
-	@ResponseBody // step3. 스토어 리스트-예은
-	   @PostMapping(value = "upload/json/store/storelist/getStore{code}", produces = "application/json; charset=UTF-8")
-	   public String getStore(HttpServletRequest request,@PathVariable String code) throws FileNotFoundException, IOException {
-
-	      String sido_cd = request.getParameter("p_sido_cd");
-	      String gugun_cd = request.getParameter("p_gugun_cd");
-	      System.out.println();
-	      System.out.println(gugun_cd);
-	      
-	      String mappingPath = "upload/json/store/storelist/getStore_"+sido_cd+".json";
-	      
-	      
-	      ClassPathResource resource = new ClassPathResource(mappingPath);
-	      FileReader reader = new FileReader(resource.getFile());
-	      Gson gson = new Gson();
-	      JsonObject obj = gson.fromJson(reader,JsonObject.class);
-	      //System.out.println(obj.size());
-	      JsonElement list = obj.get("list");
-	      JsonArray arrlist = list.getAsJsonArray();
-	      JsonArray arr = new JsonArray();
-	      for(int i=0; i < arrlist.size(); i++) {
-	    	  JsonObject tmp = arrlist.get(i).getAsJsonObject();
-	    	  String gugun = tmp.get("gugun_code").toString();
-	    	  if(gugun.contains(sido_cd))
-	    		  System.out.println(tmp);
-	    		  arr.add(tmp);
-	      }
-	      
-	      JsonObject result = new JsonObject();
-	      
-	      result.add("list", arr);
+	@ResponseBody // step3. 스토어 리스트-지혜
+	@PostMapping(value = "upload/json/store/storelist/getStore", produces = "application/json; charset=UTF-8")
+	public String getStore(HttpServletRequest request) throws FileNotFoundException, IOException {
+		String searchType = request.getParameter("searchType");
+		String sido_cd = request.getParameter("p_sido_cd");
+		String gugun_cd = request.getParameter("p_gugun_cd");
+		String mappingPath = "";
+		//초기값 : isError:true , in_distance:5(보이는거리) //iend:10(보여줄 갯수?)
+		//이동 후 값 : isError:false, in_distance:1 //iend:20
+		//테마 : T01-드라이브스루 , T03-리저브, T12-커뮤니티. 값은 1일경우 ok
+		if(searchType.equals("A")) {
+			//검색x, 모두
+			if(request.getParameter("T01").equals("1"))
+				mappingPath = "upload/json/store/storelist/getStore_DT.json";
+			else if(request.getParameter("T03").equals("1"))
+				mappingPath = "upload/json/store/storelist/getStore_community.json";
+			else if(request.getParameter("T12").equals("1"))
+				mappingPath = "upload/json/store/storelist/getStore_reserve.json";
+			else
+				mappingPath = "upload/json/store/storelist/getStore_all.json";
+		}else if(searchType.equals("B")) {
+			//검색o
+		}else if(searchType.equals("C")) {
+			//검색x, 시.도
+			mappingPath = "upload/json/store/storelist/getStore_"+sido_cd+".json";
+		}else {
+			// D&E -> 즐겨찾기매장검색. 이용안함.
+		}
 	   
-	      return result.toString();
-
+		ClassPathResource resource = new ClassPathResource(mappingPath);
+		FileReader reader = new FileReader(resource.getFile());
+		Gson gson = new Gson();
+		JsonObject obj = gson.fromJson(reader,JsonObject.class);
+		JsonObject result = new JsonObject();
+		JsonElement list = obj.get("list");
+		if(!searchType.equals("C")) {
+			result.add("list", list);
+			return result.toString();
+		}
+		
+		JsonArray arrlist = list.getAsJsonArray();
+		JsonArray arr = new JsonArray();
+		for(int i=0; i < arrlist.size(); i++) {
+			JsonObject tmp = arrlist.get(i).getAsJsonObject();
+			String gugun = tmp.get("gugun_code").toString().replace("\"", "");
+			if(gugun.equals(gugun_cd))
+				arr.add(tmp);
 	   }
+	   result.add("list", arr);
+	   return result.toString();
+
+	}
 	
 	@ResponseBody // 나와 어울리는 커피 찾기 - 다정 Ajax
 	@PostMapping(value = "coffee/getCoffeeFinderAjax", produces = "application/json; charset=UTF-8")
