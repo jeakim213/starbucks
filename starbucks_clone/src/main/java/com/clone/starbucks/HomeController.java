@@ -28,6 +28,7 @@ import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 
 /**
  * Handles requests for the application home page.
@@ -148,7 +149,6 @@ public class HomeController {
 		return "coffee/productFinder";
 	}
 
-	// footer/co_sales
 	// login
 	@RequestMapping(value = "login/login")
 	public String login() {
@@ -515,47 +515,6 @@ public class HomeController {
 		return "store/store_reserve";
 	}
 
-
-	@RequestMapping(value = "util/app_tip")
-	public String app_tip() {
-		return "util/app_tip";
-	}
-
-	@RequestMapping(value = "util/faq")
-	public String faq() {
-		return "util/faq";
-	}
-
-	@RequestMapping(value = "community/faq_1")
-	public String faq_1() {
-		return "community/faq-1";
-	}
-
-	@RequestMapping(value = "util/guest_eReceipt")
-	public String guest_eReceipt() {
-		return "util/guest_eReceipt";
-	}
-
-	@RequestMapping(value = "util/online_survey")
-	public String online_survey() {
-		return "util/online_survey";
-	}
-
-	@RequestMapping(value = "util/partnership_card")
-	public String partnership_card() {
-		return "util/partnership_card";
-	}
-
-	@RequestMapping(value = "util/storecareList")
-	public String storecareList() {
-		return "util/storecareList";
-	}
-
-	@RequestMapping(value = "util/web_tip")
-	public String web_tip() {
-		return "util/web_tip";
-	}
-
 	// ajax
 	@ResponseBody // 로그인 확인-지혜
 	@PostMapping(value = "**/interface/checkLogin", produces = "application/json; charset=UTF-8")
@@ -718,14 +677,15 @@ public class HomeController {
 		FileReader reader = new FileReader(resource.getFile());
 		Gson gson = new Gson();
 		JsonObject obj = gson.fromJson(reader,JsonObject.class);
+			
 		//System.out.println(obj.size());
 		String key_nm = "list";
 		String ggg = "gugun_code";
-		JsonElement list = obj.get(key_nm);
-		JsonArray arr = list.getAsJsonArray();
-		System.out.println(arr.toString());
 		
+		JsonElement list = obj.get(key_nm);
 		JsonObject result = new JsonObject();
+		
+		
 		
 		result.add("list", list);
 	
@@ -734,22 +694,23 @@ public class HomeController {
 	}
 	
 	@ResponseBody // 나와 어울리는 커피 찾기 - 다정 Ajax
-	@PostMapping(value = "coffee/getCoffeeFinderAjax", produces = "application/json; charset=UTF-8")
-	public String getCoffeeFinder(HttpServletRequest request) throws FileNotFoundException, IOException {
-		//0606 다정
-		String cate_cd = request.getParameter("${COFFEE_TASTE1}-${COFFEE_FEEL}-${COFFEE_INTEN}");
-		String mappingPath = "upload/json/coffee/.json";
-		ClassPathResource resource = new ClassPathResource(mappingPath);
-		FileReader reader = new FileReader(resource.getFile());
-		Gson gson = new Gson();
-		JsonObject obj = gson.fromJson(reader, JsonObject.class);
-		JsonObject result = new JsonObject();
-		JsonElement cate = obj.get(cate_cd);
-		result.add("cate", cate);
-		
-
-		return result.toString();
-	}
+	   @PostMapping(value = "coffee/getCoffeeFinderAjax", produces = "application/json; charset=UTF-8")
+	   public String getCoffeeFinder(HttpServletRequest request) throws FileNotFoundException, IOException {
+	      //0606 다정
+	      String COFFEE_TASTE1 = request.getParameter("COFFEE_TASTE1");
+	      String COFFEE_FEEL = request.getParameter("COFFEE_FEEL");
+	      String COFFEE_INTEN = request.getParameter("COFFEE_INTEN");
+	      String cate_cd = request.getParameter(COFFEE_TASTE1+"-"+COFFEE_FEEL+"-"+COFFEE_INTEN);
+	      String mappingPath = "upload/json/coffee/.json";
+	      ClassPathResource resource = new ClassPathResource(mappingPath);
+	      FileReader reader = new FileReader(resource.getFile());
+	      Gson gson = new Gson();
+	      JsonObject obj = gson.fromJson(reader, JsonObject.class);
+	      JsonObject result = new JsonObject();
+	      JsonElement cate = obj.get(cate_cd);
+	      result.add("cate", cate);
+	      return result.toString();
+	   }
 	
 	
 }

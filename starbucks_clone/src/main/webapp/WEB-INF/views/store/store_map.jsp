@@ -705,7 +705,7 @@ var eFrequencyPlannerYn = 'Y';
 											<header class="quick_search">
 												<h3 class="on"><a href="javascript:void(0);">퀵 검색</a></h3>
 											</header>
-											<article style="display:block;">
+											<article>
 												<div class="quick_search_input">
 													<div class="quick_search_inner">
 														<input placeholder="매장명 또는 주소" title="퀵 검색" type="text" name="quickSearchText" id="quickSearchText">
@@ -722,8 +722,22 @@ var eFrequencyPlannerYn = 'Y';
 													<!-- 검색결과 없는 경우 -->
 													<!--p class="no_result">검색 결과가 없습니다.</p-->
 													<!-- 검색결과 있는 경우 -->
-													<div class="result_list scrollbar-inner quickScrollWrap mCustomScrollbar _mCS_1" style="height: 305px;"><div id="mCSB_1" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside" tabindex="0"><div id="mCSB_1_container" class="mCSB_container" style="position:relative; top:0; left:0;" dir="ltr">
-													</div><div id="mCSB_1_scrollbar_vertical" class="mCSB_scrollTools mCSB_1_scrollbar mCS-light mCSB_scrollTools_vertical" style="display: block;"><div class="mCSB_draggerContainer"><div id="mCSB_1_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 30px; top: 0px; display: block; height: 254px; max-height: 544px;" oncontextmenu="return false;"><div class="mCSB_dragger_bar" style="line-height: 30px;"></div></div><div class="mCSB_draggerRail"></div></div></div></div></div>
+													<div class="result_list scrollbar-inner quickScrollWrap mCustomScrollbar _mCS_1" style="height: 305px;">
+														<div id="mCSB_1" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside" tabindex="0">
+															<div id="mCSB_1_container" class="mCSB_container" style="position:relative; top:0; left:0;" dir="ltr">
+																<ul class="quickSearchResultBox">
+																</ul>
+															</div>
+														<div id="mCSB_1_scrollbar_vertical" class="mCSB_scrollTools mCSB_1_scrollbar mCS-light mCSB_scrollTools_vertical" style="display: block;">
+															<div class="mCSB_draggerContainer">
+																<div id="mCSB_1_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 30px; top: 0px; display: block; height: 254px; max-height: 544px;" oncontextmenu="return false;">
+																	<div class="mCSB_dragger_bar" style="line-height: 30px;"></div>
+																</div>
+															<div class="mCSB_draggerRail"></div>
+														</div>
+													</div>
+												</div>
+											</div>
 												</div>
 											</article>
 											<header class="loca_search">
