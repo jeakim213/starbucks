@@ -754,7 +754,7 @@
 
 	.resend_txt { color:#444; font-size:14px; line-height:1.4; }
 	.resend_txt a { color:#006633; border-bottom:1px solid #006633;}
-	.t_006633 { color:#006633 !important; }
+	.t_006633 { color:#006633 !important;}
 	.type_green {color: #006241} /* 20200826 수정 */
 
 	.mem_cert_half01, .mem_cert_half02 { max-width:540px; width:100%; float:left; }
