@@ -391,35 +391,7 @@ public class HomeController {
 	}
 
 	// my
-	@RequestMapping(value = "admin_1")
-	public String admin_1() {
-		return "my/admin_1";
-	}
 	
-	@RequestMapping(value = "admin_2")
-	public String admin_2() {
-		return "my/admin_2";
-	}
-	
-	@RequestMapping(value = "admin_3")
-	public String admin_3() {
-		return "my/admin_3";
-	}
-
-	@RequestMapping(value = "admin_4")
-	public String admin_4() {
-		return "my/admin_4";
-	}
-
-	@RequestMapping(value = "admin_5")
-	public String admin_5() {
-		return "my/admin_5";
-	}
-
-	@RequestMapping(value = "admin_6")
-	public String admin_6() {
-		return "my/admin_6";
-	}
 
 	@RequestMapping(value = "my/egiftCard_shopping_bag")
 	public String egiftCard_shopping_bag() {
