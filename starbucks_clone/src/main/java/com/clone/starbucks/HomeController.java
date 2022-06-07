@@ -155,6 +155,17 @@ public class HomeController {
 	public String login() {
 		return "login/login";
 	}
+	
+	//mem
+	@RequestMapping(value="mem/join2")
+	public String join2() {
+		return "mem/join2";
+	}
+	
+	@RequestMapping(value="mem/join3")
+	public String join3() {
+		return "mem/join3";
+	}
 
 	// menu
 	@RequestMapping(value = "menu/drink_list")
