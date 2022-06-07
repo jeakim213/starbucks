@@ -252,10 +252,6 @@ function kakaoTalkShare( param ){
 function __ajaxCall(url, param, async, responseType, method, success, failed){
     //var token = $("meta[name='_csrf']").attr("content");
     //var header = $("meta[name='_csrf_header']").attr("content");
-<<<<<<< HEAD
-	var url = '${pageContext.request.contextPath}' + url_begin;
-=======
->>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
     var isRandom = Math.random();
     param.rndCod = randomString();
 
