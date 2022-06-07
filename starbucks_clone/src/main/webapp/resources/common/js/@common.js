@@ -250,10 +250,12 @@ function kakaoTalkShare( param ){
 }
 
 function __ajaxCall(url, param, async, responseType, method, success, failed){
-	console.log(url);
     //var token = $("meta[name='_csrf']").attr("content");
     //var header = $("meta[name='_csrf_header']").attr("content");
+<<<<<<< HEAD
 	var url = '${pageContext.request.contextPath}' + url_begin;
+=======
+>>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
     var isRandom = Math.random();
     param.rndCod = randomString();
 
@@ -266,7 +268,7 @@ function __ajaxCall(url, param, async, responseType, method, success, failed){
         try{
             var option = {
                  type			: method												,
-                 url			: url													,
+                 url			: url 													,
                  data			: param													,
                  scriptCharset	: "utf-8"												,
                  //beforeSend		: function(xhr){xhr.setRequestHeader(header, token);}	,

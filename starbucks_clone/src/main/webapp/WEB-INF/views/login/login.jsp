@@ -1,7 +1,5 @@
 ﻿<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -25,6 +23,7 @@
 <meta property="og:description" content="Starbucks">
 
 <title id="titleJoin">Starbucks Korea</title> <!-- 220117 수정 -->
+<<<<<<< HEAD
 <link rel="shortcut icon" href=../common/img/common/favicon.ico?v=200828" type="image/ico"> <!-- 20200827 파비콘 교체 및 CDN 변수처리 -->
 <link href=../common/css/reset.css" rel="stylesheet">
 <link href=../common/css/style.css?v=210721" rel="stylesheet">
@@ -36,6 +35,19 @@
 <link href=../common/css/jquery-ui.css" rel="stylesheet">
 <link href=../common/css/ezmark.css" rel="stylesheet">
 <link href=../common/css/style_dt.css?v=20191211" rel="stylesheet"> <!-- 20191211 수정 -->
+=======
+<link rel="shortcut icon" href="../common/img/common/favicon.ico?v=200828" type="image/ico"> <!-- 20200827 파비콘 교체 및 CDN 변수처리 -->
+<link href="../common/css/reset.css" rel="stylesheet">
+<link href="../common/css/style.css?v=210721" rel="stylesheet">
+<link href="../common/css/jquery.bxslider.css" rel="stylesheet">
+<link href="../common/css/idangerous.swiper.css" rel="stylesheet">
+<link href="../common/css/idangerous.swiper.scrollbar.css" rel="stylesheet">
+<link href="../common/css/jquery.mCustomScrollbar.css" rel="stylesheet">
+<link href="../common/css/jquery.scrollbar.css" rel="stylesheet">
+<link href="../common/css/jquery-ui.css" rel="stylesheet">
+<link href="../common/css/ezmark.css" rel="stylesheet">
+<link href="../common/css/style_dt.css?v=20191211" rel="stylesheet"> <!-- 20191211 수정 -->
+>>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
 
 <!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -72,8 +84,13 @@ var eFrequencyPlannerYn = 'Y';
 </script>
 
 
+<<<<<<< HEAD
 	<link href=../common/css/style_mem.css?v=161014" rel="stylesheet">
 	<link href=../common/css/style_util-2.css" rel="stylesheet">
+=======
+	<link href="../common/css/style_mem.css?v=161014" rel="stylesheet">
+	<link href="../common/css/style_util-2.css" rel="stylesheet">
+>>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
 </head>
 <body>
 	<!-- 150827 계정 통합 안내 팝업 추가 - 구명준 -->
@@ -1266,7 +1283,11 @@ var eFrequencyPlannerYn = 'Y';
                 /* 개인컵 리워드 e */
 			</script>
 
+<<<<<<< HEAD
 			<script src=../common/js/jquery.transit.min.js"></script>
+=======
+			<script src="../common/js/jquery.transit.min.js"></script>
+>>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
 			<script>
 				// 150805 DOM 수정
 				$('div.msr_card_zone').bind('click', function(){
@@ -1303,7 +1324,7 @@ var eFrequencyPlannerYn = 'Y';
 				$('.mycard_one').seqfx();
 			</script>
 						
-			<script src='/common/js/makePCookie.js'></script>
+			<script src='../common/js/makePCookie.js'></script>
 		
 			<script>
 				$(document).ready(function () {
@@ -1315,11 +1336,19 @@ var eFrequencyPlannerYn = 'Y';
 				});
 			</script>
 		
+<<<<<<< HEAD
 		<script src=../common/js/common_jhp-1.js?v=161014"></script>
+=======
+		<script src="../common/js/common_jhp-1.js?v=161014"></script>
+>>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
 		<script>
 			m_strTargetUrl = '/edt/expressDtList';
 		</script>
+<<<<<<< HEAD
 		<script src=../common/js/login/login.js?v=200807"></script>
+=======
+		<script src="../common/js/login/login.js?v=200807"></script>
+>>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
 	</div>
 </body>
 </html>

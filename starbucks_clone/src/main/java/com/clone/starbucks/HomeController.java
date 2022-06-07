@@ -3,7 +3,13 @@ package com.clone.starbucks;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
 import java.util.Locale;
+import java.util.Map;
+import java.util.stream.IntStream;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -20,6 +26,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.google.gson.Gson;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
 /**
@@ -37,47 +45,47 @@ public class HomeController {
 	}
 	
 	//admin
-	@RequestMapping(value="memberListForm")
+	@RequestMapping(value="admin/memberListForm")
 	public String memberListForm() {
 		return "admin/memberListForm";
 	}
 	
-	@RequestMapping(value="userInfoForm")
+	@RequestMapping(value="admin/userInfoForm")
 	public String userInfoForm() {
 		return "admin/userInfoForm";
 	}
 	
-	@RequestMapping(value="modifyCheckForm")
+	@RequestMapping(value="admin/modifyCheckForm")
 	public String modifyCheckForm() {
 		return "admin/modifyCheckForm";
 	}
 	
+	@RequestMapping(value="admin/memberModifyForm")
+	public String memberModifyForm() {
+		return "admin/memberModifyForm";
+	}
+	
+	@RequestMapping(value="admin/deleteCheckForm")
+	public String deleteCheckForm() {
+		return "admin/deleteCheckForm";
+	}
+	
 	//0601 다정 커피
-	@RequestMapping(value="saleChart-1")
+	@RequestMapping(value="admin/saleChart-1")
 	public String saleChart1() {
 		return "admin/saleChart-1";
 	}
 	
 	//0602 다정 푸드
-	@RequestMapping(value="saleChart-2")
+	@RequestMapping(value="admin/saleChart-2")
 	public String saleChart2() {
 		return "admin/saleChart-2";
 	}
 	
 	//프로덕트
-	@RequestMapping(value="saleChart-3")
+	@RequestMapping(value="admin/saleChart-3")
 	public String saleChart3() {
 		return "admin/saleChart-3";
-	}
-	
-	@RequestMapping(value="memberModifyForm")
-	public String memberModifyForm() {
-		return "admin/memberModifyForm";
-	}
-	
-	@RequestMapping(value="deleteCheckForm")
-	public String deleteCheckForm() {
-		return "admin/deleteCheckForm";
 	}
 	
 	// coffee
@@ -99,6 +107,16 @@ public class HomeController {
 	@RequestMapping(value = "coffee/doppio")
 	public String doppio() {
 		return "coffee/doppio";
+	}
+	
+	@RequestMapping(value = "coffee/espresso_macchiato")
+	public String espresso_macchiato() {
+		return "coffee/espresso_macchiato";
+	}
+	
+	@RequestMapping(value = "coffee/espresso")
+	public String espresso() {
+		return "coffee/espresso";
 	}
 
 	@RequestMapping(value = "coffee/latte")
@@ -144,7 +162,7 @@ public class HomeController {
 		return "menu/drink_list";
 	}
 
-	@RequestMapping(value = "menu/drink_list-1")
+	@RequestMapping(value = "menu/drink_list_1")
 	public String drink_list_1() {
 		return "menu/drink_list-1";
 	}
@@ -189,6 +207,7 @@ public class HomeController {
 		return "menu/drink_list-9";
 	}
 
+
 	@RequestMapping(value = "menu/drink_view")
 	public String drink_view(String product_cd, Model model) {
 		model.addAttribute("product_cd", product_cd);
@@ -200,7 +219,7 @@ public class HomeController {
 		return "menu/food_list";
 	}
 
-	@RequestMapping(value = "menu/food_list_1") // 카테고리 코드를 받아 해당 카테고리만 뿌린다.
+	@RequestMapping(value = "menu/food_list_1") // 카테고리 코드를 받아 해당 카테고리만 뿌린다
 	public String food_list_1(String CATE_CD) {
 		return "menu/food_list-1";
 	}
@@ -243,14 +262,8 @@ public class HomeController {
 	}
 
 	@RequestMapping(value = "menu/product_list")
-	public String product_view() {
-		return "menu/product_view";
-	}
-	
-	//0601 다정
-	@RequestMapping(value="menu/starbucksCard")
-	public String starbucksCard() {
-		return "menu/starbucksCard";
+	public String product_list() {
+		return "menu/product_list";
 	}
 	
 	@RequestMapping(value = "menu/product_list_1")
@@ -293,7 +306,7 @@ public class HomeController {
 		return "menu/product_list-8";
 	}
 
-	@RequestMapping(value = "menu/product_list-9")
+	@RequestMapping(value = "menu/product_list_9")
 	public String product_list_9() {
 		return "menu/product_list-9";
 	}
@@ -318,6 +331,11 @@ public class HomeController {
 	@RequestMapping(value = "menu/coupon_popup")
 	public String menu_coupon_popup() {
 		return "menu/coupon_popup";
+	}
+	
+	@RequestMapping(value="menu/starbucksCard")
+	public String starbucksCard() {
+		return "menu/starbucksCard";
 	}
 
 	// msr
@@ -355,11 +373,6 @@ public class HomeController {
 	public String scard_register_inquiry() {
 		return "msr/scard/register_inquiry";
 	}
-
-	/*
-	 * @RequestMapping(value="scard_scard_gallery") public String
-	 * scard_scard_gallery() { return "msr/scard/scard_gallery"; }
-	 */
 
 	@RequestMapping(value = "msr/sceGift/egift_information")
 	public String sceGift_egift_information() {
@@ -503,10 +516,6 @@ public class HomeController {
 		return "store/store_reserve";
 	}
 
-	@RequestMapping(value = "store/store_star_field")
-	public String store_star_field() {
-		return "store/store_star_field";
-	}
 
 	@RequestMapping(value = "util/app_tip")
 	public String app_tip() {
@@ -548,16 +557,27 @@ public class HomeController {
 		return "util/web_tip";
 	}
 
-	// ajax-지혜
-	@ResponseBody // 로그인 확인
-	@PostMapping(value = "interface/checkLogin", produces = "application/json; charset=UTF-8")
+	// ajax
+	@ResponseBody // 로그인 확인-지혜
+	@PostMapping(value = "**/interface/checkLogin", produces = "application/json; charset=UTF-8")
 	public String checkLogin() {
-		//옵션 없음.
-		//답 : _response.result_code == "SUCCESS" json필요 data, result_code, error_msg, list
-		return "";
+		JsonObject obj = new JsonObject();
+		obj.addProperty("result_code", "SUCCESS");
+//		{
+//		    "result_code": "FAIL",
+//		    "error_msg": "",
+//		    "alert_msg": "",
+//		    "location_href": "",
+//		    "location_replace": "",
+//		    "custom_script": "",
+//		    "total_cnt": 0,
+//		    "data": null,
+//		    "result_api_code": ""
+//		}
+		return obj.toString();
 	}
 	
-	@ResponseBody
+	@ResponseBody //메뉴list-지혜
 	@PostMapping(value = "upload/json/menu/{path}", produces = "application/json; charset=UTF-8")
 	public String ajaxJson(@PathVariable String path) throws FileNotFoundException, IOException {
 		String mappingPath = "upload/json/menu/" + path + ".json";
@@ -568,7 +588,7 @@ public class HomeController {
 		return obj.toString();
 	}
 
-	@ResponseBody // 제품정보
+	@ResponseBody // 제품정보-지혜
 	@PostMapping(value = "menu/productViewAjax", produces = "application/json; charset=UTF-8")
 	public String productViewAjax(HttpServletRequest request) throws FileNotFoundException, IOException {
 		String product_cd = request.getParameter("product_cd");
@@ -584,11 +604,14 @@ public class HomeController {
 		ClassPathResource resource = new ClassPathResource(mappingPath);
 		FileReader reader = new FileReader(resource.getFile());
 		Gson gson = new Gson();
-		JsonObject obj = gson.fromJson(reader, JsonObject.class);
-		return obj.toString();
+		JsonObject obj = gson.fromJson(reader,JsonObject.class);
+		JsonObject result = new JsonObject();
+		JsonElement cd = obj.get(product_cd);
+		result.add("view", cd);
+		return result.toString();
 	}
-
-	@ResponseBody // 파일이미지
+	
+	@ResponseBody // 파일이미지-지혜
 	@PostMapping(value = "menu/productFileAjax", produces = "application/json; charset=UTF-8")
 	public String productFileAjax(HttpServletRequest request) throws FileNotFoundException, IOException {
 		String product_cd = request.getParameter("product_cd");
@@ -605,39 +628,31 @@ public class HomeController {
 		FileReader reader = new FileReader(resource.getFile());
 		Gson gson = new Gson();
 		JsonObject obj = gson.fromJson(reader, JsonObject.class);
-		//찾기
-		//JsonObject result = 
-		
-		return "";
+		JsonObject result = new JsonObject();
+		JsonElement cd = obj.get(product_cd);
+		result.add("file", cd);
+		if(product_cate.equals("product")) return result.toString();
+		StringBuffer strbuffer = new StringBuffer(result.toString());
+		strbuffer.insert(8, "[");
+		strbuffer.insert(strbuffer.length()-1, "]");
+		return strbuffer.toString();
 	}
-
-//	@ResponseBody  //관련제품
-//	@PostMapping(value="menu/productPairAjax", produces="application/json; charset=UTF-8")
-//	public String productPairAjax(@PathVariable String path) throws FileNotFoundException, IOException {
-//		String mappingPath = "upload/json/menu/" + path + ".json";
-//		ClassPathResource resource = new ClassPathResource(mappingPath);
-//		FileReader reader = new FileReader(resource.getFile());
-//		Gson gson = new Gson();
-//		JsonObject obj = gson.fromJson(reader, JsonObject.class);
-//		return obj.toString();
-//	}
 	
-	
-	@ResponseBody // 나만의 음료 찾기
+	@ResponseBody // 나만의 음료 찾기-지혜
 	@PostMapping(value = "menu/getMsrXoCategoryList", produces = "application/json; charset=UTF-8")
 	public String getMsrXoCategoryList(HttpServletRequest request) throws FileNotFoundException, IOException {
 //		"categoryType" : "01",
 //		"allSearchYn"  : "N"
 		String product_cd = request.getParameter("product_cd");
-		String mappingPath = "upload/json/menu/detail/.json";
-		ClassPathResource resource = new ClassPathResource(mappingPath);
-		FileReader reader = new FileReader(resource.getFile());
-		Gson gson = new Gson();
-		JsonObject obj = gson.fromJson(reader, JsonObject.class);
-		return obj.toString();
+//		String mappingPath = "upload/json/menu/detail/.json";
+//		ClassPathResource resource = new ClassPathResource(mappingPath);
+//		FileReader reader = new FileReader(resource.getFile());
+//		Gson gson = new Gson();
+//		JsonObject obj = gson.fromJson(reader, JsonObject.class);
+		return "";
 	}
 	
-	@ResponseBody // 나만의 음료 등록하기
+	@ResponseBody // 나만의 음료 등록하기-지혜
 	@PostMapping(value = "menu/setMsrXoMyMenuRegister", produces = "application/json; charset=UTF-8")
 	public String setMsrXoMyMenuRegister(HttpServletRequest request) throws FileNotFoundException, IOException {
 //		"registerType" 	   : registerType
@@ -658,4 +673,85 @@ public class HomeController {
 		JsonObject obj = gson.fromJson(reader, JsonObject.class);
 		return obj.toString();
 	}
+	
+	@ResponseBody // step1. 시,도 리스트-예은
+	@PostMapping(value = "upload/json/store/map/getSidoList", produces = "application/json; charset=UTF-8")
+	public String getSidoList(HttpServletRequest request) throws FileNotFoundException, IOException {
+		String mappingPath = "upload/json/store/map/getSidoList.json";
+		ClassPathResource resource = new ClassPathResource(mappingPath);
+		FileReader reader = new FileReader(resource.getFile());
+		Gson gson = new Gson();
+		JsonObject obj = gson.fromJson(reader, JsonObject.class);
+		return obj.toString();
+		
+		
+	}
+	
+	
+	@ResponseBody // step2. 구,군 리스트-예은
+	@PostMapping(value = "upload/json/store/map/getGugunList", produces = "application/json; charset=UTF-8")
+	public String getGugunList(HttpServletRequest request) throws FileNotFoundException, IOException {
+		String sido_nm = request.getParameter("sido_nm");
+		String mappingPath = "upload/json/store/map/getGugunList.json";
+		ClassPathResource resource = new ClassPathResource(mappingPath);
+		FileReader reader = new FileReader(resource.getFile());
+		Gson gson = new Gson();
+		JsonObject obj = gson.fromJson(reader, JsonObject.class);
+		JsonObject result = new JsonObject();
+		JsonElement cd = obj.get(sido_nm);
+		result.add("list", cd);
+	
+		return result.toString();
+	}
+	
+	@ResponseBody // step3. 스토어 리스트-예은
+	@PostMapping(value = "upload/json/store/storelist/getStore{code}", produces = "application/json; charset=UTF-8")
+	public String getStore(HttpServletRequest request,@PathVariable String code) throws FileNotFoundException, IOException {
+
+		String sido_cd = request.getParameter("p_sido_cd");
+		String gugun_cd = request.getParameter("p_gugun_cd");
+		
+		
+		String mappingPath = "upload/json/store/storelist/getStore_"+sido_cd+".json";
+		
+		
+		ClassPathResource resource = new ClassPathResource(mappingPath);
+		FileReader reader = new FileReader(resource.getFile());
+		Gson gson = new Gson();
+		JsonObject obj = gson.fromJson(reader,JsonObject.class);
+		//System.out.println(obj.size());
+		String key_nm = "list";
+		String ggg = "gugun_code";
+		JsonElement list = obj.get(key_nm);
+		JsonArray arr = list.getAsJsonArray();
+		System.out.println(arr.toString());
+		
+		JsonObject result = new JsonObject();
+		
+		result.add("list", list);
+	
+		return result.toString();
+
+	}
+	
+	@ResponseBody // 나와 어울리는 커피 찾기 - 다정 Ajax
+	@PostMapping(value = "coffee/getCoffeeFinderAjax", produces = "application/json; charset=UTF-8")
+	public String getCoffeeFinder(HttpServletRequest request) throws FileNotFoundException, IOException {
+		//0606 다정
+		String cate_cd = request.getParameter("${COFFEE_TASTE1}-${COFFEE_FEEL}-${COFFEE_INTEN}");
+		String mappingPath = "upload/json/coffee/.json";
+		ClassPathResource resource = new ClassPathResource(mappingPath);
+		FileReader reader = new FileReader(resource.getFile());
+		Gson gson = new Gson();
+		JsonObject obj = gson.fromJson(reader, JsonObject.class);
+		JsonObject result = new JsonObject();
+		JsonElement cate = obj.get(cate_cd);
+		result.add("cate", cate);
+		
+
+		return result.toString();
+	}
+	
+	
 }
+

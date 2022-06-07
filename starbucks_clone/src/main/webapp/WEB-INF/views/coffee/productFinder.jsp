@@ -23,17 +23,17 @@
 <meta property="og:description" content="Starbucks">
 
 <title id="titleJoin">Starbucks Korea</title> <!-- 220117 수정 -->
-<link rel="shortcut icon" href="common/img/common/favicon.ico?v=200828" type="image/ico"> <!-- 20200827 파비콘 교체 및 CDN 변수처리 -->
-<link href="common/css/reset.css" rel="stylesheet">
-<link href="common/css/style.css?v=210721" rel="stylesheet">
-<link href="common/css/jquery.bxslider.css" rel="stylesheet">
-<link href="common/css/idangerous.swiper.css" rel="stylesheet">
-<link href="common/css/idangerous.swiper.scrollbar.css" rel="stylesheet">
-<link href="common/css/jquery.mCustomScrollbar.css" rel="stylesheet">
-<link href="common/css/jquery.scrollbar.css" rel="stylesheet">
-<link href="common/css/jquery-ui.css" rel="stylesheet">
-<link href="common/css/ezmark.css" rel="stylesheet">
-<link href="common/css/style_dt.css?v=20191211" rel="stylesheet"> <!-- 20191211 수정 -->
+<link rel="shortcut icon" href="../common/img/common/favicon.ico?v=200828" type="image/ico"> <!-- 20200827 파비콘 교체 및 CDN 변수처리 -->
+<link href="../common/css/reset.css" rel="stylesheet">
+<link href="../common/css/style.css?v=210721" rel="stylesheet">
+<link href="../common/css/jquery.bxslider.css" rel="stylesheet">
+<link href="../common/css/idangerous.swiper.css" rel="stylesheet">
+<link href="../common/css/idangerous.swiper.scrollbar.css" rel="stylesheet">
+<link href="../common/css/jquery.mCustomScrollbar.css" rel="stylesheet">
+<link href="../common/css/jquery.scrollbar.css" rel="stylesheet">
+<link href="../common/css/jquery-ui.css" rel="stylesheet">
+<link href="../common/css/ezmark.css" rel="stylesheet">
+<link href="../common/css/style_dt.css?v=20191211" rel="stylesheet"> <!-- 20191211 수정 -->
 
 <!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -69,7 +69,7 @@ var eFrequencySeq = '172';
 var eFrequencyPlannerYn = 'Y';
 </script>
 
-		<link href="common/css/style_coffee-2.css?v=210917" rel="stylesheet">
+		<link href="../common/css/style_coffee-2.css?v=210917" rel="stylesheet">
 		<!--[if lt IE 9]>
 		<link href="/common/css_ie/style_main.css" rel="stylesheet">
 		<link href="/common/css_ie/style_coffee.css" rel="stylesheet">
@@ -130,7 +130,7 @@ var eFrequencyPlannerYn = 'Y';
 					<!-- 유저인포 -->
 					<div class="user_greet">
 						<div class="user_pic_area">
-							<img alt="사용자 아이디" src="common/img/common/user_pic_sample.jpg">
+							<img alt="사용자 아이디" src="../common/img/common/user_pic_sample.jpg">
 							<p class="msr_user_mask msr_user_mask01"></p>
 							<p class="msr_user_mask msr_user_mask02"></p>
 							<p class="msr_user_mask msr_user_mask03"></p>
@@ -179,13 +179,13 @@ var eFrequencyPlannerYn = 'Y';
 							<img alt="카드이름">
 						</div>
 						<div class="mycard_area2">
-							<img alt="카드이름" src="common/img/common/mycard2.png">
+							<img alt="카드이름" src="../common/img/common/mycard2.png">
 							<p class="num"><!-- 1234-1234-1234-1234 --></p>
 							<p class="barcord"><!-- <img src="//image.istarbucks.co.kr/common/img/common/bacord.png" alt=""> --></p>
 						</div>
 						<div class="mycard_one">
 							<!-- <div class="front"> -->
-							<img src="common/img/common/payment_icon1.png" alt="">
+							<img src="../common/img/common/payment_icon1.png" alt="">
 							<!-- </div> -->
 							<!-- <div class="back"><img src="//image.istarbucks.co.kr/common/img/common/payment_icon1.png" alt=""></div> -->
 						</div>
@@ -200,7 +200,7 @@ var eFrequencyPlannerYn = 'Y';
 					<!-- 일반회원 -->
 					<div class="sb_card_regi">
 						<a href="javascript:void(0);">
-							<p class="icon_add_card" onclick="location.href = '/my/mycard_info_input';"><img alt="카드등록 아이콘" src="common/img/common/icon_add_card.png"></p>
+							<p class="icon_add_card" onclick="location.href = '/my/mycard_info_input';"><img alt="카드등록 아이콘" src="../common/img/common/icon_add_card.png"></p>
 							<p class="sb_card_regi_txt"><strong>스타벅스 카드 등록</strong><br>카드를 등록하시고<br>다양한 리워드를<br>만나보세요.</p>
 						</a>
 					</div>
@@ -616,13 +616,13 @@ var eFrequencyPlannerYn = 'Y';
 				<!-- 서브 타이틀 -->
 				<div class="sub_tit_wrap coffee_sub_tit_wrap">
 					<div class="sub_tit_inner">
-						<h2><img src="common/img/coffee/coffee_productFinder_tit1.jpg" alt="나와 어울리는 커피"></h2>
+						<h2><img src="../common/img/coffee/coffee_productFinder_tit1.jpg" alt="나와 어울리는 커피"></h2>
 						<p class="coffee_sub_tit">여러분에게 잘 맞는 커피를 찾기 위한 3가지 질문입니다.</p>
 						<ul class="smap">
-							<li><a href="index.htm"><img src="common/img/common/icon_home.png" alt="홈으로"></a></li>
-							<li><img class="arrow" src="common/img/common/icon_arrow.png" alt="하위메뉴"></li>
+							<li><a href="index.htm"><img src="../common/img/common/icon_home.png" alt="홈으로"></a></li>
+							<li><img class="arrow" src="../common/img/common/icon_arrow.png" alt="하위메뉴"></li>
 							<li class="en"><a href="javascript:void(0)">COFFEE</a></li>
-							<li><img class="arrow" src="common/img/common/icon_arrow.png" alt="하위메뉴"></li>
+							<li><img class="arrow" src="../common/img/common/icon_arrow.png" alt="하위메뉴"></li>
 							<li><a href="productFinder" class="this ">나와 어울리는 커피</a></li>
 						</ul>
 					</div>
@@ -632,75 +632,75 @@ var eFrequencyPlannerYn = 'Y';
 					<div class="findWrap">
 						<div class="find_frame">
 							<div class="find_section find_section1">
-								<p class="find_con find_con01"><img alt="1. 어떤 풍미에 가장 끌리세요? 가장 좋아하는 음식을 생각해보세요. 그 음식의 어떤 풍미와 재료에 끌리나요?" src="common/img/coffee/taste_find_ttl1.png"></p>
+								<p class="find_con find_con01"><img alt="1. 어떤 풍미에 가장 끌리세요? 가장 좋아하는 음식을 생각해보세요. 그 음식의 어떤 풍미와 재료에 끌리나요?" src="../common/img/coffee/taste_find_ttl1.png"></p>
 								<ul class="find_taste find_taste01">
 									<li class="ft_t01">
 										<dl>
-											<dt><a href="javascript:void(0)" onclick="document.frm.COFFEE_TASTE1.value = 10;"><img src="common/img/coffee/taste1_1.png" alt=""></a></dt>
+											<dt><a href="javascript:void(0)" onclick="document.frm.COFFEE_TASTE1.value = 10;"><img src="../common/img/coffee/taste1_1.png" alt=""></a></dt>
 											<dd>짭짤한 맛</dd>
 										</dl>
 									</li>
 									<li class="ft_t02">
 										<dl>
-											<dt><a href="javascript:void(0)" onclick="document.frm.COFFEE_TASTE1.value = 20;"><img src="common/img/coffee/taste1_2.png" alt=""></a></dt>
+											<dt><a href="javascript:void(0)" onclick="document.frm.COFFEE_TASTE1.value = 20;"><img src="../common/img/coffee/taste1_2.png" alt=""></a></dt>
 											<dd>과일 맛</dd>
 										</dl>
 									</li>
 									<li class="ft_t03">
 										<dl>
-											<dt><a href="javascript:void(0)" onclick="document.frm.COFFEE_TASTE1.value = 30;"><img src="common/img/coffee/taste1_3.png" alt=""></a></dt>
+											<dt><a href="javascript:void(0)" onclick="document.frm.COFFEE_TASTE1.value = 30;"><img src="../common/img/coffee/taste1_3.png" alt=""></a></dt>
 											<dd>고소한 맛</dd><!-- 20210914 수정 -->
 										</dl>
 									</li>
 									<li class="last ft_t04">
 										<dl>
-											<dt><a href="javascript:void(0)" onclick="document.frm.COFFEE_TASTE1.value = 40;"><img src="common/img/coffee/taste1_4.png" alt=""></a></dt>
+											<dt><a href="javascript:void(0)" onclick="document.frm.COFFEE_TASTE1.value = 40;"><img src="../common/img/coffee/taste1_4.png" alt=""></a></dt>
 											<dd>달콤한(캐러멜) 맛</dd>
 										</dl>
 									</li>
 								</ul>
 							</div>
 							<div class="find_section find_section2">
-								<p class="find_con find_con02"><img alt="2. 어떤 느낌을 좋아하세요? 느낌이란 커피가 혀와 입천장에 닿았을 때 느껴지는 감각을 의미합니다." src="common/img/coffee/taste_find_ttl2.png?v=210917"></p><!-- 20210914 수정 -->
+								<p class="find_con find_con02"><img alt="2. 어떤 느낌을 좋아하세요? 느낌이란 커피가 혀와 입천장에 닿았을 때 느껴지는 감각을 의미합니다." src="../common/img/coffee/taste_find_ttl2.png?v=210917"></p><!-- 20210914 수정 -->
 								<ul class="find_taste find_taste02">
 									<li class="ft2_t01">
 										<dl>
-											<dt><a href="javascript:void(0)" onclick="document.frm.COFFEE_FEEL.value = 10;"><img src="common/img/coffee/taste2_1.png" alt=""></a></dt>
+											<dt><a href="javascript:void(0)" onclick="document.frm.COFFEE_FEEL.value = 10;"><img src="../common/img/coffee/taste2_1.png" alt=""></a></dt>
 											<dd>상쾌한 느낌</dd>
 										</dl>
 									</li>
 									<li class="ft2_t02">	
 										<dl>
-											<dt><a href="javascript:void(0)" onclick="document.frm.COFFEE_FEEL.value = 20;"><img src="common/img/coffee/taste2_2.png" alt=""></a></dt>
+											<dt><a href="javascript:void(0)" onclick="document.frm.COFFEE_FEEL.value = 20;"><img src="../common/img/coffee/taste2_2.png" alt=""></a></dt>
 											<dd>부드러운 느낌</dd>
 										</dl>
 									</li>
 									<li class="last ft2_t03">
 										<dl>
-											<dt><a href="javascript:void(0)" onclick="document.frm.COFFEE_FEEL.value = 30;"><img src="common/img/coffee/taste2_3.png" alt=""></a></dt>
+											<dt><a href="javascript:void(0)" onclick="document.frm.COFFEE_FEEL.value = 30;"><img src="../common/img/coffee/taste2_3.png" alt=""></a></dt>
 											<dd>오랫동안 여운이 남는 느낌</dd>
 										</dl>
 									</li>
 								</ul>
 							</div>
 							<div class="find_section find_section3">
-								<p class="find_con find_con03"><img alt="3. 어느 정도의 강도를 원하세요? 강도란 커피의 로스트와 풍미의 정도를 말합니다." src="common/img/coffee/taste_find_ttl3.png"></p>
+								<p class="find_con find_con03"><img alt="3. 어느 정도의 강도를 원하세요? 강도란 커피의 로스트와 풍미의 정도를 말합니다." src="../common/img/coffee/taste_find_ttl3.png"></p>
 								<ul class="find_taste find_taste03">
 									<li class="ft3_t01">
 										<dl>
-											<dt><a href="#" onclick="i.goSubmit(10)"><img src="common/img/coffee/taste3_1.png" alt=""></a></dt>
+											<dt><a href="javascript:void(0);" onclick="i.goSubmit(10);"><img src="../common/img/coffee/taste3_1.png" alt=""></a></dt>
 											<dd>은은하고 부드러움</dd>
 										</dl>
 									</li>
 									<li class="ft3_t02">
 										<dl>
-											<dt><a href="#" onclick="i.goSubmit(20)"><img src="common/img/coffee/taste3_2.png" alt=""></a></dt>
+											<dt><a href="#" onclick="i.goSubmit(20)"><img src="../common/img/coffee/taste3_2.png" alt=""></a></dt>
 											<dd>미디엄으로 균형 잡힘</dd>
 										</dl>
 									</li>
 									<li class="last ft3_t03">
 										<dl>
-											<dt><a href="#" onclick="i.goSubmit(30)"><img src="common/img/coffee/taste3_3.png" alt=""></a></dt>
+											<dt><a href="#" onclick="i.goSubmit(30)"><img src="../common/img/coffee/taste3_3.png" alt=""></a></dt>
 											<dd>무게감을 주는 강렬함</dd><!-- 20210914 수정 -->
 										</dl>
 									</li>
@@ -863,36 +863,36 @@ var eFrequencyPlannerYn = 'Y';
 			<!-- footer end -->
 		
 			
-			<script src="common/js/jquery-1.10.2.min.js"></script>
-			<script src="common/js/%40common.js"></script>
-			<script src="common/js/jquery-ui.min.js?v=220207"></script>
-			<script src="common/js/idangerous.swiper-2.1.min.js"></script>
-			<script src="common/js/idangerous.swiper.scrollbar-2.1.js"></script>
-			<script src="common/js/jquery.bxslider.min.js"></script>
-			<script src="common/js/skdslider.min.js"></script>
-			<script src="common/js/jquery.drive.js"></script>
-			<script src="common/js/jquery.easing-1.3.min.js"></script>
-			<script src="common/js/jquery.elevatezoom.js"></script>
-			<script src="common/js/jquery.flip.js"></script>
-			<script src="common/js/jquery.jsmovie.1.4.4.min.js"></script>
-			<script src="common/js/jquery.mCustomScrollbar.concat.js"></script>
-			<script src="common/js/jquery.number.min.js"></script>
-			<script src="common/js/jquery.rotate.2.3.js"></script>
-			<script src="common/js/jquery.scrollbar.js"></script>
-			<script src="common/js/jquery.scrollTo-1.4.2-min.js"></script>
-			<script src="common/js/jquery.superscrollorama.js"></script>						
-			<script src="common/js/jquery.transform2d.js"></script>
-			<script src="common/js/jquery.transform3d.js"></script>			
-			<script src="common/js/greensock/TweenMax.min.js"></script>
-			<script src="common/js/masonry.pkgd.js"></script>
-			<script src="common/js/common.js"></script>
-			<script src="common/js/gnb.js?v=220502"></script>
-			<script src="common/js/header.js?v=200915"></script>
-			<script src="common/js/footer.js?v=210818"></script>
+			<script src="../common/js/jquery-1.10.2.min.js"></script>
+			<script src="../common/js/%40common.js"></script>
+			<script src="../common/js/jquery-ui.min.js?v=220207"></script>
+			<script src="../common/js/idangerous.swiper-2.1.min.js"></script>
+			<script src="../common/js/idangerous.swiper.scrollbar-2.1.js"></script>
+			<script src="../common/js/jquery.bxslider.min.js"></script>
+			<script src="../common/js/skdslider.min.js"></script>
+			<script src="../common/js/jquery.drive.js"></script>
+			<script src="../common/js/jquery.easing-1.3.min.js"></script>
+			<script src="../common/js/jquery.elevatezoom.js"></script>
+			<script src="../common/js/jquery.flip.js"></script>
+			<script src="../common/js/jquery.jsmovie.1.4.4.min.js"></script>
+			<script src="../common/js/jquery.mCustomScrollbar.concat.js"></script>
+			<script src="../common/js/jquery.number.min.js"></script>
+			<script src="../common/js/jquery.rotate.2.3.js"></script>
+			<script src="../common/js/jquery.scrollbar.js"></script>
+			<script src="../common/js/jquery.scrollTo-1.4.2-min.js"></script>
+			<script src="../common/js/jquery.superscrollorama.js"></script>						
+			<script src="../common/js/jquery.transform2d.js"></script>
+			<script src="../common/js/jquery.transform3d.js"></script>			
+			<script src="../common/js/greensock/TweenMax.min.js"></script>
+			<script src="../common/js/masonry.pkgd.js"></script>
+			<script src="../common/js/common.js"></script>
+			<script src="../common/js/gnb.js?v=220502"></script>
+			<script src="../common/js/header.js?v=200915"></script>
+			<script src="../common/js/footer.js?v=210818"></script>
 
-			<script src="common/js/jquery.tmpl.js"></script>
-			<script src="common/js/jquery.tmplPlus.min.js"></script>
-			<script src="common/js/jquery.ezmark.min.js"></script>
+			<script src="../common/js/jquery.tmpl.js"></script>
+			<script src="../common/js/jquery.tmplPlus.min.js"></script>
+			<script src="../common/js/jquery.ezmark.min.js"></script>
 			<!-- <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script> -->
 			
 			<!--
@@ -902,8 +902,8 @@ var eFrequencyPlannerYn = 'Y';
 			-->
 			
 		
-			<script src="common/js/openevent/openevent.js"></script>
-			<script src="common/js/open_event_control.js"></script>
+			<script src="../common/js/openevent/openevent.js"></script>
+			<script src="../common/js/open_event_control.js"></script>
 			<script type="text/javascript">
 				
 				var mrSlider;
@@ -1112,7 +1112,7 @@ var eFrequencyPlannerYn = 'Y';
                 /* 개인컵 리워드 e */
 			</script>
 
-			<script src="common/js/jquery.transit.min.js"></script>
+			<script src="../common/js/jquery.transit.min.js"></script>
 			<script>
 				// 150805 DOM 수정
 				$('div.msr_card_zone').bind('click', function(){
@@ -1149,7 +1149,7 @@ var eFrequencyPlannerYn = 'Y';
 				$('.mycard_one').seqfx();
 			</script>
 						
-			<script src='common/js/makePCookie.js'></script>
+			<script src='../common/js/makePCookie.js'></script>
 		
 			<script>
 				$(document).ready(function () {
@@ -1161,8 +1161,8 @@ var eFrequencyPlannerYn = 'Y';
 				});
 			</script>
 		
-		<script src="common/js/coffee.js"></script>
-		<script src="common/js/jquery.ezmark.min-1.js"></script>
+		<script src="../common/js/coffee.js"></script>
+		<script src="../common/js/jquery.ezmark.min-1.js"></script>
 		<form action="productFinderView" name="frm" id="frm" method="POST" onsubmit="return false;">
 			<input name="COFFEE_TASTE1" type="hidden">
 			<input name="COFFEE_FEEL" type="hidden">

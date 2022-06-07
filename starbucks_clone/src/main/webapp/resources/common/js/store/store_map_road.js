@@ -519,7 +519,8 @@ function roadCurrentSet()
 	var markerImageSize 		= new daum.maps.Size( 38 , 60 );
 	var markerImageOptions 		= { offset : new daum.maps.Point(16 , 55 ) };  
 	var markerPosition 			= new daum.maps.LatLng( $startPostion.gps_lat , $startPostion.gps_lng  );
-	var markerImage 			= new daum.maps.MarkerImage( "/common/img/store/pin/pin_start.png"	, markerImageSize, markerImageOptions);
+	//예은 경로 수정
+	var markerImage 			= new daum.maps.MarkerImage( "../common/img/store/pin/pin_start.png"	, markerImageSize, markerImageOptions);
 	
 	$start_road_marker = new daum.maps.Marker({
 		position: markerPosition		, // 마커의 좌표
@@ -1483,55 +1484,55 @@ function daumRoadFindTransport()
 										
 										if ( y1.startLocation.type=="BUSSTOP")
 										{
-											startImg="/common/img/store/trans_icon/icon_bus.png";
+											startImg="../common/img/store/trans_icon/icon_bus.png";
 										}
 										else if(y1.startLocation.type=="SUBWAYSTATION")
 										{
 											
 											if ( y1.startLocation.subwayId == "SES34") //분당
 											{
-												startImg="/common/img/store/trans_icon/icon_subway_bun.png"; 
+												startImg="../common/img/store/trans_icon/icon_subway_bun.png"; 
 											}
 											else if ( y1.startLocation.subwayId == "SES22") //인천
 											{
-												startImg="/common/img/store/trans_icon/icon_subway_in.png";
+												startImg="../common/img/store/trans_icon/icon_subway_in.png";
 											}
 											else if ( y1.startLocation.subwayId == "SES26") //경의중앙
 											{
-												startImg="/common/img/store/trans_icon/icon_subway_jung.png";
+												startImg="../common/img/store/trans_icon/icon_subway_jung.png";
 											}
 											else if ( y1.startLocation.subwayId == "SES33") //경춘선
 											{
-												startImg="/common/img/store/trans_icon/icon_subway_kyung.png";
+												startImg="../common/img/store/trans_icon/icon_subway_kyung.png";
 											}
 											else if ( y1.startLocation.subwayId == "SES27") //공항철도
 											{
-												startImg="/common/img/store/trans_icon/icon_subway_kong.png";
+												startImg="../common/img/store/trans_icon/icon_subway_kong.png";
 											}
 											else if ( y1.startLocation.subwayId == "SES36") //의정부
 											{
-												startImg="/common/img/store/trans_icon/icon_subway_eu.png";
+												startImg="../common/img/store/trans_icon/icon_subway_eu.png";
 											}
 											else if ( y1.startLocation.subwayId == "SES35") //수인역
 											{
-												startImg="/common/img/store/trans_icon/icon_subway_su.png";
+												startImg="../common/img/store/trans_icon/icon_subway_su.png";
 											}
 											else if ( y1.startLocation.subwayId == "SES35") //수인역
 											{
-												startImg="/common/img/store/trans_icon/icon_subway_su.png";
+												startImg="../common/img/store/trans_icon/icon_subway_su.png";
 											}	
 											else if ( y1.startLocation.subwayId == "SES37") //에바러인
 											{
-												startImg="/common/img/store/trans_icon/icon_subway_e.png";
+												startImg="../common/img/store/trans_icon/icon_subway_e.png";
 											}	
 											else if ( y1.startLocation.subwayId == "SES38") //자기부상
 											{
-												startImg="/common/img/store/trans_icon/icon_subway_ja.png";
+												startImg="../common/img/store/trans_icon/icon_subway_ja.png";
 											}	
 											else
 											{
 												var numSubway = y1.startLocation.subwayId.substring(3,4);
-												startImg="/common/img/store/trans_icon/icon_subway"+numSubway+".png";
+												startImg="../common/img/store/trans_icon/icon_subway"+numSubway+".png";
 												
 											}
 																						
@@ -1587,54 +1588,54 @@ function daumRoadFindTransport()
 					
 										if ( y1.endLocation.type=="BUSSTOP")
 										{
-											startImg="/common/img/store/trans_icon/icon_desti.png";
+											startImg="../common/img/store/trans_icon/icon_desti.png";
 										}
 										else if(y1.endLocation.type=="SUBWAYSTATION")
 										{
 											if ( y1.startLocation.subwayId == "SES34") //분당
 											{
-												startImg="/common/img/store/trans_icon/icon_subway_bun.png"; 
+												startImg="../common/img/store/trans_icon/icon_subway_bun.png"; 
 											}
 											else if ( y1.startLocation.subwayId == "SES22") //인천
 											{
-												startImg="/common/img/store/trans_icon/icon_subway_in.png";
+												startImg="../common/img/store/trans_icon/icon_subway_in.png";
 											}
 											else if ( y1.startLocation.subwayId == "SES26") //경의중앙
 											{
-												startImg="/common/img/store/trans_icon/icon_subway_jung.png";
+												startImg="../common/img/store/trans_icon/icon_subway_jung.png";
 											}
 											else if ( y1.startLocation.subwayId == "SES33") //경춘선
 											{
-												startImg="/common/img/store/trans_icon/icon_subway_kyung.png";
+												startImg="../common/img/store/trans_icon/icon_subway_kyung.png";
 											}
 											else if ( y1.startLocation.subwayId == "SES27") //공항철도
 											{
-												startImg="/common/img/store/trans_icon/icon_subway_kong.png";
+												startImg="../common/img/store/trans_icon/icon_subway_kong.png";
 											}
 											else if ( y1.startLocation.subwayId == "SES36") //의정부
 											{
-												startImg="/common/img/store/trans_icon/icon_subway_eu.png";
+												startImg="../common/img/store/trans_icon/icon_subway_eu.png";
 											}
 											else if ( y1.startLocation.subwayId == "SES35") //수인역
 											{
-												startImg="/common/img/store/trans_icon/icon_subway_su.png";
+												startImg="../common/img/store/trans_icon/icon_subway_su.png";
 											}
 											else if ( y1.startLocation.subwayId == "SES35") //수인역
 											{
-												startImg="/common/img/store/trans_icon/icon_subway_su.png";
+												startImg="../common/img/store/trans_icon/icon_subway_su.png";
 											}	
 											else if ( y1.startLocation.subwayId == "SES37") //에바러인
 											{
-												startImg="/common/img/store/trans_icon/icon_subway_e.png";
+												startImg="../common/img/store/trans_icon/icon_subway_e.png";
 											}	
 											else if ( y1.startLocation.subwayId == "SES38") //자기부상
 											{
-												startImg="/common/img/store/trans_icon/icon_subway_ja.png";
+												startImg="../common/img/store/trans_icon/icon_subway_ja.png";
 											}	
 											else
 											{
 												var numSubway = y1.startLocation.subwayId.substring(3,4);
-												startImg="/common/img/store/trans_icon/icon_subway"+numSubway+".png";
+												startImg="../common/img/store/trans_icon/icon_subway"+numSubway+".png";
 												
 											}
 										}
@@ -1653,55 +1654,55 @@ function daumRoadFindTransport()
 									
 										if ( y1.startLocation.type=="BUSSTOP")
 										{
-											startImg="/common/img/store/trans_icon/icon_bus.png";
+											startImg="../common/img/store/trans_icon/icon_bus.png";
 										}
 										else if(y1.startLocation.type=="SUBWAYSTATION")
 										{
 											
 											if ( y1.startLocation.subwayId == "SES34") //분당
 											{
-												startImg="/common/img/store/trans_icon/icon_subway_bun.png"; 
+												startImg="../common/img/store/trans_icon/icon_subway_bun.png"; 
 											}
 											else if ( y1.startLocation.subwayId == "SES22") //인천
 											{
-												startImg="/common/img/store/trans_icon/icon_subway_in.png";
+												startImg="../common/img/store/trans_icon/icon_subway_in.png";
 											}
 											else if ( y1.startLocation.subwayId == "SES26") //경의중앙
 											{
-												startImg="/common/img/store/trans_icon/icon_subway_jung.png";
+												startImg="../common/img/store/trans_icon/icon_subway_jung.png";
 											}
 											else if ( y1.startLocation.subwayId == "SES33") //경춘선
 											{
-												startImg="/common/img/store/trans_icon/icon_subway_kyung.png";
+												startImg="../common/img/store/trans_icon/icon_subway_kyung.png";
 											}
 											else if ( y1.startLocation.subwayId == "SES27") //공항철도
 											{
-												startImg="/common/img/store/trans_icon/icon_subway_kong.png";
+												startImg="../common/img/store/trans_icon/icon_subway_kong.png";
 											}
 											else if ( y1.startLocation.subwayId == "SES36") //의정부
 											{
-												startImg="/common/img/store/trans_icon/icon_subway_eu.png";
+												startImg="../common/img/store/trans_icon/icon_subway_eu.png";
 											}
 											else if ( y1.startLocation.subwayId == "SES35") //수인역
 											{
-												startImg="/common/img/store/trans_icon/icon_subway_su.png";
+												startImg="../common/img/store/trans_icon/icon_subway_su.png";
 											}
 											else if ( y1.startLocation.subwayId == "SES35") //수인역
 											{
-												startImg="/common/img/store/trans_icon/icon_subway_su.png";
+												startImg="../common/img/store/trans_icon/icon_subway_su.png";
 											}	
 											else if ( y1.startLocation.subwayId == "SES37") //에바러인
 											{
-												startImg="/common/img/store/trans_icon/icon_subway_e.png";
+												startImg="../common/img/store/trans_icon/icon_subway_e.png";
 											}	
 											else if ( y1.startLocation.subwayId == "SES38") //자기부상
 											{
-												startImg="/common/img/store/trans_icon/icon_subway_ja.png";
+												startImg="../common/img/store/trans_icon/icon_subway_ja.png";
 											}	
 											else
 											{
 												var numSubway = y1.startLocation.subwayId.substring(3,4);
-												startImg="/common/img/store/trans_icon/icon_subway"+numSubway+".png";
+												startImg="../common/img/store/trans_icon/icon_subway"+numSubway+".png";
 												
 											}
 										}
@@ -1754,54 +1755,54 @@ function daumRoadFindTransport()
 								
 									if ( y1.startLocation.type=="BUSSTOP")
 									{
-										startImg="/common/img/store/trans_icon/icon_bus.png";
+										startImg="../common/img/store/trans_icon/icon_bus.png";
 									}
 									else if(y1.startLocation.type=="SUBWAYSTATION")
 									{
 										if ( y1.startLocation.subwayId == "SES34") //분당
 										{
-											startImg="/common/img/store/trans_icon/icon_subway_bun.png"; 
+											startImg="../common/img/store/trans_icon/icon_subway_bun.png"; 
 										}
 										else if ( y1.startLocation.subwayId == "SES22") //인천
 										{
-											startImg="/common/img/store/trans_icon/icon_subway_in.png";
+											startImg="../common/img/store/trans_icon/icon_subway_in.png";
 										}
 										else if ( y1.startLocation.subwayId == "SES26") //경의중앙
 										{
-											startImg="/common/img/store/trans_icon/icon_subway_jung.png";
+											startImg="../common/img/store/trans_icon/icon_subway_jung.png";
 										}
 										else if ( y1.startLocation.subwayId == "SES33") //경춘선
 										{
-											startImg="/common/img/store/trans_icon/icon_subway_kyung.png";
+											startImg="../common/img/store/trans_icon/icon_subway_kyung.png";
 										}
 										else if ( y1.startLocation.subwayId == "SES27") //공항철도
 										{
-											startImg="/common/img/store/trans_icon/icon_subway_kong.png";
+											startImg="../common/img/store/trans_icon/icon_subway_kong.png";
 										}
 										else if ( y1.startLocation.subwayId == "SES36") //의정부
 										{
-											startImg="/common/img/store/trans_icon/icon_subway_eu.png";
+											startImg="../common/img/store/trans_icon/icon_subway_eu.png";
 										}
 										else if ( y1.startLocation.subwayId == "SES35") //수인역
 										{
-											startImg="/common/img/store/trans_icon/icon_subway_su.png";
+											startImg="../common/img/store/trans_icon/icon_subway_su.png";
 										}
 										else if ( y1.startLocation.subwayId == "SES35") //수인역
 										{
-											startImg="/common/img/store/trans_icon/icon_subway_su.png";
+											startImg="../common/img/store/trans_icon/icon_subway_su.png";
 										}	
 										else if ( y1.startLocation.subwayId == "SES37") //에바러인
 										{
-											startImg="/common/img/store/trans_icon/icon_subway_e.png";
+											startImg="../common/img/store/trans_icon/icon_subway_e.png";
 										}	
 										else if ( y1.startLocation.subwayId == "SES38") //자기부상
 										{
-											startImg="/common/img/store/trans_icon/icon_subway_ja.png";
+											startImg="../common/img/store/trans_icon/icon_subway_ja.png";
 										}	
 										else
 										{
 											var numSubway = y1.startLocation.subwayId.substring(3,4);
-											startImg="/common/img/store/trans_icon/icon_subway"+numSubway+".png";
+											startImg="../common/img/store/trans_icon/icon_subway"+numSubway+".png";
 											
 										}
 									}
@@ -1857,54 +1858,54 @@ function daumRoadFindTransport()
 									
 									if ( y1.endLocation.type=="BUSSTOP")
 									{
-										startImg="/common/img/store/trans_icon/icon_desti.png";
+										startImg="../common/img/store/trans_icon/icon_desti.png";
 									}
 									else if(y1.endLocation.type=="SUBWAYSTATION")
 									{
 										if ( y1.startLocation.subwayId == "SES34") //분당
 										{
-											startImg="/common/img/store/trans_icon/icon_subway_bun.png"; 
+											startImg="../common/img/store/trans_icon/icon_subway_bun.png"; 
 										}
 										else if ( y1.startLocation.subwayId == "SES22") //인천
 										{
-											startImg="/common/img/store/trans_icon/icon_subway_in.png";
+											startImg="../common/img/store/trans_icon/icon_subway_in.png";
 										}
 										else if ( y1.startLocation.subwayId == "SES26") //경의중앙
 										{
-											startImg="/common/img/store/trans_icon/icon_subway_jung.png";
+											startImg="../common/img/store/trans_icon/icon_subway_jung.png";
 										}
 										else if ( y1.startLocation.subwayId == "SES33") //경춘선
 										{
-											startImg="/common/img/store/trans_icon/icon_subway_kyung.png";
+											startImg="../common/img/store/trans_icon/icon_subway_kyung.png";
 										}
 										else if ( y1.startLocation.subwayId == "SES27") //공항철도
 										{
-											startImg="/common/img/store/trans_icon/icon_subway_kong.png";
+											startImg="../common/img/store/trans_icon/icon_subway_kong.png";
 										}
 										else if ( y1.startLocation.subwayId == "SES36") //의정부
 										{
-											startImg="/common/img/store/trans_icon/icon_subway_eu.png";
+											startImg="../common/img/store/trans_icon/icon_subway_eu.png";
 										}
 										else if ( y1.startLocation.subwayId == "SES35") //수인역
 										{
-											startImg="/common/img/store/trans_icon/icon_subway_su.png";
+											startImg="../common/img/store/trans_icon/icon_subway_su.png";
 										}
 										else if ( y1.startLocation.subwayId == "SES35") //수인역
 										{
-											startImg="/common/img/store/trans_icon/icon_subway_su.png";
+											startImg="../common/img/store/trans_icon/icon_subway_su.png";
 										}	
 										else if ( y1.startLocation.subwayId == "SES37") //에바러인
 										{
-											startImg="/common/img/store/trans_icon/icon_subway_e.png";
+											startImg="../common/img/store/trans_icon/icon_subway_e.png";
 										}	
 										else if ( y1.startLocation.subwayId == "SES38") //자기부상
 										{
-											startImg="/common/img/store/trans_icon/icon_subway_ja.png";
+											startImg="../common/img/store/trans_icon/icon_subway_ja.png";
 										}	
 										else
 										{
 											var numSubway = y1.startLocation.subwayId.substring(3,4);
-											startImg="/common/img/store/trans_icon/icon_subway"+numSubway+".png";
+											startImg="../common/img/store/trans_icon/icon_subway"+numSubway+".png";
 											
 										}
 									}
@@ -2439,55 +2440,55 @@ function daumRoadFindTransport()
 										
 										if ( y1.startLocation.type=="BUSSTOP")
 										{
-											startImg="/common/img/store/trans_icon/icon_bus.png";
+											startImg="../common/img/store/trans_icon/icon_bus.png";
 										}
 										else if(y1.startLocation.type=="SUBWAYSTATION")
 										{
 											
 											if ( y1.startLocation.subwayId == "SES34") //분당
 											{
-												startImg="/common/img/store/trans_icon/icon_subway_bun.png"; 
+												startImg="../common/img/store/trans_icon/icon_subway_bun.png"; 
 											}
 											else if ( y1.startLocation.subwayId == "SES22") //인천
 											{
-												startImg="/common/img/store/trans_icon/icon_subway_in.png";
+												startImg="../common/img/store/trans_icon/icon_subway_in.png";
 											}
 											else if ( y1.startLocation.subwayId == "SES26") //경의중앙
 											{
-												startImg="/common/img/store/trans_icon/icon_subway_jung.png";
+												startImg="../common/img/store/trans_icon/icon_subway_jung.png";
 											}
 											else if ( y1.startLocation.subwayId == "SES33") //경춘선
 											{
-												startImg="/common/img/store/trans_icon/icon_subway_kyung.png";
+												startImg="../common/img/store/trans_icon/icon_subway_kyung.png";
 											}
 											else if ( y1.startLocation.subwayId == "SES27") //공항철도
 											{
-												startImg="/common/img/store/trans_icon/icon_subway_kong.png";
+												startImg="../common/img/store/trans_icon/icon_subway_kong.png";
 											}
 											else if ( y1.startLocation.subwayId == "SES36") //의정부
 											{
-												startImg="/common/img/store/trans_icon/icon_subway_eu.png";
+												startImg="../common/img/store/trans_icon/icon_subway_eu.png";
 											}
 											else if ( y1.startLocation.subwayId == "SES35") //수인역
 											{
-												startImg="/common/img/store/trans_icon/icon_subway_su.png";
+												startImg="../common/img/store/trans_icon/icon_subway_su.png";
 											}
 											else if ( y1.startLocation.subwayId == "SES35") //수인역
 											{
-												startImg="/common/img/store/trans_icon/icon_subway_su.png";
+												startImg="../common/img/store/trans_icon/icon_subway_su.png";
 											}	
 											else if ( y1.startLocation.subwayId == "SES37") //에바러인
 											{
-												startImg="/common/img/store/trans_icon/icon_subway_e.png";
+												startImg="../common/img/store/trans_icon/icon_subway_e.png";
 											}	
 											else if ( y1.startLocation.subwayId == "SES38") //자기부상
 											{
-												startImg="/common/img/store/trans_icon/icon_subway_ja.png";
+												startImg="../common/img/store/trans_icon/icon_subway_ja.png";
 											}	
 											else
 											{
 												var numSubway = y1.startLocation.subwayId.substring(3,4);
-												startImg="/common/img/store/trans_icon/icon_subway"+numSubway+".png";
+												startImg="../common/img/store/trans_icon/icon_subway"+numSubway+".png";
 												
 											}
 																						
@@ -2543,54 +2544,54 @@ function daumRoadFindTransport()
 					
 										if ( y1.endLocation.type=="BUSSTOP")
 										{
-											startImg="/common/img/store/trans_icon/icon_desti.png";
+											startImg="../common/img/store/trans_icon/icon_desti.png";
 										}
 										else if(y1.endLocation.type=="SUBWAYSTATION")
 										{
 											if ( y1.startLocation.subwayId == "SES34") //분당
 											{
-												startImg="/common/img/store/trans_icon/icon_subway_bun.png"; 
+												startImg="../common/img/store/trans_icon/icon_subway_bun.png"; 
 											}
 											else if ( y1.startLocation.subwayId == "SES22") //인천
 											{
-												startImg="/common/img/store/trans_icon/icon_subway_in.png";
+												startImg="../common/img/store/trans_icon/icon_subway_in.png";
 											}
 											else if ( y1.startLocation.subwayId == "SES26") //경의중앙
 											{
-												startImg="/common/img/store/trans_icon/icon_subway_jung.png";
+												startImg="../common/img/store/trans_icon/icon_subway_jung.png";
 											}
 											else if ( y1.startLocation.subwayId == "SES33") //경춘선
 											{
-												startImg="/common/img/store/trans_icon/icon_subway_kyung.png";
+												startImg="../common/img/store/trans_icon/icon_subway_kyung.png";
 											}
 											else if ( y1.startLocation.subwayId == "SES27") //공항철도
 											{
-												startImg="/common/img/store/trans_icon/icon_subway_kong.png";
+												startImg="../common/img/store/trans_icon/icon_subway_kong.png";
 											}
 											else if ( y1.startLocation.subwayId == "SES36") //의정부
 											{
-												startImg="/common/img/store/trans_icon/icon_subway_eu.png";
+												startImg="../common/img/store/trans_icon/icon_subway_eu.png";
 											}
 											else if ( y1.startLocation.subwayId == "SES35") //수인역
 											{
-												startImg="/common/img/store/trans_icon/icon_subway_su.png";
+												startImg="../common/img/store/trans_icon/icon_subway_su.png";
 											}
 											else if ( y1.startLocation.subwayId == "SES35") //수인역
 											{
-												startImg="/common/img/store/trans_icon/icon_subway_su.png";
+												startImg="../common/img/store/trans_icon/icon_subway_su.png";
 											}	
 											else if ( y1.startLocation.subwayId == "SES37") //에바러인
 											{
-												startImg="/common/img/store/trans_icon/icon_subway_e.png";
+												startImg="../common/img/store/trans_icon/icon_subway_e.png";
 											}	
 											else if ( y1.startLocation.subwayId == "SES38") //자기부상
 											{
-												startImg="/common/img/store/trans_icon/icon_subway_ja.png";
+												startImg="../common/img/store/trans_icon/icon_subway_ja.png";
 											}	
 											else
 											{
 												var numSubway = y1.startLocation.subwayId.substring(3,4);
-												startImg="/common/img/store/trans_icon/icon_subway"+numSubway+".png";
+												startImg="../common/img/store/trans_icon/icon_subway"+numSubway+".png";
 												
 											}
 										}
@@ -2609,55 +2610,55 @@ function daumRoadFindTransport()
 									
 										if ( y1.startLocation.type=="BUSSTOP")
 										{
-											startImg="/common/img/store/trans_icon/icon_bus.png";
+											startImg="../common/img/store/trans_icon/icon_bus.png";
 										}
 										else if(y1.startLocation.type=="SUBWAYSTATION")
 										{
 											
 											if ( y1.startLocation.subwayId == "SES34") //분당
 											{
-												startImg="/common/img/store/trans_icon/icon_subway_bun.png"; 
+												startImg="../common/img/store/trans_icon/icon_subway_bun.png"; 
 											}
 											else if ( y1.startLocation.subwayId == "SES22") //인천
 											{
-												startImg="/common/img/store/trans_icon/icon_subway_in.png";
+												startImg="../common/img/store/trans_icon/icon_subway_in.png";
 											}
 											else if ( y1.startLocation.subwayId == "SES26") //경의중앙
 											{
-												startImg="/common/img/store/trans_icon/icon_subway_jung.png";
+												startImg="../common/img/store/trans_icon/icon_subway_jung.png";
 											}
 											else if ( y1.startLocation.subwayId == "SES33") //경춘선
 											{
-												startImg="/common/img/store/trans_icon/icon_subway_kyung.png";
+												startImg="../common/img/store/trans_icon/icon_subway_kyung.png";
 											}
 											else if ( y1.startLocation.subwayId == "SES27") //공항철도
 											{
-												startImg="/common/img/store/trans_icon/icon_subway_kong.png";
+												startImg="../common/img/store/trans_icon/icon_subway_kong.png";
 											}
 											else if ( y1.startLocation.subwayId == "SES36") //의정부
 											{
-												startImg="/common/img/store/trans_icon/icon_subway_eu.png";
+												startImg="../common/img/store/trans_icon/icon_subway_eu.png";
 											}
 											else if ( y1.startLocation.subwayId == "SES35") //수인역
 											{
-												startImg="/common/img/store/trans_icon/icon_subway_su.png";
+												startImg="../common/img/store/trans_icon/icon_subway_su.png";
 											}
 											else if ( y1.startLocation.subwayId == "SES35") //수인역
 											{
-												startImg="/common/img/store/trans_icon/icon_subway_su.png";
+												startImg="../common/img/store/trans_icon/icon_subway_su.png";
 											}	
 											else if ( y1.startLocation.subwayId == "SES37") //에바러인
 											{
-												startImg="/common/img/store/trans_icon/icon_subway_e.png";
+												startImg="../common/img/store/trans_icon/icon_subway_e.png";
 											}	
 											else if ( y1.startLocation.subwayId == "SES38") //자기부상
 											{
-												startImg="/common/img/store/trans_icon/icon_subway_ja.png";
+												startImg="../common/img/store/trans_icon/icon_subway_ja.png";
 											}	
 											else
 											{
 												var numSubway = y1.startLocation.subwayId.substring(3,4);
-												startImg="/common/img/store/trans_icon/icon_subway"+numSubway+".png";
+												startImg="../common/img/store/trans_icon/icon_subway"+numSubway+".png";
 												
 											}
 										}
@@ -2710,54 +2711,54 @@ function daumRoadFindTransport()
 								
 									if ( y1.startLocation.type=="BUSSTOP")
 									{
-										startImg="/common/img/store/trans_icon/icon_bus.png";
+										startImg="../common/img/store/trans_icon/icon_bus.png";
 									}
 									else if(y1.startLocation.type=="SUBWAYSTATION")
 									{
 										if ( y1.startLocation.subwayId == "SES34") //분당
 										{
-											startImg="/common/img/store/trans_icon/icon_subway_bun.png"; 
+											startImg="../common/img/store/trans_icon/icon_subway_bun.png"; 
 										}
 										else if ( y1.startLocation.subwayId == "SES22") //인천
 										{
-											startImg="/common/img/store/trans_icon/icon_subway_in.png";
+											startImg="../common/img/store/trans_icon/icon_subway_in.png";
 										}
 										else if ( y1.startLocation.subwayId == "SES26") //경의중앙
 										{
-											startImg="/common/img/store/trans_icon/icon_subway_jung.png";
+											startImg="../common/img/store/trans_icon/icon_subway_jung.png";
 										}
 										else if ( y1.startLocation.subwayId == "SES33") //경춘선
 										{
-											startImg="/common/img/store/trans_icon/icon_subway_kyung.png";
+											startImg="../common/img/store/trans_icon/icon_subway_kyung.png";
 										}
 										else if ( y1.startLocation.subwayId == "SES27") //공항철도
 										{
-											startImg="/common/img/store/trans_icon/icon_subway_kong.png";
+											startImg="../common/img/store/trans_icon/icon_subway_kong.png";
 										}
 										else if ( y1.startLocation.subwayId == "SES36") //의정부
 										{
-											startImg="/common/img/store/trans_icon/icon_subway_eu.png";
+											startImg="../common/img/store/trans_icon/icon_subway_eu.png";
 										}
 										else if ( y1.startLocation.subwayId == "SES35") //수인역
 										{
-											startImg="/common/img/store/trans_icon/icon_subway_su.png";
+											startImg="../common/img/store/trans_icon/icon_subway_su.png";
 										}
 										else if ( y1.startLocation.subwayId == "SES35") //수인역
 										{
-											startImg="/common/img/store/trans_icon/icon_subway_su.png";
+											startImg="../common/img/store/trans_icon/icon_subway_su.png";
 										}	
 										else if ( y1.startLocation.subwayId == "SES37") //에바러인
 										{
-											startImg="/common/img/store/trans_icon/icon_subway_e.png";
+											startImg="../common/img/store/trans_icon/icon_subway_e.png";
 										}	
 										else if ( y1.startLocation.subwayId == "SES38") //자기부상
 										{
-											startImg="/common/img/store/trans_icon/icon_subway_ja.png";
+											startImg="../common/img/store/trans_icon/icon_subway_ja.png";
 										}	
 										else
 										{
 											var numSubway = y1.startLocation.subwayId.substring(3,4);
-											startImg="/common/img/store/trans_icon/icon_subway"+numSubway+".png";
+											startImg="../common/img/store/trans_icon/icon_subway"+numSubway+".png";
 											
 										}
 									}
@@ -2813,54 +2814,54 @@ function daumRoadFindTransport()
 									
 									if ( y1.endLocation.type=="BUSSTOP")
 									{
-										startImg="/common/img/store/trans_icon/icon_desti.png";
+										startImg="../common/img/store/trans_icon/icon_desti.png";
 									}
 									else if(y1.endLocation.type=="SUBWAYSTATION")
 									{
 										if ( y1.startLocation.subwayId == "SES34") //분당
 										{
-											startImg="/common/img/store/trans_icon/icon_subway_bun.png"; 
+											startImg="../common/img/store/trans_icon/icon_subway_bun.png"; 
 										}
 										else if ( y1.startLocation.subwayId == "SES22") //인천
 										{
-											startImg="/common/img/store/trans_icon/icon_subway_in.png";
+											startImg="../common/img/store/trans_icon/icon_subway_in.png";
 										}
 										else if ( y1.startLocation.subwayId == "SES26") //경의중앙
 										{
-											startImg="/common/img/store/trans_icon/icon_subway_jung.png";
+											startImg="../common/img/store/trans_icon/icon_subway_jung.png";
 										}
 										else if ( y1.startLocation.subwayId == "SES33") //경춘선
 										{
-											startImg="/common/img/store/trans_icon/icon_subway_kyung.png";
+											startImg="../common/img/store/trans_icon/icon_subway_kyung.png";
 										}
 										else if ( y1.startLocation.subwayId == "SES27") //공항철도
 										{
-											startImg="/common/img/store/trans_icon/icon_subway_kong.png";
+											startImg="../common/img/store/trans_icon/icon_subway_kong.png";
 										}
 										else if ( y1.startLocation.subwayId == "SES36") //의정부
 										{
-											startImg="/common/img/store/trans_icon/icon_subway_eu.png";
+											startImg="../common/img/store/trans_icon/icon_subway_eu.png";
 										}
 										else if ( y1.startLocation.subwayId == "SES35") //수인역
 										{
-											startImg="/common/img/store/trans_icon/icon_subway_su.png";
+											startImg="../common/img/store/trans_icon/icon_subway_su.png";
 										}
 										else if ( y1.startLocation.subwayId == "SES35") //수인역
 										{
-											startImg="/common/img/store/trans_icon/icon_subway_su.png";
+											startImg="../common/img/store/trans_icon/icon_subway_su.png";
 										}	
 										else if ( y1.startLocation.subwayId == "SES37") //에바러인
 										{
-											startImg="/common/img/store/trans_icon/icon_subway_e.png";
+											startImg="../common/img/store/trans_icon/icon_subway_e.png";
 										}	
 										else if ( y1.startLocation.subwayId == "SES38") //자기부상
 										{
-											startImg="/common/img/store/trans_icon/icon_subway_ja.png";
+											startImg="../common/img/store/trans_icon/icon_subway_ja.png";
 										}	
 										else
 										{
 											var numSubway = y1.startLocation.subwayId.substring(3,4);
-											startImg="/common/img/store/trans_icon/icon_subway"+numSubway+".png";
+											startImg="../common/img/store/trans_icon/icon_subway"+numSubway+".png";
 											
 										}
 									}
@@ -3469,48 +3470,48 @@ function daumTrafficView(obj, html, number)
 				{
 					if ( q.startLocation.subwayId == "SES34") //분당
 					{
-						icons="/common/img/store/trans_icon/icon_subway_bun.png"; 
+						icons="../common/img/store/trans_icon/icon_subway_bun.png"; 
 					}
 					else if ( q.startLocation.subwayId == "SES22") //인천
 					{
-						icons="/common/img/store/trans_icon/icon_subway_in.png";
+						icons="../common/img/store/trans_icon/icon_subway_in.png";
 					}
 					else if ( q.startLocation.subwayId == "SES26") //경의중앙
 					{
-						icons="/common/img/store/trans_icon/icon_subway_jung.png";
+						icons="../common/img/store/trans_icon/icon_subway_jung.png";
 					}
 					else if ( q.startLocation.subwayId == "SES33") //경춘선
 					{
-						icons="/common/img/store/trans_icon/icon_subway_kyung.png";
+						icons="../common/img/store/trans_icon/icon_subway_kyung.png";
 					}
 					else if ( q.startLocation.subwayId == "SES27") //공항철도
 					{
-						icons="/common/img/store/trans_icon/icon_subway_kong.png";
+						icons="../common/img/store/trans_icon/icon_subway_kong.png";
 					}
 					else if ( q.startLocation.subwayId == "SES36") //의정부
 					{
-						icons="/common/img/store/trans_icon/icon_subway_eu.png";
+						icons="../common/img/store/trans_icon/icon_subway_eu.png";
 					}
 					else if ( q.startLocation.subwayId == "SES35") //수인역
 					{
-						icons="/common/img/store/trans_icon/icon_subway_su.png";
+						icons="../common/img/store/trans_icon/icon_subway_su.png";
 					}
 					else if ( q.startLocation.subwayId == "SES35") //수인역
 					{
-						icons="/common/img/store/trans_icon/icon_subway_su.png";
+						icons="../common/img/store/trans_icon/icon_subway_su.png";
 					}	
 					else if ( q.startLocation.subwayId == "SES37") //에바러인
 					{
-						icons="/common/img/store/trans_icon/icon_subway_e.png";
+						icons="../common/img/store/trans_icon/icon_subway_e.png";
 					}	
 					else if ( q.startLocation.subwayId == "SES38") //자기부상
 					{
-						icons="/common/img/store/trans_icon/icon_subway_ja.png";
+						icons="../common/img/store/trans_icon/icon_subway_ja.png";
 					}	
 					else
 					{
 						var numSubway = q.startLocation.subwayId.substring(3,4);
-						icons="/common/img/store/trans_icon/icon_subway"+numSubway+".png";
+						icons="../common/img/store/trans_icon/icon_subway"+numSubway+".png";
 					}	
 					
 					
@@ -3529,7 +3530,7 @@ function daumTrafficView(obj, html, number)
 				}
 				else
 				{
-					icons="/common/img/store/trans_icon/icon_desti.png"; 
+					icons="../common/img/store/trans_icon/icon_desti.png"; 
 				}
 				
 				qHtml ='<p class="road_found_list_txt"><b>'+q.information+'</b>'+vehiclesHtml+'</p>';
@@ -4379,7 +4380,7 @@ function sbSearchPlace(search)
 	$search.new_bool=0;		
 	
 	var rndCod = randomString();
-	var storeInterfaceUrl = "/store/getStore.do?r="+rndCod;
+	var storeInterfaceUrl = "/upload/json/store/storelist/getStore?r="+rndCod;
 	
 	$(".carFindRoad").hide();
 	$(".carFindRoadErr").hide();
@@ -4390,7 +4391,7 @@ function sbSearchPlace(search)
 	
 	
 	$roadFindBool = false;
-	__ajaxCall(storeInterfaceUrl ,$search, true, "json", "post",
+	__ajaxCall(storeInterfaceUrl ,$search, true, "JSON", "POST",
 			function (_response) 
 			{
 				
@@ -4486,11 +4487,11 @@ function sbSearchPlace(search)
 							
     		    			if ( _s_theme.indexOf("T03") > -1 )	//해당 매장이 리저브라면
     		    			{
-	    						 var markerImage 			= new daum.maps.MarkerImage( "/common/img/store/pin/pin_res_end.png"	, markerImageSize, markerImageOptions);
+	    						 var markerImage 			= new daum.maps.MarkerImage( "../common/img/store/pin/pin_res_end.png"	, markerImageSize, markerImageOptions);
     		    			}
     		    			else
     		    			{
-	    						 var markerImage 			= new daum.maps.MarkerImage( "/common/img/store/pin/pin_reg_end.png"	, markerImageSize, markerImageOptions);     		    				
+	    						 var markerImage 			= new daum.maps.MarkerImage( "../common/img/store/pin/pin_reg_end.png"	, markerImageSize, markerImageOptions);     		    				
     		    			}
 							
 							$end_road_marker = new daum.maps.Marker({
@@ -4701,7 +4702,7 @@ function placesSearchCB(result, status, pagination) {
 					var markerImageSize 		= new daum.maps.Size( 38 , 60 );
 					var markerImageOptions 		= { offset : new daum.maps.Point(16 , 55 ) };  
 					var markerPosition 			= new daum.maps.LatLng( lat , lng );
-					var markerImage 			= new daum.maps.MarkerImage( "/common/img/store/pin/pin_start.png"	, markerImageSize, markerImageOptions);
+					var markerImage 			= new daum.maps.MarkerImage( "../common/img/store/pin/pin_start.png"	, markerImageSize, markerImageOptions);
 					
 					$start_road_marker = new daum.maps.Marker({
 						position: markerPosition		, // 마커의 좌표

@@ -16,12 +16,14 @@
 
 	    <resources mapping="/resources/**" location="/resources/" />
 	    <resources mapping="/img/event/**" location="/WEB-INF/views/img/event/" />
-	    <resources mapping="/img/util/csi/**" location="/resources/common/img/util/csi" />
   		<resources mapping="/common/**" location="/resources/common/" />
+  		<resources mapping="/common/img/store/pin/**" location="/resources/common/img/store/" />
 		<resources mapping="/css/**" location="/resources/common/css/" />
 		<resources mapping="/fonts/**" location="/resources/common/fonts/" />
 		<resources mapping="/img/**" location="/resources/common/img/" />
 		<resources mapping="/js/**" location="/resources/common/js/" />
+		<resources mapping="/upload/json/store/map/**" location="/resources/upload/json/store/map/" />
+		<resources mapping="/upload/json/store/storelist/**" location="/resources/upload/json/store/storelist/" />
 		<resources mapping="/upload/json/menu/**" location="/resources/upload/json/menu/" />
 		<resources mapping="/upload/banner/**" location="/WEB-INF/views/upload/banner/" />
 		<resources mapping="/upload/common/**" location="/WEB-INF/views/upload/common/" />
@@ -30,6 +32,7 @@
 		<resources mapping="/sdk/js/**" location="/WEB-INF/views/sdk/js/" />
 		<resources mapping="/upload/prcmcard/**" location="/WEB-INF/views/upload/prcmcard/" />
 		<resources mapping="/img/util/csi/**" location="/resources/common/img/util/csi" />
+
 
 	<!-- Resolves views selected for rendering by @Controllers to .jsp resources in the /WEB-INF/views directory -->
 	<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">

@@ -642,7 +642,7 @@ var eFrequencyPlannerYn = 'Y';
                         </div>
                         <div class="product_view_detail">
                             <div class="myAssignZone">
-                                <h4><br><span></span></h4>
+                                <h4></h4>
                                 <p class="t1"></p>
                                 <!-- 0531 다정 나만의 푸드로 등록->구매하기로 변경 -->
                                 <div class="myDrink"><a href="javascript:void(0)" role="button" title="구매 및 담기">구매 및 담기</a><!-- 접근성_20171123 role, title 추가 --></div>
@@ -673,7 +673,7 @@ var eFrequencyPlannerYn = 'Y';
                                                         <dd></dd>
                                                     </dl>
                                                 </li>
-                                                <li style="display: none;">
+                                                <li>
                                                     <dl>
                                                         <dt>지방 (g)</dt>
                                                         <dd></dd>
@@ -685,24 +685,19 @@ var eFrequencyPlannerYn = 'Y';
                                                         <dd></dd>
                                                     </dl>
                                                 </li>
-                                                <li style="display: none;">
+                                                <li>
                                                     <dl>
                                                         <dt>트랜스지방 (g)</dt>
                                                         <dd></dd>
                                                     </dl>
                                                 </li>
-                                                <li class="last" style="display: none;">
+                                                <li class="last">
                                                     <dl>
                                                         <dt>콜레스테롤 (mg)</dt>
                                                         <dd></dd>
                                                     </dl>
                                                 </li>
-                                            <li class="last">
-                                                    <dl>
-                                                        <dt>나트륨 (mg)</dt>
-                                                        <dd></dd>
-                                                    </dl>
-                                                </li></ul>
+                                            </ul>
                                             <ul>
                                                 <li>
                                                     <dl>
@@ -710,7 +705,7 @@ var eFrequencyPlannerYn = 'Y';
                                                         <dd></dd>
                                                     </dl>
                                                 </li>
-                                                <li style="display: none;">
+                                                <li>
                                                     <dl>
                                                         <dt>탄수화물 (g)</dt>
                                                         <dd></dd>
@@ -722,7 +717,12 @@ var eFrequencyPlannerYn = 'Y';
                                                         <dd></dd>
                                                     </dl>
                                                 </li>
-                                                
+                                                <li>
+                                                    <dl>
+                                                        <dt>나트륨 (mg)</dt>
+                                                        <dd></dd>
+                                                    </dl>
+                                                </li>
                                             </ul>
                                         </div>
                                         <div class="product_factor">
@@ -800,11 +800,6 @@ var eFrequencyPlannerYn = 'Y';
 						<!-- 160718 수정 end -->
                         <!-- <p class="m_hidden_btn"><a href="/wholecake/reserve_cake01">예약하기</a></p> -->
                         <div class="productView_bottom" style="display: none;">
-                            <p class="tit">관련 제품</p>
-                            <div class="productRel_wrap">
-                                <ul>
-                                </ul>
-                            </div>
                         </div>
 					</div>
 				</div>
@@ -1297,11 +1292,11 @@ var eFrequencyPlannerYn = 'Y';
 				
 			    getDataInfo();
 			});
-		    var $PRODUCT_CD = ${product_cd};//여기바꿈
+		    var $PRODUCT_CD = '${product_cd}';
             
             if(!($PRODUCT_CD) || $PRODUCT_CD == "") {
                 alert("정상적인 접근이 아닙니다.");
-                location.href = "menu/food_list";
+                location.href = "food_list";
             }
 			
 			function getDataInfo() {
@@ -1309,15 +1304,15 @@ var eFrequencyPlannerYn = 'Y';
                         'product_cd' : $PRODUCT_CD,
                         'product_cate' : "food"
                 };
-                __ajaxCall('/menu/productViewAjax', option , true, "JSON", "POST", 
+                __ajaxCall('${pageContext.request.contextPath}/menu/productViewAjax', option , true, "JSON", "POST", 
                 function(data) {
                 	if (typeof data.view === 'undefined' || data.view == null) {
                         alert("조회 불가능한 상품입니다.");
-                        location.href = "menu/food_list";
+                        location.href = "food_list";
                         return;
                     }
 
-                	getFileInfo();
+                	getFileInfo($PRODUCT_CD);
                     //여기바꿈 관련제품 쓸지안쓸지 모름. getPairInfo();
       	            //여기바꿈 프로모션 지움. 스크립트도 찾아지움getPromotion();
                     
@@ -1326,10 +1321,10 @@ var eFrequencyPlannerYn = 'Y';
                 		$(".myDrink").hide();
                 	}
                 	
-                	$('div.myAssignZone > h4')(data.view.product_NM + '<br /><span></span>');
-                    $('div.myAssignZone > h4 > span').text(data.view.product_ENGNM);
-                 	$('div.myAssignZone > .t1')(data.view.content.replace(/\n/gi, '<br />'));
-                    $('div.product_view_wrap2')(data.view.recommend.replace(/\n/gi, '<br />'));
+                	$('div.myAssignZone > h4').append(data.view.product_NM + '<br /><span></span>');
+                    $('div.myAssignZone > h4 > span').append(data.view.product_ENGNM);
+                 	$('div.myAssignZone > .t1').append(data.view.content.replace(/\n/gi, '<br />'));
+                    $('div.product_view_wrap2').append(data.view.recommend.replace(/\n/gi, '<br />'));
                     
                     $('.smap .cate').text(data.view.cate_NAME);
                     $('.smap .this').text(data.view.product_NM);
@@ -1337,21 +1332,21 @@ var eFrequencyPlannerYn = 'Y';
                     
                     // 20200818 베이커리 - 브레드로 변경
                     if(data.view.cate_NAME == "브레드") {
-                        $('.sub_tit_inner > h2')("<img src='//image.istarbucks.co.kr/common/img/menu/tit/food_tit1_bread.png' alt='"+ data.view.cate_NAME+"' />");// 접근성_20171123 alt 추가
+                        $('.sub_tit_inner > h2').append("<img src='//image.istarbucks.co.kr/common/img/menu/tit/food_tit1_bread.png' alt='"+ data.view.cate_NAME+"' />");// 접근성_20171123 alt 추가
                     } else if(data.view.cate_NAME == "케익") {
-                        $('.sub_tit_inner > h2')("<img src='//image.istarbucks.co.kr/common/img/menu/tit/food_tit2.png' alt='"+ data.view.cate_NAME+"' />");// 접근성_20171123 alt 추가
+                        $('.sub_tit_inner > h2').append("<img src='//image.istarbucks.co.kr/common/img/menu/tit/food_tit2.png' alt='"+ data.view.cate_NAME+"' />");// 접근성_20171123 alt 추가
                     } else if(data.view.cate_NAME == "샌드위치&샐러드") {
-                        $('.sub_tit_inner > h2')("<img src='//image.istarbucks.co.kr/common/img/menu/tit/food_tit3.png' alt='"+ data.view.cate_NAME+"' />");// 접근성_20171123 alt 추가
+                        $('.sub_tit_inner > h2').append("<img src='//image.istarbucks.co.kr/common/img/menu/tit/food_tit3.png' alt='"+ data.view.cate_NAME+"' />");// 접근성_20171123 alt 추가
                     } else if(data.view.cate_NAME == "따뜻한 푸드") {
-                        $('.sub_tit_inner > h2')("<img src='//image.istarbucks.co.kr/common/img/menu/tit/food_tit4.png' alt='"+ data.view.cate_NAME+"' />");// 접근성_20171123 alt 추가
+                        $('.sub_tit_inner > h2').append("<img src='//image.istarbucks.co.kr/common/img/menu/tit/food_tit4.png' alt='"+ data.view.cate_NAME+"' />");// 접근성_20171123 alt 추가
                     } else if(data.view.cate_NAME == "과일&요거트") {
-                        $('.sub_tit_inner > h2')("<img src='//image.istarbucks.co.kr/common/img/menu/tit/food_tit5.png' alt='"+ data.view.cate_NAME+"' />");// 접근성_20171123 alt 추가
+                        $('.sub_tit_inner > h2').append("<img src='//image.istarbucks.co.kr/common/img/menu/tit/food_tit5.png' alt='"+ data.view.cate_NAME+"' />");// 접근성_20171123 alt 추가
                     } else if(data.view.cate_NAME == "스낵&미니디저트") {
-                        $('.sub_tit_inner > h2')("<img src='//image.istarbucks.co.kr/common/img/menu/tit/food_tit6.png' alt='"+ data.view.cate_NAME+"' />");// 접근성_20171123 alt 추가
+                        $('.sub_tit_inner > h2').append("<img src='//image.istarbucks.co.kr/common/img/menu/tit/food_tit6.png' alt='"+ data.view.cate_NAME+"' />");// 접근성_20171123 alt 추가
                     } else if(data.view.cate_NAME == "아이스크림") {
-                        $('.sub_tit_inner > h2')("<img src='//image.istarbucks.co.kr/common/img/menu/tit/food_tit7.png' alt='"+ data.view.cate_NAME+"' />");// 접근성_20171123 alt 추가
+                        $('.sub_tit_inner > h2').append("<img src='//image.istarbucks.co.kr/common/img/menu/tit/food_tit7.png' alt='"+ data.view.cate_NAME+"' />");// 접근성_20171123 alt 추가
                     } else if(data.view.cate_NAME == "기타 푸드") {
-                        $('.sub_tit_inner > h2')("<img src='//image.istarbucks.co.kr/common/img/menu/tit/food_tit8.png' alt='"+ data.view.cate_NAME+"' />");// 접근성_20171123 alt 추가
+                        $('.sub_tit_inner > h2').append("<img src='//image.istarbucks.co.kr/common/img/menu/tit/food_tit8.png' alt='"+ data.view.cate_NAME+"' />");// 접근성_20171123 alt 추가
                     }
                     
                     // 영양정보
@@ -1462,11 +1457,12 @@ var eFrequencyPlannerYn = 'Y';
 				return _strVal;
 			}
 			
-            function getFileInfo() {
+            function getFileInfo(product_cd) {
                 var option = {
-                        'PRODUCT_CD' : $PRODUCT_CD
+                        'product_cd' : product_cd,
+                        'product_cate' : "food"
                 };
-                __ajaxCall('/menu/productFileAjax', option , true, "JSON", "POST", 
+                __ajaxCall('${pageContext.request.contextPath}/menu/productFileAjax', option , true, "JSON", "POST", 
                 function(data) {
                     $('.product_thum_wrap > .product_thum').empty();
                     $('#tpl_productFileLi').tmpl(data.file).appendTo($('.product_thum_wrap > .product_thum'));
@@ -1521,53 +1517,6 @@ var eFrequencyPlannerYn = 'Y';
 
                     var ez =   $('.zoomImg').data('elevateZoom');
                     
-                },
-                function() {
-                });
-            }
-            
-            function getPairInfo() {
-            	
-            	$('div.productView_bottom').hide();
-            	
-                var option = {
-                        'PRODUCT_CD' : $PRODUCT_CD
-                };
-                __ajaxCall('/menu/productPairAjax', option , true, "JSON", "POST", 
-                function(data) {
-                	if(data.pair.length > 0) {
-	                    $('div.productView_bottom > div.productRel_wrap > ul').empty();
-	                    $('#tpl_productPairLi').tmpl(data.pair).appendTo($('div.productView_bottom > div.productRel_wrap > ul'));
-	                    
-	                    $('div.productView_bottom').show();
-	                    
-	                    $('div.productView_bottom > div.productRel_wrap > ul a').unbind('click').bind('click', function() {
-                            product_cd = $(this).attr('prod');
-                            f_cate_cd = $(this).attr('cate');
-                            f = document.pairForm;
-
-                            var product_cd = "<input type='hidden' name='product_cd' value='" + product_cd + "'>";
-                            var product_cd2 = "<input type='hidden' name='PRODUCT_CD' value='" + product_cd + "'>";
-                            
-                            if(f_cate_cd == "W0000001") {
-                                f.action = "menu/drink_view";
-                                $(f)(product_cd);
-                            } else if(f_cate_cd == "W0000012") {
-                                f.action = "menu/food_view";
-                                $(f)(product_cd);
-                            } else if(f_cate_cd == "W0000022") {
-                                f.action = "menu/product_view";
-                                $(f)(product_cd);
-                            } else if(f_cate_cd == "W0000057") {
-                                f.action = "coffee/product_view";
-                                $(f)(product_cd2);
-                            } else {
-                                f.action = "menu/drink_view";
-                                $(f)(product_cd);
-                            }
-                            f.submit();
-	                    });
-                	}
                 },
                 function() {
                 });
@@ -1752,7 +1701,7 @@ var eFrequencyPlannerYn = 'Y';
 		
 		// [나만의 음료로 등록]
        	$(".myDrink > a").on("click", function () {
-       		__ajaxCall("interface/checkLogin", {}, true, "json", "post"
+       		__ajaxCall("/starbucks/interface/checkLogin", {}, true, "json", "post"
        			,function (_response) {
        				if (_response.result_code == "SUCCESS") {
        					var drink_title = $('.smap .cate').text();

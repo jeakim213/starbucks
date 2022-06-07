@@ -23,7 +23,7 @@
 <meta property="og:image" content="https://image.istarbucks.co.kr/common/img/kakaotalk.png">
 <meta property="og:description" content="Starbucks">
 
-<title id="titleJoin">롤린 민트 초코 콜드 브루 | Starbucks Korea</title> <!-- 220117 수정 -->
+<title id="titleJoin"></title> <!-- 220117 수정 -->
 <link rel="shortcut icon" href="https://image.istarbucks.co.kr/common/img/common/favicon.ico?v=200828" type="image/ico"> <!-- 20200827 파비콘 교체 및 CDN 변수처리 -->
 <link href="../common/css/reset.css" rel="stylesheet">
 <link href="../common/css/style.css?v=210721" rel="stylesheet">
@@ -526,20 +526,6 @@ var eFrequencyPlannerYn = 'Y';
 							</li>
 						</ul>
 						<ul>
-							<li class="mob_gnb_ttl2" style="display: list-item;"><a role="button" class="en" href="javascript:void(0);">RESPONSIBILITY<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 --></li>
-							<li style="display: none;"><a href="responsibility/index">한눈에 보기</a></li>
-							<li style="display: none;"><a href="responsibility/starbucks_shared_planet">사회공헌 캠페인 소개</a></li> <!-- 20210820 메뉴명 수정 -->
-							<li style="display: none;">
-								<a role="button" href="javascript:void(0);">지역 사회 참여 활동<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 -->
-								<ul>
-									<li style="display: none;"><a href="responsibility/hope_delivery">희망배달 캠페인</a></li>
-									<li style="display: none;"><a href="responsibility/talent_donation">재능기부 카페 소식</a></li>
-									<li style="display: none;"><a href="responsibility/community_store">커뮤니티 스토어</a></li>
-									<li style="display: none;"><a href="responsibility/youth_resource">청년 지원 프로그램</a></li><!-- 202107 메뉴명 수정 -->
-									<li style="display: none;"><a href="responsibility/our_agriculture">우리 농산물 사랑 캠페인</a></li>
-									<li style="display: none;"><a href="responsibility/our_culture_defend">우리 문화 지키기</a></li>
-								</ul>
-							</li>
 							<li style="display: none;">
 								<a role="button" href="javascript:void(0);">환경보호 활동<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 -->
 								<ul>
@@ -685,9 +671,9 @@ var eFrequencyPlannerYn = 'Y';
 							<li><img class="arrow" src="//image.istarbucks.co.kr/common/img/common/icon_arrow.png" alt="하위메뉴"></li>
 							<li><a href="menu/drink_list">음료</a></li>
 							<li><img class="arrow" src="//image.istarbucks.co.kr/common/img/common/icon_arrow.png" alt="하위메뉴"></li>
-							<li><a href="menu/drink_list" class="cate">2022 Summer 1</a></li>
+							<li><a href="menu/drink_list" class="cate"></a></li>
 							<li><img class="arrow" src="//image.istarbucks.co.kr/common/img/common/icon_arrow.png" alt="하위메뉴"></li>
-							<li><a href="javascript:void(0)" class="this">롤린 민트 초코 콜드 브루</a></li>
+							<li><a href="javascript:void(0)" class="this"></a></li>
 						</ul>
 					</div>
 				</div>
@@ -697,7 +683,7 @@ var eFrequencyPlannerYn = 'Y';
 					<div class="product_view_wrap1">
 						<div class="product_view_pic">
 							<div class="product_big_pic">
-								<p><a href="javascript:void(0)" tabindex="-1" aria-hidden="true" role="presentation"><!-- 접근성_20171123 tabindex, aria, role 추가 --><img class="zoomImg" src="https://image.istarbucks.co.kr/upload/store/skuimg/2022/04/[9200000003988]_20220406113215431.jpg" data-zoom-image="https://image.istarbucks.co.kr/upload/store/skuimg/2022/04/[9200000003988]_20220406113215431.jpg" alt="상세이미지"></a></p>
+								<p><a href="javascript:void(0)" tabindex="-1" aria-hidden="true" role="presentation"><!-- 접근성_20171123 tabindex, aria, role 추가 --><img class="zoomImg" src="" data-zoom-image="" alt="상세이미지"></a></p>
 								<p class="more_btn"><a href="javascript:void(0)" tabindex="-1" aria-hidden="true" role="presentation"><img src="//image.istarbucks.co.kr/common/img/menu/more.png" alt="상세이미지"></a><!-- 접근성_20171123 alt 추가 --></p>
 							</div>
 							<div class="product_thum_wrap" id="product_thum_wrap">
@@ -706,11 +692,8 @@ var eFrequencyPlannerYn = 'Y';
 						</div>
 						<div class="product_view_detail">
 							<div class="myAssignZone">
-								<h4>롤린 민트 초코 콜드 브루<br><span>Rollin Mint Choco Cold Brew</span></h4>
-								<p class="t1">스타벅스의 콜드 브루와 은은한 민트 초코 베이스로
-<br>누구나 즐길 수 있는 여름 음료.
-<br>손목의 스냅을 춤을 추듯 가볍게 돌려 음료를 섞어서
-<br>빨대 없이 즐겨 보세요.</p>
+								<h4></h4>
+								<p class="t1"></p>
 								
 								<div class="myDrink"><a href="javascript:void(0)" role="button" title="구매 및 담기">구매 및 담기</a><!-- 접근성_20171123 role, title 추가 --></div>
 								
@@ -733,7 +716,7 @@ var eFrequencyPlannerYn = 'Y';
 											<p class="tit">제품 영양 정보</p>
 											<div class="product_select_wrap2">
 												
-                                                <div class="selectTxt2" id="product_info01">Tall(톨) / 355ml (12 fl oz)</div>
+                                                <div class="selectTxt2" id="product_info01"></div>
                                                 
 												<div class="select_box select_box04" style="display:none;" id="productSelectBox">
 													<label class="value" for="product_info02">일반</label>
@@ -749,31 +732,31 @@ var eFrequencyPlannerYn = 'Y';
                                                 <li class="kcal">
                                                     <dl>
                                                         <dt>1회 제공량 (kcal)</dt>
-                                                        <dd>210</dd>
+                                                        <dd></dd>
                                                     </dl>
                                                 </li>
                                               	<li class="sat_FAT">
                                                     <dl>
                                                         <dt>포화지방 (g)</dt>
-                                                        <dd>4.5</dd>
+                                                        <dd></dd>
                                                     </dl>
                                                 </li>
                                                 <li class="protein">
                                                     <dl>
                                                         <dt>단백질 (g)</dt>
-                                                        <dd>6</dd>
+                                                        <dd></dd>
                                                     </dl>
                                                 </li>
                                                 <li class="fat" style="display:none;">
                                                     <dl>
                                                         <dt>지방 (g)</dt>
-                                                        <dd>7</dd>
+                                                        <dd></dd>
                                                     </dl>
                                                 </li>
                                                 <li class="trans_FAT" style="display:none;">
                                                     <dl>
                                                         <dt>트랜스지방 (g)</dt>
-                                                        <dd>0</dd>
+                                                        <dd></dd>
                                                     </dl>
                                                 </li>
                                                 
@@ -782,37 +765,37 @@ var eFrequencyPlannerYn = 'Y';
                                                 <li class="sodium">
                                                     <dl>
                                                         <dt>나트륨 (mg)</dt>
-                                                        <dd>115</dd>
+                                                        <dd></dd>
                                                     </dl>
                                                 </li>
                                                 <li class="sugars">
                                                     <dl>
                                                         <dt>당류 (g)</dt>
-                                                        <dd>28</dd>
+                                                        <dd></dd>
                                                     </dl>
                                                 </li>
                                                 <li class="caffeine last">
                                                     <dl>
                                                         <dt>카페인 (mg)</dt>
-                                                        <dd>131</dd>
+                                                        <dd></dd>
                                                     </dl>
                                                 </li>
                                                 <li class="cholesterol" style="display:none;">
                                                     <dl>
                                                         <dt>콜레스테롤 (mg)</dt>
-                                                        <dd>15</dd>
+                                                        <dd></dd>
                                                     </dl>
                                                 </li>
                                                 <li class="chabo" style="display:none;">
                                                     <dl>
                                                         <dt>탄수화물 (g)</dt>
-                                                        <dd>30</dd>
+                                                        <dd></dd>
                                                     </dl>
                                                 </li>
                                             </ul>
 										</div>
 										<div class="product_factor">
-											<p>알레르기 유발요인 : 대두 / 우유</p>
+											<p>알레르기 유발요인 : </p>
 										</div>
 										<div class="product_sns_wrap">
 											<ul class="product_sns">
@@ -828,10 +811,7 @@ var eFrequencyPlannerYn = 'Y';
 							</form>
 						</div>
 					</div>
-					<div class="product_view_wrap2">스타벅스의 콜드 브루와 은은한 민트 초코 베이스로
-<br>누구나 즐길 수 있는 여름 음료.
-<br>손목의 스냅을 춤을 추듯 가볍게 돌려 음료를 섞어서
-<br>빨대 없이 즐겨 보세요.</div>
+					<div class="product_view_wrap2"></div>
 					<!-- 제품 상세보기 end -->
 				</div>
 				<!-- 제품 상세보기 하단공통 -->
@@ -1395,7 +1375,7 @@ var eFrequencyPlannerYn = 'Y';
 			    });
 
 			});
-			var $PRODUCT_CD = ${product_cd};
+			var $PRODUCT_CD = '${product_cd}';
 			
 			if(!($PRODUCT_CD) || $PRODUCT_CD == "") {
 				alert("정상적인 접근이 아닙니다.");
@@ -1416,47 +1396,46 @@ var eFrequencyPlannerYn = 'Y';
                         'product_cd' : $PRODUCT_CD,
                         'product_cate' : "drink"
                 };
-                __ajaxCall('/menu/productViewAjax', option , true, "JSON", "POST", 
+                __ajaxCall('${pageContext.request.contextPath}/menu/productViewAjax', option , true, "JSON", "POST", 
                 function(data) {
                 	if (typeof data.view === 'undefined' || data.view == null) {
                 		alert("조회 불가능한 상품입니다.");
-                		location.href = "menu/drink_list";
+                		location.href = "drink_list";
                         return;
                 	}
                 	
-                	getFileInfo();
+                	getFileInfo($PRODUCT_CD);
                     //getPairInfo();
                     //getPromotion();
-                	
-                    $('div.myAssignZone > h4')(data.view.product_NM + '<br /><span></span>');
-                    $('div.myAssignZone > h4 > span').text(data.view.product_ENGNM);
-					$('div.myAssignZone > .t1')(data.view.content.replace(/\n/gi, '<br />'));
-                    $('div.product_view_wrap2')(data.view.recommend.replace(/\n/gi, '<br />'));
+                	$('div.myAssignZone > h4').append(data.view.product_NM + '<br /><span></span>');
+                    $('div.myAssignZone > h4 > span').append(data.view.product_ENGNM);
+					$('div.myAssignZone > .t1').append(data.view.content.replace(/\n/gi, '<br />'));
+                    $('div.product_view_wrap2').append(data.view.recommend.replace(/\n/gi, '<br />'));
                     
                     $('.smap .cate').text(data.view.cate_NAME);
                     $('.smap .this').text(data.view.product_NM);
                     $('#titleJoin').text(data.view.product_NM + " | Starbucks Korea"); //220117 수정
                     
                     if(data.view.cate_NAME == "브루드 커피") {
-                        $('.sub_tit_inner > h2')("<img src='//image.istarbucks.co.kr/common/img/menu/tit/drink_tit1.png' alt='" + data.view.cate_NAME + "' />");
+                        $('.sub_tit_inner > h2').append("<img src='//image.istarbucks.co.kr/common/img/menu/tit/drink_tit1.png' alt='" + data.view.cate_NAME + "' />");
                     } else if(data.view.cate_NAME == "콜드 브루") {
-                        $('.sub_tit_inner > h2')("<img src='//image.istarbucks.co.kr/common/img/menu/tit/drink_tit9.png' alt='" + data.view.cate_NAME + "' />");
+                        $('.sub_tit_inner > h2').append("<img src='//image.istarbucks.co.kr/common/img/menu/tit/drink_tit9.png' alt='" + data.view.cate_NAME + "' />");
                     } else if(data.view.cate_NAME == "에스프레소") {
-                        $('.sub_tit_inner > h2')("<img src='//image.istarbucks.co.kr/common/img/menu/tit/drink_tit2.png' alt='" + data.view.cate_NAME + "' />");
+                        $('.sub_tit_inner > h2').append("<img src='//image.istarbucks.co.kr/common/img/menu/tit/drink_tit2.png' alt='" + data.view.cate_NAME + "' />");
                     } else if(data.view.cate_NAME == "프라푸치노") {
-                        $('.sub_tit_inner > h2')("<img src='//image.istarbucks.co.kr/common/img/menu/tit/drink_tit3.png' alt='" + data.view.cate_NAME + "' />");
+                        $('.sub_tit_inner > h2').append("<img src='//image.istarbucks.co.kr/common/img/menu/tit/drink_tit3.png' alt='" + data.view.cate_NAME + "' />");
                     } else if(data.view.cate_NAME == "블렌디드") {
-                        $('.sub_tit_inner > h2')("<img src='//image.istarbucks.co.kr/common/img/menu/tit/drink_tit4.png' alt='" + data.view.cate_NAME + "' />");
+                        $('.sub_tit_inner > h2').append("<img src='//image.istarbucks.co.kr/common/img/menu/tit/drink_tit4.png' alt='" + data.view.cate_NAME + "' />");
                     } else if(data.view.cate_NAME == "스타벅스 피지오") {
-                        $('.sub_tit_inner > h2')("<img src='//image.istarbucks.co.kr/common/img/menu/tit/drink_tit5.png' alt='" + data.view.cate_NAME + "' />");
+                        $('.sub_tit_inner > h2').append("<img src='//image.istarbucks.co.kr/common/img/menu/tit/drink_tit5.png' alt='" + data.view.cate_NAME + "' />");
                     
                     } else if(data.view.cate_NAME == "티" || data.view.product_CD == '9200000000781' || data.view.product_CD == '9200000000270' || data.view.product_CD == '9200000000267' ) {
-                        $('.sub_tit_inner > h2')("<img src='//image.istarbucks.co.kr/common/img/menu/tit/drink_tit6.png' alt='" + data.view.cate_NAME + "' />");
+                        $('.sub_tit_inner > h2').append("<img src='//image.istarbucks.co.kr/common/img/menu/tit/drink_tit6.png' alt='" + data.view.cate_NAME + "' />");
                         $(".bnr_teavana").show();
                     } else if(data.view.cate_NAME == "기타 제조 음료") {
-                        $('.sub_tit_inner > h2')("<img src='//image.istarbucks.co.kr/common/img/menu/tit/drink_tit7.png' alt='" + data.view.cate_NAME + "' />");
+                        $('.sub_tit_inner > h2').append("<img src='//image.istarbucks.co.kr/common/img/menu/tit/drink_tit7.png' alt='" + data.view.cate_NAME + "' />");
                     } else if(data.view.cate_NAME == "스타벅스 주스(병음료)") {
-                        $('.sub_tit_inner > h2')("<img src='//image.istarbucks.co.kr/common/img/menu/tit/drink_tit8.png' alt='" + data.view.cate_NAME + "' />");
+                        $('.sub_tit_inner > h2').append("<img src='//image.istarbucks.co.kr/common/img/menu/tit/drink_tit8.png' alt='" + data.view.cate_NAME + "' />");
                     }
 
                     // 제품 영양 정보
@@ -1606,11 +1585,12 @@ var eFrequencyPlannerYn = 'Y';
 				return _strVal;
 			}
 			
-            function getFileInfo() {
-                var option = {
-                        'PRODUCT_CD' : $PRODUCT_CD
+            function getFileInfo(product_cd) {
+            	var option = {
+                        'product_cd' : product_cd,
+                        'product_cate' : "drink"
                 };
-                __ajaxCall('/menu/productFileAjax', option , true, "JSON", "POST", 
+                __ajaxCall('${pageContext.request.contextPath}/menu/productFileAjax', option , true, "JSON", "POST", 
                 function(data) {
                     $('.product_thum_wrap > .product_thum').empty();
                     $('#tpl_productFileLi').tmpl(data.file).appendTo($('.product_thum_wrap > .product_thum'));
@@ -1667,56 +1647,6 @@ var eFrequencyPlannerYn = 'Y';
 
                     var ez =   $('.zoomImg').data('elevateZoom');
                     
-                },
-                function() {
-                });
-            }
-            
-            //관련제품 안함
-            function getPairInfo() {
-            	
-            	$('div.productView_bottom').hide();
-            	
-                var option = {
-                        'PRODUCT_CD' : $PRODUCT_CD
-                };
-                __ajaxCall('/menu/productPairAjax', option , true, "JSON", "POST", 
-                function(data) {
-                	if(data.pair.length > 0) {
-	                    $('div.productView_bottom > div.productRel_wrap > ul').empty();
-	                    $('#tpl_productPairLi').tmpl(data.pair).appendTo($('div.productView_bottom > div.productRel_wrap > ul'));
-	                    
-	                    if("9200000000432|9200000000433|9200000000430|9200000000431|9200000000429|9200000000428".indexOf($PRODUCT_CD) < 0){	                    	
-		                    $('div.productView_bottom').show();
-	                    }
-	                    
-	                    $('div.productView_bottom > div.productRel_wrap > ul a').unbind('click').bind('click', function() {
-	                        product_cd = $(this).attr('prod');
-                            f_cate_cd = $(this).attr('cate');
-	                        f = document.pairForm;
-
-	                        var product_cd = "<input type='hidden' name='product_cd' value='" + product_cd + "'>";
-                            var product_cd2 = "<input type='hidden' name='PRODUCT_CD' value='" + product_cd + "'>";
-	                        
-                            if(f_cate_cd == "W0000001") {
-                                f.action = "menu/drink_view";
-                                $(f)(product_cd);
-                            } else if(f_cate_cd == "W0000012") {
-                                f.action = "menu/food_view";
-                                $(f)(product_cd);
-                            } else if(f_cate_cd == "W0000022") {
-                                f.action = "menu/product_view";
-                                $(f)(product_cd);
-                            } else if(f_cate_cd == "W0000057") {
-                                f.action = "coffee/product_view";
-                                $(f)(product_cd2);
-                            } else {
-                                f.action = "menu/drink_view";
-                                $(f)(product_cd);
-                            }
-	                        f.submit();
-	                    });
-                	}
                 },
                 function() {
                 });
@@ -1916,7 +1846,7 @@ var eFrequencyPlannerYn = 'Y';
 		
 		// [나만의 음료로 등록]
        	$(".myDrink > a").on("click", function () {
-       		__ajaxCall("interface/checkLogin", {}, true, "json", "post"
+       		__ajaxCall("/starbucks/interface/checkLogin", {}, true, "json", "post"
        			,function (_response) {
        				if (_response.result_code == "SUCCESS") {
        					var drink_title = $('.smap .cate').text();
@@ -2001,7 +1931,7 @@ var eFrequencyPlannerYn = 'Y';
 	});
        	
 	// "나만의 음료로 등록" 팝업 출력
-    function showPopMyDrink(_drink_title) {
+    function showPopMyDrink(_drink_title) { //종류
     	m_jsonMenuList    = null;
     	m_nMenuListIdx    = null;
     	m_arrCstSkuList   = new Array();
@@ -2012,7 +1942,7 @@ var eFrequencyPlannerYn = 'Y';
        		,"allSearchYn"  : "N"
         };
        		
-       	___ajaxCall("menu/getMsrXoCategoryList", objParam, false, "json", "post"
+       	___ajaxCall("getMsrXoCategoryList", objParam, false, "json", "post"
         	,function(_response) {
        			if (_response.result_code == "SUCCESS") {
        				var jsonData = jQuery.parseJSON(_response.data);
@@ -2955,4 +2885,4 @@ var eFrequencyPlannerYn = 'Y';
 </script>
 	
 
-<div class="zoomContainer" style="-webkit-transform: translateZ(0);position:absolute;left:0px;top:219px;height:470px;width:450px;"><div class="zoomLens" style="background-position: 0px 0px;width: 305px;height: 234px;float: right;display: none;overflow: hidden;z-index: 999;-webkit-transform: translateZ(0);opacity:0.4;filter: alpha(opacity = 40); zoom:1;width:305px;height:234px;background-color:white;cursor:default;border: 1px solid #000;background-repeat: no-repeat;position: absolute;">&nbsp;</div><div class="zoomWindowContainer" style="width: 610px;"><div style="overflow: hidden; background-position: 0px 0px; text-align: center; background-color: rgb(255, 255, 255); width: 610px; height: 468px; float: left; background-size: 900px 940px; display: none; z-index: 100; border: 4px solid rgb(136, 136, 136); background-repeat: no-repeat; position: absolute; background-image: url(&quot;https://image.istarbucks.co.kr/upload/store/skuimg/2022/04/[9200000003988]_20220406113215431.jpg&quot;);" class="zoomWindow">&nbsp;</div></div></div><div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div></div></div></div></body></html>
+<div class="zoomContainer" style="-webkit-transform: translateZ(0);position:absolute;left:0px;top:219px;height:470px;width:450px;"><div class="zoomLens" style="background-position: 0px 0px;width: 305px;height: 234px;float: right;display: none;overflow: hidden;z-index: 999;-webkit-transform: translateZ(0);opacity:0.4;filter: alpha(opacity = 40); zoom:1;width:305px;height:234px;background-color:white;cursor:default;border: 1px solid #000;background-repeat: no-repeat;position: absolute;">&nbsp;</div><div class="zoomWindowContainer" style="width: 610px;"><div style="overflow: hidden; background-position: 0px 0px; text-align: center; background-color: rgb(255, 255, 255); width: 610px; height: 468px; float: left; background-size: 900px 940px; display: none; z-index: 100; border: 4px solid rgb(136, 136, 136); background-repeat: no-repeat; position: absolute; background-image: url(&quot;&quot;);" class="zoomWindow">&nbsp;</div></div></div><div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div></div></div></div></body></html>
