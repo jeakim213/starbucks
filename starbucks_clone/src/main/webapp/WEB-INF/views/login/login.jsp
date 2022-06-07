@@ -18,23 +18,24 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
 <meta property="og:type" content="website">
+
 <meta property="og:title" content="Starbucks">
 <meta property="og:url" content="https://www.starbucks.co.kr/">
 <meta property="og:image" content="https://image.istarbucks.co.kr/common/img/kakaotalk.png">
 <meta property="og:description" content="Starbucks">
 
 <title id="titleJoin">Starbucks Korea</title> <!-- 220117 수정 -->
-<link rel="shortcut icon" href="common/img/common/favicon.ico?v=200828" type="image/ico"> <!-- 20200827 파비콘 교체 및 CDN 변수처리 -->
-<link href="common/css/reset.css" rel="stylesheet">
-<link href="common/css/style.css?v=210721" rel="stylesheet">
-<link href="common/css/jquery.bxslider.css" rel="stylesheet">
-<link href="common/css/idangerous.swiper.css" rel="stylesheet">
-<link href="common/css/idangerous.swiper.scrollbar.css" rel="stylesheet">
-<link href="common/css/jquery.mCustomScrollbar.css" rel="stylesheet">
-<link href="common/css/jquery.scrollbar.css" rel="stylesheet">
-<link href="common/css/jquery-ui.css" rel="stylesheet">
-<link href="common/css/ezmark.css" rel="stylesheet">
-<link href="common/css/style_dt.css?v=20191211" rel="stylesheet"> <!-- 20191211 수정 -->
+<link rel="shortcut icon" href=../common/img/common/favicon.ico?v=200828" type="image/ico"> <!-- 20200827 파비콘 교체 및 CDN 변수처리 -->
+<link href=../common/css/reset.css" rel="stylesheet">
+<link href=../common/css/style.css?v=210721" rel="stylesheet">
+<link href=../common/css/jquery.bxslider.css" rel="stylesheet">
+<link href=../common/css/idangerous.swiper.css" rel="stylesheet">
+<link href=../common/css/idangerous.swiper.scrollbar.css" rel="stylesheet">
+<link href=../common/css/jquery.mCustomScrollbar.css" rel="stylesheet">
+<link href=../common/css/jquery.scrollbar.css" rel="stylesheet">
+<link href=../common/css/jquery-ui.css" rel="stylesheet">
+<link href=../common/css/ezmark.css" rel="stylesheet">
+<link href=../common/css/style_dt.css?v=20191211" rel="stylesheet"> <!-- 20191211 수정 -->
 
 <!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -71,8 +72,8 @@ var eFrequencyPlannerYn = 'Y';
 </script>
 
 
-	<link href="common/css/style_mem.css?v=161014" rel="stylesheet">
-	<link href="common/css/style_util-2.css" rel="stylesheet">
+	<link href=../common/css/style_mem.css?v=161014" rel="stylesheet">
+	<link href=../common/css/style_util-2.css" rel="stylesheet">
 </head>
 <body>
 	<!-- 150827 계정 통합 안내 팝업 추가 - 구명준 -->
@@ -246,7 +247,7 @@ var eFrequencyPlannerYn = 'Y';
 					<!-- 유저인포 -->
 					<div class="user_greet">
 						<div class="user_pic_area">
-							<img alt="사용자 아이디" src="common/img/common/user_pic_sample.jpg">
+							<img alt="사용자 아이디" src="../common/img/common/user_pic_sample.jpg">
 							<p class="msr_user_mask msr_user_mask01"></p>
 							<p class="msr_user_mask msr_user_mask02"></p>
 							<p class="msr_user_mask msr_user_mask03"></p>
@@ -295,13 +296,13 @@ var eFrequencyPlannerYn = 'Y';
 							<img alt="카드이름">
 						</div>
 						<div class="mycard_area2">
-							<img alt="카드이름" src="common/img/common/mycard2.png">
+							<img alt="카드이름" src="../common/img/common/mycard2.png">
 							<p class="num"><!-- 1234-1234-1234-1234 --></p>
 							<p class="barcord"><!-- <img src="/image.istarbucks.co.kr/common/img/common/bacord.png" alt=""> --></p>
 						</div>
 						<div class="mycard_one">
 							<!-- <div class="front"> -->
-							<img src="common/img/common/payment_icon1.png" alt="">
+							<img src="../common/img/common/payment_icon1.png" alt="">
 							<!-- </div> -->
 							<!-- <div class="back"><img src="/image.istarbucks.co.kr/common/img/common/payment_icon1.png" alt=""></div> -->
 						</div>
@@ -316,7 +317,7 @@ var eFrequencyPlannerYn = 'Y';
 					<!-- 일반회원 -->
 					<div class="sb_card_regi">
 						<a href="javascript:void(0);">
-							<p class="icon_add_card" onclick="location.href = '/my/mycard_info_input';"><img alt="카드등록 아이콘" src="common/img/common/icon_add_card.png"></p>
+							<p class="icon_add_card" onclick="location.href = '/my/mycard_info_input';"><img alt="카드등록 아이콘" src="../common/img/common/icon_add_card.png"></p>
 							<p class="sb_card_regi_txt"><strong>스타벅스 카드 등록</strong><br>카드를 등록하시고<br>다양한 리워드를<br>만나보세요.</p>
 						</a>
 					</div>
@@ -763,11 +764,15 @@ var eFrequencyPlannerYn = 'Y';
 									 </p> <!-- 220112 수정 -->
 									
 									<div class="renew_input_box bd_none">
-										<label for="txt_user_id" class="hid">아이디</label><!-- 접근성_20171120 라벨 추가 -->
-										<input class="login_id mb10" id="txt_user_id" name="user_id" type="text" maxlength="20" placeholder="아이디를 입력해 주세요." required="required"><!-- 접근성_20171120 required 추가 -->
+										<label for="txt_user_id" class="hid">아이디</label>
+										<!-- 접근성_20171120 라벨 추가 -->
+										<input class="login_id mb10" id="txt_user_id" name="user_id" type="text" maxlength="20" placeholder="아이디를 입력해 주세요." required="required">
+										<!-- 접근성_20171120 required 추가 -->
 										<p class="limit_txt user_id_txt"></p>
-										<label for="txt_user_pwd" class="hid">비밀번호</label><!-- 접근성_20171120 라벨 추가 -->
-										<input class="login_pw mb10" id="txt_user_pwd" name="user_pwd" type="password" maxlength="20" placeholder="비밀번호를 입력해 주세요." required="required" autocomplete="off"><!-- 접근성_20171120 required 추가 , 20181025_autocomplete="off" 추가 -->
+										<label for="txt_user_pwd" class="hid">비밀번호</label>
+										<!-- 접근성_20171120 라벨 추가 -->
+										<input class="login_pw mb10" id="txt_user_pwd" name="user_pwd" type="password" maxlength="20" placeholder="비밀번호를 입력해 주세요." required="required" autocomplete="off">
+										<!-- 접근성_20171120 required 추가 , 20181025_autocomplete="off" 추가 -->
 										<p class="limit_txt user_pwd_txt"></p>
 										<!-- 접근성_20171120 포커스:  추가 -->
 										<span class="checkWrap">
@@ -775,13 +780,19 @@ var eFrequencyPlannerYn = 'Y';
 											<label for="idRemb">아이디 저장</label>
 										</span>
 										<!-- 접근성_20171120 포커스:  추가 끝 -->
+										<!-- 설아 카카오톡 로그인 추가 -->
+											<a href="https://kauth.kakao.com/oauth/authorize?response_type=code&client_id=ab059dba3e0aaba211e0b759d7ed4e3b&redirect_uri=http://localhost:8085/starbucks/login/login/kakaoLogin&response_type=code">
+											<img src="//k.kakaocdn.net/14/dn/btqCn0WEmI3/nijroPfbpCa4at5EIsjyf0/o.jpg" width="500px" height="60px">
+											</a>
+											<br>
 										<p class="btn_mem_login">
 											<a class="btn_login" href="javascript:void(0);" role="submit">로그인</a><!-- 접근성_20171120 role 추가 -->
 										</p>
 										<p class="input_warn_text t_006633">
 											* 타 사이트와 비밀번호를 동일하게 사용할 경우 도용의 위험이 있으므로, 정기적인 비밀번호 변경을 해주시길 바랍니다.<br>
 											* 스타벅스 코리아의 공식 홈페이지는 Internet Explorer 9.0 이상, Chrome, Firefox, Safari 브라우저에 최적화 되어있습니다.
-										</p> <!-- 220112 수정 -->
+										</p> 
+										<!-- 220112 수정 -->
 									</div>
 									<div class="login_btn_wrap">
 										<ul>
@@ -1006,47 +1017,47 @@ var eFrequencyPlannerYn = 'Y';
 			<!-- footer end -->
 		
 			
-			<script src="common/js/jquery-1.10.2.min.js"></script>
-			<script src="common/js/%40common.js"></script>
-			<script src="common/js/jquery-ui.min.js?v=220207"></script>
-			<script src="common/js/idangerous.swiper-2.1.min.js"></script>
-			<script src="common/js/idangerous.swiper.scrollbar-2.1.js"></script>
-			<script src="common/js/jquery.bxslider.min.js"></script>
-			<script src="common/js/skdslider.min.js"></script>
-			<script src="common/js/jquery.drive.js"></script>
-			<script src="common/js/jquery.easing-1.3.min.js"></script>
-			<script src="common/js/jquery.elevatezoom.js"></script>
-			<script src="common/js/jquery.flip.js"></script>
-			<script src="common/js/jquery.jsmovie.1.4.4.min.js"></script>
-			<script src="common/js/jquery.mCustomScrollbar.concat.js"></script>
-			<script src="common/js/jquery.number.min.js"></script>
-			<script src="common/js/jquery.rotate.2.3.js"></script>
-			<script src="common/js/jquery.scrollbar.js"></script>
-			<script src="common/js/jquery.scrollTo-1.4.2-min.js"></script>
-			<script src="common/js/jquery.superscrollorama.js"></script>						
-			<script src="common/js/jquery.transform2d.js"></script>
-			<script src="common/js/jquery.transform3d.js"></script>			
-			<script src="common/js/greensock/TweenMax.min.js"></script>
-			<script src="common/js/masonry.pkgd.js"></script>
-			<script src="common/js/common.js"></script>
-			<script src="common/js/gnb.js?v=220502"></script>
-			<script src="common/js/header.js?v=200915"></script>
-			<script src="common/js/footer.js?v=210818"></script>
+			<script src="../common/js/jquery-1.10.2.min.js"></script>
+			<script src="../common/js/%40common.js"></script>
+			<script src="../common/js/jquery-ui.min.js?v=220207"></script>
+			<script src="../common/js/idangerous.swiper-2.1.min.js"></script>
+			<script src="../common/js/idangerous.swiper.scrollbar-2.1.js"></script>
+			<script src="../common/js/jquery.bxslider.min.js"></script>
+			<script src="../common/js/skdslider.min.js"></script>
+			<script src="../common/js/jquery.drive.js"></script>
+			<script src="../common/js/jquery.easing-1.3.min.js"></script>
+			<script src="../common/js/jquery.elevatezoom.js"></script>
+			<script src="../common/js/jquery.flip.js"></script>
+			<script src="../common/js/jquery.jsmovie.1.4.4.min.js"></script>
+			<script src="../common/js/jquery.mCustomScrollbar.concat.js"></script>
+			<script src="../common/js/jquery.number.min.js"></script>
+			<script src="../common/js/jquery.rotate.2.3.js"></script>
+			<script src="../common/js/jquery.scrollbar.js"></script>
+			<script src="../common/js/jquery.scrollTo-1.4.2-min.js"></script>
+			<script src="../common/js/jquery.superscrollorama.js"></script>						
+			<script src="../common/js/jquery.transform2d.js"></script>
+			<script src="../common/js/jquery.transform3d.js"></script>			
+			<script src="../common/js/greensock/TweenMax.min.js"></script>
+			<script src="../common/js/masonry.pkgd.js"></script>
+			<script src="../common/js/common.js"></script>
+			<script src="../common/js/gnb.js?v=220502"></script>
+			<script src="../common/js/header.js?v=200915"></script>
+			<script src="../common/js/footer.js?v=210818"></script>
 
-			<script src="common/js/jquery.tmpl.js"></script>
-			<script src="common/js/jquery.tmplPlus.min.js"></script>
-			<script src="common/js/jquery.ezmark.min.js"></script>
+			<script src="../common/js/jquery.tmpl.js"></script>
+			<script src="../common/js/jquery.tmplPlus.min.js"></script>
+			<script src="../common/js/jquery.ezmark.min.js"></script>
 			<!-- <script src="/developers.kakao.com/sdk/js/kakao.min.js"></script> -->
 			
 			<!--
-			<script src="common/js/swiper.jquery.min.js"></script>
-			<script src="common/js/swiper.min.js"></script>
-			<script src="common/js/util.js"></script>
+			<script src="../common/js/swiper.jquery.min.js"></script>
+			<script src="../common/js/swiper.min.js"></script>
+			<script src="../common/js/util.js"></script>
 			-->
 			
 		
-			<script src="common/js/openevent/openevent.js"></script>
-			<script src="common/js/open_event_control.js"></script>
+			<script src="../common/js/openevent/openevent.js"></script>
+			<script src="../common/js/open_event_control.js"></script>
 			<script type="text/javascript">
 				
 				var mrSlider;
@@ -1140,10 +1151,10 @@ var eFrequencyPlannerYn = 'Y';
 								if (location.href.indexOf("my/") > -1) {
 									var url = "my/mycard_none";
 									
-									$('a[data-href="my/mycard_index"]').attr("data-href", url);
-									$('a[data-href="my/mycard"]').attr("data-href", url);
-									$('a[data-href="my/mycard_charge"]').attr("data-href", url);
-									$('a[data-href="my/mycard_lost"]').attr("data-href", url);
+									$('a[data-href="..-my/mycard_index"]').attr("data-href", url);
+									$('a[data-href="..-my/mycard"]').attr("data-href", url);
+									$('a[data-href="..-my/mycard_charge"]').attr("data-href", url);
+									$('a[data-href="..-my/mycard_lost"]').attr("data-href", url);
 								}
 							}
 							
@@ -1255,7 +1266,7 @@ var eFrequencyPlannerYn = 'Y';
                 /* 개인컵 리워드 e */
 			</script>
 
-			<script src="common/js/jquery.transit.min.js"></script>
+			<script src=../common/js/jquery.transit.min.js"></script>
 			<script>
 				// 150805 DOM 수정
 				$('div.msr_card_zone').bind('click', function(){
@@ -1304,11 +1315,11 @@ var eFrequencyPlannerYn = 'Y';
 				});
 			</script>
 		
-		<script src="common/js/common_jhp-1.js?v=161014"></script>
+		<script src=../common/js/common_jhp-1.js?v=161014"></script>
 		<script>
 			m_strTargetUrl = '/edt/expressDtList';
 		</script>
-		<script src="common/js/login/login.js?v=200807"></script>
+		<script src=../common/js/login/login.js?v=200807"></script>
 	</div>
 </body>
 </html>
