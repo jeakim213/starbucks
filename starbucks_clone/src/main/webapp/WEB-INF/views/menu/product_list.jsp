@@ -667,9 +667,9 @@ var eFrequencyPlannerYn = 'Y';
 								<dt class="dt2"><a href="javascript:void(0)" id="themeTab" role="button" title="테마별 상품보기">테마</a><!-- 접근성_20171123 role, title 추가 --></dt>
 								<dd>
 									<ul class="service_bn">
-													<li><a href="javascript:void(0)" role="button"><img src="upload/banner/themebnr/fs8Fa0_20220411135233651.jpg" alt="서머1 프로모션" data-sbseq="W0000417" style="width: 335px; height: 90px"></a></li>
-													<li><a href="javascript:void(0)" role="button"><img src="upload/banner/themebnr/bnr_19_city_menu.jpg" alt="시티 머그 & 텀블러" data-sbseq="W0000071" style="width: 335px; height: 90px"></a></li>
-													<li><a href="javascript:void(0)" role="button"><img src="upload/banner/themebnr/reserve.png" alt="스타벅스 리저브 상품" data-sbseq="W0000037" style="width: 335px; height: 90px"></a></li>
+													<li><a href="javascript:void(0)" role="button"><img src="../upload/banner/themebnr/fs8Fa0_20220411135233651.jpg" alt="서머1 프로모션" data-sbseq="W0000417" style="width: 335px; height: 90px"></a></li>
+													<li><a href="javascript:void(0)" role="button"><img src="../upload/banner/themebnr/bnr_19_city_menu.jpg" alt="시티 머그 & 텀블러" data-sbseq="W0000071" style="width: 335px; height: 90px"></a></li>
+													<li><a href="javascript:void(0)" role="button"><img src="../upload/banner/themebnr/reserve.png" alt="스타벅스 리저브 상품" data-sbseq="W0000037" style="width: 335px; height: 90px"></a></li>
 												
 									</ul>
 								</dd>
@@ -1246,7 +1246,7 @@ var eFrequencyPlannerYn = 'Y';
 				$('.mycard_one').seqfx();
 			</script>
 						
-			<script src='/common/js/makePCookie.js'></script>
+			<script src='../common/js/makePCookie.js'></script>
 		
 			<script>
 				$(document).ready(function () {
@@ -1611,7 +1611,7 @@ var eFrequencyPlannerYn = 'Y';
 	                };
 	                var url = '/menu/productListAjax';
 	    			
-	                   url = '/upload/json/menu/' + cngCateCode + '.js';
+	                   url = '${pageContext.request.contextPath}/upload/json/menu/' + cngCateCode + '.json';
 	                
 	                __ajaxCall(url, option , true, "JSON", "POST",
 	                function(data) {

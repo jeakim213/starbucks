@@ -22,6 +22,8 @@
 		<resources mapping="/fonts/**" location="/resources/common/fonts/" />
 		<resources mapping="/img/**" location="/resources/common/img/" />
 		<resources mapping="/js/**" location="/resources/common/js/" />
+		<resources mapping="/upload/json/store/map/**" location="/resources/upload/json/store/map/" />
+		<resources mapping="/upload/json/store/storelist/**" location="/resources/upload/json/store/storelist/" />
 		<resources mapping="/upload/json/menu/**" location="/resources/upload/json/menu/" />
 		<resources mapping="/upload/banner/**" location="/WEB-INF/views/upload/banner/" />
 		<resources mapping="/upload/common/**" location="/WEB-INF/views/upload/common/" />
