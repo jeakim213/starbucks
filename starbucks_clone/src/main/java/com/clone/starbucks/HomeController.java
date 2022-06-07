@@ -12,6 +12,7 @@ import java.util.Map;
 import java.util.stream.IntStream;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -704,53 +705,53 @@ public class HomeController {
 	}
 	
 	@ResponseBody // step3. 스토어 리스트-예은
-	@PostMapping(value = "upload/json/store/storelist/getStore{code}", produces = "application/json; charset=UTF-8")
-	public String getStore(HttpServletRequest request,@PathVariable String code) throws FileNotFoundException, IOException {
+	   @PostMapping(value = "upload/json/store/storelist/getStore{code}", produces = "application/json; charset=UTF-8")
+	   public String getStore(HttpServletRequest request,@PathVariable String code) throws FileNotFoundException, IOException {
 
-		String sido_cd = request.getParameter("p_sido_cd");
-		String gugun_cd = request.getParameter("p_gugun_cd");
-		
-		
-		String mappingPath = "upload/json/store/storelist/getStore_"+sido_cd+".json";
-		
-		
-		ClassPathResource resource = new ClassPathResource(mappingPath);
-		FileReader reader = new FileReader(resource.getFile());
-		Gson gson = new Gson();
-		JsonObject obj = gson.fromJson(reader,JsonObject.class);
-		//System.out.println(obj.size());
-		String key_nm = "list";
-		String ggg = "gugun_code";
-		JsonElement list = obj.get(key_nm);
-		JsonArray arr = list.getAsJsonArray();
-		System.out.println(arr.toString());
-		
-		JsonObject result = new JsonObject();
-		
-		result.add("list", list);
-	
-		return result.toString();
-
-	}
-	
-	@ResponseBody // 나와 어울리는 커피 찾기 - 다정 Ajax
-	   @PostMapping(value = "coffee/getCoffeeFinderAjax", produces = "application/json; charset=UTF-8")
-	   public String getCoffeeFinder(HttpServletRequest request) throws FileNotFoundException, IOException {
-	      //0606 다정
-	      String COFFEE_TASTE1 = request.getParameter("COFFEE_TASTE1");
-	      String COFFEE_FEEL = request.getParameter("COFFEE_FEEL");
-	      String COFFEE_INTEN = request.getParameter("COFFEE_INTEN");
-	      String cate_cd = request.getParameter(COFFEE_TASTE1+"-"+COFFEE_FEEL+"-"+COFFEE_INTEN);
-	      String mappingPath = "upload/json/coffee/.json";
+	      String sido_cd = request.getParameter("p_sido_cd");
+	      String gugun_cd = request.getParameter("p_gugun_cd");
+	      
+	      
+	      String mappingPath = "upload/json/store/storelist/getStore_"+sido_cd+".json";
+	      
+	      
 	      ClassPathResource resource = new ClassPathResource(mappingPath);
 	      FileReader reader = new FileReader(resource.getFile());
 	      Gson gson = new Gson();
-	      JsonObject obj = gson.fromJson(reader, JsonObject.class);
+	      JsonObject obj = gson.fromJson(reader,JsonObject.class);
+	      //System.out.println(obj.size());
+	      String key_nm = "list";
+	      String ggg = "gugun_code";
+	      JsonElement list = obj.get(key_nm);
+	      JsonArray arr = list.getAsJsonArray();
+	      
+	      
 	      JsonObject result = new JsonObject();
-	      JsonElement cate = obj.get(cate_cd);
-	      result.add("cate", cate);
+	      
+	      result.add("list", list);
+	   
 	      return result.toString();
+
 	   }
+	
+	@ResponseBody // 나와 어울리는 커피 찾기 - 다정 Ajax
+	@PostMapping(value = "coffee/getCoffeeFinderAjax", produces = "application/json; charset=UTF-8")
+	public String getCoffeeFinder(HttpServletRequest request) throws FileNotFoundException, IOException {
+		//0606 다정
+		String COFFEE_TASTE1 = request.getParameter("COFFEE_TASTE1");
+		String COFFEE_FEEL = request.getParameter("COFFEE_FEEL");
+		String COFFEE_INTEN = request.getParameter("COFFEE_INTEN");
+		String cate_cd = request.getParameter(COFFEE_TASTE1+"-"+COFFEE_FEEL+"-"+COFFEE_INTEN);
+		String mappingPath = "upload/json/coffee/.json";
+		ClassPathResource resource = new ClassPathResource(mappingPath);
+		FileReader reader = new FileReader(resource.getFile());
+		Gson gson = new Gson();
+		JsonObject obj = gson.fromJson(reader, JsonObject.class);
+		JsonObject result = new JsonObject();
+		JsonElement cate = obj.get(cate_cd);
+		result.add("cate", cate);
+		return result.toString();
+	}
 	
 }
 
