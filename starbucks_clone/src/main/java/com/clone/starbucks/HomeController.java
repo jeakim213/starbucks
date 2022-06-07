@@ -706,15 +706,20 @@ public class HomeController {
 		FileReader reader = new FileReader(resource.getFile());
 		Gson gson = new Gson();
 		JsonObject obj = gson.fromJson(reader, JsonObject.class);
-<<<<<<< HEAD
-		return obj.toString();
+		JsonObject result = new JsonObject();
+		JsonElement cd = obj.get(gugun_cd);
+		result.add("list", cd);
+		return result.toString();
 	}
 	
 	@ResponseBody // 나와 어울리는 커피 찾기 - 다정 Ajax
 	@PostMapping(value = "coffee/getCoffeeFinderAjax", produces = "application/json; charset=UTF-8")
 	public String getCoffeeFinder(HttpServletRequest request) throws FileNotFoundException, IOException {
 		//0606 다정
-		String cate_cd = request.getParameter("${COFFEE_TASTE1}-${COFFEE_FEEL}-${COFFEE_INTEN}");
+		String COFFEE_TASTE1 = request.getParameter("COFFEE_TASTE1");
+		String COFFEE_FEEL = request.getParameter("COFFEE_FEEL");
+		String COFFEE_INTEN = request.getParameter("COFFEE_INTEN");
+		String cate_cd = request.getParameter(COFFEE_TASTE1+"-"+COFFEE_FEEL+"-"+COFFEE_INTEN);
 		String mappingPath = "upload/json/coffee/.json";
 		ClassPathResource resource = new ClassPathResource(mappingPath);
 		FileReader reader = new FileReader(resource.getFile());
@@ -723,13 +728,6 @@ public class HomeController {
 		JsonObject result = new JsonObject();
 		JsonElement cate = obj.get(cate_cd);
 		result.add("cate", cate);
-		
-=======
-		
-		JsonObject result = new JsonObject();
-		JsonElement cd = obj.get(gugun_cd);
-		result.add("list", cd);
->>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
 		return result.toString();
 	}
 	
