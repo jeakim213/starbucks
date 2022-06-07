@@ -6,13 +6,13 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+
 import java.util.Locale;
 import java.util.Map;
 import java.util.stream.IntStream;
 
 import javax.servlet.http.HttpServletRequest;
 
-import org.apache.ibatis.annotations.Mapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.core.io.ClassPathResource;
@@ -22,14 +22,12 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
 
 /**
  * Handles requests for the application home page.
@@ -148,11 +146,6 @@ public class HomeController {
 	@RequestMapping(value = "coffee/productFinder")
 	public String productFinder() {
 		return "coffee/productFinder";
-	}
-	
-	@RequestMapping(value="coffee/productFinderView")
-	public String productFinderView() {
-		return "coffee/productFinderView";
 	}
 
 	// footer/co_sales
@@ -565,9 +558,10 @@ public class HomeController {
 
 	// ajax
 	@ResponseBody // 로그인 확인-지혜
-	@PostMapping(value = "interface/checkLogin", produces = "application/json; charset=UTF-8")
+	@PostMapping(value = "**/interface/checkLogin", produces = "application/json; charset=UTF-8")
 	public String checkLogin() {
-		//옵션 없음.
+		JsonObject obj = new JsonObject();
+		obj.addProperty("result_code", "SUCCESS");
 //		{
 //		    "result_code": "FAIL",
 //		    "error_msg": "",
@@ -579,7 +573,7 @@ public class HomeController {
 //		    "data": null,
 //		    "result_api_code": ""
 //		}
-		return "";
+		return obj.toString();
 	}
 	
 	@ResponseBody //메뉴list-지혜
@@ -649,12 +643,12 @@ public class HomeController {
 //		"categoryType" : "01",
 //		"allSearchYn"  : "N"
 		String product_cd = request.getParameter("product_cd");
-		String mappingPath = "upload/json/menu/detail/.json";
-		ClassPathResource resource = new ClassPathResource(mappingPath);
-		FileReader reader = new FileReader(resource.getFile());
-		Gson gson = new Gson();
-		JsonObject obj = gson.fromJson(reader, JsonObject.class);
-		return obj.toString();
+//		String mappingPath = "upload/json/menu/detail/.json";
+//		ClassPathResource resource = new ClassPathResource(mappingPath);
+//		FileReader reader = new FileReader(resource.getFile());
+//		Gson gson = new Gson();
+//		JsonObject obj = gson.fromJson(reader, JsonObject.class);
+		return "";
 	}
 	
 	@ResponseBody // 나만의 음료 등록하기-지혜
@@ -736,18 +730,25 @@ public class HomeController {
 		result.add("list", list);
 	
 		return result.toString();
+
 	}
 	
 	@ResponseBody // 나와 어울리는 커피 찾기 - 다정 Ajax
-	@PostMapping(value = "menu/getCoffeeFinder", produces = "application/json; charset=UTF-8")
+	@PostMapping(value = "coffee/getCoffeeFinderAjax", produces = "application/json; charset=UTF-8")
 	public String getCoffeeFinder(HttpServletRequest request) throws FileNotFoundException, IOException {
-		String product_cd = request.getParameter("product_cd");
+		//0606 다정
+		String cate_cd = request.getParameter("${COFFEE_TASTE1}-${COFFEE_FEEL}-${COFFEE_INTEN}");
 		String mappingPath = "upload/json/coffee/.json";
 		ClassPathResource resource = new ClassPathResource(mappingPath);
 		FileReader reader = new FileReader(resource.getFile());
 		Gson gson = new Gson();
 		JsonObject obj = gson.fromJson(reader, JsonObject.class);
-		return obj.toString();
+		JsonObject result = new JsonObject();
+		JsonElement cate = obj.get(cate_cd);
+		result.add("cate", cate);
+		
+
+		return result.toString();
 	}
 	
 	

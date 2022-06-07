@@ -984,7 +984,7 @@
         								,"storeName"    : name
         							};
         						
-        							var url = "/planner/getPlannerLeftCount.do";
+        							var url = "${pageContext.request.contextPath}/planner/getPlannerLeftCount.do";
         							
         							___ajaxCall(url, objParam, false, "json", "post"
         								,function (data) {
