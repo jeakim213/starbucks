@@ -1701,7 +1701,7 @@ var eFrequencyPlannerYn = 'Y';
 		
 		// [나만의 음료로 등록]
        	$(".myDrink > a").on("click", function () {
-       		__ajaxCall("interface/checkLogin", {}, true, "json", "post"
+       		__ajaxCall("/starbucks/interface/checkLogin", {}, true, "json", "post"
        			,function (_response) {
        				if (_response.result_code == "SUCCESS") {
        					var drink_title = $('.smap .cate').text();

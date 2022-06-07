@@ -696,8 +696,9 @@ var eFrequencyPlannerYn = 'Y';
 				<div class="productFinder_list_view">
 					<section class="cf_productFinder_wrap">								
 						<article class="cf_productFinder_inner">
+						<!-- 아마 이 부분 지워야할지도 -->
 							<div class="cf_productFinder_pic">
-								<p><img src="https://image.istarbucks.co.kr/upload/store/skuimg/2015/07/[11017024]_20150722231936118.jpg" alt="에스프레소 로스트 250g" prcd="11017024"></p>
+								<p></p>
 							</div> 
 							<div class="cf_productFinder_ditail">
 								<h3>에스프레소 로스트 250g<br><span></span></h3>
@@ -710,6 +711,7 @@ var eFrequencyPlannerYn = 'Y';
 								</p>
 								<p class="text">풍부하고 조화로운 느낌으로 스타벅스 에스프레소 음료의 기본이 되는 커피</p> 
 							</div>
+						<!-- 지워 -->
 						</article>					
 					</section>					
 				</div>
@@ -1207,13 +1209,41 @@ var eFrequencyPlannerYn = 'Y';
 		<script src="../common/js/jquery.ezmark.min.js"></script>		
 		<script type="text/javascript">
 			var pa = {
-					COFFEE_TASTE1 : "20",
-					COFFEE_FEEL : "20",
-					COFFEE_INTEN : "20"
+					//지워야함 0606 다정
+					COFFEE_TASTE1 : "${COFFEE_TASTE1}",
+					COFFEE_FEEL : "${COFFEE_FEEL}",
+					COFFEE_INTEN : "${COFFEE_INTEN}"
 			}
 			
 		</script>
-		<script src="../common/js/coffee/myCoffeeChoice.js"></script>
+		
+		<!-- 0606 다정 -->
+		<script type="text/javascript">
+		var $PRODUCT_CD = '${product_cd}';
+		function myCoffeeChoice(){
+			var option = {
+					'product_cd' : $PRODUCT_CD
+			};
+			
+			__ajaxCall(${pageContext.request.contextPath}/menu/productViewAjax', option , true, "JSON", "POST", 
+			function(data) {
+            	if (typeof data.view === 'undefined' || data.view == null) {
+            		alert("조회 불가능한 상품입니다.");
+            		location.href = "productFinder";
+                    return;
+            	}
+           	//<img src="https://image.istarbucks.co.kr/upload/store/skuimg/2015/07/[11017024]_20150722231936118.jpg" alt="에스프레소 로스트 250g" prcd="11017024">
+			$('div.cf_productFinder_pic > p').append('<img src="'+data.view.file_PATH+'" alt="'+data.view.product_NM +'" prcd="'+ $PRODUCT_CD+'">');
+			$('div.cf_productFinder_pic > .title').append(data.view.recommend);
+			$('div.cf_productFinder_pic > .text').append(data.view.content);
+			
+			
+			);
+		
+		}
+		</script>
+		
+		<!-- <script src="../common/js/coffee/myCoffeeChoice.js"></script> -->
 		<script>
 			$(document).ready(function(){
 				

@@ -1652,56 +1652,6 @@ var eFrequencyPlannerYn = 'Y';
                 });
             }
             
-            //관련제품 안함
-            function getPairInfo() {
-            	
-            	$('div.productView_bottom').hide();
-            	
-                var option = {
-                        'PRODUCT_CD' : $PRODUCT_CD
-                };
-                __ajaxCall('/menu/productPairAjax', option , true, "JSON", "POST", 
-                function(data) {
-                	if(data.pair.length > 0) {
-	                    $('div.productView_bottom > div.productRel_wrap > ul').empty();
-	                    $('#tpl_productPairLi').tmpl(data.pair).appendTo($('div.productView_bottom > div.productRel_wrap > ul'));
-	                    
-	                    if("9200000000432|9200000000433|9200000000430|9200000000431|9200000000429|9200000000428".indexOf($PRODUCT_CD) < 0){	                    	
-		                    $('div.productView_bottom').show();
-	                    }
-	                    
-	                    $('div.productView_bottom > div.productRel_wrap > ul a').unbind('click').bind('click', function() {
-	                        product_cd = $(this).attr('prod');
-                            f_cate_cd = $(this).attr('cate');
-	                        f = document.pairForm;
-
-	                        var product_cd = "<input type='hidden' name='product_cd' value='" + product_cd + "'>";
-                            var product_cd2 = "<input type='hidden' name='PRODUCT_CD' value='" + product_cd + "'>";
-	                        
-                            if(f_cate_cd == "W0000001") {
-                                f.action = "menu/drink_view";
-                                $(f)(product_cd);
-                            } else if(f_cate_cd == "W0000012") {
-                                f.action = "menu/food_view";
-                                $(f)(product_cd);
-                            } else if(f_cate_cd == "W0000022") {
-                                f.action = "menu/product_view";
-                                $(f)(product_cd);
-                            } else if(f_cate_cd == "W0000057") {
-                                f.action = "coffee/product_view";
-                                $(f)(product_cd2);
-                            } else {
-                                f.action = "menu/drink_view";
-                                $(f)(product_cd);
-                            }
-	                        f.submit();
-	                    });
-                	}
-                },
-                function() {
-                });
-            }
-            
 		</script>
         <script type="text/x-jquery-tmpl" id="tpl_productFileLi">
             <li><a href="javascript:void(0)" data-image="\${img_UPLOAD_PATH.replace("www", "image")}\${file_PATH}" data-zoom-image="\${img_UPLOAD_PATH.replace("www", "image")}\${file_PATH}" class="elevatezoom-gallery"><img src="\${img_UPLOAD_PATH.replace("www", "image")}\${file_PATH}" alt="상세이미지 \${img_ORDER}번"></a></li>
@@ -1896,7 +1846,7 @@ var eFrequencyPlannerYn = 'Y';
 		
 		// [나만의 음료로 등록]
        	$(".myDrink > a").on("click", function () {
-       		__ajaxCall("interface/checkLogin", {}, true, "json", "post"
+       		__ajaxCall("/starbucks/interface/checkLogin", {}, true, "json", "post"
        			,function (_response) {
        				if (_response.result_code == "SUCCESS") {
        					var drink_title = $('.smap .cate').text();
@@ -1981,7 +1931,7 @@ var eFrequencyPlannerYn = 'Y';
 	});
        	
 	// "나만의 음료로 등록" 팝업 출력
-    function showPopMyDrink(_drink_title) {
+    function showPopMyDrink(_drink_title) { //종류
     	m_jsonMenuList    = null;
     	m_nMenuListIdx    = null;
     	m_arrCstSkuList   = new Array();
@@ -1992,7 +1942,7 @@ var eFrequencyPlannerYn = 'Y';
        		,"allSearchYn"  : "N"
         };
        		
-       	___ajaxCall("menu/getMsrXoCategoryList", objParam, false, "json", "post"
+       	___ajaxCall("getMsrXoCategoryList", objParam, false, "json", "post"
         	,function(_response) {
        			if (_response.result_code == "SUCCESS") {
        				var jsonData = jQuery.parseJSON(_response.data);
