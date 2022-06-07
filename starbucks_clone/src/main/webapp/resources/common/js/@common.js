@@ -252,7 +252,6 @@ function kakaoTalkShare( param ){
 function __ajaxCall(url, param, async, responseType, method, success, failed){
     //var token = $("meta[name='_csrf']").attr("content");
     //var header = $("meta[name='_csrf_header']").attr("content");
-	var url = '${pageContext.request.contextPath}' + url_begin;
     var isRandom = Math.random();
     param.rndCod = randomString();
 

@@ -748,7 +748,7 @@ var eFrequencyPlannerYn = 'Y';
 				<!-- 내용 -->
 				<div class="find_mem_wrap mem_wrap2"><!-- jsp 수정 : 클래스명 추가 -->
 					<!-- 20160804 수정 -->
-					<div class="find_mem_inner" style="margin:auto">
+					<div class="find_mem_inner" style="margin:auto; width:500px;">
 						
 						<form id="frmLogin" action="login/login_proc" method="post">
 							<fieldset>
@@ -781,7 +781,7 @@ var eFrequencyPlannerYn = 'Y';
 										<!-- 접근성_20171120 포커스:  추가 끝 -->
 										<!-- 설아 카카오톡 로그인 추가 -->
 											<a href="https://kauth.kakao.com/oauth/authorize?response_type=code&client_id=ab059dba3e0aaba211e0b759d7ed4e3b&redirect_uri=http://localhost:8085/starbucks/login/login/kakaoLogin&response_type=code">
-											<img src="//k.kakaocdn.net/14/dn/btqCn0WEmI3/nijroPfbpCa4at5EIsjyf0/o.jpg" width="500px" height="60px">
+											<img src="../common/img/login/o.jpg" width="500px" height="60px" style="border-radius: 5px;">
 											</a>
 											<br>
 										<p class="btn_mem_login">
