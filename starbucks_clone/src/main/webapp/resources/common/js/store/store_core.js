@@ -463,8 +463,6 @@
         {
         	
         	
-        	
-        	
         	if ( $search.search_text == "")
         	{
         		if ( $search.p_sido_cd != "" ||  $search.p_sido_cd != "" )
@@ -531,6 +529,7 @@
     		
     		
     		$.each($option, function(index,value){
+			
     			if ( value )
     			{
     				$search[index] = 1;
@@ -583,27 +582,30 @@
 				}
 			}
 			
+			
 			/** ajax 캐시문제를 해결하기 **/
 			var ctx = getContextPath();
 			 			function getContextPath() {
 			 			return sessionStorage.getItem("contextpath");
 			}
- 
-
- 
+ 		
+ 	
 			var rndCod = randomString();
-			var storeInterfaceUrl = ctx + "/upload/json/store/storelist/getStore_?r="+rndCod;
+			var storeInterfaceUrl = ctx + '/upload/json/store/storelist/getStore?r='+rndCod;
+			
+			__ajaxCall( storeInterfaceUrl, $search , true, "JSON", "POST",
 					
-			__ajaxCall( storeInterfaceUrl ,$search, true, "JSON", "POST",
 					function (_response) 
 					{
+						
 						var $offset = { x:0 , y:0	};
 						var $image  = {};
 							$image.store 	= $pin.store;
 							$image.reserve 	= $pin.reserve;
+						
 						$.storemap.createMapContents(_response.list, $image, $offset, $search);
-						
-						
+											
+					
 						if ( _response.list.length > 0 )
 						{
 							if ( $page == "reserve")
@@ -634,7 +636,9 @@
 							if ( $page == "nitro_cold_brew")
 							{
 								$(".nitro_coldbrew_cnt").html( _response.list.length);
-							}							
+							}
+							
+													
 						}
 			        }
 					, 
@@ -713,33 +717,33 @@
 							if ( y.theme_state.indexOf("T01") > -1 && y.theme_state.indexOf("T03") > -1 )	//해당 매장이 리저브DT라면
 							{
 								$paramOption.makerClass = "pin_reserveDT";
-								$paramOption.image = cdn_domain+"../common/img/store/pin/pin_reserve_DT.png?v=210802";   
+								$paramOption.image = "../common/img/store/pin/pin_reserve_DT.png?v=210802";   
 							}
 							else if ( y.theme_state.indexOf("T03") > -1 )	//해당 매장이 리저브라면
 							{
 								$paramOption.makerClass = "pin_reserve";
-								$paramOption.image = cdn_domain+"../common/img/store/pin/pin_reserve.png?v=210802";   
+								$paramOption.image = "../common/img/store/pin/pin_reserve.png?v=210802";   
 							}
 							else if ( y.theme_state.indexOf("T01") > -1 )	//해당 매장이 DT라면
 							{
 								$paramOption.makerClass = "pin_generalDT";
-								$paramOption.image = cdn_domain+"../common/img/store/pin/pin_general_DT.png";   
+								$paramOption.image = "../common/img/store/pin/pin_general_DT.png";   
 							}
 							else if ( y.theme_state.indexOf("T27") > -1 )	//[픽업존 관리시스템 개선] 워크스루 아이콘 추가
 							{
 								$paramOption.makerClass = "pin_generalWT";
-								$paramOption.image = cdn_domain+"../upload/common/img/icon/pin_general_wt.png";
+								$paramOption.image = "../upload/common/img/icon/pin_general_wt.png";
 							}
 	    					else
 	    					{
 	    						$paramOption.makerClass = "pin_general";
-	    						$paramOption.image = cdn_domain+"../common/img/store/pin/pin_general.png";        							
+	    						$paramOption.image = "../common/img/store/pin/pin_general.png";        							
 	    					}
     					}
     					else
     					{
     						$paramOption.makerClass = "pin_general";
-    						$paramOption.image = cdn_domain+"../common/img/store/pin/pin_general.png";        							
+    						$paramOption.image = "../common/img/store/pin/pin_general.png";        							
     					}
 
     		    		$paramOption.lat = y.lat;
@@ -833,7 +837,7 @@
     					{
         					var iLstBox =  '';
         					
-
+						
         					iLstBox += '<li class="quickResultLstCon" style="background:#fff" data-lat="'+y.lat+'" data-long="'+y.lot+'" data-index="'+x+'" data-name="'+y.s_name+'" data-code="'+y.s_biz_code+'" data-storecd="'+y.s_code+'" data-hlytag="'+y.hlytag+'" >';
         					
         					var hlytagMsg = "";
@@ -877,7 +881,6 @@
         					iLstBox += '	<i class="'+$paramOption.makerClass+'">리저브 매장 2번</i>';
         					iLstBox += '</li>';
         					//quickSearchResultBoxSidoGugun
-        					
         					
         					if ( $vo.searchType == "C")
         					{
@@ -1250,16 +1253,16 @@
         	var tempGugun 	= '<li><a href="javascript:void(0);" class="set_gugun_cd_btn" data-sidocd="${$item.isSidoCD()}" data-sidonm="${$item.isSidoNM()}" data-guguncd="${gugun_cd}">${gugun_nm}</a></li>';
         	$.template( "sidoUiCtrl", tempSido );
         	$.template( "gugunUiCtrl", tempGugun );
-        	
+        
         	var ctx = getContextPath();
  			function getContextPath() {
- 			return sessionStorage.getItem("contextpath");
-}
+ 				return sessionStorage.getItem("contextpath");
+			}
  
 			__ajaxCall(ctx + "/upload/json/store/map/getSidoList", {}, true, "JSON", "POST",
 					function (_response) 
 					{
-
+						
         				if ( _response.list.length > 0 )
         				{
         					$(".sido_arae_box").html("");

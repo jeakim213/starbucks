@@ -3,8 +3,12 @@ package com.clone.starbucks;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
+import java.util.Map;
+import java.util.stream.IntStream;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -698,7 +702,6 @@ public class HomeController {
 		FileReader reader = new FileReader(resource.getFile());
 		Gson gson = new Gson();
 		JsonObject obj = gson.fromJson(reader, JsonObject.class);
-		
 		JsonObject result = new JsonObject();
 		JsonElement cd = obj.get(sido_nm);
 		result.add("list", cd);
@@ -707,18 +710,31 @@ public class HomeController {
 	}
 	
 	@ResponseBody // step3. 스토어 리스트-예은
-	@PostMapping(value = "upload/json/store/storelist/{path}", produces = "application/json; charset=UTF-8")
-	public String getStore(@PathVariable("path") String path, HttpServletRequest request) throws FileNotFoundException, IOException {
-		String gugun_cd = request.getParameter("gugun_code");
-		String mappingPath = "upload/json/store/storelist/.json";
+	@PostMapping(value = "upload/json/store/storelist/getStore{code}", produces = "application/json; charset=UTF-8")
+	public String getStore(HttpServletRequest request,@PathVariable String code) throws FileNotFoundException, IOException {
+
+		String sido_cd = request.getParameter("p_sido_cd");
+		String gugun_cd = request.getParameter("p_gugun_cd");
+		
+		
+		String mappingPath = "upload/json/store/storelist/getStore_"+sido_cd+".json";
+		
+		
 		ClassPathResource resource = new ClassPathResource(mappingPath);
 		FileReader reader = new FileReader(resource.getFile());
 		Gson gson = new Gson();
-		JsonObject obj = gson.fromJson(reader, JsonObject.class);
+		JsonObject obj = gson.fromJson(reader,JsonObject.class);
+		//System.out.println(obj.size());
+		String key_nm = "list";
+		String ggg = "gugun_code";
+		JsonElement list = obj.get(key_nm);
+		JsonArray arr = list.getAsJsonArray();
+		System.out.println(arr.toString());
 		
 		JsonObject result = new JsonObject();
-		JsonElement cd = obj.get(gugun_cd);
-		result.add("list", cd);
+		
+		result.add("list", list);
+	
 		return result.toString();
 	}
 	
@@ -736,3 +752,4 @@ public class HomeController {
 	
 	
 }
+
