@@ -754,7 +754,7 @@ var eFrequencyPlannerYn = 'Y';
 								</figure>
 								
 									
-										<a class="btn_detail" href="msr/scard/about" target="_blank">자세히 보기</a>
+										<a class="btn_detail" href="#" target="">자세히 보기</a>
 									
 									
 								
@@ -1154,9 +1154,9 @@ var eFrequencyPlannerYn = 'Y';
 		
 			<script src="//image.istarbucks.co.kr/common/js/openevent/openevent.js"></script>
 			<script src="//image.istarbucks.co.kr/common/js/open_event_control.js"></script>
-			<script type="text/javascript">
-				
-				var mrSlider;
+			<script type="text/javascript"></script>
+				<!-- 이단 -->
+				<!-- var mrSlider;
 				
 				$(document).ready(function(){
 					/* 20171204 kbs 페이지별 head 내 title 변경 */
@@ -1324,7 +1324,7 @@ var eFrequencyPlannerYn = 'Y';
                                      	jsonp : 'callback',
                                      	async : false,
                                      	success : function(_response){
-                                     		if (_response.result_code == "SUCCESS") {
+                                `     		if (_response.result_code == "SUCCESS") {
 												m_jsonRewardSummary = jQuery.parseJSON(_response.data);
 												fn_showrewardTumblerMsrCheckPopup(m_jsonRewardSummary);
 											}
@@ -1359,8 +1359,8 @@ var eFrequencyPlannerYn = 'Y';
                     $('#msrCheckPop_rewardTumblerContents').hide();
                     $('#tumblerPopConfirmBtn, #tumblerPopCancelBtn').hide();
                 });
-                /* 개인컵 리워드 e */
-			</script>
+                /* 개인컵 리워드 e */ -->
+			
 
 			<script src="//image.istarbucks.co.kr/common/js/jquery.transit.min.js"></script>
 			<script>
@@ -1540,13 +1540,13 @@ var eFrequencyPlannerYn = 'Y';
 		var option = {};
 		
 		$(document).ready(function () {
-			
-			// 카드 이용약관, 개인정보 이용동의 불러오기
+			//이단
+			/* // 카드 이용약관, 개인정보 이용동의 불러오기
 			setClause("card_text", "CARD", "Y");
 			setClause("private_text", "STB4010", "Y");
 			
 			//카드 등록 이벤트 정보 조회
-			fn_getMsrCardRegEvent({}, function(_response){
+		fn_getMsrCardRegEvent({}, function(_response){
 				var jsonData = jQuery.parseJSON(_response.data);
 				
 				for (var i = 0; i < jsonData.eventList.length; i++) {
@@ -1557,7 +1557,7 @@ var eFrequencyPlannerYn = 'Y';
 						break;
 					}
 				}
-			});
+			}); */
 			
 			fn_starCodeRegEvent(); //스타쿠폰 등록 이벤트
 			
@@ -1656,8 +1656,8 @@ var eFrequencyPlannerYn = 'Y';
 			
 		});
 		
-		
-		function setClause(elementById, clauseType, clauseYn) {
+		//이단
+		/* function setClause(elementById, clauseType, clauseYn) {
 			var objParam = {
 				"reqClientType" : "WEB",
 				"clause_type" : clauseType,
@@ -1673,7 +1673,7 @@ var eFrequencyPlannerYn = 'Y';
 						}
 					}, function(_error) {
 					});
-		}
+		} */
 		
 		
 		function fn_showMessage(msgType, title, message, gubun, idx){
@@ -1959,9 +1959,9 @@ var eFrequencyPlannerYn = 'Y';
 			var objParam = {
 				cardNumber : cardNumber
 			};
-			
+			//이단
 			//카드 등록 이벤트 정보 조회
-			fn_getMsrCardRegEvent(objParam, function(_response){
+		/* 	fn_getMsrCardRegEvent(objParam, function(_response){
 				var jsonData = jQuery.parseJSON(_response.data);
 				var isStarCode = false;
 				var row = "";
@@ -1988,7 +1988,7 @@ var eFrequencyPlannerYn = 'Y';
 				}else {
 					fn_cardReg(window.option); //카드등록
 				}
-			});
+			}); */
 			
 		}
 		
@@ -2084,7 +2084,8 @@ var eFrequencyPlannerYn = 'Y';
 		/**
 		 * 카드 등록 이벤트 정보 조회
 		 */
-		function fn_getMsrCardRegEvent(_option, _success) {
+		 //이단
+		/* function fn_getMsrCardRegEvent(_option, _success) {
 			__ajaxCall("interface/getMsrCardRegEvent", _option, true, "JSON", "POST"
 
 				,function(_response) {
@@ -2093,7 +2094,7 @@ var eFrequencyPlannerYn = 'Y';
 					}
 				}
 			);
-		}
+		} */
 		
 		function starCodePopup(){ //스타코드 팝업창
 			var dtPopHt = $("#starCodePopup.scPop").height();
