@@ -929,14 +929,15 @@ var eFrequencyPlannerYn = 'Y';
 		<li>
 			<a href="javascript:void(0);">회원 관리<span class="sbox_arrow_down"></span></a>
 			<ul>
-				<li><a href="memberListForm" required="" data-href="">· 회원 목록</a></li>
+				<li><a href="memberListForm" required="" data-href="admin/memberListForm">· 회원 목록</a></li>
 			</ul>
 		</li>
 		<li>
 			<a href="javascript:void(0);">매출현황<span class="sbox_arrow_down"></span></a>
 			<ul>
-				<li><a href="javascript:void(0);" required="login" data-href="my/reward">· 시간별 인기상품 분석</a></li>
-				<li><a href="javascript:void(0);" required="login" data-href="my/reward_star_history">· 누적 인기상품 분석</a></li>
+				<li><a href="saleChart-1" <%-- required="login" --%> data-href="admin/saleChart-1">· COFFEE 매출 분석</a></li>
+				<li><a href="saleChart-2" <%-- required="login" --%> data-href="admin/saleChart-2">· FOOD 매출 분석</a></li>
+				<li><a href="saleChart-3" <%-- required="login" --%> data-href="admin/saleChart-3">· PRODUCT 매출 분석</a></li>
 			</ul>
 		</li>
 	</ul>
