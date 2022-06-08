@@ -117,35 +117,6 @@ $(document).ready(function(){
 		$('.store_map_layer_cont article').hide();
 		$(this).parent().next().show();
 		
-		if ( control == "quick_search")		//퀵검색을 눌렀다면
-		{
-			$(".resultCtnNumberTab1").html(0);
-			$(".quickSearchResultCtn").html("");
-			$(".quickSearchResultBox").empty();
-			
-			
-			$vo.ip_lat					=  "";
-			$vo.ip_long					=  "";
-			$vo.espresso				=  "";
-			$vo.new_store				=  "";
-			$vo.premiere_food			=  "";
-			
-			$search.ins_lat 		= $geo_backup.latitude;
-			$search.ins_lng 		= $geo_backup.longitude;						
-			$search.search_text 	= "";
-			$search.p_sido_cd	 	= "";
-			$search.p_gugun_cd	 	= "";
-			$search.in_distance 	= 5;
-			$search.isError			= true;
-			$search.in_biz_cd 		= "";
-			$search.iend	 		= 20;
-			$search.in_biz_cds 		= 0;
-			$search.in_scodes 		= 0;
-			
-			
-			$.storemap.checkbox_init();
-			$.storemap.setStoreInfo();
-		}
 		
 		if ( control == "loca_search")		//지역검색 눌렀다면
 		{
