@@ -1774,12 +1774,11 @@ var eFrequencyPlannerYn = 'Y';
 				
                 var url = '/menu/productListAjax';
     			
-                     url = '${pageContext.request.contextPath}' + '/upload/json/menu/' + pro_seq + '.json';
+                     url = '${pageContext.request.contextPath}/upload/json/menu/' + pro_seq + '.json';
                 
                 __ajaxCall(url, option , true, "JSON", "POST",
                 function(data) {
                     if(data.list.length > 0) {
-                    	console.log('확인'+"pro_SEQ".indexOf(data.list[1]));
                        // $('#tpl_serviceProductList').tmpl(data.list).appendTo($('#product_view_tab03 .product_list > dl > dd > ul'));
                         $('#tpl_serviceProductList').tmpl(data.list).appendTo($('.product_view_tab.product_view_tab02 .product_list > dl > dd > ul'));
                         $('a.goServiceView').unbind('click').bind('click', function() {
@@ -1845,7 +1844,7 @@ var eFrequencyPlannerYn = 'Y';
 					
 	                var url = '/menu/productListAjax';
 	    			
-	                  url = '${pageContext.request.contextPath}' + '/upload/json/menu/' + cngCateCode + '.json';
+	                  url = '${pageContext.request.contextPath}/upload/json/menu/' + cngCateCode + '.json';
 	                
 	                __ajaxCall(url, option , true, "JSON", "POST", 
 	                function(data) {

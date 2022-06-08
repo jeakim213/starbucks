@@ -84,7 +84,7 @@
 	.mem_sub_tit_wrap ul.smap a.this { color:#fff; font-size:12px; font-weight:bold; }
 	.mem_sub_tit_wrap ul.smap img.arrow { position:relative; top:2px; }
 
-	.mem_wrap { padding:50px 0 80px; 0; }
+	.mem_wrap { padding:50px 0 80px;  }
 	.mem_inner { width:1100px; margin:0 auto; }
 
 	.mem_vis_box { width:1100px; height:110px; background:url("../img/util/mem/top_bg.jpg") 0 0 no-repeat; text-align:center; display:table; margin-bottom:40px; border-radius:3px; }
@@ -360,6 +360,10 @@
 	.mem_peopleJoin_info li.li1,
 	.mem_peopleJoin_info li.li1 {  width:548px; border-right:1px solid #ddd; }
 	.mem_peopleJoin_wrap figure { margin-bottom:30px; height:66px; }
+	
+	
+	/*0607 다정*/
+	.auth {margin:auto; width:525px; padding:40px 0; border:1px solid #ddd; border-radius:3px;}
 
 	.mem_f_titl,
 	.mem_k_titl { font-size:16px; font-weight:bold; color:#222; margin-bottom:10px; }
@@ -409,7 +413,7 @@
 	div.mem_purpose_area,
 	div.mem_article_area,
 	div.mem_agreement_area { width:1058px; height:146px; border:1px solid #ddd; border-radius:3px; padding:20px; margin-bottom:20px; overflow:hidden; }
-	div.mem_purpose_area_v2 { width:1058px; height:200px; border:1px solid #ddd; border-radius:3px; padding:20px; margin-bottom:20px; overflow:hidden; } }
+	div.mem_purpose_area_v2 { width:1058px; height:200px; border:1px solid #ddd; border-radius:3px; padding:20px; margin-bottom:20px; overflow:hidden; } 
 	/*div.mem_destruction_area p,
 	div.mem_purpose_area p,
 	div.mem_article_area p,
@@ -754,7 +758,7 @@
 
 	.resend_txt { color:#444; font-size:14px; line-height:1.4; }
 	.resend_txt a { color:#006633; border-bottom:1px solid #006633;}
-	.t_006633 { color:#006633 !important; }
+	.t_006633 { color:#006633 !important;}
 	.type_green {color: #006241} /* 20200826 수정 */
 
 	.mem_cert_half01, .mem_cert_half02 { max-width:540px; width:100%; float:left; }

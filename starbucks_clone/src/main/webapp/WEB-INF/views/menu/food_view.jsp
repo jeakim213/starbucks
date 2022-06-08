@@ -633,23 +633,23 @@ var eFrequencyPlannerYn = 'Y';
                     <div class="product_view_wrap1">
                         <div class="product_view_pic">
                             <div class="product_big_pic">
-                                <p><a href="javascript:void(0)" tabindex="-1" aria-hidden="true" role="presentation"><img class="zoomImg" src="https://image.istarbucks.co.kr/upload/store/skuimg/2022/04/[9300000004025]_20220406130412481.jpg" alt="상세이미지" data-zoom-image="https://image.istarbucks.co.kr/upload/store/skuimg/2022/04/[9300000004025]_20220406130412481.jpg"></a><!-- 접근성_20171123 tabindex, aria 추가 --></p>
+                                <p><a href="javascript:void(0)" tabindex="-1" aria-hidden="true" role="presentation"><img class="zoomImg" src="<!-- https://image.istarbucks.co.kr/upload/store/skuimg/2022/04/[9300000004025]_20220406130412481.jpg -->" alt="상세이미지" data-zoom-image="https://image.istarbucks.co.kr/upload/store/skuimg/2022/04/[9300000004025]_20220406130412481.jpg"></a><!-- 접근성_20171123 tabindex, aria 추가 --></p>
                                 <p class="more_btn"><a href="javascript:void(0)" tabindex="-1" aria-hidden="true" role="presentation"><img src="//image.istarbucks.co.kr/common/img/menu/more.png" alt="상세이미지"></a><!-- 접근성_20171123 tabindex, aria 추가 --></p>
                             </div>
                             <div class="product_thum_wrap" id="product_thum_wrap">
-	                            <ul class="product_thum"><li><a href="javascript:void(0)" data-image="https://image.istarbucks.co.kr/upload/store/skuimg/2022/04/[9300000004025]_20220406130412481.jpg" data-zoom-image="https://image.istarbucks.co.kr/upload/store/skuimg/2022/04/[9300000004025]_20220406130412481.jpg" class="elevatezoom-gallery active"><img src="https://image.istarbucks.co.kr/upload/store/skuimg/2022/04/[9300000004025]_20220406130412481.jpg" alt="상세이미지 1번"></a></li></ul>
+	                            <ul class="product_thum"><li><a href="javascript:void(0)" data-image="<!-- https://image.istarbucks.co.kr/upload/store/skuimg/2022/04/[9300000004025]_20220406130412481.jpg -->" data-zoom-image="<!-- https://image.istarbucks.co.kr/upload/store/skuimg/2022/04/[9300000004025]_20220406130412481.jpg -->" class="elevatezoom-gallery active"><img src="<!-- https://image.istarbucks.co.kr/upload/store/skuimg/2022/04/[9300000004025]_20220406130412481.jpg -->" alt="상세이미지 1번"></a></li></ul>
                             </div>
                         </div>
                         <div class="product_view_detail">
                             <div class="myAssignZone">
-                                <h4><br><span></span></h4>
+                                <h4></h4>
                                 <p class="t1"></p>
                                 <!-- 0531 다정 나만의 푸드로 등록->구매하기로 변경 -->
                                 <div class="myDrink"><a href="javascript:void(0)" role="button" title="구매 및 담기">구매 및 담기</a><!-- 접근성_20171123 role, title 추가 --></div>
                             </div>
                             <div class="m_view_slide">
                                 <div class="bx-wrapper" style="max-width: 100%;"><div class="bx-viewport" style="width: 100%; overflow: hidden; position: relative; height: 0px;"><ul class="m_view_slider" style="width: 315%; position: relative; transition-duration: 0s; transform: translate3d(0px, 0px, 0px);"><li style="float: left; list-style: none; position: relative; width: 100px;" class="bx-clone"><img class="m_view_img" src="https://image.istarbucks.co.kr/upload/store/skuimg/2022/04/[9300000004025]_20220406130412481.jpg" data-zoom-image="https://image.istarbucks.co.kr/upload/store/skuimg/2022/04/[9300000004025]_20220406130412481.jpg" alt=""></li>
-                                <li style="float: left; list-style: none; position: relative; width: 100px;"><img class="m_view_img" src="https://image.istarbucks.co.kr/upload/store/skuimg/2022/04/[9300000004025]_20220406130412481.jpg" data-zoom-image="https://image.istarbucks.co.kr/upload/store/skuimg/2022/04/[9300000004025]_20220406130412481.jpg" alt=""></li><li style="float: left; list-style: none; position: relative; width: 100px;" class="bx-clone"><img class="m_view_img" src="https://image.istarbucks.co.kr/upload/store/skuimg/2022/04/[9300000004025]_20220406130412481.jpg" data-zoom-image="https://image.istarbucks.co.kr/upload/store/skuimg/2022/04/[9300000004025]_20220406130412481.jpg" alt=""></li></ul></div><div class="bx-controls bx-has-controls-direction"><div class="bx-controls-direction"><a class="bx-prev disabled" href="">Prev</a><a class="bx-next disabled" href="">Next</a></div></div></div>
+                                <li style="float: left; list-style: none; position: relative; width: 100px;"><img class="m_view_img" src="<!-- https://image.istarbucks.co.kr/upload/store/skuimg/2022/04/[9300000004025]_20220406130412481.jpg -->" data-zoom-image="<!-- https://image.istarbucks.co.kr/upload/store/skuimg/2022/04/[9300000004025]_20220406130412481.jpg -->" alt=""></li><li style="float: left; list-style: none; position: relative; width: 100px;" class="bx-clone"><img class="m_view_img" src="https://image.istarbucks.co.kr/upload/store/skuimg/2022/04/[9300000004025]_20220406130412481.jpg" data-zoom-image="https://image.istarbucks.co.kr/upload/store/skuimg/2022/04/[9300000004025]_20220406130412481.jpg" alt=""></li></ul></div><div class="bx-controls bx-has-controls-direction"><div class="bx-controls-direction"><a class="bx-prev disabled" href="">Prev</a><a class="bx-next disabled" href="">Next</a></div></div></div>
                                 <div class="m_view_controller" style="display: none;">
                                     <div class="m_view_controls"></div>
                                     <div class="m_view_pagers"><div class="bx-pager bx-default-pager"><div class="bx-pager-item"><a href="" data-slide-index="0" class="bx-pager-link active">1</a></div></div></div>
@@ -673,7 +673,7 @@ var eFrequencyPlannerYn = 'Y';
                                                         <dd></dd>
                                                     </dl>
                                                 </li>
-                                                <li style="display: none;">
+                                                <li>
                                                     <dl>
                                                         <dt>지방 (g)</dt>
                                                         <dd></dd>
@@ -685,24 +685,19 @@ var eFrequencyPlannerYn = 'Y';
                                                         <dd></dd>
                                                     </dl>
                                                 </li>
-                                                <li style="display: none;">
+                                                <li>
                                                     <dl>
                                                         <dt>트랜스지방 (g)</dt>
                                                         <dd></dd>
                                                     </dl>
                                                 </li>
-                                                <li class="last" style="display: none;">
+                                                <li class="last">
                                                     <dl>
                                                         <dt>콜레스테롤 (mg)</dt>
                                                         <dd></dd>
                                                     </dl>
                                                 </li>
-                                            <li class="last">
-                                                    <dl>
-                                                        <dt>나트륨 (mg)</dt>
-                                                        <dd></dd>
-                                                    </dl>
-                                                </li></ul>
+                                            </ul>
                                             <ul>
                                                 <li>
                                                     <dl>
@@ -710,7 +705,7 @@ var eFrequencyPlannerYn = 'Y';
                                                         <dd></dd>
                                                     </dl>
                                                 </li>
-                                                <li style="display: none;">
+                                                <li>
                                                     <dl>
                                                         <dt>탄수화물 (g)</dt>
                                                         <dd></dd>
@@ -722,7 +717,12 @@ var eFrequencyPlannerYn = 'Y';
                                                         <dd></dd>
                                                     </dl>
                                                 </li>
-                                                
+                                                <li>
+                                                    <dl>
+                                                        <dt>나트륨 (mg)</dt>
+                                                        <dd></dd>
+                                                    </dl>
+                                                </li>
                                             </ul>
                                         </div>
                                         <div class="product_factor">
@@ -800,11 +800,6 @@ var eFrequencyPlannerYn = 'Y';
 						<!-- 160718 수정 end -->
                         <!-- <p class="m_hidden_btn"><a href="/wholecake/reserve_cake01">예약하기</a></p> -->
                         <div class="productView_bottom" style="display: none;">
-                            <p class="tit">관련 제품</p>
-                            <div class="productRel_wrap">
-                                <ul>
-                                </ul>
-                            </div>
                         </div>
 					</div>
 				</div>
@@ -1297,11 +1292,11 @@ var eFrequencyPlannerYn = 'Y';
 				
 			    getDataInfo();
 			});
-		    var $PRODUCT_CD = ${product_cd};//여기바꿈
+		    var $PRODUCT_CD = '${product_cd}';
             
             if(!($PRODUCT_CD) || $PRODUCT_CD == "") {
                 alert("정상적인 접근이 아닙니다.");
-                location.href = "menu/food_list";
+                location.href = "food_list";
             }
 			
 			function getDataInfo() {
@@ -1309,15 +1304,15 @@ var eFrequencyPlannerYn = 'Y';
                         'product_cd' : $PRODUCT_CD,
                         'product_cate' : "food"
                 };
-                __ajaxCall('/menu/productViewAjax', option , true, "JSON", "POST", 
+                __ajaxCall('${pageContext.request.contextPath}/menu/productViewAjax', option , true, "JSON", "POST", 
                 function(data) {
                 	if (typeof data.view === 'undefined' || data.view == null) {
                         alert("조회 불가능한 상품입니다.");
-                        location.href = "menu/food_list";
+                        location.href = "food_list";
                         return;
                     }
 
-                	getFileInfo();
+                	getFileInfo($PRODUCT_CD);
                     //여기바꿈 관련제품 쓸지안쓸지 모름. getPairInfo();
       	            //여기바꿈 프로모션 지움. 스크립트도 찾아지움getPromotion();
                     
@@ -1326,10 +1321,10 @@ var eFrequencyPlannerYn = 'Y';
                 		$(".myDrink").hide();
                 	}
                 	
-                	$('div.myAssignZone > h4')(data.view.product_NM + '<br /><span></span>');
-                    $('div.myAssignZone > h4 > span').text(data.view.product_ENGNM);
-                 	$('div.myAssignZone > .t1')(data.view.content.replace(/\n/gi, '<br />'));
-                    $('div.product_view_wrap2')(data.view.recommend.replace(/\n/gi, '<br />'));
+                	$('div.myAssignZone > h4').append(data.view.product_NM + '<br /><span></span>');
+                    $('div.myAssignZone > h4 > span').append(data.view.product_ENGNM);
+                 	$('div.myAssignZone > .t1').append(data.view.content.replace(/\n/gi, '<br />'));
+                    $('div.product_view_wrap2').append(data.view.recommend.replace(/\n/gi, '<br />'));
                     
                     $('.smap .cate').text(data.view.cate_NAME);
                     $('.smap .this').text(data.view.product_NM);
@@ -1337,21 +1332,21 @@ var eFrequencyPlannerYn = 'Y';
                     
                     // 20200818 베이커리 - 브레드로 변경
                     if(data.view.cate_NAME == "브레드") {
-                        $('.sub_tit_inner > h2')("<img src='//image.istarbucks.co.kr/common/img/menu/tit/food_tit1_bread.png' alt='"+ data.view.cate_NAME+"' />");// 접근성_20171123 alt 추가
+                        $('.sub_tit_inner > h2').append("<img src='//image.istarbucks.co.kr/common/img/menu/tit/food_tit1_bread.png' alt='"+ data.view.cate_NAME+"' />");// 접근성_20171123 alt 추가
                     } else if(data.view.cate_NAME == "케익") {
-                        $('.sub_tit_inner > h2')("<img src='//image.istarbucks.co.kr/common/img/menu/tit/food_tit2.png' alt='"+ data.view.cate_NAME+"' />");// 접근성_20171123 alt 추가
+                        $('.sub_tit_inner > h2').append("<img src='//image.istarbucks.co.kr/common/img/menu/tit/food_tit2.png' alt='"+ data.view.cate_NAME+"' />");// 접근성_20171123 alt 추가
                     } else if(data.view.cate_NAME == "샌드위치&샐러드") {
-                        $('.sub_tit_inner > h2')("<img src='//image.istarbucks.co.kr/common/img/menu/tit/food_tit3.png' alt='"+ data.view.cate_NAME+"' />");// 접근성_20171123 alt 추가
+                        $('.sub_tit_inner > h2').append("<img src='//image.istarbucks.co.kr/common/img/menu/tit/food_tit3.png' alt='"+ data.view.cate_NAME+"' />");// 접근성_20171123 alt 추가
                     } else if(data.view.cate_NAME == "따뜻한 푸드") {
-                        $('.sub_tit_inner > h2')("<img src='//image.istarbucks.co.kr/common/img/menu/tit/food_tit4.png' alt='"+ data.view.cate_NAME+"' />");// 접근성_20171123 alt 추가
+                        $('.sub_tit_inner > h2').append("<img src='//image.istarbucks.co.kr/common/img/menu/tit/food_tit4.png' alt='"+ data.view.cate_NAME+"' />");// 접근성_20171123 alt 추가
                     } else if(data.view.cate_NAME == "과일&요거트") {
-                        $('.sub_tit_inner > h2')("<img src='//image.istarbucks.co.kr/common/img/menu/tit/food_tit5.png' alt='"+ data.view.cate_NAME+"' />");// 접근성_20171123 alt 추가
+                        $('.sub_tit_inner > h2').append("<img src='//image.istarbucks.co.kr/common/img/menu/tit/food_tit5.png' alt='"+ data.view.cate_NAME+"' />");// 접근성_20171123 alt 추가
                     } else if(data.view.cate_NAME == "스낵&미니디저트") {
-                        $('.sub_tit_inner > h2')("<img src='//image.istarbucks.co.kr/common/img/menu/tit/food_tit6.png' alt='"+ data.view.cate_NAME+"' />");// 접근성_20171123 alt 추가
+                        $('.sub_tit_inner > h2').append("<img src='//image.istarbucks.co.kr/common/img/menu/tit/food_tit6.png' alt='"+ data.view.cate_NAME+"' />");// 접근성_20171123 alt 추가
                     } else if(data.view.cate_NAME == "아이스크림") {
-                        $('.sub_tit_inner > h2')("<img src='//image.istarbucks.co.kr/common/img/menu/tit/food_tit7.png' alt='"+ data.view.cate_NAME+"' />");// 접근성_20171123 alt 추가
+                        $('.sub_tit_inner > h2').append("<img src='//image.istarbucks.co.kr/common/img/menu/tit/food_tit7.png' alt='"+ data.view.cate_NAME+"' />");// 접근성_20171123 alt 추가
                     } else if(data.view.cate_NAME == "기타 푸드") {
-                        $('.sub_tit_inner > h2')("<img src='//image.istarbucks.co.kr/common/img/menu/tit/food_tit8.png' alt='"+ data.view.cate_NAME+"' />");// 접근성_20171123 alt 추가
+                        $('.sub_tit_inner > h2').append("<img src='//image.istarbucks.co.kr/common/img/menu/tit/food_tit8.png' alt='"+ data.view.cate_NAME+"' />");// 접근성_20171123 alt 추가
                     }
                     
                     // 영양정보
@@ -1462,11 +1457,12 @@ var eFrequencyPlannerYn = 'Y';
 				return _strVal;
 			}
 			
-            function getFileInfo() {
+            function getFileInfo(product_cd) {
                 var option = {
-                        'PRODUCT_CD' : $PRODUCT_CD
+                        'product_cd' : product_cd,
+                        'product_cate' : "food"
                 };
-                __ajaxCall('/menu/productFileAjax', option , true, "JSON", "POST", 
+                __ajaxCall('${pageContext.request.contextPath}/menu/productFileAjax', option , true, "JSON", "POST", 
                 function(data) {
                     $('.product_thum_wrap > .product_thum').empty();
                     $('#tpl_productFileLi').tmpl(data.file).appendTo($('.product_thum_wrap > .product_thum'));
@@ -1521,53 +1517,6 @@ var eFrequencyPlannerYn = 'Y';
 
                     var ez =   $('.zoomImg').data('elevateZoom');
                     
-                },
-                function() {
-                });
-            }
-            
-            function getPairInfo() {
-            	
-            	$('div.productView_bottom').hide();
-            	
-                var option = {
-                        'PRODUCT_CD' : $PRODUCT_CD
-                };
-                __ajaxCall('/menu/productPairAjax', option , true, "JSON", "POST", 
-                function(data) {
-                	if(data.pair.length > 0) {
-	                    $('div.productView_bottom > div.productRel_wrap > ul').empty();
-	                    $('#tpl_productPairLi').tmpl(data.pair).appendTo($('div.productView_bottom > div.productRel_wrap > ul'));
-	                    
-	                    $('div.productView_bottom').show();
-	                    
-	                    $('div.productView_bottom > div.productRel_wrap > ul a').unbind('click').bind('click', function() {
-                            product_cd = $(this).attr('prod');
-                            f_cate_cd = $(this).attr('cate');
-                            f = document.pairForm;
-
-                            var product_cd = "<input type='hidden' name='product_cd' value='" + product_cd + "'>";
-                            var product_cd2 = "<input type='hidden' name='PRODUCT_CD' value='" + product_cd + "'>";
-                            
-                            if(f_cate_cd == "W0000001") {
-                                f.action = "menu/drink_view";
-                                $(f)(product_cd);
-                            } else if(f_cate_cd == "W0000012") {
-                                f.action = "menu/food_view";
-                                $(f)(product_cd);
-                            } else if(f_cate_cd == "W0000022") {
-                                f.action = "menu/product_view";
-                                $(f)(product_cd);
-                            } else if(f_cate_cd == "W0000057") {
-                                f.action = "coffee/product_view";
-                                $(f)(product_cd2);
-                            } else {
-                                f.action = "menu/drink_view";
-                                $(f)(product_cd);
-                            }
-                            f.submit();
-	                    });
-                	}
                 },
                 function() {
                 });
@@ -1752,7 +1701,7 @@ var eFrequencyPlannerYn = 'Y';
 		
 		// [나만의 음료로 등록]
        	$(".myDrink > a").on("click", function () {
-       		__ajaxCall("interface/checkLogin", {}, true, "json", "post"
+       		__ajaxCall("/starbucks/interface/checkLogin", {}, true, "json", "post"
        			,function (_response) {
        				if (_response.result_code == "SUCCESS") {
        					var drink_title = $('.smap .cate').text();
@@ -2114,4 +2063,21 @@ var eFrequencyPlannerYn = 'Y';
 </script>
 	
 
-<div class="zoomContainer" style="transform: translateZ(0px); position: absolute; left: 21.5625px; top: 219px; height: 470px; width: 450px;"><div class="zoomLens" style="background-position: 0px 0px; float: right; overflow: hidden; z-index: 999; transform: translateZ(0px); opacity: 0.4; zoom: 1; width: 286.7px; height: 220.06px; background-color: white; cursor: default; border: 1px solid rgb(0, 0, 0); background-repeat: no-repeat; position: absolute; left: 134px; top: 79px; display: none;">&nbsp;</div><div class="zoomWindowContainer" style="width: 610px;"><div style="overflow: hidden; background-position: -450px -166.946px; text-align: center; background-color: rgb(255, 255, 255); width: 610px; height: 468px; float: left; background-size: 900px 940px; z-index: 100; border: 4px solid rgb(136, 136, 136); background-repeat: no-repeat; position: absolute; background-image: url(&quot;https://image.istarbucks.co.kr/upload/store/skuimg/2022/04/[9300000004025]_20220406130412481.jpg&quot;); top: -2px; left: 461px; display: none;" class="zoomWindow">&nbsp;</div></div></div><div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div></div></div></div></body></html>
+<div class="zoomContainer"
+    style="transform: translateZ(0px); position: absolute; left: 21.5625px; top: 219px; height: 470px; width: 450px;">
+    <div class="zoomLens"
+        style="background-position: 0px 0px; float: right; overflow: hidden; z-index: 999; transform: translateZ(0px); opacity: 0.4; zoom: 1; width: 286.7px; height: 220.06px; background-color: white; cursor: default; border: 1px solid rgb(0, 0, 0); background-repeat: no-repeat; position: absolute; left: 134px; top: 79px; display: none;">
+        &nbsp;</div>
+    <div class="zoomWindowContainer" style="width: 610px;">
+        <div style="overflow: hidden; background-position: -450px -166.946px; text-align: center; background-color: rgb(255, 255, 255); width: 610px; height: 468px; float: left; background-size: 900px 940px; z-index: 100; border: 4px solid rgb(136, 136, 136); background-repeat: no-repeat; position: absolute; background-image: url(/* &quot;https://image.istarbucks.co.kr/upload/store/skuimg/2022/04/[9300000004025]_20220406130412481.jpg&quot */;); top: -2px; left: 461px; display: none;"
+            class="zoomWindow">&nbsp;</div>
+    </div>
+</div>
+<div id="fb-root" class=" fb_reset">
+    <div style="position: absolute; top: -10000px; width: 0px; height: 0px;">
+        <div></div>
+    </div>
+</div>
+</body>
+
+</html>

@@ -1,0 +1,11 @@
+{
+  "result_code": "SUCCESS",
+  "error_msg": "",
+  "alert_msg": "",
+  "location_href": "",
+  "location_replace": "",
+  "custom_script": "",
+  "total_cnt": 0,
+  "data": "{  \"categoryCode\" : \"C0000038\",  \"categoryName\" : \"기타\",  \"engCategoryName\" : \"??????????\",  \"applyType1\" : \"02\",  \"applyType2\" : \"\",  \"level\" : \"1\",  \"categoryDesc\" : \"\",  \"categoryList\" : [ {    \"categoryCode\" : \"C0000047\",    \"categoryName\" : \"시그니처 초콜릿\",    \"engCategoryName\" : \"\",    \"applyType1\" : \"01\",    \"applyType2\" : \"01\",    \"level\" : \"2\",    \"categoryDesc\" : \"\",    \"maxQty\" : \"0\",    \"maxQtyMsg\" : \"\",    \"stdRecipeFlag\" : \"Y\",    \"payType\" : \"01\",    \"customGrp\" : \"C\",    \"btnStatus\" : \"U\",    \"skuList\" : [ {      \"skuNo\" : \"4002090000110\",      \"skuName\" : \"초콜릿 연하게\",      \"baseQty\" : \"0\",      \"stdRecipeFlag\" : \"N\",      \"calories\" : \"0\",      \"price\" : \"0\",      \"callingName\" : \"라이트 시그니처\",      \"callingSeq\" : \"8409\",      \"payType\" : \"01\",      \"customGrp\" : \"C\",      \"btnStatus\" : \"U\",      \"markingName\" : \"Lt-SC\",      \"markingSeq\" : \"8409\",      \"skuNameShort\" : \"연하게\"    }, {      \"skuNo\" : \"4002090000109\",      \"skuName\" : \"초콜릿 진하게\",      \"baseQty\" : \"0\",      \"stdRecipeFlag\" : \"N\",      \"calories\" : \"0\",      \"price\" : \"0\",      \"callingName\" : \"엑스트라 시그니처\",      \"callingSeq\" : \"8409\",      \"payType\" : \"01\",      \"customGrp\" : \"C\",      \"btnStatus\" : \"U\",      \"markingName\" : \"X-SC\",      \"markingSeq\" : \"8409\",      \"skuNameShort\" : \"진하게\"    }, {      \"skuNo\" : \"4002090000108\",      \"skuName\" : \"시그니처 초콜릿\",      \"baseQty\" : \"1\",      \"stdRecipeFlag\" : \"Y\",      \"calories\" : \"0\",      \"price\" : \"0\",      \"callingName\" : \"시그니처\",      \"callingSeq\" : \"8409\",      \"payType\" : \"01\",      \"customGrp\" : \"C\",      \"btnStatus\" : \"U\",      \"markingName\" : \"SC\",      \"markingSeq\" : \"8409\",      \"skuNameShort\" : \"보통\"    } ]  } ]}",
+  "result_api_code": ""
+}
