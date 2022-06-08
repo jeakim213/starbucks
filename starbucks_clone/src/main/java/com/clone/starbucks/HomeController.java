@@ -690,8 +690,6 @@ public class HomeController {
       }
    
    @ResponseBody // 나와 어울리는 커피 찾기 - 다정 Ajax
-
-
    @PostMapping(value = "coffee/getCoffeeFinderAjax", produces = "application/json; charset=UTF-8")
    public String getCoffeeFinder(HttpServletRequest request) throws FileNotFoundException, IOException {
       //0606 다정
@@ -710,5 +708,4 @@ public class HomeController {
       return result.toString();
    }
 
-   
 }

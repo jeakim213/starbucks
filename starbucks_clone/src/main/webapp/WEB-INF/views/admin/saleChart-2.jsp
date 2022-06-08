@@ -671,6 +671,50 @@ var eFrequencyPlannerYn = 'Y';
 	</div>
 </div>			
 
+
+
+<div id="container">
+                <!-- 서브 타이틀 -->
+                
+<header class="ms_sub_tit_wrap">
+	<div class="ms_sub_tit_bg">
+		<div class="ms_sub_tit_inner">
+			
+			<ul class="smap">
+				<li><a href="/r"><img src="//image.istarbucks.co.kr/common/img/common/icon_home_w.png" alt="홈으로"></a></li>
+				<li><img class="arrow" src="//image.istarbucks.co.kr/common/img/common/icon_arrow_w.png" alt="작은 맵 화살표"></li>
+				<li><a href="my/index">My Starbucks</a></li>
+				
+				
+			</ul>
+		</div>
+	</div>
+</header>
+<!-- 서브 타이틀 end -->
+
+<!-- 내용 -->
+<div class="ms_cont_wrap">
+    <div class="ms_cont">
+                    
+<!-- 관리자 -->
+
+
+<!-- 금액 매출 -->
+	<img src="../common/img/admin/sales_title.png" style="width: 100px;"><br>
+	<img src="../common/img/admin/food.png" style="width: 60px;"><br><br><br>
+	
+	
+		<div style="text-align: center; margin: auto; font-size: 20px;"><b>- FOOD 월별 총 판매 금액 -</b> </div><hr>
+	
+	
+	
+	<!-- 0602 다정 차트 스크립트 -->
+		<script src="../common/js/admin/highcharts.js"></script>
+		<script src="https://code.highcharts.com/highcharts-more.js"></script>
+		<script src="https://code.highcharts.com/modules/exporting.js"></script>
+		<script src="https://code.highcharts.com/modules/export-data.js"></script>
+		<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
 		
 		
 		<div id="container">
@@ -967,10 +1011,34 @@ var eFrequencyPlannerYn = 'Y';
 			<!-- 내용 end -->
 		</div>
 		
+<<<<<<< HEAD
+		<li>
+			<a href="javascript:void(0);">회원 관리<span class="sbox_arrow_down"></span></a>
+			<ul>
+				<li><a href="memberListForm" required="" data-href="admin/memberListForm">· 회원 목록</a></li>
+			</ul>
+		</li>
+		<li>
+			<a href="javascript:void(0);">매출현황<span class="sbox_arrow_down"></span></a>
+			<ul>
+				<li><a href="saleChart-1" <%-- required="login" --%> data-href="admin/saleChart-1">· COFFEE 매출 분석</a></li>
+				<li><a href="saleChart-2" <%-- required="login" --%> data-href="admin/saleChart-2">· FOOD 매출 분석</a></li>
+				<li><a href="saleChart-3" <%-- required="login" --%> data-href="admin/saleChart-3">· PRODUCT 매출 분석</a></li>
+			</ul>
+		</li>
+	</ul>
+</nav>
+                </div>
+                <!-- 내용 end -->
+            </div>
+
+            
+=======
 		<input type="hidden" name="sms_yn" value="N" id="agreement2" />
 		<input type="hidden" name="mail_yn" value="N" id="agreement4" />
 		
 		
+>>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
 
 
 
