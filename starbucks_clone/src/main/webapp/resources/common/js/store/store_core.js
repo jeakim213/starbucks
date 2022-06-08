@@ -463,6 +463,8 @@
         {
         	
         	
+        	
+        	
         	if ( $search.search_text == "")
         	{
         		if ( $search.p_sido_cd != "" ||  $search.p_sido_cd != "" )
@@ -529,7 +531,6 @@
     		
     		
     		$.each($option, function(index,value){
-			
     			if ( value )
     			{
     				$search[index] = 1;
@@ -582,30 +583,19 @@
 				}
 			}
 			
-			
 			/** ajax 캐시문제를 해결하기 **/
-			var ctx = getContextPath();
-			 			function getContextPath() {
-			 			return sessionStorage.getItem("contextpath");
-			}
- 		
- 	
 			var rndCod = randomString();
-			var storeInterfaceUrl = ctx + '/upload/json/store/storelist/getStore?r='+rndCod;
-			
-			__ajaxCall( storeInterfaceUrl, $search , true, "JSON", "POST",
-					
+			var storeInterfaceUrl = "/store/getStore?r="+rndCod;
+
+			__ajaxCall( storeInterfaceUrl ,$search, true, "json", "post",
 					function (_response) 
 					{
-						
 						var $offset = { x:0 , y:0	};
 						var $image  = {};
 							$image.store 	= $pin.store;
 							$image.reserve 	= $pin.reserve;
-						
 						$.storemap.createMapContents(_response.list, $image, $offset, $search);
-											
-					
+						
 						if ( _response.list.length > 0 )
 						{
 							if ( $page == "reserve")
@@ -636,9 +626,7 @@
 							if ( $page == "nitro_cold_brew")
 							{
 								$(".nitro_coldbrew_cnt").html( _response.list.length);
-							}
-							
-													
+							}							
 						}
 			        }
 					, 
@@ -717,33 +705,33 @@
 							if ( y.theme_state.indexOf("T01") > -1 && y.theme_state.indexOf("T03") > -1 )	//해당 매장이 리저브DT라면
 							{
 								$paramOption.makerClass = "pin_reserveDT";
-								$paramOption.image = "../common/img/store/pin/pin_reserve_DT.png?v=210802";   
+								$paramOption.image = cdn_domain+"/common/img/store/pin/pin_reserve_DT.png?v=210802";   
 							}
 							else if ( y.theme_state.indexOf("T03") > -1 )	//해당 매장이 리저브라면
 							{
 								$paramOption.makerClass = "pin_reserve";
-								$paramOption.image = "../common/img/store/pin/pin_reserve.png?v=210802";   
+								$paramOption.image = cdn_domain+"/common/img/store/pin/pin_reserve.png?v=210802";   
 							}
 							else if ( y.theme_state.indexOf("T01") > -1 )	//해당 매장이 DT라면
 							{
 								$paramOption.makerClass = "pin_generalDT";
-								$paramOption.image = "../common/img/store/pin/pin_general_DT.png";   
+								$paramOption.image = cdn_domain+"/common/img/store/pin/pin_general_DT.png";   
 							}
 							else if ( y.theme_state.indexOf("T27") > -1 )	//[픽업존 관리시스템 개선] 워크스루 아이콘 추가
 							{
 								$paramOption.makerClass = "pin_generalWT";
-								$paramOption.image = "../upload/common/img/icon/pin_general_wt.png";
+								$paramOption.image = cdn_domain+"/upload/common/img/icon/pin_general_wt.png";
 							}
 	    					else
 	    					{
 	    						$paramOption.makerClass = "pin_general";
-	    						$paramOption.image = "../common/img/store/pin/pin_general.png";        							
+	    						$paramOption.image = cdn_domain+"/common/img/store/pin/pin_general.png";        							
 	    					}
     					}
     					else
     					{
     						$paramOption.makerClass = "pin_general";
-    						$paramOption.image = "../common/img/store/pin/pin_general.png";        							
+    						$paramOption.image = cdn_domain+"/common/img/store/pin/pin_general.png";        							
     					}
 
     		    		$paramOption.lat = y.lat;
@@ -824,7 +812,7 @@
     					
 				    					iwContent += 
 				    							'</p>' +
-				    						/* '<a class="btn_marker_detail" href="javascript:getStoreDetail(\''+y.s_biz_code+'\');">상세 정보 보기</a>' +*/
+				    						 '<a class="btn_marker_detail" href="javascript:getStoreDetail(\''+y.s_biz_code+'\');">상세 정보 보기</a>' +
 										 '</div>' +
 									 '</div>' +
 								'</article>'+
@@ -837,7 +825,7 @@
     					{
         					var iLstBox =  '';
         					
-						
+
         					iLstBox += '<li class="quickResultLstCon" style="background:#fff" data-lat="'+y.lat+'" data-long="'+y.lot+'" data-index="'+x+'" data-name="'+y.s_name+'" data-code="'+y.s_biz_code+'" data-storecd="'+y.s_code+'" data-hlytag="'+y.hlytag+'" >';
         					
         					var hlytagMsg = "";
@@ -881,6 +869,7 @@
         					iLstBox += '	<i class="'+$paramOption.makerClass+'">리저브 매장 2번</i>';
         					iLstBox += '</li>';
         					//quickSearchResultBoxSidoGugun
+        					
         					
         					if ( $vo.searchType == "C")
         					{
@@ -1253,16 +1242,10 @@
         	var tempGugun 	= '<li><a href="javascript:void(0);" class="set_gugun_cd_btn" data-sidocd="${$item.isSidoCD()}" data-sidonm="${$item.isSidoNM()}" data-guguncd="${gugun_cd}">${gugun_nm}</a></li>';
         	$.template( "sidoUiCtrl", tempSido );
         	$.template( "gugunUiCtrl", tempGugun );
-        
-        	var ctx = getContextPath();
- 			function getContextPath() {
- 				return sessionStorage.getItem("contextpath");
-			}
- 
-			__ajaxCall(ctx + "/upload/json/store/map/getSidoList", {}, true, "JSON", "POST",
+      		
+			__ajaxCall("/store/getSidoList", {}, true, "json", "post",
 					function (_response) 
 					{
-						
         				if ( _response.list.length > 0 )
         				{
         					$(".sido_arae_box").html("");
@@ -1316,11 +1299,12 @@
             					}
             					else
             					{
-                					__ajaxCall(ctx + "/upload/json/store/map/getGugunList", {"sido_nm":sido_nm}, true, "JSON", "POST",
+                					__ajaxCall("/store/getGugunList", {"sido_cd":sido}, true, "json", "post",
                 							function (_response) 
                 							{
                 								$(".gugun_arae_box").html("");
                 								//$("#gugun_arae_box").mCustomScrollbar("destroy");
+                								
                 		        				if ( _response.list.length > 0 )
                 		        				{
                 		        					$(".gugun_arae_box").empty();
@@ -1411,9 +1395,7 @@
                     		        						
                     	            						$(".loca_step1").hide();
                     	            						$(".loca_step2").hide();
-                    	            						$(".loca_step3").show();      
-                    	            						
-                    	            		
+                    	            						$(".loca_step3").show();                  		        							
                 		        						}
               		        						
                 		        						
@@ -1485,5 +1467,4 @@ $(document).ready(function(){
 	setTimeout(function(){
 		$.commonLib.hideLoadingImg();
 	},5000);
-	
 })

@@ -2,7 +2,6 @@ var $mobilePlccLogo =  $(".ms_user_info_left .plcc-logo");
 var $pcPlccLogo =  $(".ms_user_info_right .plcc-logo");
 	
 $(document).ready(function () {
-	//이단
 	showRewardSummary();
 	setEvents();
 	
@@ -320,7 +319,6 @@ function showRewardSummary() {
 		getPlccLogo(); //plcc로고노출
 	}
 	
-	//이단
 	$(".validCouponCnt").text(m_jsonRewardSummary.validCoupontCnt);	// 보유 쿠폰 개수
 	
 	if (m_jsonRewardSummary.msrMemberYn == "N") {

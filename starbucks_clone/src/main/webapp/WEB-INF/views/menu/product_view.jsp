@@ -673,7 +673,7 @@ var eFrequencyPlannerYn = 'Y';
                 <!-- 서브 타이틀 -->
                 <div class="sub_tit_wrap">
                     <div class="sub_tit_inner">
-                        <h2></h2>
+                        <h2><img src="//image.istarbucks.co.kr/common/img/menu/tit/product_tit1.png" alt="머그"></h2>
                         <ul class="smap">
                             <li><a href="/"><img src="//image.istarbucks.co.kr/common/img/common/icon_home.png" alt="홈으로"></a></li>
                             <li><img class="arrow" src="//image.istarbucks.co.kr/common/img/common/icon_arrow.png" alt="하위메뉴"></li>
@@ -681,9 +681,9 @@ var eFrequencyPlannerYn = 'Y';
                             <li><img class="arrow" src="//image.istarbucks.co.kr/common/img/common/icon_arrow.png" alt="하위메뉴"></li>
                             <li><a href="menu/product_list">상품</a></li>
                             <li><img class="arrow" src="//image.istarbucks.co.kr/common/img/common/icon_arrow.png" alt="하위메뉴"></li>
-                            <li><a href="menu/product_list" class="cate"></a></li>
+                            <li><a href="menu/product_list" class="cate">머그</a></li>
                             <li><img class="arrow" src="//image.istarbucks.co.kr/common/img/common/icon_arrow.png" alt="하위메뉴"></li>
-                            <li><a href="javascript:void(0)" class="this"></a></li>
+                            <li><a href="javascript:void(0)" class="this">그린 사이렌 도트 머그 237ml</a></li>
                         </ul>
                     </div>
                 </div>
@@ -693,17 +693,18 @@ var eFrequencyPlannerYn = 'Y';
                     <div class="product_view_wrap1">
                         <div class="product_view_pic">
                             <div class="product_big_pic">
-                                <p><a href="javascript:void(0)" tabindex="-1" aria-hidden="true" role="presentation"><!-- 접근성_20171123 tabindex, aria 추가 --><img class="zoomImg" src="" alt="상세이미지" data-zoom-image="https://image.istarbucks.co.kr/upload/store/skuimg/2021/11/[9300000003570]_20211102085024757.jpg"></a></p>
-                                <p class="more_btn"><a href="javascript:void(0)" tabindex="-1" aria-hidden="true" role="presentation"><img src="//image.istarbucks.co.kr/common/img/menu/more.png" alt="상세이미지"></a><!-- 접근성_20171123 tabindex, aria 추가 --></p>
+                                <p><a href="javascript:void(0)" tabindex="-1" aria-hidden="true" role="presentation"><!-- 접근성_20171123 tabindex, aria 추가 --><img class="zoomImg" src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/11/[9300000003570]_20211102085024757.jpg" alt="상세이미지" data-zoom-image="https://image.istarbucks.co.kr/upload/store/skuimg/2021/11/[9300000003570]_20211102085024757.jpg"></a></p>
+                                <p class="more_btn"><a href="javascript:void(0)" tabindex="-1" aria-hidden="true" role="presentation">
                             </div>
                             <div class="product_thum_wrap" id="product_thum_wrap">
-	                            <ul class="product_thum"><li><a href="javascript:void(0)" data-image="" data-zoom-image="" class="elevatezoom-gallery active"><img src="" alt="\상세이미지 1번"></a></li><li><a href="javascript:void(0)" data-image="" data-zoom-image="" class="elevatezoom-gallery"><img src="" alt="\상세이미지 2번"></a></li><li><a href="javascript:void(0)" data-image="https://image.istarbucks.co.kr/upload/store/skuimg/2021/11/[9300000003570]_20211102085053025.jpg" data-zoom-image="https://image.istarbucks.co.kr/upload/store/skuimg/2021/11/[9300000003570]_20211102085053025.jpg" class="elevatezoom-gallery"><img src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/11/[9300000003570]_20211102085053025.jpg" alt="\상세이미지 3번"></a></li></ul>
+	                            <ul class="product_thum"><li><a href="javascript:void(0)" data-image="https://image.istarbucks.co.kr/upload/store/skuimg/2021/11/[9300000003570]_20211102085024757.jpg" data-zoom-image="https://image.istarbucks.co.kr/upload/store/skuimg/2021/11/[9300000003570]_20211102085024757.jpg" class="elevatezoom-gallery active"><img src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/11/[9300000003570]_20211102085024757.jpg" alt="\상세이미지 1번"></a></li><li><a href="javascript:void(0)" data-image="https://image.istarbucks.co.kr/upload/store/skuimg/2021/11/[9300000003570]_20211102090952205.jpg" data-zoom-image="https://image.istarbucks.co.kr/upload/store/skuimg/2021/11/[9300000003570]_20211102090952205.jpg" class="elevatezoom-gallery"><img src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/11/[9300000003570]_20211102090952205.jpg" alt="\상세이미지 2번"></a></li><li><a href="javascript:void(0)" data-image="https://image.istarbucks.co.kr/upload/store/skuimg/2021/11/[9300000003570]_20211102085053025.jpg" data-zoom-image="https://image.istarbucks.co.kr/upload/store/skuimg/2021/11/[9300000003570]_20211102085053025.jpg" class="elevatezoom-gallery"><img src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/11/[9300000003570]_20211102085053025.jpg" alt="\상세이미지 3번"></a></li></ul>
                             </div>
                         </div>
                         <div class="product_view_detail">
                             <div class="myAssignZone">
-                                <h4></h4>
-                                <p class="t1"></p>
+                                <h4>그린 사이렌 도트 머그 237ml<br><span>Green siren dot mug 237ml</span></h4>
+                                <p class="t1">[온라인 판매 전용]
+								<br>법랑 머그의 쉐입을 한 세라믹 머그로서, 트렌디한 감성의 디자인이 결합된 237ml 상품입니다. </p>
                             </div>
                             <div class="myDrink"><a href="javascript:void(0)" role="button" title="구매 및 담기">구매 및 담기</a><!-- 접근성_20171123 role, title 추가 --></div>
                             <div class="m_view_slide">
@@ -745,7 +746,10 @@ var eFrequencyPlannerYn = 'Y';
                             </div>
                         </div>
                     </div>
-                    <div class="product_view_wrap2 product_view_wrap3"></div>
+                    <div class="product_view_wrap2 product_view_wrap3">법랑 머그의 쉐입을 한 세라믹 머그로서, 트렌디한 감성의 디자인이 결합된 237ml 상품입니다. 
+<br>머그 림에 그린 컬러로 포인트를 주어 단조롭지 않습니다.
+<br>* 전자레인지 및 식기세척기 사용 가능합니다.
+<br>* 온라인 채널에서만 판매하는 품목입니다.</div>
                     <!-- 제품 상세보기 end -->
                 </div>
                 <!-- 제품 상세보기 하단공통 -->
@@ -1268,62 +1272,62 @@ var eFrequencyPlannerYn = 'Y';
 				
 			    getDataInfo();
 			});
-			var $PRODUCT_CD = '${product_cd}';
+			 var $PRODUCT_CD = "9300000003570";
 	            
-	        if(!($PRODUCT_CD) || $PRODUCT_CD == "") {
-	            alert("정상적인 접근이 아닙니다.");
-	            location.href = "product_list";
-	        }
+	            if(!($PRODUCT_CD) || $PRODUCT_CD == "") {
+	                alert("정상적인 접근이 아닙니다.");
+	                location.href = "menu/product_list";
+	            }
 			
 			function getDataInfo() {
-				var option = {
-                        'product_cd' : $PRODUCT_CD,
-                        'product_cate' : "product"
+                var option = {
+                        'product_cd' : $PRODUCT_CD
                 };
-                __ajaxCall('${pageContext.request.contextPath}/menu/productViewAjax', option , true, "JSON", "POST", 
+                __ajaxCall('/menu/productViewAjax', option , true, "JSON", "POST", 
                 function(data) {
                     if (typeof data.view === 'undefined' || data.view == null) {
                         alert("조회 불가능한 상품입니다.");
-                        location.href = "product_list";
+                        location.href = "menu/product_list";
                         return;
                     }
                 	
-                	getFileInfo($PRODUCT_CD);
-                    //getPairInfo();
+                	getFileInfo();
+                    getPairInfo();
+                    getPromotion();
                     
-                	$('div.myAssignZone > h4').append(data.view.product_NM + '<br /><span></span>');
+                	$('div.myAssignZone > h4')(data.view.product_NM + '<br /><span></span>');
                     $('div.myAssignZone > h4 > span').text(data.view.product_ENGNM);
-                 	$('div.myAssignZone > .t1').append(data.view.content.replace(/\n/gi, '<br />'));
-                    $('div.product_view_wrap2').append(data.view.recommend.replace(/\n/gi, '<br />'));
+                 	$('div.myAssignZone > .t1')(data.view.content.replace(/\n/gi, '<br />'));
+                    $('div.product_view_wrap2')(data.view.recommend.replace(/\n/gi, '<br />'));
                      
                     $('.smap .cate').text(data.view.cate_NAME);
                     $('.smap .this').text(data.view.product_NM);
                     $('#titleJoin').text(data.view.product_NM + " | Starbucks Korea"); //220117 수정
                     
                     if(data.view.cate_NAME == "머그") {
-                        $('.sub_tit_inner > h2').append("<img src='//image.istarbucks.co.kr/common/img/menu/tit/product_tit1.png' alt='"+data.view.cate_NAME+"' />");// 접근성_20171123 alt 추가
+                        $('.sub_tit_inner > h2')("<img src='//image.istarbucks.co.kr/common/img/menu/tit/product_tit1.png' alt='"+data.view.cate_NAME+"' />");// 접근성_20171123 alt 추가
                         $('.pro_tit').text('머그 사용시 유의사항');
                     } else if(data.view.cate_NAME == "플라스틱 텀블러") {
-                        $('.sub_tit_inner > h2').append("<img src='//image.istarbucks.co.kr/common/img/menu/tit/product_tit2.png' alt='"+data.view.cate_NAME+"' />");// 접근성_20171123 alt 추가
+                        $('.sub_tit_inner > h2')("<img src='//image.istarbucks.co.kr/common/img/menu/tit/product_tit2.png' alt='"+data.view.cate_NAME+"' />");// 접근성_20171123 alt 추가
                         $('.pro_tit').text('플라스틱 텀블러 사용시 유의사항');
                     } else if(data.view.cate_NAME == "S/S 텀블러") {
-                        $('.sub_tit_inner > h2').append("<img src='//image.istarbucks.co.kr/common/img/menu/tit/product_tit3.png' alt='"+data.view.cate_NAME+"' />");// 접근성_20171123 alt 추가
+                        $('.sub_tit_inner > h2')("<img src='//image.istarbucks.co.kr/common/img/menu/tit/product_tit3.png' alt='"+data.view.cate_NAME+"' />");// 접근성_20171123 alt 추가
                         $('.pro_tit').text('S/S 텀블러 사용시 유의사항');
                     } else if(data.view.cate_NAME == "보온병") {
-                        $('.sub_tit_inner > h2').append("<img src='//image.istarbucks.co.kr/common/img/menu/tit/product_tit4.png' alt='"+data.view.cate_NAME+"' />");// 접근성_20171123 alt 추가
+                        $('.sub_tit_inner > h2')("<img src='//image.istarbucks.co.kr/common/img/menu/tit/product_tit4.png' alt='"+data.view.cate_NAME+"' />");// 접근성_20171123 alt 추가
                         $('.pro_tit').text('보온병 사용시 유의사항');
                     } else if(data.view.cate_NAME == "악세서리") {
-                        $('.sub_tit_inner > h2').append("<img src='//image.istarbucks.co.kr/common/img/menu/tit/product_tit5.png' alt='"+data.view.cate_NAME+"' />");// 접근성_20171123 alt 추가
+                        $('.sub_tit_inner > h2')("<img src='//image.istarbucks.co.kr/common/img/menu/tit/product_tit5.png' alt='"+data.view.cate_NAME+"' />");// 접근성_20171123 alt 추가
                         $('.pro_tit').text('악세서리 사용시 유의사항');
                     } else if(data.view.cate_NAME == "커피 용품") {
-                        $('.sub_tit_inner > h2').append("<img src='//image.istarbucks.co.kr/common/img/menu/tit/product_tit6.png' alt='"+data.view.cate_NAME+"' />");// 접근성_20171123 alt 추가
+                        $('.sub_tit_inner > h2')("<img src='//image.istarbucks.co.kr/common/img/menu/tit/product_tit6.png' alt='"+data.view.cate_NAME+"' />");// 접근성_20171123 alt 추가
                         $('.pro_tit').text('커피 용품 사용시 유의사항');
                     } else if(data.view.cate_NAME == "패키지 티") {
                     	$(".bnr_teavana").show();
                     }
 
                     if(data.view.note_TYPE != "") {
-	                    $('.product_w_txt').append('<p>');
+	                    $('.product_w_txt')('<p>');
 	                    $('.product_w_txt > p').append(data.view.note_TYPE.replace(/\r\n/gi, '</p><p>'));
                         $('.product_w_txt').append('</p>');
                         
@@ -1381,12 +1385,11 @@ var eFrequencyPlannerYn = 'Y';
                 });
 			}
             
-            function getFileInfo(product_cd) {
+            function getFileInfo() {
                 var option = {
-                        'product_cd' : product_cd,
-                        'product_cate' : "product"
+                        'PRODUCT_CD' : $PRODUCT_CD
                 };
-                __ajaxCall('${pageContext.request.contextPath}/menu/productFileAjax', option , true, "JSON", "POST", 
+                __ajaxCall('/menu/productFileAjax', option , true, "JSON", "POST", 
                 function(data) {
                     $('.product_thum_wrap > .product_thum').empty();
                     $('#tpl_productFileLi').tmpl(data.file).appendTo($('.product_thum_wrap > .product_thum'));
@@ -1454,7 +1457,7 @@ var eFrequencyPlannerYn = 'Y';
                 var option = {
                         'PRODUCT_CD' : $PRODUCT_CD
                 };
-                __ajaxCall('${pageContext.request.contextPath}/menu/productPairAjax', option , true, "JSON", "POST", 
+                __ajaxCall('/menu/productPairAjax', option , true, "JSON", "POST", 
                 function(data) {
                 	if(data.pair.length > 0) {
 	                    $('div.productView_bottom > div.productRel_wrap > ul').empty();
@@ -1471,19 +1474,19 @@ var eFrequencyPlannerYn = 'Y';
                             var product_cd2 = "<input type='hidden' name='PRODUCT_CD' value='" + product_cd + "'>";
                             
                             if(f_cate_cd == "W0000001") {
-                                f.action = "drink_view";
+                                f.action = "menu/drink_view";
                                 $(f)(product_cd);
                             } else if(f_cate_cd == "W0000012") {
-                                f.action = "food_view";
+                                f.action = "menu/food_view";
                                 $(f)(product_cd);
                             } else if(f_cate_cd == "W0000022") {
-                                f.action = "product_view";
+                                f.action = "menu/product_view";
                                 $(f)(product_cd);
                             } else if(f_cate_cd == "W0000057") {
-                                f.action = "product_view";
+                                f.action = "coffee/product_view";
                                 $(f)(product_cd2);
                             } else {
-                                f.action = "drink_view";
+                                f.action = "menu/drink_view";
                                 $(f)(product_cd);
                             }
                             f.submit();
@@ -1494,6 +1497,60 @@ var eFrequencyPlannerYn = 'Y';
                 });
             }
             
+            function getPromotion() {
+                /*
+                var option = {
+                        'PRODUCT_CD' : $PRODUCT_CD
+                };
+                __ajaxCall('/menu/productPromotionAjax', option , true, "JSON", "POST", 
+                function(data) {
+                    if(data.promotion.length > 0) {
+                        $('ul.promotionList').empty();
+                        $('#tpl_promotionLi').tmpl(data.promotion).appendTo($('ul.promotionList'));
+                        
+                        $('.promotionLi').unbind('click').bind('click', function() {
+                            pro_seq = $(this).attr('prod');
+                            f = document.drinkViewForm;
+                            f.action = "whats_new/campaign_view";
+                            f.pro_seq.value = pro_seq;
+                            f.submit();
+                        });
+                    }
+                },
+                function() {
+                });
+                */
+                /* if ("8015050003|8015050004|8015050005|8015050002|8015050001|8015010067|8015010068|8015010069|8015020071|8015020072|8015020070|8015020069|11055891|11055881|8015010065|8015010066|8015020064|5650004176|5650004178|11055905".indexOf($PRODUCT_CD) > -1) {
+                	$('ul.promotionList')('<li><a href="whats_new/campaign_view?pro_seq=1150">2016 서머1 프로모션</a></li>');
+                }
+                if ("8015070011|8015070012|8015070013|8015020074|8015010062|8015010063|8015030004|8015020068|11054137|8015020077|11054133|8015010061|8015010064|8015070008|8015020067|8015010059|8015010060|8015010058|11054138|5650004186|5650004188|5650004190|8015020066|9300000000007|9300000000006|9300000000005|5651600018|5651600016".indexOf($PRODUCT_CD) > -1) {
+                	$('ul.promotionList')('<li><a href="whats_new/campaign_view?pro_seq=1133">2016 체리블라썸 프로모션</a></li>');
+                }
+                if ("8015020065|8015020060|8015020061|8015020059|8015070010|8015020062|8015010053|11054074|11054072|8015010054|8015070014|8015070015|11054070|8015020063|8015010051|11054075|56500099347|56500099346|56500099345|5650004164|5650004174|5650004180|5650004166|8015060001|5651600013|5651600012|11053622".indexOf($PRODUCT_CD) > -1) {
+                	$('ul.promotionList')('<li><a href="whats_new/campaign_view?pro_seq=1126">2016 Spring 프로모션</a></li>');
+                }
+                if ("8015020041|8015020042|8015020043|11052929|11052930|8015010048|8015020044|11052939|11052940|8015020049|8015010046|8015010047|8015020047|8015020048|11052943|5650004162|8015020045|8015020040|8015020046|5651600002|8015070006|8015070007|5651600001|5651600003|11052944".indexOf($PRODUCT_CD) > -1) {
+                	$('ul.promotionList')('<li><a href="whats_new/campaign_view?pro_seq=1104">2016 뉴이어 프로모션</a></li>');
+                }
+                if ("8015020097|8015020099|8015020098|11058162|11058404|9300000000044|9300000000205|8015020096|11058405|8015020095|8015020101|8015020102|8015020100|8015020093|8015020094|11058735|8015010073|9300000000042|9300000000043|8015020078|8015010070|8015010072|8015010071|5650090092|5650004182|9300000000049|9300000000045|9300000000046|9300000000047|9300000000048".indexOf($PRODUCT_CD) > -1) {
+                	$('ul.promotionList')('<li><a href="whats_new/campaign_view?pro_seq=1173">2016 서머2 프로모션</a></li>');
+                } 
+                if ("9300000000031|9300000000030|9300000000058|9300000000029|9300000000056|9300000000057|9300000000003|9300000000053|9300000000054|9300000000055|9300000000002|9300000000001|9300000000024".indexOf($PRODUCT_CD) > -1) {
+                	$('ul.promotionList')('<li><a href="whats_new/campaign_view?pro_seq=1190">2016 서머3 프로모션</a></li>');
+                }
+                if ("9300000000083|9300000000084|9300000000086|9300000000078|9300000000080|9300000000081|9300000000087|9300000000088|9300000000089|9300000000091|9300000000074|9300000000075|9300000000076|9300000000077|9300000000079|9300000000082|9300000000070|9300000000090|9300000000073|11047956|11038078|11060928|11061441".indexOf($PRODUCT_CD) > -1) {
+                	$('ul.promotionList')('<li><a href="whats_new/campaign_view?pro_seq=1204">오텀1 프로모션</a></li>');
+                }
+                if ("9300000000165|9300000000166|9300000000167|9300000000168|9300000000160|9300000000169|9300000000171|9300000000170|9300000000162|9300000000163|9300000000164|9300000000175|9300000000177|9300000000159|9300000000161|9300000000072|9300000000071|9300000000069".indexOf($PRODUCT_CD) > -1) {
+                	$('ul.promotionList')('<li><a href="whats_new/campaign_view?pro_seq=1218">오텀2 프로모션</a></li>');
+                }
+                if ("9300000000191|9300000000192|9300000000193|9300000000194|9300000000195|9300000000196|9300000000186|9300000000187|9300000000185|9300000000188|9300000000189|9300000000197|9300000000199|9300000000200|9300000000202|9300000000203|9300000000180|9300000000181|9300000000182|9300000000183|9300000000190|9300000000198|9300000000184|9300000000201|9300000000204|11062547|11062538|11062537|11062539|11062613|11062615|11062572|11062623|11062622|11062630|11062629|9300000000216|9300000000217|9300000000218|9300000000219|9300000000521|9300000000522|9900000000077|9900000000078|9900000000079|9900000000080".indexOf($PRODUCT_CD) > -1) {
+                	$('ul.promotionList')('<li><a href="whats_new/campaign_view?pro_seq=1225">2016 크리스마스1 프로모션</a></li>');
+                }
+                if ("9300000000235|9300000000236|9300000000237|9300000000238|9300000000221|9300000000222|9300000000223|9300000000220|9300000000094|9300000000224|9300000000225|9300000000207|9300000000208|11064218|11064909|9300000000577|9300000000215|9300000000213|9300000000214|9300000000092|9300000000382|9300000000212|9300000000210|9300000000211|9300000000093|9300000000206|9300000000232|9300000000234|9300000000233|11064979|9300000000465".indexOf($PRODUCT_CD) > -1) {
+                	$('ul.promotionList')('<li><a href="whats_new/campaign_view?pro_seq=1240">크리스마스2 프로모션</a></li>');
+                }*/
+            }
 		</script>
         <script type="text/x-jquery-tmpl" id="tpl_productFileLi">
             <li><a href="javascript:void(0)" data-image="\${img_UPLOAD_PATH.replace("www", "image")}\${file_PATH}" data-zoom-image="\${img_UPLOAD_PATH.replace("www", "image")}\${file_PATH}" class="elevatezoom-gallery"><img src="\${img_UPLOAD_PATH.replace("www", "image")}\${file_PATH}" alt="\상세이미지 \${img_ORDER}번"></a></li>

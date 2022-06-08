@@ -650,31 +650,7 @@ var eFrequencyPlannerYn = 'Y';
 							<p class="tit">관련 제품</p>
 							<div class="productRel_wrap">
                                 <ul class="productRel_ul">
-                                <li>                 
-                                	<dl>                     
-                                		<dt>
-                                			<a href="javascript:void(0)" class="goView" prod="110601"><img src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[110601]_20210415143400773.jpg" alt="아이스 카푸치노">
-                                			</a>
-                                		</dt>
-                                		<dd>
-                                			<p class="t1">아이스 카푸치노</p>
-                                			<p class="t2">풍부하고 진한 에스프레소에 신선한 우유와 우유 거품이 얼음과 함께 들어간 시원하고 부드러운 커피 음료</p>
-                                		</dd>
-                                	</dl>
-                                </li>
-                                <li>
-                                	<dl>
-                                		<dt><a href="javascript:void(0)" class="goView" prod="38">
-                                				<img src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[38]_20210415154821846.jpg" alt="카푸치노">
-                                			</a>
-                                		</dt>
-                                		<dd>
-                                			<p class="t1">카푸치노</p>
-                                			<p class="t2">풍부하고 진한 에스프레소에 따뜻한 우유와 벨벳 같은 우유 거품이 1:1 비율로 어우러져 마무리된 커피 음료</p>
-                                		</dd>
-                                	</dl>
-                                </li>
-                               </ul>
+                                <li>                 <dl>                     <dt><a href="javascript:void(0)" class="goView" prod="110601"><img src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[110601]_20210415143400773.jpg" alt="아이스 카푸치노"></a></dt>                     <dd>                         <p class="t1">아이스 카푸치노</p>                         <p class="t2">풍부하고 진한 에스프레소에 신선한 우유와 우유 거품이 얼음과 함께 들어간 시원하고 부드러운 커피 음료</p>                         <p class="more_btn"><a href="javascript:void(0)" class="goView" prod="110601"></a></p>                     </dd>                 </dl>             </li><li>                 <dl>                     <dt><a href="javascript:void(0)" class="goView" prod="38"><img src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[38]_20210415154821846.jpg" alt="카푸치노"></a></dt>                     <dd>                         <p class="t1">카푸치노</p>                         <p class="t2">풍부하고 진한 에스프레소에 따뜻한 우유와 벨벳 같은 우유 거품이 1:1 비율로 어우러져 마무리된 커피 음료</p>                         <p class="more_btn"><a href="javascript:void(0)" class="goView" prod="38"><img src="//image.istarbucks.co.kr/common/img/coffee/cf_more_btn.png" alt="자세히 보기"></a></p>                     </dd>                 </dl>             </li></ul>
 							</div>
 						</div>
 					</div>

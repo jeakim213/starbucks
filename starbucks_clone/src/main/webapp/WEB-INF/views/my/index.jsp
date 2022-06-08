@@ -697,8 +697,7 @@ var eFrequencyPlannerYn = 'Y';
                             <!-- 일반회원정보 -->
                             <section class="regu_user_info regu_info_add"><!-- 20200129 class="regu_info_add" 추가 -->
                                 <article class="regu_user_info_center">
-                                	<!-- 이단 -->
-                                    <p><strong class="userName"><!-- 홍길동 --></strong> 님 안녕하세요.<br><span>(지금 스타벅스 카드를 등록하시면 <span class="en">Starbucks Rewards</span> 혜택을 받으실 수 있습니다.)</span></p> <!-- 스타벅스 리워드 수정 -->
+                                    <p><strong class="userName">이*<!-- 홍길동 --></strong> 님 안녕하세요.<br><span>(지금 스타벅스 카드를 등록하시면 <span class="en">Starbucks Rewards</span> 혜택을 받으실 수 있습니다.)</span></p> <!-- 스타벅스 리워드 수정 -->
                                     <!-- <a href="./myinfo_modify">개인정보 수정</a> -->
                                     <!-- 20160929 김민호 수정 -->
 									<a href="./myinfo_modify_login">개인정보 수정</a>
@@ -839,11 +838,11 @@ var eFrequencyPlannerYn = 'Y';
                                		<div class="plcc-logo" style="display:none;">
                                			<img src="../common/img/util/plcc-logo.png" alt="Hyundai Card + STARBUCKS">
                                		</div>
-                                	<figure class="en ms_user_starbg"><span class="totalStar"></span></figure>
-                                    <p class="ms_user_stat_notice"><strong class="en t_bd9b60"><!--OOO Level --></strong>을 유지 중 입니다.<br>무료음료 쿠폰 발행까지 개의 별이 남았습니다.</p>
+                                	<figure class="en ms_user_starbg"><span class="totalStar"><!-- 3 --></span></figure>
+                                    <p class="ms_user_stat_notice"><!-- <strong>27</strong>개의 별이 더 모이면<br><strong class="en t_715d39">Gold Level</strong>만의 특별한 혜택이! --></p>
                                 </article>
                                 <article class="ms_user_info_right">
-                                    <p class="ms_user_stat"><span><strong class="userName"><!-- 홍길동 --></strong> 님은</span> <span>현재 <strong class="en userGrade"><!-- Green Level --></strong>이십니다.</span></p>
+                                    <p class="ms_user_stat"><span><strong class="userName">이*<!-- 홍길동 --></strong> 님은</span> <span>현재 <strong class="en userGrade"><!-- Green Level --></strong>이십니다.</span></p>
                                     <!-- 20200805 PLCC 추가 -->
                                		<div class="plcc-logo" style="display:none;">
                                			<img src="../common/img/util/plcc-logo.png" alt="Hyundai Card + STARBUCKS">
@@ -877,7 +876,7 @@ var eFrequencyPlannerYn = 'Y';
                                 <div class="my_ms_card_inner">
                                     <header>
                                         <h5><span class="en">My</span> 스타벅스 카드</h5>
-                                        <p class="recent_card">총 보유카드 : 장</p>
+                                        <p class="recent_card">총 보유카드 : 0장</p>
                                         <aside>
                                             <span><strong class="curSlideNo">1</strong>/<span class="totalCnt">5</span></span>
                                             <p>

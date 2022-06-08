@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 
 <!DOCTYPE html>
 <html lang="ko">
@@ -17,10 +16,6 @@
 <meta property="og:description" content="Starbucks">
 
 <title id="titleJoin">Starbucks Korea</title> <!-- 220117 수정 -->
-<script type="text/javascript" charset="utf-8">
-	sessionStorage.setItem("contextpath", "${pageContext.request.contextPath}");
-</script>
-<c:set var="cpath" value="${pageContext.request.contextPath}" />
 <link rel="shortcut icon" href="../common/img/common/favicon.ico?v=200828" type="image/ico"> <!-- 20200827 파비콘 교체 및 CDN 변수처리 -->
 <link href="../common/css/reset.css" rel="stylesheet">
 <link href="../common/css/style.css?v=210721" rel="stylesheet">
@@ -635,7 +630,7 @@ var eFrequencyPlannerYn = 'Y';
 									<article class="find_store_cont">
 										<header class="find_store_cont_header">
 											<p class="btn_opt_chk"><a href="javascript:void(0);">옵션 선택</a></p>
-											<span class="map_layer_toggle"><a href="javascript:void(0);"  class="on">열기</a></span>
+											<span class="map_layer_toggle"><a href="javascript:void(0);">열기</a></span>
 										</header>
 										<article class="store_map_layer_cont" style="display: block;">
 											<header class="quick_search">
@@ -683,23 +678,23 @@ var eFrequencyPlannerYn = 'Y';
 													<div class="loca_step1_ttl">STEP 1 : 시/도를 선택해 주세요.</div>
 													<div class="loca_step1_cont">
 														<ul class="sido_arae_box">
-															<li><a href="javascript:void(0);" class="set_sido_cd_btn" data-sidocd="01"></a></li>
-															<li><a href="javascript:void(0);" class="set_sido_cd_btn" data-sidocd="08"></a></li>
-															<li><a href="javascript:void(0);" class="set_sido_cd_btn" data-sidocd="02"></a></li>
-															<li><a href="javascript:void(0);" class="set_sido_cd_btn" data-sidocd="03"></a></li>
-															<li><a href="javascript:void(0);" class="set_sido_cd_btn" data-sidocd="04"></a></li>
-															<li><a href="javascript:void(0);" class="set_sido_cd_btn" data-sidocd="05"></a></li>
-															<li><a href="javascript:void(0);" class="set_sido_cd_btn" data-sidocd="06"></a></li>
-															<li><a href="javascript:void(0);" class="set_sido_cd_btn" data-sidocd="07"></a></li>
-															<li><a href="javascript:void(0);" class="set_sido_cd_btn" data-sidocd="09"></a></li>
-															<li><a href="javascript:void(0);" class="set_sido_cd_btn" data-sidocd="10"></a></li>
-															<li><a href="javascript:void(0);" class="set_sido_cd_btn" data-sidocd="11"></a></li>
-															<li><a href="javascript:void(0);" class="set_sido_cd_btn" data-sidocd="12"></a></li>
-															<li><a href="javascript:void(0);" class="set_sido_cd_btn" data-sidocd="13"></a></li>
-															<li><a href="javascript:void(0);" class="set_sido_cd_btn" data-sidocd="14"></a></li>
-															<li><a href="javascript:void(0);" class="set_sido_cd_btn" data-sidocd="15"></a></li>
-															<li><a href="javascript:void(0);" class="set_sido_cd_btn" data-sidocd="16"></a></li>
-															<li><a href="javascript:void(0);" class="set_sido_cd_btn" data-sidocd="17"></a></li>
+															<li><a href="javascript:void(0);" class="set_sido_cd_btn" data-sidocd="01">서울</a></li>
+															<li><a href="javascript:void(0);" class="set_sido_cd_btn" data-sidocd="08">경기</a></li>
+															<li><a href="javascript:void(0);" class="set_sido_cd_btn" data-sidocd="02">광주</a></li>
+															<li><a href="javascript:void(0);" class="set_sido_cd_btn" data-sidocd="03">대구</a></li>
+															<li><a href="javascript:void(0);" class="set_sido_cd_btn" data-sidocd="04">대전</a></li>
+															<li><a href="javascript:void(0);" class="set_sido_cd_btn" data-sidocd="05">부산</a></li>
+															<li><a href="javascript:void(0);" class="set_sido_cd_btn" data-sidocd="06">울산</a></li>
+															<li><a href="javascript:void(0);" class="set_sido_cd_btn" data-sidocd="07">인천</a></li>
+															<li><a href="javascript:void(0);" class="set_sido_cd_btn" data-sidocd="09">강원</a></li>
+															<li><a href="javascript:void(0);" class="set_sido_cd_btn" data-sidocd="10">경남</a></li>
+															<li><a href="javascript:void(0);" class="set_sido_cd_btn" data-sidocd="11">경북</a></li>
+															<li><a href="javascript:void(0);" class="set_sido_cd_btn" data-sidocd="12">전남</a></li>
+															<li><a href="javascript:void(0);" class="set_sido_cd_btn" data-sidocd="13">전북</a></li>
+															<li><a href="javascript:void(0);" class="set_sido_cd_btn" data-sidocd="14">충남</a></li>
+															<li><a href="javascript:void(0);" class="set_sido_cd_btn" data-sidocd="15">충북</a></li>
+															<li><a href="javascript:void(0);" class="set_sido_cd_btn" data-sidocd="16">제주</a></li>
+															<li><a href="javascript:void(0);" class="set_sido_cd_btn" data-sidocd="17">세종</a></li>
 														</ul>
 													</div>
 												</div>
@@ -707,7 +702,7 @@ var eFrequencyPlannerYn = 'Y';
 													<div class="loca_step2_ttl">STEP 2 : 구/군을 선택해 주세요.</div>
 													<div class="result_num_wrap3">
 														<a class="btn_prev" href="javascript:void(0);">앞으로</a>
-														<strong class="sidoSelectName"></strong>
+														<strong class="sidoSelectName">서울</strong>
 													</div>
 													<div class="loca_step2_cont">
 														<div class="loca_step2_frame scrollbar-inner mCustomScrollbar _mCS_2 mCS_no_scrollbar">
@@ -732,7 +727,7 @@ var eFrequencyPlannerYn = 'Y';
 														<!-- 검색결과 없는 경우 -->
 														<!--strong>검색 결과</strong>(<span class="en t_006633">0</span>개)-->
 														<!-- 검색결과 있는 경우 -->
-														<strong class="gugunSelectName"></strong> (검색 결과 <span class="en t_006633 sidoSetResult"></span>개)
+														<strong class="gugunSelectName"></strong> (검색 결과 <span class="en t_006633 sidoSetResult">0</span>개)
 													</div>
 													<div class="result_list_wrap">
 														<!-- 검색결과 없는 경우 -->
@@ -769,7 +764,7 @@ var eFrequencyPlannerYn = 'Y';
 											<p class="btn_daum_map">
 												<a href="javascript:void(0);" class="daumGoBtn" target="_blank">카카오맵</a> <!-- 20200819 수정 -->
 											</p>
-											<span class="road_layer_toggle"><a href="javascript:void(0);" class="daumFindParentToggle" >열기</a></span>
+											<span class="road_layer_toggle"><a href="javascript:void(0);" class="daumFindParentToggle">열기</a></span>
 										</header>
 										<article class="road_map_layer_cont">
 										
@@ -1150,7 +1145,8 @@ var eFrequencyPlannerYn = 'Y';
 	</div>
 		<div style="position: absolute; z-index: 1; width: 100%; height: 0px; transform: translateZ(0px);">
 			<div style="position: absolute; margin: -55px 0px 0px -16px; z-index: 0; left: -2653px; top: 6289px;">
-				<img draggable="false" src="../common/img/store/pin/pin_start.png" alt="" title="" style="min-width: 0px; min-height: 0px; max-width: 99999px; max-height: none; border: 0px; display: block; position: absolute; user-select: none; -webkit-user-drag: none; clip: rect(0px, 38px, 60px, 0px); top: 0px; left: 0px; width: 38px; height: 60px;"></div>
+			<!-- 예은_아니 이미지 왜안나옴? -->
+				<img draggable="false" src="common/img/store/pin/pin_start.png" alt="" title="" style="min-width: 0px; min-height: 0px; max-width: 99999px; max-height: none; border: 0px; display: block; position: absolute; user-select: none; -webkit-user-drag: none; clip: rect(0px, 38px, 60px, 0px); top: 0px; left: 0px; width: 38px; height: 60px;"></div>
 		</div>
 	</div>
 </div>
@@ -1741,8 +1737,7 @@ var eFrequencyPlannerYn = 'Y';
 <script src="../common/js/store/store_map.js?v=20190129"></script>
 <script src="../common/js/store/store_core.js?v=210802"></script>
 <script src="../common/js/store/store_map_page.js?v=210423"></script>
-<script src="../common/js/store/store_map_road.js?v=210316"></script> 
-			
+			<script src="../common/js/store/store_map_road.js?v=210316"></script> 
 			<script type="text/javascript">
 				//20150816
 				//20150816-2
@@ -1763,7 +1758,6 @@ var eFrequencyPlannerYn = 'Y';
 					var startHeight = $(window).height();
 					var store_map_layer_height;
 					$(".before_login").show();
-					
 					
 	
 					/* 길찾기 */
@@ -1906,7 +1900,9 @@ var eFrequencyPlannerYn = 'Y';
 					});
 					
 					
-					$('.find_road_header h2.btn_find_road a').click(function(){				
+					$('.find_road_header h2.btn_find_road a').click(function(){
+						//0601 예은 이미지없어!
+						
 						$parentMenuType = "B";
 						$(".btn_storemap_quick").hide();
 						$roadResult = false;
@@ -2003,7 +1999,7 @@ var eFrequencyPlannerYn = 'Y';
 					});
 
 					/* 길찾기 end */	
-			
+					
 					
 					$(window).load(function(){
 					
