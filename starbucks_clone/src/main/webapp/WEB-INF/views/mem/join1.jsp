@@ -2121,20 +2121,26 @@ var eFrequencyPlannerYn = 'Y';
 								</section>
 								<section class="mem_accreditation_wrap mb10">
 									<h5>인증방식 선택</h5>
-									<ul class="mem_accreditation_info">
+									<div class="auth">
+										<figure style="text-align: center;"><img src="../common/img/util/mem/icon_find1_type2.png" alt="휴대폰 아이콘"></figure>
+											<p style="text-align: center;" class="mem_k_titl">휴대폰 인증</p>
+											<p style="text-align: center;" class="mem_k_txt">본인 명의의 휴대폰을 통해 인증합니다.</p>
+											<p style="text-align: center;" class="mem_k_btn"><a href="javascript:void(0)" title="휴대폰 본인 인증 새창열기">인증하기</a></p>
+									</div>
+									<!-- <ul class="mem_accreditation_info">
 										<li class="li1">
-											<figure><img src="../common/img/util/mem/icon_find1_type2.png" alt="휴대폰 아이콘"></figure> <!-- 20200826 수정 -->
+											<figure style="margin: auto;"><img src="../common/img/util/mem/icon_find1_type2.png" alt="휴대폰 아이콘"></figure> 20200826 수정
 											<p class="mem_k_titl">휴대폰 인증</p>
 											<p class="mem_k_txt">본인 명의의 휴대폰을 통해 인증합니다.</p>
-											<p class="mem_k_btn"><a href="javascript:void(0)" title="휴대폰 본인 인증 새창열기">인증하기</a></p><!-- 접근성_20171120 title 추가 -->
+											<p class="mem_k_btn"><a href="javascript:void(0)" title="휴대폰 본인 인증 새창열기">인증하기</a></p>접근성_20171120 title 추가
 										</li>
 										<li class="li2">
-											<figure><img src="../common/img/util/mem/icon_find2_type2.png" alt="아이핀 아이콘"></figure> <!-- 20200826 수정 -->
+											<figure><img src="../common/img/util/mem/icon_find2_type2.png" alt="아이핀 아이콘"></figure> 20200826 수정
 											<p class="mem_f_titl">아이핀 <span class="en">(i-PIN)</span>인증 </p>
 											<p class="mem_f_txt">가입한 아이핀 ID를 통해 인증합니다.</p>
-											<p class="mem_f_btn"><a href="javascript:void(0)" title="아이핀 본인 인증 새창열기">인증하기</a></p><!-- 접근성_20171120 title 추가 -->
+											<p class="mem_f_btn"><a href="javascript:void(0)" title="아이핀 본인 인증 새창열기">인증하기</a></p>접근성_20171120 title 추가
 										</li>
-									</ul>
+									</ul>  -->
 								</section>
 							</section>
 						</fieldset>	

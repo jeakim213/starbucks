@@ -64,25 +64,7 @@ var eFrequencySeq = '172';
 var eFrequencyPlannerYn = 'Y';
 </script>
 
-<<<<<<< HEAD
-		<link href="common/css/style_main-2.css?r=1abii2" rel="stylesheet">
-		<link href="common/css/style_whatsnew.css?r=1abii2" rel="stylesheet">
-		<link href="common/css/style_find_road.css?v=210423" rel="stylesheet">
-		<link href="common/css/style_util.css?v=210316" rel="stylesheet">
-		<link href="common/css/skdslider.css?r=1abii2" rel="stylesheet">
-		<link href="common/css/ezmark-1.css?r=1abii2" rel="stylesheet">
-		
-		<style type="text/css" data-fbcssmodules="css:fb.css.base css:fb.css.dialog css:fb.css.iframewidget css:fb.css.customer_chat_plugin_iframe">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
-.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_dialog_advanced{border-radius:8px;padding:10px}.fb_dialog_content{background:#fff;color:#373737}.fb_dialog_close_icon{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{left:5px;right:auto;top:5px}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{height:100%;left:0;margin:0;overflow:visible;position:absolute;top:-10000px;transform:none;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{background:none;height:auto;min-height:initial;min-width:initial;width:auto}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{clear:both;color:#fff;display:block;font-size:18px;padding-top:20px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .4);bottom:0;left:0;min-height:100%;position:absolute;right:0;top:0;width:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_mobile .fb_dialog_iframe{position:sticky;top:0}.fb_dialog_content .dialog_header{background:linear-gradient(from(#738aba), to(#2c4987));border-bottom:1px solid;border-color:#043b87;box-shadow:white 0 1px 1px -1px inset;color:#fff;font:bold 14px Helvetica, sans-serif;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:linear-gradient(from(#4267B2), to(#2a4887));background-clip:padding-box;border:1px solid #29487d;border-radius:3px;display:inline-block;line-height:18px;margin-top:3px;max-width:85px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{background:none;border:none;color:#fff;font:bold 12px Helvetica, sans-serif;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #4a4a4a;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f5f6f7;border:1px solid #4a4a4a;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-position:50% 50%;background-repeat:no-repeat;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
-.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}
-.fb_mpn_mobile_landing_page_slide_out{animation-duration:200ms;animation-name:fb_mpn_landing_page_slide_out;transition-timing-function:ease-in}.fb_mpn_mobile_landing_page_slide_out_from_left{animation-duration:200ms;animation-name:fb_mpn_landing_page_slide_out_from_left;transition-timing-function:ease-in}.fb_mpn_mobile_landing_page_slide_up{animation-duration:500ms;animation-name:fb_mpn_landing_page_slide_up;transition-timing-function:ease-in}.fb_mpn_mobile_bounce_in{animation-duration:300ms;animation-name:fb_mpn_bounce_in;transition-timing-function:ease-in}.fb_mpn_mobile_bounce_out{animation-duration:300ms;animation-name:fb_mpn_bounce_out;transition-timing-function:ease-in}.fb_mpn_mobile_bounce_out_v2{animation-duration:300ms;animation-name:fb_mpn_fade_out;transition-timing-function:ease-in}.fb_customer_chat_bounce_in_v2{animation-duration:300ms;animation-name:fb_bounce_in_v2;transition-timing-function:ease-in}.fb_customer_chat_bounce_in_from_left{animation-duration:300ms;animation-name:fb_bounce_in_from_left;transition-timing-function:ease-in}.fb_customer_chat_bounce_out_v2{animation-duration:300ms;animation-name:fb_bounce_out_v2;transition-timing-function:ease-in}.fb_customer_chat_bounce_out_from_left{animation-duration:300ms;animation-name:fb_bounce_out_from_left;transition-timing-function:ease-in}.fb_invisible_flow{display:inherit;height:0;overflow-x:hidden;width:0}@keyframes fb_mpn_landing_page_slide_out{0%{margin:0 12px;width:100% - 24px}60%{border-radius:18px}100%{border-radius:50%;margin:0 24px;width:60px}}@keyframes fb_mpn_landing_page_slide_out_from_left{0%{left:12px;width:100% - 24px}60%{border-radius:18px}100%{border-radius:50%;left:12px;width:60px}}@keyframes fb_mpn_landing_page_slide_up{0%{bottom:0;opacity:0}100%{bottom:24px;opacity:1}}@keyframes fb_mpn_bounce_in{0%{opacity:.5;top:100%}100%{opacity:1;top:0}}@keyframes fb_mpn_fade_out{0%{bottom:30px;opacity:1}100%{bottom:0;opacity:0}}@keyframes fb_mpn_bounce_out{0%{opacity:1;top:0}100%{opacity:.5;top:100%}}@keyframes fb_bounce_in_v2{0%{opacity:0;transform:scale(0, 0);transform-origin:bottom right}50%{transform:scale(1.03, 1.03);transform-origin:bottom right}100%{opacity:1;transform:scale(1, 1);transform-origin:bottom right}}@keyframes fb_bounce_in_from_left{0%{opacity:0;transform:scale(0, 0);transform-origin:bottom left}50%{transform:scale(1.03, 1.03);transform-origin:bottom left}100%{opacity:1;transform:scale(1, 1);transform-origin:bottom left}}@keyframes fb_bounce_out_v2{0%{opacity:1;transform:scale(1, 1);transform-origin:bottom right}100%{opacity:0;transform:scale(0, 0);transform-origin:bottom right}}@keyframes fb_bounce_out_from_left{0%{opacity:1;transform:scale(1, 1);transform-origin:bottom left}100%{opacity:0;transform:scale(0, 0);transform-origin:bottom left}}@keyframes slideInFromBottom{0%{opacity:.1;transform:translateY(100%)}100%{opacity:1;transform:translateY(0)}}@keyframes slideInFromBottomDelay{0%{opacity:0;transform:translateY(100%)}97%{opacity:0;transform:translateY(100%)}100%{opacity:1;transform:translateY(0)}}</style>
-	</head>
-	
-	<body>
-	
-		<div class="loading_dimm" style="z-index: 20000; display: none;"></div>
-		<div class="loading_img" style="z-index: 20001; width: 70px; height: 76px; overflow: hidden; display: none;"><div class="jsMovieFrame" style="display: block; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading01.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading02.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading03.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading04.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading05.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading06.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading07.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading08.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading09.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading10.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading11.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading12.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading13.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading14.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading15.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading16.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading17.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading18.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading19.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading20.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading21.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading22.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading23.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading24.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading25.png&quot;);"></div><div id="jsMovie_event_overlay" style="width: 70px; height: 152px; margin-top: -152px;"></div><div id="jsMovie_image_preload_container"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading01.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading02.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading03.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading04.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading05.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading06.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading07.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading08.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading09.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading10.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading11.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading12.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading13.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading14.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading15.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading16.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading17.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading18.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading19.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading20.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading21.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading22.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading23.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading24.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading25.png" alt="" style="height: 1px; width: 1px;"></div></div>
-=======
+
 
 		<link href="../common/css/style_main-2.css?r=1abii2" rel="stylesheet">
 		<link href="../common/css/style_whatsnew.css?r=1abii2" rel="stylesheet">
@@ -101,14 +83,9 @@ var eFrequencyPlannerYn = 'Y';
 	<body style>
 		<div class="loading_dimm" style="z-index: 20000; display: none;"></div>
 		<div class="loading_img" style="z-index: 20001; width: 70px; height: 76px; overflow: hidden; display: none;"><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading01.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading02.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading03.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading04.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading05.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading06.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading07.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading08.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading09.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading10.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading11.png&quot;);"></div><div class="jsMovieFrame" style="display: block; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading12.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading13.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading14.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading15.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading16.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading17.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading18.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading19.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading20.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading21.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading22.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading23.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading24.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading25.png&quot;);"></div><div id="jsMovie_event_overlay" style="width: 70px; height: 152px; margin-top: -152px;"></div><div id="jsMovie_image_preload_container"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading01.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading02.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading03.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading04.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading05.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading06.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading07.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading08.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading09.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading10.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading11.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading12.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading13.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading14.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading15.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading16.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading17.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading18.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading19.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading20.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading21.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading22.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading23.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading24.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading25.png" alt="" style="height: 1px; width: 1px;"></div></div>
->>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
+
 		<div class="pop_up_dimm" style="display:none"></div>
-<<<<<<< HEAD
-				
-		 		
-		
-=======
->>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
+
 		<div id="wrap">
 			
 <script>
@@ -157,12 +134,9 @@ var eFrequencyPlannerYn = 'Y';
 					<!-- 유저인포 -->
 					<div class="user_greet">
 						<div class="user_pic_area">
-<<<<<<< HEAD
-							<img alt="사용자 아이디" src="//image.istarbucks.co.kr/common/img/common/user_pic_sample.jpg">
-=======
+
 							<img alt="사용자 아이디" src="../common/img/common/user_pic_sample.jpg">
 
->>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
 							<p class="msr_user_mask msr_user_mask01"></p>
 							<p class="msr_user_mask msr_user_mask02"></p>
 							<p class="msr_user_mask msr_user_mask03"></p>
@@ -211,23 +185,18 @@ var eFrequencyPlannerYn = 'Y';
 							<img alt="카드이름">
 						</div>
 						<div class="mycard_area2">
-<<<<<<< HEAD
-							<img alt="카드이름" src="//image.istarbucks.co.kr/common/img/common/mycard2.png">
-=======
+
 							<img alt="카드이름" src="../common/img/common/mycard2.png">
 
->>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
 							<p class="num"><!-- 1234-1234-1234-1234 --></p>
 							<p class="barcord"><!-- <img src="//image.istarbucks.co.kr/common/img/common/bacord.png" alt=""> --></p>
 						</div>
 						<div class="mycard_one" style="transform: rotateY(358.638deg);">
 							<!-- <div class="front"> -->
-<<<<<<< HEAD
-							<img src="//image.istarbucks.co.kr/common/img/common/payment_icon1.png" alt="">
-=======
+
 							<img src="../common/img/common/payment_icon1.png" alt="">
 
->>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
+
 							<!-- </div> -->
 							<!-- <div class="back"><img src="//image.istarbucks.co.kr/common/img/common/payment_icon1.png" alt=""></div> -->
 						</div>
@@ -242,12 +211,10 @@ var eFrequencyPlannerYn = 'Y';
 					<!-- 일반회원 -->
 					<div class="sb_card_regi">
 						<a href="javascript:void(0);">
-<<<<<<< HEAD
-							<p class="icon_add_card" onclick="location.href = '/my/mycard_info_input';"><img alt="카드등록 아이콘" src="//image.istarbucks.co.kr/common/img/common/icon_add_card.png"></p>
-=======
+
 							<p class="icon_add_card" onclick="location.href = '/my/mycard_info_input';"><img alt="카드등록 아이콘" src="../common/img/common/icon_add_card.png"></p>
 
->>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
+
 							<p class="sb_card_regi_txt"><strong>스타벅스 카드 등록</strong><br>카드를 등록하시고<br>다양한 리워드를<br>만나보세요.</p>
 						</a>
 					</div>
@@ -741,15 +708,13 @@ var eFrequencyPlannerYn = 'Y';
 											<p class="btn_opt_chk"><a href="javascript:void(0);">옵션 선택</a></p>
 											<span class="map_layer_toggle"><a href="javascript:void(0);" class="on">열기</a></span>
 										</header>
-<<<<<<< HEAD
-										<article class="store_map_layer_cont" style="display: block; height: 424px;">
-=======
+
 										<article class="store_map_layer_cont" style="display: block;">
->>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
+
 											<header class="quick_search">
 												<h3 class="on"><a href="javascript:void(0);">퀵 검색</a></h3>
 											</header>
-											<article style="display:block;">
+											<article>
 												<div class="quick_search_input">
 													<div class="quick_search_inner">
 														<input placeholder="매장명 또는 주소" title="퀵 검색" type="text" name="quickSearchText" id="quickSearchText">
@@ -760,22 +725,32 @@ var eFrequencyPlannerYn = 'Y';
 													<!-- 검색결과 없는 경우 -->
 													<!--strong>검색 결과</strong>(<span class="en t_006633">0</span>개)-->
 													<!-- 검색결과 있는 경우 -->
-<<<<<<< HEAD
-													<strong class="quickSearchResultCtn"></strong> (검색 결과 <span class="en t_006633 resultCtnNumberTab1">10</span>개)<br>
-=======
+
 													<strong class="quickSearchResultCtn"></strong> (검색 결과 <span class="en t_006633 resultCtnNumberTab1"></span>개)<br>
->>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
+
 												</div>
-<<<<<<< HEAD
-												<div class="result_list_wrap" style="height: 305px;">
-=======
+
 												<div class="result_list_wrap"">
->>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
+
 													<!-- 검색결과 없는 경우 -->
 													<!--p class="no_result">검색 결과가 없습니다.</p-->
 													<!-- 검색결과 있는 경우 -->
-													<div class="result_list scrollbar-inner quickScrollWrap mCustomScrollbar _mCS_1" style="height: 305px;"><div id="mCSB_1" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside" tabindex="0"><div id="mCSB_1_container" class="mCSB_container" style="position:relative; top:0; left:0;" dir="ltr">
-													</div><div id="mCSB_1_scrollbar_vertical" class="mCSB_scrollTools mCSB_1_scrollbar mCS-light mCSB_scrollTools_vertical" style="display: block;"><div class="mCSB_draggerContainer"><div id="mCSB_1_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 30px; top: 0px; display: block; height: 254px; max-height: 544px;" oncontextmenu="return false;"><div class="mCSB_dragger_bar" style="line-height: 30px;"></div></div><div class="mCSB_draggerRail"></div></div></div></div></div>
+													<div class="result_list scrollbar-inner quickScrollWrap mCustomScrollbar _mCS_1" style="height: 305px;">
+														<div id="mCSB_1" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside" tabindex="0">
+															<div id="mCSB_1_container" class="mCSB_container" style="position:relative; top:0; left:0;" dir="ltr">
+																<ul class="quickSearchResultBox">
+																</ul>
+															</div>
+														<div id="mCSB_1_scrollbar_vertical" class="mCSB_scrollTools mCSB_1_scrollbar mCS-light mCSB_scrollTools_vertical" style="display: block;">
+															<div class="mCSB_draggerContainer">
+																<div id="mCSB_1_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 30px; top: 0px; display: block; height: 254px; max-height: 544px;" oncontextmenu="return false;">
+																	<div class="mCSB_dragger_bar" style="line-height: 30px;"></div>
+																</div>
+															<div class="mCSB_draggerRail"></div>
+														</div>
+													</div>
+												</div>
+											</div>
 												</div>
 											</article>
 											<header class="loca_search">
@@ -784,10 +759,7 @@ var eFrequencyPlannerYn = 'Y';
 											<article style="display: none;">
 												<div class="loca_step1">
 													<div class="loca_step1_ttl">STEP 1 : 시/도를 선택해 주세요.</div>
-<<<<<<< HEAD
-													<div class="loca_step1_cont" style="height: 594px;">
-														<ul class="sido_arae_box"><li><a href="javascript:void(0);" class="set_sido_cd_btn" data-sidocd="01">서울</a></li><li><a href="javascript:void(0);" class="set_sido_cd_btn" data-sidocd="08">경기</a></li><li><a href="javascript:void(0);" class="set_sido_cd_btn" data-sidocd="02">광주</a></li><li><a href="javascript:void(0);" class="set_sido_cd_btn" data-sidocd="03">대구</a></li><li><a href="javascript:void(0);" class="set_sido_cd_btn" data-sidocd="04">대전</a></li><li><a href="javascript:void(0);" class="set_sido_cd_btn" data-sidocd="05">부산</a></li><li><a href="javascript:void(0);" class="set_sido_cd_btn" data-sidocd="06">울산</a></li><li><a href="javascript:void(0);" class="set_sido_cd_btn" data-sidocd="07">인천</a></li><li><a href="javascript:void(0);" class="set_sido_cd_btn" data-sidocd="09">강원</a></li><li><a href="javascript:void(0);" class="set_sido_cd_btn" data-sidocd="10">경남</a></li><li><a href="javascript:void(0);" class="set_sido_cd_btn" data-sidocd="11">경북</a></li><li><a href="javascript:void(0);" class="set_sido_cd_btn" data-sidocd="12">전남</a></li><li><a href="javascript:void(0);" class="set_sido_cd_btn" data-sidocd="13">전북</a></li><li><a href="javascript:void(0);" class="set_sido_cd_btn" data-sidocd="14">충남</a></li><li><a href="javascript:void(0);" class="set_sido_cd_btn" data-sidocd="15">충북</a></li><li><a href="javascript:void(0);" class="set_sido_cd_btn" data-sidocd="16">제주</a></li><li><a href="javascript:void(0);" class="set_sido_cd_btn" data-sidocd="17">세종</a></li></ul>
-=======
+
 													<div class="loca_step1_cont">
 													<ul class="sido_arae_box">
 														<li><a href="javascript:void(0);" class="set_sido_cd_btn" data-sidocd="01"></a></li>
@@ -808,18 +780,16 @@ var eFrequencyPlannerYn = 'Y';
 															<li><a href="javascript:void(0);" class="set_sido_cd_btn" data-sidocd="16"></a></li>
 															<li><a href="javascript:void(0);" class="set_sido_cd_btn" data-sidocd="17"></a></li>
 														</ul>
->>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
+
 													</div>
 												</div>
 												<div class="loca_step2" style="display: none;">
 													<div class="loca_step2_ttl">STEP 2 : 구/군을 선택해 주세요.</div>
 													<div class="result_num_wrap3">
 														<a class="btn_prev" href="javascript:void(0);">앞으로</a>
-<<<<<<< HEAD
-														<strong class="sidoSelectName">서울</strong>
-=======
+
 														<strong class="sidoSelectName"></strong>
->>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
+
 													</div>
 													<div class="loca_step2_cont">
 														<div class="loca_step2_frame scrollbar-inner mCustomScrollbar _mCS_2 mCS_no_scrollbar">
@@ -846,7 +816,7 @@ var eFrequencyPlannerYn = 'Y';
 														<!-- 검색결과 있는 경우 -->
 														<strong class="gugunSelectName"></strong> (검색 결과 <span class="en t_006633 sidoSetResult"></span>개)
 													</div>
-													<div class="result_list_wrap" style="height: 554px;">
+													<div class="result_list_wrap"">
 														<!-- 검색결과 없는 경우 -->
 														<!--p class="no_result">검색 결과가 없습니다.</p-->
 														<!-- 검색결과 있는 경우 -->
@@ -870,11 +840,9 @@ var eFrequencyPlannerYn = 'Y';
 											</p>
 											<span class="road_layer_toggle"><a href="javascript:void(0);" class="daumFindParentToggle">열기</a></span>
 										</header>
-<<<<<<< HEAD
-										<article class="road_map_layer_cont" style="height: 714px;" display: none;">
-=======
+
 										<article class="road_map_layer_cont"">
->>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
+
 										
 											<!-- 모바일 검색 들어갔을때 -->
 											<div class="after_search_input afterMobileSearchWrap" style="display:none">
@@ -946,11 +914,9 @@ var eFrequencyPlannerYn = 'Y';
 													<header class="transfer_method_tab1">
 														<h3><a class="road_find_btn roadFindStartBtn" data-target="car" href="javascript:void(0);">자동차</a></h3>
 													</header>
-<<<<<<< HEAD
-													<article class="transfer_method_cont1 mCustomScrollbar _mCS_4 mCS_no_scrollbar" style="height: 536px;"><div id="mCSB_4" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside" tabindex="0"><div id="mCSB_4_container" class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y" style="position:relative; top:0; left:0;" dir="ltr">
-=======
+
 													<article class="transfer_method_cont1 mCustomScrollbar _mCS_4 mCS_no_scrollbar"><div id="mCSB_4" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside" tabindex="0"><div id="mCSB_4_container" class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y" style="position:relative; top:0; left:0;" dir="ltr">
->>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
+
 														<div class="desti_top_wrap carFindRoad" style="display:none">
 															<strong class="desti_top_ttl car_find_endName">스타벅스 영풍문고점</strong>
 															<p class="desti_top_dist">
@@ -978,11 +944,9 @@ var eFrequencyPlannerYn = 'Y';
 													<header class="transfer_method_tab2">
 														<h3><a class="road_find_btn roadFindStartBtn" data-target="transport" href="javascript:void(0);">대중교통</a></h3>
 													</header>
-<<<<<<< HEAD
-													<article class="transfer_method_cont2 mCustomScrollbar _mCS_5 mCS_no_scrollbar" style="display: none; height: 536px;"><div id="mCSB_5" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside" tabindex="0"><div id="mCSB_5_container" class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y" style="position:relative; top:0; left:0;" dir="ltr">
-=======
+
 													<article class="transfer_method_cont2 mCustomScrollbar _mCS_5 mCS_no_scrollbar" style="display: none;"><div id="mCSB_5" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside" tabindex="0"><div id="mCSB_5_container" class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y" style="position:relative; top:0; left:0;" dir="ltr">
->>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
+
 														<div class="desti_top_wrap 	carFindRoad" style="display:none">
 															<strong class="desti_top_ttl car_find_endName">스타벅스 영풍문고점</strong> 
 															<p class="desti_top_dist trafficViewInfo">전체:00 | 버스:00 | 지하철:00 | 버스+지하철:00</p>
@@ -1001,11 +965,9 @@ var eFrequencyPlannerYn = 'Y';
 													<header class="transfer_method_tab3">
 														<h3><a class="road_find_btn roadFindStartBtn" data-target="foot" href="javascript:void(0);">도보</a></h3>
 													</header>
-<<<<<<< HEAD
-													<article class="transfer_method_cont3 mCustomScrollbar _mCS_6 mCS_no_scrollbar" style="display: none; height: 536px;"><div id="mCSB_6" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside" tabindex="0"><div id="mCSB_6_container" class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y" style="position:relative; top:0; left:0;" dir="ltr">
-=======
+
 													<article class="transfer_method_cont3 mCustomScrollbar _mCS_6 mCS_no_scrollbar" style="display: none;"><div id="mCSB_6" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside" tabindex="0"><div id="mCSB_6_container" class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y" style="position:relative; top:0; left:0;" dir="ltr">
->>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
+
 														<div class="desti_top_wrap carFindRoad" style="display:none">
 															<strong class="desti_top_ttl foot_find_endName">스타벅스 영풍문고점</strong>
 															<p class="desti_top_dist"><span class="foot_find_min"></span>&nbsp;&nbsp;<strong class="foot_find_lengtn"></strong>km</p>
@@ -1208,12 +1170,10 @@ var eFrequencyPlannerYn = 'Y';
 					</form>
 
 	<!-- 150904 수정 -->
-<<<<<<< HEAD
-	<p class="btn_storemap_quick"><a href="javascript:void(0);"><img src="common/img/store/btn_quick.png" alt="현재 위치 중심으로 지도이동"></a></p>
-=======
+
 	<p class="btn_storemap_quick"><a href="javascript:void(0);"><img src="../common/img/store/btn_quick.png" alt="현재 위치 중심으로 지도이동"></a></p> <!-- 접근성_20171127 alt 추가 -->
 
->>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
+
 	<!-- 접근성_20171127 alt 추가 -->
 	<!-- 150805 추가 구명준 -->
 <div style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; touch-action: none; cursor: url(&quot;https://t1.daumcdn.net/mapjsapi/images/cursor/openhand.cur.ico&quot;) 7 5, url(&quot;https://t1.daumcdn.net/mapjsapi/images/cursor/openhand.cur.ico&quot;), default;">
@@ -1228,11 +1188,9 @@ var eFrequencyPlannerYn = 'Y';
 </svg>
 <!-- 현재위치 -->
 <div style="position: absolute; margin: -55px 0px 0px -16px; z-index: 0; left: -2860px; top: 6342px;">
-<<<<<<< HEAD
-<img draggable="false" src="https://www.starbucks.co.kr/common/img/store/pin/pin_start.png" alt="" title="" style="min-width: 0px; min-height: 0px; max-width: 99999px; max-height: none; border: 0px; display: block; position: absolute; user-select: none; -webkit-user-drag: none; clip: rect(0px, 38px, 60px, 0px); top: 0px; left: 0px; width: 38px; height: 60px;">
-=======
+
 <img draggable="false" src="../common/img/store/pin/pin_start.png" alt="" title="" style="min-width: 0px; min-height: 0px; max-width: 99999px; max-height: none; border: 0px; display: block; position: absolute; user-select: none; -webkit-user-drag: none; clip: rect(0px, 38px, 60px, 0px); top: 0px; left: 0px; width: 38px; height: 60px;">
->>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
+
 </div>
 <div style="position: absolute; z-index: 1; width: 100%; height: 0px; transform: translateZ(0px);"><div style="position: absolute; margin: -55px 0px 0px -16px; z-index: 0; left: 634px; top: 228px; display: block;"></div><div style="position: absolute; margin: -55px 0px 0px -16px; z-index: 0; left: 245px; top: 162px; display: block;"><img draggable="false" src="//image.istarbucks.co.kr/common/img/store/pin/pin_general_DT.png" alt="" title="인천용일사거리DT" style="min-width: 0px; min-height: 0px; max-width: 99999px; max-height: none; border: 0px; display: block; position: absolute; user-select: none; -webkit-user-drag: none; clip: rect(0px, 38px, 60px, 0px); top: 0px; left: 0px; width: 38px; height: 60px;"></div><div style="position: absolute; margin: -55px 0px 0px -16px; z-index: 0; left: 521px; top: -119px; display: none;"><img draggable="false" src="//image.istarbucks.co.kr/common/img/store/pin/pin_general.png" alt="" title="주안역" style="min-width: 0px; min-height: 0px; max-width: 99999px; max-height: none; border: 0px; display: block; position: absolute; user-select: none; -webkit-user-drag: none; clip: rect(0px, 38px, 60px, 0px); top: 0px; left: 0px; width: 38px; height: 60px;"></div><div style="position: absolute; margin: -55px 0px 0px -16px; z-index: 0; left: 978px; top: 281px; display: none;"><img draggable="false" src="//image.istarbucks.co.kr/common/img/store/pin/pin_general.png" alt="" title="인천예술회관역" style="min-width: 0px; min-height: 0px; max-width: 99999px; max-height: none; border: 0px; display: block; position: absolute; user-select: none; -webkit-user-drag: none; clip: rect(0px, 38px, 60px, 0px); top: 0px; left: 0px; width: 38px; height: 60px;"></div><div style="position: absolute; margin: -55px 0px 0px -16px; z-index: 0; left: 968px; top: 372px; display: none;"><img draggable="false" src="//image.istarbucks.co.kr/common/img/store/pin/pin_general.png" alt="" title="인천구월" style="min-width: 0px; min-height: 0px; max-width: 99999px; max-height: none; border: 0px; display: block; position: absolute; user-select: none; -webkit-user-drag: none; clip: rect(0px, 38px, 60px, 0px); top: 0px; left: 0px; width: 38px; height: 60px;"></div><div style="position: absolute; margin: -55px 0px 0px -16px; z-index: 0; left: 965px; top: 398px; display: none;"><img draggable="false" src="//image.istarbucks.co.kr/common/img/store/pin/pin_general.png" alt="" title="인천터미널사거리" style="min-width: 0px; min-height: 0px; max-width: 99999px; max-height: none; border: 0px; display: block; position: absolute; user-select: none; -webkit-user-drag: none; clip: rect(0px, 38px, 60px, 0px); top: 0px; left: 0px; width: 38px; height: 60px;"></div><div style="position: absolute; margin: -55px 0px 0px -16px; z-index: 0; left: 776px; top: 637px; display: none;"><img draggable="false" src="//image.istarbucks.co.kr/common/img/store/pin/pin_general.png" alt="" title="SSG랜더스필드1F" style="min-width: 0px; min-height: 0px; max-width: 99999px; max-height: none; border: 0px; display: block; position: absolute; user-select: none; -webkit-user-drag: none; clip: rect(0px, 38px, 60px, 0px); top: 0px; left: 0px; width: 38px; height: 60px;"></div><div style="position: absolute; margin: -55px 0px 0px -16px; z-index: 0; left: 776px; top: 637px; display: none;"><img draggable="false" src="//image.istarbucks.co.kr/common/img/store/pin/pin_general.png" alt="" title="SSG랜더스필드2F" style="min-width: 0px; min-height: 0px; max-width: 99999px; max-height: none; border: 0px; display: block; position: absolute; user-select: none; -webkit-user-drag: none; clip: rect(0px, 38px, 60px, 0px); top: 0px; left: 0px; width: 38px; height: 60px;"></div><div style="position: absolute; margin: -55px 0px 0px -16px; z-index: 0; left: 994px; top: 427px; display: none;"><img draggable="false" src="//image.istarbucks.co.kr/common/img/store/pin/pin_general.png" alt="" title="구월로데오" style="min-width: 0px; min-height: 0px; max-width: 99999px; max-height: none; border: 0px; display: block; position: absolute; user-select: none; -webkit-user-drag: none; clip: rect(0px, 38px, 60px, 0px); top: 0px; left: 0px; width: 38px; height: 60px;"></div><div style="position: absolute; margin: -55px 0px 0px -16px; z-index: 0; left: 963px; top: -103px; display: none;"><img draggable="false" src="//image.istarbucks.co.kr/common/img/store/pin/pin_general_DT.png" alt="" title="간석중앙공원DT" style="min-width: 0px; min-height: 0px; max-width: 99999px; max-height: none; border: 0px; display: block; position: absolute; user-select: none; -webkit-user-drag: none; clip: rect(0px, 38px, 60px, 0px); top: 0px; left: 0px; width: 38px; height: 60px;"></div></div></div></div>
 <div style="position: absolute; cursor: default; z-index: 1; margin: 0px 6px; height: 19px; line-height: 14px; left: 0px; bottom: 0px; color: rgb(0, 0, 0);"><div style="color: rgb(0, 0, 0); text-align: center; font-size: 10px; float: left;"><div style="float: left; margin: 2px 3px 0px 4px; height: 6px; transition: width 0.1s ease 0s; border-top: none rgb(0, 0, 0); border-right: 2px solid rgb(0, 0, 0); border-bottom: 2px solid rgb(0, 0, 0); border-left: 2px solid rgb(0, 0, 0); border-image: initial; width: 58px;"></div><div style="float: left; margin: 0px 4px 0px 0px; font-family: AppleSDGothicNeo-Regular, 돋움, dotum, sans-serif; font-weight: bold; color: rgb(0, 0, 0);">250m</div></div><div style="margin: 0px 4px; float: left;">
@@ -1480,42 +1438,10 @@ var eFrequencyPlannerYn = 'Y';
 			</footer>
 			<!-- footer end -->
 		
-<<<<<<< HEAD
-			
-			<script src="//image.istarbucks.co.kr/common/js/jquery-1.10.2.min.js"></script>
-			<script src="https://image.istarbucks.co.kr/common/js/@common.js"></script>
-			<script src="https://image.istarbucks.co.kr/common/js/jquery-ui.min.js?v=220207"></script>
-			<script src="//image.istarbucks.co.kr/common/js/idangerous.swiper-2.1.min.js"></script>
-			<script src="//image.istarbucks.co.kr/common/js/idangerous.swiper.scrollbar-2.1.js"></script>
-			<script src="//image.istarbucks.co.kr/common/js/jquery.bxslider.min.js"></script>
-			<script src="//image.istarbucks.co.kr/common/js/skdslider.min.js"></script>
-			<script src="//image.istarbucks.co.kr/common/js/jquery.drive.js"></script>
-			<script src="//image.istarbucks.co.kr/common/js/jquery.easing-1.3.min.js"></script>
-			<script src="//image.istarbucks.co.kr/common/js/jquery.elevatezoom.js"></script>
-			<script src="//image.istarbucks.co.kr/common/js/jquery.flip.js"></script>
-			<script src="//image.istarbucks.co.kr/common/js/jquery.jsmovie.1.4.4.min.js"></script>
-			<script src="//image.istarbucks.co.kr/common/js/jquery.mCustomScrollbar.concat.js"></script>
-			<script src="//image.istarbucks.co.kr/common/js/jquery.number.min.js"></script>
-			<script src="//image.istarbucks.co.kr/common/js/jquery.rotate.2.3.js"></script>
-			<script src="//image.istarbucks.co.kr/common/js/jquery.scrollbar.js"></script>
-			<script src="//image.istarbucks.co.kr/common/js/jquery.scrollTo-1.4.2-min.js"></script>
-			<script src="//image.istarbucks.co.kr/common/js/jquery.superscrollorama.js"></script>						
-			<script src="//image.istarbucks.co.kr/common/js/jquery.transform2d.js"></script>
-			<script src="//image.istarbucks.co.kr/common/js/jquery.transform3d.js"></script>			
-			<script src="//image.istarbucks.co.kr/common/js/greensock/TweenMax.min.js"></script>
-			<script src="//image.istarbucks.co.kr/common/js/masonry.pkgd.js"></script>
-			<script src="//image.istarbucks.co.kr/common/js/common.js"></script>
-			<script src="common/js/gnb.js?v=220502"></script>
-			<script src="common/js/header.js?v=200915"></script>
-			<script src="//image.istarbucks.co.kr/common/js/footer.js?v=210818"></script>
-=======
->>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
 
-<<<<<<< HEAD
 			<script src="//image.istarbucks.co.kr/common/js/jquery.tmpl.js"></script>
 			<script src="//image.istarbucks.co.kr/common/js/jquery.tmplPlus.min.js"></script>
 			<script src="//image.istarbucks.co.kr/common/js/jquery.ezmark.min.js"></script>
-=======
 			<script src="../common/js/jquery-1.10.2.min.js"></script>
 			<script src="../common/js/%40common.js"></script>
 			<script src="../common/js/jquery-ui.min.js?v=220207"></script>
@@ -1546,7 +1472,6 @@ var eFrequencyPlannerYn = 'Y';
 			<script src="../common/js/jquery.tmplPlus.min.js"></script>
 			<script src="../common/js/jquery.ezmark.min.js"></script>
 
->>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
 			<!-- <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script> -->
 			
 			<!--
@@ -1556,14 +1481,10 @@ var eFrequencyPlannerYn = 'Y';
 			-->
 			
 		
-<<<<<<< HEAD
-			<script src="//image.istarbucks.co.kr/common/js/openevent/openevent.js"></script>
-			<script src="//image.istarbucks.co.kr/common/js/open_event_control.js"></script>
-=======
 			<script src="../common/js/openevent/openevent.js"></script>
 			<script src="../common/js/open_event_control.js"></script>
 
->>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
+
 			<script type="text/javascript">
 				
 				var mrSlider;
@@ -1772,13 +1693,9 @@ var eFrequencyPlannerYn = 'Y';
                 /* 개인컵 리워드 e */
 			</script>
 
-<<<<<<< HEAD
-			<script src="//image.istarbucks.co.kr/common/js/jquery.transit.min.js"></script>
-=======
 
 			<script src="../common/js/jquery.transit.min.js"></script>
 
->>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
 			<script>
 				// 150805 DOM 수정
 				$('div.msr_card_zone').bind('click', function(){
@@ -1815,12 +1732,9 @@ var eFrequencyPlannerYn = 'Y';
 				$('.mycard_one').seqfx();
 			</script>
 						
-<<<<<<< HEAD
-			<script src="//image.istarbucks.co.kr/common/js/makePCookie.js"></script>
-=======
+
 			<script src='../common/js/makePCookie.js'></script>
 
->>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
 		
 			<script>
 				$(document).ready(function () {
@@ -1831,19 +1745,12 @@ var eFrequencyPlannerYn = 'Y';
 					});
 				});
 			</script>
-		
-<<<<<<< HEAD
-			<script src="common/js/jquery.superscrollorama.js"></script>			
-			<script src="common/js/whatsnew.js"></script>
-			<script src="common/js/jquery.ezmark.min.js"></script>
-			<script src="common/js/common_jhp.js"></script>
-=======
+
 			<script src="../common/js/jquery.superscrollorama-1.js"></script>			
 			<script src="../common/js/whatsnew.js"></script>
 			<script src="../common/js/jquery.ezmark.min-1.js"></script>
 			<script src="../common/js/common_jhp.js"></script>
 
->>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
 			
 			
 			<script>
@@ -1863,17 +1770,11 @@ var eFrequencyPlannerYn = 'Y';
 
 
 <!-- 0601 예은 수정 -->
-<<<<<<< HEAD
-<script type="text/javascript" src="v2/maps/sdk.js?appkey=247bf84c5755624615df524ae2cfc331" &libraries="LIBRARY"></script>
-			<script charset="UTF-8" src="https://t1.daumcdn.net/mapjsapi/js/main/4.4.3/kakao.js"></script>
-			<script src="common/js/jquery.async.min.js"></script>
 
-
-=======
 <script type="text/javascript" src="../common/js/v2/maps/sdk.js?appkey=247bf84c5755624615df524ae2cfc331" &libraries="LIBRARY"></script>
 <script charset="UTF-8" src="https://t1.daumcdn.net/mapjsapi/js/main/4.4.3/kakao.js"></script>
 <script src="../common/js/jquery.async.min.js"></script>
->>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
+
 
 
 
@@ -2827,11 +2728,7 @@ var eFrequencyPlannerYn = 'Y';
 				    </a>
 				</li>
 			</script>
-<<<<<<< HEAD
-			
-		<script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
-		<script>Kakao.init('fbd2116d4434a7441d5caa4bb4c5456e');</script>
-=======
+
 
 
 		<script src="../common/js/sdk/js/kakao.min.js"></script>
@@ -2839,8 +2736,7 @@ var eFrequencyPlannerYn = 'Y';
 		Kakao.init('fbd2116d4434a7441d5caa4bb4c5456e');
 		</script>
 		
->>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
-		
+
 		<script type="text/x-jquery-tepl" id="storeViewWrapBox">
 			<!-- (My 음료/매장) 매장 상세 정보 팝업 -->
 			<div class="shopArea_pop01 isStoreBizViewWrap" style="top:50px; display:none; z-index:20001;">
@@ -3062,15 +2958,9 @@ var eFrequencyPlannerYn = 'Y';
 	
 				</dl>			
 		</script>
-<<<<<<< HEAD
-		<script src="common/js/store/store_view.js?v=210423"></script></div>
-		<div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div></div></div></div>
-=======
-		<script src="../common/js/store/store_view.js?v=210423"></script>
-			
-			
-		</div>
+	<script src="../common/js/store/store_view.js?v=210423"></script>
+</div>
+	<div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div></div></div></div>
 
->>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
-	</body>
+</body>
 </html>
