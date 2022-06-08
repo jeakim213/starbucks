@@ -1,5 +1,6 @@
 ﻿<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="ko">
 	<head>
@@ -14,6 +15,9 @@
 <meta property="og:description" content="Starbucks">
 
 <title id="titleJoin">Starbucks Korea</title> <!-- 220117 수정 -->
+<script type="text/javascript" charset="utf-8">
+   sessionStorage.setItem("contextpath", "${pageContext.request.contextPath}");
+</script>
 <link rel="shortcut icon" href="../common/img/common/favicon.ico?v=200828" type="image/ico"> <!-- 20200827 파비콘 교체 및 CDN 변수처리 -->
 <link href="../common/css/reset.css" rel="stylesheet">
 <link href="../common/css/style.css?v=210721" rel="stylesheet">
@@ -64,28 +68,24 @@ var eFrequencySeq = '172';
 var eFrequencyPlannerYn = 'Y';
 </script>
 
-
-
 		<link href="../common/css/style_main-2.css?r=1abii2" rel="stylesheet">
 		<link href="../common/css/style_whatsnew.css?r=1abii2" rel="stylesheet">
 		<link href="../common/css/style_find_road.css?v=210423" rel="stylesheet">
 		<link href="../common/css/style_util.css?v=210316" rel="stylesheet">
 		<link href="../common/css/skdslider.css?r=1abii2" rel="stylesheet">
 		<link href="../common/css/ezmark-1.css?r=1abii2" rel="stylesheet">
-	
-
+		
 		<style type="text/css" data-fbcssmodules="css:fb.css.base css:fb.css.dialog css:fb.css.iframewidget css:fb.css.customer_chat_plugin_iframe">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
 .fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_dialog_advanced{border-radius:8px;padding:10px}.fb_dialog_content{background:#fff;color:#373737}.fb_dialog_close_icon{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{left:5px;right:auto;top:5px}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{height:100%;left:0;margin:0;overflow:visible;position:absolute;top:-10000px;transform:none;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{background:none;height:auto;min-height:initial;min-width:initial;width:auto}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{clear:both;color:#fff;display:block;font-size:18px;padding-top:20px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .4);bottom:0;left:0;min-height:100%;position:absolute;right:0;top:0;width:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_mobile .fb_dialog_iframe{position:sticky;top:0}.fb_dialog_content .dialog_header{background:linear-gradient(from(#738aba), to(#2c4987));border-bottom:1px solid;border-color:#043b87;box-shadow:white 0 1px 1px -1px inset;color:#fff;font:bold 14px Helvetica, sans-serif;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:linear-gradient(from(#4267B2), to(#2a4887));background-clip:padding-box;border:1px solid #29487d;border-radius:3px;display:inline-block;line-height:18px;margin-top:3px;max-width:85px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{background:none;border:none;color:#fff;font:bold 12px Helvetica, sans-serif;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #4a4a4a;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f5f6f7;border:1px solid #4a4a4a;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-position:50% 50%;background-repeat:no-repeat;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
 .fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}
 .fb_mpn_mobile_landing_page_slide_out{animation-duration:200ms;animation-name:fb_mpn_landing_page_slide_out;transition-timing-function:ease-in}.fb_mpn_mobile_landing_page_slide_out_from_left{animation-duration:200ms;animation-name:fb_mpn_landing_page_slide_out_from_left;transition-timing-function:ease-in}.fb_mpn_mobile_landing_page_slide_up{animation-duration:500ms;animation-name:fb_mpn_landing_page_slide_up;transition-timing-function:ease-in}.fb_mpn_mobile_bounce_in{animation-duration:300ms;animation-name:fb_mpn_bounce_in;transition-timing-function:ease-in}.fb_mpn_mobile_bounce_out{animation-duration:300ms;animation-name:fb_mpn_bounce_out;transition-timing-function:ease-in}.fb_mpn_mobile_bounce_out_v2{animation-duration:300ms;animation-name:fb_mpn_fade_out;transition-timing-function:ease-in}.fb_customer_chat_bounce_in_v2{animation-duration:300ms;animation-name:fb_bounce_in_v2;transition-timing-function:ease-in}.fb_customer_chat_bounce_in_from_left{animation-duration:300ms;animation-name:fb_bounce_in_from_left;transition-timing-function:ease-in}.fb_customer_chat_bounce_out_v2{animation-duration:300ms;animation-name:fb_bounce_out_v2;transition-timing-function:ease-in}.fb_customer_chat_bounce_out_from_left{animation-duration:300ms;animation-name:fb_bounce_out_from_left;transition-timing-function:ease-in}.fb_invisible_flow{display:inherit;height:0;overflow-x:hidden;width:0}@keyframes fb_mpn_landing_page_slide_out{0%{margin:0 12px;width:100% - 24px}60%{border-radius:18px}100%{border-radius:50%;margin:0 24px;width:60px}}@keyframes fb_mpn_landing_page_slide_out_from_left{0%{left:12px;width:100% - 24px}60%{border-radius:18px}100%{border-radius:50%;left:12px;width:60px}}@keyframes fb_mpn_landing_page_slide_up{0%{bottom:0;opacity:0}100%{bottom:24px;opacity:1}}@keyframes fb_mpn_bounce_in{0%{opacity:.5;top:100%}100%{opacity:1;top:0}}@keyframes fb_mpn_fade_out{0%{bottom:30px;opacity:1}100%{bottom:0;opacity:0}}@keyframes fb_mpn_bounce_out{0%{opacity:1;top:0}100%{opacity:.5;top:100%}}@keyframes fb_bounce_in_v2{0%{opacity:0;transform:scale(0, 0);transform-origin:bottom right}50%{transform:scale(1.03, 1.03);transform-origin:bottom right}100%{opacity:1;transform:scale(1, 1);transform-origin:bottom right}}@keyframes fb_bounce_in_from_left{0%{opacity:0;transform:scale(0, 0);transform-origin:bottom left}50%{transform:scale(1.03, 1.03);transform-origin:bottom left}100%{opacity:1;transform:scale(1, 1);transform-origin:bottom left}}@keyframes fb_bounce_out_v2{0%{opacity:1;transform:scale(1, 1);transform-origin:bottom right}100%{opacity:0;transform:scale(0, 0);transform-origin:bottom right}}@keyframes fb_bounce_out_from_left{0%{opacity:1;transform:scale(1, 1);transform-origin:bottom left}100%{opacity:0;transform:scale(0, 0);transform-origin:bottom left}}@keyframes slideInFromBottom{0%{opacity:.1;transform:translateY(100%)}100%{opacity:1;transform:translateY(0)}}@keyframes slideInFromBottomDelay{0%{opacity:0;transform:translateY(100%)}97%{opacity:0;transform:translateY(100%)}100%{opacity:1;transform:translateY(0)}}</style>
 	</head>
 	
-	<body style>
+	<body>
+	
 		<div class="loading_dimm" style="z-index: 20000; display: none;"></div>
-		<div class="loading_img" style="z-index: 20001; width: 70px; height: 76px; overflow: hidden; display: none;"><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading01.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading02.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading03.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading04.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading05.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading06.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading07.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading08.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading09.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading10.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading11.png&quot;);"></div><div class="jsMovieFrame" style="display: block; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading12.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading13.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading14.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading15.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading16.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading17.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading18.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading19.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading20.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading21.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading22.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading23.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading24.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading25.png&quot;);"></div><div id="jsMovie_event_overlay" style="width: 70px; height: 152px; margin-top: -152px;"></div><div id="jsMovie_image_preload_container"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading01.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading02.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading03.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading04.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading05.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading06.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading07.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading08.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading09.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading10.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading11.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading12.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading13.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading14.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading15.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading16.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading17.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading18.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading19.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading20.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading21.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading22.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading23.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading24.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading25.png" alt="" style="height: 1px; width: 1px;"></div></div>
-
+		<div class="loading_img" style="z-index: 20001; width: 70px; height: 76px; overflow: hidden; display: none;"><div class="jsMovieFrame" style="display: block; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading01.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading02.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading03.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading04.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading05.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading06.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading07.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading08.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading09.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading10.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading11.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading12.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading13.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading14.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading15.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading16.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading17.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading18.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading19.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading20.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading21.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading22.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading23.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading24.png&quot;);"></div><div class="jsMovieFrame" style="display: none; width: 70px; height: 76px; background-position: 0px 0px; background-repeat: no-repeat; background-image: url(&quot;//image.istarbucks.co.kr/common/img/common/loading/loading25.png&quot;);"></div><div id="jsMovie_event_overlay" style="width: 70px; height: 152px; margin-top: -152px;"></div><div id="jsMovie_image_preload_container"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading01.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading02.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading03.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading04.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading05.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading06.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading07.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading08.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading09.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading10.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading11.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading12.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading13.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading14.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading15.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading16.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading17.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading18.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading19.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading20.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading21.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading22.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading23.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading24.png" alt="" style="height: 1px; width: 1px;"><img src="//image.istarbucks.co.kr/common/img/common/loading/loading25.png" alt="" style="height: 1px; width: 1px;"></div></div>
 		<div class="pop_up_dimm" style="display:none"></div>
-
 		<div id="wrap">
 			
 <script>
@@ -185,18 +185,13 @@ var eFrequencyPlannerYn = 'Y';
 							<img alt="카드이름">
 						</div>
 						<div class="mycard_area2">
-
 							<img alt="카드이름" src="../common/img/common/mycard2.png">
-
 							<p class="num"><!-- 1234-1234-1234-1234 --></p>
 							<p class="barcord"><!-- <img src="//image.istarbucks.co.kr/common/img/common/bacord.png" alt=""> --></p>
 						</div>
 						<div class="mycard_one" style="transform: rotateY(358.638deg);">
 							<!-- <div class="front"> -->
-
 							<img src="../common/img/common/payment_icon1.png" alt="">
-
-
 							<!-- </div> -->
 							<!-- <div class="back"><img src="//image.istarbucks.co.kr/common/img/common/payment_icon1.png" alt=""></div> -->
 						</div>
@@ -211,10 +206,7 @@ var eFrequencyPlannerYn = 'Y';
 					<!-- 일반회원 -->
 					<div class="sb_card_regi">
 						<a href="javascript:void(0);">
-
 							<p class="icon_add_card" onclick="location.href = '/my/mycard_info_input';"><img alt="카드등록 아이콘" src="../common/img/common/icon_add_card.png"></p>
-
-
 							<p class="sb_card_regi_txt"><strong>스타벅스 카드 등록</strong><br>카드를 등록하시고<br>다양한 리워드를<br>만나보세요.</p>
 						</a>
 					</div>
@@ -708,9 +700,7 @@ var eFrequencyPlannerYn = 'Y';
 											<p class="btn_opt_chk"><a href="javascript:void(0);">옵션 선택</a></p>
 											<span class="map_layer_toggle"><a href="javascript:void(0);" class="on">열기</a></span>
 										</header>
-
 										<article class="store_map_layer_cont" style="display: block;">
-
 											<header class="quick_search">
 												<h3 class="on"><a href="javascript:void(0);">퀵 검색</a></h3>
 											</header>
@@ -725,13 +715,9 @@ var eFrequencyPlannerYn = 'Y';
 													<!-- 검색결과 없는 경우 -->
 													<!--strong>검색 결과</strong>(<span class="en t_006633">0</span>개)-->
 													<!-- 검색결과 있는 경우 -->
-
 													<strong class="quickSearchResultCtn"></strong> (검색 결과 <span class="en t_006633 resultCtnNumberTab1"></span>개)<br>
-
 												</div>
-
 												<div class="result_list_wrap"">
-
 													<!-- 검색결과 없는 경우 -->
 													<!--p class="no_result">검색 결과가 없습니다.</p-->
 													<!-- 검색결과 있는 경우 -->
@@ -759,7 +745,6 @@ var eFrequencyPlannerYn = 'Y';
 											<article style="display: none;">
 												<div class="loca_step1">
 													<div class="loca_step1_ttl">STEP 1 : 시/도를 선택해 주세요.</div>
-
 													<div class="loca_step1_cont">
 													<ul class="sido_arae_box">
 														<li><a href="javascript:void(0);" class="set_sido_cd_btn" data-sidocd="01"></a></li>
@@ -780,16 +765,13 @@ var eFrequencyPlannerYn = 'Y';
 															<li><a href="javascript:void(0);" class="set_sido_cd_btn" data-sidocd="16"></a></li>
 															<li><a href="javascript:void(0);" class="set_sido_cd_btn" data-sidocd="17"></a></li>
 														</ul>
-
 													</div>
 												</div>
 												<div class="loca_step2" style="display: none;">
 													<div class="loca_step2_ttl">STEP 2 : 구/군을 선택해 주세요.</div>
 													<div class="result_num_wrap3">
 														<a class="btn_prev" href="javascript:void(0);">앞으로</a>
-
 														<strong class="sidoSelectName"></strong>
-
 													</div>
 													<div class="loca_step2_cont">
 														<div class="loca_step2_frame scrollbar-inner mCustomScrollbar _mCS_2 mCS_no_scrollbar">
@@ -816,7 +798,7 @@ var eFrequencyPlannerYn = 'Y';
 														<!-- 검색결과 있는 경우 -->
 														<strong class="gugunSelectName"></strong> (검색 결과 <span class="en t_006633 sidoSetResult"></span>개)
 													</div>
-													<div class="result_list_wrap"">
+													<div class="result_list_wrap">
 														<!-- 검색결과 없는 경우 -->
 														<!--p class="no_result">검색 결과가 없습니다.</p-->
 														<!-- 검색결과 있는 경우 -->
@@ -840,9 +822,7 @@ var eFrequencyPlannerYn = 'Y';
 											</p>
 											<span class="road_layer_toggle"><a href="javascript:void(0);" class="daumFindParentToggle">열기</a></span>
 										</header>
-
-										<article class="road_map_layer_cont"">
-
+										<article class="road_map_layer_cont">
 										
 											<!-- 모바일 검색 들어갔을때 -->
 											<div class="after_search_input afterMobileSearchWrap" style="display:none">
@@ -914,9 +894,7 @@ var eFrequencyPlannerYn = 'Y';
 													<header class="transfer_method_tab1">
 														<h3><a class="road_find_btn roadFindStartBtn" data-target="car" href="javascript:void(0);">자동차</a></h3>
 													</header>
-
 													<article class="transfer_method_cont1 mCustomScrollbar _mCS_4 mCS_no_scrollbar"><div id="mCSB_4" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside" tabindex="0"><div id="mCSB_4_container" class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y" style="position:relative; top:0; left:0;" dir="ltr">
-
 														<div class="desti_top_wrap carFindRoad" style="display:none">
 															<strong class="desti_top_ttl car_find_endName">스타벅스 영풍문고점</strong>
 															<p class="desti_top_dist">
@@ -944,9 +922,7 @@ var eFrequencyPlannerYn = 'Y';
 													<header class="transfer_method_tab2">
 														<h3><a class="road_find_btn roadFindStartBtn" data-target="transport" href="javascript:void(0);">대중교통</a></h3>
 													</header>
-
 													<article class="transfer_method_cont2 mCustomScrollbar _mCS_5 mCS_no_scrollbar" style="display: none;"><div id="mCSB_5" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside" tabindex="0"><div id="mCSB_5_container" class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y" style="position:relative; top:0; left:0;" dir="ltr">
-
 														<div class="desti_top_wrap 	carFindRoad" style="display:none">
 															<strong class="desti_top_ttl car_find_endName">스타벅스 영풍문고점</strong> 
 															<p class="desti_top_dist trafficViewInfo">전체:00 | 버스:00 | 지하철:00 | 버스+지하철:00</p>
@@ -965,9 +941,7 @@ var eFrequencyPlannerYn = 'Y';
 													<header class="transfer_method_tab3">
 														<h3><a class="road_find_btn roadFindStartBtn" data-target="foot" href="javascript:void(0);">도보</a></h3>
 													</header>
-
 													<article class="transfer_method_cont3 mCustomScrollbar _mCS_6 mCS_no_scrollbar" style="display: none;"><div id="mCSB_6" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside" tabindex="0"><div id="mCSB_6_container" class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y" style="position:relative; top:0; left:0;" dir="ltr">
-
 														<div class="desti_top_wrap carFindRoad" style="display:none">
 															<strong class="desti_top_ttl foot_find_endName">스타벅스 영풍문고점</strong>
 															<p class="desti_top_dist"><span class="foot_find_min"></span>&nbsp;&nbsp;<strong class="foot_find_lengtn"></strong>km</p>
@@ -1030,149 +1004,13 @@ var eFrequencyPlannerYn = 'Y';
 		<fieldset>
 			<p class="btn_opt_chk btn_opt_chk1" style="display: none;"><a href="javascript:void(0);">검색 옵션</a></p>
 			<!-- 옵션선택 -->
-			<div class="opt_select_pop">
-				<div class="opt_select_ttl">옵션 선택<a href="javascript:void(0);" class="optionViewClose">닫기</a></div>
-				<!-- <a href="javascript:void(0)" class="opt_apply_btn">적용</a> -->
-				
-				<ul class="opt_sel_btns">
-					<li class="li1"><a href="javascript:void(0);">선택해지</a></li>
-					<li class="li2"><a href="javascript:void(0);" class="opt_apply_btn" style="right:0;top:0">적용</a></li>
-				</ul>
-				
-					<div class="opt_select_cont scrollbar-inner mCustomScrollbar _mCS_7 mCS_no_scrollbar">
-					<div id="mCSB_7" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside" tabindex="0">
-					<div id="mCSB_7_container" class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y" style="position:relative; top:0; left:0;" dir="ltr">
-				
-					<!-- 150904 수정 -->
-					<div class="all_store_wrap">
-						<p class="all_store">
-							<input type="checkbox" name="all_store" id="all_store" checked=""> 
-							<label for="all_store"><span></span>전매장 보기</label>
-						</p>
-					</div>
-					<!-- 150904 수정 end -->		
-					
-									
-					<dl class="opt_select_dl1">
-						<dt>타입</dt>
-						<dd class="left">
-							<input id="type1" name="T03" type="checkbox">
-							<label class="icon01" for="type1">스타벅스 리저브™</label>
-						</dd>
-						<dd class="right">
-							<input id="type2" name="T01" type="checkbox">
-							<label class="icon02" for="type2">드라이브 스루</label>
-						</dd>
-						<dd class="right">
-							<input id="type4" name="T27" type="checkbox">
-							<label class="icon25" for="type4">워크스루</label>
-						</dd>
-						<dd class="left">
-							<input id="type3" name="T12" type="checkbox">
-							<label class="icon03" for="type3">커뮤니티 스토어</label>
-						</dd>
-					</dl>
-					<dl class="opt_select_dl2">
-						<dt>서비스</dt>
-						<dd class="left">
-							<input id="serv1" name="T09" type="checkbox">
-							<label class="icon04" for="serv1">주차</label>
-						</dd>
-						<dd class="right">
-							<input id="serv2" name="T30" type="checkbox">
-							<label class="icon23" for="serv2">블론드</label>
-						</dd>
-						<dd class="left">
-							<input id="serv3" name="T05" type="checkbox">
-							<label class="icon22" for="serv3">피지오</label>
-						</dd>
-						<dd class="right">
-							<input id="serv4" name="T22" type="checkbox">
-							<label class="icon17" for="serv4">나이트로 콜드 브루 커피</label>
-						</dd>
-						<dd class="left">
-							<input id="serv5" name="T21" type="checkbox">
-							<label class="icon20" for="serv5">현금없는 매장</label>
-						</dd>
-						<dd class="right">
-							<input id="serv6" name="T10" type="checkbox">
-							<label class="icon05" for="serv6">외화 결제</label>
-						</dd>
-						<dd class="left">
-							<input id="serv7" name="T36" type="checkbox">
-							<label class="icon24" for="serv7">식약처 위생등급제 인증</label>
-						</dd>
-						<!-- s::20210401 추가 -->
-						<dd class="right">
-							<input id="serv8" name="T43" type="checkbox">
-							<label class="icon_delivers" for="serv8">딜리버스</label>
-						</dd>
-						<!-- e::20210401 추가 -->
-						<!-- s::20210407 추가 -->
-						<dd class="left">
-							<input id="serv9" name="T48" type="checkbox">
-							<label class="icon_eco" for="serv9">에코 매장</label>
-						</dd>
-						<!-- e::20210407 추가 -->
-					</dl>
-					<dl class="opt_select_dl3">
-						<dt>위치 및 시설</dt>
-						<dd class="left">
-							<input id="loc1" name="P10" type="checkbox">
-							<label class="icon07" for="loc1">공항내</label>
-						</dd>
-						<dd class="right">
-							<input id="loc2" name="P50" type="checkbox">
-							<label class="icon09" for="loc2">해안가</label>
-						</dd>
-						<dd class="left">
-							<input id="loc3" name="P20" type="checkbox">
-							<label class="icon08" for="loc3">대학가</label>
-						</dd>
-						<dd class="right">
-							<input id="loc4" name="P60" type="checkbox">
-							<label class="icon12" for="loc4">터미널/기차역</label>
-						</dd>
-						<dd class="left">
-							<input id="loc5" name="P30" type="checkbox">
-							<label class="icon11" for="loc5">리조트</label>
-						</dd>
-						<dd class="right">
-							<input id="loc6" name="P70" type="checkbox">
-							<label class="icon13" for="loc6">병원</label>
-						</dd>
-						<dd class="left">
-							<input id="loc7" name="P40" type="checkbox">
-							<label class="icon10" for="loc7">입점</label>
-						</dd>
-						<dd class="right">
-							<input id="loc8" name="P80" type="checkbox">
-							<label class="icon14" for="loc8">지하철 인접</label>
-						</dd>
-						<dd class="left">
-							<input id="loc9" name="whcroad_yn" type="checkbox">
-							<label class="icon19" for="loc9">장애인 편의시설</label>
-						</dd>
-						<dd class="right">
-							<input id="loc10" name="P90" type="checkbox">
-							<label class="icon21" for="loc10">공기청정기</label>
-						</dd>
-					</dl>
-					<p>
-						<input id="nstore1" name="new_bool" type="checkbox">
-						<label class="icon15" for="nstore1">신규매장</label>
-					</p>
-					</div>
-				</div>
 				
 				<!-- 옵션선택 end -->
 					</fieldset>
 					</form>
 
 	<!-- 150904 수정 -->
-
 	<p class="btn_storemap_quick"><a href="javascript:void(0);"><img src="../common/img/store/btn_quick.png" alt="현재 위치 중심으로 지도이동"></a></p> <!-- 접근성_20171127 alt 추가 -->
-
 
 	<!-- 접근성_20171127 alt 추가 -->
 	<!-- 150805 추가 구명준 -->
@@ -1188,7 +1026,6 @@ var eFrequencyPlannerYn = 'Y';
 </svg>
 <!-- 현재위치 -->
 <div style="position: absolute; margin: -55px 0px 0px -16px; z-index: 0; left: -2860px; top: 6342px;">
-
 <img draggable="false" src="../common/img/store/pin/pin_start.png" alt="" title="" style="min-width: 0px; min-height: 0px; max-width: 99999px; max-height: none; border: 0px; display: block; position: absolute; user-select: none; -webkit-user-drag: none; clip: rect(0px, 38px, 60px, 0px); top: 0px; left: 0px; width: 38px; height: 60px;">
 
 </div>
@@ -1439,11 +1276,8 @@ var eFrequencyPlannerYn = 'Y';
 			<!-- footer end -->
 		
 
-			<script src="//image.istarbucks.co.kr/common/js/jquery.tmpl.js"></script>
-			<script src="//image.istarbucks.co.kr/common/js/jquery.tmplPlus.min.js"></script>
-			<script src="//image.istarbucks.co.kr/common/js/jquery.ezmark.min.js"></script>
 			<script src="../common/js/jquery-1.10.2.min.js"></script>
-			<script src="../common/js/%40common.js"></script>
+			<script src="../common/js/@common.js"></script>
 			<script src="../common/js/jquery-ui.min.js?v=220207"></script>
 			<script src="../common/js/idangerous.swiper-2.1.min.js"></script>
 			<script src="../common/js/idangerous.swiper.scrollbar-2.1.js"></script>
@@ -1483,8 +1317,6 @@ var eFrequencyPlannerYn = 'Y';
 		
 			<script src="../common/js/openevent/openevent.js"></script>
 			<script src="../common/js/open_event_control.js"></script>
-
-
 			<script type="text/javascript">
 				
 				var mrSlider;
@@ -1732,7 +1564,6 @@ var eFrequencyPlannerYn = 'Y';
 				$('.mycard_one').seqfx();
 			</script>
 						
-
 			<script src='../common/js/makePCookie.js'></script>
 
 		
@@ -1745,7 +1576,6 @@ var eFrequencyPlannerYn = 'Y';
 					});
 				});
 			</script>
-
 			<script src="../common/js/jquery.superscrollorama-1.js"></script>			
 			<script src="../common/js/whatsnew.js"></script>
 			<script src="../common/js/jquery.ezmark.min-1.js"></script>
@@ -1770,11 +1600,9 @@ var eFrequencyPlannerYn = 'Y';
 
 
 <!-- 0601 예은 수정 -->
-
 <script type="text/javascript" src="../common/js/v2/maps/sdk.js?appkey=247bf84c5755624615df524ae2cfc331" &libraries="LIBRARY"></script>
 <script charset="UTF-8" src="https://t1.daumcdn.net/mapjsapi/js/main/4.4.3/kakao.js"></script>
 <script src="../common/js/jquery.async.min.js"></script>
-
 
 
 
@@ -2715,14 +2543,14 @@ var eFrequencyPlannerYn = 'Y';
 
 			<script type="text/x-jquery-tmpl" id="tpl_listLi">
 				<li>
-				    <a href="javascript:void(0);" class="goPromotionView" prod="${pro_SEQ}">
-					<img src="${img_UPLOAD_PATH}/upload/promotion/${web_THUM}" alt="${title}">
+				    <a href="javascript:void(0);" class="goPromotionView" prod="\${pro_SEQ}">
+					<img src="\${img_UPLOAD_PATH}/upload/promotion/\${web_THUM}" alt="\${title}">
 					<p>${title}<br>
 					{{if view_TYPE == 'C'}}
-					<span>${view_DATE}</span>
+					<span>\${view_DATE}</span>
 					{{/if}}
 					{{if view_TYPE == 'A' || view_TYPE == 'D'}}
-					<span>${view_SDT1} ~ ${view_EDT1}</span>
+					<span>\${view_SDT1} ~ \${view_EDT1}</span>
 					{{/if}}
 					</p>
 				    </a>
@@ -2730,26 +2558,24 @@ var eFrequencyPlannerYn = 'Y';
 			</script>
 
 
-
 		<script src="../common/js/sdk/js/kakao.min.js"></script>
 		<script>
 		Kakao.init('fbd2116d4434a7441d5caa4bb4c5456e');
 		</script>
 		
-
 		<script type="text/x-jquery-tepl" id="storeViewWrapBox">
 			<!-- (My 음료/매장) 매장 상세 정보 팝업 -->
 			<div class="shopArea_pop01 isStoreBizViewWrap" style="top:50px; display:none; z-index:20001;">
 				<section class="shopArea_pop01_inner">
 					<header class="titl">
-						<h6>${s_name} {{html $item.getNewIcon()}}</h6>
+						<h6>\${s_name} {{html $item.getNewIcon()}}</h6>
 						<div class="asm_stitle">
 						<ul class="my_sns_list">
-							<li class="btn_f"><a href="javascript:void(0);" class="storeFbBtn" data-caption="스타벅스코리아" data-image="${$item.getImage()}" data-link="${$item.link()}" data-title="스타벅스 ${s_name}" data-description="${notice}" ><img src="../common/img/util/reward/btn_f.gif" alt="패이스북"></a></li>
+							<li class="btn_f"><a href="javascript:void(0);" class="storeFbBtn" data-caption="스타벅스코리아" data-image="\${$item.getImage()}" data-link="\${$item.link()}" data-title="스타벅스 \${s_name}" data-description="\${notice}" ><img src="../common/img/util/reward/btn_f.gif" alt="패이스북"></a></li>
 						
-							<li class="btn_kakao mobileKaKaoTalk"><a href="javascript:void(0);" class="storeKakaoTalkBtn" data-image="${$item.getImage()}" data-description="${notice}" data-btn="스타벅스 매장찾기" data-link="${$item.link()}" ><img src="../common/img/util/reward/btn_kakao.png" alt="카카오톡"></a></li>
+							<li class="btn_kakao mobileKaKaoTalk"><a href="javascript:void(0);" class="storeKakaoTalkBtn" data-image="\${$item.getImage()}" data-description="\${notice}" data-btn="스타벅스 매장찾기" data-link="\${$item.link()}" ><img src="../common/img/util/reward/btn_kakao.png" alt="카카오톡"></a></li>
 						</ul>
-						<p>${notice}</p>
+						<p>\${notice}</p>
 						</div>
 					</header>
 					<article class="shopArea_box">
@@ -2765,7 +2591,7 @@ var eFrequencyPlannerYn = 'Y';
 								<div class="box_info">
 									<dl class="box_tabmenu">
 										<!-- 1번 시작 -->
-										<dt class="tab"><a href="javascript:void(0);" class="cafe_time_zone"  data-biz="${s_biz_code}" data-type="C">영업시간 보기</a></dt>
+										<dt class="tab"><a href="javascript:void(0);" class="cafe_time_zone"  data-biz="\${s_biz_code}" data-type="C">영업시간 보기</a></dt>
 										<dd class="panel">
 											<div class="date_time cafetimeWrap">
 
@@ -2774,7 +2600,7 @@ var eFrequencyPlannerYn = 'Y';
 										<!-- 1번 끝 -->
 										{{if $item.dtCheck()=='Y' }}
 										<!-- 2번 시작 -->
-										<dt class="tab"><a href="javascript:void(0);" class="dt_time_zone" data-biz="${s_biz_code}" data-type="D">Drive Thru 영업시간 보기</a></dt>	
+										<dt class="tab"><a href="javascript:void(0);" class="dt_time_zone" data-biz="\${s_biz_code}" data-type="D">Drive Thru 영업시간 보기</a></dt>	
 										<dd class="panel">
 											<div class="date_time dttimeWrap">
 
@@ -2784,7 +2610,7 @@ var eFrequencyPlannerYn = 'Y';
 										{{/if}}
 										{{if $item.reserveCheck()=='Y' }}
 										<!-- 3번 시작 -->
-										<dt class="tab"><a href="javascript:void(0);" class="reserve_time_zone"  data-biz="${s_biz_code}" data-type="R">리저브존 영업시간 보기</a></dt>
+										<dt class="tab"><a href="javascript:void(0);" class="reserve_time_zone"  data-biz="\${s_biz_code}" data-type="R">리저브존 영업시간 보기</a></dt>
 										<dd class="panel">
 											<div class="date_time reservetimeWrap">
 
@@ -2794,7 +2620,7 @@ var eFrequencyPlannerYn = 'Y';
 										{{/if}}
 										{{if $item.wtCheck()=='Y' }}
 										<!-- 4번 시작 -->
-										<dt class="tab"><a href="javascript:void(0);" class="wt_time_zone"  data-biz="${s_biz_code}" data-type="W">Walk-Thru 영업시간 보기</a></dt>
+										<dt class="tab"><a href="javascript:void(0);" class="wt_time_zone"  data-biz="\${s_biz_code}" data-type="W">Walk-Thru 영업시간 보기</a></dt>
 										<dd class="panel">
 											<div class="date_time wttimeWrap">
 
@@ -2804,7 +2630,7 @@ var eFrequencyPlannerYn = 'Y';
 										{{/if}}
 										{{if $item.deliversCheck()=='Y' }}
 										<!-- 5번 시작 -->
-										<dt class="tab"><a href="javascript:void(0);" class="delivers_time_zone"  data-biz="${s_biz_code}" data-type="O">Delivers 영업시간 보기</a></dt>
+										<dt class="tab"><a href="javascript:void(0);" class="delivers_time_zone"  data-biz="\${s_biz_code}" data-type="O">Delivers 영업시간 보기</a></dt>
 										<dd class="panel">
 											<div class="date_time deliverstimeWrap">
 
@@ -2815,7 +2641,7 @@ var eFrequencyPlannerYn = 'Y';
 									</dl>
 								</div>
 								<ul class="pop_btns_zon2">
-									<li class="btn_f" style="display:"><a href="javascript:void(0);" class="storeFbBtn" data-caption="스타벅스코리아" data-image="${$item.getImage()}" data-link="${$item.link()}" data-title="스타벅스 ${s_name}" data-description="${notice}" ><img src="../common/img/util/reward/btn_f.gif" alt="패이스북"></a></li>
+									<li class="btn_f" style="display:"><a href="javascript:void(0);" class="storeFbBtn" data-caption="스타벅스코리아" data-image="\${$item.getImage()}" data-link="\${$item.link()}" data-title="스타벅스 \${s_name}" data-description="\${notice}" ><img src="../common/img/util/reward/btn_f.gif" alt="패이스북"></a></li>
 									
 								</ul>
 								<div class="shopArea_infoWrap">
@@ -2826,10 +2652,10 @@ var eFrequencyPlannerYn = 'Y';
 									<dl class="shopArea_info">
 										<dt>전화번호</dt>
 									{{if $item.getStoreNumber() }}
-										<dd><a href="tel:${tel}"> ${tel} </a></dd>
+										<dd><a href="tel:\${tel}"> \${tel} </a></dd>
 									{{/if}}
 									{{if !$item.getStoreNumber() }}
-										<dd>${tel}</dd>
+										<dd>\${tel}</dd>
 									{{/if}}
 									</dl>
 									{{if $item.getTheme('T')  != ''}}
@@ -2883,7 +2709,7 @@ var eFrequencyPlannerYn = 'Y';
 
 						<!-- 150925 구명준 추가 -->
 						<div class="st_instagram_title storeInstagramBox" style="display:none">
-							<p>고객님들이 인스타그램에 올려주신 <strong>#스타벅스${$item.getStoreNameInsta()}점</strong> 사진입니다.</p> <a class="btn_sti_more" href="javascript:void(0)" style="display:none">더보기</a>
+							<p>고객님들이 인스타그램에 올려주신 <strong>#스타벅스\${$item.getStoreNameInsta()}점</strong> 사진입니다.</p> <a class="btn_sti_more" href="javascript:void(0)" style="display:none">더보기</a>
 						</div>
 
 						<div class="st_instagram_wrap storeInstagramBox"  style="display:none">
@@ -2939,28 +2765,25 @@ var eFrequencyPlannerYn = 'Y';
 		<script type="text/x-jquery-tepl" id="cafeStoreTimeWrap">
 				<dl class="date_time_left">
 
-					<dt>${$item.getWeekDayStr(0)}일</dt>
-					<dd>일요일 ${$item.getTime(0)}</dd>
-					<dt>${$item.getWeekDayStr(1)}일</dt>
-					<dd>월요일 ${$item.getTime(1)}</dd>
-					<dt>${$item.getWeekDayStr(2)}일</dt>
-					<dd>화요일 ${$item.getTime(2)}</dd>
-					<dt>${$item.getWeekDayStr(3)}일</dt>
-					<dd>수요일 ${$item.getTime(3)}</dd>
+					<dt>\${$item.getWeekDayStr(0)}일</dt>
+					<dd>일요일 \${$item.getTime(0)}</dd>
+					<dt>\${$item.getWeekDayStr(1)}일</dt>
+					<dd>월요일 \${$item.getTime(1)}</dd>
+					<dt>\${$item.getWeekDayStr(2)}일</dt>
+					<dd>화요일 \${$item.getTime(2)}</dd>
+					<dt>\${$item.getWeekDayStr(3)}일</dt>
+					<dd>수요일 \${$item.getTime(3)}</dd>
 				</dl>
 				<dl class="date_time_right">
-					<dt>${$item.getWeekDayStr(4)}일</dt>
-					<dd>목요일 ${$item.getTime(4)}</dd>
-					<dt>${$item.getWeekDayStr(5)}일</dt>
-					<dd>금요일 ${$item.getTime(5)}</dd>
-					<dt>${$item.getWeekDayStr(6)}일</dt>
-					<dd>토요일 ${$item.getTime(6)}</dd>
+					<dt>\${$item.getWeekDayStr(4)}일</dt>
+					<dd>목요일 \${$item.getTime(4)}</dd>
+					<dt>\${$item.getWeekDayStr(5)}일</dt>
+					<dd>금요일 \${$item.getTime(5)}</dd>
+					<dt>\${$item.getWeekDayStr(6)}일</dt>
+					<dd>토요일 \${$item.getTime(6)}</dd>
 	
 				</dl>			
 		</script>
-	<script src="../common/js/store/store_view.js?v=210423"></script>
-</div>
-	<div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div></div></div></div>
-
-</body>
+		<script src="../common/js/store/store_view.js?v=210423"></script>
+	</body>
 </html>

@@ -633,11 +633,11 @@ var eFrequencyPlannerYn = 'Y';
                     <div class="product_view_wrap1">
                         <div class="product_view_pic">
                             <div class="product_big_pic">
-                                <p><a href="javascript:void(0)" tabindex="-1" aria-hidden="true" role="presentation"><img class="zoomImg" src="https://image.istarbucks.co.kr/upload/store/skuimg/2022/04/[9300000004025]_20220406130412481.jpg" alt="상세이미지" data-zoom-image="https://image.istarbucks.co.kr/upload/store/skuimg/2022/04/[9300000004025]_20220406130412481.jpg"></a><!-- 접근성_20171123 tabindex, aria 추가 --></p>
+                                <p><a href="javascript:void(0)" tabindex="-1" aria-hidden="true" role="presentation"><img class="zoomImg" src="<!-- https://image.istarbucks.co.kr/upload/store/skuimg/2022/04/[9300000004025]_20220406130412481.jpg -->" alt="상세이미지" data-zoom-image="https://image.istarbucks.co.kr/upload/store/skuimg/2022/04/[9300000004025]_20220406130412481.jpg"></a><!-- 접근성_20171123 tabindex, aria 추가 --></p>
                                 <p class="more_btn"><a href="javascript:void(0)" tabindex="-1" aria-hidden="true" role="presentation"><img src="//image.istarbucks.co.kr/common/img/menu/more.png" alt="상세이미지"></a><!-- 접근성_20171123 tabindex, aria 추가 --></p>
                             </div>
                             <div class="product_thum_wrap" id="product_thum_wrap">
-	                            <ul class="product_thum"><li><a href="javascript:void(0)" data-image="https://image.istarbucks.co.kr/upload/store/skuimg/2022/04/[9300000004025]_20220406130412481.jpg" data-zoom-image="https://image.istarbucks.co.kr/upload/store/skuimg/2022/04/[9300000004025]_20220406130412481.jpg" class="elevatezoom-gallery active"><img src="https://image.istarbucks.co.kr/upload/store/skuimg/2022/04/[9300000004025]_20220406130412481.jpg" alt="상세이미지 1번"></a></li></ul>
+	                            <ul class="product_thum"><li><a href="javascript:void(0)" data-image="<!-- https://image.istarbucks.co.kr/upload/store/skuimg/2022/04/[9300000004025]_20220406130412481.jpg -->" data-zoom-image="<!-- https://image.istarbucks.co.kr/upload/store/skuimg/2022/04/[9300000004025]_20220406130412481.jpg -->" class="elevatezoom-gallery active"><img src="<!-- https://image.istarbucks.co.kr/upload/store/skuimg/2022/04/[9300000004025]_20220406130412481.jpg -->" alt="상세이미지 1번"></a></li></ul>
                             </div>
                         </div>
                         <div class="product_view_detail">
@@ -649,7 +649,7 @@ var eFrequencyPlannerYn = 'Y';
                             </div>
                             <div class="m_view_slide">
                                 <div class="bx-wrapper" style="max-width: 100%;"><div class="bx-viewport" style="width: 100%; overflow: hidden; position: relative; height: 0px;"><ul class="m_view_slider" style="width: 315%; position: relative; transition-duration: 0s; transform: translate3d(0px, 0px, 0px);"><li style="float: left; list-style: none; position: relative; width: 100px;" class="bx-clone"><img class="m_view_img" src="https://image.istarbucks.co.kr/upload/store/skuimg/2022/04/[9300000004025]_20220406130412481.jpg" data-zoom-image="https://image.istarbucks.co.kr/upload/store/skuimg/2022/04/[9300000004025]_20220406130412481.jpg" alt=""></li>
-                                <li style="float: left; list-style: none; position: relative; width: 100px;"><img class="m_view_img" src="https://image.istarbucks.co.kr/upload/store/skuimg/2022/04/[9300000004025]_20220406130412481.jpg" data-zoom-image="https://image.istarbucks.co.kr/upload/store/skuimg/2022/04/[9300000004025]_20220406130412481.jpg" alt=""></li><li style="float: left; list-style: none; position: relative; width: 100px;" class="bx-clone"><img class="m_view_img" src="https://image.istarbucks.co.kr/upload/store/skuimg/2022/04/[9300000004025]_20220406130412481.jpg" data-zoom-image="https://image.istarbucks.co.kr/upload/store/skuimg/2022/04/[9300000004025]_20220406130412481.jpg" alt=""></li></ul></div><div class="bx-controls bx-has-controls-direction"><div class="bx-controls-direction"><a class="bx-prev disabled" href="">Prev</a><a class="bx-next disabled" href="">Next</a></div></div></div>
+                                <li style="float: left; list-style: none; position: relative; width: 100px;"><img class="m_view_img" src="<!-- https://image.istarbucks.co.kr/upload/store/skuimg/2022/04/[9300000004025]_20220406130412481.jpg -->" data-zoom-image="<!-- https://image.istarbucks.co.kr/upload/store/skuimg/2022/04/[9300000004025]_20220406130412481.jpg -->" alt=""></li><li style="float: left; list-style: none; position: relative; width: 100px;" class="bx-clone"><img class="m_view_img" src="https://image.istarbucks.co.kr/upload/store/skuimg/2022/04/[9300000004025]_20220406130412481.jpg" data-zoom-image="https://image.istarbucks.co.kr/upload/store/skuimg/2022/04/[9300000004025]_20220406130412481.jpg" alt=""></li></ul></div><div class="bx-controls bx-has-controls-direction"><div class="bx-controls-direction"><a class="bx-prev disabled" href="">Prev</a><a class="bx-next disabled" href="">Next</a></div></div></div>
                                 <div class="m_view_controller" style="display: none;">
                                     <div class="m_view_controls"></div>
                                     <div class="m_view_pagers"><div class="bx-pager bx-default-pager"><div class="bx-pager-item"><a href="" data-slide-index="0" class="bx-pager-link active">1</a></div></div></div>
@@ -2063,4 +2063,21 @@ var eFrequencyPlannerYn = 'Y';
 </script>
 	
 
-<div class="zoomContainer" style="transform: translateZ(0px); position: absolute; left: 21.5625px; top: 219px; height: 470px; width: 450px;"><div class="zoomLens" style="background-position: 0px 0px; float: right; overflow: hidden; z-index: 999; transform: translateZ(0px); opacity: 0.4; zoom: 1; width: 286.7px; height: 220.06px; background-color: white; cursor: default; border: 1px solid rgb(0, 0, 0); background-repeat: no-repeat; position: absolute; left: 134px; top: 79px; display: none;">&nbsp;</div><div class="zoomWindowContainer" style="width: 610px;"><div style="overflow: hidden; background-position: -450px -166.946px; text-align: center; background-color: rgb(255, 255, 255); width: 610px; height: 468px; float: left; background-size: 900px 940px; z-index: 100; border: 4px solid rgb(136, 136, 136); background-repeat: no-repeat; position: absolute; background-image: url(&quot;https://image.istarbucks.co.kr/upload/store/skuimg/2022/04/[9300000004025]_20220406130412481.jpg&quot;); top: -2px; left: 461px; display: none;" class="zoomWindow">&nbsp;</div></div></div><div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div></div></div></div></body></html>
+<div class="zoomContainer"
+    style="transform: translateZ(0px); position: absolute; left: 21.5625px; top: 219px; height: 470px; width: 450px;">
+    <div class="zoomLens"
+        style="background-position: 0px 0px; float: right; overflow: hidden; z-index: 999; transform: translateZ(0px); opacity: 0.4; zoom: 1; width: 286.7px; height: 220.06px; background-color: white; cursor: default; border: 1px solid rgb(0, 0, 0); background-repeat: no-repeat; position: absolute; left: 134px; top: 79px; display: none;">
+        &nbsp;</div>
+    <div class="zoomWindowContainer" style="width: 610px;">
+        <div style="overflow: hidden; background-position: -450px -166.946px; text-align: center; background-color: rgb(255, 255, 255); width: 610px; height: 468px; float: left; background-size: 900px 940px; z-index: 100; border: 4px solid rgb(136, 136, 136); background-repeat: no-repeat; position: absolute; background-image: url(/* &quot;https://image.istarbucks.co.kr/upload/store/skuimg/2022/04/[9300000004025]_20220406130412481.jpg&quot */;); top: -2px; left: 461px; display: none;"
+            class="zoomWindow">&nbsp;</div>
+    </div>
+</div>
+<div id="fb-root" class=" fb_reset">
+    <div style="position: absolute; top: -10000px; width: 0px; height: 0px;">
+        <div></div>
+    </div>
+</div>
+</body>
+
+</html>

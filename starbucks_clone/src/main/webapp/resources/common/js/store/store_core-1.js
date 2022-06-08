@@ -584,8 +584,14 @@
 			}
 			
 			/** ajax 캐시문제를 해결하기 **/
+			var ctx = getContextPath();
+			 			function getContextPath() {
+			 			return sessionStorage.getItem("contextpath");
+			}
+ 		
+ 	
 			var rndCod = randomString();
-			var storeInterfaceUrl = "/upload/json/store/storelist/getStore?r="+rndCod;
+			var storeInterfaceUrl = ctx + '/upload/json/store/storelist/getStore?r='+rndCod;
 
 			__ajaxCall( storeInterfaceUrl ,$search, true, "JSON", "POST",
 					function (_response) 

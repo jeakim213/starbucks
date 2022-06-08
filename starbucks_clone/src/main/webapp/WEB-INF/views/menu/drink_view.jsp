@@ -687,7 +687,7 @@ var eFrequencyPlannerYn = 'Y';
 								<p class="more_btn"><a href="javascript:void(0)" tabindex="-1" aria-hidden="true" role="presentation"><img src="//image.istarbucks.co.kr/common/img/menu/more.png" alt="상세이미지"></a><!-- 접근성_20171123 alt 추가 --></p>
 							</div>
 							<div class="product_thum_wrap" id="product_thum_wrap">
-								<ul class="product_thum"><li><a href="javascript:void(0)" data-image="https://image.istarbucks.co.kr/upload/store/skuimg/2022/04/[9200000003988]_20220406113215431.jpg" data-zoom-image="https://image.istarbucks.co.kr/upload/store/skuimg/2022/04/[9200000003988]_20220406113215431.jpg" class="elevatezoom-gallery active"><img src="https://image.istarbucks.co.kr/upload/store/skuimg/2022/04/[9200000003988]_20220406113215431.jpg" alt="상세이미지 1번"></a></li></ul>
+								<ul class="product_thum"><li><a href="javascript:void(0)" data-image="https://image.istarbucks.co.kr/upload/store/skuimg/2022/04/[9200000003988]_20220406113215431.jpg" data-zoom-image="https://image.istarbucks.co.kr/upload/store/skuimg/2022/04/[9200000003988]_20220406113215431.jpg" class="elevatezoom-gallery active"><img src="<!-- https://image.istarbucks.co.kr/upload/store/skuimg/2022/04/[9200000003988]_20220406113215431.jpg -->" alt="상세이미지 1번"></a></li></ul>
 							</div>
 						</div>
 						<div class="product_view_detail">
