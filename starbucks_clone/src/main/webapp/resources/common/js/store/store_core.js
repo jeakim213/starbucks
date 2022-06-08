@@ -1193,12 +1193,6 @@
     			}
     			    			
     		}
-
-			
-			
-
-
-    	
     	}
         ,
         setIncon : function(theme, type)
@@ -1210,7 +1204,28 @@
             		if( type == "T01") {	return "<img src='//image.istarbucks.co.kr/common/img/store/store_icon/icon03.png' />"; }		//드라이브 스르라면
             		if( type == "T03") {	return "<img src='//image.istarbucks.co.kr/common/img/store/store_icon/icon01.png' />"; }		//리저브라면
             		if( type == "T12") {	return "<img src='//image.istarbucks.co.kr/common/img/store/store_icon/icon02.png' />"; }		//커뮤니티 스토오라면
-  
+  					if( type == "T09") {   return "<img src='//image.istarbucks.co.kr/common/img/store/store_icon/icon04.png' />"; }      //주차라면
+                    if( type == "T10") {   return "<img src='//image.istarbucks.co.kr/common/img/store/store_icon/icon05.png' />"; }      //외화결제라면
+                    if( type == "P10") {   return "<img src='//image.istarbucks.co.kr/common/img/store/store_icon/icon07.png' />"; }      //공항내
+                    if( type == "P50") {   return "<img src='//image.istarbucks.co.kr/common/img/store/store_icon/icon09.png' />"; }      //해안가
+                    if( type == "P20") {   return "<img src='//image.istarbucks.co.kr/common/img/store/store_icon/icon08.png' />"; }      //대학가
+                    if( type == "P60") {   return "<img src='//image.istarbucks.co.kr/common/img/store/store_icon/icon12.png' />"; }      //터미널/기차역
+                    if( type == "P50") {   return "<img src='//image.istarbucks.co.kr/common/img/store/store_icon/icon11.png' />"; }      //리조트              
+                    if( type == "P70") {   return "<img src='//image.istarbucks.co.kr/common/img/store/store_icon/icon13.png' />"; }      //병원
+                    if( type == "P40") {   return "<img src='//image.istarbucks.co.kr/common/img/store/store_icon/icon10.png' />"; }      //입점
+                    if( type == "P80") {   return "<img src='//image.istarbucks.co.kr/common/img/store/store_icon/icon14.png' />"; }      //지하철 인접
+                    if( type == "T04") {   return "<img src='//image.istarbucks.co.kr/common/img/store/store_icon/icon16.png' />"; }      //에스프레스 초이스
+                    if( type == "T20") {   return ""; }      //콜드브루
+                    if( type == "T22") {   return "<img src='//image.istarbucks.co.kr/upload/common/img/icon/icon18.png' />"; }      //나이트로콜드브루
+                    if( type == "WHCROAD") {   return "<img src='//image.istarbucks.co.kr/common/img/store/store_icon/icon19.png' />"; }   //휠체어 접근
+                    if( type == "T21") {   return "<img src='//image.istarbucks.co.kr/common/img/store/store_icon/icon20.png' />"; }      //현금없는 매장
+                    if( type == "P90") {   return "<img src='//image.istarbucks.co.kr/common/img/store/store_icon/icon21.jpg' />"; }      //공기청정기
+                    if( type == "T05") {   return "<img src='//image.istarbucks.co.kr/common/img/store/store_icon/icon22.png' />"; }      //피지오
+                    if( type == "T30") {   return "<img src='//image.istarbucks.co.kr/upload/common/img/icon/icon23.png' />"; }      //2019.10.24 매장찾기 검색옵션 내 '블론드' 속성(T30) 추가
+                    if( type == "T36") {   return "<img src='//image.istarbucks.co.kr/upload/common/img/icon/icon_24.png' />"; }      //2020.03.26 매장찾기 검색옵션 내 '우수위생 관리 인증' 속성(T36) 추가
+                    if( type == "T27") {   return "<img src='//image.istarbucks.co.kr/upload/common/img/icon/icon_wt.png' />"; }      //[픽업존 관리시스템 개선] 워크스루 아이콘 추가 
+                    if( type == "T43") {   return "<img src='//image.istarbucks.co.kr/upload/common/img/icon/icon_delivers_service.png' />"; }      //20210401 '딜리버스' 서비스 추가
+                    if( type == "T48") {   return "<img src='//image.istarbucks.co.kr/upload/common/img/icon/icon_eco_service.png' />"; }
             	}
             	else
             	{
