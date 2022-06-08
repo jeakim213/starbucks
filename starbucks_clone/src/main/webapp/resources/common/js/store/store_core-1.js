@@ -818,7 +818,7 @@
     					
 				    					iwContent += 
 				    							'</p>' +
-				    						 '<a class="btn_marker_detail" href="javascript:getStoreDetail(\''+y.s_biz_code+'\');">상세 정보 보기</a>' +
+				    						 /*'<a class="btn_marker_detail" href="javascript:getStoreDetail(\''+y.s_biz_code+'\');">상세 정보 보기</a>' +*/
 										 '</div>' +
 									 '</div>' +
 								'</article>'+

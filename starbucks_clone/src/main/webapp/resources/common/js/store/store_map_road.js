@@ -4549,7 +4549,7 @@ function sbSearchPlace(search)
 	    									'<div class="cont_wrap">' +
 	    										'<p class="addr">'+_s_address+'</p>' +
 	    										'<p class="tel"><a href="tel:'+_s_tel+'">'+_s_tel+'</a></p>' +
-	    										'<a class="btn_marker_detail" href="javascript:getStoreDetail(\''+_s_biz+'\');">상세 정보 보기</a>' +
+	    										/*'<a class="btn_marker_detail" href="javascript:getStoreDetail(\''+_s_biz+'\');">상세 정보 보기</a>' +*/
 	    									'</div>' +
 	    								'</div>' +
 	    							'</article>'+

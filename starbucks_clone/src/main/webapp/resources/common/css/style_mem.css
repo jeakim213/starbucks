@@ -360,6 +360,10 @@
 	.mem_peopleJoin_info li.li1,
 	.mem_peopleJoin_info li.li1 {  width:548px; border-right:1px solid #ddd; }
 	.mem_peopleJoin_wrap figure { margin-bottom:30px; height:66px; }
+	
+	
+	/*0607 다정*/
+	.auth {margin:auto; width:525px; padding:40px 0; border:1px solid #ddd; border-radius:3px;}
 
 	.mem_f_titl,
 	.mem_k_titl { font-size:16px; font-weight:bold; color:#222; margin-bottom:10px; }
