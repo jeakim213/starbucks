@@ -145,7 +145,6 @@ public class HomeController {
 		return "coffee/productFinder";
 	}
 
-	// footer/co_sales
 	// login
 	@RequestMapping(value = "login/login")
 	public String login() {
@@ -510,47 +509,6 @@ public class HomeController {
 	@RequestMapping(value = "store/store_reserve")
 	public String store_reserve() {
 		return "store/store_reserve";
-	}
-
-
-	@RequestMapping(value = "util/app_tip")
-	public String app_tip() {
-		return "util/app_tip";
-	}
-
-	@RequestMapping(value = "util/faq")
-	public String faq() {
-		return "util/faq";
-	}
-
-	@RequestMapping(value = "community/faq_1")
-	public String faq_1() {
-		return "community/faq-1";
-	}
-
-	@RequestMapping(value = "util/guest_eReceipt")
-	public String guest_eReceipt() {
-		return "util/guest_eReceipt";
-	}
-
-	@RequestMapping(value = "util/online_survey")
-	public String online_survey() {
-		return "util/online_survey";
-	}
-
-	@RequestMapping(value = "util/partnership_card")
-	public String partnership_card() {
-		return "util/partnership_card";
-	}
-
-	@RequestMapping(value = "util/storecareList")
-	public String storecareList() {
-		return "util/storecareList";
-	}
-
-	@RequestMapping(value = "util/web_tip")
-	public String web_tip() {
-		return "util/web_tip";
 	}
 
 	// ajax
