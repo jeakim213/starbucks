@@ -816,14 +816,7 @@ var eFrequencyPlannerYn = 'Y';
 	
 	<!-- 0602 다정 차트 스크립트 -->
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-		<script src="../../common/js/admin/highcharts.js"></script>
 
->>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
->>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
 		<script src="../common/js/admin/highcharts.js"></script>
 		<script src="https://code.highcharts.com/highcharts-more.js"></script>
 		<script src="https://code.highcharts.com/modules/exporting.js"></script>
@@ -1386,7 +1379,7 @@ var eFrequencyPlannerYn = 'Y';
 		<li>
 			<a href="javascript:void(0);">회원 관리<span class="sbox_arrow_down"></span></a>
 			<ul>
-				<li><a href="javascript:void(0);" required="login" data-href="my/reward">· 회원 목록</a></li>
+				<li><a href="memberListForm" required="" data-href="admin/memberListForm">· 회원 목록</a></li>
 			</ul>
 		</li>
 		<li>

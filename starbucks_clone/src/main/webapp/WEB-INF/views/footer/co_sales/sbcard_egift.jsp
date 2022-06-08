@@ -524,7 +524,6 @@ var eFrequencyPlannerYn = 'Y';
 									<!-- <li><a href="menu/product_list?CATE_CD=product_planner">스타벅스 플래너</a></li> --> <!-- 20210602 삭제 -->
 								</ul>
 							</li>
-<<<<<<< HEAD
 							<li>
 								<a role="button" href="javascript:void(0);">카드<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 -->
 								<ul>
@@ -569,47 +568,6 @@ var eFrequencyPlannerYn = 'Y';
 									<!-- <li><a href="store/store_cheongdam">청담스타</a></li> 20210727 메뉴 비노출 -->
 									<li><a href="store/store_star_field">티바나 바 매장</a></li>
 									<!-- <li><a href="store/store_park">파미에파크</a></li> 20210727 메뉴 비노출 -->
-								</ul>
-							</li>
-						</ul>
-<<<<<<< HEAD
-						<ul>
-							<li class="mob_gnb_ttl2"><a role="button" class="en" href="javascript:void(0);">RESPONSIBILITY<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 --></li>
-							<li><a href="responsibility/index">한눈에 보기</a></li>
-							<li><a href="responsibility/starbucks_shared_planet">사회공헌 캠페인 소개</a></li> <!-- 20210820 메뉴명 수정 -->
-							<li>
-								<a role="button" href="javascript:void(0);">지역 사회 참여 활동<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 -->
-								<ul>
-									<li><a href="responsibility/hope_delivery">희망배달 캠페인</a></li>
-									<li><a href="responsibility/talent_donation">재능기부 카페 소식</a></li>
-									<li><a href="responsibility/community_store">커뮤니티 스토어</a></li>
-									<li><a href="responsibility/youth_resource">청년 지원 프로그램</a></li><!-- 202107 메뉴명 수정 -->
-									<li><a href="responsibility/our_agriculture">우리 농산물 사랑 캠페인</a></li>
-									<li><a href="responsibility/our_culture_defend">우리 문화 지키기</a></li>
-								</ul>
-							</li>
-							<li>
-								<a role="button" href="javascript:void(0);">환경보호 활동<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 -->
-								<ul>
-									<li><a href="responsibility/environment">친환경 활동</a></li><!-- 202107 메뉴명 수정 -->
-									<li><a href="responsibility/no_disposable_cup">일회용 컵 없는 매장</a></li>
-									<li><a href="responsibility/bean_recycling">커피 원두 재활용</a></li>
-								</ul>
-							</li>
-							<li>
-								<a role="button" href="javascript:void(0);">윤리 구매<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 -->
-								<ul>
-									<li><a href="responsibility/ethically_sourcing">윤리적 원두 구매</a></li>
-									<li><a href="responsibility/fair_trade">공정무역 인증</a></li>
-									<li><a href="responsibility/farmer_support">커피 농가 지원 활동</a></li>
-								</ul>
-							</li>
-							<li>
-								<a role="button" href="javascript:void(0);">글로벌 사회 공헌<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 -->
-								<ul>
-									<li><a href="responsibility/sp_ethical_management">윤리경영 보고서</a></li>
-									<li><a href="responsibility/starbucks_foundation">스타벅스 재단</a></li>
-									<li><a href="responsibility/sp_global_month">지구촌 봉사의 달</a></li>
 								</ul>
 							</li>
 						</ul>

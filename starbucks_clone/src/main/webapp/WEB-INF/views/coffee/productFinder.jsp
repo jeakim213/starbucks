@@ -688,7 +688,7 @@ var eFrequencyPlannerYn = 'Y';
 								<ul class="find_taste find_taste03">
 									<li class="ft3_t01">
 										<dl>
-											<dt><a href="#" onclick="i.goSubmit(10)"><img src="../common/img/coffee/taste3_1.png" alt=""></a></dt>
+											<dt><a href="javascript:void(0);" onclick="i.goSubmit(10);"><img src="../common/img/coffee/taste3_1.png" alt=""></a></dt>
 											<dd>은은하고 부드러움</dd>
 										</dl>
 									</li>
