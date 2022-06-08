@@ -294,7 +294,12 @@ function getCoffeeList(pac, kind) {
     'PACKAGE': pac
     , 'ROAST_KIND': kind
   };
-  __ajaxCall('/coffee/getCoffeeList.do', option, true, "JSON", "POST",
+ 	var ctx = getContextPath();
+		function getContextPath() {
+		return sessionStorage.getItem("contextpath");
+	}
+	var storeInterfaceUrl = ctx + '/coffee/getCoffeeList';
+  __ajaxCall(storeInterfaceUrl, option, true, "JSON", "POST",
     function (data) {
       if (data.list.length > 0) {
         var idx = "";
@@ -334,8 +339,7 @@ function getCoffeeList(pac, kind) {
           if (prCd != "") {
             form = document.pForm;
             form.PRODUCT_CD.value = prCd;
-            form.action = "/coffee/product_view.do";
-            form.submit();
+            form.action = "";
           }
         });
       }
@@ -348,7 +352,12 @@ function getFlavorList(pac) {
   var option = {
     'PACKAGE': pac
   };
-  __ajaxCall('/coffee/getFlavorList.do', option, true, "JSON", "POST",
+	var ctx = getContextPath();
+		function getContextPath() {
+		return sessionStorage.getItem("contextpath");
+	}
+	var storeInterfaceUrl = ctx + '/coffee/getFlavorList';
+  __ajaxCall(storeInterfaceUrl, option, true, "JSON", "POST",
     function (data) {
       if (data.list.length > 0) {
         var idx = "";
@@ -372,8 +381,7 @@ function getFlavorList(pac) {
           if (prCd != "") {
             form = document.pForm;
             form.PRODUCT_CD.value = prCd;
-            form.action = "/coffee/product_view.do";
-            form.submit();
+            form.action = "";
           }
         });
       } else {
@@ -394,8 +402,12 @@ function getReserveList(pac, roast, search_selldate_yn) {
 	, 'SOLD_OUT2' : 'N'
     , 'SEARCH_SELLDATE_YN' : search_selldate_yn
   };
-  
-  __ajaxCall('/coffee/getReserveList.do', option, true, "JSON", "POST"
+  	var ctx = getContextPath();
+		function getContextPath() {
+		return sessionStorage.getItem("contextpath");
+	}
+	var storeInterfaceUrl = ctx + '/coffee/getReserveList';
+  __ajaxCall(storeInterfaceUrl, option, true, "JSON", "POST"
     , function(data) {
 
 	  if(data.list.length > 0) {
@@ -416,8 +428,7 @@ function getReserveList(pac, roast, search_selldate_yn) {
               if(prCd != "") {
                   form = document.pForm;
                   form.PRODUCT_CD.value = prCd;
-                  form.action = "/coffee/reserve_view.do";
-                  form.submit();
+                  form.action = "";
               }
           });
       });

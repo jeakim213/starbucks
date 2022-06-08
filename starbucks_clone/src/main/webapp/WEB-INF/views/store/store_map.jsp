@@ -1,5 +1,6 @@
 ﻿<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="ko">
 	<head>
@@ -14,6 +15,11 @@
 <meta property="og:description" content="Starbucks">
 
 <title id="titleJoin">Starbucks Korea</title> <!-- 220117 수정 -->
+<script type="text/javascript" charset="utf-8">
+	sessionStorage.setItem("contextpath", "${pageContext.request.contextPath}");
+</script>
+<c:set var="cpath" value="${pageContext.request.contextPath}" />
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=APIKEY&libraries=services"></script>
 <link rel="shortcut icon" href="../common/img/common/favicon.ico?v=200828" type="image/ico"> <!-- 20200827 파비콘 교체 및 CDN 변수처리 -->
 <link href="../common/css/reset.css" rel="stylesheet">
 <link href="../common/css/style.css?v=210721" rel="stylesheet">
@@ -69,7 +75,7 @@ var eFrequencyPlannerYn = 'Y';
 		<link href="../common/css/style_find_road.css?v=210423" rel="stylesheet">
 		<link href="../common/css/style_util.css?v=210316" rel="stylesheet">
 		<link href="../common/css/skdslider.css?r=1abii2" rel="stylesheet">
-		<link href="..common/css/ezmark-1.css?r=1abii2" rel="stylesheet">
+		<link href="../common/css/ezmark-1.css?r=1abii2" rel="stylesheet">
 		
 		<style type="text/css" data-fbcssmodules="css:fb.css.base css:fb.css.dialog css:fb.css.iframewidget css:fb.css.customer_chat_plugin_iframe">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
 .fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_dialog_advanced{border-radius:8px;padding:10px}.fb_dialog_content{background:#fff;color:#373737}.fb_dialog_close_icon{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{left:5px;right:auto;top:5px}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{height:100%;left:0;margin:0;overflow:visible;position:absolute;top:-10000px;transform:none;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{background:none;height:auto;min-height:initial;min-width:initial;width:auto}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{clear:both;color:#fff;display:block;font-size:18px;padding-top:20px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .4);bottom:0;left:0;min-height:100%;position:absolute;right:0;top:0;width:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_mobile .fb_dialog_iframe{position:sticky;top:0}.fb_dialog_content .dialog_header{background:linear-gradient(from(#738aba), to(#2c4987));border-bottom:1px solid;border-color:#043b87;box-shadow:white 0 1px 1px -1px inset;color:#fff;font:bold 14px Helvetica, sans-serif;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:linear-gradient(from(#4267B2), to(#2a4887));background-clip:padding-box;border:1px solid #29487d;border-radius:3px;display:inline-block;line-height:18px;margin-top:3px;max-width:85px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{background:none;border:none;color:#fff;font:bold 12px Helvetica, sans-serif;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #4a4a4a;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f5f6f7;border:1px solid #4a4a4a;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-position:50% 50%;background-repeat:no-repeat;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
@@ -693,48 +699,9 @@ var eFrequencyPlannerYn = 'Y';
 									</header>
 									<article class="find_store_cont">
 										<header class="find_store_cont_header">
-											<p class="btn_opt_chk"><a href="javascript:void(0);">옵션 선택</a></p>
 											<span class="map_layer_toggle"><a href="javascript:void(0);" class="on">열기</a></span>
 										</header>
 										<article class="store_map_layer_cont" style="display: block;">
-											<header class="quick_search">
-												<h3 class="on"><a href="javascript:void(0);">퀵 검색</a></h3>
-											</header>
-											<article>
-												<div class="quick_search_input">
-													<div class="quick_search_inner">
-														<input placeholder="매장명 또는 주소" title="퀵 검색" type="text" name="quickSearchText" id="quickSearchText">
-														<a href="javascript:void(0);" class="quickSearchBtn">검색</a>
-													</div>
-												</div>
-												<div class="result_num_wrap myStoreInfo">
-													<!-- 검색결과 없는 경우 -->
-													<!--strong>검색 결과</strong>(<span class="en t_006633">0</span>개)-->
-													<!-- 검색결과 있는 경우 -->
-													<strong class="quickSearchResultCtn"></strong> (검색 결과 <span class="en t_006633 resultCtnNumberTab1"></span>개)<br>
-												</div>
-												<div class="result_list_wrap"">
-													<!-- 검색결과 없는 경우 -->
-													<!--p class="no_result">검색 결과가 없습니다.</p-->
-													<!-- 검색결과 있는 경우 -->
-													<div class="result_list scrollbar-inner quickScrollWrap mCustomScrollbar _mCS_1" style="height: 305px;">
-														<div id="mCSB_1" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside" tabindex="0">
-															<div id="mCSB_1_container" class="mCSB_container" style="position:relative; top:0; left:0;" dir="ltr">
-																<ul class="quickSearchResultBox">
-																</ul>
-															</div>
-														<div id="mCSB_1_scrollbar_vertical" class="mCSB_scrollTools mCSB_1_scrollbar mCS-light mCSB_scrollTools_vertical" style="display: block;">
-															<div class="mCSB_draggerContainer">
-																<div id="mCSB_1_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 30px; top: 0px; display: block; height: 254px; max-height: 544px;" oncontextmenu="return false;">
-																	<div class="mCSB_dragger_bar" style="line-height: 30px;"></div>
-																</div>
-															<div class="mCSB_draggerRail"></div>
-														</div>
-													</div>
-												</div>
-											</div>
-												</div>
-											</article>
 											<header class="loca_search">
 												<h3><a href="javascript:void(0);">지역 검색</a></h3>
 											</header>
@@ -806,6 +773,9 @@ var eFrequencyPlannerYn = 'Y';
 													</div>
 												</div>
 											</article>
+											<header class="quick_search">
+												<h3 class="on"><a href="javascript:void(0);">퀵 검색</a></h3>
+											</header>
 										</article>
 									</article>
 									<header class="find_road_header">
@@ -813,154 +783,9 @@ var eFrequencyPlannerYn = 'Y';
 									</header>
 									<article class="find_road_cont">
 										<header class="find_road_cont_header">
-											<p class="btn_daum_map">
-												<a href="javascript:void(0);" class="daumGoBtn" target="_blank">카카오맵</a> <!-- 20200819 수정 -->
-											</p>
+											<h3>현재 지원되지 않는 기능입니다.</h3>
 											<span class="road_layer_toggle"><a href="javascript:void(0);" class="daumFindParentToggle">열기</a></span>
 										</header>
-										<article class="road_map_layer_cont">
-										
-											<!-- 모바일 검색 들어갔을때 -->
-											<div class="after_search_input afterMobileSearchWrap" style="display:none">
-												<ul class="btn_after_search">
-													<li class="btn_after_search1 iv_sub_target" pid="car"><a class="on" href="javascript:void(0);"> <span class="a11y">자동차</span></a><!-- 접근성_20171127 span 추가 --></li>
-													<li class="btn_after_search2 iv_sub_target" pid="trasfer"><a href="javascript:void(0);"><span class="a11y">대중교통</span></a><!-- 접근성_20171127 span 추가 --></li>
-													<li class="btn_after_search3 iv_sub_target" pid="walk"><a href="javascript:void(0);"> <span class="a11y">도보</span></a><!-- 접근성_20171127 span 추가 --></li>
-												</ul>
-												<div class="after_search_input1">
-													<input id="initStartTxt" type="text" class="initViewerClass" readonly="" title="길찾기 출발지"><!-- 접근성_20171127 title 추가 -->
-													<p class="initViewerClass"></p>
-												</div>
-												<div class="after_search_input2">
-													<input id="initEndTxt" type="text" readonly="" title="길찾기 도착지"><!-- 접근성_20171127 title 추가 -->
-													<p class="initViewerClass"></p>
-												</div>
-											</div>
-											<!-- 모바일 검색 들어갔을때 end -->
-																					
-											<div class="road_map_layer_inner"> 
-												<div class="start_desti_input">
-													<dl>
-														<dt><label for="start">출발</label></dt>
-														<!-- 160926 DOM 위치 수정 -->
-														<dd>
-															<!-- 160921 앱에만 클래스:only_app 적용 -->
-															<span class="btn_my_loca"><a href="javascript:void(0);" class="road_find_current">현재위치</a></span>
-															<!-- 160921 앱에만 클래스:only_app 적용 end -->
-															<div class="road_map_input_wrap rmiw1">
-																<input id="start" placeholder="출발지 입력" type="text">
-																<p><a href="javascript:void(0);" id="start1">검색</a></p>
-															</div>
-															<div class="natural_lang_result_layer">
-																<ul>
-																	<li><a href="javascript:void(0);"><span>시청</span></a></li>
-																	<li><a href="javascript:void(0);"><span>시청</span>역</a></li>
-																	<li><a href="javascript:void(0);"><span>시청</span>역 1호선</a></li>
-																	<li><a href="javascript:void(0);"><span>시청</span>역 2호선</a></li>
-																	<li><a href="javascript:void(0);"><span>시청</span>자미디어센터</a></li>
-																	<li><a href="javascript:void(0);"><span>시청</span>역 맛집</a></li>
-																</ul>
-															</div>
-															
-														</dd>
-														<!-- 160926 DOM 위치 수정 -->
-													</dl>
-													<dl>
-														<dt><label for="destination">도착</label></dt>
-														<dd>
-															<div class="road_map_input_wrap rmiw2">
-																<input id="destination" placeholder="매장명 또는 주소" type="text">
-																<p><a href="javascript:void(0);" id="destination1">검색</a></p>
-															</div>
-															
-															<div class="natural_lang_result_layer">
-																<ul>
-																	<li><a href="javascript:void(0);"><span>시청</span></a></li>
-																	<li><a href="javascript:void(0);"><span>시청</span>역</a></li>
-																	<li><a href="javascript:void(0);"><span>시청</span>역 1호선</a></li>
-																	<li><a href="javascript:void(0);"><span>시청</span>역 2호선</a></li>
-																	<li><a href="javascript:void(0);"><span>시청</span>자미디어센터</a></li>
-																	<li><a href="javascript:void(0);"><span>시청</span>역 맛집</a></li>
-																</ul>
-															</div>
-														</dd>
-													</dl>
-												</div>
-												<section class="transfer_method_wrap">
-													<header class="transfer_method_tab1">
-														<h3><a class="road_find_btn roadFindStartBtn" data-target="car" href="javascript:void(0);">자동차</a></h3>
-													</header>
-													<article class="transfer_method_cont1 mCustomScrollbar _mCS_4 mCS_no_scrollbar"><div id="mCSB_4" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside" tabindex="0"><div id="mCSB_4_container" class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y" style="position:relative; top:0; left:0;" dir="ltr">
-														<div class="desti_top_wrap carFindRoad" style="display:none">
-															<strong class="desti_top_ttl car_find_endName">스타벅스 영풍문고점</strong>
-															<p class="desti_top_dist">
-																<span class="car_find_min"></span>&nbsp;&nbsp;<strong class="car_find_lengtn"></strong>km
-															</p>
-														</div>
-														
-														<div class="desti_top_wrap carFindRoadErr" style="display:none">
-															<p class="icon_exclam">직선거리가 <strong>30km</strong> 이내인 경우에 한하여 도보 찾기 결과를 제공합니다.</p>
-														</div>
-														
-																												
-														<dl class="bg_start_desti carFindRoad" style="display:none">
-															<dt>출발</dt>
-															<dd><p class="car_find_startName"></p></dd>
-														</dl>
-														<ul class="road_found_list">
-															
-														</ul>
-														<dl class="bg_start_desti carFindRoad" style="display:none">
-															<dt>도착</dt>
-															<dd><p class="car_find_endName"></p></dd>
-														</dl>
-													</div><div id="mCSB_4_scrollbar_vertical" class="mCSB_scrollTools mCSB_4_scrollbar mCS-light mCSB_scrollTools_vertical" style="display: none;"><div class="mCSB_draggerContainer"><div id="mCSB_4_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 30px; top: 0px;" oncontextmenu="return false;"><div class="mCSB_dragger_bar" style="line-height: 30px;"></div></div><div class="mCSB_draggerRail"></div></div></div></div></article>
-													<header class="transfer_method_tab2">
-														<h3><a class="road_find_btn roadFindStartBtn" data-target="transport" href="javascript:void(0);">대중교통</a></h3>
-													</header>
-													<article class="transfer_method_cont2 mCustomScrollbar _mCS_5 mCS_no_scrollbar" style="display: none;"><div id="mCSB_5" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside" tabindex="0"><div id="mCSB_5_container" class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y" style="position:relative; top:0; left:0;" dir="ltr">
-														<div class="desti_top_wrap 	carFindRoad" style="display:none">
-															<strong class="desti_top_ttl car_find_endName">스타벅스 영풍문고점</strong> 
-															<p class="desti_top_dist trafficViewInfo">전체:00 | 버스:00 | 지하철:00 | 버스+지하철:00</p>
-															<!--p class="desti_top_dist"><strong>8</strong>분&nbsp;&nbsp;<strong>1.7</strong>km</p-->
-														</div>
-														
-														<div class="desti_top_wrap carFindRoadErr" style="display:none">
-															<p class="icon_exclam">직선거리가 <strong>30km</strong> 이내인 경우에 한하여 도보 찾기 결과를 제공합니다.</p>
-														</div>														
-
-														<div class="trafficSummery">
-														</div>
-													</div><div id="mCSB_5_scrollbar_vertical" class="mCSB_scrollTools mCSB_5_scrollbar mCS-light mCSB_scrollTools_vertical" style="display: none;"><div class="mCSB_draggerContainer"><div id="mCSB_5_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 30px; top: 0px;" oncontextmenu="return false;"><div class="mCSB_dragger_bar" style="line-height: 30px;"></div></div><div class="mCSB_draggerRail"></div></div></div></div></article>
-													
-													
-													<header class="transfer_method_tab3">
-														<h3><a class="road_find_btn roadFindStartBtn" data-target="foot" href="javascript:void(0);">도보</a></h3>
-													</header>
-													<article class="transfer_method_cont3 mCustomScrollbar _mCS_6 mCS_no_scrollbar" style="display: none;"><div id="mCSB_6" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside" tabindex="0"><div id="mCSB_6_container" class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y" style="position:relative; top:0; left:0;" dir="ltr">
-														<div class="desti_top_wrap carFindRoad" style="display:none">
-															<strong class="desti_top_ttl foot_find_endName">스타벅스 영풍문고점</strong>
-															<p class="desti_top_dist"><span class="foot_find_min"></span>&nbsp;&nbsp;<strong class="foot_find_lengtn"></strong>km</p>
-														</div>
-														<div class="desti_top_wrap carFindRoadErr" style="display:none">
-															<p class="icon_exclam">직선거리가 <strong>30km</strong> 이내인 경우에 한하여 도보 찾기 결과를 제공합니다.</p>
-														</div>
-																												
-														<dl class="bg_start_desti carFindRoad" style="display:none">
-															<dt>출발</dt>
-															<dd><p class="foot_find_startName"></p></dd>
-														</dl>
-														<ul class="road_found_list">
-															
-														</ul>
-														<dl class="bg_start_desti carFindRoad" style="display:none">
-															<dt>도착</dt>
-															<dd><p class="foot_find_endName"></p></dd>
-														</dl>														
-													</div><div id="mCSB_6_scrollbar_vertical" class="mCSB_scrollTools mCSB_6_scrollbar mCS-light mCSB_scrollTools_vertical" style="display: none;"><div class="mCSB_draggerContainer"><div id="mCSB_6_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 30px; top: 0px;" oncontextmenu="return false;"><div class="mCSB_dragger_bar" style="line-height: 30px;"></div></div><div class="mCSB_draggerRail"></div></div></div></div></article>
-												</section>
-											</div>
-										</article>
 									</article>
 								</section>
 								<!-- 길찾기 수정 - 160422 end -->			

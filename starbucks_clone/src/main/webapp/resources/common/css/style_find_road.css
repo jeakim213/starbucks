@@ -94,7 +94,7 @@
 	.store_map_layer_cont header.quick_search,
 	.store_map_layer_cont header.loca_search { border-right:1px solid #ddd; }
 	.store_map_layer_cont header.quick_search { left:0; }
-	.store_map_layer_cont header.loca_search { left:50%; border-right:none; } /* 20210302 수정 */
+	.store_map_layer_cont header.loca_search { left:0; border-right:none; } /* 20210302 수정 */
 	.store_map_layer_cont header.my_store { left:66.9%; }
 	.store_map_layer_cont header h3 { background:#fff; border-bottom:1px solid #ddd; border-top:1px solid #ddd; height:38px; line-height:38px; text-align:center; width:100%; }
 	.store_map_layer_cont header h3 a { display:block; color:#444; font-size:12px; height:100%; width:100%; }

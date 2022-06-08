@@ -153,8 +153,8 @@ $(document).ready(function () {
     '						<div class="gnb_sub_inner">' +
     '							<ul>' +
     '								<li class="gnb_sub_ttl"><a href="/store/store_map">매장 찾기</a></li>' +
-    '								<li><a href="/store/store_map?disp=quick">퀵 검색</a></li>' +
-    '								<li><a href="/store/store_map?disp=locale">지역 검색</a></li>' +
+/*    '								<li><a href="/store/store_map?disp=quick">퀵 검색</a></li>' +
+    '								<li><a href="/store/store_map?disp=locale">지역 검색</a></li>' +*/
     '							</ul>' +
     '							<ul>' +
     '								<li class="gnb_sub_ttl"><a href="/store/store_drive">드라이브 스루 매장</a></li>' +
@@ -177,7 +177,7 @@ $(document).ready(function () {
     '					<div class="gnb_sub_txbg">' +
     '						<div class="gnb_sub_tx_inner">' +
     '							<div class="gnb_sub_tx_left">' +
-    '								<h3><a href="#">매장찾기</a></h3>' +
+    '								<h3><a href="/store/store_map">매장찾기</a></h3>' +
     '								<p class="gnb_sub_ex_txt">보다 빠르게 매장을 찾아보세요.</p>' +
 //    '								<h3><a href="/whats_new/newsView?cate=&seq=3572">이대R점 <img alt="" src="//image.istarbucks.co.kr/common/img/common/icon_gnb_new.png"></a></h3>' + 20210727 메뉴 비노출
 //    '								<p class="gnb_sub_ex_txt">1호점 특화 MD와 티바나 티, 최고의 리저브 커피를 만나보세요.</p>' + 20210727 메뉴 비노출
