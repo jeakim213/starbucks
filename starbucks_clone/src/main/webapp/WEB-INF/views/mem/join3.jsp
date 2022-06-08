@@ -754,6 +754,7 @@ var eFrequencyPlannerYn = 'Y';
 								</figure>
 								
 									
+
 										<a class="btn_detail" href="#" target="">자세히 보기</a>
 									
 									
@@ -2095,6 +2096,7 @@ var eFrequencyPlannerYn = 'Y';
 				}
 			);
 		} */
+
 		
 		function starCodePopup(){ //스타코드 팝업창
 			var dtPopHt = $("#starCodePopup.scPop").height();
