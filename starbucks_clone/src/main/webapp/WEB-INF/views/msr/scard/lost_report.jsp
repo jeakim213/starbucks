@@ -596,9 +596,7 @@ var eFrequencyPlannerYn = 'Y';
 	<li class="util_nav04"><a href="store/store_map">Find a Store</a></li>
 </ul>
 				</nav>
-				<p class="btn_search">
-					<a href="javascript:void(0);"><img alt="통합검색" src="../../common/img/common/icon_magnifier_black.png"></a>
-				</p>
+				
 				<a href="javascript:void(0);" class="rCup3_wrap" role="button" title="마이 리워드 레이어 열기"><!-- 접근성_20171201 class, role, title 추가 --><span class="rCup3"></span></a><!-- 150714 DOM 수정 - 떨어지는 메뉴 부분에 jsMovie 추가 -->
 			</div>
 			<nav class="sub_gnb_nav">

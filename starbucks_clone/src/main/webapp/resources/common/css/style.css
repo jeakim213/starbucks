@@ -169,12 +169,12 @@
     .gnb_wrap h1.logo { height:75px; position:absolute; width:75px; z-index:7; }
     .gnb_wrap h1.logo a { background:url("../img/common/logo.png"); display:block; height:100%; overflow:hidden; text-indent:-20000px; width:100%; }
 
-    .gnb_wrap nav.util_nav { background:url("../img/common/util_sep.png") no-repeat; height:20px; position:absolute; right:30px; top:15px; width:300px; }
+    .gnb_wrap nav.util_nav { background:url("../img/common/util_sep.png") no-repeat; height:20px; position:absolute; right:30px; top:15px; width:300px;}
     .gnb_wrap nav.util_nav ul li { float:left; height:20px; text-align:center; }
     .gnb_wrap nav.util_nav ul li a { color:#fff; display:block; font:normal 13px Avenir, Arial, georgia; line-height:20px; }
     .gnb_wrap nav.util_nav ul li.util_nav01 { width:76px; }
     .gnb_wrap nav.util_nav ul li.util_nav02 { margin-left:1px; width:107px; }
-    .gnb_wrap nav.util_nav ul li.util_nav03 { margin-left:1px; width:100px; }
+    .gnb_wrap nav.util_nav ul li.util_nav03 { margin-left:1px; width:76px; }
     .gnb_wrap nav.util_nav ul li.util_nav04 { margin-left:1px; width:97px; }
 
     .gnb_wrap p.btn_search { background:url("../img/common/icon_magnifier_white_bg.png"); border-radius:5px; height:34px; position:absolute; right:54px; top:9px; width:34px; }
@@ -764,7 +764,7 @@ table.vod_tb_ag tbody td:last-child{border-right:0}
     .gnb_wrap h1.logo { left:0; top:22px; }
     .gnb_wrap h1.logo a { background:url("../img/common/logo.png"); display:block; height:100%; overflow:hidden; text-indent:-20000px; width:100%; }
 
-    .gnb_wrap nav.util_nav { background:url("../img/common/util_sep.png") no-repeat; height:20px; position:absolute; right:30px; top:15px; width:300px; }
+    .gnb_wrap nav.util_nav { background:url("../img/common/util_sep.png") no-repeat; height:20px; position:absolute; right:0px; top:15px; width:400px; }
     .gnb_wrap nav.util_nav ul li { float:left; height:20px; text-align:center; }
     .gnb_wrap nav.util_nav ul li a { color:#fff; display:block; font:normal 13px Avenir, Arial, georgia; line-height:20px; }
     .gnb_wrap nav.util_nav ul li.util_nav01 { width:76px; }
@@ -830,7 +830,7 @@ table.vod_tb_ag tbody td:last-child{border-right:0}
     .sub_gnb_wrap_inner h1.logo { height:75px; top:22px; width:75px; z-index:12; } /* 150706 수정 */
 
     .sdown_gnb_wrap_inner nav.util_nav,
-    .sub_gnb_wrap_inner nav.util_nav { height:20px; right:93px; top:15px; width:464px; }
+    .sub_gnb_wrap_inner nav.util_nav { height:20px; right:0px; top:15px; width:400px; }
     .sdown_gnb_wrap_inner nav.util_nav ul li,
     .sub_gnb_wrap_inner nav.util_nav ul li { height:20px; }
     .sdown_gnb_wrap_inner nav.util_nav ul li a,
@@ -840,7 +840,7 @@ table.vod_tb_ag tbody td:last-child{border-right:0}
     .sdown_gnb_wrap_inner nav.util_nav ul li.util_nav02,
     .sub_gnb_wrap_inner nav.util_nav ul li.util_nav02 { margin-left:1px; width:107px; }
     .sdown_gnb_wrap_inner nav.util_nav ul li.util_nav03,
-    .sub_gnb_wrap_inner nav.util_nav ul li.util_nav03 { margin-left:1px; width:100px; }
+    .sub_gnb_wrap_inner nav.util_nav ul li.util_nav03 { margin-left:1px; width:76px; }
     .sdown_gnb_wrap_inner nav.util_nav ul li.util_nav04,
     .sub_gnb_wrap_inner nav.util_nav ul li.util_nav04 { margin-left:1px; width:97px; }
 
