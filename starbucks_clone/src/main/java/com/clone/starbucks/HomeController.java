@@ -157,6 +157,11 @@ public class HomeController {
 	}
 	
 	//mem
+	@RequestMapping(value="mem/join1")
+	public String join1() {
+		return "mem/join1";
+	}
+	
 	@RequestMapping(value="mem/join2")
 	public String join2() {
 		return "mem/join2";
@@ -768,22 +773,6 @@ public class HomeController {
 		JsonElement cate = obj.get(cate_cd);
 		result.add("cate", cate);
 		return result.toString();
-	}
-	
-	//mem
-	@RequestMapping(value="mem/join1")
-	public String join1() {
-		return "mem/join1";
-	}
-	
-	@RequestMapping(value="mem/join2")
-	public String join2() {
-		return "mem/join2";
-	}
-	
-	@RequestMapping(value="mem/join3")
-	public String join3() {
-		return "mem/join3";
 	}
 	
 }
