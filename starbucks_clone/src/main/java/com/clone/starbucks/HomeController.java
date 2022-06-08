@@ -707,18 +707,21 @@ public class HomeController {
 		String searchType = request.getParameter("searchType");
 		String sido_cd = request.getParameter("p_sido_cd");
 		String gugun_cd = request.getParameter("p_gugun_cd");
+		String T01 = request.getParameter("T01") == null ? "" : request.getParameter("T01");
+		String T03 = request.getParameter("T03") == null ? "" : request.getParameter("T03");
+		String T12 = request.getParameter("T12") == null ? "" : request.getParameter("T12");
 		String mappingPath = "";
 		//초기값 : isError:true , in_distance:5(보이는거리) //iend:10(보여줄 갯수?)
 		//이동 후 값 : isError:false, in_distance:1 //iend:20
 		//테마 : T01-드라이브스루 , T03-리저브, T12-커뮤니티. 값은 1일경우 ok
 		if(searchType.equals("A")) {
 			//검색x, 모두
-			if(request.getParameter("T01").equals("1"))
+			if(T01.equals("1"))
 				mappingPath = "upload/json/store/storelist/getStore_DT.json";
-			else if(request.getParameter("T03").equals("1"))
-				mappingPath = "upload/json/store/storelist/getStore_community.json";
-			else if(request.getParameter("T12").equals("1"))
+			else if(T03.equals("1"))
 				mappingPath = "upload/json/store/storelist/getStore_reserve.json";
+			else if(T12.equals("1"))
+				mappingPath = "upload/json/store/storelist/getStore_community.json";
 			else
 				mappingPath = "upload/json/store/storelist/getStore_all.json";
 		}else if(searchType.equals("B")) {

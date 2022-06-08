@@ -1779,7 +1779,6 @@ var eFrequencyPlannerYn = 'Y';
                 __ajaxCall(url, option , true, "JSON", "POST",
                 function(data) {
                     if(data.list.length > 0) {
-                    	console.log('확인'+"pro_SEQ".indexOf(data.list[1]));
                        // $('#tpl_serviceProductList').tmpl(data.list).appendTo($('#product_view_tab03 .product_list > dl > dd > ul'));
                         $('#tpl_serviceProductList').tmpl(data.list).appendTo($('.product_view_tab.product_view_tab02 .product_list > dl > dd > ul'));
                         $('a.goServiceView').unbind('click').bind('click', function() {

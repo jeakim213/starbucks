@@ -1731,7 +1731,7 @@ var eFrequencyPlannerYn = 'Y';
 	                        }
 	                    } else {
 	                    	if(cate_chk_stat) {
-                                if( $.trim($('#product_view_tab01 .product_list > dl > dd').eq(chk_idx - 1).find('ul')()) != "" ) {
+                                if( $.trim($('#product_view_tab01 .product_list > dl > dd').eq(chk_idx - 1).find('ul')) != "" ) {
 		                            $('#product_view_tab01 .product_list > dl > dt').eq(chk_idx - 1).show();
 		                            $('#product_view_tab01 .product_list > dl > dd').eq(chk_idx - 1).show();
 		
