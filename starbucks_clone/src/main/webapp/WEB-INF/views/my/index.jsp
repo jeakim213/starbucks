@@ -697,7 +697,8 @@ var eFrequencyPlannerYn = 'Y';
                             <!-- 일반회원정보 -->
                             <section class="regu_user_info regu_info_add"><!-- 20200129 class="regu_info_add" 추가 -->
                                 <article class="regu_user_info_center">
-                                    <p><strong class="userName">이*<!-- 홍길동 --></strong> 님 안녕하세요.<br><span>(지금 스타벅스 카드를 등록하시면 <span class="en">Starbucks Rewards</span> 혜택을 받으실 수 있습니다.)</span></p> <!-- 스타벅스 리워드 수정 -->
+                                	<!-- 이단 -->
+                                    <p><strong class="userName"><!-- 홍길동 --></strong> 님 안녕하세요.<br><span>(지금 스타벅스 카드를 등록하시면 <span class="en">Starbucks Rewards</span> 혜택을 받으실 수 있습니다.)</span></p> <!-- 스타벅스 리워드 수정 -->
                                     <!-- <a href="./myinfo_modify">개인정보 수정</a> -->
                                     <!-- 20160929 김민호 수정 -->
 									<a href="./myinfo_modify_login">개인정보 수정</a>
