@@ -815,7 +815,6 @@ var eFrequencyPlannerYn = 'Y';
 	
 	
 	<!-- 0602 다정 차트 스크립트 -->
-
 		<script src="../common/js/admin/highcharts.js"></script>
 		<script src="https://code.highcharts.com/highcharts-more.js"></script>
 		<script src="https://code.highcharts.com/modules/exporting.js"></script>
