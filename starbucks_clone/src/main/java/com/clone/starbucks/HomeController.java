@@ -3,8 +3,6 @@ package com.clone.starbucks;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 import java.util.Locale;
@@ -637,8 +635,9 @@ public class HomeController {
 	
 		return result.toString();
 	}
-	
-	@ResponseBody // step3. 스토어 리스트-지혜
+   
+   
+   @ResponseBody // step3. 스토어 리스트-지혜
 	@PostMapping(value = "upload/json/store/storelist/getStore", produces = "application/json; charset=UTF-8")
 	public String getStore(HttpServletRequest request) throws FileNotFoundException, IOException {
 		String searchType = request.getParameter("searchType");
@@ -661,15 +660,12 @@ public class HomeController {
 				mappingPath = "upload/json/store/storelist/getStore_community.json";
 			else
 				return "";
-		}else if(searchType.equals("B")) {
-			//검색o
-			String search_text = request.getParameter("search_text");
-			mappingPath = "search_text";
 		}else if(searchType.equals("C")) {
 			//검색x, 시.도
 			mappingPath = "upload/json/store/storelist/getStore_"+sido_cd+".json";
 		}else {
-			// D&E -> 즐겨찾기매장검색. 이용안함.
+			// B&D&E -> 즐겨찾기&매장검색. 이용안함.
+			return "";
 		}
 	   
 		ClassPathResource resource = new ClassPathResource(mappingPath);
