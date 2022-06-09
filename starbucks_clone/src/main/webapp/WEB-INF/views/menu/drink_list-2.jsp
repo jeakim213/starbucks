@@ -1797,7 +1797,7 @@ var eFrequencyPlannerYn = 'Y';
 
                 var option = {
                         'CATE_CD' : pro_seq 
-                        /* ,'THEME_SEARCH' : 'Y' */
+                        ,'THEME_SEARCH' : 'Y'
                 };
                 
                 var url = '/menu/productListAjax';

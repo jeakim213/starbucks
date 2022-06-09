@@ -664,17 +664,8 @@ var eFrequencyPlannerYn = 'Y';
 								<dt class="dt2"><a href="javascript:void(0)" id="themeTab" title="테마별 음료보기">테마</a><!-- 접근성_20171123 role, title 추가 --></dt>
 								<dd>
 									<ul class="service_bn">
-										
-										
-											
 												
 													<li><a href="javascript:void(0)" role="button"><img src="../upload/banner/themebnr/fs8Fa0_20220411135107927.jpg" alt="서머1 프로모션" data-sbseq="W0000415" style="width: 335px; height: 90px"></a></li>
-												
-												
-												
-											
-										
-										
 										
 									</ul>
 								</dd>
@@ -1061,6 +1052,7 @@ var eFrequencyPlannerYn = 'Y';
 								<dd>
 									<div class="product_list">
 										<dl>
+											<dt style="display:none;"></dt>
 											<dd>
 												<ul>
 												</ul>
@@ -1796,7 +1788,7 @@ var eFrequencyPlannerYn = 'Y';
 
                 var option = {
                         'CATE_CD' : pro_seq 
-                        /* ,'THEME_SEARCH' : 'Y' */
+                        ,'THEME_SEARCH' : 'Y'
                 };
                 
                 var url = '/menu/productListAjax';
@@ -1805,9 +1797,8 @@ var eFrequencyPlannerYn = 'Y';
                 __ajaxCall(url, option , true, "JSON", "POST",
                 function(data) {
                     if(data.list.length > 0) {                    	
-                        $('#tpl_serviceProductList').tmpl(data.list).appendTo($('.product_view_tab.product_view_tab02 .product_list > dl > dd > ul'));
-                                                
-                        $('a.goServiceView').unbind('click').bind('click', function() {
+                    	 $('#tpl_serviceProductList').tmpl(data.list).appendTo($('.product_view_tab.product_view_tab02 .product_list > dl > dd > ul'));
+                         $('a.goServiceView').unbind('click').bind('click', function() {
                             product_cd = $(this).attr('prod');
                             f_cate = $(this).attr('f_cate');
                             f = document.drinkListForm;
@@ -2127,7 +2118,7 @@ var eFrequencyPlannerYn = 'Y';
             <li>
                 <dl>
                     <dt>
-                        <a href="javascript:void(0)" class="goServiceView" prod="${product_CD}" f_cate="${f_CATE_CD}"><img src="${img_UPLOAD_PATH.replace("www", "image")}${file_PATH}" alt="${product_NM}"></a>
+                        <a href="javascript:void(0)" class="goServiceView" prod="\${product_CD}" f_cate="\${f_CATE_CD}"><img src="\${img_UPLOAD_PATH.replace("www", "image")}\${file_PATH}" alt="\${product_NM}"></a>
                     </dt>
                     <dd>\${product_NM}</dd>
                 </dl>
