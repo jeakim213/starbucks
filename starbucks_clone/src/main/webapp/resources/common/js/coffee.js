@@ -334,8 +334,7 @@ function getCoffeeList(pac, kind) {
           if (prCd != "") {
             form = document.pForm;
             form.PRODUCT_CD.value = prCd;
-            form.action = "/coffee/product_view.do";
-            form.submit();
+            form.action = "";
           }
         });
       }
@@ -372,8 +371,7 @@ function getFlavorList(pac) {
           if (prCd != "") {
             form = document.pForm;
             form.PRODUCT_CD.value = prCd;
-            form.action = "/coffee/product_view.do";
-            form.submit();
+            form.action = "";
           }
         });
       } else {
@@ -416,8 +414,7 @@ function getReserveList(pac, roast, search_selldate_yn) {
               if(prCd != "") {
                   form = document.pForm;
                   form.PRODUCT_CD.value = prCd;
-                  form.action = "/coffee/reserve_view.do";
-                  form.submit();
+                  form.action = "";
               }
           });
       });

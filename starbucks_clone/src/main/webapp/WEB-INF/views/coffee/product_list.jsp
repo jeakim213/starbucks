@@ -1,5 +1,6 @@
 ﻿<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="ko">
 
@@ -23,6 +24,9 @@
 <meta property="og:description" content="Starbucks">
 
 <title id="titleJoin">Starbucks Korea</title> <!-- 220117 수정 -->
+<script type="text/javascript" charset="utf-8">
+	sessionStorage.setItem("contextpath", "${pageContext.request.contextPath}");
+</script>
 <link rel="shortcut icon" href="../common/img/common/favicon.ico?v=200828" type="image/ico"> <!-- 20200827 파비콘 교체 및 CDN 변수처리 -->
 <link href="../common/css/reset.css" rel="stylesheet">
 <link href="../common/css/style.css?v=210721" rel="stylesheet">
@@ -658,73 +662,6 @@ var eFrequencyPlannerYn = 'Y';
 										</div>
 									</dd>
 									<!-- 1번 end -->
-
-									<!-- 2번 -->
-									<dt class="dt2"><a href="javascript:void(0)">스타벅스 비아</a></dt>
-									<dd class="dd2">
-										<div class="product_select_wrap">
-											<form action="" method="post">
-												<fieldset>
-													<legend class="hid">스타벅스 비아 카테고리 별 분류 보기</legend>
-													<ul>
-														<li><input type="checkbox" name="product02_all" id="product02_all" checked="checked"> <label for="product02_all">전체 상품보기</label></li>
-														<li><input type="checkbox" name="product02_blonde" id="product02_blonde"> <label for="product02_blonde">블론드 로스트</label></li>
-														<li><input type="checkbox" name="product02_medium" id="product02_medium"> <label for="product02_medium">미디엄 로스트</label></li>
-														<li><input type="checkbox" name="product02_dark" id="product02_dark"> <label for="product02_dark">다크 로스트</label></li>
-                                                        <li><input type="checkbox" name="product02_flavor" id="product02_flavor"> <label for="product02_flavor">플레이버</label></li>
-                                                        <li><input type="checkbox" name="product02_reserve_bean" id="product02_reserve_bean"> <label for="product02_reserve_bean">리저브 원두</label></li> <!-- 20210727 추가 -->
-														<!-- <li><input type="checkbox" name="product02_plane_latte" id="product02_plane_latte"> <label for="product02_plane_latte">플레인 라떼</label></li> 20210923 임시삭제 --><!-- 20210915 추가 -->
-														<li><input type="checkbox" name="product02_flavor_latte" id="product02_flavor_latte"> <label for="product02_flavor_latte">플레이버 라떼</label></li><!-- 20210915 추가 -->
-													</ul>
-												</fieldset>
-											</form>
-										</div>
-									</dd>
-									<!-- 2번 end -->
-
-									<!-- 3번 -->
-									<!-- <dt class="dt3"><a href="javascript:void(0)">스타벅스 오리가미</a></dt>
-									<dd class="dd3">
-										<div class="product_select_wrap">
-											<form action="" method="post">
-												<fieldset>
-													<legend class="hid">스타벅스 오리가미 카테고리 별 분류 보기</legend>
-													<ul>
-														<li><input type="checkbox" name="product03_all" id="product03_all" checked="checked"> <label for="product03_all">전체 상품보기</label></li>
-														<li><input type="checkbox" name="product03_blonde" id="product03_blonde"> <label for="product03_blonde">블론드 로스트</label></li>
-														<li><input type="checkbox" name="product03_medium" id="product03_medium"> <label for="product03_medium">미디엄 로스트</label></li>
-														<li><input type="checkbox" name="product03_dark" id="product03_dark"> <label for="product03_dark">다크 로스트</label></li>
-                                                        <li><input type="checkbox" name="product03_flavor" id="product03_flavor"> <label for="product03_flavor">플레이버</label></li>
-														<li><input type="checkbox" name="product03_reserve_bean" id="product03_reserve_bean"> <label for="product03_reserve_bean">리저브 원두</label></li>
-													</ul>
-												</fieldset>
-											</form>
-										</div>
-									</dd> -->
-									<!-- 3번 end -->
-									
-										<!-- 20210915 추가 -->
-									<dt class="dt3"><a href="javascript:void(0)">스타벅스앳홈 by 캡슐</a></dt>
-									<dd class="dd3">
-										<div class="product_select_wrap">
-											<form action="" method="post">
-												<fieldset>
-													<legend class="hid">스타벅스앳홈 by 캡슐 카테고리 별 분류 보기</legend>
-													<ul>
-														<li><input type="checkbox" name="product05_all" id="product05_all" checked="checked"> <label for="product05_all">전체 상품보기</label></li>
-														<li><input type="checkbox" name="product05_blonde" id="product05_blonde"> <label for="product05_blonde">블론드 로스트</label></li>
-														<li><input type="checkbox" name="product05_medium" id="product05_medium"> <label for="product05_medium">미디엄 로스트</label></li>
-														<li><input type="checkbox" name="product05_dark" id="product05_dark"> <label for="product05_dark">다크 로스트</label></li>
-                                                        <li><input type="checkbox" name="product05_flavor" id="product05_flavor"> <label for="product05_flavor">플레이버</label></li>
-														<li><input type="checkbox" name="product05_reserve_bean" id="product05_reserve_bean"> <label for="product05_reserve_bean">리저브 원두</label></li>
-														<!-- <li><input type="checkbox" name="product05_plane_latte" id="product05_plane_latte"> <label for="product05_plane_latte">플레인 라떼</label></li> 20210923 임시삭제 -->
-														<li><input type="checkbox" name="product05_flavor_latte" id="product05_flavor_latte"> <label for="product05_flavor_latte">플레이버 라떼</label></li>
-													</ul>
-												</fieldset>
-											</form>
-										</div>
-									</dd>
-									<!-- //20210915 추가 -->
 								</dl>
 							</div>
 						</div>
@@ -1525,10 +1462,10 @@ var eFrequencyPlannerYn = 'Y';
 			});
 		</script>
         <script type="text/x-jquery-tmpl" id="tpl_coffeeList">
-            <li class="coffeeDataSet" new="${newicon}" season="${beans_SEASON}" recomm="${recomm}" sold="${sold_OUT}">
+            <li class="coffeeDataSet" new="\${newicon}" season="\${beans_SEASON}" recomm="\${recomm}" sold="\${sold_OUT}">
                 <dl>
                     <dt>
-                        <a href="javascript:void(0)" prCd="${product_CD}" class="productDeImg"><img src="${img_UPLOAD_PATH.replace("www", "image")}${file_PATH}" alt="${product_NM}"></a>
+                        <a href="javascript:void(0)" prCd="\${product_CD}" class="productDeImg"><img src="\${img_UPLOAD_PATH.replace("www", "image")}\${file_PATH}" alt="\${product_NM}"></a>
                         {{if newicon == 'Y' || sold_OUT == '0' || beans_SEASON == '1' || recomm != '0'}}
                         <ul>
                             {{if newicon == 'Y'}}
@@ -1546,15 +1483,15 @@ var eFrequencyPlannerYn = 'Y';
                         </ul>
                         {{/if}}
                     </dt>
-                    <dd>${product_NM}</dd>
+                    <dd>\${product_NM}</dd>
                 </dl>
             </li>
         </script>
         <script type="text/x-jquery-tmpl" id="tpl_reserveCoffeeList">
-            <li class="coffeeDataSet" new="${newicon}" season="${beans_SEASON}" recomm="${recomm}" sold="${sold_OUT}">
+            <li class="coffeeDataSet" new="\${newicon}" season="\${beans_SEASON}" recomm="\${recomm}" sold="\${sold_OUT}">
                 <dl>
                     <dt>
-                        <a href="javascript:void(0)" prCd="${product_CD}" class="RproductDeImg"><img src="${img_UPLOAD_PATH.replace("www", "image")}${file_PATH}" alt="${product_NM}"></a>
+                        <a href="javascript:void(0)" prCd="\${product_CD}" class="RproductDeImg"><img src="\${img_UPLOAD_PATH.replace("www", "image")}\${file_PATH}" alt="\${product_NM}"></a>
                         {{if newicon == 'Y' || sold_OUT == '0' || beans_SEASON == '1' || recomm != '0'}}
                         <ul>
                             {{if newicon == 'Y'}}
@@ -1572,7 +1509,7 @@ var eFrequencyPlannerYn = 'Y';
                         </ul>
                         {{/if}}
                     </dt>
-                    <dd>${product_NM}</dd>
+                    <dd>\${product_NM}</dd>
                 </dl>
             </li>
         </script>

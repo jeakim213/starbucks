@@ -90,11 +90,11 @@
 	.road_layer_toggle a.on { background:url("../img/store/map_layer_arrow_d.png"); background-size:100% auto; }
 
 	.store_map_layer_cont { background: #fff; display:none; @height:551px; position:relative; width:300px; }
-	.store_map_layer_cont header { float:left; height:40px; position:absolute; top:0; width:50%; } /* 20210302 수정 */
+	.store_map_layer_cont header { float:left; height:40px; position:absolute; top:0; width:100%; } /* 20210302 수정 */ /*예은수정*/
 	.store_map_layer_cont header.quick_search,
 	.store_map_layer_cont header.loca_search { border-right:1px solid #ddd; }
 	.store_map_layer_cont header.quick_search { left:0; }
-	.store_map_layer_cont header.loca_search { left:50%; border-right:none; } /* 20210302 수정 */
+	.store_map_layer_cont header.loca_search { left:0; border-right:none; } /* 20210302 수정 */
 	.store_map_layer_cont header.my_store { left:66.9%; }
 	.store_map_layer_cont header h3 { background:#fff; border-bottom:1px solid #ddd; border-top:1px solid #ddd; height:38px; line-height:38px; text-align:center; width:100%; }
 	.store_map_layer_cont header h3 a { display:block; color:#444; font-size:12px; height:100%; width:100%; }
