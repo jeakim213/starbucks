@@ -589,16 +589,16 @@ var eFrequencyPlannerYn = 'Y';
 		<!-- 서브 gnb -->
 		<div class="sub_gnb_wrap">
 			<div class="sub_gnb_wrap_inner">
-				<h1 class="logo"><a href="index.htm" title="스타벅스 메인페이지">스타벅스 코리아</a><!-- 접근성_20171106 title 추가 --></h1>
+				<h1 class="logo"><a href="/starbucks" title="스타벅스 메인페이지">스타벅스 코리아</a><!-- 접근성_20171106 title 추가 --></h1>
 				<nav class="util_nav">
 					
 								
 <ul>
-	<li class="util_nav01 sign_out" style="display:none;"><a href="javascript:void(0);">Sign out</a></li>
-	<li class="util_nav01 sign_in"><a href="javascript:void(0);">Sign In</a></li>
-	<li class="util_nav02"><a href="my/index" required="login">My Starbucks</a></li>
-	<li class="util_nav03"><a href="menu/orderList">Order</a></li>
-	<li class="util_nav04"><a href="store/store_map">Find a Store</a></li>
+	<li class="util_nav01 sign_out" style="display:none;"><a href="/starbucks">Sign out</a></li>
+	<li class="util_nav01 sign_in"><a href="/starbucks/login/login">Sign In</a></li>
+	<li class="util_nav02"><a href="/starbucks/my/index" required="login">My Starbucks</a></li>
+	<li class="util_nav03"><a href="/starbucks/menu/orderList" required="login">Order</a></li>
+	<li class="util_nav04"><a href="/starbucks/store/store_map">Find a Store</a></li>
 </ul>
 				</nav>
 				<a href="javascript:void(0);" class="rCup3_wrap" role="button" title="마이 리워드 레이어 열기"><!-- 접근성_20171201 class, role, title 추가 --><span class="rCup3"></span></a><!-- 150714 DOM 수정 - 떨어지는 메뉴 부분에 jsMovie 추가 -->
@@ -618,9 +618,9 @@ var eFrequencyPlannerYn = 'Y';
 					<div class="sub_tit_inner">
 						<h2><img src="../common/img/coffee/espresso/doppio_ttl.jpg" alt="도피오"></h2>
 						<ul class="smap">
-							<li><a href="index.htm"><img src="../common/img/common/icon_home.png" alt="홈으로"></a></li>
+							<li><a href="/starbucks"><img src="../common/img/common/icon_home.png" alt="홈으로"></a></li>
 							<li><img class="arrow" src="../common/img/common/icon_arrow.png" alt="하위메뉴"></li>
-							<li class="en"><a href="espresso">COFFEE</a></li>
+							<li class="en"><a href="#">COFFEE</a></li>
 							<li><img class="arrow" src="../common/img/common/icon_arrow.png" alt="하위메뉴"></li>
 							<li><a href="espresso">에스프레소 음료</a></li>
 							<li><img class="arrow" src="../common/img/common/icon_arrow.png" alt="하위메뉴"></li>

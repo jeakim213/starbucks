@@ -17,6 +17,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -750,4 +751,10 @@ public class HomeController {
 		JsonObject obj = gson.fromJson(reader,JsonObject.class);
 		return obj.toString();
 	}
+	
+	//에러페이지 - 단
+	@RequestMapping("error_page")
+	   public String error_page() {
+	      return "error_page";
+	   }
 }
