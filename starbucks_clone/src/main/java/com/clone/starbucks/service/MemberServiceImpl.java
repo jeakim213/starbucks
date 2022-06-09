@@ -1,5 +1,4 @@
 package com.clone.starbucks.service;
 
-public class MemberServiceImpl {
-
-}
+	public class MemberServiceImpl implements IMemberService{
+	}

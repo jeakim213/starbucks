@@ -1,5 +1,8 @@
 package com.clone.starbucks.DAO;
 
-public interface IMemberDAO {
+import org.springframework.stereotype.Repository;
 
+
+@Repository
+public interface IMemberDAO {
 }

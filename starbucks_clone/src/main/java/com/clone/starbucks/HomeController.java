@@ -507,7 +507,7 @@ public class HomeController {
    @PostMapping(value = "**/interface/checkLogin", produces = "application/json; charset=UTF-8")
    public String checkLogin() {
       JsonObject obj = new JsonObject();
-      obj.addProperty("result_code", "SUCCESS");
+      obj.addProperty("result_code", "FAIL");
 //      {
 //          "result_code": "FAIL",
 //          "error_msg": "",
