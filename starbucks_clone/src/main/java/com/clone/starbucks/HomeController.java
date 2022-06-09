@@ -147,6 +147,14 @@ public class HomeController {
    public String productFinder() {
       return "coffee/productFinder";
    }
+   
+   @RequestMapping(value = "coffee/productFinderView")
+   public String productFinderView(String COFFEE_TASTE1, String COFFEE_FEEL, String COFFEE_INTEN, Model model) {
+	   model.addAttribute("COFFEE_TASTE1", COFFEE_TASTE1);
+	   model.addAttribute("COFFEE_FEEL", COFFEE_FEEL);
+	   model.addAttribute("COFFEE_INTEN", COFFEE_INTEN);
+	   return "coffee/productFinderView";
+   }
 
    // login
    @RequestMapping(value = "login/login")
@@ -692,22 +700,19 @@ public class HomeController {
 
 	}
 	
-	@ResponseBody // 나와 어울리는 커피 찾기 - 다정 Ajax
-	@PostMapping(value = "coffee/getCoffeeFinderAjax", produces = "application/json; charset=UTF-8")
+	@ResponseBody // 나와 어울리는 커피 찾기 - 지혜
+	@PostMapping(value = "coffee/getCoffeeChoice", produces = "application/json; charset=UTF-8")
 	public String getCoffeeFinder(HttpServletRequest request) throws FileNotFoundException, IOException {
 		//0606 다정
-		String COFFEE_TASTE1 = request.getParameter("COFFEE_TASTE1");
-		String COFFEE_FEEL = request.getParameter("COFFEE_FEEL");
-		String COFFEE_INTEN = request.getParameter("COFFEE_INTEN");
-		String cate_cd = request.getParameter(COFFEE_TASTE1+"-"+COFFEE_FEEL+"-"+COFFEE_INTEN);
-		String mappingPath = "upload/json/coffee/.json";
+		String coffee_cd = request.getParameter("COFFEE_TASTE1")+"-"+request.getParameter("COFFEE_FEEL")+"-"+request.getParameter("COFFEE_INTEN");
+		String mappingPath = "upload/json/coffee/getCoffeeChoice.json";
 		ClassPathResource resource = new ClassPathResource(mappingPath);
 		FileReader reader = new FileReader(resource.getFile());
 		Gson gson = new Gson();
 		JsonObject obj = gson.fromJson(reader, JsonObject.class);
 		JsonObject result = new JsonObject();
-		JsonElement cate = obj.get(cate_cd);
-		result.add("cate", cate);
+		JsonElement  coffee = obj.get(coffee_cd);
+		result.add("my", coffee);
 		return result.toString();
 	}
 	
