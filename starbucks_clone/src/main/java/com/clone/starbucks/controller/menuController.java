@@ -20,12 +20,6 @@ import com.google.gson.JsonObject;
 
 @Controller
 public class menuController {
-<<<<<<< HEAD
-	//menu
-
-	//ajax
-}
-=======
 
 	// menu
 	@RequestMapping(value = "menu/drink_list")
@@ -306,4 +300,3 @@ public class menuController {
 		return obj.toString();
 	}
 }
->>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
