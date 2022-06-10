@@ -9,11 +9,11 @@ $(document).ready(function () {
     '					<div class="gnb_sub">' +
     '						<div class="gnb_sub_inner">' +
     '							<ul>' +
-    '								<li class="gnb_sub_ttl"><a href="/starbucks/coffee/product_list.do">커피</a></li>' +
+    '								<li class="gnb_sub_ttl"><a href="/starbucks/coffee/product_list">커피</a></li>' +
     '								<li><a href="/starbucks/coffee/product_list">스타벅스 원두</a></li>' +
-    '								<li><a href="/starbucks/coffee/product_list?PACKAGE=01">스타벅스 비아</a></li>' +
+//    '								<li><a href="/starbucks/coffee/product_list?PACKAGE=01">스타벅스 비아</a></li>' +
 //    '								<li><a href="/starbucks/coffee/product_list?PACKAGE=02">스타벅스 오리가미</a></li>' + // 20210915 삭제
-    '								<li><a href="/starbucks/coffee/product_list?PACKAGE=05">스타벅스앳홈 by 캡슐</a></li>' + // 20210915 추가
+//    '								<li><a href="/starbucks/coffee/product_list?PACKAGE=05">스타벅스앳홈 by 캡슐</a></li>' + // 20210915 추가
     '							</ul>' +
     '							<ul>' +
     '								<li class="gnb_sub_ttl"><a href="/starbucks/coffee/productFinder">나와 어울리는 커피</a></li>' +
@@ -58,10 +58,10 @@ $(document).ready(function () {
     '					<div class="gnb_sub_txbg">' +
     '						<div class="gnb_sub_tx_inner">' +
     '							<div class="gnb_sub_tx_left">' +
-    '								<h3><a href="#">나와 어울리는 커피 찾기</a></h3>' +
+    '								<h3><a href="/starbucks/coffee/productFinder">나와 어울리는 커피 찾기</a></h3>' +
     '								<p class="gnb_sub_ex_txt">스타벅스가 여러분에게 어울리는 커피를 찾아드립니다.</p>' +
-    '								<h3><a href="#">최상의 커피를 즐기는 법</a></h3>' +
-    '								<p class="gnb_sub_ex_txt">여러가지 방법을 통해 다양한 풍미의 커피를 즐겨보세요.</p>' +
+//    '								<h3><a href="#">최상의 커피를 즐기는 법</a></h3>' +
+ //   '								<p class="gnb_sub_ex_txt">여러가지 방법을 통해 다양한 풍미의 커피를 즐겨보세요.</p>' +
     '							</div>' +
     '							<div class="gnb_sub_tx_right">' +
     '							</div>' +
@@ -133,8 +133,8 @@ $(document).ready(function () {
     '					<div class="gnb_sub_txbg">' +
     '						<div class="gnb_sub_tx_inner">' +
     '							<div class="gnb_sub_tx_left">' +
-    '								<h3><a href="#">나이트로 콜드 브루 <img alt="" src="//image.istarbucks.co.kr/common/img/common/icon_gnb_new.png"></a></h3>' +
-    '								<p class="gnb_sub_ex_txt">나이트로 커피 정통의 물결치듯 흘러내리는 캐스케이딩과 부드러운 크림을 경험하세요. </p>' +
+    //'								<h3><a href="#">나이트로 콜드 브루 <img alt="" src="//image.istarbucks.co.kr/common/img/common/icon_gnb_new.png"></a></h3>' +
+    //'								<p class="gnb_sub_ex_txt">나이트로 커피 정통의 물결치듯 흘러내리는 캐스케이딩과 부드러운 크림을 경험하세요. </p>' +
     //'								<h3><a href="/starbucks/wholecake/reserve_cake01">스타벅스 케익 온라인 예약</a></h3>' +
     //'								<p class="gnb_sub_ex_txt">기념하고 싶은 날. 스타벅스 케익이 더 특별한 하루를 만들어 드립니다.</p>' +
     '							</div>' +
@@ -265,7 +265,7 @@ $(document).ready(function () {
     '								<li class="gnb_sub_ttl"><a href="/starbucks/msr/sceGift/egift_information">스타벅스 e-Gift Card</a></li>' +
     '								<li><a href="/starbucks/msr/sceGift/egift_information">스타벅스 e-Gift Card 소개</a></li>' +
     '								<li><a href="/starbucks/msr/sceGift/msr_useguide">이용안내</a></li>' +
-    '								<li><a href="/starbucks/msr/sceGift/gift_step1" required="login">선물하기</a></li>' +
+    '								<li><a href="/starbucks/msr/sceGift/gift_step1" required="interface/checkLogin">선물하기</a></li>' +
     //'								<li><a href="/starbucks/community/faq.do?menu_cd=STB2703&cate=F22">자주 하는 질문</a></li>' + //20210809 수정
     '							</ul>' +
     '						</div>' +
@@ -349,7 +349,9 @@ if (!(typeof eFrequencyYn === 'undefined') && eFrequencyYn == 'Y') {
     '				</div>' +
     '			</li>' +*/
     '		</ul>';
-
+	$('.gnb_nav_inner, .sdown_gnb_nav_inner, .sub_gnb_nav_inner').append(function () {
+    $(this).html(gnb);
+  });
   var btnSearch = '<label for="totalSearch" class="a11y">통합검색</label><input id="totalSearch" placeholder="통합검색" type="text">';  // 접근성_20171106
   var searchInput = false;
 

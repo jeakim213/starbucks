@@ -264,10 +264,9 @@ public class menuController {
 		return strbuffer.toString();
 	}
 
-	@ResponseBody // 나만의 음료 찾기-지혜
+	@ResponseBody // 나만의 음료 고르기-지혜
 	@PostMapping(value = "menu/getMsrXoSkuList", produces = "application/json; charset=UTF-8")
 	public String getMsrXoSkuList(HttpServletRequest request) throws FileNotFoundException, IOException {
-//			"categoryCode"  : "etc"
 		String categoryCode = request.getParameter("categoryCode");
 		String mappingPath = "upload/json/menu/custom/" + categoryCode + ".json";
 		ClassPathResource resource = new ClassPathResource(mappingPath);
@@ -276,6 +275,7 @@ public class menuController {
 		JsonObject obj = gson.fromJson(reader, JsonObject.class);
 		return obj.toString();
 	}
+	
 	
 	@ResponseBody // 나만의 음료 등록하기-지혜
 	@PostMapping(value = "menu/setMsrXoMyMenuRegister", produces = "application/json; charset=UTF-8")

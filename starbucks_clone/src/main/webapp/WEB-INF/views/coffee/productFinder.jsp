@@ -632,7 +632,7 @@ var eFrequencyPlannerYn = 'Y';
 					<div class="findWrap">
 						<div class="find_frame">
 							<div class="find_section find_section1">
-								<p class="find_con find_con01"><img alt="1. 어떤 풍미에 가장 끌리세요? 가장 좋아하는 음식을 생각해보세요. 그 음식의 어떤 풍미와 재료에 끌리나요?" src="../common/img//taste_find_ttl1.png"></p>
+								<p class="find_con find_con01"><img alt="1. 어떤 풍미에 가장 끌리세요? 가장 좋아하는 음식을 생각해보세요. 그 음식의 어떤 풍미와 재료에 끌리나요?" src="../common/img/coffee/taste_find_ttl1.png"></p>
 								<ul class="find_taste find_taste01">
 									<li class="ft_t01">
 										<dl>
