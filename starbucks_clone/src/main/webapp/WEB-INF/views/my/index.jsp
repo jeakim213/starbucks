@@ -704,25 +704,6 @@ var eFrequencyPlannerYn = 'Y';
 									<a href="./myinfo_modify_login">개인정보 수정</a>
 									<a class="gray" href="./myinfo_modify_pwd">비밀번호 변경</a>
 									<!-- 20160929 김민호 수정 end -->
-                                    
-                                </article>
-                                <article class="regu_user_info_right">
-                                    <div class="regu_user_info_rt">
-                                        <a href="whats_new/store_event_list?tab=2">
-                                            <p class="icon_new_store"></p>
-                                            <p class="icon_new_store_txt">신규 매장<br><strong>오픈 이벤트</strong></p>
-                                            <p class="icon_new_store_mtxt">신규 매장 <strong>오픈 이벤트</strong></p>
-                                            <span class="regu_next_arrow"></span>
-                                        </a>
-                                    </div>
-                                    <div class="regu_user_info_rb">
-                                        <a href="whats_new/campaign_list">
-                                            <p class="icon_evt_cup"></p>
-                                            <p class="icon_evt_cup_txt">스타벅스<br><strong>전체 이벤트</strong></p>
-                                            <p class="icon_evt_cup_mtxt">스타벅스 <strong>전체 이벤트</strong></p>
-                                            <span class="regu_next_arrow"></span>
-                                        </a>
-                                    </div>
                                 </article>
                             </section>
                             <!-- 일반회원정보 end -->
@@ -804,14 +785,10 @@ var eFrequencyPlannerYn = 'Y';
                                             <strong>카드충전</strong>
                                         </a>
                                     </div>
-                                    <div class="regu_mem_icon_wrap">
-                                        <a class="regu_mem_icon1" href="javascript:void(0);" required="login" data-href="javascript:void(0);">
+                                    <div class="regu_mem_icon_wrap" >
+                                        <a class="regu_mem_icon1"  href="javascript:void(0);" required="login" data-href="javascript:void(0);">
                                             <span class="regu_icon"></span> <!-- 20210302 수정 -->
                                             <span class="regu_txt">전자영수증</span> <!-- 20210302 수정 -->
-                                        </a>
-                                        <a class="regu_mem_icon2" href="javascript:void(0);" required="login" data-href="javascript:void(0);">
-                                            <span class="regu_icon"></span>
-                                            <span class="regu_txt">캘린더</span>
                                         </a>
                                         <a class="regu_mem_icon3" href="javascript:void(0);" required="login" data-href="javascript:void(0);">
                                             <span class="regu_icon"><i>0</i></span>
@@ -1093,23 +1070,10 @@ var eFrequencyPlannerYn = 'Y';
 				<li><a href="my/ecoupon?t=USE">· 사용하기</a></li>
 			</ul>
 		</li>
-		<li class="msRnb_btn"><a href="javascript:void(0);" required="login" data-href="my/calendar">My 캘린더</a></li>
 		<!-- <li class="msRnb_btn"><a href="my/drink_shop" required="login">My 음료/매장</a></li> -->
 		<li class="msRnb_btn"><a href="javascript:void(0);" required="login" data-href="my/my_menu">My 메뉴</a></li>
 		
 		 
-		<li>
-			<a href="javascript:void(0);">My e-프리퀀시<span class="sbox_arrow_down"></span></a>
-			<ul>
-				<li><a href="eFreq/guide?promoSeq=172">· 이용안내</a></li>
-				<li><a href="javascript:void(0);" required="login" data-href="eFreq/status?promoSeq=172">· 이용현황</a></li>
-			</ul>
-		</li>
-		
-		
-		<li>
-			<a href="javascript:void(0);" required="login" data-href="my/vocList">My 고객의 소리</a>
-		</li>
 		<!-- <li class="msRnb_btn"><a href="my/order_status_list" required="login">케익 주문 현황</a></li> -->
 		<li class="msRnb_btn"><a href="javascript:void(0);" required="login" data-href="my/eReceiptList">전자영수증</a></li>
 		<li class="msRnb_btn"><a href="javascript:void(0);" onclick="fn_rewardTumblerMsrCheck();">개인컵 리워드 설정</a></li>
