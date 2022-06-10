@@ -265,19 +265,18 @@ public class menuController {
 	}
 
 	@ResponseBody // 나만의 음료 찾기-지혜
-	@PostMapping(value = "menu/getMsrXoCategoryList", produces = "application/json; charset=UTF-8")
-	public String getMsrXoCategoryList(HttpServletRequest request) throws FileNotFoundException, IOException {
-//			"categoryType" : "01",
-//			"allSearchYn"  : "N"
-		String product_cd = request.getParameter("product_cd");
-//			String mappingPath = "upload/json/menu/detail/.json";
-//			ClassPathResource resource = new ClassPathResource(mappingPath);
-//			FileReader reader = new FileReader(resource.getFile());
-//			Gson gson = new Gson();
-//			JsonObject obj = gson.fromJson(reader, JsonObject.class);
-		return "";
+	@PostMapping(value = "menu/getMsrXoSkuList", produces = "application/json; charset=UTF-8")
+	public String getMsrXoSkuList(HttpServletRequest request) throws FileNotFoundException, IOException {
+//			"categoryCode"  : "etc"
+		String categoryCode = request.getParameter("categoryCode");
+		String mappingPath = "upload/json/menu/custom/" + categoryCode + ".json";
+		ClassPathResource resource = new ClassPathResource(mappingPath);
+		FileReader reader = new FileReader(resource.getFile());
+		Gson gson = new Gson();
+		JsonObject obj = gson.fromJson(reader, JsonObject.class);
+		return obj.toString();
 	}
-
+	
 	@ResponseBody // 나만의 음료 등록하기-지혜
 	@PostMapping(value = "menu/setMsrXoMyMenuRegister", produces = "application/json; charset=UTF-8")
 	public String setMsrXoMyMenuRegister(HttpServletRequest request) throws FileNotFoundException, IOException {

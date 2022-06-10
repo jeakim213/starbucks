@@ -687,7 +687,7 @@ var eFrequencyPlannerYn = 'Y';
 								<p class="more_btn"><a href="javascript:void(0)" tabindex="-1" aria-hidden="true" role="presentation"><img src="//image.istarbucks.co.kr/common/img/menu/more.png" alt="상세이미지"></a><!-- 접근성_20171123 alt 추가 --></p>
 							</div>
 							<div class="product_thum_wrap" id="product_thum_wrap">
-								<ul class="product_thum"><li><a href="javascript:void(0)" data-image="https://image.istarbucks.co.kr/upload/store/skuimg/2022/04/[9200000003988]_20220406113215431.jpg" data-zoom-image="https://image.istarbucks.co.kr/upload/store/skuimg/2022/04/[9200000003988]_20220406113215431.jpg" class="elevatezoom-gallery active"><img src="<!-- https://image.istarbucks.co.kr/upload/store/skuimg/2022/04/[9200000003988]_20220406113215431.jpg -->" alt="상세이미지 1번"></a></li></ul>
+								<ul class="product_thum"><li><a href="javascript:void(0)" data-image="" data-zoom-image="" class="elevatezoom-gallery active"><img src="" alt="상세이미지 1번"></a></li></ul>
 							</div>
 						</div>
 						<div class="product_view_detail">
@@ -700,7 +700,7 @@ var eFrequencyPlannerYn = 'Y';
 							</div>
                             <div class="m_view_slide">
                                 <div class="bx-wrapper" style="max-width: 100%;"><div class="bx-viewport" style="width: 100%; overflow: hidden; position: relative; height: 0px;"><ul class="m_view_slider" style="width: auto; position: relative;">
-                                <li style="float: none; list-style: none; position: absolute; width: 100px; z-index: 50; display: block;"><img class="m_view_img" src="https://image.istarbucks.co.kr/upload/store/skuimg/2022/04/[9200000003988]_20220406113215431.jpg" data-zoom-image="https://image.istarbucks.co.kr/upload/store/skuimg/2022/04/[9200000003988]_20220406113215431.jpg" alt=""></li></ul></div><div class="bx-controls bx-has-controls-direction"><div class="bx-controls-direction"><a class="bx-prev disabled" href="">Prev</a><a class="bx-next disabled" href="">Next</a></div></div></div>
+                                <li style="float: none; list-style: none; position: absolute; width: 100px; z-index: 50; display: block;"><img class="m_view_img" src="" data-zoom-image="" alt=""></li></ul></div><div class="bx-controls bx-has-controls-direction"><div class="bx-controls-direction"><a class="bx-prev disabled" href="">Prev</a><a class="bx-next disabled" href="">Next</a></div></div></div>
                                 <div class="m_view_controller" style="display: none;">
                                     <div class="m_view_controls"></div>
                                     <div class="m_view_pagers"><div class="bx-pager bx-default-pager"><div class="bx-pager-item"><a href="" data-slide-index="0" class="bx-pager-link active">1</a></div></div></div>
@@ -1837,11 +1837,12 @@ var eFrequencyPlannerYn = 'Y';
     
 <script>
 	var m_jsonMenuList    = null;
-	var m_nMenuListIdx    = null;
+	var product_cd    = null;
 	var m_arrCstSkuList   = new Array();
 	var m_arrPsOptCstList = new Array();
 	var m_title = null;
-
+	var product_cd = '${product_cd}';
+	
 	$(document).ready(function () {
 		
 		// [나만의 음료로 등록]
@@ -1850,7 +1851,9 @@ var eFrequencyPlannerYn = 'Y';
        			,function (_response) {
        				if (_response.result_code == "SUCCESS") {
        					var drink_title = $('.smap .cate').text();
-       					showPopMyDrink(drink_title);
+       					showSkuList(drink_title); //목록만들기
+       					goMyDrinkStep2(drink_title);//바로2단계 -지혜
+       					$(".my_drink_step2").show();
        				} else {
        					alert("로그인이 필요한 기능 입니다.");
        					
@@ -1866,12 +1869,13 @@ var eFrequencyPlannerYn = 'Y';
        	// [닫기]
        	$(".btn_close").on("click", hidePopMyDrink);
        		
-       	// 분류 보기 클릭 시
+       	/* // 분류 보기 클릭 시
        	$(document).on("click change", '[name="my_kind"]', showSkuList);// 접근성_20171123 change event listener 추가
-       	
-       	// SKU 클릭 시
+       	 */
+       	 
+       	/* // SKU 클릭 시
        	$(document).on("click", '.btn_go_my_drink_step2', goMyDrinkStep2);
-       	
+ */       	
        	// 대표 SKU HOT/ICE 선택 시
        	$(document).on("change", '#delegateHotYn', function () {
        		var hotYn = $(this).val();
@@ -1931,9 +1935,9 @@ var eFrequencyPlannerYn = 'Y';
 	});
        	
 	// "나만의 음료로 등록" 팝업 출력
-    function showPopMyDrink(_drink_title) { //종류
+    /* function showPopMyDrink(_drink_title) { //카테고리
     	m_jsonMenuList    = null;
-    	m_nMenuListIdx    = null;
+    	product_cd    = null;
     	m_arrCstSkuList   = new Array();
     	m_arrPsOptCstList = new Array();
 		
@@ -1979,7 +1983,7 @@ var eFrequencyPlannerYn = 'Y';
        			}
 			}
 		);
-	}
+	} */
     
 	// "나만의 음료로 등록" 팝업 닫기
 	function hidePopMyDrink() {
@@ -1987,44 +1991,38 @@ var eFrequencyPlannerYn = 'Y';
 		$(".myDrink > a").focus(); // 접근성_20171123 focus 이동 추가
 	}
 	
-	// 카테고리별 SKU 목록 조회
-	function showSkuList() {
-		var drink_title = $('[name="my_kind"]:checked').next().text();	// 현재 선택 카테고리명
-		$(".drink_tit").text(drink_title);
-				
-		var gbn          = "A";
-		var categoryCode = $('[name="my_kind"]:checked').val();
-      		
-		if (categoryCode != "") {
-			gbn = "C";
+	 // 카테고리별 SKU 목록 조회 - 지혜
+	function showSkuList(drink_title) {
+		var categoryCode = "";
+		if(drink_title == "콜드 브루"){
+			categoryCode = "ColdBrew";
+		}else if(drink_title == "브루드 커피"){
+			categoryCode = "Brewed";
+		}else if(drink_title == "에스프레소"){
+			categoryCode = "Espresso";
+		}else if(drink_title == "프라푸치노"){
+			categoryCode = "Frappuccino";
+		}else if(drink_title == "블렌디드"){
+			categoryCode = "Blended";
+		}else if(drink_title == "스타벅스 피지오"){
+			categoryCode = "Fizzio";
+		}else if(drink_title == "티"){
+			categoryCode = "Tea";
+		}else if(drink_title == "기타 제조 음료"){
+			categoryCode = "etc";
 		}
-      		
+			
 		var objParam = {
-			 "gbn"          : gbn
-			,"categoryCode" : categoryCode 
+			"categoryCode" : categoryCode 
 		};
       		
-		___ajaxCall("menu/getMsrXoSkuList", objParam, false, "json", "post"
+		___ajaxCall("${pageContext.request.contextPath}/menu/getMsrXoSkuList", objParam, false, "json", "post"
 			,function(_response) {
-				if (_response.result_code == "SUCCESS") {
-					var jsonData = jQuery.parseJSON(_response.data);
-
-					m_jsonMenuList = jsonData.menuList;
-					
+				if (_response.result_code == "SUCCESS") {//없는 메뉴의 경우 처리중 오류 발생 문구 -지혜
+					//var jsonData = JSON.parse(_response.data);
+					list = _response.data;
+					m_jsonMenuList = list.menuList;
 					if (m_jsonMenuList.length > 0) {
-						$(".drink_area").empty();
-						
-						var nMenuListIdx = 0;
-						
-						$("#menuList").tmpl(m_jsonMenuList, {
-							 getMenuListIdx1 : function () {
-								return nMenuListIdx;
-							}
-							,getMenuListIdx2 : function () {
-								return nMenuListIdx++;
-							}
-						}).appendTo(".drink_area");
-						
 						// 커스텀스크롤 업데이트
 						$('.only_my_drink div.my_drink_sel').mCustomScrollbar("update");
 					}	
@@ -2033,14 +2031,41 @@ var eFrequencyPlannerYn = 'Y';
 		);
 	}
 	
-	function goMyDrinkStep2() {
-		m_nMenuListIdx = $(this).data("idx");
-		
-		var objMenuList    = m_jsonMenuList[m_nMenuListIdx];
+	function goMyDrinkStep2(drink_title) {
+		if(drink_title == '에스프레소'){ //아이스 -> 핫 변환
+			if(product_cd == '128695') product_cd == '128692';
+			else if(product_cd == '110566') product_cd == '46';
+			else if(product_cd == '110563') product_cd == '94';
+			else if(product_cd == '110569') product_cd == '41';
+			else if(product_cd == '110601') product_cd == '38';
+			else if(product_cd == '110582') product_cd == '126197';
+			else if(product_cd == '110572') product_cd == '128192';
+		}else if(drink_title == '기타 제조 음료'){
+			if(product_cd == '110621') product_cd == '72';
+			else if(product_cd == '9200000001302') product_cd == '9200000001301';
+			else if(product_cd == '9200000003658') product_cd == '9200000002594';
+		}else if(drink_title == '티'){
+			if(product_cd == '9200000002966') product_cd == '9200000002963';
+			else if(product_cd == '9200000002959') product_cd == '9200000002956';
+			else if(product_cd == '9200000002499') product_cd == '9200000002496';
+			else if(product_cd == '135612') product_cd == '135608';
+			else if(product_cd == '9200000000190') product_cd == '9200000000187';
+			else if(product_cd == '400400000094') product_cd == '400400000091';
+			else if(product_cd == '4004000000019') product_cd == '4004000000016';
+			else if(product_cd == '4004000000039') product_cd == '4004000000036';
+			else if(product_cd == '9200000000229') product_cd == '9200000000226';
+			else if(product_cd == '4004000000069') product_cd == '4004000000066';
+			else if(product_cd == '4004000000059') product_cd == '4004000000056';
+			else if(product_cd == '4004000000079') product_cd == '4004000000076';
+			else if(product_cd == '9200000003249') product_cd == '9200000003248';
+			else if(product_cd == '9200000004117') product_cd == '9200000004116';
+			else if(product_cd == '9200000003234') product_cd == '9200000003233';
+		}
+		var objMenuList    = m_jsonMenuList[product_cd]; //m_jsonMenuList[product_cd]
 		var objDelegateSku = objMenuList.delegateSku;
 		m_title = objDelegateSku.skuName;
 		$(".my_sel_drink .skuImgUrl").attr("src", objDelegateSku.skuImgUrl);											// 대표 SKU 이미지
-		$(".my_sel_drink .t1")(objDelegateSku.skuName + "<br /><span>" + objDelegateSku.engSkuName + "</span>");	// 대표 SKU 명
+		$(".my_sel_drink .t1").append(objDelegateSku.skuName + "<br /><span>" + objDelegateSku.engSkuName + "</span>");	// 대표 SKU 명
 		
 		$("#delegateHotYn").empty();
 		
@@ -2059,9 +2084,9 @@ var eFrequencyPlannerYn = 'Y';
 	
 	// 대표 SKU 사이즈 선택영역 초기화
 	function initSelectDelegateSkuSize(_hotYn) {
-		var arrSkuList = m_jsonMenuList[m_nMenuListIdx].hotSku.hotSkuList;
+		var arrSkuList = m_jsonMenuList[product_cd].hotSku.hotSkuList;
 		if (_hotYn == "N") {
-			var arrSkuList = m_jsonMenuList[m_nMenuListIdx].icedSku.icedSkuList;
+			var arrSkuList = m_jsonMenuList[product_cd].icedSku.icedSkuList;
 		}
 		
 		$("#delegateSize").empty();
@@ -2093,9 +2118,9 @@ var eFrequencyPlannerYn = 'Y';
 	
 	// 컵 구분 선택영역 초기화
 	function initSelectCupType(_hotYn) {
-		var objSku = m_jsonMenuList[m_nMenuListIdx].hotSku;
+		var objSku = m_jsonMenuList[product_cd].hotSku;
 		if (_hotYn == "N") {
-			var objSku = m_jsonMenuList[m_nMenuListIdx].icedSku;
+			var objSku = m_jsonMenuList[product_cd].icedSku;
 		}
 		
 		$("#cupType")
@@ -2111,9 +2136,9 @@ var eFrequencyPlannerYn = 'Y';
 	
 	// 퍼스널 옵션 추가 가능 여부
 	function toggleBtnPersonalOption(_hotYn) {
-		var objSku = m_jsonMenuList[m_nMenuListIdx].hotSku;
+		var objSku = m_jsonMenuList[product_cd].hotSku;
 		if (_hotYn == "N") {
-			var objSku = m_jsonMenuList[m_nMenuListIdx].icedSku;
+			var objSku = m_jsonMenuList[product_cd].icedSku;
 		}
 		
 		$(".btn_ps_opt").hide();
@@ -2132,7 +2157,7 @@ var eFrequencyPlannerYn = 'Y';
 			return;
 		}
 		
-		var objDelegateSku = m_jsonMenuList[m_nMenuListIdx].delegateSku;
+		var objDelegateSku = m_jsonMenuList[product_cd].delegateSku;
 		
 		var objParam = {
 			"skuNo" : objDelegateSku.skuNo
@@ -2193,7 +2218,7 @@ var eFrequencyPlannerYn = 'Y';
 				var row = this.data.stdRecipeList[i];
 				
 				var objParam = {
-					 "skuNo"        : $("#delegateSize > option:selected").data("skuno") //m_jsonMenuList[m_nMenuListIdx].delegateSku.skuNo
+					 "skuNo"        : $("#delegateSize > option:selected").data("skuno") //m_jsonMenuList[product_cd].delegateSku.skuNo
 					,"categoryCode" : row.parentCategoryCode
 				};
 
@@ -2226,7 +2251,7 @@ var eFrequencyPlannerYn = 'Y';
 		var html = "";
 		
 		var objParam = {
-			 "skuNo"        : $("#delegateSize > option:selected").data("skuno") //m_jsonMenuList[m_nMenuListIdx].delegateSku.skuNo
+			 "skuNo"        : $("#delegateSize > option:selected").data("skuno") //m_jsonMenuList[product_cd].delegateSku.skuNo
 			,"categoryCode" : this.data.categoryCode
 		};
 		
@@ -2563,7 +2588,7 @@ var eFrequencyPlannerYn = 'Y';
 		var qty = 1;
 		
 		// 1) 온도
-		if (m_jsonMenuList[m_nMenuListIdx].delegateSku.hotIcedOnlyYn == "N"
+		if (m_jsonMenuList[product_cd].delegateSku.hotIcedOnlyYn == "N"
 				&& $("#delegateHotYn").val() == "N") {
 			cName_ice = "ICE ";
 		}
@@ -2664,7 +2689,7 @@ var eFrequencyPlannerYn = 'Y';
 		})
 		
 		// 3) 사이즈명
-		var skuNo = m_jsonMenuList[m_nMenuListIdx].delegateSku.skuNo;
+		var skuNo = m_jsonMenuList[product_cd].delegateSku.skuNo;
 		var bIsEspresso = isEspresso(skuNo); 
 
 		if (bIsEspresso == false) {
@@ -2747,7 +2772,7 @@ var eFrequencyPlannerYn = 'Y';
 			callingName += arrCallingName[i];
 		}
 		
-		return callingName + cName_shot_no_coffee + m_jsonMenuList[m_nMenuListIdx].delegateSku.skuName;
+		return callingName + cName_shot_no_coffee + m_jsonMenuList[product_cd].delegateSku.skuName;
 	}
 	
 	function isEspresso(_skuNo) {
@@ -2781,7 +2806,7 @@ var eFrequencyPlannerYn = 'Y';
 	function myMenuRegister() {
 		var registerType   = "F";
 		var categoryType   = "01";
-		//var delegateSku    = m_jsonMenuList[m_nMenuListIdx].delegateSku.skuNo;
+		//var delegateSku    = m_jsonMenuList[product_cd].delegateSku.skuNo;
 		var delegateSku    = $("#delegateSize > option:selected").data("skuno");
 		var nickname       = $("#nickname").val();
 		

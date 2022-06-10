@@ -1715,7 +1715,7 @@ var eFrequencyPlannerYn = 'Y';
 			
 			$(document).ready(function(){
 				
-				__ajaxCall("interface/checkLogin", {}, true, "json", "post"
+				__ajaxCall("${pageContext.request.contextPath}/interface/checkLogin", {}, true, "json", "post"
 						,function (_response) {
 							if (_response.result_code == "SUCCESS") {
 								$(".top_msr_wrap").show();

@@ -265,7 +265,7 @@ $(document).ready(function () {
     '								<li class="gnb_sub_ttl"><a href="/msr/sceGift/egift_information">스타벅스 e-Gift Card</a></li>' +
     '								<li><a href="/msr/sceGift/egift_information">스타벅스 e-Gift Card 소개</a></li>' +
     '								<li><a href="/msr/sceGift/msr_useguide">이용안내</a></li>' +
-    '								<li><a href="/msr/sceGift/gift_step1" required="login">선물하기</a></li>' +
+    '								<li><a href="/msr/sceGift/gift_step1" required="interface/checkLogi">선물하기</a></li>' +
     //'								<li><a href="/community/faq.do?menu_cd=STB2703&cate=F22">자주 하는 질문</a></li>' + //20210809 수정
     '							</ul>' +
     '						</div>' +
@@ -350,75 +350,6 @@ if (!(typeof eFrequencyYn === 'undefined') && eFrequencyYn == 'Y') {
     '			</li>' +*/
     '		</ul>';
 
-  $('.gnb_nav_inner, .sdown_gnb_nav_inner, .sub_gnb_nav_inner').append(function () {
-    $(this).html(gnb);
-    setTimeout(function () {
-      var optionMenu = {
-        'MENU_CD': "STB3110"
-      };
-		    //__ajaxCall('/banner/getBannerList.do', optionMenu , true, "JSON", "POST", 
-		    __ajaxCall('/app/coffee/getBannerList_STB3110.do', optionMenu , true, "JSON", "POST", 
-		    function(data) {
-		        if(data.list.length > 0) {
-		        	
-		            $.each( data.list, function(x, y) {
-		                tmpStr = "";
-		                m_tmpStr = "";
-		                tmpTarget = "";
-		                m_tmpTarget = "";
-		                tmpRequired = "";
-
-		                
-				        tmpStr += '<div class="gnb_sub_right_bnr">';
-
-              if (y.links != "") {
-                if (y.banner_TARGET == "Y") {
-                  tmpTarget = "target='_blank'";
-                }
-                if (y.cate_CD == "STB3115") {
-                  tmpRequired = 'required="login"';
-                }
-                tmpStr += '<a href="' + y.links + '" ' + tmpTarget + ' ' + tmpRequired + ' title="'+y.title+'">';
-              }
-
-              tmpStr += '		<div class="gnb_sub_right_bnr_img"><img alt="" src="' + y.img_UPLOAD_PATH.replace("http://www", "//image") + '/upload/banner/' + y.img_NM + '"></div>';
-              tmpStr += '		<div class="gnb_sub_right_bnr_txt">';
-              tmpStr += '			<h3>' + y.title + '</h3>';
-              tmpStr += '			<p>' + stringToHtml(y.description) + '</p>';
-              tmpStr += '		</div>';
-
-              if (y.links != "") {
-                tmpStr += '</a>';
-              }
-
-              tmpStr += '</div>';
-
-              if (y.cate_CD == "STB3111") {
-                $('.gnb_sub_tx_right').eq(0).append(tmpStr);
-              } else if (y.cate_CD == "STB3112") {
-                $('.gnb_sub_tx_right').eq(1).append(tmpStr);
-              } else if (y.cate_CD == "STB3113") {
-                $('.gnb_sub_tx_right').eq(2).append(tmpStr);
-              } else if (y.cate_CD == "STB3114") {
-                $('.gnb_sub_tx_right').eq(3).append(tmpStr);
-              } else if (y.cate_CD == "STB3115") {
-                $('.gnb_sub_tx_right').eq(4).append(tmpStr);
-              } else if (y.cate_CD == "STB3116") {
-                $('.gnb_sub_tx_right').eq(5).append(tmpStr);
-              }
-            });
-          }
-          // 접근성_20171106 dom access 를 위한 위치 이동
-          $('.gnb_sub_right_bnr > a').bind('focusout',function () {
-            $('.sub_gnb_nav_inner > ul > li > h2 > a').removeClass('on');
-            $('.gnb_sub_wrap').slideUp();
-          });
-          // 접근성_20171106 dom access 를 위한 위치 이동 end
-        },
-        function () {
-        });
-    }, 500);
-  });
   var btnSearch = '<label for="totalSearch" class="a11y">통합검색</label><input id="totalSearch" placeholder="통합검색" type="text">';  // 접근성_20171106
   var searchInput = false;
 

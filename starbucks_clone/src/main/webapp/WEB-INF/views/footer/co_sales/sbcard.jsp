@@ -1429,7 +1429,7 @@ var eFrequencyPlannerYn = 'Y';
     		$('a[required="login"]').on("click", function () {
     			var strHref = $(this).data("href");
     			
-    			__ajaxCall("interface/checkLogin", {}, true, "json", "post"
+    			__ajaxCall("${pageContext.request.contextPath}/interface/checkLogin", {}, true, "json", "post"
     				,function (_response) {
     					if (_response.result_code == "SUCCESS") {
     						location.href = strHref;
