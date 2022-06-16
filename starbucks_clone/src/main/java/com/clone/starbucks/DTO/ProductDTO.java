@@ -1,3 +1,4 @@
+
 package com.clone.starbucks.DTO;
 
 
@@ -10,8 +11,6 @@ p_price number not null
 );
 */
 
-
-import java.sql.Date;
 
 public class ProductDTO {
 	

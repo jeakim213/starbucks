@@ -19,7 +19,7 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
 @Controller
-public class menuController {
+public class MenuController {
 
 	// menu
 	@RequestMapping(value = "menu/drink_list")

@@ -1,14 +1,17 @@
 package com.clone.starbucks.DTO;
 
+import java.util.Date;
+
 /*
 create table register(
 id varchar2(30) not null,
+name varchar2(30) not null,
 registerdate date default sysdate not null,
 phone varchar2(15) unique not null,
-email varchar2(50) unique not null,
-birthyear number not null,
-birthmonth number not null,
-birthday number not null,
+email varchar2(50) not null,
+birth_year number not null,
+birth_month number not null,
+birth_day number not null,
 gender char(1) check(gender in ('M','F')) not null,
 event_e char(1) check(event_e in ('Y','N')) not null,
 event_SMS char(1) check(event_SMS in ('Y','N')) not null
@@ -20,17 +23,18 @@ alter table register add foreign key(id) references userinfo(id);
 
 */
 
-import java.sql.Date;
 
-public class RegisterDTO {
+
+public class RegisterDTO extends UserInfoDTO{
 	
 	private String id;	// 아이디 [fK, not null]
+	private String name; // 이름 [not null]
 	private Date registerdate; // 가입일자 [not null, sysdate]
 	private String phone;	// 전화번호 [not null, unique]
-	private String email;	// 이메일 [not null, unique]
-	private int birthyear;	// 생년	[not null]
-	private int birthmonth;	// 생월	[not null]
-	private int birthday;	// 생일	[not null]
+	private String email;	// 이메일 [not null]
+	private int birth_year;	// 생년	[not null]
+	private int birth_month;	// 생월	[not null]
+	private int birth_day;	// 생일	[not null]
 	private char gender;	// 성별 [not null, check]
 	private char event_e;	// 이벤트수신허용 - 이메일 [not null, check]
 	private char event_sms;	// 이벤트수신허용 - sms [not null, check]
@@ -42,6 +46,15 @@ public class RegisterDTO {
 	public void setId(String id) {
 		this.id = id;
 	}
+	
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	
 	public Date getRegisterdate() {
 		return registerdate;
 	}
@@ -60,23 +73,23 @@ public class RegisterDTO {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public int getBirthyear() {
-		return birthyear;
+	public int getBirth_year() {
+		return birth_year;
 	}
-	public void setBirthyear(int birthyear) {
-		this.birthyear = birthyear;
+	public void setBirth_year(int birth_year) {
+		this.birth_year = birth_year;
 	}
-	public int getBirthmonth() {
-		return birthmonth;
+	public int getBirth_month() {
+		return birth_month;
 	}
-	public void setBirthmonth(int birthmonth) {
-		this.birthmonth = birthmonth;
+	public void setBirth_month(int birth_month) {
+		this.birth_month = birth_month;
 	}
-	public int getBirthday() {
-		return birthday;
+	public int getBirth_day() {
+		return birth_day;
 	}
-	public void setBirthday(int birthday) {
-		this.birthday = birthday;
+	public void setBirth_day(int birth_day) {
+		this.birth_day = birth_day;
 	}
 	public char getGender() {
 		return gender;

@@ -18,7 +18,7 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
 @Controller
-public class storeController {
+public class StoreController {
 
 	// store
 	@RequestMapping(value = "store/store_community")

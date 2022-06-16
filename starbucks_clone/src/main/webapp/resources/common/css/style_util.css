@@ -812,14 +812,14 @@
 	.my_ms_slider div.swiper-scrollbar { height:10px; left:50%; margin-left:-372px; opacity:1 !important; filter:alpha(opacity=1); overflow:hidden; position:absolute; top:400px; width:744px; z-index:1; }
 	.my_ms_slider div.swiper-scrollbar div.swiper-scrollbar-drag { width:25% !important; }
 
-	div.my_ms_slider_txt { height:70px; position:absolute; top:438px; width:100%; -webkit-transition: .7s; -moz-transition: .7s; -ms-transition: .7s; -o-transition: .7s; transition: .7s; }
+	div.my_ms_slider_txt { height:70px; position:absolute; /* 0614 다정 top:350px;  */width:80%; -webkit-transition: .7s; -moz-transition: .7s; -ms-transition: .7s; -o-transition: .7s; transition: .7s; }
 	div.my_ms_slider_txt li { color:#555; float:left; height:42px; line-height:42px; text-align:center; }
 	div.my_ms_slider_txt li.my_ms_slider_txt1 { background:url("../img/util/my_ms_slider_sep.gif") right center no-repeat; font-size:18px; font-weight:bold; width:161px; }
 	div.my_ms_slider_txt li.my_ms_slider_txt2 { background:url("../img/util/my_ms_slider_sep.gif") right center no-repeat; font-size:16px; width:249px; }
 	div.my_ms_slider_txt li.my_ms_slider_txt3 { font-size:14px; width:170px; }
 	div.my_ms_slider_txt li.my_ms_slider_txt3 strong { color:#006541; font-size:24px; line-height:24px; }
 
-	.my_ms_slider_txt_l { background:url("../img/util/my_ms_slider_sep.gif") right center no-repeat; float:left; height:70px; padding:10px 0 0 3%; width:47%; }
+	.my_ms_slider_txt_l { background:url("../img/util/my_ms_slider_sep.gif") right center no-repeat; float:left; height:70px; padding:10px 0 0 3%;/*  width:47%; */ }
 	.my_ms_slider_txt_l strong { color:#555; float:left; font-size:18px; }
 	.my_ms_slider_txt_l p { color:#555; float:left; font-size:16px; margin-top:10px; text-align:left; width:100%; }
 	.my_ms_slider_txt_l 
@@ -829,7 +829,7 @@
 	.my_ms_card_slider_id_modify a.my_nick_modify { background:#fff; border:1px solid #222; border-radius:3px; color:#222; display:block; float:left; font-size:12px; font-weight:bold; height:26px; line-height:26px; text-align:center; margin-left:10px; width:40px; }
 	.my_ms_card_slider_id_modify a.my_nick_cancel { background:#666; border:1px solid #666; border-radius:3px; color:#fff; display:block; float:left; font-size:12px; font-weight:bold; height:26px; line-height:26px; text-align:center; margin-left:5px; width:40px; }
 
-	.my_ms_slider_txt_r { color:#222; font-size:16px; float:left; font-weight:bold; height:70px; line-height:70px; position:relative; text-align:left; width:50%; }
+	.my_ms_slider_txt_r { color:#222; font-size:16px; float:left; font-weight:bold; height:70px; line-height:70px; position:relative; text-align:left; width:37%; }
 	.my_ms_slider_txt_r strong { color:#006541; font-size:26px; }
 	.my_ms_slider_txt_r ul.op0 { height:30px; position:absolute; right:3%; top:20px; width:178px; -webkit-transition: .7s; -moz-transition: .7s; -ms-transition: .7s; -o-transition: .7s; transition: .7s; }
 	.my_ms_slider_txt_r ul.op0 li { border-radius:3px; float:left; height:28px; width:81px; }
@@ -837,7 +837,7 @@
 	.my_ms_slider_txt_r ul.op0 li.card_charge_btn2 { background:#e2c383; border:1px solid #bb9f65; margin-left:4px; }
 	.my_ms_slider_txt_r ul.op0 li.card_manage_btn { background:#222; border:1px solid #222; color:#fff; margin-left:4px; }
 	.my_ms_slider_txt_r ul.op0 li.card_manage_btn2 { background:#222; border:1px solid #222; color:#fff; }
-	.my_ms_slider_txt_r ul.op0 li a { display:block; font-size:12px; height:28px; line-height:28px; text-align:center; text-indent:0; width:85px; }
+	.my_ms_slider_txt_r ul.op0 li a { display:block; font-size:12px; height:28px; line-height:28px; text-align:center; text-indent:0;}
 	.my_ms_slider_txt_r ul.op0 li.card_charge_btn2 a,
 	.my_ms_slider_txt_r ul.op0 li.card_charge_btn a { color:#222; }
 	.my_ms_slider_txt_r ul.op0 li.card_manage_btn a,
@@ -918,7 +918,7 @@
 	.card_charge_wrap h5.card_charge_auto a { border-radius:0 3px 3px 0; }
 	.card_charge_wrap h5 a.on { background:#006633; border:1px solid #006633; color:#fff; }
 
-	.card_charge_wrap article { padding-top:70px; }
+	.card_charge_wrap article { /* 다정 padding-top:70px;  */}
 	.card_charge_wrap article table { border-top:1px solid #333; }
 	.card_charge_wrap article table caption { font-size:0; height:0; line-height:0; margin:0; overflow:hidden; padding:0; text-indent:-20000px; width:0; }
 	.regular_charge tr th,
@@ -1557,10 +1557,9 @@
 	.ecPop .myPopInner { width:381px; padding:20px 20px 0 20px; position:relative; }
 	.ecPop p.tit { font-size:18px; font-weight:bold; color:#222; padding-bottom:20px; }
 
-	.ecPop div.coupon_input { /*border-top:2px solid #333;*/ border-bottom:1px solid #dbdbdb; padding-bottom:20px; margin-bottom:20px; }
+	.ecPop div.coupon_input { /*border-top:2px solid #333;*/ /* border-bottom:1px solid #dbdbdb; */ padding-bottom:20px; /* margin-bottom:20px; */ }
 	/*.ecPop div.coupon_input p.con { font-size:12px; color:#222; margin-bottom:10px; }*/
 	.ecPop div.coupon_input label { background:url("../img/util/bullet_grey.gif") 0 5px no-repeat; color:#222; display:block; font-size:12px; margin-bottom:10px; text-indent:10px; }
-
 	.ecPop div.coupon_input div.input input { width:118px; height:26px; line-height:26px; border:1px solid #ddd; border-radius:3px; color:#222; font-size:12px; font-family:'Arial'; text-indent:5px; margin-right:10px; }
 	.ecPop div.coupon_input div.input input.last { margin-right:0; }
 
@@ -2975,7 +2974,7 @@
 	dl.my_propsal_idea_pick_bg dd label { margin:0 0 0 5px; }
 
 	/* (아이디어 제안) - 목록 게시판_List */
-	table.propsalIdea_use_info_tbl { border-top:1px solid #333; font-size:14px !important margin-top:30px; text-align:center; }
+	table.propsalIdea_use_info_tbl { border-top:1px solid #333; font-size:14px !important; margin-top:30px; text-align:center; }
 	table.propsalIdea_use_info_tbl caption { font-size:0; height:0; line-height:0; margin:0; overflow:hidden; padding:0; text-indent:-20000px; width:0; }
 	table.propsalIdea_use_info_tbl thead tr th { border-bottom:1px solid #333; color:#222; height:46px; vertical-align:middle; }
 	table.propsalIdea_use_info_tbl thead tr th span{ color:#666; font-weight:normal; }
@@ -6436,6 +6435,8 @@ i.goldCard_bar_img01 { background:url("../img/util/reward/goldCard_bar_img01.png
 	.my_card_state { float:none; position:absolute; left:50%; top:60px; margin-left:-53px; }
 	.my_ms_slider_txt_l p { float:left; margin-top:0; text-align:center; }
 	.my_ms_slider_txt_r { height:30px; line-height:30px; text-align:center; width:100%; }
+	/* 0614 다정 추가 */
+	.my_ms_card_button { display:block; font-size:12px; height:28px; line-height:28px; text-align:center; text-indent:0;}
 	.my_ms_slider div.swiper-wrapper div.swiper-slide div.my_ms_slider_txt li { float:none; width:100%; }
 	.my_ms_slider div.swiper-wrapper div.swiper-slide div.my_ms_slider_txt li.my_ms_slider_txt1 { background:none; font-size:18px; width:100%; }
 	.my_ms_slider div.swiper-wrapper div.swiper-slide div.my_ms_slider_txt li.my_ms_slider_txt2 { background:none; font-size:16px; width:100%; }
@@ -6625,7 +6626,7 @@ i.goldCard_bar_img01 { background:url("../img/util/reward/goldCard_bar_img01.png
 	.card_regi_dl dt { padding:9px 0 2px 2%; }
 
 	.card_regi_dl dd input.card_regi_input1,
-	.card_regi_dl dd input.card_regi_input2 { border:1px solid #ddd; border-radius:3px; color:#666; float:left; height:26px; }{ height:46px; }
+	.card_regi_dl dd input.card_regi_input2 { border:1px solid #ddd; border-radius:3px; color:#666; float:left; height:26px; }/* { height:46px; } */
 	.card_regi_dl dd input.card_regi_input1 { width:100%; }
 	.card_regi_dl dd input.card_regi_input2 { width:20%; }
 
@@ -7436,7 +7437,7 @@ i.goldCard_bar_img01 { background:url("../img/util/reward/goldCard_bar_img01.png
 	
 	/* (케익주문현황) info view */
 	section.order_view_info_cake { width:100%; margin:0 auto;  }
-	article.info_cake { background:#fff; border:0; border-radius:; width:100%; padding:0; border-bottom:0; }
+	article.info_cake { background:#fff; border:0; /* border-radius:; */ width:100%; padding:0; border-bottom:0; }
 	article.info_cake h5 { padding-left:30px; }
 	table.cake_info_tbl thead th.th_m1 { text-align:center; }
 	table.cake_info_tbl thead th.th_m2 span { border:none; font-size:0; height:0; line-height:0; margin:0; overflow:hidden; padding:0; text-indent:-20000px; width:0; }
@@ -10044,7 +10045,7 @@ i.goldCard_bar_img01 { background:url("../img/util/reward/goldCard_bar_img01.png
 
 	/* (케익주문현황) info view */
 	section.order_view_info_cake { width:100%; margin:0 auto;  }
-	article.info_cake { background:#fff; border:0; border-radius:; width:100%; padding:0; border-bottom:0; }
+	article.info_cake { background:#fff; border:0; /* border-radius:;  */width:100%; padding:0; border-bottom:0; }
 	article.info_cake h5 { padding-left:10px; }
 	table.cake_info_tbl thead th.th_m1 { text-align:left; padding-left:10px; }
 	table.cake_info_tbl thead th.th_m2 span { border:none; font-size:0; height:0; line-height:0; margin:0; overflow:hidden; padding:0; text-indent:-20000px; width:0; }

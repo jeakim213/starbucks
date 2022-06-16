@@ -50,6 +50,10 @@
 <![endif]-->
 
 <script>
+
+
+
+
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -132,8 +136,9 @@ var eFrequencyPlannerYn = 'Y';
 
 
 <!-- MSR 영역 -->
-
-
+			
+			<!-- 예은 확인 필요 -->
+			<!-- <input type="hidden" name="get" id="get"> -->
 
 
 			
@@ -695,7 +700,8 @@ var eFrequencyPlannerYn = 'Y';
 			<div class="find_mem_wrap asdasdadas"><!-- jsp 수정 : 클래스명 추가 -->
 				<!-- 20160804 수정 -->
 				<div class="find_mem_inner">
-					<form action="" method="post">
+					<form action="join2" method="post" name="join1f">
+					<input type="hidden" name="num"/>
 						<fieldset>
 							<legend class="hid">회원가입 이용약관 동의, 수집하는 개인정보의 항목, 개인정보의 수집 및 이용목적, 개인정보의 보유 및 이용기간 및 파기절차, 파기 방법에 관한 폼</legend>
 							
@@ -2095,17 +2101,17 @@ var eFrequencyPlannerYn = 'Y';
 									</div>
 									</div>
 								</section>
-								
+								<!-- 예은 - 정보 수신동의 영역 주석처리 -->
 								<!-- 20180726 ::E-mail 및 SMS 광고성 정보 수신동의 영역추가-->
-								<section class="mem_agreement_wrap mem_advertise_wrap">
-									<h5>E-mail 및 SMS 광고성 정보 수신동의 <span class="type_green">(선택)</span></h5> <!-- 20200826 수정 -->
-									<!-- 접근성_20171120 추가 -->
+								<!-- <section class="mem_agreement_wrap mem_advertise_wrap">
+									<h5>E-mail 및 SMS 광고성 정보 수신동의 <span class="type_green">(선택)</span></h5> 20200826 수정
+									접근성_20171120 추가
 									<span class="agree-check">
 										<input type="checkbox" name="mem_advertise" id="mem_advertise_yes" class="mem">
 										<label for="mem_advertise_yes">동의</label>
 									</span>
 									<dd id="mem_advertise_desc">다양한 프로모션 소식 및 신규 매장 정보를 보내 드립니다.</dd>
-									<!-- 접근성_20171120 추가 end -->
+									접근성_20171120 추가 end
 								</section>
 								<section class="mem_join_note">
 									<h5>회원가입 유의사항</h5>
@@ -2116,16 +2122,16 @@ var eFrequencyPlannerYn = 'Y';
 										</li>
 										<li>
 											스타벅스 코리아의 공식 홈페이지는 Internet Explorer 9.0 이상, Chrome, Firefox, Safari 브라우저에 최적화 되어있습니다.
-										</li> <!-- 220112 수정 -->
+										</li> 220112 수정
 									</ul>
-								</section>
+								</section> -->
 								<section class="mem_accreditation_wrap mb10">
 									<h5>인증방식 선택</h5>
 									<div class="auth">
 										<figure style="text-align: center;"><img src="../common/img/util/mem/icon_find1_type2.png" alt="휴대폰 아이콘"></figure>
 											<p style="text-align: center;" class="mem_k_titl">휴대폰 인증</p>
 											<p style="text-align: center;" class="mem_k_txt">본인 명의의 휴대폰을 통해 인증합니다.</p>
-											<p style="text-align: center;" class="mem_k_btn"><a href="javascript:void(0)" title="휴대폰 본인 인증 새창열기">인증하기</a></p>
+											<p style="text-align: center;" class="mem_k_btn"><a title="휴대폰 본인 인증 새창열기" onclick="window.open('verify','본인 인증','width=420 ,height=320')">인증하기</a></p>
 									</div>
 									<!-- <ul class="mem_accreditation_info">
 										<li class="li1">
@@ -2351,6 +2357,8 @@ var eFrequencyPlannerYn = 'Y';
 				var mrSlider;
 				
 				$(document).ready(function(){
+					//var a = $('get').val();
+					//alert(a);
 					/* 20171204 kbs 페이지별 head 내 title 변경 */
 					if( $('.smap li').last().text() == "" )
 					{
@@ -2632,7 +2640,7 @@ var eFrequencyPlannerYn = 'Y';
 			});
 
 			// 20180813 오은규 2차 추가 약관정보 불러오기
-			function initClause() {
+			/* function initClause() {
 				var objParam = {
 					 "reqClientType" : "WEB"
 					,"clause_type"   : "WEB"
@@ -2672,7 +2680,7 @@ var eFrequencyPlannerYn = 'Y';
 					, function (_error) {
 					}
 				); 
-			}
+			} */
 			
 			
 			function setEvents() {
@@ -2791,3 +2799,4 @@ var eFrequencyPlannerYn = 'Y';
 	</div>
 </body>
 </html>
+
