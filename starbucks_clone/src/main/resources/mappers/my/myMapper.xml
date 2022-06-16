@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	<mapper namespace="com.clone.starbucks.DAO.IMyDAO">
+	
+	<select id="c_numCheck" parameterType="String" resultType="com.clone.starbucks.DTO.CardDTO">
+		SELECT * FROM card WHERE c_num=#{c_num}
+	</select>
+	
+	<select id="nameFind" parameterType="String" resultType="String">
+		SELECT c_name FROM card WHERE c_num=#{c_num}
+	</select>
+	
+	<update id="updateCard" parameterType="com.clone.starbucks.DTO.CardDTO">
+		UPDATE card SET c_name=#{c_name}, id=#{id}, c_master=#{c_master} WHERE c_num=#{c_num}
+	</update>
+	
+	<select id="cMaster1Bool" parameterType="String" resultType="int">
+		SELECT count(c_num) FROM card WHERE id=#{id} and c_master=1
+	</select>
+	
+	<select id="cMaster1Num" parameterType="String" resultType="String">
+		SELECT c_num FROM card WHERE id=#{id} and c_master=1
+	</select>
+	
+	</mapper>

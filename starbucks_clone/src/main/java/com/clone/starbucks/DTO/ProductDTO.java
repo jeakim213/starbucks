@@ -11,9 +11,8 @@ p_price number not null
 */
 
 
-import java.sql.Date;
 
-public class productDTO {
+public class ProductDTO {
 	
 	private char p_category1;	// 상품 카테고리1(ex. 커피, 음식, 상품, 카드) [not null]
 	private String p_category2;	// 상품 카테고리2(ex. 콜드브루, etc(커스텀, 카드충전금액, 컵사이즈....)) [not null]

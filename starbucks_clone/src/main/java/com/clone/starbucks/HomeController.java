@@ -40,7 +40,18 @@ public class HomeController {
 
    @RequestMapping(value = "/", method = RequestMethod.GET)
    public String home(Locale locale, Model model) {
-      return "index";
+	   //0611 다정추가
+	   model.addAttribute("formpath","home");
+	   return "index";
+   }
+   //0611 다정 추가
+   @RequestMapping(value = "home")
+	public void home() {}
+   
+   //0612 다정 추가
+   @RequestMapping(value="index")
+   public void index(String formpath, Model model) {
+	   model.addAttribute("formpath",formpath);
    }
    
    //admin
@@ -85,6 +96,11 @@ public class HomeController {
    @RequestMapping(value="admin/saleChart-3")
    public String saleChart3() {
       return "admin/saleChart-3";
+   }
+   
+   @RequestMapping(value="admin/adminCouponMake")
+   public String adminCouponMake() {
+	   return "admin/adminCouponMake";
    }
    
    // coffee
@@ -404,7 +420,20 @@ public class HomeController {
    }
 
    // my
+   @RequestMapping(value="my/ecoupon_popup")
+   public String ecoupon_popup() {
+	   return "my/ecoupon_popup";
+   }
    
+   @RequestMapping(value="my/ecoupon")
+   public String ecoupon() {
+	   return "my/ecoupon";
+   }
+   
+   @RequestMapping(value="my/ecoupon_1")
+   public String ecoupo_1() {
+	   return "my/ecoupon-1";
+   }
 
    @RequestMapping(value = "my/egiftCard_shopping_bag")
    public String egiftCard_shopping_bag() {
@@ -750,4 +779,14 @@ public class HomeController {
 		JsonObject obj = gson.fromJson(reader,JsonObject.class);
 		return obj.toString();
 	}
+	
+	@ResponseBody // 이게뭐더라ㅏ... 다정
+	   @PostMapping(value = "**/interface/getCurrentUserId", produces = "application/json; charset=UTF-8")
+	   public String getCurrentUserId() {
+	      JsonObject obj = new JsonObject();
+	      obj.addProperty("result_code", "SUCCESS");
+	      return obj.toString();
+	   }
+	
+	
 }

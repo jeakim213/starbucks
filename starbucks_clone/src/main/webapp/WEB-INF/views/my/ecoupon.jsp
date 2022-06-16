@@ -1,6 +1,5 @@
-﻿<%@ page language="java" contentType="text/html; charset=UTF-8"
+<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 
 <!DOCTYPE html>
@@ -71,48 +70,15 @@ var eFrequencySeq = '172';
 var eFrequencyPlannerYn = 'Y';
 </script>
 
-		<link href="../common/css/style_util.css?v=210610" rel="stylesheet">
-		<link href="../common/css/style_util2.css?v=210609" rel="stylesheet">
+		
+		<link href="../common/css/style_util.css?" rel="stylesheet">
+		<link href="../common/css/style_util2.css" rel="stylesheet"><!-- 20180906 추가 -->
+		<link href="../common/css/style_star.css" rel="stylesheet">
+		<!-- <link href="https://www.starbucks.co.kr/common/css/style_star.css?v=211112" rel="stylesheet">211008 추가 -->
 	</head>
 	<body>
-		<!-- 자동 충전 해지사유 팝업 -->
-		<div class="auto_cancel_reason_pop" style='display:none;'>
-			<header class="auto_cancel_reason_ttl">자동 충전 해지사유<a href="javascript:void(0);">닫기</a></header>
-			<section class="auto_cancel_reason_cont">
-				<div class="auto_cancel_reason_inner">
-					<p>5만원 이상 자동충전 해지 시, BOGO e-쿠폰 발급 혜택이 사라집니다.</p>
-					<div class="options">
-						<input id="reason1" name="canReasonCode" type="radio" value="1">
-						<label for="reason1">미사용</label>
-					</div>
-					<div class="options">
-						<input id="reason2" name="canReasonCode" type="radio" value="2">
-						<label for="reason2">결제수단 변경</label>
-					</div>
-					<div class="options">
-						<input id="reason3" name="canReasonCode" type="radio" value="9">
-						<label for="reason3">기타</label>
-					</div>
-					<!-- 150904 수정 -->
-					<textarea class="auto_text" placeholder="사유를 입력해 주세요." name="canReasonText" id="canReasonText" cols="37" rows="10" style="display:none;"></textarea>
-					<p class="auto_info">5만원 이상 자동충전 해지 시, BOGO e-쿠폰 발급 혜택이 사라집니다.</p>
-					<!-- 150904 수정 end -->
-				</div>
-				<div class="auto_cancel_reason_btns">
-					<ul>
-						<li class="auto_cancel_reason_btn1"><a href="javascript:void(0);">확인</a></li>
-						<li class="auto_cancel_reason_btn2"><a href="javascript:void(0);">취소</a></li>
-					</ul>
-				</div>
-				
-				<input type="hidden" id="cardNickname" value="" />
-				<input type="hidden" id="cardRegNumber" value="" />
-			</section>
-		</div>
-		<!-- 자동 충전 해지사유 팝업 end -->
-	
-		<div class="pop_dimm" style='display:none;'></div>
-		<div id="wrap" class="scrollNon"><!-- 20190220 class="scrollNon" 추가 -->
+		<div class="myDimm"></div>
+		<div id="wrap">
 			
 <script>
 //appId      : '1012019678818238',
@@ -324,7 +290,7 @@ var eFrequencyPlannerYn = 'Y';
 					<ul>
 						<li class="tablet_gnb01"><a href="javascript:void(0);" role="button" title="마이 리워드 레이어 열기"><!-- 접근성_20171106 role, title 추가 --><span class="rCup2"></span></a></li><!-- 150709 클레스 수정 -->
 						<li class="tablet_gnb02"><a href="my/index" required="login"><span class="a11y">마이스타벅스</span></a><!-- 접근성_20171106 span추가 --></li>
-						<li class="tablet_gnb03"><a href="store/store_map"><span class="a11y">매장찾기</span></a><!-- 접근성_20171106 span추가 --></li>
+						<li class="tablet_gnb03"><a href="strore/store_map"><span class="a11y">매장찾기</span></a><!-- 접근성_20171106 span추가 --></li>
 						<li class="tablet_gnb04"><a href="javascript:void(0);"><span class="a11y" role="button">메뉴열기</span></a><!-- 접근성_20171106 span추가 --></li>
 					</ul>
 				</nav>
@@ -533,31 +499,31 @@ var eFrequencyPlannerYn = 'Y';
 							<li>
 								<a role="button" href="javascript:void(0);">메뉴 이야기<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 -->
 								<ul>
-									<li><a href="store/store_nitro_coldbrew">나이트로 콜드브루</a></li>
-									<li><a href="store/store_coldbrew">콜드 브루</a></li>
+									<li><a href="strore/store_nitro_coldbrew">나이트로 콜드브루</a></li>
+									<li><a href="strore/store_coldbrew">콜드 브루</a></li>
 									<li><a href="menuStory/teavana">스타벅스 티바나</a></li>
 								</ul>
 							</li>
 						</ul>
 						<ul>
 							<li class="mob_gnb_ttl2"><a role="button" class="en" href="javascript:void(0);">STORE<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 --></li>
-							<li><a href="store/index">한눈에 보기</a></li>
+							<li><a href="strore/index">한눈에 보기</a></li>
 							<li>
 								<a role="button" href="javascript:void(0);">매장 찾기<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 -->
 								<ul>
-									<li><a href="store/store_map?disp=quick">빠른 검색</a></li>
-									<li><a href="store/store_map?disp=locale">지역 검색</a></li>
+									<li><a href="strore/store_map?disp=quick">빠른 검색</a></li>
+									<li><a href="strore/store_map?disp=locale">지역 검색</a></li>
 								</ul>
 							</li>
-							<li><a href="store/store_drive">드라이브 스루 매장</a></li>
-							<li><a href="store/store_reserve">스타벅스 리저브™ 매장</a></li>
-							<li><a href="store/store_community">커뮤니티 스토어 매장</a></li>
+							<li><a href="strore/store_drive">드라이브 스루 매장</a></li>
+							<li><a href="strore/store_reserve">스타벅스 리저브™ 매장</a></li>
+							<li><a href="strore/store_community">커뮤니티 스토어 매장</a></li>
 							<li>
 								<a role="button" href="javascript:void(0);">매장 이야기<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 -->
 								<ul>
-									<!-- <li><a href="store/store_cheongdam">청담스타</a></li> 20210727 메뉴 비노출 -->
-									<li><a href="store/store_star_field">티바나 바 매장</a></li>
-									<!-- <li><a href="store/store_park">파미에파크</a></li> 20210727 메뉴 비노출 -->
+									<!-- <li><a href="strore/store_cheongdam">청담스타</a></li> 20210727 메뉴 비노출 -->
+									<li><a href="strore/store_star_field">티바나 바 매장</a></li>
+									<!-- <li><a href="strore/store_park">파미에파크</a></li> 20210727 메뉴 비노출 -->
 								</ul>
 							</li>
 						</ul>
@@ -694,7 +660,7 @@ var eFrequencyPlannerYn = 'Y';
 	<li class="util_nav01 sign_in"><a href="javascript:void(0);">Sign In</a></li>
 	<li class="util_nav02"><a href="my/index" required="login">My Starbucks</a></li>
 	<li class="util_nav03"><a href="menu/orderList">Order</a></li>
-	<li class="util_nav04"><a href="store/store_map">Find a Store</a></li>
+	<li class="util_nav04"><a href="strore/store_map">Find a Store</a></li>
 </ul>
 				</nav>
 				<a href="javascript:void(0);" class="rCup3_wrap" role="button" title="마이 리워드 레이어 열기"><!-- 접근성_20171201 class, role, title 추가 --><span class="rCup3"></span></a><!-- 150714 DOM 수정 - 떨어지는 메뉴 부분에 jsMovie 추가 -->
@@ -711,218 +677,425 @@ var eFrequencyPlannerYn = 'Y';
 
 			<div id="container">
 				<!-- 서브 타이틀 -->
-				<header class="ms_sub_tit_wrap">
-					<div class="ms_sub_tit_bg">
-						<div class="ms_sub_tit_inner">
-							<!-- 160609 텍스트 수정 -->
-							<h4><img alt="카드 충전" src="//image.istarbucks.co.kr/common/img/util/cha_card_ttl.png"></h4>
-							<!-- 160609 텍스트 수정 end -->
-							<ul class="smap">
-								<li><a href="/"><img src="//image.istarbucks.co.kr/common/img/common/icon_home_w.png" alt="홈으로"></a></li>
-								<li><img class="arrow" src="//image.istarbucks.co.kr/common/img/common/icon_arrow_w.png" alt="하위메뉴"></li>
-								<li><a href="my/index">My Starbucks</a></li>
-								<li><img class="arrow" src="//image.istarbucks.co.kr/common/img/common/icon_arrow_w.png" alt="하위메뉴"></li>
-								<li><a href="my/mycard_index">My 스타벅스 카드</a></li>
-								<li><img class="arrow" src="//image.istarbucks.co.kr/common/img/common/icon_arrow_w.png" alt="하위메뉴"></li>
-								<!-- 160609 텍스트 수정 -->
-								<li><a href="my/mycard_charge">카드 충전</a></li>
-								<!-- 160609 텍스트 수정 end -->
-							</ul>
-						</div>
-					</div>
-				</header>
-				<!-- 서브 타이틀 end -->
 				
-				<input type="hidden" id="curCardRegNumber" value="" />
-				<input type="hidden" id="curAutoReloadType" value="" />
+<header class="ms_sub_tit_wrap">
+	<div class="ms_sub_tit_bg">
+		<div class="ms_sub_tit_inner">
+			<h4><img alt="My 음료/매장" src="//image.istarbucks.co.kr/common/img/util/ec/tit01.png"></h4>
+			<ul class="smap">
+				<li><a href="/"><img src="//image.istarbucks.co.kr/common/img/common/icon_home_w.png" alt="홈으로"></a></li>
+				<li><img class="arrow" src="//image.istarbucks.co.kr/common/img/common/icon_arrow_w.png" alt="작은 맵 화살표"></li>
+				<li><a href="my/index">My Starbucks</a></li>
+				
+					<li><img class="arrow" src="//image.istarbucks.co.kr/common/img/common/icon_arrow_w.png" alt="작은 맵 화살표"></li>
+					<li><a href="my/ecoupon">My 쿠폰</a></li>
+				
+				
+			</ul>
+		</div>
+	</div>
+</header>
+				<!-- 서브 타이틀 end -->
 				
 				<!-- 내용 -->
 				<div class="ms_cont_wrap">
 					<div class="ms_cont">
-						<!-- 카드 충전 -->
-							<section class="card_charge_wrap">
-								
-								<article>
-									<form name="frm_NORMAL" id="frm_NORMAL" action="#" method="post">
+						<!-- My e-쿠폰 -->
+						<div class="ms_ecoupon">
+							<!-- My e-쿠폰 팝업 -->
+							<div class="ecPop">
+								<div class="head">
+									<p class="tt"><span class="en">My</span> 쿠폰 등록</p>
+									<p class="close" onclick="window.close();"><a><img src="//image.istarbucks.co.kr/common/img/util/cal/calpop_close2.png" alt="닫기"></a></p>
+								</div>
+								<!-- 20170726 추가 -->                                
+                                <div class="myPopInner">
+                                    <form name="efrm1" id="efrm1" method="post">
+                                        <fieldset>
+                                            <legend class="hid">My 쿠폰 등록</legend>
+                                            
+                                            <p class="couponTabTit">영수증 쿠폰, MMS 쿠폰 또는 Star 쿠폰 중 등록하고자 하시는 쿠폰을 선택하세요.</p> <!-- 211008 수정 -->
+                                            <ul class="couponTabList">
+                                                <li class="cpTab1 cpTabOn"><a href="#">영수증 쿠폰</a></li>
+                                                <li class="cpTab2"><a href="#">MMS 쿠폰</a></li>
+                                                <li class="cpTab3" id="couponTypeStar"><a href="#">Star 쿠폰</a></li> <!-- 211008 추가 -->
+                                            </ul>
+                                            <div class="cpClear"></div>
+                                            <!-- 퀵 서치 -->
+                                            <!-- 1. 영수증쿠폰 -->
+                                            <div class="myCouponCb myCouponCb1 myCouponWrap" > <!-- 211008 클래스 추가 -->
+                                                <div class="coupon_input">
+                                                    <label for="coupon_num1">영수증 쿠폰번호 16자리를 입력해주세요.</label>
+                                                    <div class="input">
+                                                        <input type="tel" name="rptcoupon_num1" id="rptcoupon_num1" maxlength="4" ref="num" title="쿠폰 앞번호">
+                                                        <span class="line"></span>
+                                                        <input type="tel" name="rptcoupon_num2" id="rptcoupon_num2" maxlength="4" ref="num" title="쿠폰 두번째 번호">
+                                                        <span class="line"></span>
+                                                        <input type="tel" name="rptcoupon_num3" id="rptcoupon_num3" maxlength="4" ref="num" title="쿠폰 세번째 번호">
+                                                        <span class="line"></span>
+                                                        <input type="tel" name="rptcoupon_num4" id="rptcoupon_num4" maxlength="4" ref="num" title="쿠폰 마지막 번호" class="last">
+                                                    </div>
+                                                    <div class="cpClear"></div>
+                                                </div>
+                                                <!-- <div class="mobile_input mobile_input2">
+                                                    <p class="con">e-쿠폰 등록코드 8자리를 입력해주세요.</p>
+                                                    <div class="input">
+                                                        <input type="tel" name="regiCode" id="regiCode" maxlength="8" ref="num" value="" title="e-쿠폰 등록코드">
+                                                    </div>
+                                                </div> -->
+                                            </div>
+                                            <!--// 1. 영수증쿠폰 -->
+                                            
+                                            <!-- 2. mms쿠폰 -->
+                                            <div class="myCouponCb myCouponCb2 myCouponWrap" style="display: none"> <!-- 211008 클래스 추가 -->
+                                                <div class="coupon_input">
+                                                    <label for="coupon_num3">MMS 쿠폰번호 13자리를 입력해주세요.</label>
+                                                    <div class="input">
+                                                        <input type="tel" name="coupon_num1" id="coupon_num1" maxlength="4" ref="num" title="쿠폰 앞번호">
+                                                        <span class="line"></span>
+                                                        <input type="tel" name="coupon_num2" id="coupon_num2" maxlength="4" ref="num" title="쿠폰 중간 번호"><!-- maxlength 5->4로 변경 -->
+                                                        <span class="line"></span>
+                                                        <input type="tel" name="coupon_num3" id="coupon_num3" maxlength="5" ref="num" title="쿠폰 마지막 번호" class="last">
+                                                    </div>
+                                                    <div class="cpClear"></div>
+                                                </div>
+                                                <!-- <div class="mobile_input">
+                                                    <p class="con">수신자(선물 받은 사람)의 휴대폰 번호를 입력해주세요.</p>
+                                                    <div class="input">
+                                                        <div class="select_box select_box03">
+                                                            <label class="value" for="myplane_date01">선택</label>
+                                                            <select title="휴대폰 앞번호" id="myplane_date01">
+                                                                <option value="" selected="selected">선택</option>
+                                                                <option value="010">010</option>
+                                                                <option value="011">011</option>
+                                                                <option value="016">016</option>
+                                                                <option value="017">017</option>
+                                                                <option value="018">018</option>
+                                                                <option value="019">019</option>
+                                                            </select>
+                                                        </div>
+                                                        <span class="line"></span>
+                                                        <input type="tel" name="mobile_num2" id="mobile_num2" maxlength="4" ref="num" value="" title="휴대폰 중간번호">
+                                                        <span class="line"></span>
+                                                        <input type="tel" name="mobile_num3" id="mobile_num3" maxlength="4" ref="num" value="" title="휴대폰 마지막 번호" class="last">
+                                                    </div>
+                                                </div> -->
+                                            </div>
+                                            <!--// 2. mms쿠폰 -->
+                                            
+                                            <!-- s::211008 추가 -->
+	                                        <!-- 3. Star 쿠폰 -->
+	                                        <div class="myCouponCb myCouponCb3 myCouponWrap nonsr_user" style="display: none"> <!-- 211101 수정 -->
+	                                            <div class="starcoupon_input">
+	                                                <label for="starcoupon_num1">Star 쿠폰번호 13자리를 입력해주세요.</label>
+	                                                <div class="input">
+	                                                    <input type="tel" name="starcoupon_num" id="starcoupon_num1" maxlength="4" ref="num" title="쿠폰 앞번호">
+	                                                    <span class="line"></span>
+	                                                    <input type="tel" name="starcoupon_num" id="starcoupon_num2" maxlength="4" ref="num" title="쿠폰 중간 번호"><!-- maxlength 5->4로 수정 -->
+	                                                    <span class="line"></span>
+	                                                    <input type="tel" name="starcoupon_num" id="starcoupon_num3" maxlength="5" ref="num" title="쿠폰 마지막 번호" class="last">
+	                                                </div>
+	                                                <div class="cpClear"></div>
+	                                            </div>
+	                                            <!-- <div class="pin_input">
+	                                                <p class="con">PIN 번호 8자리를 입력해주세요.</p>
+	                                                <div class="input">
+	                                                    <input type="tel" name="pinCode" id="pinCode" maxlength="8" ref="num" value="" title="PIN 번호">
+	                                                </div>
+	                                            </div> -->
+	                                        </div>
+	                                        <!--// 3. Star 쿠폰 -->
+	                                        <!-- //e::211008 -->
+                                        </fieldset>
+                                    </form>
+                                </div>
+                                <!--// 20170726 추가 -->
+                                
+                                <div class="info_wrap cpBg">
+                                    <!-- 1. 영수증쿠폰 -->
+                                    <ul class="myCouponCb myCouponCb1"> <!-- 211008 클래스 추가 -->
+                                        <li>e-쿠폰으로 등록한 영수증 쿠폰은 등록해지가 불가능하며, 등록이후 기존의 실물 쿠폰은 더 이상 사용하실 수 없습니다.</li>
+                                        <li>등록된 e-쿠폰은 해당 계정에 등록된 스타벅스 카드 또는 쿠폰의 QR코드를 제시하여 사용하실 수 있습니다.</li>
+                                        <li>e-쿠폰 및 실물 쿠폰은 상업적으로 이용할 수 없으며, 스타벅스에서 제공하는e-쿠폰 선물하기 기능 외 방법으로 전달된 쿠폰 사용으로 인해 발생된 문제에 대해서는 스타벅스가 책임지지 않습니다.</li>
+                                        <li>쿠폰이 발행된 원 거래가 취소되는 경우, 등록된 e-쿠폰도 즉시 회수됩니다.</li>
+                                    </ul>
+                                    
+                                    <!-- 2. mms쿠폰 -->
+                                    <ul class="myCouponCb myCouponCb2" style="display: none"> <!-- 211008 클래스 추가 -->
+                                        <li>e-쿠폰 등록 후에는 선물 받은 쿠폰의 문자 메시지가 삭제되었더라도 해당 계정에 등록된 스타벅스 카드 또는 쿠폰 QR코드를 제시하시면 사용하실 수 있습니다.</li>
+                                        <li>e-쿠폰 및 실물 쿠폰은 상업적으로 이용할 수 없으며, 스타벅스에서 제공하는 e-쿠폰 선물하기 기능 외 방법으로 전달된 쿠폰 사용으로 인해 발생된 문제에 대해서는 스타벅스가 책임지지 않습니다.</li>
+                                        <li>쿠폰이 발행된 원 거래가 취소되는 경우, 등록된 e-쿠폰도 즉시 회수됩니다.</li>
+                                    </ul>
+
+                                    <!-- s::211008 추가 -->
+	                                <!-- 3. Star 쿠폰 -->
+	                                <ul class="myCouponCb myCouponCb3" style="display: none">
+	                                	<li class="green"><strong>Star 쿠폰은 스타벅스 리워드 회원에 한해서만 등록 및 사용이 가능한 쿠폰입니다.</strong></li> <!-- 211101 추가 -->
+	                                    <li>하나의 Star 쿠폰에는 여러 개의 별이 들어 있으며, Star 쿠폰을 My 쿠폰으로 등록하는 즉시 별로 전환됩니다. 전환된 별은 별 History에서 확인 가능합니다.</li>
+	                                    <li>전환된 별은 별 정책에 따라 승급/별 12개 쿠폰 발행에 사용됩니다.</li>
+	                                    <li>Star 쿠폰은 쿠폰 그 자체로 사용할 수 없으며, My 쿠폰 등록을 통해 별로 전환하여 사용 가능합니다.</li>
+	                                    <li>Star 쿠폰 유효기간 내에만 쿠폰 등록이 가능합니다.</li>
+	                                    <li>Star 쿠폰으로 전환되는 별의 유효기간은 별 전환 시점으로부터 1년입니다.</li>
+	                                    <li>등록 완료되어 별로 전환된 Star 쿠폰은 등록 취소 및 재사용 불가합니다.</li>
+	                                    <li>Star 쿠폰은 상업적으로 이용할 수 없습니다.</li>
+	                                </ul>
+	                                <!-- //e::211008 -->
+
+                                    <p class="btns"><a href="javascript:void(0)" class="a1">쿠폰 등록</a> <a href="javascript:void(0)" class="a2">취소</a></p>
+                                </div>
+                                
+							</div>
+							<div class="ecPop2">
+								<div class="head">
+									<p class="tt">My 쿠폰 사용하기</p>
+									<p class="close"><a href="javascript:void(0)">닫기</a></p>
+								</div>
+								<div class="myPopInner">
+									<div class="myPopScroll designScroll">
+										<div class="ec_use">
+											<p class="tt couponName"><!-- [BOGO] 라스베리 트러플 모카 --></p>
+											<p class="qr"><img alt="" /></p>
+											<p class="qr_txt">이 QR코드는 <span id="timer">00:00:00</span>까지 유효합니다.</p><!-- 20180906 추가 -->
+											<p class="coffee"><img src="//image.istarbucks.co.kr/common/img/util/ec/icon_cup.jpg" alt="" /></p>
+											<ul>
+												<li>
+													<dl>
+														<dt>유효기간</dt>
+														<dd class="validDt"><!-- 2015-03-10 ~ 2015-04-22 --></dd>
+													</dl>
+												</li>
+												<li>
+													<dl>
+														<dt>쿠폰내역</dt>
+														<dd class="couponHistList"><!-- 2015-03-10&nbsp;&nbsp;발급<br>2015-03-23&nbsp;&nbsp;선물<br>2015-03-23&nbsp;&nbsp;회수 --></dd>
+													</dl>
+												</li>
+												<li>
+													<dl>
+														<dt>상세정보</dt>
+														<dd class="couponDetail">
+															<!--
+															- 스타벅스 매장 내에서 파트너가 제조한 음료 구매시 동일한 음료 한잔 더 증정<br>-  병음료 , 생수, 요거트, POC 브루드커피, 바
+															-->
+														</dd>
+													</dl>
+												</li>
+											</ul>
+											<input type="hidden" id="couponNumber" />
+										</div>
+									</div>
+								</div>
+								<div class="info_wrap">
+									<p class="con" id="useGuide">* 계산대에서 파트너에게 QR코드를 제시하면 해당 쿠폰을 사용하실 수 있습니다.</p>
+									<p class="btns">
+										<a href="javascript:void(0)" class="a3 btn_gift_coupon" style="display:none;">쿠폰 선물하기</a>
+									</p>
+								</div>
+							</div>
+							<div class="ecPop3">
+								<div class="head">
+									<p class="tt">상세보기</p>
+									<p class="close"><a href="javascript:void(0)">닫기</a></p>
+								</div>
+								<div class="myPopInner">
+									<div class="myPopScroll designScroll">
+										<div class="myCoupon">
+											<p class="tit"><img id="myCouponImg" src="//image.istarbucks.co.kr/common/img/util/ec/icon_ecoupon03.png" alt="">&nbsp;&nbsp;<span class="couponName"></span></p>
+											<ul>
+												<li>
+													<dl>
+														<dt>유효기간</dt>
+														<dd class="validDt"></dd>
+													</dl>
+												</li>
+												<li>
+													<dl>
+														<dt>쿠폰내역</dt>
+														<dd class="CouponHistory"></dd>
+													</dl>
+												</li>
+												<li>
+													<dl>
+														<dt>쿠폰 받는 분</dt>
+														<dd class="phone"></dd>
+													</dl>
+												</li>
+												<li class="message">
+													<dl>
+														<dt>메시지 내용</dt>
+														<dd class="giftMmsContents"></dd>
+													</dl>
+												</li>
+												<li class="last">
+													<dl class="warning">
+														<dt>유의사항</dt>
+														<dd>
+															<ul class="useNotice"></ul>
+														</dd>
+													</dl>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="info_wrap">
+									<p class="btns">
+										<a href="javascript:void(0)" class="a4 btn_gift_recall" style="display:none;">선물회수</a>
+										<a href="javascript:void(0)" class="a5 btn_gift_message_resend" style="display:none;">재발송</a>
+									</p>
+								</div>
+							</div>
+							<!-- My e-쿠폰 팝업 end -->
+							<dl class="ec_tab">
+								<dt class="dt1"><a href="javascript:void(0)" class="selected">사용 가능한 쿠폰</a></dt>
+								<dd>
+									<div class="ec_step1">
+										<!-- s::211008 수정 -->
+	                                    <div class="ec_info">
+	                                        <div class="info_txt">
+	                                            <p class="p1">영수증 쿠폰 또는 선물 받은 MMS 쿠폰을 <span>My 쿠폰</span>으로 등록하여 편리하게 사용해 보세요!</p>
+	                                            <p class="p2 mb20">e-쿠폰 등록번호가 있는 영수증 쿠폰 또는 선물 받은 MMS 쿠폰, Star 쿠폰은 My 쿠폰으로 등록하실 수 있습니다.<br>등록 후에는 쿠폰을 분실하거나 문자메시지를 삭제하시더라도 해당 계정에 등록된 스타벅스 카드 또는 쿠폰 QR코드를 제시하시면 쿠폰을 사용하실 수 있습니다.</p>
+
+	                                            <p class="p1">별이 가득 담긴 Star 쿠폰을 <span>My 쿠폰</span>으로 등록하여 별로 전환해 보세요!</p>
+	                                            <p class="p2">하나의 Star 쿠폰에는 여러 개의 별이 들어 있으며, Star 쿠폰을 My 쿠폰으로 등록하는 즉시 별로 전환 됩니다.<br>전환된 별은 별 정책에 따라 승급/별 12개 쿠폰 발행에 사용됩니다.</p>
+	                                            <p class="p2">Star 쿠폰은 쿠폰 그 자체로 사용할 수 없으며, My 쿠폰 등록을 통해 별로 전환하여 사용 가능합니다.</p>
+	                                        </div>
+	                                        <p class="btn"><a href="javascript:void(0)">My 쿠폰 등록</a></p>
+	                                    </div>
+	                                    <!-- //e::211008 -->
+
+										<p class="mc">사용 가능한 보유 쿠폰 : <span class="totalCnt"></span></p>
+										<!-- 쿠폰리스트 150616 - 문진욱 -->
+										<section class="ecoupon_list_wrap">
+											<ul>
+											</ul>
+										</section>
+										<script id="myCouponList" type="text/x-jquery-tmpl">
+											<li style="background-image:url(${couponImgUrl}); background-repeat:no-repeat;">
+												<div class="ecoupon_list_cont">
+													<p>${couponName}<br /><span>${validStartDt} ~ ${validEndDt}</span></p>
+													{{html $item.getBtnCoupon}}
+													{{html $item.getRemainDays}}
+												</div>
+											</li>
+										</script>
+										<!-- 쿠폰리스트 150616 - 문진욱 end -->
+										<ul class="pager">
+										</ul>
+									</div>
+								</dd>
+								<dt class="dt2"><a href="javascript:void(0)">쿠폰 히스토리</a></dt>
+								<dd style="display:none;">
+									<!-- 기간선택 -->
+									<!-- 170213 황기흠 수정 -->
+									<section class="ec_pick_period">
+										<form action="" method="post">
+											<fieldset>
+												<legend>기간 선택 폼</legend>
+												<dl class="my_rsh_pick_bg">
+													<dt>기간별</dt>
+													<dd>
+														<!--<input id="pickPeriod1" name="pickPeriod" type="radio">
+														<label for="pickPeriod1">일주일</label>-->
+														<input id="pickPeriod2" name="pickPeriod" type="radio" checked="checked" value="1_MONTH">
+														<label for="pickPeriod2">1개월</label>
+														<!--<input id="pickPeriod3" name="pickPeriod" type="radio">
+														<label for="pickPeriod3">3개월</label>-->
+														<input id="pickPeriod4" name="pickPeriod" type="radio" value="1_YEAR">
+														<label for="pickPeriod4">1년</label>
+													</dd>
+												</dl>
+												<dl class="my_card_pick_date">
+													<dt>일자별</dt>
+													<dd>
+														<div class="pick_date_each">
+															<div class="pick_date_each_left"><input type="text" id="pickDate01" name="pickDate" title="원하는 날짜를 선택해 주세요." readonly="readonly" /></div>
+															<div class="pick_date_each_right"><label for="pickDate01">날짜 선택</label></div>
+														</div>
+														<p class="hyphen_bg"></p>
+														<div class="pick_date_each">
+															<div class="pick_date_each_left"><input type="text" id="pickDate02" name="pickDate" title="원하는 날짜를 선택해 주세요." readonly="readonly" /></div>
+															<div class="pick_date_each_right"><label for="pickDate02">날짜 선택</label></div>
+														</div>
+														<p class="btn_pick_date"><a href="javascript:void(0);">검색</a></p>
+													</dd>
+												</dl>
+											</fieldset>
+										</form>
+									</section>
+									<!-- 170213 황기흠 수정 end -->
+									<!-- 기간선택 end -->
 									
-										<!-- 일반충전영역 - PLCC 배너 추가 202009 -->									
-										<!-- PLCC 배너 삭제 20210607 
-										<div class="plcc-banner_box normal_charge_plcc_banner">
-										</div> -->
-										
-									<!-- <div class="paymentBannerArea" style="display:none;">
-										일반충전영역 - [결제배너관리] 충전 배너 슬라이드 PC
-										<div class="paymentSlideArea type1 pc" id="paymentSlideArea1">
-											<div class="bxslide-main">
-												<ul class="payment_slider s1 payment_slider_web">
-												</ul>
-												<div class="payment_slider_control_pager">
-													<div class="payment_slider_controls s1"></div>
-													<div class="payment_slider_pagers s1"></div>
-												</div>
-											</div>
-											<div class="payslide_btn_wrap">
-												<p class="prevBtn"><a href="javascript:void(0)">이전 버튼</a></p>
-												<p class="nextBtn"><a href="javascript:void(0)">다음 버튼</a></p>
-											</div>
-										</div>
-										
-										일반충전영역 - [결제배너관리] 충전 배너 슬라이드 MOBILE
-										<div class="paymentSlideArea type1 mobile" id="paymentSlideArea2">
-											<div class="bxslide-main">
-												<ul class="payment_slider m1 payment_slider_mobile">
-												</ul>
-												<div class="payment_slider_control_pager">
-													<div class="payment_slider_controls m1"></div>
-													<div class="payment_slider_pagers m1"></div>
-												</div>
-											</div>
-											<div class="payslide_btn_wrap">
-												<p class="prevBtn"><a href="javascript:void(0)">이전 버튼</a></p>
-												<p class="nextBtn"><a href="javascript:void(0)">다음 버튼</a></p>
-											</div>
-										</div>
-									</div> -->
+									<!-- 170213 황기흠 수정 -->
+									<p class="my_card_date_refer mb30">최대 조회 기간은 5년입니다.</p>
+									<!-- 170213 황기흠 수정 end -->
+																		
+									<table summary="사용 가능한 쿠폰 내역 웹 버전" class="list_tb">
+										<caption class="hid">사용 가능한 쿠폰 썸네일, 쿠폰명, 유효기간, 쿠폰 남은 기간, 쿠폰 선물하기</caption>
+										<colgroup>
+											<col width="62">
+											<col width="83">
+											<col width="253">
+											<col width="197">
+											<col width="130">
+											<col width="106">
+										</colgroup>
+										<thead>
+											<tr>
+												<th scope="col">No</th>
+												<th scope="col">구분</th>
+												<th scope="col">쿠폰명</th>
+												<th scope="col">유효기간</th>
+												<th scope="col">사용여부</th>
+												<th scope="col">상세내역</th>
+											</tr>
+										</thead>
+										<tbody>
+										</tbody>
+									</table>
+									<script id="myCouponHistoryList" type="text/x-jquery-tmpl">
+										<tr>
+											<td class="center">${$item.getSeq}</td>
+											<td class="center"><img src="${couponImgUrl}" alt=""></td>
+											<td class="tt">${couponName}</td>
+											<td class="en">${validStartDt} ~ ${validEndDt}</td>
+											<td class="center">{{html $item.getStatus}}</td>
+											<td class="center">{{html $item.getBtnDetail}}</td>
+										</tr>
+									</script>
 									
-										<!-- 웹테이블 -->
-										<table class="regular_charge gift_info_tbl chargeWh" summary="충전 카드 선택, 충전 금액 선택, 결제 수단 선택, 온라인 충전 시 유의 사항"><!-- 20181101 class="chargeWh" 추가 -->
-											<caption>충전 카드 선택, 충전 금액 선택, 결제 수단 선택, 온라인 충전 시 유의 사항에 대한 테이블</caption>
-											
+									<table summary="사용 가능한 쿠폰 내역 모바일 버전" class="m_list_tb">
+										<caption class="hid">사용 가능한 쿠폰 썸네일, 쿠폰명, 유효기간, 쿠폰 남은 기간, 쿠폰 선물하기</caption>
+										<colgroup>
+											<col width="23.4375%">
+											<col width="76.5625%">
+										</colgroup>
+										<thead>
 											<tr>
-												<th scope="row">충전 카드 선택</th>
-												<td>
-													<div class="sel_wrap">
-														<p class="user_sel_wrap">
-															<label for="cardNumber_NORMAL"></label>
-															<select id="cardNumber_NORMAL" name="cardNumber">
-															<!-- 0614 해야함 -->
-																<%-- <c:forEach var="" items="">
-																	<option></option>
-																</c:forEach> --%>	
-															</select><br><br>
-														</p>
-														
-													</div>
-													<!-- <div class="user_card_wrap">
-														<p>
-															<strong class="en cardNumber"></strong><br /><br />
-															최종 사용일 : <span class="balanceConfirmDate">2015-03-23 09:37</span><br />
-															카드 등록일 : <span class="cardRegDate">2015-02-01 00:00</span>
-														</p>
-													</div> -->
-													<div>
-													<!-- 0614 header.js에서 cardNumber 검색하면 정보 불러오는 js 볼 수 있음 -->
-													<strong class="en cardNumber"></strong><br /><br />
-													카드 등록일 : <span class="cardRegDate"><%-- ${cardRegDate } --%></span>
-													</div>
-												</td>
+												<th scope="col">구분</th>
+												<th scope="col">쿠폰명, 유효기간, 사용여부</th>
 											</tr>
-											<tr>
-											<!-- 20180117 수정 -->
-												<th scope="row">충전 금액 선택</th>
-												<td>
-												<!-- 20180117 수정 -->
-												<div class="sel_wrap">
-													<p class="charge_change">충전 후 총 카드 잔액 : <span class="en t_006633 afterChargeBalance" name="totPrice"><%-- ${} --%></span>원</p>
-												</div>
-													<ul class="charge_options">
-							                          <li><label><input type="radio" value="100000" name="totPrice">10만원</label></li>
-							                          <li><label><input type="radio" value="50000" name="totPrice">5만원</label></li>
-							                          <li><label><input type="radio" value="30000" name="totPrice">3만원</label></li>
-							                          <li><label><input type="radio" value="10000" name="totPrice">1만원</label></li>
-							                        </ul>
-												</td>
-												<!-- <td>
-													<div class="sel_wrap">
-														<p class="user_sel_wrap">
-															<label for="totPrice_NORMAL"></label>
-															<select id="totPrice_NORMAL" name="totPrice">
-															</select>
-														</p>
-														<p class="charge_change">충전 후 총 카드 잔액 : <span class="en t_006633 afterChargeBalance">0</span>원</p>
-													</div>
-                                                    <p class="charge_level_guide">스타벅스 카드 온라인 충전은 1만원 단위로 최대 55만원까지 가능하며, 충전 후 합계 잔액이 55만원을 초과할 수 없습니다. </p>
-												</td> -->
-											</tr>
-											<tr>
-												<th scope="row">결제 수단 선택</th>
-												<td>
-													<div class="sel_wrap">
-														<p class="user_sel_wrap">
-															<label for="gopaymethod_NORMAL">카카오페이</label>
-															<select id="gopaymethod_NORMAL" name="gopaymethod">
-																<option value="onlykakao" selected="selected">카카오페이</option>
-																<!-- <option value="onlyhpp">휴대폰</option>
-																<option value="onlydbank">실시간 계좌이체</option> -->
-															</select>
-														</p>
-													</div>
-												</td>
-											</tr>
-											<tr>
-												<th scope="row">온라인 충전 시<br>유의 사항</th>
-												<td>
-													<ol class="charge_warn">
-														<li>
-															1. 이용안내
-															<ul>
-																<li>
-																	스타벅스 리워드 프로그램에 등록된 스타벅스 카드의 충전은 매장 충전 외에도 다음의 온라인 서비스를 통해<br>이용하실 수 있습니다. <!-- 스타벅스 리워드 수정  -->
-																	<ul>
-																		<li>PC 홈페이지 (www.starbucks.co.kr)</li>
-																		<li>스타벅스 App (iOS 및 Android 버전 제공)</li> <!-- 스타벅스 리워드 수정  --> <!-- 20210216 수정 -->
-																	</ul>
-																</li>
-																<li>
-																	온라인 충전은 회원님의 편의를 위해 다음의 2가지 방법으로 제공됩니다.
-																	<ul>
-																		<li>일반 충전 : 필요시 마다 충전금액과 결제수단 등의 정보를 입력하여 즉시 충전</li>
-																		<li>자동 충전 : 카드별로 자동충전방법, 충전금액, 결제수단 등을 미리 설정해두고 설정값에 따라 자동 충전(카드번호 등<br>결제수단 정보는 거래승인을 위해서 최초 신청시에만 입력을 받게되며 신청이 완료된 후 저장되지 않습니다.)</li>
-																	</ul>
-																</li>
-																<li>온라인 접속 환경 및 충전 방법에 따라 충전시 결제 수단에 차이가 있을 수 있습니다.</li>
-																<li>스타벅스 카드 충전 금액에 대한 현금 영수증은 충전 시에는 발행되지 않으며, 매장에서 실제로 구매결제 시 발행됩니다.</li>
-																<li>카드 충전금액의 유효기간은 스타벅스 카드의 마지막 거래발생일로부터 5년 입니다.</li>
-															</ul>
-														</li>
-														<li>
-															2. 온라인 충전 취소
-															<ul>
-																<li>재충전 이후 거래 이력이 없는 경우, 충전일로부터 최대 7일 내 온라인에서 충전 취소가 가능합니다.</li><!-- 2019.05.27 [My Card / e-Gift Card 휴대폰 결제 취소] 문구 수정 -->
-																<li>휴대폰 충전 시, 충전취소 요청 일이 당월이 아닌 익월인 경우 익월 취소가 불가한 통신사의 정책에 따라 지정하신 계좌로 <br>환불됩니다. (ex 3/30 충전, 4/2 충전 취소요청 &rarr; 계좌환불)</li><!-- 2019.05.27 [My Card / e-Gift Card 휴대폰 결제 취소] 문구 수정 -->
-																<li>매장에서 충전한 거래는 온라인에서 취소하실 수 없습니다.</li>
-															</ul>
-														</li>
-														<li>
-															3. 온라인 충전 제한
-															<ul>
-																<li>미성년자(만 14세 미만)는 온라인 충전을 하실 수 없습니다.</li>
-															</ul>
-															<p class="fw_normal">※ 매장, 홈페이지, 모바일 애플리케이션 간 충전 가능한 결제수단의 차이가 있을 수 있습니다.</p> <!-- 20210216 추가 -->
-														</li>
-													</ol>
-												</td>
-											</tr>
-										</table>
-										<!-- 웹테이블 end -->
-										<input type="text" style="display:none;" />
-									</form>									
-									<!-- 160125 김민호 추가 -->
-										<div class="ez-checkbox cahrge_page_ck">
-											<input type="checkbox" name="sui_index" id="notice_ck02" t="COMMON" title="선택" value="26" class="ez-hide delegatecardynChk" > 
-											<span class="charge_change">충전 후 대표카드 설정</span>
-										</div>
-									<!-- 160125 김민호 추가 end -->
-									<ul class="charge_tbl_btns">
-										<li class="charge_tbl_btn1"><a href='javascript:void(0);' class="charge_normal">카드 충전</a></li>
-										<li class="charge_tbl_btn2"><a href="javascript:history.back();">취소</a></li>
+										</thead>
+										<tbody>
+										</tbody>
+									</table>
+									<script id="myCouponHistoryList_MOBILE" type="text/x-jquery-tmpl">
+										<tr>
+											<td class="kind"><img src="${couponImgUrl}" alt=""></td>
+											<td>
+												<p class="p1">${couponName}</p>
+												<p class="p2">${validStartDt} ~ ${validEndDt}</p>
+												<p class="p3">{{html $item.getStatus}}</p>
+											</td>
+										</tr>
+									</script>
+									
+									<ul class="pager">
 									</ul>
-								</article>									
-							
-								
-								
-							</section>
-						<!-- 카드 충전 end -->
+								</dd>
+							</dl>
+						</div>
+						<!-- My e-쿠폰 end -->
 					</div>
 					
 					
@@ -1228,12 +1401,12 @@ var eFrequencyPlannerYn = 'Y';
 						/* ,"monthNamesShort" : ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'] */
 					});
 			
-//	 					var sbox = $('.my_ms_select select');
+// 					var sbox = $('.my_ms_select select');
 // 					sbox.change(function(){
 // 						접근성_20171123 삭제
 // 						var sbox_name = $(this).children('option:selected').text();
 // 						$(this).siblings('label').text(sbox_name);
-// 					});접근성_20171201 삭제 
+// 					});접근성_20171201 삭제
 
 					/* s::20210714 수정 */
 					/* 170201 수정 - 황기흠 */
@@ -1464,341 +1637,83 @@ var eFrequencyPlannerYn = 'Y';
 			</script>
 		
 			
-			<script src="../common/js/utilMSreward.js"></script>
-			<script src="../common/js/jquery.ezmark.min.js"></script>
-			<script>
-				// [결제배너관리] 슬라이드 추가
-				var paySlides = new Array();
-				var isPaymentBannerLoad = false;
-				var errorMsg = '처리에 실패하였습니다. 지속적으로 발생 시 고객센터에 문의해 주시기 바랍니다.';
-				
-				$(document).ready(function(){
-
-					$('input[type=checkbox]').ezMark();
-
-					$('#ckAll').click(function(){
-						$('input:checkbox').prop('checked', this.checked).change();
-					});
-
-					var sbox = $('.user_sel_wrap select');
-					sbox.change(function(){
-						var sbox_name = $(this).children('option:selected').text();
-						$(this).siblings('label').text(sbox_name);
-					});
-
-					/* 150603 - 문진욱 */
-
-					var sbox2 = $('.reg_user_sel_wrap select');
-					sbox2.change(function(){
-						var sbox_name = $(this).children('option:selected').text();
-						$(this).siblings('label').text(sbox_name);
-					});
-
-					/* 150603 - 문진욱 end */
-
-					/*
-					$('.ctype1').click(function(){
-						$('.lowest_limit').show();
-						$('.monthly_fixed').hide();
-					});
-
-					$('.ctype2').click(function(){
-						$('.lowest_limit').hide();
-						$('.monthly_fixed').show();
-					});
-					*/
-
-					$('section.card_charge_wrap h5 a:not(.on)').parent().next().hide();
-					$('section.card_charge_wrap h5 a').bind('click', function(){
-						$('section.card_charge_wrap h5 a').removeClass('on');
-						$(this).addClass('on');
-						$('section.card_charge_wrap article').hide();
-						$(this).parent().next().show();
-						
-						// [결제배너관리] 슬라이드 추가
-						setReloadSlider();
-
-						return false;
-					});
-					
-					setPaymentBannerSlide();// [결제배너관리] 슬라이드 추가
-					getPaymentBannerList($('#bannerTypePaymentCharge').val()); //[결제배너관리] 배너리스트 호출
-					
-				});
-				
-				function getPaymentBannerList(sabBannerType) { //[결제배너관리] 충전 배너 리스트 조회
-					var option = {
-							'bannerType': sabBannerType
-					};
-					
-					__ajaxCall('banner/getPaymentBannerList', option, true, "JSON", "POST",
-						function (data) {
-							if (data.list.length > 0) {
-								for (var i = 0; i < data.list.length; i++) {
-									if (data.list[i].imgUrl != undefined && data.list[i].imgUrl != "" 
-											&& data.list[i].subImgUrl != undefined && data.list[i].subImgUrl != ""
-												&& data.list[i].schema != undefined && data.list[i].schema != "") {
-										var isTarget = ""; 
-										if(data.list[i].bnrNwndwYn != undefined && data.list[i].bnrNwndwYn == "Y") {
-											isTarget = "_blank";
-										}
-										var bannerHtml = '<li><a href="'+data.list[i].schema+'" target="'+isTarget+'">';
-											bannerHtml += '<img class="payment_banner_web" src="'+data.list[i].imgUrl+'"/></a></li>';
-											
-										var	bannerHtmlM = '<li><a href="'+data.list[i].schema+'" target="'+isTarget+'">';
-											bannerHtmlM += '<img class="payment_banner_mobile" src="'+data.list[i].subImgUrl+'"/></a></li>';
-										
-										$(".payment_slider_web").append(bannerHtml); //[web]일반,자동충전 페이지에 노출
-										$(".payment_slider_mobile").append(bannerHtmlM); //[mobile]일반,자동충전 페이지에 노출
-										
-										isPaymentBannerLoad = true;
-									}
-								}
-								if(isPaymentBannerLoad) {
-									$(".paymentBannerArea").show();
-									setReloadSlider();
-								}
-							}
-						}
-					);
-					
-				}
-				
-				function setPaymentBannerSlide() { //[결제배너관리] 슬라이드 추가
-					setBxSlider('paymentSlideArea1');
-					setBxSlider('paymentSlideArea2');
-					setBxSlider('paymentSlideArea3');
-					setBxSlider('paymentSlideArea4');
-					
-					// resize sldier reload
-					$(window).on("resize", function () {
-						setReloadSlider();
-					});
-				}
-				function setReloadSlider() {
-					if(isPaymentBannerLoad){
-						$.each(paySlides, function (index) { 
-							paySlides[index].reloadSlider();
-						});
-					}
-				}
-				function setBxSlider(elementId) {
-					var $selector = $('#'+elementId);
-					var slider = $selector.find('ul.payment_slider').bxSlider({
-						pause: 5000,
-						speed: 2000,
-						auto: true,
-						autoControls: true,
-						autoControlsCombine:true,
-						controls: true,
-						pager: true,
-						pagerSelector: $selector.find("div.payment_slider_pagers"),
-						autoControlsSelector: $selector.find("div.payment_slider_controls")
-					});
-					
-					$selector.find("p.prevBtn").click(slider.goToPrevSlide);
-					$selector.find("p.nextBtn").click(slider.goToNextSlide);
-					
-					paySlides.push(slider);
-				}
-			</script>
-			
-			<script language="javascript" type="text/javascript" src="//stdpay.inicis.com/stdjs/INIStdPay.js" charset="UTF-8"></script>
-			
 			<script src="../common/js/common_jhp.js"></script>
-			<script src="../common/js/my/mycard_charge.js?v=220117"></script>
+			<script src="../common/js/my/ecoupon.js?v=211115"></script>
+			
+			<script type="text/javascript">
+				<!-- 20170726추가 -->
+				$(document).ready(function () {
+					if(m_jsonRewardSummary != null && m_jsonRewardSummary.msrMemberYn == "Y") {
+						$('input[name=starcoupon_num]').prop("disabled", false);
+						$('#pinCode').prop("disabled", false);
+						$('#starCouponRegInfo').removeClass('nonsr_user');
+					}
+
+					//s::211008 수정
+					$('.couponTabList li').on('click', function(){
+
+						var idx = $(this).index(),
+						$couponContent = $('.myCouponCb');
+
+						$("form").each(function() { // form reset
+							if(this.id == "efrm1") this.reset();
+						});
+
+						$(this).addClass('cpTabOn').siblings().removeClass('cpTabOn');
+
+						$couponContent.hide();
+						$('.myCouponCb'+(idx+1)).show();
+
+					});
+					//e::211008
+				});
+				<!--// 20170726추가 -->
+
+				$(".select_box select").on("change",function(){
+					$(this).prev()($(this).find("option:selected").text());
+					}).prev()(function() {
+					return $(this).next().find("option:selected").text();
+				});
+	
+
+	/*
+				$("a.detailView").bind("click", function(){
+	
+					var ww = $(window).scrollTop();
+					$("div.ecPop3").css('top', ww + "px");
+					$("div.myDimm").show();
+					$("div.ecPop3").fadeIn();
+					return false;
+				});
+	*/
+
+	
+				$(".designScroll").mCustomScrollbar(); // 팝업 스크롤
+				/* 성연욱 추가 end */
+				
+				(function($) {
+					$.fn.seqfx = function() {
+						var elements = this,
+							l = elements.length,
+							i = 0;
+	
+						function execute() {
+							var current = $(elements[i]);
+							i = (i + 1) % l;
+	
+							current
+								.animate({ rotateY: '360deg' }, 2000)
+								.animate({ rotateY: '-360deg' }, 2000, execute);
+						}
+						execute();
+						return this;
+					};
+				}(jQuery));
+				$('.coffee').seqfx();
+				
+				
+				var m_strType = '';
+			</script>
 		</div>
-		
-		
-		<input type="hidden" id="bannerTypePaymentCharge" value="STB9002" />
-		
-		
-		<form id="ini_normal_web" name="ini_normal_web" method="post">
-			<input type="hidden" name="gopaymethod" size=20 value="">
-			<input type="hidden" name="goodname" size=20 value="">
-			<input type="hidden" name="buyername" size=20 value="정다정" />
-			<input type="hidden" name="buyeremail" size=20 value="wjdekwjd02@naver.com" />
-			<input type="hidden" name="buyertel" size=20 value="010-4036-4933" />
-		
-			<input type="hidden" name="acceptmethod" value="SKIN(GREEN):HPP(2):no_receipt:cp_msg(현대카드 H-COIN만 사용 가능합니다. [M포인트 사용 불가]):CardPoint">
-			<input type="hidden" name="currency" value="WON">
-			
-			<input type="hidden" name="oid" size=40 value="">
-			
-			<input type="hidden" name="ini_encfield" value="">
-			<input type="hidden" name="ini_certid" value="">
-			<input type="hidden" name="quotainterest" value="">
-			<input type="hidden" name="paymethod" value="">
-			<input type="hidden" name="cardcode" value="">
-			<input type="hidden" name="cardquota" value="">
-			<input type="hidden" name="rbankcode" value="">
-			<input type="hidden" name="reqsign" value="DONE">
-			<input type="hidden" name="encrypted" value="">
-			<input type="hidden" name="sessionkey" value="">
-			<input type="hidden" name="uid" value=""> 
-			<input type="hidden" name="sid" value="">
-			<input type="hidden" name="version" value=5000>
-			<input type="hidden" name="clickcontrol" value="enable">
-		</form>
-		
-		<form id="ini_normal_web_std" name="" method="POST" >
-			<input type="hidden" name="goodname" value="" >
-			<input type="hidden" name="buyername" value="정다정" >
-			<input type="hidden" name="buyertel" value="010-4036-4933" >
-			<input type="hidden" name="buyeremail" value="wjdekwjd02@naver.com" >
-			<input type="hidden" name="price" value="" >
-			<input type="hidden" name="mid" value="" >
-			<input type="hidden" name="gopaymethod" value="" >
-			<input type="hidden" name="mKey" value="" >
-			<input type="hidden" name="signature" value="" >
-			<input type="hidden" name="oid" value="" >
-			<input type="hidden" name="timestamp" value="" >
-			<input type="hidden" name="version" value="1.0" >
-			<input type="hidden" name="currency" value="WON" >
-			<input type="hidden" name="acceptmethod" value="SKIN(GREEN):popreturn:HPP(2):no_receipt:cardpoint" >
-			<input type="hidden" name="returnUrl" value="" >
-			<input type="hidden" name="closeUrl" value="" >
-			<input type="hidden" name="customized_msg" value="cp_msg_cardCode=04&cp_msg_custom=현대카드 H-COIN만 사용 가능합니다. [M포인트 사용 불가]" >
-		</form>
-		
-		<form id="ini_auto_web_std" name="" method="POST" >
-			<input type="hidden" name="goodname" value="" >
-			<input type="hidden" name="buyername" value="정다정" >
-			<input type="hidden" name="buyertel" value="010-4036-4933" >
-			<input type="hidden" name="buyeremail" value="wjdekwjd02@naver.com" >
-			<input type="hidden" name="price" value="" >
-			<input type="hidden" name="mid" value="" >
-			<input type="hidden" name="gopaymethod" value="" >
-			<input type="hidden" name="mKey" value="" >
-			<input type="hidden" name="signature" value="" >
-			<input type="hidden" name="oid" value="" >
-			<input type="hidden" name="timestamp" value="" >
-			<input type="hidden" name="version" value="1.0" >
-			<input type="hidden" name="currency" value="WON" >
-			<input type="hidden" name="acceptmethod" value="SKIN(GREEN):popreturn:cardpoint:HPP(5)" >
-			<input type="hidden" name="returnUrl" value="" >
-			<input type="hidden" name="closeUrl" value="" >
-			<input type="hidden" name="customized_msg" value="cp_msg_cardCode=04&cp_msg_custom=현대카드 H-COIN만 사용 가능합니다. [M포인트 사용 불가]" >
-		</form>
-		
-		<form id="ini_normal_mobile" name="ini_normal_mobile" method="post" accept-charset="UTF-8">
-			<input type="hidden" name="P_MID" />
-			<input type="hidden" name="P_OID" />
-			<input type="hidden" name="P_AMT" />
-			<input type="hidden" name="P_UNAME" value="정다정" />
-			<input type="hidden" name="P_MNAME" />
-			<input type="hidden" name="P_GOODS" />
-			<input type="hidden" name="P_MOBILE" value="010-4036-4933" />
-			<input type="hidden" name="P_EMAIL" value="wjdekwjd02@naver.com" />
-			<input type="hidden" name="P_NEXT_URL" value="" />
-			<input type="hidden" name="P_NOTI_URL" value="" />
-			<input type="hidden" name="P_RETURN_URL" value="" />
-			<input type="hidden" name="P_NOTI" />
-			<input type="hidden" name="P_RESERVED" value="block_isp=Y&twotrs_isp=Y&twotrs_isp_noti=N&apprun_check=Y&cp_yn=Y&ismart_use_sign=Y&disable_kpay=Y&bank_receipt=N" />
-			<input type="hidden" name="P_HPP_METHOD" value="2" />
-			<input type="hidden" name="P_TID" />
-			<input type="hidden" name="P_CUSTOMIZED_MSG" value="cp_msg=현대카드 H-COIN만 사용 가능합니다. [M포인트 사용 불가]" />
-			
-		</form>
-		
-		<form id="ini_auto_web" name="ini_auto_web" method="post">
-			<input type="hidden" name="buyername" size=20 value="정다정" />
-			<input type="hidden" name="goodname" size=20 value="" />
-			<input type="hidden" name="mid" size=20 maxlength=10 value="" />
-			<input type="hidden" name="price" size=20 value="">
-			<input type="hidden" name="ini_offer_period" size=20 value="" />
-			<input type="hidden" name="print_msg" size=40 value="" />
-			<input type="hidden" name="acceptmethod" value="BILLAUTH:FULLVERIFY" />
-			
-			<input type="hidden" name="encrypted" value="" />
-			<input type="hidden" name="sessionkey" value="" />
-			<input type="hidden" name="cardcode" value="" />
-			<input type="hidden" name="uid" value="" />
-			<input type="hidden" name="version" value="4000" />
-			<input type="hidden" name="clickcontrol" value="" />
-			<input type="hidden" name="merchantreserved3"  value="" />
-			<input type="hidden" name="paymethod" value="">
-		</form>
-		
-		<form id="ini_auto_mobile" name="ini_auto_mobile" method="post" accept-charset="UTF-8">
-			<input type="hidden" name="mid" />
-			<input type="hidden" name="buyername" value="정다정" />
-			<input type="hidden" name="goodname" />
-			<input type="hidden" name="price" />
-			<input type="hidden" name="type" value="2" />
-			<input type="hidden" name="orderid" />
-			<input type="hidden" name="returnurl" />
-			<input type="hidden" name="merchantreserved" />
-			<input type="hidden" name="notice" />
-			<input type="hidden" name="timestamp" />
-			<input type="hidden" name="period" />
-			<input type="hidden" name="p_noti" />
-			<input type="hidden" name="hashdata" />
-		</form>
-		
-		
-		<form id="smarto_normal_web" method="post" action="https://pay.smilepay.co.kr/interfaceURL.jsp" accept-charset="UTF-8">
-			<input type="hidden" name="MID"             value=""     alt="MID" />
-			<input type="hidden" name="Moid"            value=""     alt="상품주문번호" />
-			<input type="hidden" name="PayMethod"       value=""     alt="지불수단" />
-			<input type="hidden" name="ReturnURL"       value="https://www.starbucks.co.kr/my/smartropay/stopPay" />
-			<input type="hidden" name="SocketYN"        value="Y"    alt="소켓사용유무" />
-			<input type="hidden" name="SocketReturnURL" value=""     alt="SocketReturnURL" />
-			<input type="hidden" name="BuyerAddr"       value=""     alt="" />
-			<input type="hidden" name="BuyerName"       value="%C1%A4%B4%D9%C1%A4" />
-			<input type="hidden" name="BuyerTel"        value="010-4036-4933" />
-			<input type="hidden" name="BuyerEmail"      value="wjdekwjd02@naver.com" />
-			<input type="hidden" name="GoodsCnt"        value="1"    alt="결제 상품 품목 개수" />
-			<input type="hidden" name="GoodsName"       value="%BD%BA%C5%B8%B9%F7%BD%BA%C4%AB%B5%E5%28%C0%CF%B9%DD%C3%E6%C0%FC%29" alt="거래 상품명" />
-			<input type="hidden" name="Amt"             value=""     alt="거래 금액" />
-			<input type="hidden" name="MallIP"          value=""     alt="상정서버IP" />
-			<input type="hidden" name="EncryptData"     value=""     alt="암호화데이터" />
-			<input type="hidden" name="ediDate"         value=""     alt="전문생성일시" />
-			<input type="hidden" name="OpenType"        value="KR"   alt="오픈타입" />
-			<input type="hidden" name="UrlEncode"       value="Y"    alt="결과응답 URLEncoding" />
-			<input type="hidden" name="EncodingType"    value="utf8" alt="결제결과 인코딩" />
-			<input type="hidden" name="FORWARD"         value="Y"    alt="화면처리방식" />
-			<input type="hidden" name="SecureType"      value="S2"   alt="암호화 타입" />
-		</form>
-		
-		<form id="smarto_normal_mobile" method="post" action="https://smpay.smilepay.co.kr/pay/interfaceURL" accept-charset="UTF-8">
-			<input type="hidden" name="MID"             value=""     alt="MID" />
-			<input type="hidden" name="Moid"            value=""     alt="상품주문번호" />
-			<input type="hidden" name="PayMethod"       value=""     alt="지불수단" />
-			<input type="hidden" name="ReturnURL"       value="https://www.starbucks.co.kr/my/smartropay/stopPay" />
-			<input type="hidden" name="StopURL"         value="https://www.starbucks.co.kr/my/smartropay/stopPay" />
-			<input type="hidden" name="SocketYN"        value="Y"    alt="소켓사용유무" />
-			<input type="hidden" name="SocketReturnURL" value=""     alt="SocketReturnURL" />
-			<input type="hidden" name="BuyerAddr"       value=""     alt="" />
-			<input type="hidden" name="BuyerName"       value="정다정" />
-			<input type="hidden" name="BuyerTel"        value="010-4036-4933" />
-			<input type="hidden" name="BuyerEmail"      value="wjdekwjd02@naver.com" />
-			<input type="hidden" name="GoodsCnt"        value="1"    alt="결제 상품 품목 개수" />
-			<input type="hidden" name="GoodsName"       value="스타벅스카드(일반충전)" alt="거래 상품명" />
-			<input type="hidden" name="Amt"             value=""     alt="거래 금액" />
-			<input type="hidden" name="MallIP"          value=""     alt="상정서버IP" />
-			<input type="hidden" name="UserIP"          value="175.116.9.23"     alt="회원사고객IP" />
-			<input type="hidden" name="ediDate"         value=""     alt="전문생성일시" />
-			<input type="hidden" name="OpenType"        value="KR"   alt="오픈타입" />
-			<input type="hidden" name="UrlEncode"       value="Y"    alt="결과응답 URLEncoding" />
-			<input type="hidden" name="EncodingType"    value="utf8" alt="결제결과 인코딩" />
-			<input type="hidden" name="SecureType"      value="S2"   alt="암호화 타입" />
-		</form>
-		
-		<form id="smarto_auto" method="post" action="" accept-charset="UTF-8">
-			<input type="hidden" name="PayMethod"       value=""       alt="결제수단" />
-			<input type="hidden" name="MID"             value=""       alt="상점아이디" />
-			<input type="hidden" name="Moid"            value=""       alt="상점요청주문번호" />
-			<input type="hidden" name="MallUserID"      value=""       alt="MallUserID" />
-			<input type="hidden" name="MallIP"          value=""       alt="상정서버IP" />
-			<input type="hidden" name="ReturnURL"       value="https://www.starbucks.co.kr/my/smartropay/mycard_charge_auto_cardbill_result_trans" alt="상점 결제결과 전송 URL" />
-			<input type="hidden" name="VerifyValue"     value=""       alt="해쉬데이터" />
-			<input type="hidden" name="SecureType"      value="S2"     alt="암호화 타입" />
-			<input type="hidden" name="EncodingType"    value="utf-8"  alt="응답 Charset" />
-			<input type="hidden" name="SspMallID"       value=""       alt="간편결제 가맹점ID" />
-			<input type="hidden" name="EdiDate"         value=""       alt="결제요청일시" />
-			<input type="hidden" name="RtnUrlEncUse"    value="Y"      alt="응답데이타UrlEncoding 처리 여부" />
-			<input type="hidden" name="IsPwdPass"       value="Y"      alt="결제 비밀번호 등록 Skip 여부" />
-		</form>
 	</body>
 </html>

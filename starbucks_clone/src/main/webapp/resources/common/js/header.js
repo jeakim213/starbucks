@@ -86,7 +86,7 @@ $.loginLib = {
 		
 		/*$('.util_nav .sign_in a').on("click", this.showLayerLogin);*/
 		$('.util_nav .sign_in a').on("click", function () {
-			location.href = m_domain_ssl + "/login/login.do";
+			location.href = m_domain_ssl + "/login/login";
 		});
 		
 		$('.util_nav .sign_out a').on("click", this.logout);
@@ -115,10 +115,11 @@ $.loginLib = {
 		});
 		*/
 		
+		// 0614 다정
 		$('a[required="login"]').on("click", function () {
 			var strHref = $(this).data("href");
 			
-			__ajaxCall("/interface/checkLogin.do", {}, true, "json", "post"
+			__ajaxCall("/starbucks/interface/checkLogin", {}, true, "json", "post"
 				,function (_response) {
 					if (_response.result_code == "SUCCESS") {
 						location.href = strHref;
@@ -128,9 +129,9 @@ $.loginLib = {
 						m_strTargetUrl = strHref;
 						*/
 						if(strHref.indexOf("javascript:void") > -1 || strHref.indexOf("javascript%3Avoid") > -1) {
-							location.href = "/login/login.do";
+							location.href = "/login/login";
 						} else {
-							location.href = "/login/login.do?redirect_url=" + encodeURIComponent(strHref);
+							location.href = "/login/login?redirect_url=" + encodeURIComponent(strHref);
 						}
 					}
 				}
@@ -144,7 +145,7 @@ $.loginLib = {
 		
 		// captcha 새로고침
 		$(".btn_new_captcha").on("click", function () {
-			$("p.captcha_img > img").attr("src", "/mem/captcha.do");
+			$("p.captcha_img > img").attr("src", "/mem/captcha");
 		});
 		*/
 	}
@@ -179,14 +180,14 @@ $.loginLib = {
 		}
 		*/
 		if(location.href.indexOf("javascript:void") > -1 || location.href.indexOf("javascript%3Avoid") > -1) {
-			location.href = "/login/login.do";
+			location.href = "/login/login";
 		} else {
-			location.href = "/login/login.do?redirect_url=" + encodeURIComponent(location.href);
+			location.href = "/login/login?redirect_url=" + encodeURIComponent(location.href);
 		}
 	}
 	
 	,setGnbSignInOut : function () {
-		__ajaxCall("/interface/checkLogin.do", {}, true, "json", "post"
+		__ajaxCall("/interface/checkLogin", {}, true, "json", "post"
 			,function (_response) {
 				if (_response.result_code == "SUCCESS") {
 					$(".top_msr_wrap").show();
@@ -210,13 +211,13 @@ $.loginLib = {
 	
 	/*
 	,setCaptcha : function () {
-		__ajaxCall("/interface/getLoginHistoryCnt.do", {}, true, "json", "post"
+		__ajaxCall("/interface/getLoginHistoryCnt", {}, true, "json", "post"
 			,function (_response) {
 				if (_response.result_code == "SUCCESS") {
 					var nLoginHistoryCnt = Number(_response.data);
 
 					if (nLoginHistoryCnt >= 5) {
-						$("p.captcha_img > img").attr("src", "/mem/captcha.do");
+						$("p.captcha_img > img").attr("src", "/mem/captcha");
 						
 						$("p.reg_chg_pw_warn, p.captcha_guide, fieldset.captcha_field").show();
 					}
@@ -228,7 +229,7 @@ $.loginLib = {
 	}
 	
 	,getCookieSaveId : function (_fnSuccess) {
-		__ajaxCall("/interface/getCookieSaveId.do", {}, true, "json", "post"
+		__ajaxCall("/interface/getCookieSaveId", {}, true, "json", "post"
 			,function (_response) {
 				if (_response.result_code == "SUCCESS") {
 					$("#txt_user_id").val(_response.data);
@@ -252,7 +253,7 @@ $.loginLib = {
 	*/
 	
 	,logout : function () {
-		__ajaxCall("/interface/logoutMember.do", {}, true, "json", "post"
+		__ajaxCall("/interface/logoutMember", {}, true, "json", "post"
 			,function (_response) {
 				if (_response.alert_msg != "") {
 					alert(_response.alert_msg);
@@ -269,7 +270,7 @@ $.loginLib = {
 	
 	,getMsrRewardSummary : function () {
 		//if (m_jsonRewardSummary == null) {
-			__ajaxCall("/interface/getMsrRewardSummary.do", {}, true, "json", "post"
+			__ajaxCall("/interface/getMsrRewardSummary", {}, true, "json", "post"
 				,function (_response) {
 					if (_response.result_code == "SUCCESS") {
 						m_jsonRewardSummary = jQuery.parseJSON(_response.data);
@@ -309,7 +310,7 @@ $.loginLib = {
 							$(".mycard_area2 .num").text("**** - **** - **** - " + cardNumber.substr(12, 4));
 							
 							// 바코드 출력
-							$(".mycard_area2 .barcord").css("background-image", "url(/my/barcode.do?c=" + m_jsonRewardSummary.cardInfo.cardBarcodeNumber + ")");
+							$(".mycard_area2 .barcord").css("background-image", "url(/my/barcode?c=" + m_jsonRewardSummary.cardInfo.cardBarcodeNumber + ")");
 							
 							// 대표카드 잔액
 							$divTopMSR.find(".balance").text( $.number(m_jsonRewardSummary.cardInfo.balance) );
@@ -361,8 +362,8 @@ $.loginLib = {
 							$divCenterMSR.find(".level_star_bg").text(nTotalStar);
 							
 							// 등급
-							$divTopMSR.find(".user_level_txt").html(strStatNotice_top);
-							$divCenterMSR.find(".user_level_txt").html(strStatNotice_center);
+							$divTopMSR.find(".user_level_txt")(strStatNotice_top);
+							$divCenterMSR.find(".user_level_txt")(strStatNotice_center);
 							
 							// e-쿠폰
 							$(".validCoupontCnt").text(m_jsonRewardSummary.validCoupontCnt);
@@ -380,7 +381,7 @@ $.loginLib = {
 							if (href.indexOf("/error/") == -1) {
 								if (arr[0] == "307") {
 									alert("MSR 서버 오류");
-									location.href = "/error/unusual_contact.do";
+									location.href = "/error/unusual_contact";
 								} else {
 									alert(arr[0]);
 								}
@@ -395,8 +396,8 @@ $.loginLib = {
 	}
 	
 	,showInboxNoCnt : function () {
-		//__ajaxCall("/interface/getInboxNoCnt.do", {}, true, "json", "post"
-		//__ajaxCall("/app/coffee/getInboxNoCnt.do", {}, true, "json", "post"
+		//__ajaxCall("/interface/getInboxNoCnt", {}, true, "json", "post"
+		//__ajaxCall("/app/coffee/getInboxNoCnt", {}, true, "json", "post"
 		//	,function(_response) {	
 		//		if (_response.result_code == "SUCCESS") {
 		//			m_nInboxNoCnt = _response.data;

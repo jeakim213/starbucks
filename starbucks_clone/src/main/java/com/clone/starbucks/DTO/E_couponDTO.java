@@ -1,5 +1,9 @@
 package com.clone.starbucks.DTO;
 
+import java.util.Date;
+
+import org.springframework.format.annotation.DateTimeFormat;
+
 /*
 create table e_coupon(
 pon_no number not null primary key,
@@ -9,7 +13,7 @@ pon_name varchar2(50) not null,
 pon_startdate date default sysdate not null,
 pon_enddate date default sysdate+30 not null,
 pon_used char(1) check(pon_used in ('Y','N')) not null,
-pon_usedate date default sysdate not null,
+pon_usedate date default sysdate,
 pon_cash number not null
 );
 
@@ -27,18 +31,19 @@ ORDER;
 */
 
 
-import java.sql.Date;
-
-public class e_couponDTO {
+public class E_couponDTO {
 	
 	private int pon_no; // 쿠폰 발행 순서 [not null, sequence]
-	private char pon_category;	// 쿠폰 카테고리(msr, 카카오톡선물...) [not null, check]
+	private String pon_category;	// 쿠폰 카테고리(msr, 카카오톡선물...) [not null, check]
 	private String pon_num;	// 쿠폰 고유번호 [not null, unique]
 	private String pon_name;	// 쿠폰 이름 [not null]
-	private Date pon_startdate;	// 쿠폰 시작일자 [not null, sysdate]
+	@DateTimeFormat(pattern="yyyy-MM-dd")
+	private Date pon_startdate;	// 쿠폰 시작일자 [not null, sysdate]  <<Date는 sql이어서 util로 바꿨습니당 -다정
+	@DateTimeFormat(pattern="yyyy-MM-dd")
 	private Date pon_enddate;	// 쿠폰 끝일자 [not null, 시작일자+30day]
 	private char pon_used;	// 쿠폰 사용여부 [not null, check]
-	private Date pon_usedate;	// 쿠폰 사용일자 [not null, sysdate]
+	@DateTimeFormat(pattern="yyyy-MM-dd")
+	private Date pon_usedate;	// 쿠폰 사용일자 [null, sysdate]
 	private int pon_cash;	// 쿠폰 금액 [not null]
 	
 	
@@ -48,10 +53,10 @@ public class e_couponDTO {
 	public void setPon_no(int pon_no) {
 		this.pon_no = pon_no;
 	}
-	public char getPon_category() {
+	public String getPon_category() {
 		return pon_category;
 	}
-	public void setPon_category(char pon_category) {
+	public void setPon_category(String pon_category) {
 		this.pon_category = pon_category;
 	}
 	public String getPon_num() {

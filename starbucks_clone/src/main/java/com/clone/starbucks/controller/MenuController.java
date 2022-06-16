@@ -1,6 +1,6 @@
 package com.clone.starbucks.controller;
 
-public class menuController {
+public class MenuController {
 	
 	//menu
 	
