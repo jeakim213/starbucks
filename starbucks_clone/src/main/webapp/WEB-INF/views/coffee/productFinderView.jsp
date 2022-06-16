@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="ko">
 
@@ -24,6 +24,10 @@
 <meta property="og:description" content="Starbucks">
 
 <title id="titleJoin">Starbucks Korea</title> <!-- 220117 수정 -->
+<script type="text/javascript" charset="utf-8">
+	sessionStorage.setItem("contextpath", "${pageContext.request.contextPath}");
+</script>
+<c:set var="cpath" value="${pageContext.request.contextPath}" />
 <link rel="shortcut icon" href="https://image.istarbucks.co.kr/common/img/common/favicon.ico?v=200828" type="image/ico"> <!-- 20200827 파비콘 교체 및 CDN 변수처리 -->
 <link href="../common/css/reset.css" rel="stylesheet">
 <link href="../common/css/style.css?v=210721" rel="stylesheet">
@@ -651,16 +655,16 @@ var eFrequencyPlannerYn = 'Y';
 		<!-- 서브 gnb -->
 		<div class="sub_gnb_wrap">
 			<div class="sub_gnb_wrap_inner">
-				<h1 class="logo"><a href="/" title="스타벅스 메인페이지" >스타벅스 코리아</a><!-- 접근성_20171106 title 추가 --></h1>
+				<h1 class="logo"><a href="/starbucks" title="스타벅스 메인페이지" >스타벅스 코리아</a><!-- 접근성_20171106 title 추가 --></h1>
 				<nav class="util_nav">
 					
 								
 <ul>
-	<li class="util_nav01 sign_out" style="display:none;"><a href="javascript:void(0);">Sign out</a></li>
-	<li class="util_nav01 sign_in"><a href="javascript:void(0);">Sign In</a></li>
-	<li class="util_nav02"><a href="my/index" required="login">My Starbucks</a></li>
-	<li class="util_nav03"><a href="menu/orderList">Order</a></li>
-	<li class="util_nav04"><a href="store/store_map">Find a Store</a></li>
+	<li class="util_nav01 sign_out" style="display:none;"><a href="/starbucks">Sign out</a></li>
+	<li class="util_nav01 sign_in"><a href="/starbucks/login/login">Sign In</a></li>
+	<li class="util_nav02"><a href="/starbucks/my/index" required="login">My Starbucks</a></li>
+	<li class="util_nav03"><a href="/starbucks/menu/orderList" required="login">Order</a></li>
+	<li class="util_nav04"><a href="/starbucks/store/store_map">Find a Store</a></li>
 </ul>
 				</nav>
 				
@@ -682,9 +686,9 @@ var eFrequencyPlannerYn = 'Y';
 						<h2><img src="//image.istarbucks.co.kr/common/img/coffee/coffee_productFinder_tit2.png" alt="나와 어울리는 커피"></h2>
 						<p class="coffee_sub_tit">당신과 잘 어울릴 것 같은 스타벅스의 커피 입니다.</p>
 						<ul class="smap">
-							<li><a href="javascript:void(0)"><img src="//image.istarbucks.co.kr/common/img/common/icon_home.png" alt="홈으로"></a></li>
+							<li><a href="/starbucks"><img src="//image.istarbucks.co.kr/common/img/common/icon_home.png" alt="홈으로"></a></li>
 							<li><img class="arrow" src="//image.istarbucks.co.kr/common/img/common/icon_arrow.png" alt="하위메뉴"></li>
-							<li class="en"><a href="javascript:void(0)">COFFEE</a></li>
+							<li class="en"><a href="#">COFFEE</a></li>
 							<li><img class="arrow" src="//image.istarbucks.co.kr/common/img/common/icon_arrow.png" alt="하위메뉴"></li>
 							<li><a href="javascript:void(0)" class="this">나와 어울리는 커피</a></li>
 						</ul>
@@ -696,22 +700,6 @@ var eFrequencyPlannerYn = 'Y';
 				<div class="productFinder_list_view">
 					<section class="cf_productFinder_wrap">								
 						<article class="cf_productFinder_inner">
-						<!-- 아마 이 부분 지워야할지도 -->
-							<div class="cf_productFinder_pic">
-								<p></p>
-							</div> 
-							<div class="cf_productFinder_ditail">
-								<h3>에스프레소 로스트 250g<br><span></span></h3>
-									<div class="m_cf_productFinder_pic"> 
-										<p><img src="https://image.istarbucks.co.kr/upload/store/skuimg/2015/07/[11017024]_20150722231936118.jpg" alt="에스프레소 로스트 250g" prcd="11017024"></p>
-									</div>  
-								<p class="title">
-									에스프레소 로스트는 라틴 아메리카와 아시아/태평양 원두로 만든 스타벅스의 특별한 블렌드로써 진한 카라멜 향을 느낄 수 있도록 로스팅 되었습니다. 이 진한 풀바디 커피는 우유와 함께 섞여도 에스프레소 본질적 특성을 잃지 않기에 가정에서 라떼나 카푸치노를 만들 때에도 적합합니다. 
-									출근 열차를 타기 위해 몰려드는 수많은 사람들... 이들에게 더 빠른 시간 안에 커피의 영혼을 잃지 않은 한 잔, 한 잔을 전하고자 이탈리아에서 에스프레소가 개발되었다고 합니다. 이후 지금은 이탈리아를 넘어 전 세계의 커피 애호가들에게 에스프레소는 오랜 시간 천천히 음미할 수 있는 마법과도 같은 순간을 만들어 주고 있습니다. 지금 이 순간에도 여전히 한 잔의 에스프레소가 또 한 분의 고객님을 위해 내려지고 있습니다.
-								</p>
-								<p class="text">풍부하고 조화로운 느낌으로 스타벅스 에스프레소 음료의 기본이 되는 커피</p> 
-							</div>
-						<!-- 지워 -->
 						</article>					
 					</section>					
 				</div>
@@ -719,35 +707,14 @@ var eFrequencyPlannerYn = 'Y';
 					<article class="cf_pFinder_bottom_inner">
 						<ul class="cf_pf_list">
 							<li>
-								<a href="javascript:void(0);">
-								<dl>
-								<dt>
-								<img src="https://image.istarbucks.co.kr/upload/store/skuimg/2015/07/[11017011]_20150722213025321.jpg" alt="카페 베로나 250g" prcd="11017011"></dt>
-								<dd>카페 베로나 250g</dd>
-								</dl>
-								</a>
-								</li>
-								<li><a href="javascript:void(0);">
-								<dl>
-								<dt>
-								<img src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/09/[9300000003566]_20210903133616470.jpg" alt="스타벅스 돌체구스토 에스프레소 12개입" prcd="9300000003566"></dt>
-								<dd>스타벅스 돌체구스토 에스프레소 12개입</dd>
-								</dl>
-								</a>
-								</li>
-								</ul>
+							</li>
+						</ul>
 					</article>
 				</section>		
 			</div>
             <form name="pForm" method="post">
                  <input type="hidden" name="PRODUCT_CD" />
             </form>
-			
-
-
-
-
-		
 			<!-- footer -->
 			<footer id="footer"> 
 				<div class="footer_wrap">
@@ -1206,10 +1173,9 @@ var eFrequencyPlannerYn = 'Y';
 			</script>
 		
 		<script src="../common/js/coffee.js"></script>
-		<script src="../common/js/jquery.ezmark.min.js"></script>		
+		<script src="../common/js/jquery.ezmark.min.js"></script>
 		<script type="text/javascript">
 			var pa = {
-					//지워야함 0606 다정
 					COFFEE_TASTE1 : "${COFFEE_TASTE1}",
 					COFFEE_FEEL : "${COFFEE_FEEL}",
 					COFFEE_INTEN : "${COFFEE_INTEN}"
@@ -1217,33 +1183,7 @@ var eFrequencyPlannerYn = 'Y';
 			
 		</script>
 		
-		<!-- 0606 다정 -->
-		<script type="text/javascript">
-		var $PRODUCT_CD = '${product_cd}';
-		function myCoffeeChoice(){
-			var option = {
-					'product_cd' : $PRODUCT_CD
-			};
-			
-			__ajaxCall(${pageContext.request.contextPath}/menu/productViewAjax', option , true, "JSON", "POST", 
-			function(data) {
-            	if (typeof data.view === 'undefined' || data.view == null) {
-            		alert("조회 불가능한 상품입니다.");
-            		location.href = "productFinder";
-                    return;
-            	}
-           	//<img src="https://image.istarbucks.co.kr/upload/store/skuimg/2015/07/[11017024]_20150722231936118.jpg" alt="에스프레소 로스트 250g" prcd="11017024">
-			$('div.cf_productFinder_pic > p').append('<img src="'+data.view.file_PATH+'" alt="'+data.view.product_NM +'" prcd="'+ $PRODUCT_CD+'">');
-			$('div.cf_productFinder_pic > .title').append(data.view.recommend);
-			$('div.cf_productFinder_pic > .text').append(data.view.content);
-			
-			
-			);
-		
-		}
-		</script>
-		
-		<!-- <script src="../common/js/coffee/myCoffeeChoice.js"></script> -->
+		<script src="../common/js/coffee/myCoffeeChoice.js"></script>
 		<script>
 			$(document).ready(function(){
 				

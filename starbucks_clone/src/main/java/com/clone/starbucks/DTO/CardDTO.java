@@ -9,7 +9,8 @@ c_saledate date default sysdate not null,
 id varchar2(30),
 remaincost number,
 c_num varchar2(20) not null unique,
-c_master number check(c_master in(0,1))
+c_master number check(c_master in(0,1)),
+c_pin varchar2(6) not null
 );
 
 ===== fk =====
@@ -72,6 +73,7 @@ public class CardDTO {
 	public void setC_master(int c_master) {
 		this.c_master = c_master;
 	}
+	
 	
 	
 

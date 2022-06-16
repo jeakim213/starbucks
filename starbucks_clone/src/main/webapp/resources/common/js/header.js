@@ -119,7 +119,8 @@ $.loginLib = {
 		$('a[required="login"]').on("click", function () {
 			var strHref = $(this).data("href");
 			
-			__ajaxCall("/starbucks/interface/checkLogin", {}, true, "json", "post"
+
+			__ajaxCall("starbucks/interface/checkLogin", {}, true, "json", "post"
 				,function (_response) {
 					if (_response.result_code == "SUCCESS") {
 						location.href = strHref;
@@ -187,7 +188,8 @@ $.loginLib = {
 	}
 	
 	,setGnbSignInOut : function () {
-		__ajaxCall("/interface/checkLogin", {}, true, "json", "post"
+
+		__ajaxCall("starbucks/interface/checkLogin", {}, true, "json", "post"
 			,function (_response) {
 				if (_response.result_code == "SUCCESS") {
 					$(".top_msr_wrap").show();

@@ -2,7 +2,6 @@ package com.clone.starbucks.service;
 
 import javax.mail.MessagingException;
 import javax.mail.internet.MimeMessage;
-import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.javamail.JavaMailSender;
@@ -11,8 +10,8 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class MailService {
+
 	@Autowired JavaMailSender mailSender;
-	@Autowired HttpSession session;
 	
 	public void sendMail(String to, String subject, String content) {
 		MimeMessage message = mailSender.createMimeMessage();

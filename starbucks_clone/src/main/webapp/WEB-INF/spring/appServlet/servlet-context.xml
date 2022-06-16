@@ -41,6 +41,7 @@
 	</beans:bean>
 	
 	<context:component-scan base-package="com.clone.starbucks" />
+	<context:component-scan base-package="com.clone.starbucks.controller" />
 	
 	
 	

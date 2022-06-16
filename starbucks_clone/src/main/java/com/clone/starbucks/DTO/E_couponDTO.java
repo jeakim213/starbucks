@@ -101,10 +101,5 @@ public class E_couponDTO {
 	public void setPon_cash(int pon_cash) {
 		this.pon_cash = pon_cash;
 	}
-	
-	
-	
-	
-	
 
 }
