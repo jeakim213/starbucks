@@ -18,7 +18,7 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
 @Controller
-public class coffeeController {
+public class CoffeeController {
 
 	// coffee
 	@RequestMapping(value = "coffee/americano")

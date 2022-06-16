@@ -924,11 +924,9 @@ var eFrequencyPlannerYn = 'Y';
 			
 				<!-- s::메인 리저브 배너(20220331) -->
 <style type="text/css">
-<<<<<<< HEAD
+
     .reserve_wrap {position:relative; height:400px; background:url("common/img/event/2022/reserve_2022_indonesia_visual_bg.jpg") no-repeat center top; background-size:cover; overflow:hidden}
-=======
-    .reserve_wrap {position:relative; height:400px; background:url("https://image.istarbucks.co.kr/img/event/2022/reserve_2022_indonesia_visual_bg.jpg") no-repeat center top; background-size:cover; overflow:hidden}
->>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
+
     
     .reserve_inner {position:relative; width:100%; height:100%; margin:0 auto;}
     
@@ -1024,21 +1022,15 @@ var eFrequencyPlannerYn = 'Y';
 <section class="reserve_wrap">
     <div class="reserve_inner">
         <div class="reserve_title">
-<<<<<<< HEAD
+
             <img src="common/img/event/2022/reserve_2022_indonesia_title.png" alt="INDONESIA WEST JAVA" class="reserve_visual-pc">
-=======
-            <img src="https://image.istarbucks.co.kr/img/event/2022/reserve_2022_indonesia_title.png" alt="INDONESIA WEST JAVA" class="reserve_visual-pc">
->>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
+
         </div>
         
         <div class="reserve_visual" style="opacity:1;">
-<<<<<<< HEAD
             <img src="upload/common/img/main/2022/reserve_2022_indonesia_visual3.png" alt="" class="reserve_visual-pc">
             <img src="common/img/event/2022/m_reserve_2022_indonesia_visual.jpg" alt="" class="reserve_visual-m">
-=======
-            <img src="https://image.istarbucks.co.kr/upload/common/img/main/2022/reserve_2022_indonesia_visual3.png" alt class="reserve_visual-pc">
-            <img src="https://image.istarbucks.co.kr/img/event/2022/m_reserve_2022_indonesia_visual.jpg" alt class="reserve_visual-m">
->>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
+
         </div>
         
         <div class="reserve_detail-btn_wrap">					
@@ -1136,22 +1128,14 @@ var eFrequencyPlannerYn = 'Y';
 			<section class="reserve_magazine_wrap">
                 <div class="reserve_inner">
                     <div class="reserve_title">
-<<<<<<< HEAD
                         <img src="common/img/event/2022/reserve_text_pc_220120.png" alt="리저브 매거진에서 일상 속 특별함을 만나보세요." class="reserve_visual-pc"> <!-- 220120 수정 -->
-=======
-                        <img src="https://image.istarbucks.co.kr/img/event/2022/reserve_text_pc_220120.png" alt="리저브 매거진에서 일상 속 특별함을 만나보세요." class="reserve_visual-pc"> <!-- 220120 수정 -->
->>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
+
                     </div>
-                    
-<<<<<<< HEAD
+                   
                     <div class="reserve_visual">
                         <img src="common/img/event/2022/reserve_visual_pc_220119.png" alt="" class="reserve_visual-pc"> <!-- 220120 수정 -->
                         <img src="common/img/event/2022/reserve_visual_m_220119.jpg" alt="" class="reserve_visual-m"> <!-- 220120 수정 -->
-=======
-                    <div class="reserve_visual" style=>
-                        <img src="https://image.istarbucks.co.kr/img/event/2022/reserve_visual_pc_220119.png" alt="" class="reserve_visual-pc"> <!-- 220120 수정 -->
-                        <img src="https://image.istarbucks.co.kr/img/event/2022/reserve_visual_m_220119.jpg" alt="" class="reserve_visual-m"> <!-- 220120 수정 -->
->>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
+
                     </div>
                     
                     <div class="reserve_detail-btn_wrap">					
