@@ -24,12 +24,17 @@ var fir = '\
 '; 
 $.template( "fir", fir );
 $.template( "body", li );
-//0606 다정
-if(pa.COFFEE_TASTE1 != '' && pa.COFFEE_FEEL != '' && pa.COFFEE_INTEN != ''){ //pa는 FinderView에있음
-	__ajaxCall("${pageContext.request.contextPath}/coffee/getCoffeeFinderAjax", pa, true, "JSON", "POST", function(data) {
-		if(data.my.length > 0) { 
-			var f; //큰내용쪽
-			var m = new Array(); //작은내용쪽
+
+if(pa.COFFEE_TASTE1 != '' && pa.COFFEE_FEEL != '' && pa.COFFEE_INTEN != ''){
+	var ctx = getContextPath();
+	function getContextPath() {
+		 return sessionStorage.getItem("contextpath");
+	}
+	var storeInterfaceUrl = ctx + '/coffee/getCoffeeChoice';
+	__ajaxCall(storeInterfaceUrl, pa, true, "JSON", "POST", function(data) {
+		if(data.my.length > 0) {
+			var f;
+			var m = new Array();
 			
 			for (var i = 0;i <  data.my.length; i++) {
 				if( i == 0){
@@ -47,12 +52,11 @@ if(pa.COFFEE_TASTE1 != '' && pa.COFFEE_FEEL != '' && pa.COFFEE_INTEN != ''){ //p
         		if(prCd != "") {
         			form = document.pForm;
         			form.PRODUCT_CD.value = prCd;
-        			//0606 다정
-        			form.action = "productFinderView";
+        			form.action = "product_view";
         			form.submit();
         		}
 			});
-		}
+		}	
 	},function(data) {
 		alert("다시 확인해 주세요 ");
 		history.back();
@@ -60,5 +64,5 @@ if(pa.COFFEE_TASTE1 != '' && pa.COFFEE_FEEL != '' && pa.COFFEE_INTEN != ''){ //p
 	});
 }else{
 	alert("다시 확인해 주세요 ");
-	location.href = "productFinder"; //0606 다정
+	location.href = "productFinder";
 }

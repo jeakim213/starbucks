@@ -1,6 +1,6 @@
 $(document).ready(function () {
 	// 화면 중앙 로그인 영역 처리
-	__ajaxCall("/interface/checkLogin.do", {}, true, "json", "post"
+	__ajaxCall("starbucks/interface/checkLogin", {}, true, "json", "post"
 		,function (_response) {
 			if (_response.result_code == "SUCCESS") {
 				$(".new-rewards_wrap").hide();

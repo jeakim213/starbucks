@@ -52,7 +52,7 @@ $(document).ready(function () {
 
       if (pattern_check("#totalSearch", "검색어를  입력하세요.", "허용되지 않은 문자입니다.", getPattern('BASIC3')) == false) { return; }
       var search_word = encodeURI(encodeURIComponent($("#totalSearch").val()));
-      location.href = "/search/search.do?search=" + search_word;
+      location.href = "/search/search?search=" + search_word;
 
     }
 
@@ -72,7 +72,7 @@ $(document).ready(function () {
 	var strFolder = "";
 	var bIsLogin  = false;
 	
-	__ajaxCall("/interface/checkLogin.do", {}, true, "json", "post"
+	__ajaxCall("starbucks/interface/checkLogin", {}, true, "json", "post"
 		,function (_response) {
 			if (_response.result_code == "SUCCESS") {
 				bIsLogin = true;
@@ -364,7 +364,7 @@ $(document).ready(function () {
     });
 
     $('.footer_menus ul li.footer_2depth_ttl > a').click(function (e) {
-      location.href = '/footer/company/starbucks_information.do';
+      location.href = '/footer/company/starbucks_information';
       //e.preventDefault();
     });
 
@@ -389,7 +389,7 @@ $(document).ready(function () {
     });
 
     $('.footer_menus ul li.footer_2depth_ttl > a').click(function (e) {
-      location.href = '/footer/company/starbucks_information.do';
+      location.href = '/footer/company/starbucks_information';
       //e.preventDefault();
     });
 

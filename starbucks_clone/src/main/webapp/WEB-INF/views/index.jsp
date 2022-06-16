@@ -146,56 +146,12 @@ var eFrequencyPlannerYn = 'Y';
 
 					<!-- 유저레벨 -->
 					<!-- MSR 회원 -->
-					<div class="user_level" style="display:none;">
-						<a href="my/reward">
-							<p class="level_star_bg en">0</p>
-							<p class="user_level_txt"><!-- <strong class="t_ac8432 en userGrade">Gold Level</strong><br /><strong>무료음료</strong> 획득 별까지<br><strong class="necessaryStar">0개</strong> 남았습니다. --></p>
-						</a>
-					</div>
 					<!-- MSR 회원 end -->
-					
-					<!-- 일반회원 -->
-					<div class="msr_lead">
-						<a href="msr/msreward/level_benefit">
-							<p class="icon_msr_cup"></p>
-							<p class="msr_lead_txt"><strong>스타벅스 리워드</strong><br>혜택에 편리함까지 더한<br>스타벅스 리워드를<br>즐겨보세요.</p> <!-- 스타벅스 리워드 수정 -->
-						</a>
-					</div>
-					<!-- 일반회원 end -->
-					<!-- 유저레벨 end -->
 
-					<span class="msr_sep_line"></span>
 
 					<!-- 카드인포 -->
 					<!-- MSR 회원 -->
 					<!-- 150805 DOM 수정 -->
-					<div class="msr_card_info w_card_pic">
-						<p class="msr_card_area" onclick="location.href = '/my/mycard_index';" style="cursor:pointer;"><img alt=""></p>
-						<p class="card_info_txt">잔액 <strong class="en balance">0</strong>원</p>
-						<!-- 150924 - 다른카드보기버튼 추가 -->
-						<p class="btn_other_more"><a href="my/mycard_index">다른 카드 보기</a></p>
-						<!-- 150924 - 다른카드보기버튼 추가 ebd -->
-					</div>
-					<div class="msr_card_zone m_card_pic">
-						<div class="mycard_area1">
-							<img alt="카드이름">
-						</div>
-						<div class="mycard_area2">
-							<img alt="카드이름" src="common/img/common/mycard2.png">
-							<p class="num"><!-- 1234-1234-1234-1234 --></p>
-							<p class="barcord"><!-- <img src="//image.istarbucks.co.kr/common/img/common/bacord.png" alt=""> --></p>
-						</div>
-						<div class="mycard_one">
-							<!-- <div class="front"> -->
-							<img src="common/img/common/payment_icon1.png" alt="">
-							<!-- </div> -->
-							<!-- <div class="back"><img src="//image.istarbucks.co.kr/common/img/common/payment_icon1.png" alt=""></div> -->
-						</div>
-						<p class="mycard_money_result">잔액 <span class="en balance"><!-- 550,000 --></span>원</p>
-						<!-- 150924 - 다른카드보기버튼 추가 -->
-						<p class="btn_other_more"><a href="my/mycard_index">다른 카드 보기</a></p>
-						<!-- 150924 - 다른카드보기버튼 추가 ebd -->
-					</div>
 					<!-- 150805 DOM 수정 -->
 					<!-- MSR 회원 end -->
 										
@@ -612,13 +568,13 @@ var eFrequencyPlannerYn = 'Y';
 		<!-- 서브 gnb -->
 		<div class="sub_gnb_wrap">
 			<div class="sub_gnb_wrap_inner">
-				<h1 class="logo"><a href="index.htm" title="스타벅스 메인페이지">스타벅스 코리아</a><!-- 접근성_20171106 title 추가 --></h1>
+				<h1 class="logo"><a href="/starbucks" title="스타벅스 메인페이지">스타벅스 코리아</a><!-- 접근성_20171106 title 추가 --></h1>
 				<nav class="util_nav">
 					
 								
 <ul>
 	<li class="util_nav01 sign_out" style="display:none;"><a href="javascript:void(0);">Sign out</a></li>
-	<li class="util_nav01 sign_in"><a href="javascript:void(0);">Sign In</a></li>
+	<li class="util_nav01 sign_in"><a href="/starbucks/login/login">Sign In</a></li>
 	<li class="util_nav02"><a href="my/index" required="login">My Starbucks</a></li>
 	<li class="util_nav03"><a href="menu/orderList">Order</a></li>
 	<li class="util_nav04"><a href="store/store_map">Find a Store</a></li>
@@ -848,18 +804,8 @@ var eFrequencyPlannerYn = 'Y';
 				</div>
 			</section>
 			<!-- //메인 스타벅스 리워드 리뉴얼 -->
-			
-			<div class="line_msr" style="display:none;">
-				<div class="line_msr_wrap msr_new"><!-- 20200120 class="msr_new" 추가 -->
 					<!-- 유저레벨 -->
 					<!-- MSR 회원 -->
-					<div class="user_level">
-						<!-- s::20200120 페이스북 프로필 기능 삭제 관련 메인 수정 -->
-						<p class="level_star_bg en">0</p>
-						<div class="msr_info_area">
-							<p class="user_level_txt"><!-- <strong class="t_ac8432 en">Gold Level</strong><br><strong>무료음료</strong> 획득 별까지<br><strong>3개</strong> 남았습니다. --></p>
-							<p class="btn_reward_level"><a href="my/reward" title="마이 리워드" class="btn_reward">리워드 및 혜택</a></p>
-						</div>
 						<!-- e::20200120 페이스북 프로필 기능 삭제 관련 메인 수정 -->
 					</div>
 					<!-- MSR 회원 end -->
@@ -884,43 +830,13 @@ var eFrequencyPlannerYn = 'Y';
 
 					<!-- 카드인포 -->
 					<!-- MSR 회원 -->
-					<div class="msr_card_info w_card_pic">
 						<!-- s::20200120 페이스북 프로필 기능 삭제 관련 메인 수정 -->
-						<p class="msr_card_area" onclick="location.href = '/my/mycard_index';" style="cursor:pointer;" tabindex="0"><!-- 접근성_20171106 tabindex 추가 -->
-							<img alt="카드이름">
 						</p><!-- 접근성_20171106 tabindex 추가 -->
-						<div class="msr_info_area msr_card_txt_area">
-							<p class="card_info_txt">잔액 <strong class="en balance">0</strong>원</p>
-							<p class="btn_other_more"><a href="my/mycard_index">다른 카드 보기</a></p>
-						</div>
 						<!-- e::20200120 페이스북 프로필 기능 삭제 관련 메인 수정 -->
-					</div>
-					<div class="msr_card_zone m_card_pic">
-						<div class="mycard_area1">
-							<img alt="카드이름" onerror="this.src='https://image.istarbucks.co.kr/upload/common/img/icon/card_672x423.png';">
-						</div>
-						<div class="mycard_area2">
-							<img alt="카드이름" src="common/img/common/mycard2.png">
-							<p class="num"><!-- 1234-1234-1234-1234 --></p>
-							<p class="barcord"><!-- <img src="https://image.istarbucks.co.kr/common/img/common/bacord.png" alt=""> --></p>
-						</div>
-						<div class="mycard_one">
-							<img src="common/img/common/payment_icon1.png" alt="결제하기"><!-- 접근성_20171106 alt 추가 -->
-						</div>						
-						<p class="mycard_money_result">잔액 <span class="en balance"><!-- 550,000 --></span>원</p>
-						<p class="btn_other_more"><a href="my/mycard_index">다른 카드 보기</a></p>
 					</div>
 					<!-- MSR 회원 end -->
 										
 					<!-- 일반회원 -->
-					<div class="sb_card_regi">
-						<!-- s::20200120 페이스북 프로필 기능 삭제 관련 메인 수정 -->
-						<a href="my/mycard_info_input"><!-- 접근성_20171106 링크 href 변경 -->
-						<p class="icon_add_card" onclick="location.href = '/my/mycard_info_input';"><img alt="카드등록 아이콘" src="common/img/common/icon_add_card.png"></p>
-						<!-- 등록된 카드가 없는 경우 -->
-						<p class="sb_card_regi_txt"><strong>스타벅스 카드 등록</strong><br>등록된 카드가 없습니다.<br>새로운 카드를 등록하세요.</p>
-						</a>
-						<a class="btn_main_card_regi" href="my/mycard_info_input" required="login">카드등록</a>
 						<!-- 등록된 카드가 없는 경우 end -->
 						<!-- e::20200120 페이스북 프로필 기능 삭제 관련 메인 수정 -->
 					</div>
@@ -1008,7 +924,11 @@ var eFrequencyPlannerYn = 'Y';
 			
 				<!-- s::메인 리저브 배너(20220331) -->
 <style type="text/css">
+<<<<<<< HEAD
     .reserve_wrap {position:relative; height:400px; background:url("common/img/event/2022/reserve_2022_indonesia_visual_bg.jpg") no-repeat center top; background-size:cover; overflow:hidden}
+=======
+    .reserve_wrap {position:relative; height:400px; background:url("https://image.istarbucks.co.kr/img/event/2022/reserve_2022_indonesia_visual_bg.jpg") no-repeat center top; background-size:cover; overflow:hidden}
+>>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
     
     .reserve_inner {position:relative; width:100%; height:100%; margin:0 auto;}
     
@@ -1021,8 +941,8 @@ var eFrequencyPlannerYn = 'Y';
     .reserve_visual {display:block; position:absolute; right:0%; bottom:0; opacity:0;}
     .reserve_visual .reserve_visual-pc {max-width:none;}
 
-    .reserve_visual::before {content: url("upload/common/img/main/2022/reserve_2022_indonesia_leaf1.png"); position: absolute; left: 0; bottom: -1%;}
-    .reserve_visual::after {content: url("upload/common/img/main/2022/reserve_2022_indonesia_leaf2.png"); position: absolute; right: 0; bottom: -1%;}
+    .reserve_visual::before {content: url("https://image.istarbucks.co.kr/upload/common/img/main/2022/reserve_2022_indonesia_leaf1.png"); position: absolute; left: 0; bottom: -1%;}
+    .reserve_visual::after {content: url("https://image.istarbucks.co.kr/upload/common/img/main/2022/reserve_2022_indonesia_leaf2.png"); position: absolute; right: 0; bottom: -1%;}
     
     .reserve_detail-btn_wrap {position:relative; z-index:10; max-width:1080px; margin-top:39px; margin-right:auto; margin-left:auto; padding-left:254px; box-sizing:border-box;} 
     .reserve_detail-btn a {display:block; width:100%; height:100%; color:#b9813e; font-size:15px; line-height:34px; text-align:center; border:2px solid #b9813e; border-radius:5px; box-sizing:border-box; transition:background-color .7s, color .7s, border-color .7s; -webkit-transition:background-color .7s, color .7s, border-color .7s}
@@ -1104,17 +1024,26 @@ var eFrequencyPlannerYn = 'Y';
 <section class="reserve_wrap">
     <div class="reserve_inner">
         <div class="reserve_title">
+<<<<<<< HEAD
             <img src="common/img/event/2022/reserve_2022_indonesia_title.png" alt="INDONESIA WEST JAVA" class="reserve_visual-pc">
+=======
+            <img src="https://image.istarbucks.co.kr/img/event/2022/reserve_2022_indonesia_title.png" alt="INDONESIA WEST JAVA" class="reserve_visual-pc">
+>>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
         </div>
         
         <div class="reserve_visual" style="opacity:1;">
+<<<<<<< HEAD
             <img src="upload/common/img/main/2022/reserve_2022_indonesia_visual3.png" alt="" class="reserve_visual-pc">
             <img src="common/img/event/2022/m_reserve_2022_indonesia_visual.jpg" alt="" class="reserve_visual-m">
+=======
+            <img src="https://image.istarbucks.co.kr/upload/common/img/main/2022/reserve_2022_indonesia_visual3.png" alt class="reserve_visual-pc">
+            <img src="https://image.istarbucks.co.kr/img/event/2022/m_reserve_2022_indonesia_visual.jpg" alt class="reserve_visual-m">
+>>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
         </div>
         
         <div class="reserve_detail-btn_wrap">					
             <div class="reserve_detail-btn">
-                <a href="whats_new/newsView-1?seq=4496">자세히 보기</a>
+                <a href="http://www.starbucks.co.kr/whats_new/newsView-1?seq=4496">자세히 보기</a>
             </div>
         </div>
     </div>
@@ -1207,12 +1136,22 @@ var eFrequencyPlannerYn = 'Y';
 			<section class="reserve_magazine_wrap">
                 <div class="reserve_inner">
                     <div class="reserve_title">
+<<<<<<< HEAD
                         <img src="common/img/event/2022/reserve_text_pc_220120.png" alt="리저브 매거진에서 일상 속 특별함을 만나보세요." class="reserve_visual-pc"> <!-- 220120 수정 -->
+=======
+                        <img src="https://image.istarbucks.co.kr/img/event/2022/reserve_text_pc_220120.png" alt="리저브 매거진에서 일상 속 특별함을 만나보세요." class="reserve_visual-pc"> <!-- 220120 수정 -->
+>>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
                     </div>
                     
+<<<<<<< HEAD
                     <div class="reserve_visual">
                         <img src="common/img/event/2022/reserve_visual_pc_220119.png" alt="" class="reserve_visual-pc"> <!-- 220120 수정 -->
                         <img src="common/img/event/2022/reserve_visual_m_220119.jpg" alt="" class="reserve_visual-m"> <!-- 220120 수정 -->
+=======
+                    <div class="reserve_visual" style=>
+                        <img src="https://image.istarbucks.co.kr/img/event/2022/reserve_visual_pc_220119.png" alt="" class="reserve_visual-pc"> <!-- 220120 수정 -->
+                        <img src="https://image.istarbucks.co.kr/img/event/2022/reserve_visual_m_220119.jpg" alt="" class="reserve_visual-m"> <!-- 220120 수정 -->
+>>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
                     </div>
                     
                     <div class="reserve_detail-btn_wrap">					
@@ -1715,7 +1654,7 @@ var eFrequencyPlannerYn = 'Y';
 			
 			$(document).ready(function(){
 				
-				__ajaxCall("interface/checkLogin", {}, true, "json", "post"
+				__ajaxCall("${pageContext.request.contextPath}/interface/checkLogin", {}, true, "json", "post"
 						,function (_response) {
 							if (_response.result_code == "SUCCESS") {
 								$(".top_msr_wrap").show();

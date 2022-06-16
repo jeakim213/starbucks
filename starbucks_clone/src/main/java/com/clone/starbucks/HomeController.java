@@ -1,34 +1,26 @@
 package com.clone.starbucks;
 
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
-import java.util.List;
-
 import java.util.Locale;
-import java.util.Map;
-import java.util.stream.IntStream;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+<<<<<<< HEAD
 import com.clone.starbucks.service.MemberServiceImpl;
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
+=======
+>>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
 import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
 
 /**
  * Handles requests for the application home page.
@@ -39,6 +31,7 @@ public class HomeController {
 
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 
+<<<<<<< HEAD
 	@RequestMapping(value = "/")
 	public String home(Model model) {
 		model.addAttribute("formpath", "join3");
@@ -100,7 +93,65 @@ public class HomeController {
 	public String americano() {
 		return "coffee/americano";
 	}
+=======
+   @RequestMapping(value = "/", method = RequestMethod.GET)
+   public String home(Locale locale, Model model) {
+      return "index";
+   }
+   
+   @RequestMapping(value="index")
+   public String index() {
+      return "index";
+   }
+   
+   //admin
+   @RequestMapping(value="admin/memberListForm")
+   public String memberListForm() {
+      return "admin/memberListForm";
+   }
+   
+   @RequestMapping(value="admin/userInfoForm")
+   public String userInfoForm() {
+      return "admin/userInfoForm";
+   }
+   
+   @RequestMapping(value="admin/modifyCheckForm")
+   public String modifyCheckForm() {
+      return "admin/modifyCheckForm";
+   }
+   
+   @RequestMapping(value="admin/memberModifyForm")
+   public String memberModifyForm() {
+      return "admin/memberModifyForm";
+   }
+   
+   @RequestMapping(value="admin/deleteCheckForm")
+   public String deleteCheckForm() {
+      return "admin/deleteCheckForm";
+   }
+   
+   //0601 다정 커피
+   @RequestMapping(value="admin/saleChart-1")
+   public String saleChart1() {
+      return "admin/saleChart-1";
+   }
+   
+   //0602 다정 푸드
+   @RequestMapping(value="admin/saleChart-2")
+   public String saleChart2() {
+      return "admin/saleChart-2";
+   }
+   
+   //프로덕트
+   @RequestMapping(value="admin/saleChart-3")
+   public String saleChart3() {
+      return "admin/saleChart-3";
+   }
+   
+   
+>>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
 
+<<<<<<< HEAD
 	@RequestMapping(value = "coffee/cappuccino")
 	public String cappuccino() {
 		return "coffee/cappuccino";
@@ -395,6 +446,35 @@ public class HomeController {
 	public String scard_charge_information() {
 		return "msr/scard/charge_information";
 	}
+=======
+   // login
+   @RequestMapping(value = "login/login")
+   public String login() {
+      return "login/login";
+   }
+   
+   //mem
+   @RequestMapping(value="mem/join1")
+   public String join1() {
+      return "mem/join1";
+   }
+   
+   @RequestMapping(value="mem/join2")
+   public String join2() {
+      return "mem/join2";
+   }
+   
+   @RequestMapping(value="mem/join3")
+   public String join3() {
+      return "mem/join3";
+   }
+   
+   // msr
+   @RequestMapping(value = "msr/msreward/about")
+   public String msreward_about() {
+      return "msr/msreward/about";
+   }
+>>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
 
 	@RequestMapping(value = "msr/scard/lost_report")
 	public String scard_lost_report() {
@@ -438,6 +518,7 @@ public class HomeController {
 		return "my/eReceiptList";
 	}
 
+<<<<<<< HEAD
 	@RequestMapping(value = "my/index")
 	public String my_index() {
 		return "my/index";
@@ -447,6 +528,13 @@ public class HomeController {
 	public String mycard_charge() {
 		return "my/mycard_charge";
 	}
+=======
+   // my
+   @RequestMapping(value = "my/egiftCard_shopping_bag")
+   public String egiftCard_shopping_bag() {
+      return "my/egiftCard_shopping_bag";
+   }
+>>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
 
 	@RequestMapping(value = "my/mycard_charge_1")
 	public String mycard_charge_1() {
@@ -509,6 +597,7 @@ public class HomeController {
 		return "store/store_reserve";
 	}
 
+<<<<<<< HEAD
 	// ajax
 	
 	@ResponseBody // 아이디 체크-예은
@@ -561,6 +650,14 @@ public class HomeController {
 	public String checkLogin() {
 		JsonObject obj = new JsonObject();
 		obj.addProperty("result_code", "SUCCESS");
+=======
+   // ajax
+   @ResponseBody // 로그인 확인-지혜
+   @PostMapping(value = "**/interface/checkLogin", produces = "application/json; charset=UTF-8")
+   public String checkLogin() {
+      JsonObject obj = new JsonObject();
+      obj.addProperty("result_code", "SUCCESS");
+>>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
 //      {
 //          "result_code": "FAIL",
 //          "error_msg": "",
@@ -572,6 +669,7 @@ public class HomeController {
 //          "data": null,
 //          "result_api_code": ""
 //      }
+<<<<<<< HEAD
 		return obj.toString();
 	}
 
@@ -814,4 +912,15 @@ public class HomeController {
 		JsonObject obj = gson.fromJson(reader, JsonObject.class);
 		return obj.toString();
 	}
+=======
+      return obj.toString();
+   }
+   
+	//에러페이지 - 단
+	@RequestMapping("error_page")
+	   public String error_page() {
+	      return "error_page";
+	   }
+	
+>>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
 }
