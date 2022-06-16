@@ -1,5 +1,5 @@
 package com.clone.starbucks.controller;
 
-public class mailController {
+public class MailController {
 
 }

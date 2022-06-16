@@ -1,8 +1,8 @@
 package com.clone.starbucks.controller;
 
-public class memberController {
+public class CoffeeController {
 
-	//login
+	//coffee
 	
 	//ajax
 }

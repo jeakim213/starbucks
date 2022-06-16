@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -48,6 +50,8 @@
 	</script>
 <![endif]-->
 
+
+
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -95,6 +99,7 @@ var eFrequencyPlannerYn = 'Y';
 	   }(document, 'script', 'facebook-jssdk'));
   
 </script>
+
 
 
 <!-- 접근성_20171106 건너뛰기 링크  추가 -->
@@ -679,13 +684,13 @@ var eFrequencyPlannerYn = 'Y';
 					<!-- 20160804 수정 -->
 					<div class="find_mem_inner">
 						
-						<form id="frmJoin" method="post">
+						<form action="memberProc" id="frmJoin" method="post">
 						<!-- <form id="frmJoin" action="#" class="memjoin_input_frm" method="post"> -->
-							<input type="hidden" name="native_yn" id="native_yn" value="Y" />
+							<!-- <input type="hidden" name="native_yn" id="native_yn" value="Y" />
 							<input type="hidden" name="join_flag" id="join_flag" value="3" />
 							<input type="hidden" name="ipin_jumin" id="ipin_jumin" value="" />
 							<input type="hidden" name="ipin_dup_key" id="ipin_dup_key" value="" />
-							<input type="hidden" name="IS_APP" id="IS_APP" value="" />
+							<input type="hidden" name="IS_APP" id="IS_APP" value="" /> -->
 							<fieldset>
 								<legend class="hid">회원가입 이용약관 동의, 수집하는 개인정보의 항목, 개인정보의 수집 및 이용목적, 개인정보의 보유 및 이용기간 및 파기절차, 파기 방법에 관한 폼</legend>
 								
@@ -699,30 +704,49 @@ var eFrequencyPlannerYn = 'Y';
 					                <!-- 접근성_20171120 수정 end -->
 									 <p class="find_form_txt">회원정보를 입력해 주세요.</p>
 									<div class="renew_input_box id_chk">
-										<label for="user_id" class="hid">아이디</label><input type="text" name="user_id" id="user_id" placeholder="아이디" maxlength="13" /> <!-- 접근성_20171120 수정: label  추가 -->
+										<label for="user_id" class="hid">아이디</label><input type="text" name="id" id="user_id" placeholder="아이디" maxlength="13" required="required"/> <!-- 접근성_20171120 수정: label  추가 -->
 										<!-- <a class="id_chk" href="javascript:void(0);">중복확인</a> -->
 										<p class="limit_txt id_chk_txt" id="id_chk_txt">영문(대소문자 구분 없음), 숫자로 4~13자리만 입력 가능합니다.</p><!-- 접근성_20171120 id 값 추가 -->
 									</div>
 									<div class="renew_input_box pw_chk">
-										<label for="user_pwd" class="hid">비밀번호</label> <input id="user_pwd" name="user_pwd" type="password" maxlength="20" placeholder="비밀번호" autocomplete="off" /> <!-- 접근성_20171120 수정: label  추가 -->
+										<label for="user_pwd" class="hid">비밀번호</label> <input id="user_pwd" name="pw" type="password" maxlength="20" placeholder="비밀번호" autocomplete="off" required="required" /> <!-- 접근성_20171120 수정: label  추가 -->
 										<p class="limit_txt user_pwd_txt" id="user_pwd_txt"><!-- 영문, 숫자 혼합하여 10~20자리 이내로 입력하세요. --></p><!-- 접근성_20171120 id 값 추가 -->
 									</div>
 									<div class="renew_input_box pw_chk bd_none">
-										<label for="user_pwd_chk" class="hid">비밀번호확인</label> <input type="password" id="user_pwd_chk" name="user_pwd_chk" placeholder="비밀번호 확인" maxlength="20" autocomplete="off" /><!-- 접근성_20171120 수정: label  추가 -->
+										<label for="user_pwd_chk" class="hid">비밀번호확인</label> <input type="password" id="user_pwd_chk" name="confirmPw" placeholder="비밀번호 확인" maxlength="20" autocomplete="off" required="required"/><!-- 접근성_20171120 수정: label  추가 -->
 										<p class="limit_txt user_pwd_chk_txt" id="user_pwd_chk_txt">입력하신 패스워드를 다시 한 번 입력해주세요.</p><!-- 접근성_20171120 id 값 추가 -->
 									</div>
 								</section>
+								<!-- 예은 수정 -->
 								<section class="renew_joinform_v2">
-									<div class="renew_input_box gender_chk">
+									<div class="renew_input_box name_chk">
 										<strong>이름<span class="type_green">(필수)</span></strong>  <!-- 20200826 수정 -->
-										<p class="nofix_name"></p>
-										<input type="hidden" id="user_nm" name="user_nm" required="required" /><!-- 접근성_20171120 required 추가 -->
-										<div class="user_gender">
-											<a class="male " href="javascript:void(0);">남</a>
-											<a class="female " href="javascript:void(0);">여</a>
-											<input type="hidden" id="gender" name="gender"  />
-										</div>
+										<label for="user_name" class="hid">이름</label><input type="text" name="name" id="user_nm" placeholder="이름" maxlength="6" required="required"/> <!-- 접근성_20171120 수정: label  추가 -->
+										<p class="limit_txt name_chk_txt" id="name_chk_txt">
+											<input type="hidden" id="nm_use" name="nm_use" required="required"/>
+											<div class="user_gender">
+													<input type="radio" name="gender" value="M" checked>&nbsp;남&nbsp;&nbsp;
+													<input type="radio" name="gender" value="F" >&nbsp;여
+													<input type="hidden" id="gender" name="gender"  />
+											</div>
+											<p class="limit_txt input_warn_text user_nm_txt" id="user_nm_txt"></p><!-- 접근성_20171120 id 값 추가 -->
+											
 									</div>
+								
+									
+							<!-- 		<div class="renew_input_box gender_chk">
+										<strong>이름<span class="type_green">(필수)</span></strong>  20200826 수정
+										<p class="limit_txt name_chk_txt" id="name_chk_txt">
+											<input type="text" name="user_nm txt" id="user_nm txt" placeholder="이름" maxlength="6" />
+											<input type="hidden" id="user_nm" name="user_nm" required="required" />접근성_20171120 required 추가
+												<div class="user_gender">
+													<input type="radio" name="gender chk" id="male">&nbsp;남&nbsp;&nbsp;
+													<input type="radio" name="gender chk" id="female">&nbsp;여
+													<input type="hidden" id="gender" name="gender"  />
+												</div>
+										</p>
+										
+									</div> -->
 									<div class="renew_input_box birth_chk">
 										<strong>생년월일<span class="type_green">(필수)</span></strong>  <!-- 20200826 수정 -->
 										<div class="select_birth_box">
@@ -741,13 +765,13 @@ var eFrequencyPlannerYn = 'Y';
 						                      	<select id="birth_day" name="birth_day" required="required"><!-- 접근성_20171120 required 추가 -->
 						                      	</select>
 											</div>
-											<div class="birth_select yny">
+<!-- 											<div class="birth_select yny">
 												<label for="birth_flag" class="a11y">음력/양력</label>
 							                    <select id="birth_flag" name="birth_flag">
 							                    	<option selected="selected" value="1">양</option>
 							                        <option value="2">음</option>
 							                    </select>
-											</div>
+											</div> -->
 										</div>
 										<p class="limit_txt input_warn_text birth_txt" id="birth_txt"></p><!-- 접근성_20171120 id 값 추가 -->
 										<p class="select_birth_txt">
@@ -775,21 +799,21 @@ var eFrequencyPlannerYn = 'Y';
 										</div>
 										<!-- // 툴팁 -->
 										<!-- <div class="choice_cont_phone"> -->
-										<p class="nofix_num"></p>
+										<p class="nofix_num">${pnum }</p>
 										<label class="a11y" for="phone">휴대폰번호<span class="type_green">(필수)</span></label> <!-- 20200826 수정 -->
-										<input type="hidden" name="phone" id="phone" maxlength="13"/>
-										<p class="limit_txt phone_txt" id="phone_txt"></p><!-- 접근성_20171120 id 값 추가 --
-										<!-- </div> -->
+										<input type="hidden" name="phone" id="phone" maxlength="13" value="01020061119"/>
+										<p class="limit_txt phone_txt" id="phone_txt"></p><!-- 접근성_20171120 id 값 추가 -->
+										<!-- </div>  -->
 										<!-- 20180726 영역삭제 -->
-										<!--<div class="choice_agreement border ">--> <!-- 20170626  class add : border -->
-											<!--<div class="choice_agreement_txt">--><!--  20170626  p 태그 에서 div 태그 로 변경-->
-												<!--<span class="agree-check2">--><!-- 접근성_20171120 수정 -->
-													<!-- <input type="checkbox" name="sms_agree" value="Y" id="agreement1" class="mem2" />
+										<div class="choice_agreement border "> <!-- 20170626  class add : border -->
+											<div class="choice_agreement_txt"><!--  20170626  p 태그 에서 div 태그 로 변경-->
+												<span class="agree-check2"><!-- 접근성_20171120 수정 -->
+													<input type="checkbox" name="event_sms" id="agreement1"  class="mem2" onclick="eventCheck('sms')" />
 													<label for="agreement1">SMS를 통한 이벤트 및 신규 매장 정보 수신에 동의합니다.[선택]</label>
-													<input type="hidden" name="sms_yn" value="N" id="agreement2" />
+													<input type="hidden" name="event_sms" value="N" id="agreement2" />
 												</span>
 											</div>
-										</div> -->
+										</div>
 										<!-- //20180726 영역삭제 -->
 									</div>
 									<div class="renew_input_box mail_chk">
@@ -815,17 +839,17 @@ var eFrequencyPlannerYn = 'Y';
 											<p class="limit_txt mail_txt" id="mail_txt"></p><!-- 접근성_20171120 id 값 추가 -->
 										</div>
 										<!-- 20180726 영역삭제 -->
-										<!--<div class="choice_agreement border">--> <!-- 20170626  class add : border -->
-											<!--<div class="choice_agreement_txt">--> <!--  20170626  p 태그 에서 div 태그 로 변경-->
+										<div class="choice_agreement border"> <!-- 20170626  class add : border -->
+											<div class="choice_agreement_txt"> <!--  20170626  p 태그 에서 div 태그 로 변경-->
 												<!-- 접근성_20171120 추가 -->
-												<!-- <span class="agree-check2">
-													<input type="checkbox" name="mail_agree" value="Y" id="agreement3" class="mem2" />
+												<span class="agree-check2">
+													<input type="checkbox"  name="event_e" id="agreement3"   class="mem2" onclick="eventCheck('email')" />
 													<label for="agreement3">이메일을 통한 이벤트 및 신규 매장 정보 수신에 동의합니다.[선택]</label>
-													<input type="hidden" name="mail_yn" value="N" id="agreement4" />
-												</span> -->
+													<input type="hidden" name="event_e" value="N" id="agreement4" />
+												</span>
 												<!-- 접근성_20171120 추가 끝 -->
-											<!-- </div>
-										</div> -->
+											</div>
+										</div>
 										<!-- //20180726 영역삭제 -->
 									</div>
 									
@@ -941,7 +965,7 @@ var eFrequencyPlannerYn = 'Y';
 											</div>
 										</section> -->
 										<!-- //20180726 이용약관 영역추가 -->
-										<label for="user_nick_nm" class="hid">닉네임</label> <input type="text" name="user_nick_nm" id="user_nick_nm" placeholder="닉네임 입력을 입력해주세요." maxlength="6" /><!-- 20180726 수정 -->
+										<label for="user_nick_nm" class="hid">닉네임</label> <input type="text" name="nickname" id="user_nick_nm" placeholder="닉네임 입력을 입력해주세요." maxlength="6" /><!-- 20180726 수정 -->
 										<input type="hidden" id="nick_nm_use" name="nick_nm_use" value="N" />
 										<p class="limit_txt input_warn_text user_nick_nm_txt" id="user_nick_nm_txt"></p><!-- 접근성_20171120 id 값 추가 -->
 									</div>	
@@ -954,7 +978,8 @@ var eFrequencyPlannerYn = 'Y';
 								</p>
 								
 								<p class="btn_mem_login">
-									<a href="javascript:void(0);">가입하기</a>
+									<input type="submit" value='가입하기' style="color:#fff;font-size:24px; display:block; line-height:65px; background: #006633; margin: auto; border-style: none; width: 530px; cursor:pointer;"/>
+									
 								</p>
 							</fieldset>	
 							
@@ -1491,8 +1516,41 @@ var eFrequencyPlannerYn = 'Y';
 <!-- 170103 주소 찾기 팝업 end -->
 
 <script type="text/javascript">
+
+
+	
+
+	
+	// 예은 수신동의
+	function eventCheck(val){
+		
+		if(val == "sms"){
+			var check = document.getElementById('agreement1').checked;
+			if(check){
+				document.getElementById('agreement1').value = 'Y';
+				//alert(a);
+			}else{
+				document.getElementById('agreement1').value = 'N';
+				//alert(a);
+			}
+		}else if(val == "email"){
+			var check = document.getElementById('agreement3').checked;
+			if(check){
+				document.getElementById('agreement3').value = 'Y';
+				
+			}else{
+				document.getElementById('agreement3').value = 'N';
+				
+			}
+		}
+	}
+	
 	$(document).ready(function () {
 		var srmSeq = 0;
+		document.getElementById('agreement3').value = 'N';
+		
+		document.getElementById('agreement1').value = 'N';
+
 		//170103 주소찾기 팝업
 		$('.mem_address > a, .btn_zipcode, .sel_wrap > .addrBtn').bind('click', function(){
 			$('.adr_find_pop ').fadeIn();
@@ -1729,8 +1787,8 @@ var eFrequencyPlannerYn = 'Y';
 				initBirth();
 				initEmail();
 				setEvents();
-				initClause();
-				initNickLimited();
+				//initClause();
+				//initNickLimited();
 				
 				$('.renew_input_box .icon_mark_point').click(function(){
 					$('.info_btn_inner').hide();
@@ -1742,11 +1800,11 @@ var eFrequencyPlannerYn = 'Y';
 					$('.info_btn_inner').fadeOut();
 				});
 				
-				/*20171120 추가 */
-				$('.user_gender a').click(function(){
-					//$('.user_gender a').removeClass('on');
-					//$(this).addClass('on');
-				});
+				/*예은체크*/
+				//$('.user_gender a').click(function(){
+				//	$('.user_gender a').removeClass('on');
+				//	$(this).addClass('on');
+				//});
 
 				$('.btn_close a, .btn_close02 a').click(function () { // 접근성_20171120   수정
 			        var $this = $(this).parents('.info_btn_inner');
@@ -1784,7 +1842,7 @@ var eFrequencyPlannerYn = 'Y';
 			
 
 			// 20180813 오은규 2차 추가 약관정보 불러오기
-			function initClause() {
+	/* 		function initClause() {
 				var objParam = {
 						 "reqClientType" : "WEB"
 						,"clause_type"   : "NICKNAME"
@@ -1802,11 +1860,11 @@ var eFrequencyPlannerYn = 'Y';
 					, function (_error) {
 					}
 				); 
-			}
+			} */
 			
-			var m_iPinRstInfo = {
+			/* var m_iPinRstInfo = {
 				 birth      : "--"
-				,phone      : "010-0000-0000"
+				,phone      : 000-0000-0000
 				,phone_flag : "STB1901"
 				,init : function () {
 					var arrBirth = this.birth.split("-");
@@ -1831,7 +1889,7 @@ var eFrequencyPlannerYn = 'Y';
 			$(document).ready(function () {
 				m_iPinRstInfo.init();
 				
-			});
+			}); */
 			
 			function setEvents() {
 				//$("input:text, input:password, input#phone, input#email").on("keyup", function () {
@@ -1849,13 +1907,17 @@ var eFrequencyPlannerYn = 'Y';
 				});
 				
 				// 중복확인
-				$("a.id_chk").on("click", checkUserId);
+				/* $("a.id_chk").on("click", checkUserId); */
+				
+				
 				
 				$("#user_id").on("keyup", function() {
 					$(this).val( $(this).val().replace(/[^a-z0-9]/gi,'') );
 				});
-				// 아이디 입력 체크
+				// 아이디 입력 체크(원본)
 				$("#user_id").on("blur", checkUserId);
+				
+			
 				
 				// 새 비밀번호 입력 체크
 				$("#user_pwd").on("blur", function() {
@@ -1879,8 +1941,9 @@ var eFrequencyPlannerYn = 'Y';
 							,"phone"        : $("#phone").val().trim()
 							,"birth"		: $("#birth_year").val() + $("#birth_month").val() + $("#birth_day").val()
 						};
-						__ajaxCall("interface/getUserPwdCheck", objParam, true, "json", "post"
+						__ajaxCall("/starbucks/interface/getUserPwdCheck", objParam, true, "json", "post"
 							, function (_response) {
+							console.log(_response);
 								if (_response.result_code == "SUCCESS") {
 									$("#user_pwd").removeClass("input_warn");
 									$(".user_pwd_txt").removeClass("input_warn_text").text("사용가능한 비밀번호 입니다.").show();
@@ -1937,6 +2000,7 @@ var eFrequencyPlannerYn = 'Y';
 						}
 					}
 				});
+				
 				// 20180809 오은규 수정 2차 닉네임 약관 체크박스 선택또는 해제시
 				/* $("#mem_choice_yes").on("change", function() {
 					//placeholder
@@ -1987,7 +2051,7 @@ var eFrequencyPlannerYn = 'Y';
 								"penalty_check_yn" : "N"
 							};
 							
-							___ajaxCall("interface/checkNicknameValid", objParam, true, "json", "post"
+							___ajaxCall("/starbucks/interface/checkNicknameValid", objParam, true, "json", "post"
 								, function (_response) {
 									if (_response.result_code != "SUCCESS") {
 										$("#user_nick_nm").addClass("input_warn");
@@ -2005,6 +2069,67 @@ var eFrequencyPlannerYn = 'Y';
 					}
 					
 				});
+				
+				// 예은 - 이름 체크
+				
+				$("#user_nm").on("keyup", function(){
+				var ptrn =/^[ㄱ-ㅎ|가-힣]+$/gi;
+				var value = $(this).val();
+				
+				if ( value != "")
+				{
+					var ptrnCheckBool = value.match( ptrn );	
+					
+					if ( ptrnCheckBool ==null )
+					{
+						var regexp = /[a-z0-9]|[ \[\]{}()<>?|`~!@#$%^&*-_+=,.;:\"'\\]/gi;
+						$(this).val(value.replace(regexp,''));
+						return;
+					}
+				}
+			});
+				
+				$("#user_nm").on("blur change", function() {
+					// 이름 체크
+					var user_name = $("#user_nm").val().trim();
+					if (user_name == "") {
+						$(".user_nm_txt").text("").hide();
+						
+					} else {
+						if (isValidName(user_name) == false) {
+							$("#user_nm").addClass("input_warn");
+							$(".user_nm_txt").addClass("input_warn_text").text("이름은 한글 6자리 이내로 입력해주세요.").show();
+							return;
+						} else {
+							var strWrong = checkEucKr(user_name);
+							if (strWrong != "") {
+								$("#user_nm").addClass("input_warn");
+								$(".user_nm_txt").addClass("input_warn_text").text("'" + strWrong + "'는(은) 사용할 수 없는 문자열 입니다.").show();
+								return;
+							}
+							var objParam = {
+								"user_nm" : user_nm
+							};
+							
+					___ajaxCall("/interface/checkNameValid", objParam, true, "json", "post"
+								, function (_response) {
+									if (_response.result_code != "SUCCESS") {
+										$("#user_nm").addClass("input_warn");
+										$(".user_nm_txt").addClass("input_warn_text").text(_response.alert_msg).show();
+										$(".user_nm_txt").addClass("input_warn_text").text("사용불가능한 이름입니다. 명사로 이루어진 한글 6자리 이내로 입력해주세요.").show();
+										return;
+									} else {
+										$("#user_nm").removeClass("input_warn");
+										$(".user_nm_txt").hide();
+										$(".user_nm_txt").removeClass("input_warn_text").text("사용가능한 이름입니다.").show();
+									} 
+								}
+							);	
+						}
+					}
+					
+				});
+				
 				
 				$("#phone").on("blur", function() {
 					var msg1 = checkValid2("#phone", "HP"); // 휴대폰 유효성 체크
@@ -2033,8 +2158,9 @@ var eFrequencyPlannerYn = 'Y';
 				$("p.btn_mem_login > a").on("click", joinMember);
 			}
 
-			// 중복확인
+			// 예은- 중복확인
 			function checkUserId() {
+				
 				var msg = checkValid2("#user_id", "ID");	// 아이디 체크
 				var user_id = $("#user_id").val().trim();
 				
@@ -2048,24 +2174,30 @@ var eFrequencyPlannerYn = 'Y';
 					"user_id" : user_id
 				}
 				
-				__ajaxCall("interface/getUserIdCheck", objParam, true, "json", "post"
+				
+			
+				__ajaxCall("isExistId", objParam, true, "json", "post"
 					, function (_response) {
+						console.log(_response);
 						if (_response.alert_msg != "") {
 							$(".id_chk_txt").addClass("input_warn_text").text(_response.alert_msg).show();
 						}
 						
 						if (_response.result_code == "SUCCESS") {
 							
-							
+							//console.log(_response.result_code);
 							$("#user_id").removeClass("input_warn");
-							$(".id_chk_txt").removeClass("input_warn_text").show();
+							$(".id_chk_txt").removeClass("input_warn_text").text("사용가능한 아이디 입니다.").show();
 							m_bIdUseOk = true;
 							m_strOkId  = user_id;
+							
+							
 						} else {
 							$("#user_id").addClass("input_warn");
 							$(".id_chk_txt").show();
 							m_bIdUseOk = false;
 							m_strOkId  = "";
+						
 						}
 					}
 					, function (_error) {
@@ -2115,6 +2247,10 @@ var eFrequencyPlannerYn = 'Y';
 					return;
 				}	
 				
+				
+			
+				
+						
 				msg = checkValid2("#birth_year, #birth_month, #birth_day", "BIRTH"); // 생년월일 일치여부
 				if (msg != "") {
 					$("#birth_year").focus().attr({ "aria-describedby": "birth_txt", "aria-invalid": "true" }); // 접근성_20171120 수정
@@ -2162,6 +2298,38 @@ var eFrequencyPlannerYn = 'Y';
 				}else{
 					$(".user_nick_nm_txt").text("");
 				}
+				
+/* 				//예은
+				var msg = checkValid2("#user_nm", "NAME")
+				var user_name = $("#user_nm").val().trim(); // 닉네임 체크
+			
+					if (msg != "") {
+						$("#user_nm").addClass("input_warn").focus().attr({ "aria-describedby": "user_nm_txt", "aria-invalid": "true" });
+						$(".user_nm_txt").addClass('input_warn_text').text(msg).show();
+						return;
+					} else {
+						$(".user_nm_txt").text("");
+					}
+
+					if (isValidName(user_name) == false) {
+						$("#user_nm").addClass("input_warn").focus().attr({ "aria-describedby": "user_nm_txt", "aria-invalid": "true" }); // 접근성_20171120 수정
+						$(".user_nm_txt").addClass('input_warn_text').text("이름은 한글 6자리 이내로 입력해주세요.").show();
+						return;
+					} else {
+						var strWrong = checkEucKr(user_name);
+						if (strWrong != "") {
+							$("#user_nm").addClass("input_warn").focus().attr({ "aria-describedby": "user_nm_txt", "aria-invalid": "true" }); // 접근성_20171120 수정
+							$(".user_nm_txt").addClass('input_warn_text').text("'" + strWrong + "'는(은) 사용할 수 없는 문자열 입니다.").show();
+							return;
+						}
+					}
+				}else{
+					$(".user_nm_txt").text("");
+				}  */
+				 
+				
+				
+				
 
 				msg = checkValid2("#email", "EMAIL"); // 이메일 유효성 체크
 				if (msg != "") {
@@ -2279,6 +2447,12 @@ var eFrequencyPlannerYn = 'Y';
 				return /^[가-힣]{1,6}$/.test(_text);
 			}
 			
+			// 예은 - 아이디 체크
+			function isValidName(_text) {
+				return /^[가-힣]{1,6}$/.test(_text);
+			}
+			
+			
 			function phoneNumAddHyphen(num){
 				var phone = $.trim(num);
 				if(phone.split("-")[0].length == 10) {
@@ -2291,8 +2465,8 @@ var eFrequencyPlannerYn = 'Y';
 			}
 			
 			//닉네임 설정 제한 정보 조회
-			function initNickLimited() {
-				__ajaxCall("interface/checkNicknameLimitedYn", '', true, "json", "post"
+/* 			function initNickLimited() {
+				__ajaxCall("/starbucks/interface/checkNicknameLimitedYn", '', true, "json", "post"
 					, function (response) {
 						if (response.result_code == "FAIL") {
 							var jsonData = response.data;
@@ -2308,7 +2482,7 @@ var eFrequencyPlannerYn = 'Y';
 					, function (_error) {
 					}
 				); 
-			}
+			} */
 		</script>
 	</div>
 	

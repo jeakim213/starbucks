@@ -1,5 +1,7 @@
 package com.clone.starbucks.DTO;
 
+import java.util.Date;
+
 /*
 create table e_coupon(
 pon_no number not null primary key,
@@ -9,7 +11,7 @@ pon_name varchar2(50) not null,
 pon_startdate date default sysdate not null,
 pon_enddate date default sysdate+30 not null,
 pon_used char(1) check(pon_used in ('Y','N')) not null,
-pon_usedate date default sysdate not null,
+pon_usedate date default sysdate,
 pon_cash number not null
 );
 
@@ -27,9 +29,9 @@ ORDER;
 */
 
 
-import java.sql.Date;
 
-public class e_couponDTO {
+
+public class E_couponDTO {
 	
 	private int pon_no; // 쿠폰 발행 순서 [not null, sequence]
 	private char pon_category;	// 쿠폰 카테고리(msr, 카카오톡선물...) [not null, check]

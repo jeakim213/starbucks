@@ -1,8 +1,9 @@
 package com.clone.starbucks.controller;
 
-public class storeController {
-
-	//store
+public class MenuController {
+	
+	//menu
 	
 	//ajax
+	
 }

@@ -24,16 +24,27 @@ alter table userinfo add foreign key(pon_no) references e_coupon(pon_no);
 <<<웰컴, 그린, 골드, 세이브, 디스카운트>>>
 <<<user -> 오라클 내에서 사용되는 예약어 -> 오류>>>*/
 
-public class userInfoDTO {
+public class UserInfoDTO {
 	
 	private String id;	// 아이디 [PK, not null]
 	private String pw;	// 비밀번호 [not null]
+	private String confirmPw;	// 디비에는 안들어가는 확인용
 	private int star;	// 별 [default 0]
-	private char grade;	// 등급 [not null, check, default wc]
+	private String grade;	// 등급 [not null, check, default wc]
 	private String nickname;	//닉네임
 	private char cupreward;	// 에코컵리워드 설정 [not null, check, default s]
 	private String DTPass;	//드라이브스루 패스 등록
 	private int pon_no; 	//쿠폰 넘버 [FK]
+	
+	
+	
+	public String getConfirmPw() {
+		return confirmPw;
+	}
+	
+	public void setConfirmPw(String confirmPw) {
+		this.confirmPw = confirmPw;
+	}
 	
 	
 	public String getId() {
@@ -54,10 +65,10 @@ public class userInfoDTO {
 	public void setStar(int star) {
 		this.star = star;
 	}
-	public char getGrade() {
+	public String getGrade() {
 		return grade;
 	}
-	public void setGrade(char grade) {
+	public void setGrade(String grade) {
 		this.grade = grade;
 	}
 	public String getNickname() {

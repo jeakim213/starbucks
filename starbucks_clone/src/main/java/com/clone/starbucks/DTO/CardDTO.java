@@ -1,5 +1,7 @@
 package com.clone.starbucks.DTO;
 
+import java.util.Date;
+
 /*
 create table card(
 c_name varchar2(50) not null,
@@ -16,9 +18,9 @@ alter table card add foreign key(id) references userinfo(id);
 
 */
 
-import java.sql.Date;
 
-public class cardDTO {
+
+public class CardDTO {
 	
 	private String c_name;	//카드 이름 [not null]
 	private Date c_saledate;	// 카드 구매일자 [not null, sysdate]

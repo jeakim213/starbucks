@@ -1,6 +1,6 @@
 package com.clone.starbucks.controller;
 
-public class msrController {
+public class MsrController {
 
 	//msr
 	
