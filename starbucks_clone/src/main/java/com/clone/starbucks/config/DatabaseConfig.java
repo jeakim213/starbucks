@@ -13,7 +13,7 @@ import com.zaxxer.hikari.HikariDataSource;
 
 @Configuration
 @MapperScan(basePackages ={"com.clone.starbucks.DAO"}) //root-context-mybatis-spring 이름 가져오기
-public class DataBaseConfig {
+public class DatabaseConfig {
 	
 	@Bean
 	public HikariDataSource dataSource() {
