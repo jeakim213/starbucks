@@ -31,7 +31,7 @@ ORDER;
 
 import java.sql.Date;
 
-public class saleDTO {
+public class SaleDTO {
 	
 	private int sale_no;	// 판매 순서 [PK, not null, sequence]
 	private String id;	// 아이디 [FK, not null]

@@ -24,7 +24,7 @@ alter table userinfo add foreign key(pon_no) references e_coupon(pon_no);
 <<<웰컴, 그린, 골드, 세이브, 디스카운트>>>
 <<<user -> 오라클 내에서 사용되는 예약어 -> 오류>>>*/
 
-public class userInfoDTO {
+public class UserInfoDTO {
 	
 	private String id;	// 아이디 [PK, not null]
 	private String pw;	// 비밀번호 [not null]

@@ -7,7 +7,6 @@
 	
 	<!-- Root Context: defines shared resources visible to all other web components -->
 	<!-- 히카리 커넥션 풀 빈 등록 -->
-	<!-- 
 	<bean id="hikariConfig" class="com.zaxxer.hikari.HikariConfig">
 		<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver" />
 		<property name="jdbcUrl" value="jdbc:oracle:thin:@localhost:1521:xe" />
@@ -22,11 +21,8 @@
 		<property name="dataSource" ref="dataSource"/>
 		<property name="mapperLocations" value="classpath:/mappers/**/*Mapper.xml"/>
 	</bean>
-	 -->
 	<!-- 데이터소스 마이바티스에 등록 및 xml 위치선정 -->
-	<!-- 
 	<mybatis-spring:scan base-package="com.clone.starbucks.DAO"/>
-	 -->
 </beans>
 		
 	

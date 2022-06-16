@@ -16,28 +16,28 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import com.clone.starbucks.DAO.IMemberDAO;
-import com.clone.starbucks.DTO.MemberDTO;
+import com.clone.starbucks.DTO.UserInfoDTO;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
 @Service
 public class MemberServiceImpl implements IMemberService{
-			@Autowired(required=false) private IMemberDAO memberDao;
+			@Autowired private IMemberDAO memberDao;
 			@Autowired private HttpSession session;
 			
 			@Override
-			public String loginProc(MemberDTO member) {
+			public String loginProc(UserInfoDTO member) {
 				if(member.getId() == null || member.getId().isEmpty())
 					return "아이디를 입력하세요.";
 				
 				if(member.getPw() == null || member.getPw().isEmpty())
 					return "비밀번호를 입력하세요.";
 					
-				MemberDTO check = memberDao.loginProc(member);
+				UserInfoDTO check = memberDao.loginProc(member);
 				
 				BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
-				
+		
 				if(check != null && encoder.matches(member.getPw(), check.getPw())) {
 					session.setAttribute("id", check.getId());
 					return "로그인 성공";
@@ -146,16 +146,17 @@ public class MemberServiceImpl implements IMemberService{
 								e.printStackTrace();
 							}
 						}
+						
+						//사용자정보 가져오기
 						@Override
-						public String isExistId(String id) {
-							if(id == null || id.isEmpty())
-								return "아이디를 입력하세요.";
-							
-							MemberDTO check = memberDao.selectId(id);
-							if(check == null)
-								return "사용 가능한 아이디입니다.";
-							return "중복 아이디 입니다.";
-							
+						public UserInfoDTO userInfo(String id) {
+
+							UserInfoDTO member = memberDao.userInfo(id);
+							if (member != null) {
+								member.setId(member.getId());
+								member.setPw(member.getPw());
+							}
+							return member;
 						}
 	
 	}

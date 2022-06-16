@@ -1,19 +1,19 @@
 package com.clone.starbucks.service;
 
 import java.util.HashMap;
-import com.clone.starbucks.DTO.MemberDTO;
+import com.clone.starbucks.DTO.UserInfoDTO;
 
 public interface IMemberService {
 	
-	public String loginProc(MemberDTO member);
+	//로그인버튼 클릭시
+	String loginProc(UserInfoDTO member);
 	public String getAccessToken(String code);
 	public HashMap<String, Object> getUserInfo(String accessToken);
 	
-	//중복확인
-	public String isExistId(String id);
-	
 	//로그아웃
 	public void logout(String accessToken);
+	
+	UserInfoDTO userInfo(String id);
 
 
 		

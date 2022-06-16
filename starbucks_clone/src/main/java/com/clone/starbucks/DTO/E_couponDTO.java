@@ -29,7 +29,7 @@ ORDER;
 
 import java.sql.Date;
 
-public class e_couponDTO {
+public class E_couponDTO {
 	
 	private int pon_no; // 쿠폰 발행 순서 [not null, sequence]
 	private char pon_category;	// 쿠폰 카테고리(msr, 카카오톡선물...) [not null, check]

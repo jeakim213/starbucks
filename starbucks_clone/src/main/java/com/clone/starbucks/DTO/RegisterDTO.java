@@ -22,7 +22,7 @@ alter table register add foreign key(id) references userinfo(id);
 
 import java.sql.Date;
 
-public class registerDTO {
+public class RegisterDTO {
 	
 	private String id;	// 아이디 [fK, not null]
 	private Date registerdate; // 가입일자 [not null, sysdate]
