@@ -55,6 +55,30 @@ public class HomeController {
 
 		return obj.toString();
 	}
+   
+   
+   @ResponseBody // 리워드요약 - 예은
+   @PostMapping(value = "**/interface/getMsrRewardSummary", produces = "application/json; charset=UTF-8")
+   public String getMsrRewardSummary() {
+      JsonObject obj = new JsonObject();
+      obj.addProperty("result_code", "SUCCESS");
+      obj.addProperty("data", "");
+//      {
+//          "result_code": "FAIL",
+//          "error_msg": "",
+//          "alert_msg": "",
+//          "location_href": "",
+//          "location_replace": "",
+//          "custom_script": "",
+//          "total_cnt": 0,
+//          "data": null,
+//          "result_api_code": ""
+//      }
+
+		return obj.toString();
+	}
+   
+  
 
 	//에러페이지 - 단
 	@RequestMapping("error_page")

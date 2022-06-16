@@ -1455,28 +1455,27 @@ var eFrequencyPlannerYn = 'Y';
                             	}  
                             	location.href = "login/login?redirect_url=" + encodeURIComponent(url);
                     			
-                    		}else{
+                     	//}else{
                     			//MSR 회원 여부 체크
-                    			if (m_jsonRewardSummary == null) {
-                    				 $.ajax({
-                                     	type: 'post',
-                                     	url : '/interface/getMsrRewardSummary',
-                                     	data : {},
-                                     	dataType : 'json',
-                                     	jsonp : 'callback',
-                                     	async : false,
-                                     	success : function(_response){
-                                     		if (_response.result_code == "SUCCESS") {
-												m_jsonRewardSummary = jQuery.parseJSON(_response.data);
-												fn_showrewardTumblerMsrCheckPopup(m_jsonRewardSummary);
-											}
-                                     	}
-                                   	});
+                    			//if (m_jsonRewardSummary == null) {
+                    				// $.ajax({
+                                     //	type: 'post',
+                                     	//url : '/interface/getMsrRewardSummary',
+                                     	//data : {},
+                                     	//dataType : 'json',
+                                     	//jsonp : 'callback',
+                                     	//async : false,
+                                     	//success : function(_response){
+                                     		//if (_response.result_code == "SUCCESS") {
+												//m_jsonRewardSummary = jQuery.parseJSON(_response.data);
+												//fn_showrewardTumblerMsrCheckPopup(m_jsonRewardSummary);
+											//}
+                                     	//}
+                                   	//}); 
 								}else{
 									
 									fn_showrewardTumblerMsrCheckPopup(m_jsonRewardSummary);
 								}
-                    		}
                     	}
                     });
                 }

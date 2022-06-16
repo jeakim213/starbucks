@@ -2101,17 +2101,17 @@ var eFrequencyPlannerYn = 'Y';
 									</div>
 									</div>
 								</section>
-								
+								<!-- 예은 - 정보 수신동의 영역 주석처리 -->
 								<!-- 20180726 ::E-mail 및 SMS 광고성 정보 수신동의 영역추가-->
-								<section class="mem_agreement_wrap mem_advertise_wrap">
-									<h5>E-mail 및 SMS 광고성 정보 수신동의 <span class="type_green">(선택)</span></h5> <!-- 20200826 수정 -->
-									<!-- 접근성_20171120 추가 -->
+								<!-- <section class="mem_agreement_wrap mem_advertise_wrap">
+									<h5>E-mail 및 SMS 광고성 정보 수신동의 <span class="type_green">(선택)</span></h5> 20200826 수정
+									접근성_20171120 추가
 									<span class="agree-check">
 										<input type="checkbox" name="mem_advertise" id="mem_advertise_yes" class="mem">
 										<label for="mem_advertise_yes">동의</label>
 									</span>
 									<dd id="mem_advertise_desc">다양한 프로모션 소식 및 신규 매장 정보를 보내 드립니다.</dd>
-									<!-- 접근성_20171120 추가 end -->
+									접근성_20171120 추가 end
 								</section>
 								<section class="mem_join_note">
 									<h5>회원가입 유의사항</h5>
@@ -2122,9 +2122,9 @@ var eFrequencyPlannerYn = 'Y';
 										</li>
 										<li>
 											스타벅스 코리아의 공식 홈페이지는 Internet Explorer 9.0 이상, Chrome, Firefox, Safari 브라우저에 최적화 되어있습니다.
-										</li> <!-- 220112 수정 -->
+										</li> 220112 수정
 									</ul>
-								</section>
+								</section> -->
 								<section class="mem_accreditation_wrap mb10">
 									<h5>인증방식 선택</h5>
 									<div class="auth">
