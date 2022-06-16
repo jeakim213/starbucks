@@ -1,4 +1,4 @@
-﻿<%@ page language="java" contentType="text/html; charset=UTF-8"
+﻿﻿<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -607,8 +607,7 @@ var eFrequencyPlannerYn = 'Y';
 				<a href="javascript:void(0);" class="rCup3_wrap" role="button" title="마이 리워드 레이어 열기"><!-- 접근성_20171201 class, role, title 추가 --><span class="rCup3"></span></a><!-- 150714 DOM 수정 - 떨어지는 메뉴 부분에 jsMovie 추가 -->
 			</div>
 			<nav class="sub_gnb_nav">
-				<div class="sub_gnb_nav_inner">
-				</div>
+				<div class="sub_gnb_nav_inner"></div>
 			</nav>
 		</div>
 		<!-- 서브 gnb end -->
@@ -717,10 +716,11 @@ var eFrequencyPlannerYn = 'Y';
 														</div>
 													</div>
 												</div>
-											</div>
-										</div>
-									</article>
-								</article>
+											</article>
+											<!-- <header class="quick_search">
+												<h3 class="on"><a href="javascript:void(0);">퀵 검색</a></h3>
+											</header> -->
+										</article>
 									</article>
 									<header class="find_road_header">
 										<h2 class="btn_find_road">

@@ -20,7 +20,7 @@
 				<thead style="background: #006633; color: white;">
 					<tr>
 						<th colspan="2" style="padding:25px; width: 25px;"></th>
-						<th style="padding:25px; width: 140px;">카드종류</th>
+						<th style="padding:25px; width: 180px;">카드종류</th>
 						<th style="padding:25px; width: 100px;">닉네임</th>
 						<th style="padding:25px; width: 120px;">잔여금액</th>
 					</tr>
@@ -32,16 +32,16 @@
 					<c:when test="${card.c_master }==1">
 						<tr><b>
 							<td><input type="radio" checked="checked" id="${card.c_name}Choose" name="cardChoose" style="text-align: center;"/></td>name은 el태그${}쓰기
-							<td style="padding:15px; width: 215px;"><img src="../common/img/menu/2022_cherry_blossom_card.png" style="width:180px; height:116px;"></td>
-							<td style="padding:15px; width: 100px;">정다${card.c_name}</td>
+							<td style="padding:15px; width: 215px;">${card.c_name}</td>
+							<td style="padding:15px; width: 100px;">정다${card.id}</td>
 							<td style="padding:15px; width: 120px;">7800${card.remaincost }원</td>
 						</b></tr>
 					</c:when>
 					<c:otherwise>
 						<tr>
 							<td><input type="radio" id="${card.c_name}Choose" name="cardChoose" style="text-align: center;"/></td>name은 el태그${}쓰기
-							<td style="padding:15px; width: 215px;"><img src="../common/img/menu/2022_cherry_blossom_card.png" style="width:180px; height:116px;"></td>
-							<td style="padding:15px; width: 100px;">${card.c_name}</td>
+							<td style="padding:15px; width: 215px;">${card.c_name}</td>
+							<td style="padding:15px; width: 100px;">${card.id}</td>
 							<td style="padding:15px; width: 120px;">${card.remaincost }원</td>
 						</tr>
 					</c:otherwise>
@@ -51,14 +51,14 @@
 					<tr>
 						<td style="padding:15px; width: 25px; color: red;"><b>★</b></td>
 						<td><input type="radio" checked="checked" id="다다Choose" name="cardChoose" style="text-align: center;"/></td>
-						<td style="padding:15px; width: 215px;"><img src="../common/img/menu/2022_cherry_blossom_card.png" style="width:180px; height:116px;"></td>
+						<td style="padding:15px; width: 215px;">2022 Cherry Blossom</td>
 						<td style="padding:15px; width: 100px;"><b>다다</b></td>
 						<td style="padding:15px; width: 120px;"><b>76800원</b></td>
 					</tr>
 					<tr>
 						<td style="padding:15px; width: 25px;"></td>
 						<td><input type="radio" id="정다Choose" name="cardChoose" style="text-align: center;"/></td>
-						<td style="padding:15px; width: 215px;"><img src="../common/img/menu/2021_holiday_siren_card.png" style="width:180px; height:116px;"></td>
+						<td style="padding:15px; width: 215px;">Thank You!</td>
 						<td style="padding:15px; width: 100px;">정다</td>
 						<td style="padding:15px; width: 120px;">7800원</td>
 					</tr>

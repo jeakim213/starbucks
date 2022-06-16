@@ -115,9 +115,11 @@ $.loginLib = {
 		});
 		*/
 		
+		// 0614 다정
 		$('a[required="login"]').on("click", function () {
 			var strHref = $(this).data("href");
 			
+
 			__ajaxCall("starbucks/interface/checkLogin", {}, true, "json", "post"
 				,function (_response) {
 					if (_response.result_code == "SUCCESS") {
@@ -144,7 +146,7 @@ $.loginLib = {
 		
 		// captcha 새로고침
 		$(".btn_new_captcha").on("click", function () {
-			$("p.captcha_img > img").attr("src", "/mem/captcha.do");
+			$("p.captcha_img > img").attr("src", "/mem/captcha");
 		});
 		*/
 	}
@@ -186,6 +188,7 @@ $.loginLib = {
 	}
 	
 	,setGnbSignInOut : function () {
+
 		__ajaxCall("starbucks/interface/checkLogin", {}, true, "json", "post"
 			,function (_response) {
 				if (_response.result_code == "SUCCESS") {
@@ -210,13 +213,13 @@ $.loginLib = {
 	
 	/*
 	,setCaptcha : function () {
-		__ajaxCall("/interface/getLoginHistoryCnt.do", {}, true, "json", "post"
+		__ajaxCall("/interface/getLoginHistoryCnt", {}, true, "json", "post"
 			,function (_response) {
 				if (_response.result_code == "SUCCESS") {
 					var nLoginHistoryCnt = Number(_response.data);
 
 					if (nLoginHistoryCnt >= 5) {
-						$("p.captcha_img > img").attr("src", "/mem/captcha.do");
+						$("p.captcha_img > img").attr("src", "/mem/captcha");
 						
 						$("p.reg_chg_pw_warn, p.captcha_guide, fieldset.captcha_field").show();
 					}
@@ -228,7 +231,7 @@ $.loginLib = {
 	}
 	
 	,getCookieSaveId : function (_fnSuccess) {
-		__ajaxCall("/interface/getCookieSaveId.do", {}, true, "json", "post"
+		__ajaxCall("/interface/getCookieSaveId", {}, true, "json", "post"
 			,function (_response) {
 				if (_response.result_code == "SUCCESS") {
 					$("#txt_user_id").val(_response.data);
@@ -361,8 +364,8 @@ $.loginLib = {
 							$divCenterMSR.find(".level_star_bg").text(nTotalStar);
 							
 							// 등급
-							$divTopMSR.find(".user_level_txt").html(strStatNotice_top);
-							$divCenterMSR.find(".user_level_txt").html(strStatNotice_center);
+							$divTopMSR.find(".user_level_txt")(strStatNotice_top);
+							$divCenterMSR.find(".user_level_txt")(strStatNotice_center);
 							
 							// e-쿠폰
 							$(".validCoupontCnt").text(m_jsonRewardSummary.validCoupontCnt);
@@ -395,8 +398,8 @@ $.loginLib = {
 	}
 	
 	,showInboxNoCnt : function () {
-		//__ajaxCall("/interface/getInboxNoCnt.do", {}, true, "json", "post"
-		//__ajaxCall("/app/coffee/getInboxNoCnt.do", {}, true, "json", "post"
+		//__ajaxCall("/interface/getInboxNoCnt", {}, true, "json", "post"
+		//__ajaxCall("/app/coffee/getInboxNoCnt", {}, true, "json", "post"
 		//	,function(_response) {	
 		//		if (_response.result_code == "SUCCESS") {
 		//			m_nInboxNoCnt = _response.data;

@@ -26,7 +26,7 @@ public class HomeController {
 
    @RequestMapping(value = "/", method = RequestMethod.GET)
    public String home(Locale locale, Model model) {
-      return "index";
+	   return "index";
    }
    
    @RequestMapping(value="index")
@@ -34,7 +34,7 @@ public class HomeController {
       return "index";
    }
    
- 
+
    // ajax
    @ResponseBody // 로그인 확인-지혜
    @PostMapping(value = "**/interface/checkLogin", produces = "application/json; charset=UTF-8")
@@ -86,4 +86,5 @@ public class HomeController {
 	      return "error_page";
 	   }
 	
+
 }
