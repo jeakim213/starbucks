@@ -22,7 +22,7 @@ import com.clone.starbucks.service.MemberServiceImpl;
 import com.google.gson.JsonObject;
 
 @Controller
-public class memberController {
+public class MemberController {
 	@Autowired MemberServiceImpl memberService;
 	@Autowired HttpSession session;
 	
