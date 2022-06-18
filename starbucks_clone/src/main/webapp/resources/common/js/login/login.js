@@ -1,8 +1,24 @@
+//설아추가login
+
+function check(){
+	/*
+	if(document.getElementById('id').value == ""){
+		alert('아이디를 입력해 주세요.');
+		return;
+	}
+	if(document.getElementById('pw').value == ""){
+		alert('비밀번호를 입력해 주세요.');
+		return; 
+	}
+	*/
+	document.getElementById('loginProc').submit();
+}
+
 var m_strChoiceId = "";
 
 $(document).ready(function () {
-	setCaptcha();
-	setEvent();
+	//주석 setCaptcha();
+	//setEvent();
 	
 	
 	if (Cookies.getCookie("idRemb") != "") {
@@ -35,7 +51,7 @@ function setEvent() {
 	
 	$("#txt_user_id").focus();
 }
-
+/*
 function login() {
 	var user_id  = $("#txt_user_id").val();
 	var user_pwd = $("#txt_user_pwd").val();
@@ -47,7 +63,7 @@ function login() {
 	}
 	
 	if (user_id == "")  { 
-		alert("아이디를 입력해 주세요."); //접근성_20171120 수정 
+		alert("아이디를 입력해 주세용."); //접근성_20171120 수정 
 		$("#txt_user_id").focus();  
 		return; 
 	}
@@ -57,12 +73,14 @@ function login() {
 		return;
 	}
 	
+	*/
+	
+	/*주석
 	var objParam = {
 		 "user_id"  : user_id
 		,"user_pwd" : user_pwd
 		,"captcha"  : $("#captcha").val()
 	};
-
 	___ajaxCall("/interface/loginMember.do", objParam, false, "json", "post"
 		,function (_response) {
 			if (_response.result_code == "SUCCESS") {
@@ -75,7 +93,6 @@ function login() {
 				if (_response.alert_msg != "") {
 					alert(_response.alert_msg);
 				}
-				
 				// 강제 휴면 해제 여부 확인
 				___ajaxCall("/interface/checkReleaseDormancyMember.do", objParam, false, "json", "post"
 					,function (_response) {
@@ -85,7 +102,8 @@ function login() {
 						}
 					}
 				);
-				
+				주석*/
+				/*주석
 				if (m_strTargetUrl == "") {
 					location.replace("/");
 				} else {
@@ -93,7 +111,8 @@ function login() {
 					 * WhiteList 체크 & 내부 서비스URL 체크 로직 변경
 					 * 20190328 [GAS 웹 취약점] %09(탭) 예외처리 by smno
 					 */
-					if (m_strTargetUrl.charAt(0) == "/" && encodeURIComponent(m_strTargetUrl.charAt(1)) == "%09") {
+					 
+					/*if (m_strTargetUrl.charAt(0) == "/" && encodeURIComponent(m_strTargetUrl.charAt(1)) == "%09") {
 						location.replace("/");
 					} else if ((m_strTargetUrl.charAt(0) == "/" && m_strTargetUrl.charAt(1) != "/") || $('#isWhiteRedirectUrl').val() == 'Y') {
 						location.replace(m_strTargetUrl.split("&amp;").join("&"));
@@ -122,6 +141,7 @@ function login() {
 		}
 	);
 }
+
 
 function setCaptcha() {
 	var nLoginHistoryCnt = 0;
@@ -154,7 +174,7 @@ function setCaptcha() {
 	}
 }
 
-
+주석*/
 $(document).ready(function () {
 	// 정보확인
 	$(document).on("click", ".btn_ac_info", showDoubleJoinDetail);
@@ -173,6 +193,7 @@ $(document).ready(function () {
  * 중복가입 데이터 표시
  * @param _data
  */
+ 
 function showDoubleJoinList(_data) {
 	var id = _data[0].user_id;
 	
