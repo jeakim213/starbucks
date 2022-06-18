@@ -6,20 +6,38 @@ import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.clone.starbucks.DAO.IMyDAO;
+import com.clone.starbucks.DTO.AllDTO;
 import com.clone.starbucks.DTO.CardDTO;
+import com.clone.starbucks.DTO.RegisterDTO;
+import com.clone.starbucks.DTO.UserInfoDTO;
 import com.clone.starbucks.service.MyServiceImpl;
 
 @Controller
 public class MyController {
 
 	@Autowired MyServiceImpl myService;
+	@Autowired private IMyDAO myDAO;
 	@Autowired HttpSession session;
 
 	// my
-
+	
+	@RequestMapping(value = "my/ecoupon_popup")
+	public String ecoupon_popup() {
+		return "my/ecoupon_popup";
+	}
+	
+	
+	@RequestMapping(value = "my/ecoupon")
+	public String ecoupon() {
+		return "my/ecoupon";
+	}
+	
+	
 	@RequestMapping(value = "my/egiftCard_shopping_bag")
 	public String egiftCard_shopping_bag() {
 		return "my/egiftCard_shopping_bag";
@@ -34,12 +52,73 @@ public class MyController {
 	public String eReceiptList() {
 		return "my/eReceiptList";
 	}
-
+	
+	
 	@RequestMapping(value = "my/index")
-	public String my_index() {
-		return "my/index";
+	public String my_index(UserInfoDTO userInfo, CardDTO cardDTO, Model model, HttpSession session) {
+
+		String id = (String) session.getAttribute(userInfo.getId());
+		
+		boolean b = myService.isExistCard(userInfo, cardDTO);
+		
+		// 카드 없는 회원
+		if(b==false) {
+//			UserInfoDTO userinfo = new UserInfoDTO();
+//				userinfo.setId("id");
+//				userinfo.setPw("pw");
+//				userinfo.setConfirmPw("cpw");
+//				userinfo.setStar(0);
+//				userinfo.setGrade("wc");
+//				userinfo.setNickname("닉네임");
+//				userinfo.setCupreward('s');
+//				
+//				session.setAttribute("session", userinfo);
+				
+				int couponCount = myDAO.userCoupon("admin");
+				model.addAttribute("couponCount", couponCount);
+				
+				return "my/index";
+		}		
+		
+		
+		// 카드 있는 회원 (지금 넣은 임의값("admin") 바꿔주기)
+		AllDTO user = myService.userAllInfo("admin");
+		
+		
+		// 등급명 변경
+		if(user.getGrade().equals("WC")) {
+			user.setGrade("Welcome Level");
+		}else if(user.getGrade().equals("GR")) {
+			user.setGrade("Green Level");
+		}else {
+			user.setGrade("Gold Level");
+		}
+		
+		
+		// 카드 갯수
+		
+		int cardCount = myDAO.userCard("admin");
+		
+		// 쿠폰 갯수
+
+		int couponCount = myDAO.userCoupon("admin");
+		System.out.println(couponCount);
+		
+		//views로 넘겨주는 값
+		model.addAttribute("nickname", user.getNickname());
+		model.addAttribute("grade", user.getGrade());
+		model.addAttribute("star", user.getStar());
+		model.addAttribute("c_name", user.getC_name());
+		model.addAttribute("c_num", user.getC_num());
+		model.addAttribute("remaincost", user.getRemaincost());
+		model.addAttribute("cardCount", cardCount);
+		model.addAttribute("couponCount", couponCount);
+		
+		return "my/index2";
+
 	}
 
+	// ===========
 	@RequestMapping(value = "my/mycard_charge")
 	public String mycard_charge() {
 		return "my/mycard_charge";
@@ -98,5 +177,15 @@ public class MyController {
 		}
 
 	}
+	
+	@GetMapping("userInfo")
+	public String userInfoLoad(UserInfoDTO userinfo, RegisterDTO member, HttpServletRequest req, Model model) {
+		String name = member.getName();
+		model.addAttribute("userName", name);
+		System.out.println(name);
+		return "my/index";
+	}
 
+	
+	
 }

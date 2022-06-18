@@ -13,8 +13,9 @@ pon_name varchar2(50) not null,
 pon_startdate date default sysdate not null,
 pon_enddate date default sysdate+30 not null,
 pon_used char(1) check(pon_used in ('Y','N')) not null,
-pon_usedate date default sysdate,
-pon_cash number not null
+pon_usedate date default sysdate null,
+pon_cash number not null,
+id varchar2(30)
 );
 
 ===== sequence ===

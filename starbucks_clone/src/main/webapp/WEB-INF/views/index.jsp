@@ -573,8 +573,8 @@ var eFrequencyPlannerYn = 'Y';
 					
 								
 <ul>
-	<li class="util_nav01 sign_out" style="display:none;"><a href="javascript:void(0);">Sign out</a></li>
-	<li class="util_nav01 sign_in"><a href="/starbucks/login/login">Sign In</a></li>
+	<li class="util_nav01 sign_out" style="display:none;"><a href="/starbucks;">Sign out</a></li>
+	<li class="util_nav01 sign_in"  style=""><a href="/starbucks/login/login">Sign In</a></li>
 	<li class="util_nav02"><a href="my/index" required="login">My Starbucks</a></li>
 	<li class="util_nav03"><a href="menu/orderList">Order</a></li>
 	<li class="util_nav04"><a href="store/store_map">Find a Store</a></li>
@@ -705,10 +705,10 @@ var eFrequencyPlannerYn = 'Y';
                 <img src="upload/common/img/main/2022/m_2022_Summer1_main_pomeloflow.png" alt="포멜로 플로우 그린 티" class="m-drink">
             </div>
         </div>
-        
-        <div class="btn_slogan">
+        <!-- 예은 수정 -->
+     <!--    <div class="btn_slogan">
             <a href="whats_new/campaign_view?pro_seq=1992">자세히 보기</a>
-        </div>
+        </div> -->
     </div>
 </div>
 <!-- //e::메인 TOP 배너(20220406) -->
@@ -767,7 +767,7 @@ var eFrequencyPlannerYn = 'Y';
 			<section class="new-rewards_wrap" style="display:none;">
 				<div class="new-rewards_inner">
 					<div class="new-rewards_logo">
-						<img src="common/img/main/rewards-logo.png" alt="Starbucks Rewards"> <!-- 20200821 수정 -->
+						<img src="common/img/main/rewards-logo.png" alt="Starbucks Rewards"> 20200821 수정
 					</div>
 					
 					<div class="new-rewards_conts">
@@ -816,7 +816,7 @@ var eFrequencyPlannerYn = 'Y';
 						<p class="icon_msr_cup"></p>
 						<div class="msr_info_area">
 							<p class="msr_lead_txt">
-								<span class="user_greet_txt"><strong><!-- 스벅매니아 --></strong>님, 안녕하세요!</span>
+								<span class="user_greet_txt"><strong>스벅매니아</strong>님, 안녕하세요!</span>
 								<span class="userNextStarTxt"><em>혜택에 편리함까지 더한</em> 스타벅스 리워드를 즐겨보세요.</span>
 							</p>
 						</div>

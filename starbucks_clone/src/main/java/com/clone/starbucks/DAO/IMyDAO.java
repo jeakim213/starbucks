@@ -2,6 +2,7 @@ package com.clone.starbucks.DAO;
 
 import org.springframework.stereotype.Repository;
 
+import com.clone.starbucks.DTO.AllDTO;
 import com.clone.starbucks.DTO.CardDTO;
 
 @Repository
@@ -17,6 +18,14 @@ public interface IMyDAO {
 	int cMaster1Bool(String id); 
 	
 	String cMaster1Num(String id);
+
+	int userCard(String id);
 	
+	int userCoupon(String string);
+
+	AllDTO userAllInfo(String id);
+
+	
+		
 	
 }

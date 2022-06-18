@@ -22,4 +22,5 @@ public interface IMemberDAO {
 
 	void insertUserInfo(UserInfoDTO userinfo);
 
+
 }

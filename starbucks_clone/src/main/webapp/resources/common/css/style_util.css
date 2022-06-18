@@ -462,7 +462,7 @@
 	.ms_charge_card a > strong { display:none; }
 
 	/* s::20210302 수정 */	
-	.regu_mem_icon_wrap { display: flex; justify-content: center; background:url("../img/util/icon_sep_bg.gif"); height:75px; margin-top:24px; width:368px;}
+	.regu_mem_icon_wrap { display: flex; justify-content: center; /* background:url("../img/util/icon_sep_bg.gif"); */ height:75px; margin-top:24px; width:368px;}
     .regu_mem_icon_wrap a { display:block; height:75px; float:left;  position:relative; box-sizing:border-box; }
 	.regu_mem_icon_wrap a.regu_mem_icon1 { width:114px; }
 	.regu_mem_icon_wrap a.regu_mem_icon2 { margin-left:1px; width:136px; }

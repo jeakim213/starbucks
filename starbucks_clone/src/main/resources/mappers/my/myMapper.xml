@@ -22,4 +22,20 @@
 		SELECT c_num FROM card WHERE id=#{id} and c_master=1
 	</select>
 	
+	
+	<!-- MY INDEX - 예은 -->
+	<select id="userCard" parameterType="com.clone.starbucks.DTO.CardDTO" resultType="int">
+		SELECT count(*) FROM card WHERE id=#{id}
+	</select>
+	
+	<select id="userCoupon" parameterType="com.clone.starbucks.DTO.E_couponDTO" resultType="int">
+		SELECT count(*) FROM e_coupon WHERE id=#{id}
+	</select>
+	
+	<select id="userAllInfo" parameterType="String" resultType="com.clone.starbucks.DTO.AllDTO">
+		SELECT a.id,a.star,a.grade,a.nickname,b.c_name,b.remaincost,b.c_num 
+		FROM userinfo a LEFT OUTER JOIN card b ON a.id = b.id
+		WHERE a.id = #{id}
+	</select>
+	
 	</mapper>
