@@ -2,13 +2,18 @@
     pageEncoding="UTF-8"%>
 <html lang="ko"><head>
 	
+<script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=LAAwsQelHfyg_d9tCLZ7"></script> 
 
 
 <!--	메모
 		: 받는사람(나에게 선물하기 사용자 dto값 넣어줘야함)
  -->
 
-
+<!-- 0617 카카오페이 다정 -->
+<!-- jQuery -->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js" ></script>
+  <!-- iamport.payment.js -->
+  <script type="text/javascript" src="https://cdn.iamport.kr/js/iamport.payment-1.1.8.js"></script>
 
 
 
@@ -69,29 +74,71 @@
 </script>
 
 <script type="text/javascript">
-	function check(){
-		var name = document.getElementById('egift_f').name.value;
-		if(!name){
-			alert('이름을 입력해주세요');
-		}
-		
-		var email1 = document.getElementById('egift_f').email1.value;
-		var email2 = document.getElementById('egift_f').email2.value;
-		if(!email1 || !email2){
-			alert('이메일을 제대로 입력해주세요');
-		}
-/* 		
- * 
- *
-		var email2 = document.getElementById('email2').value;
-		if (name=="" || email1=="" || email2==""){
-			alert('');
-		}
-		
-		document.getElementById('egift_f').submit(); */
-	} 
+/* var req;
 
+$(document).ready(function(){
+	$('#send').on("click", requestPay);
+		
+});
+
+
+function requestPay(){
+	console.log("리퀘스트페이결제확인");
+	var IMP = window.IMP;
+	IMP.init('imp46354288');
+	
+	var name = document.getElementById('name').value;
+	if(!name){
+		alert('이름을 입력해주세요');
+	}
+	
+	var email1 = document.getElementById('email1').value;
+	var email2 = document.getElementById('email2').value;
+	if(!email1 || !email2){
+		alert('이메일을 제대로 입력해주세요');
+	}
+	
+	var remaincost = document.getElementByName('remaincost').value;
+	
+
+ */
 </script>
+
+<!-- 네이버페이 ... ㅠㅠ실패
+<script src="https://nsp.pay.naver.com/sdk/js/naverpay.min.js"></script>
+<script>
+    var oPay = Naver.Pay.create({
+          "mode" : "development", // development or production
+          "clientId": "LAAwsQelHfyg_d9tCLZ7" // clientId
+    });
+    window.onload = function(){
+    //직접 만드신 네이버페이 결제버튼에 click Event를 할당하세요
+    var elNaverPayBtn = document.getElementById("send");
+
+    elNaverPayBtn.addEventListener("click", function() {
+        oPay.open({
+          "merchantUserKey": "TC0ONETIME",
+          "merchantPayKey": "가맹점 주문 번호",
+          "productName": "상품명을 입력하세요",
+          "totalPayAmount": "10000",
+          "taxScopeAmount": "10000",
+          "taxExScopeAmount": "0",
+          "returnUrl": "msr/sceGift/eGiftCardProc"
+        });
+    });
+    };	
+</script> -->
+
+
+<!-- <script type="text/javascript">
+
+	function submitForm(){
+		var msg = '${msg}';
+		alert(msg);
+		document.getElementById('egift_f').submit()
+	}
+</script>
+ -->
 
 
 
@@ -2128,10 +2175,11 @@
                 </div>
             </header>
             <!-- 서브 타이틀 end -->
+            
 
-            <!-- 내용 -->
+            <!-- 내용   form action eGiftCardProc -->
             <section class="card_gift_info_section">
-                <form action="eGiftCardProc" method="post" id="egift_f">
+                <form action="#" method="post" id="egift_f">
                     <!-- <input type="hidden" name="b2bYn" value="N">
                     <input type="hidden" id="egiftImgMngSeq" value="326">
                     <input type="hidden" id="cardName" value="고맙습니다 e-Gift">
@@ -2455,7 +2503,7 @@
                         <div class="gift_info_send_btns">
                             <ul>
                                 <li class="gift_info_send_btn1"><input type="reset" style="border-radius:3px; color:#fff; display:block; background: #666; font-size:12px;font-weight:bold;height:45px;line-height:45px; text-align:center; width:84px; border-style: none;" class="btn123" value="취소" /></li>
-                                <li class="gift_info_send_btn2"><button class="btn123" onclick="check()" style="border-radius:3px; color:#fff;display:block; font-size:12px;font-weight:bold;height:45px;line-height:45px; text-align:center; width:84px; background:#222; border-style: none;">결제하기</button></li>
+                                <li class="gift_info_send_btn2"><input type="button" value="결제하기" id="send" style="border-radius:3px; color:#fff;display:block; font-size:12px;font-weight:bold;height:45px;line-height:45px; text-align:center; width:84px; background:#222; border-style: none;" /></li>
                             </ul>
                         </div>
                     </fieldset>

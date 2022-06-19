@@ -1,5 +1,6 @@
 package com.clone.starbucks.service;
 
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
@@ -7,7 +8,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.clone.starbucks.DAO.IMyDAO;
+import com.clone.starbucks.DTO.AllDTO;
 import com.clone.starbucks.DTO.CardDTO;
+import com.clone.starbucks.DTO.E_couponDTO;
+import com.clone.starbucks.DTO.UserInfoDTO;
 
 @Service
 public class MyServiceImpl implements IMyService {
@@ -15,7 +19,6 @@ public class MyServiceImpl implements IMyService {
 	@Autowired private IMyDAO myDAO;
 	@Autowired private HttpSession session;
 	
-
 //----------------------------------------E-gift Card 등록----------------------------------------------		
 	@Override
 	public String cardRegisterProc(CardDTO cardDTO, HttpServletRequest request) {
@@ -86,6 +89,97 @@ public class MyServiceImpl implements IMyService {
 		
 		return "등록완료";
 	}
+
+
+	@Override
+	public String couponRegisterProc(UserInfoDTO userInfoDTO, E_couponDTO eCouponDTO, HttpServletRequest request) {
+		session.setAttribute("id", "쭈고");
+		//1. 영수증 쿠폰인지, mms 쿠폰인지, star 쿠폰인지 구별.. (check박스가 아니기에 실패)
+		//2. 각각 선택지의 input 값 받아오기
+		String receipt_num = request.getParameter("rptcoupon_num1")+request.getParameter("rptcoupon_num2")+request.getParameter("rptcoupon_num3")+request.getParameter("rptcoupon_num4");
+		String mms_num = request.getParameter("coupon_num1")+request.getParameter("coupon_num2")+request.getParameter("coupon_num3");
+		String star_num = request.getParameter("starcoupon_num1")+request.getParameter("starcoupon_num2")+request.getParameter("starcoupon_num3");
+		
+		
+		//3. pon_number로 eCouponDTO에서 검색해서 pon_no를 불러온다 select
+		
+		if(receipt_num!="" && mms_num=="" && star_num=="") {
+			System.out.println("rc_num : "+receipt_num);
+			E_couponDTO check = myDAO.pon_numCheck(receipt_num);
+			if(receipt_num.equals(check.getPon_num())==false) {
+				return "등록실패";
+			}
+			eCouponDTO.setPon_num(receipt_num);
+			if(check.getId()==null) {
+				//아이디 저장
+				String strId = String.valueOf(session.getAttribute("id")); 
+				System.out.println("strId : "+strId);
+				eCouponDTO.setId(strId);
+				System.out.println("1인가요 ? : "+myDAO.idUpdate(eCouponDTO));
+				myDAO.idUpdate(eCouponDTO);
+			}
+		}else if(receipt_num=="" && mms_num!="" && star_num=="") {
+			System.out.println("mc_num : "+mms_num);
+			E_couponDTO check = myDAO.pon_numCheck(mms_num);
+			if(mms_num.equals(check.getPon_num())==false) {
+				return "등록실패";
+			}
+			eCouponDTO.setPon_num(mms_num);
+			if(check.getId()==null) {
+				//아이디 저장
+				String strId = String.valueOf(session.getAttribute("id")); 
+				System.out.println("strId : "+strId);
+				eCouponDTO.setId(strId);
+				System.out.println("1인가요 ? : "+myDAO.idUpdate(eCouponDTO));
+				myDAO.idUpdate(eCouponDTO);
+			}
+		}else if(receipt_num =="" && mms_num=="" &&star_num!="") {
+			System.out.println("sc_num : "+star_num);
+			E_couponDTO check = myDAO.pon_numCheck(star_num);
+			if(star_num.equals(check.getPon_num())==false) {
+				return "등록실패";
+			}
+			eCouponDTO.setPon_num(star_num);
+			if(check.getId()==null) {
+				//아이디 저장
+				String strId = String.valueOf(session.getAttribute("id")); 
+				System.out.println("strId : "+strId);
+				eCouponDTO.setId(strId);
+				System.out.println("1인가요 ? : "+myDAO.idUpdate(eCouponDTO));
+				myDAO.idUpdate(eCouponDTO);
+			}
+		}
+		
+		return "등록완료";
+	}
 	
-//----------------------------------------E-gift Card 등록----------------------------------------------	
+//----------------------------------------E-gift Card 등록----------------------------------------------
+	
+	//----------my/index
+		
+		// 카드 여부 확인으로 index 열기
+		@Override
+		public boolean isExistCard(UserInfoDTO userInfo, CardDTO cardDTO) {
+			session.setAttribute("id", "admin");
+			
+			String id = (String) session.getAttribute("id");
+			
+			int cardCount = myDAO.userCard(id);
+			
+			if(cardCount == 0 ) {
+				return false;
+			}
+			return true;
+		}
+	
+		
+		@Override
+		public AllDTO userAllInfo(String id) {
+	
+			AllDTO user = myDAO.userAllInfo(id);
+
+			return user;
+		}
+
+	
 }

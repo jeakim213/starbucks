@@ -3,6 +3,7 @@ package com.clone.starbucks.service;
 import java.text.ParseException;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 import com.clone.starbucks.DTO.CardDTO;
 
@@ -13,7 +14,9 @@ public interface IMsrService {
 	String card_NumMake(CardDTO cardDTO);
 	String pin_NumMake(CardDTO cardDTO);
 	
-	String eGiftCardProc(CardDTO cardDTO, HttpServletRequest request) throws ParseException;
+	CardDTO eGiftCardProc(CardDTO cardDTO, HttpServletRequest request) throws ParseException;
+	
+//	void sendMail(HttpServletRequest request, HttpServletResponse response) throws Exception;
 	
 //----------------------------------------E-gift Card----------------------------------------------
 

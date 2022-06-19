@@ -45,13 +45,13 @@ public class HomeController {
 
 //      {
 //          "result_code": "FAIL",
-//          "error_msg": "",
+//          "_error": "",
 //          "alert_msg": "",
 //          "location_href": "",
 //          "location_replace": "",
 //          "custom_script": "",
 //          "total_cnt": 0,
-//          "data": null,
+//          "data": {}
 //          "result_api_code": ""
 //      }
 

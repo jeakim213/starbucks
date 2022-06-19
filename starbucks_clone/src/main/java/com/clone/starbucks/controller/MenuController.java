@@ -3,27 +3,34 @@ package com.clone.starbucks.controller;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.HashMap;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.clone.starbucks.service.MenuServiceImpl;
 import com.google.gson.Gson;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
 @Controller
 public class MenuController {
-
+	@Autowired MenuServiceImpl service;
+	
 	// menu
 	@RequestMapping(value = "menu/drink_list")
-	public String drink_list() {
+	public String drink_list(String CATE_CD, Model model) {
+		if(CATE_CD == null) model.addAttribute("CATE_CD", "");
+		else model.addAttribute("CATE_CD", CATE_CD);
 		return "menu/drink_list";
 	}
 
@@ -31,22 +38,18 @@ public class MenuController {
 	public String drink_list_1() {
 		return "menu/drink_list-1";
 	}
-
 	@RequestMapping(value = "menu/drink_list_2")
 	public String drink_list_2() {
 		return "menu/drink_list-2";
 	}
-
 	@RequestMapping(value = "menu/drink_list_3")
 	public String drink_list_3() {
 		return "menu/drink_list-3";
 	}
-
 	@RequestMapping(value = "menu/drink_list_4")
 	public String drink_list_4() {
 		return "menu/drink_list-4";
 	}
-
 	@RequestMapping(value = "menu/drink_list_5")
 	public String drink_list_5() {
 		return "menu/drink_list-5";
@@ -179,14 +182,17 @@ public class MenuController {
 		model.addAttribute("product_cd", product_cd);
 		return "menu/product_view";
 	}
-
-	@RequestMapping(value = "menu/orderList")
+	
+	//sale
+	@RequestMapping(value = "menu/orderList")//값 받아서 쿠키에 넣기
 	public String orderList() {
+		service.resetOrderList();
 		return "menu/orderList";
 	}
 
 	@RequestMapping(value = "menu/myOrder")
 	public String menu_myOrder() {
+		
 		return "menu/myOrder";
 	}
 
@@ -263,12 +269,11 @@ public class MenuController {
 		strbuffer.insert(strbuffer.length() - 1, "]");
 		return strbuffer.toString();
 	}
-
-	@ResponseBody // 나만의 음료 고르기-지혜
-	@PostMapping(value = "menu/getMsrXoSkuList", produces = "application/json; charset=UTF-8")
-	public String getMsrXoSkuList(HttpServletRequest request) throws FileNotFoundException, IOException {
-		String categoryCode = request.getParameter("categoryCode");
-		String mappingPath = "upload/json/menu/custom/" + categoryCode + ".json";
+	
+	@ResponseBody // 나만의 음료 카테고리-지혜
+	@PostMapping(value = "menu/getMsrXoCategoryList", produces = "application/json; charset=UTF-8")
+	public String getMsrXoCategoryList(HttpServletRequest request) throws FileNotFoundException, IOException {
+		String mappingPath = "upload/json/menu/custom/category.json";
 		ClassPathResource resource = new ClassPathResource(mappingPath);
 		FileReader reader = new FileReader(resource.getFile());
 		Gson gson = new Gson();
@@ -276,6 +281,53 @@ public class MenuController {
 		return obj.toString();
 	}
 	
+	@ResponseBody // 나만의 음료 선택-지혜
+	@PostMapping(value = "menu/getMsrXoSkuList", produces = "application/json; charset=UTF-8")
+	public String getMsrXoSkuList(HttpServletRequest request) throws FileNotFoundException, IOException {
+		String gbn = request.getParameter("gbn");
+		String mappingPath = "";
+		if(gbn.equals("A")) {
+			mappingPath = "upload/json/menu/custom/all.json";
+		}else {
+			String categoryCode = request.getParameter("categoryCode");
+			//
+			mappingPath = "upload/json/menu/custom/" + categoryCode + ".json";
+		}
+		ClassPathResource resource = new ClassPathResource(mappingPath);
+		FileReader reader = new FileReader(resource.getFile());
+		Gson gson = new Gson();
+		JsonObject obj = gson.fromJson(reader, JsonObject.class);
+		return obj.toString();
+	}
+	
+	@ResponseBody // 나만의 음료 커스텀 카테고리-지혜
+	@PostMapping(value = "menu/getMsrXoCustomCategoryList", produces = "application/json; charset=UTF-8")
+	public String getMsrXoCustomCategoryList(HttpServletRequest request) throws FileNotFoundException, IOException {
+		String product_cd = request.getParameter("skuNo");
+		String mappingPath = "upload/json/menu/custom/customCategoryList.json";
+		ClassPathResource resource = new ClassPathResource(mappingPath);
+		FileReader reader = new FileReader(resource.getFile());
+		Gson gson = new Gson();
+		JsonObject obj = gson.fromJson(reader, JsonObject.class);
+		JsonElement data = obj.get(product_cd);
+		JsonObject result = new JsonObject();
+		result.addProperty("result_code", "SUCCESS");
+		result.add("data", data);
+		return result.toString();
+	}
+	
+	@ResponseBody // 나만의 음료 커스텀 가져오기-지혜
+	@PostMapping(value = "menu/getMsrXoCustomSkuList", produces = "application/json; charset=UTF-8")
+	public String getMsrXoCustomSkuList(HttpServletRequest request) throws FileNotFoundException, IOException {
+//		categoryCode: 휩C0000012 , 드리즐C0000141, 컵옵션C0000169
+		String categoryCode = request.getParameter("categoryCode");
+		String mappingPath = "upload/json/menu/custom/detail/" + categoryCode + ".json";
+		ClassPathResource resource = new ClassPathResource(mappingPath);
+		FileReader reader = new FileReader(resource.getFile());
+		Gson gson = new Gson();
+		JsonObject obj = gson.fromJson(reader, JsonObject.class);
+		return obj.toString();
+	}
 	
 	@ResponseBody // 나만의 음료 등록하기-지혜
 	@PostMapping(value = "menu/setMsrXoMyMenuRegister", produces = "application/json; charset=UTF-8")
@@ -290,6 +342,16 @@ public class MenuController {
 //			,"skuNo"           : delegateSku
 //			,"cupType"         : cupType
 //			,"customList"      : customList
+//		registerType: F
+//		categoryType: 01
+//		delegateSku: 9200000003286
+//		nickname: 콜드 브루 오트 라떼
+//		customFlag: N
+//		qty: 1
+//		fullCallingName: 그란데 콜드 브루 오트 라떼
+//		skuNo: 9200000003286
+//		cupType: 0
+//		customList: 
 		String product_cd = request.getParameter("product_cd");
 		String mappingPath = "upload/json/menu/detail/.json";
 		ClassPathResource resource = new ClassPathResource(mappingPath);
@@ -298,4 +360,113 @@ public class MenuController {
 		JsonObject obj = gson.fromJson(reader, JsonObject.class);
 		return obj.toString();
 	}
+	
+	
+	//sale관련
+	@ResponseBody // 장바구니 리스트-지혜
+	@PostMapping(value = "menu/setOrderAjax")
+	public String setOrderAjax(@RequestBody HashMap<String,String> data){
+		if(data != null) {
+			if(service.setOrderList(data)) return "SUCCESS";
+		}
+		return "FAIL";
+	}
+	
+	@ResponseBody // 결제하기 값 세팅-지혜
+	@PostMapping(value = "menu/setOrderCountAjax")
+	public String setOrderCountAjax(@RequestBody HashMap<String,String> data){
+		System.out.println("결제값" + data);
+		if(data != null) {
+			if(service.setOrderCount(data)) return "SUCCESS";
+		}
+		return "FAIL";
+	}
+	
+/*	
+	//DB에 넣을 json파일생성
+	@RequestMapping("menu/makeDrinkMenu")
+	public String makeDrinkMenu() throws FileNotFoundException, IOException {
+		//20new 25브루드 26에스프레소 27티 31프라푸치노 34기타제조음료 37블렌디드 39피지오 41콜드브루 
+		//42추천 46콜드브루 56디카페인 65에스프레소 66에스프레소
+		String fileName[] = { "25", "26", "27", "31", "34", "37", "39", "41", "46", "56", "65", "66"};
+		JsonArray drinkfile = new JsonArray();//음료가 담길 json 배열
+		for(String file : fileName) {
+			String category = "";
+			switch(file) {
+			case "25": category = "브루드"; break;
+			case "26": category = "에스프레소"; break;
+			case "27": category = "티"; break;
+			case "31": category = "프라푸치노"; break;
+			case "34": category = "기타제조음료"; break;
+			case "37": category = "블렌디드"; break;
+			case "39": category = "피지오"; break;
+			case "41": category = "콜드브루"; break;
+			case "46": category = "콜드브루"; break;
+			case "56": category = "디카페인"; break;
+			case "65": category = "에스프레소"; break;
+			case "66": category = "에스프레소"; break;
+			}
+			String mappingPath = "upload/json/menu/custom/makefile/" + file + ".json";
+			ClassPathResource resource = new ClassPathResource(mappingPath);
+			FileReader reader = new FileReader(resource.getFile());
+			Gson gson = new Gson();
+			JsonObject obj = gson.fromJson(reader, JsonObject.class);
+			JsonArray list = obj.get("menuList").getAsJsonArray();
+			System.out.println("@메뉴리스트 시작@");
+			for(JsonElement tmp : list) {
+				JsonObject aa = tmp.getAsJsonObject();
+				JsonArray jarr = aa.get("hotSku").getAsJsonObject().get("hotSkuList").getAsJsonArray();
+				if(jarr.isEmpty()) {
+					jarr = aa.get("icedSku").getAsJsonObject().get("icedSkuList").getAsJsonArray();
+				}
+				String price = jarr.get(0).getAsJsonObject().get("price").getAsString();
+				System.out.print("가격확인 : " + price);
+				String name = aa.get("delegateSku").getAsJsonObject().get("skuName").getAsString();
+				System.out.println(" 이름 : " + name);
+				
+				//json파일 만들기
+				JsonObject drinkentry = new JsonObject();
+				drinkentry.addProperty("p_category1", "음료");
+				drinkentry.addProperty("p_category2", category);
+				drinkentry.addProperty("p_name", name);
+				drinkentry.addProperty("p_price", price);
+				drinkfile.add(drinkentry);
+			}
+		}
+		
+		String filepathName = "C:\\Users\\gmg_2\\Desktop\\drink.json" ;
+		try{
+			// BufferedWriter 와 FileWriter를 조합하여 사용 (속도 향상)
+			BufferedWriter fw = new BufferedWriter(new FileWriter(filepathName, true));
+			// 파일안에 문자열 쓰기
+			fw.write(drinkfile.toString());
+			fw.flush();
+			// 객체 닫기
+			fw.close(); 
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+		return "index";
+	}
+*/	
+	
+	//DB에 값 넣는 작업 **딱 한번만 실행**
+	@RequestMapping("init/initDrink")
+	public String initDrink() throws FileNotFoundException, IOException{
+		service.insertMenu("drink");
+		return "index";
+	}
+	
+	@RequestMapping("init/initFood")
+	public String initFood() throws FileNotFoundException, IOException{
+		service.insertMenu("food");
+		return "index";
+	}
+	
+	@RequestMapping("init/initEtc")
+	public String initEtc() throws FileNotFoundException, IOException{
+		service.insertMenu("etc");
+		return "index";
+	}
+	
 }

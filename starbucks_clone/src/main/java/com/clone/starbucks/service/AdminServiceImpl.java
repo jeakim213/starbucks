@@ -5,8 +5,10 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Random;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
+import org.omg.CORBA.Request;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -111,7 +113,7 @@ public class AdminServiceImpl implements IAdminService {
 	
 	//쿠폰 insert
 	@Override
-	public String eCouponProc(E_couponDTO eCouponDTO) throws ParseException {
+	public String eCouponProc(E_couponDTO eCouponDTO, HttpServletRequest request) throws ParseException {
 		/*
 		create table e_coupon(
 		pon_no number not null primary key,												△ <<mapper에서 
@@ -143,7 +145,8 @@ public class AdminServiceImpl implements IAdminService {
 			return "쿠폰 시작 날짜를 선택해야 합니다.";
 		}
 		//쿠폰 금액(pon_cash)
-		if(eCouponDTO.getPon_cash()==0) {
+		if(request.getParameter("pon_cash")=="" || request.getParameter("pon_cash")==null) {
+			eCouponDTO.setPon_cash(0);
 			return "쿠폰 금액을 입력해야합니다.";
 		}
 		
@@ -163,7 +166,10 @@ public class AdminServiceImpl implements IAdminService {
 		System.out.println(eCouponDTO.getPon_name());
 		System.out.println("시작날짜 : " + eCouponDTO.getPon_startdate());
 		System.out.println("끝날짜 : "+endDate(eCouponDTO));
-		System.out.println(eCouponDTO.getPon_cash());
+		String cashStr = request.getParameter("pon_cash");
+		int cash = Integer.parseInt(cashStr);
+		eCouponDTO.setPon_cash(cash);
+		System.out.println("금액 : "+eCouponDTO.getPon_cash());
 		
 		
 		//쿠폰 카테고리 확인해서 번호 입력 (pon_num)
@@ -182,8 +188,6 @@ public class AdminServiceImpl implements IAdminService {
 		
 		//쿠폰 사용했는지 안했는지(pon_used)
 		eCouponDTO.setPon_used('N');
-		
-		
 		
 		//insert
 		adminDAO.insertEcoupon(eCouponDTO);

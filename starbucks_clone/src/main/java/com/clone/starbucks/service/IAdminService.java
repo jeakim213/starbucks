@@ -3,6 +3,8 @@ package com.clone.starbucks.service;
 import java.text.ParseException;
 import java.util.Date;
 
+import javax.servlet.http.HttpServletRequest;
+
 import com.clone.starbucks.DTO.E_couponDTO;
 
 public interface IAdminService {
@@ -11,7 +13,7 @@ public interface IAdminService {
 		String mmsCoupon_NumMake(E_couponDTO ecouponDTO);
 		String starCoupon_NumMake(E_couponDTO ecouponDTO);
 		
-		String eCouponProc(E_couponDTO ecouponDTO) throws ParseException;
+		String eCouponProc(E_couponDTO ecouponDTO, HttpServletRequest request) throws ParseException;
 		
 		//String selectNo(E_couponDTO ecouponDTO) throws ParseException;
 		

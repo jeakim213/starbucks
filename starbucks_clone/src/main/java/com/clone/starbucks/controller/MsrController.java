@@ -1,8 +1,7 @@
 package com.clone.starbucks.controller;
 
-import java.io.IOException;
+
 import java.io.PrintWriter;
-import java.text.ParseException;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -11,31 +10,45 @@ import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.clone.starbucks.DTO.CardDTO;
+import com.clone.starbucks.service.KakaoPay;
 import com.clone.starbucks.service.MsrServiceImpl;
 
 @Controller
 public class MsrController {
-
+	@Autowired KakaoPay kakaoPay;
 	@Autowired MsrServiceImpl msrService;
 	@Autowired HttpSession session;
 	//msr
 	
-	
-	@PostMapping(value="msr/sceGift/eGiftCardProc")
-	public String eGiftCardProc(CardDTO cardDTO, Model model, HttpServletRequest request) throws ParseException, IOException {
+	@ResponseBody
+	@RequestMapping(value="msr/sceGift/eGiftCardProc")
+	public String eGiftCardProc(CardDTO cardDTO, Model model, HttpServletRequest request, HttpServletResponse response) throws Exception {
 		
-		String msg = msrService.eGiftCardProc(cardDTO, request);
+		//카카오톡 결제(메소드 만들어서 불러오기)
+		//kakaoPay.kakaoPay();
+		//DB저장 <<카드값 저장
 		
-		if(msg.equals("완료")) {
-			model.addAttribute("msg",msg);
-			return "redirect:/index?formpath=home";
+		CardDTO dto = msrService.eGiftCardProc(cardDTO, request);
+		
+		//되는가 안되는ㄱ ㅏ확인
+		response.setContentType("text/html; charset=UTF-8");
+		PrintWriter out = response.getWriter();
+		if(dto!=null) {
+//			//메일
+//			msrService.sendMail(request, response);
+			out.println("<script>alert('쿠폰 구매 완료되었습니다.'); location.href='msr/sceGift/gift_step1';</script>");
+			out.flush();
+			out.close();
+			return "msr/sceGift/gift_step1";
 		}else {
-			model.addAttribute("msg",msg);
+//			model.addAttribute("msg",msg);
+			out.println("<script>alert('구매 실패 하였습니다.');location.href='msr/sceGift/gift_step1';</script>");
+			out.flush();
+			out.close();
 			return "msr/sceGift/gift_step1";
 		}
 		
@@ -90,5 +103,10 @@ public class MsrController {
 	public String sceGift_msr_useguide() {
 		return "msr/sceGift/msr_useguide";
 	}
+	
+	//카카오페이결제 sale/kakaopay
+//	@RequestMapping(value="sale/kakaopay")
+//	public String 
+>>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
 	
 }

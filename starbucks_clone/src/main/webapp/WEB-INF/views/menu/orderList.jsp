@@ -637,97 +637,71 @@ var eFrequencyPlannerYn = 'Y';
 				<!-- 서브 타이틀 end -->
 				
 				
-				
-				
 				<!-- 0530 다정 장바구니 제작 -->
 				<!-- 내용 부분 -->
 				<div class="content">
-					<form action="#" >
+					<form action="myOrder" id="orderf">
 					<div class="order_wrap">
 						<div class="order_orderConfirm" style="margin-bottom: 50px;">
 							<h3>주문내역 확인</h3><br>
 							<div class="order_orderConfirm_inner" style="padding:15px;">
-							
-								<table style="border: thin; border-style:solid; border-color: #dfdfdf; margin: auto;">
-								
+								<p style="padding-left:100px;">* 음료를 제외한 푸드, 상품은 결제시 수량을 확인 해주세요.</p><br>
+								<table id="ordertab" style="border: thin; border-color: #dfdfdf; margin: auto;">
 									<tr>
-										<th colspan="4" style="padding: 20px; background: #006633; color: white; font-size: 20px;">주문 목록</th>
+										<th colspan="5" style="padding: 25px; width: 800px; background: #006633; color: white; font-size: 23px;">주문 목록</th>
 									</tr>
-									<!-- 0530 다정 list 출력하기 c태그 -->
-									<%-- <c:forEach var="#" items="${sessionScope.list }">--%>
-									
-									<tr>
-										<td style="vertical-align: middle; padding-right: 20px; padding-left: 18px;" align="center"><input type="checkbox" name="Sausage&Olive Mini Pie" id="Sausage&Olive Mini Pie"></td><!-- name은 el태그 사용해서 영문명으로 불러오기 -->
-										<!-- 주석처리된것 지우고 예시로 되어있는것 주석처리 하면 됨 -->
-										
-										<%-- <td><img src="${이미지링크}" class="order_list_img"></td>--%>
-										<td><img src="https://image.istarbucks.co.kr/upload/store/skuimg/2022/04/[9300000004025]_20220406130412481.jpg" class="order_list_img"></td>
-										<%-- <td class="menu_list_info">
-											상품명 : ${상품명}
-											<br><br> 
-											가격 : ${가격} <-DB불러오면 됨
-										</td> --%>
-										<td class="menu_list_info" style="width:400px;">
-											<b>상품명 : 소시지&올리브 미니 파이</b> 
-											<br><br> 
-											가격 : 4500원
-										</td>
-										<td style="vertical-align: middle;">
-											<select name="count" id="Sausage&Olive Mini Pie"><!-- id에서 el태그로 이름불러오기 -->
-												<option value="">수량선택</option>
-												<option value="1">1개</option>
-												<option value="2">2개</option>
-												<option value="3">3개</option>
-												<option value="4">4개</option>
-												<option value="5">5개</option>
-												<option value="6">6개</option>
-												<option value="7">7개</option>
-												<option value="8">8개</option>
-												<option value="9">9개</option>
-											</select>
-										</td>
-										
-									</tr>
-									<%-- </c:forEach> --%>
-									<tr>
-										<td style="vertical-align: middle; padding-right: 20px; padding-left: 20px;" align="center"><input type="checkbox" name="Tiramisu Cream Danish" id="Tiramisu Cream Danish"></td><!-- name은 el태그 사용해서 영문명으로 불러오기 -->
-										<!-- 주석처리된것 지우고 예시로 되어있는것 주석처리 하면 됨 -->
-										<%-- <td><img src="${이미지링크}" class="order_list_img"></td>--%>
-										<td><img src="https://image.istarbucks.co.kr/upload/store/skuimg/2022/04/[9300000004026]_20220406130314367.jpg" class="order_list_img"></td>
-										<%-- <td class="menu_list_info">
-											상품명 : ${상품명}
-											<br><br> 
-											가격 : ${가격} <-DB불러오면 됨
-										</td> --%>
-										<td class="menu_list_info" style="width:400px;">
-											<b>상품명 : 티라미수 크림 데니쉬</b> 
-											<br><br> 
-											가격 : 4500원
-										</td>
-										<td style="vertical-align: middle;">
-											<select name="count" id="Tiramisu Cream Danish">
-												<option value="">수량선택</option>
-												<option value="1">1개</option>
-												<option value="2">2개</option>
-												<option value="3">3개</option>
-												<option value="4">4개</option>
-												<option value="5">5개</option>
-												<option value="6">6개</option>
-												<option value="7">7개</option>
-												<option value="8">8개</option>
-												<option value="9">9개</option>
-											</select>
-										</td>
-									</tr>
-									
-									
-									<%--</c:forEach>--%>
+									<!-- 0614 지혜 list 출력-->
+									<tbody id="ordertbody">
+									<c:forEach var="cate" items="${sessionScope.list }">
+										<c:set var="keyVal" value="${cate.key }" />
+										<tr class="noMenu"><th colspan="5" style="padding: 15px; background: #f9f1e0; color: black; font-size: 17px; border-radius: 20px;">${keyVal }</th></tr>
+										<c:choose>
+											<c:when test="${keyVal == 'Drink'}">
+												<c:forEach var="product" items="${sessionScope.list.Drink }">
+													<tr>
+													<td style="vertical-align: middle; padding-right: 20px; padding-left: 18px;" align="center"><input type="checkbox" class="ckbox"></td>
+													<td><img src="${product.p_img }" class="order_list_img"></td>
+													<td class="menu_list_info" style="width:520px; padding-left: 30px;" ><b>${product.p_name }</b>
+													<br><span>${product.p_op }</span>
+													</td>
+													<td class="menu_list_price" style="width:150px; vertical-align: middle;">${product.p_price }원</td>
+													</tr>
+												</c:forEach>
+											</c:when>
+											<c:otherwise>
+												<c:forEach var="product" items="${sessionScope.list.Food }">
+													<c:set var="thisKey" value="${product.key }" />
+													<tr>
+													<td style="vertical-align: middle; padding-right: 20px; padding-left: 18px;" align="center"><input type="checkbox" class="ckbox"></td>
+													<td><img src="${sessionScope.list[keyVal][thisKey].p_img }" class="order_list_img"></td>
+													<td class="menu_list_info" style="width:450px; padding-left: 30px;" ><b>${sessionScope.list[keyVal][thisKey].p_name }</b></td>
+													<td class="menu_list_price" style="width:100px; vertical-align: middle;">${sessionScope.list[keyVal][thisKey].p_price }원</td>
+													<td style="width:100px; vertical-align: middle;">
+														<select style="hight:20px;" class="selcount">
+															<option value="" disabled="disabled">수량선택</option>
+															<option value="1">1개</option>
+															<option value="2">2개</option>
+															<option value="3">3개</option>
+															<option value="4">4개</option>
+															<option value="5">5개</option>
+															<option value="6">6개</option>
+															<option value="7">7개</option>
+															<option value="8">8개</option>
+															<option value="9">9개</option>
+														</select>
+													</td>
+													</tr>
+												</c:forEach>
+											</c:otherwise>
+										</c:choose>
+									</c:forEach>
+									</tbody>
 								</table>
 							
 							</div>
 						</div>
 						<div class="cart_submit" style="margin: auto; text-align: center;">
-							<input type="submit" value="결제" class="submitResetBtn" style="background: #006633; color: white;">
+							<input type="button" value="결제" class="submitResetBtn" onclick="checkOrderList();" style="background: #006633; color: white;">
 							<input type="reset" value="취소" class="submitResetBtn" style="background: #f6f6f6; ">
 						</div>
 							
@@ -735,13 +709,7 @@ var eFrequencyPlannerYn = 'Y';
 					</form>
 				</div>
 			<!-- container end -->
-			
-			
 
-
-
-
-		
 			<!-- footer -->
 			<footer id="footer"> 
 				<div class="footer_wrap">
@@ -781,16 +749,10 @@ var eFrequencyPlannerYn = 'Y';
 						<ul>
 							<li class="footer_menu_ttl"><a class="en" id="goPage" href="javascript:void(0);">CORPORATE SALES<span class="footer_arrow_down"></span></a></li>
 							<li><a href="footer/co_sales/index">단체 및 기업 구매 안내</a></li>
-							<!-- <li><a href="footer/co_sales/sbcard_egift">스타벅스 <span class="en">e-Gift Card</span></a></li> -->
-							<!-- <li><a href="footer/co_sales/sbcard">스타벅스 카드</a></li> -->
-							<!-- <li><a href="footer/co_sales/co-branded"><span class="en">Co-branded</span> 카드</a></li> -->
-							<!-- <li><a href="footer/co_sales/sb_product">스타벅스 상품</a></li> -->
-							<!-- <li><a href="footer/co_sales/sbgift_certificate">스타벅스 상품권</a></li> -->
 						</ul>
 						<ul>
 							<li class="footer_menu_ttl"><a class="en" href="javascript:void(0);">PARTNERSHIP<span class="footer_arrow_down"></span></a></li>
 							<li><a href="footer/partnership/new_partner">신규 입점 제의</a></li>
-							<!-- <li><a href="footer/partnership/portal_systems">협력사 포털 시스템</a></li> -->
 							<li><a href="srm/login">협력 고객사 등록신청</a></li>
 						</ul>
 						<ul>
@@ -828,49 +790,6 @@ var eFrequencyPlannerYn = 'Y';
 				</div>
 				<!-- 수상내역 end -->
                 
-                <!-- Express DT MSR 회원 확인 Popup -->
-				<div class="dtPop ecoPop" id="msrCheckPop" style="display: none; margin-top: -51px;">
-					<div class="head">
-						<p class="tt"></p>
-						<p id="dtPopCommonCloseBtn" class="close dtPopClose"><a href="javascript:void(0)"></a></p> <!-- 팝업 닫힘 클래스 : dtPopClose -->
-					</div>  
-					<div id="Msr" class="dtPopInner left" style="display:none">
-						<p>[My DT Pass]는 스타벅스 카드를<br>
-						등록한 회원만 이용 가능한 서비스입니다.<br>
-						카드를 등록하시겠어요?
-						</p>
-						<br>
-						<input type="hidden" id="dtsPwdchk2">
-						<input type="hidden" id="dtsPwdchk">
-					</div>
-					<div class="dtPopBtn">
-						<a id="dtPopPwdCheckBtnMsr" class="dtPopBtn1 confirm pwdCheckBtn">확인</a>
-						<a id="dtPopCancelBtnMsr" class="dtPopBtn2 cancel">취소</a>
-						<a id="dtPopCommonBtnMsr" class="dtPopBtn2 commonBtnMsr" style="display:none">확인</a>
-					</div>
-					<!--// 버튼 -->
-				</div>
-				<!-- 개인컵 리워드  MSR 회원 확인 Popup s-->
-				<div class="dtPop ecoPop" id="msrCheckPop_rewardTumbler" style="display: none; margin-top: -51px;">
-					<div class="head">
-						<p class="tt">스타벅스 리워드 등록 안내</p>  <!-- 스타벅스 리워드 수정  -->
-						<p id="tumblerPopCommonCloseBtn" class="close ecoPopClose"><a href="javascript:void(0)"></a></p> <!-- 팝업 닫힘 클래스 : dtPopClose -->
-					</div>  
-					<div id="msrCheckPop_rewardTumblerContents" class="dtPopInner ecoPopDs left" style="display:none">
-						<p>[개인컵 리워드 설정]은 스타벅스 카드를<br>
-						등록한 회원만 이용 가능한 서비스입니다.<br>
-						카드를 등록하시겠어요?</p>
-						<br>
-					</div>
-					<div class="dtPopBtn">
-						<a id="tumblerPopConfirmBtn" class="dtPopBtn1 confirm pwdCheckBtn">확인</a>
-						<a id="tumblerPopCancelBtn" class="dtPopBtn2 cancel">취소</a>
-					</div>
-					<!--// 버튼 -->
-				</div>
-				<!-- 개인컵 리워드  MSR 회원 확인 Popup e-->
-				<div class="dt_pop_up_dimm" style="display:none"></div>
-				
 				<!-- 150517 추가 - 문진욱 -->
 				<aside class="copyright">
 					<a class="c_00b050" href="footer/etc/privacy">개인정보처리방침</a>
@@ -926,873 +845,135 @@ var eFrequencyPlannerYn = 'Y';
 			<script src="../common/js/header.js?v=200915"></script>
 			<script src="//image.istarbucks.co.kr/common/js/footer.js?v=210818"></script>
 
-			<script src="//image.istarbucks.co.kr/common/js/jquery.tmpl.js"></script>
-			<script src="//image.istarbucks.co.kr/common/js/jquery.tmplPlus.min.js"></script>
 			<script src="//image.istarbucks.co.kr/common/js/jquery.ezmark.min.js"></script>
-			<!-- <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script> -->
-			
-			<!--
-			<script src="../common/js/swiper.jquery.min.js"></script>
-			<script src="../common/js/swiper.min.js"></script>
-			<script src="../common/js/util.js"></script>
-			-->
 			
 		
 			<script src="//image.istarbucks.co.kr/common/js/openevent/openevent.js"></script>
 			<script src="//image.istarbucks.co.kr/common/js/open_event_control.js"></script>
-			<script type="text/javascript">
-				
-				var mrSlider;
-				
-				$(document).ready(function(){
-					/* 20171204 kbs 페이지별 head 내 title 변경 */
-					if( $('.smap li').last().text() == "" )
-					{
-						$('#titleJoin').text("Starbucks Korea"); //220117 수정
-					}
-					else
-					{
-						$('#titleJoin').text( $('.smap li').last().text() + " | Starbucks Korea" ); //220117 수정	
-					}
-					
-					$('#pickDate1, #pickDate2').datepicker({
-						 "dateFormat"      : "yy-mm-dd"
-						/* ,"dayNamesMin"     : ['일', '월', '화', '수', '목', '금', '토'] */
-						,"maxDate"         : "+0m +0w"
-						/* ,"monthNamesShort" : ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'] */
-					});
-			
-// 					var sbox = $('.my_ms_select select');
-// 					sbox.change(function(){
-// 						접근성_20171123 삭제
-// 						var sbox_name = $(this).children('option:selected').text();
-// 						$(this).siblings('label').text(sbox_name);
-// 					});접근성_20171201 삭제
-
-					/* s::20210714 수정 */
-					/* 170201 수정 - 황기흠 */
-					if ((myWindow > 640) && (myWindow <= 1200)) {
-						var faSlider = $('.footer_awards_slider').bxSlider({
-							minSlides:3,
-							maxSlides:3,
-							slideWidth:210,
-							slideMargin:0,
-							controls:false,
-							auto:true,
-							autoControls:true,
-							autoControlsCombine:true,
-							pause:3000,
-							infiniteLoop: true,
-							pagerSelector:'.footer_slider_pagers',
-							autoControlsSelector:'.footer_slider_controls'
-						});
-					} else if (myWindow <= 640) {
-						var faSlider = $('.footer_awards_slider').bxSlider({
-							minSlides:1,
-							maxSlides:1,
-							slideWidth:320,
-							slideMargin:0,
-							controls:false,
-							auto:true,
-							autoControls:true,
-							autoControlsCombine:true,
-							pause:3000,
-							infiniteLoop: true,
-							pagerSelector:'.footer_slider_pagers',
-							autoControlsSelector:'.footer_slider_controls'
-						});
-					}
-					/* 170201 수정 - 황기흠 end */
-					/* e::20210714 수정 */
-					
-					/* 구명준 추가 시작 탭 */			
-					/* 20171127 중복 스크립트 삭제 coffee.js 내 존재 */
-// 					$(".content_tabmenu > .tab").bind("click focusin", function(){
-// 						if(!$(this).hasClass("on")) {
-// 							$(this).parent().children(".on").removeClass("on");
-// 							var index = $(this).addClass("on").closest(".content_tabmenu").children(".tab").index(this);
-// 							$(this).parent().children(".panel").hide().eq(index).show();
-// 						}
-// 						return false;
-// 					});
-// 					$(".content_tabmenu > .tab").bind("click focusout", function(){
-// 						if(!$(this).hasClass("on")) {
-// 							$(this).parent().children(".on").removeClass("on");
-// 							var index = $(this).addClass("on").closest(".content_tabmenu").children(".tab").index(this);
-// 							$(this).parent().children(".panel").hide().eq(index).show();
-// 						}
-// 						return false;
-// 					});
-					/* 구명준 끝 */
-
-					/* 150714 추가 - 박종현 */
-					var itvChangeLink = setInterval(function() {
-						if (m_jsonRewardSummary != null) {
-							// 등록된 카드가 없으면 링크 변경
-							if (m_jsonRewardSummary.cardInfo.cardNumber == "") {
-								if (location.href.indexOf("my/") > -1) {
-									var url = "my/mycard_none";
-									
-									$('a[data-href="my/mycard_index"]').attr("data-href", url);
-									$('a[data-href="my/mycard"]').attr("data-href", url);
-									$('a[data-href="my/mycard_charge"]').attr("data-href", url);
-									$('a[data-href="my/mycard_lost"]').attr("data-href", url);
-								}
-							}
-							
-							// 로그인 상태에 따라 등록 및 조회 페이지 링크 변경
-							if (m_jsonRewardSummary.msrMemberYn == "Y") {
-								$('a[href="msr/scard/register_inquiry"]').attr("href", "my/mycard_info_input");
-							} else {
-								$('a[href="msr/scard/register_inquiry"]').attr("href", "my/reward");
-							}
-							
-							clearInterval(itvChangeLink);
-						}
-					}, 150);
-					/* 150714 추가 - 박종현 end */
-					$('#goPage').bind('click', function(){
-						if (myWindow > 640) {
-							location.href="footer/co_sales/index";
-						}
-					});
-					
-                    /*kbs Express DT 접근 시 MSR 회원 체크, 비밀번호 체크*/
-                    var dtPopHt = $('.dtPop').height() * -0.5;
-                    $('.dtPop').css('margin-top',dtPopHt);
-                    
-                    $('#dtPopCancelBtn, #dtPopCommonCloseBtn, #dtPopCancelBtnMsr, #dtPopCommonCloseBtnMsr, .commonBtn, .commonBtnMsr').click(function(){
-                        $('#msrCheckPop').fadeOut();
-                        $('#commonPop').fadeOut();
-                        $('.dt_pop_up_dimm').fadeOut();
-                    });
-                    
-                    $('#dtClauseCloseBtn').click(function(){
-                        $('#privatePop').fadeOut();
-                    });
-                    
-					$('#dtClauseCloseXBtn').click(function(){
-						$('#privatePop').fadeOut();
-					});
-                });
-                
-                /* 개인컵 리워드 s */
-                function fn_rewardTumblerMsrCheck(){
-                	fn_hideGnbMenu();
-					var url = document.location.pathname;
-					fn_showrewardTumblerMsrCheckLayer(url);
-                }
-                function fn_showrewardTumblerMsrCheckLayer(url){
-                	/* 로그인 체크  */
-                	$.ajax({
-                    	type: 'post',
-                    	url : '/edt/edtCheckLogin',
-                    	data : {},
-                    	dataType : 'json',
-                    	jsonp : 'callback',
-                    	success : function(_response){
-                    		
-                    		if(_response.result_code != "SUCCESS"){
-                    			
-                            	if(url.length == 0){
-                            		url = location.href;
-                            	}  
-                            	location.href = "login/login?redirect_url=" + encodeURIComponent(url);
-                    			
-                    		}else{
-                    			//MSR 회원 여부 체크
-                    			if (m_jsonRewardSummary == null) {
-                    				 $.ajax({
-                                     	type: 'post',
-                                     	url : '/interface/getMsrRewardSummary',
-                                     	data : {},
-                                     	dataType : 'json',
-                                     	jsonp : 'callback',
-                                     	async : false,
-                                     	success : function(_response){
-                                     		if (_response.result_code == "SUCCESS") {
-												m_jsonRewardSummary = jQuery.parseJSON(_response.data);
-												fn_showrewardTumblerMsrCheckPopup(m_jsonRewardSummary);
-											}
-                                     	}
-                                   	});
-								}else{
-									
-									fn_showrewardTumblerMsrCheckPopup(m_jsonRewardSummary);
-								}
-                    		}
-                    	}
-                    });
-                }
-                
-                function fn_showrewardTumblerMsrCheckPopup(obj){
-                	if( obj.msrMemberYn == "Y"){ /*msr 회원일 경우 페이지 이동*/
-                		location.href = "my/reward_tumbler";
-                    }else{/* msr 비회원일 경우 팝업창 노출 */
-                        $('#msrCheckPop_rewardTumbler').fadeIn();
-                        $('.dt_pop_up_dimm').fadeIn();
-                        $('#msrCheckPop_rewardTumblerContents').show();
-                        $('#tumblerPopConfirmBtn, #tumblerPopCancelBtn').show();
-                        $('#tumblerPopConfirmBtn').on('click', function(){
-                        	// msr 비회원일 경우 카드 등록 페이지로 이동
-                        	location.href = "my/mycard_info_input";
-                        });
-                    }
-                }
-                $('#tumblerPopCommonCloseBtn, #tumblerPopCancelBtn').click(function(){
-                    $('#msrCheckPop_rewardTumbler').fadeOut();
-                    $('.dt_pop_up_dimm').fadeOut();
-                    $('#msrCheckPop_rewardTumblerContents').hide();
-                    $('#tumblerPopConfirmBtn, #tumblerPopCancelBtn').hide();
-                });
-                /* 개인컵 리워드 e */
-			</script>
 
 			<script src="//image.istarbucks.co.kr/common/js/jquery.transit.min.js"></script>
-			<script>
-				// 150805 DOM 수정
-				$('div.msr_card_zone').bind('click', function(){
-					if($('div.mycard_area2').css("display")=="none"){
-						$('div.mycard_area1').hide();
-						$('div.mycard_area2').fadeIn();
-						$('.mycard_one img').attr('src', '//image.istarbucks.co.kr/common/img/common/payment_icon2.png').attr('alt','결제하기'); // 접근성_20171106 alt 추가
-					}else{
-						$('div.mycard_area1').fadeIn();
-						$('div.mycard_area2').hide();
-						$('.mycard_one img').attr('src', '//image.istarbucks.co.kr/common/img/common/payment_icon1.png').attr('alt', '결제완료');// 접근성_20171106 alt 추가
-					}
-				});
-				// 150805 DOM 수정 end
-			
-				(function($) {
-					$.fn.seqfx = function() {
-						var elements = this,
-							l = elements.length,
-							i = 0;
-		
-						function execute() {
-							var current = $(elements[i]);
-							i = (i + 1) % l;
-		
-							current
-								.animate({ rotateY: '360deg' }, 2000)
-								.animate({ rotateY: '-360deg' }, 2000, execute);
-						}
-						execute();
-						return this;
-					};
-				}(jQuery));
-				$('.mycard_one').seqfx();
-			</script>
 						
 			<script src="//image.istarbucks.co.kr/common/js/makePCookie.js"></script>
-		
-			<script>
-				$(document).ready(function () {
-					$('a[href*="card_list"] , a[href*="drink_list"] , a[href*="food_list"] , a[href*="product_list"]').on("click", function () {
-						Cookies.deleteCookie("MENU_TAB");
-						Cookies.deleteCookie("MENU_CATE");
-						Cookies.deleteCookie("MENU_OPT");
-					});
-				});
-			</script>
-		
-			<form name="drinkListForm" method="get">
-                <input type="hidden" name="product_cd">
-			</form>
 			
-			<input type="hidden" name="themeType" id="themeType" value="">
-			<input type="hidden" name="selIndex" id="selIndex" value="">
 		</div>
 		
 		<script src="../common/js/jquery.ezmark.min.js"></script>
         <script src="../common/js/menu.js"></script>
         <script src="../common/js/jquery.async.min.js"></script>
         
-		<script>
-		   var $PREVIEW = "";
-		   var $CATE_CD = "product_cold_brew";
-		   var dataCnt = 0; // 160928 상세검색 결과 값
-		   $(document).ready(function(){
-			   
-			    
-			    setTimeout(function(){
-					if ( $('#themeType').val() == 'THEME'  ) {
-						$(".product_kind_tab dt a").eq(1).trigger("click");
-						$(".service_bn li img").eq( $('#selIndex').val() ).trigger("click");	
-			    	}
-				}, 1500);
-			   
-			    $("#mn_select_wrap .opt").hide();
-
-				//셀렉트바를 클릭했을 때
-				$("#mn_select_wrap .select, #mn_select_wrap p span").bind("click",function(){
-				    $("#mn_select_wrap .opt").toggle();
-				});
-
-				//마우스가 셀렉트 영역을 벗어났을 때
-				$("#mn_select_wrap").bind("mouseleave",function(){
-				    $("#mn_select_wrap .opt").hide();
-				});
-
-				//옵션 목차를 클릭했을 때
-				$("#mn_select_wrap .opt label").bind("click",function(e){
-					$(this).siblings('input:checkbox').prop('checked', this.checked).change(); // ?? 아무거나 넣어도 작동 <- 접근성을 위한 작업
-				});
-
-			    $('ul.opt input[type=checkbox]').bind('click', function() {
-			    	dataCnt = 0; // 160928 상세검색 결과 초기화
-			        var chkTmp = false;
-			        $('ul.opt').find('input[type=checkbox]').each(function() {
-			            if($(this).is(':checked')) {
-			                chkTmp = true;
-			            }
-			        });
-			        
-			        $('.cate_list input[type=checkbox]').each(function() {
-                        if($(this).is(':checked')) {
-                            if($(this).attr('id') == "product_all") {
-                                showMenuDetail(chkTmp, "product_cold_brew");
-                                showMenuDetail(chkTmp, "product_brood");
-                                showMenuDetail(chkTmp, "product_espresso");
-                                showMenuDetail(chkTmp, "product_frappuccino");
-                                showMenuDetail(chkTmp, "product_blended");
-                                showMenuDetail(chkTmp, "product_fizzo");
-                                showMenuDetail(chkTmp, "product_tea");
-                                showMenuDetail(chkTmp, "product_etc");
-                                showMenuDetail(chkTmp, "product_juice");
-                            } else {
-                            	showMenuDetail(chkTmp, $(this).attr('id'));
-                            }
-                        }
-			        });
-			        
-			        if(dataCnt < 1 && chkTmp){ // 160928 상세검색 아이콘 선택 후 검색 결과 없을 경우
-                    	$('.product_no_result').show();
-                    } else { // 160928 상세검색 미선택 시 전체 상품 출력으로 해당 영역 숨김
-                    	$('.product_no_result').hide();
-                    }
-			    });
-			    
-			    
-				/* 150517 추가 - 문진욱 */
-
-				$('ul.cate_list').mCustomScrollbar();
-				// $('ul.service_bn').parents('dd').mCustomScrollbar();
-				// $('ul.service_bn').parents('dd').css({'height':'200px'});
-
-				/* 150517 추가 - 문진욱 end */
-
-// 				$('input[type=checkbox]').ezMark(); 접근성_20171123 ezmark 삭제
-				
-				$('.product_view_tab.product_view_tab01 .product_list > dl > dd > ul').empty('');				
-
-				$('.product_select_wrap input[type=checkbox]').bind('click', function(e) {
-					cate_chk_idx = $('.product_select_wrap input[type=checkbox]').index($(this));
-					cate_chk_stat = $(this).is(':checked');
-					
-					if(cate_chk_idx == 0 && cate_chk_stat) {
-                        $('.product_select_wrap input[type=checkbox]').not(':eq(0)').removeAttr('checked');
-						$('.product_select_wrap input[type=checkbox]').not(':eq(0)').trigger('change');
-					} else if(cate_chk_idx != 0 && cate_chk_stat) {
-                        $('.product_select_wrap input[type=checkbox]').eq(0).removeAttr('checked');
-                        $('.product_select_wrap input[type=checkbox]').eq(0).trigger('change');
-                    }					
-					showProductList();
-				});
-				
-				$('.product_select_wrap input[type=checkbox]').each(function() {
-					tmp_cate = $(this).attr('id');
-					if($(this).attr('checked') == 'checked') {
-	                    getProductPicList(tmp_cate);
-					}
-				});
-				
-				$('.product_view_tab.product_view_tab01 .product_list > dl > dt').hide();
-                $('.product_view_tab.product_view_tab01 .product_list > dl > dd').hide();
-                //$('.product_view_tab.product_view_tab01 .dt2').next().empty();
-                
-                $(window).load(function() {
-                    if($CATE_CD != "") {
-                        setTimeout(function() {
-                            $('.product_select_wrap input[type=checkbox]').each(function() {
-                                tmp_cate = $(this).attr('id');
-                                if($CATE_CD == tmp_cate) {
-                                    $(this).click();
-                                    return false;
-                                }
-                            });
-                        }, 600);
-                    }
-                });
-
-                $('.service_bn li').each(function() {
-                	prod_seq = $(this).find('img').data('sbseq');
-
-					if(typeof prod_seq != "undefined"){
-						getServiceProductList(prod_seq);
-					}
-                });
-
-                $('.service_bn img').on('click', function() {
-                    prod_seq = $(this).data('sbseq');
-                    $('.product_view_tab.product_view_tab02 .product_list > dl > dd > ul').empty();
-                    $('.product_view_tab.product_view_tab02 .dt2').next().empty();
-
-                    if(typeof prod_seq != "undefined"){
-						getServiceProductList(prod_seq);
-					}
-                });
-                
-             	// 150819 성연욱 수정
-                $('ul.service_bn li a').on('click', function(){
-                	$('ul.service_bn li a').removeClass('on');
-                	$(this).addClass('on');
-                });
-             	// 150819 성연욱 수정 end
-
-			   
-			   if($PREVIEW != ""){
-				   $("#themeTab").click();
-			   }
-
-			});
-		   
-		   function showMenuDetail(chkTmp, cls) {
-			   
-			   var $sel = $('.' + cls);
-               
-               if(chkTmp == true) {
-            	   $sel.children('.menuDataSet').each(function() {
-                       $(this).hide();
-                       $(this).parent().parent().prev().hide();
-                   });
-                   
-                   $('ul.opt').find('input[type=checkbox]').each(function() {
-                       var dTarget = $(this).attr('data-target');
-                       
-                       if($(this).is(':checked')) {
-                           if(dTarget == "new") {
-                        	   $sel.children('.menuDataSet').each(function() {
-                                   if($(this).attr("new") == "Y") {
-                                       $(this).show();
-                                       $(this).parent().parent().prev().show();
-                                       dataCnt++; // 160928 상세검색 선택 시 데이터 존재
-                                   }
-                               });
-                           }
-                           if(dTarget == "sell") {
-                        	   $sel.children('.menuDataSet').each(function() {
-                                   if($(this).attr("sell") == "1") {
-                                       $(this).show();
-                                       $(this).parent().parent().prev().show();
-                                       dataCnt++; // 160928 상세검색 선택 시 데이터 존재
-                                   }
-                               });
-                           }
-                           if(dTarget == "recomm") {
-                        	   $sel.children('.menuDataSet').each(function() {
-                                   if($(this).attr("recomm") != "0") {
-                                       $(this).show();
-                                       $(this).parent().parent().prev().show();
-                                   }
-                               });
-                           }
-                           if(dTarget == "sold") {
-                        	   $sel.children('.menuDataSet').each(function() {
-                                   if($(this).attr("sold") == "Y") {
-                                       $(this).show();
-                                       $(this).parent().parent().prev().show();
-                                   }
-                               });
-                           }
-                       } else {
-                           if(dTarget == "new") {
-                        	   $sel.children('.menuDataSet').each(function() {
-                                    if($(this).attr("new") == "Y" && dTarget != "new") {
-                                       $(this).hide();
-                                       $(this).parent().parent().prev().hide();
-                                   }
-                               });
-                           }
-                           if(dTarget == "sell") {
-                        	   $sel.children('.menuDataSet').each(function() {
-                                   if($(this).attr("sell") == "1" && dTarget != "sell") {
-                                       $(this).hide();
-                                       $(this).parent().parent().prev().hide();
-                                   }
-                               });
-                           }
-                           if(dTarget == "recomm") {
-                        	   $sel.children('.menuDataSet').each(function() {
-                                   if($(this).attr("recomm") != "0" && dTarget != "recomm") {
-                                       $(this).hide();
-                                       $(this).parent().parent().prev().hide();
-                                   }
-                               });
-                           }
-                           if(dTarget == "sold") {
-                        	   $sel.children('.menuDataSet').each(function() {
-                                   if($(this).attr("sold") == "Y" && dTarget != "sold") {
-                                       $(this).hide();
-                                       $(this).parent().parent().prev().hide();
-                                   }
-                               });
-                           }
-                       }
-                   });
-               } else {
-            	   $sel.children('.menuDataSet').each(function() {
-                       $(this).show();
-                       $(this).parent().parent().prev().show();
-                   });
-               }
-               
-               showChk = false;
-               $sel.children('.menuDataSet').each(function() {
-            	   if($(this).css('display') != 'none') {
-            		   showChk = true;
-            	   }
-               });
-               
-               if(showChk) {
-            	   //$sel.parent().prev().show();
-               } else {
-                   //$sel.parent().prev().hide();
-               }
-		   }
-            
-            function getServiceProductList(pro_seq) {
-
-                var option = {
-                        'CATE_CD' : pro_seq 
-                        /* ,'THEME_SEARCH' : 'Y' */
-                };
-                
-                var url = '/menu/productListAjax';
-    			
-                   url = '/upload/json/menu/' + pro_seq + '.js';
-                
-                __ajaxCall(url, option , true, "JSON", "POST",
-                function(data) {
-                    if(data.list.length > 0) {                    	
-                        $('#tpl_serviceProductList').tmpl(data.list).appendTo($('.product_view_tab.product_view_tab02 .product_list > dl > dd > ul'));
-                                                
-                        $('a.goServiceView').unbind('click').bind('click', function() {
-                            product_cd = $(this).attr('prod');
-                            f_cate = $(this).attr('f_cate');
-                            f = document.drinkListForm;
-                            if(f_cate == "W0000001") {
-                                f.action = "menu/drink_view";
-                            } else if(f_cate == "W0000012") {
-                                f.action = "menu/food_view";
-                            } else if(f_cate == "W0000022") {
-                                f.action = "menu/product_view";
-                            } else {
-                                f.action = "menu/drink_view";
-                            }
-                            f.product_cd.value = product_cd;
-                            f.submit();
-                        });
-                        
-                    }
-                },
-                function() {
-                });
-            }
-			
-			function getProductPicList(tmp_cate) {
-				if(tmp_cate == "product_all") {
-					
-					var d = $.Deferred();
-					d.addCallback(function() {
-	                    getProductPicList2('product_cold_brew');
-					}).addCallback(function() {
-	                    getProductPicList2('product_brood');
-					}).addCallback(function() {
-	                    getProductPicList2('product_espresso');
-                    }).addCallback(function() {
-                        getProductPicList2('product_frappuccino');
-                    }).addCallback(function() {
-                        getProductPicList2('product_blended');
-                    }).addCallback(function() {
-                        getProductPicList2('product_fizzo');
-                    }).addCallback(function() {
-                        getProductPicList2('product_tea');
-                    }).addCallback(function() {
-                        getProductPicList2('product_etc');
-                    }).addCallback(function() {
-                        getProductPicList2('product_juice');
-                    });
-                    d.callback();
-				} else {
-                    getProductPicList2(tmp_cate);
-                }
-			}
-            
-            function getProductPicList2(tmp_cate) {
-                
-            	var cngCateCode = getCateCodeCng(tmp_cate);
-                var cateEq = getCateEq(tmp_cate);
-
-                if(cngCateCode != "") {
-	                var option = {
-	                        'CATE_CD' : cngCateCode
-	                      , 'SOLD_OUT' : '1'
-	                };
-					
-	                var url = '/menu/productListAjax';
-	    			
-	                   url = '/upload/json/menu/' + cngCateCode + '.js';
-	                
-	                __ajaxCall(url, option , true, "JSON", "POST", 
-	                function(data) {
-	                	if(data.list.length > 0) {
-	                		$('.product_view_tab.product_view_tab01 .product_list > dl > dd').eq(~~cateEq - 1).find('ul').eq(0).empty('');
-	                		$('#tpl_productPicList').tmpl(data.list).appendTo($('.product_view_tab.product_view_tab01 .product_list > dl > dd').eq(~~cateEq - 1).find('ul').eq(0));
-	                        $('.product_view_tab.product_view_tab01 .product_list > dl > dt').eq(~~cateEq - 1).show();
-	                        $('.product_view_tab.product_view_tab01 .product_list > dl > dd').eq(~~cateEq - 1).show();
-                            
-                            $('a.goDrinkView').unbind('click').bind('click', function() {
-                                product_cd = $(this).attr('prod');
-                                f = document.drinkListForm;
-                                f.action = "menu/drink_view";
-                                f.product_cd.value = product_cd;
-                                f.submit();
-                            });
-                            $('#tpl_productNutTr').tmpl(data.list).appendTo($('.product_view_tab.product_view_tab01 tbody').eq(~~cateEq - 1));
-                            $('#tpl_productNutMob').tmpl(data.list).appendTo($('.product_view_tab.product_view_tab01 .m_coffee_info').eq(~~cateEq - 1));
-	                	}
-	                },
-	                function() {
-	                });
-                }
-
-            }
-                
-            function getCateCodeCng(tmp_cate) {
-            	result = "";
-            	
-            	if(tmp_cate == "product_all") {
-                    result = "0";
-                } else if(tmp_cate == "product_cold_brew") {
-					result = "W0000171";
-                } else if(tmp_cate == "product_brood") {
-					result = "W0000060";
-				} else if(tmp_cate == "product_espresso") {
-					result = "W0000003";
-				} else if(tmp_cate == "product_frappuccino") {
-					result = "W0000004";
-				} else if(tmp_cate == "product_blended") {
-                    result = "W0000005";
-				} else if(tmp_cate == "product_fizzo") {
-                    result = "W0000061";
-				} else if(tmp_cate == "product_tea") {
-                    result = "W0000075";
-				} else if(tmp_cate == "product_etc") {
-                    result = "W0000053";
-				} else if(tmp_cate == "product_juice") {
-                    result = "W0000062";
-				}
-				return result;
-            }
-            
-            function getCateEq(tmp_cate) {
-                result = "";
-                
-                $('.product_select_wrap input[type=checkbox]').each(function () {
-                    thisId = $(this).attr('id');
-                    thisEq = $('.product_select_wrap input[type=checkbox]').index($(this));
-                    if(thisId == tmp_cate) {
-                        result = thisEq;
-                    }
-                });
-                
-                return result;
-            }
-            
-            function showProductList() {
-            	$('.product_select_wrap input[type=checkbox]').each(function() {
-            		chk_idx = $('.product_select_wrap input[type=checkbox]').index($(this));
-            		tmp_cate = $(this).attr('id');
-            		cngCateCode = getCateCodeCng(tmp_cate);
-                    var cateEq = getCateEq(tmp_cate);
-                    cate_chk_stat = $(this).is(':checked');
-                    
-                    
-                    if(cngCateCode != "") {
-	                    if(chk_idx == 0) {
-	                        if(cate_chk_stat) {
-	                            $('.product_view_tab.product_view_tab01 .product_list > dl > dd > ul').each(function() {
-	                                var idx = $('.product_view_tab.product_view_tab01 .product_list > dl > dd > ul').index($(this));
-	                                if( $.trim($(this)()) != "" ) {
-	                                    $('.product_view_tab.product_view_tab01 .product_list > dl > dt').eq(idx).show();
-	                                    $('.product_view_tab.product_view_tab01 .product_list > dl > dd').eq(idx).show();
-
-                                        $('.product_view_tab.product_view_tab01 .dt2').next().find('h3').eq(idx).show();
-	                                    if(myWindow > 640) {
-		                                    $('.product_view_tab.product_view_tab01 .dt2').next().find('table').eq(idx).show();
-	                                    } else {
-	                                    	   $('.m_coffee_info').eq(idx).show();
-	                                    }
-	                                }
-	                            });
-
-	                            var chkTmp = false;
-	                            $('ul.opt').find('input[type=checkbox]').each(function() {
-	                                if($(this).is(':checked')) {
-	                                    chkTmp = true;
-	                                }
-	                            });
-
-	                            if(cate_chk_stat) {
-	                                if(tmp_cate == "product_all") {
-	                                    showMenuDetail(chkTmp, "product_cold_brew");
-	                                    showMenuDetail(chkTmp, "product_brood");
-	                                    showMenuDetail(chkTmp, "product_espresso");
-	                                    showMenuDetail(chkTmp, "product_frappuccino");
-	                                    showMenuDetail(chkTmp, "product_blended");
-	                                    showMenuDetail(chkTmp, "product_fizzo");
-	                                    showMenuDetail(chkTmp, "product_tea");
-	                                    showMenuDetail(chkTmp, "product_etc");
-	                                    showMenuDetail(chkTmp, "product_juice");
-	                                } else {
-	                                    showMenuDetail(chkTmp, tmp_cate);
-	                                }
-	                            }
-	                            
-                                return false;
-	                        } else {
-	                            $('.product_view_tab.product_view_tab01 .product_list > dl > dd > ul').each(function() {
-	                                var idx = $('.product_view_tab.product_view_tab01 .product_list > dl > dd > ul').index($(this));
-	                                $('.product_view_tab.product_view_tab01 .product_list > dl > dt').eq(idx).hide();
-	                                $('.product_view_tab.product_view_tab01 .product_list > dl > dd').eq(idx).hide();
-
-                                    $('.product_view_tab.product_view_tab01 .dt2').next().find('h3').eq(idx).hide();
-	                                if(myWindow > 640) {
-		                                $('.product_view_tab.product_view_tab01 .dt2').next().find('table').eq(idx).hide();
-	                                } else {
-	                                   $('.m_coffee_info').eq(idx).hide();
-	                                }
-	                            });
-	                        }
-	                    } else {
-	                    	if(cate_chk_stat) {
-                                if( $.trim($('.product_view_tab.product_view_tab01 .product_list > dl > dd').eq(chk_idx - 1).find('ul')()) != "" ) {
-		                            $('.product_view_tab.product_view_tab01 .product_list > dl > dt').eq(chk_idx - 1).show();
-		                            $('.product_view_tab.product_view_tab01 .product_list > dl > dd').eq(chk_idx - 1).show();
-
-                                    $('.product_view_tab.product_view_tab01 .dt2').next().find('h3').eq(chk_idx - 1).show();
-		                            if(myWindow > 640) {
-			                            $('.product_view_tab.product_view_tab01 .dt2').next().find('table').eq(chk_idx - 1).show();
-		                            } else {
-		                            	$('.m_coffee_info').eq(chk_idx - 1).show();
-		                            }
-                                }
-	                        } else {
-	                            $('.product_view_tab.product_view_tab01 .product_list > dl > dt').eq(chk_idx - 1).hide();
-	                            $('.product_view_tab.product_view_tab01 .product_list > dl > dd').eq(chk_idx - 1).hide();
-
-                                $('.product_view_tab.product_view_tab01 .dt2').next().find('h3').eq(chk_idx - 1).hide();
-	                            if(myWindow > 640) {
-		                            $('.product_view_tab.product_view_tab01 .dt2').next().find('table').eq(chk_idx - 1).hide();
-	                            } else {
-	                            	$('.m_coffee_info').eq(chk_idx - 1).hide();
-	                            }
-	                        }
-	                    }
-                    }
-            	});
-            }
-            
-            function convertInfoText(_strVal) {
-				if (_strVal == "") {
-					_strVal = "-";
-				} else if (_strVal.split(".")[0] == "") {
-					_strVal = "0" + _strVal;
-				}
-				
-				return _strVal;
-			}
-		</script>
-        <script type="text/x-jquery-tmpl" id="tpl_productPicList">
-            <li class="menuDataSet" new="${newicon}" sell="${sell_CAT}" recomm="${recomm}" sold="${sold_OUT}">
-                <dl>
-                    <dt>
-                        <a href="javascript:void(0)" class="goDrinkView" prod="${product_CD}"><img src="${img_UPLOAD_PATH.replace("www", "image")}${file_PATH}" alt="${product_NM}"></a>
-                        {{if newicon == 'Y' || sell_CAT == '1' || recomm != '0' || sold_OUT == 'Y'}}
-                        <ul>
-                            {{if newicon == 'Y'}}
-                            <li><img src="//image.istarbucks.co.kr/common/img/menu/mark01.png" alt="NEW"></li>
-                            {{/if}}
-                            {{if sell_CAT == '1'}}
-                            <li><img src="//image.istarbucks.co.kr/common/img/menu/mark02.png" alt="시즌 한정"></li>
-                            {{/if}}
-                            {{if recomm != '0'}}
-                            <li><img src="//image.istarbucks.co.kr/common/img/menu/mark03.png" alt="추천"></li>
-                            {{/if}}
-                            {{if sold_OUT == 'Y'}}
-                            <li><img src="//image.istarbucks.co.kr/common/img/menu/mark04.png" alt="SOLD OUT"></li>
-                            {{/if}}
-                        </ul>
-                        {{/if}}
-                    </dt>
-                    <dd>${product_NM}</dd>
-                </dl>
-            </li>
-        </script>
-        <script type="text/x-jquery-tmpl" id="tpl_productNutTr">
-            <tr>
-                <td>${product_NM}</td>
-            </tr>
-        </script>
-        <script type="text/x-jquery-tmpl" id="tpl_productNutMob">
-            <p class="tit">${product_NM}</p>
-            <ul>
-                <li>
-                    <dl>
-                        <dt>칼로리(Kcal)</dt>
-                    </dl>
-                </li>
-                <li>
-                    <dl>
-                        <dt>당류(g)</dt>
-                    </dl>
-                </li>
-                <li>
-                    <dl>
-                        <dt>단백질(g)</dt>
-                    </dl>
-                </li>
-                <li>
-                    <dl>
-                        <dt>나트륨(mg)</dt>
-                    </dl>
-                </li>
-                <li>
-                    <dl>
-                        <dt>포화지방(g)</dt>
-                    </dl>
-                </li>
-                <li>
-                    <dl>
-                        <dt>카페인(mg)</dt>
-                    </dl>
-                </li>
-            </ul>
-        </script>
-        
-        <script type="text/x-jquery-tmpl" id="tpl_serviceProductList">
-            <li>
-                <dl>
-                    <dt>
-                        <a href="javascript:void(0)" class="goServiceView" prod="${product_CD}" f_cate="${f_CATE_CD}"><img src="${img_UPLOAD_PATH.replace("www", "image")}${file_PATH}" alt="${product_NM}"></a>
-                    </dt>
-                    <dd>${product_NM}</dd>
-                </dl>
-            </li>
-        </script>
-        
         <script src="../common/js/menu/patch4sm.js"></script>
+<script> //지혜
+	var req;
 	
+	$(document).ready(function(){
+		__ajaxCall("starbucks/interface/checkLogin", {}, true, "json", "post"
+   			,function (_response) {
+   				if (_response.result_code == "FAIL") {
+   					alert("로그인이 필요한 기능 입니다.");
+   					location.href = "login/login";
+   				}
+   			}
+   			,function (_error) {
+   			}
+   		);
+	});
+	
+	function checkOrderList() { //0617-지혜
+		//음료의 경우 db계산을 위해 세션에 음료명:갯수로
+		//푸드의 경우 음료와 같지만 ajax로 보내 세션값에 저장된 금액 수정.
+		//만약 결제 취소 or 실패시 세션의 주문내역 날리기.
+		var tdArr = $("#ordertbody tr") //주문내역테이블 값
+		var jsonObj		= new Object(); //서버에 보낼 json값 {상품명:개수}
+		
+		for(var i=0; i < tdArr.length; i++){
+			
+			var cells = tdArr[i];
+			if($(cells).hasClass('noMenu')) continue; //noMenu클래스가 있으면 패스
+			var cell_checkbox = $(cells).find('.ckbox').is(':checked');
+			if(cell_checkbox){//체크된 항목만
+				cell_name = $(cells).find('.menu_list_info b').text(); //b태그 안에 상품명, br뒤에 옵션
+				
+				//옵션체크 있으면 음료
+				var op = $(cells).find('.menu_list_info span').text();
+				if(op != ""){
+					console.log('오피확인'+op);
+					jsonObj[cell_name] = 1; //음료는 한개 고정
+					var opArr = op.split('|');
+					if(opArr.length > 2){ //컵사이즈, 컵형태 외에 옵션선택한게 있는지.
+						for(var i=2; i < opArr.length; i++){
+							if(opArr[i].includes('에스프레소 샷')){//기본옵션인지 확인
+								if(i > opArr.length){
+									if(!opArr[i+1].includes('에스프레소 샷')) {
+										var count = opArr[i].substr(-1);
+										jsonObj['에스프레소 샷'] = parseInt(count); //샷만큽 가격 추가
+									}
+								}else{
+									var count = opArr[i].substr(-1);
+									jsonObj['에스프레소 샷'] = parseInt(count); //샷만큽 가격 추가
+								}
+								
+							}else if(opArr[i].includes('디카페인')){//디카페인 금액추가
+								jsonObj.디카페인 = 1;
+							}else if(opArr[i].includes('시럽')){//시럽 금액추가
+								if(i > opArr.length){
+									if(!opArr[i+1].includes('시럽')) {
+										jsonObj.시럽 = 1;
+									}
+								}else{
+									jsonObj.시럽 = 1;
+								}
+							}else if(opArr[i].includes('휘핑')){//휘핑 금액추가
+								if(i > opArr.length){
+									if(!opArr[i+1].includes('휘핑')) {
+										jsonObj.휘핑 = 1;
+									}
+								}else{
+									jsonObj.휘핑 = 1;
+								}
+							}else if(opArr[i].includes('드리즐')){//드리즐 금액추가
+								if(i > opArr.length){
+									if(!opArr[i+1].includes('드리즐')) {
+										jsonObj.드리즐 = 1;
+									}
+								}else{
+									jsonObj.드리즐 = 1;
+								}
+							}else if(opArr[i].includes('자바칩')){//자바칩 금액추가
+								if(i > opArr.length){
+									if(!opArr[i+1].includes('자바칩')) {
+										jsonObj.자바칩 = 1;
+									}
+								}else{
+									jsonObj.자바칩 = 1;
+								}
+							}
+						}
+					}
+				}else{//옵션이 없다면 푸드
+					var selcount = $(cells).find('.selcount option:selected').val();
+					jsonObj[cell_name] = selcount;
+				}
+				console.log(JSON.stringify(jsonObj));
+			}
+		}
+		req = new XMLHttpRequest();
+		req.onreadystatechange = resultAjax;
+		req.open('post', 'setOrderCountAjax')
+		data = JSON.stringify(jsonObj);
+		req.setRequestHeader('Content-Type', 'application/json; charset=UTF-8')
+		req.send(data);
+	}
+	
+	function resultAjax(){
+		if(req.readyState == 4 && req.status == 200){
+			var _response = req.responseText;
+			if (_response == "SUCCESS") {
+				location.href = 'myOrder';
+			} else {
+				alert('처리중 오류가 발생하였습니다.');
+				location.href = 'orderList';
+			}
+		}
+	}
+</script>
 <div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div></div></div></div></body></html>

@@ -19,7 +19,7 @@
 <meta property="og:image" content="https://image.istarbucks.co.kr/common/img/kakaotalk.png">
 <meta property="og:description" content="Starbucks">
 
-<title id="titleJoin">그린 사이렌 도트 머그 237ml | Starbucks Korea</title> <!-- 220117 수정 -->
+<title id="titleJoin"></title> <!-- 220117 수정 -->
 <link rel="shortcut icon" href="https://image.istarbucks.co.kr/common/img/common/favicon.ico?v=200828" type="image/ico"> <!-- 20200827 파비콘 교체 및 CDN 변수처리 -->
 <link href="../common/css/reset.css" rel="stylesheet">
 <link href="../common/css/style.css?v=210721" rel="stylesheet">
@@ -705,7 +705,6 @@ var eFrequencyPlannerYn = 'Y';
                                 <h4></h4>
                                 <p class="t1"></p>
                             </div>
-                            <div class="myDrink"><a href="javascript:void(0)" role="button" title="구매 및 담기">구매 및 담기</a><!-- 접근성_20171123 role, title 추가 --></div>
                             <div class="m_view_slide">
                                 <div class="bx-wrapper" style="max-width: 100%;"><div class="bx-viewport" style="width: 100%; overflow: hidden; position: relative; height: 0px;"><ul class="m_view_slider" style="width: 515%; position: relative; transition-duration: 0s; transform: translate3d(0px, 0px, 0px);"><li style="float: left; list-style: none; position: relative; width: 100px;" class="bx-clone"><img class="m_view_img" src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/11/[9300000003570]_20211102085053025.jpg" data-zoom-image="https://image.istarbucks.co.kr/upload/store/skuimg/2021/11/[9300000003570]_20211102085053025.jpg" alt=""></li>
                                 <li style="float: left; list-style: none; position: relative; width: 100px;"><img class="m_view_img" src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/11/[9300000003570]_20211102085024757.jpg" data-zoom-image="https://image.istarbucks.co.kr/upload/store/skuimg/2021/11/[9300000003570]_20211102085024757.jpg" alt=""></li><li style="float: left; list-style: none; position: relative; width: 100px;"><img class="m_view_img" src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/11/[9300000003570]_20211102090952205.jpg" data-zoom-image="https://image.istarbucks.co.kr/upload/store/skuimg/2021/11/[9300000003570]_20211102090952205.jpg" alt=""></li><li style="float: left; list-style: none; position: relative; width: 100px;"><img class="m_view_img" src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/11/[9300000003570]_20211102085053025.jpg" data-zoom-image="https://image.istarbucks.co.kr/upload/store/skuimg/2021/11/[9300000003570]_20211102085053025.jpg" alt=""></li><li style="float: left; list-style: none; position: relative; width: 100px;" class="bx-clone"><img class="m_view_img" src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/11/[9300000003570]_20211102085024757.jpg" data-zoom-image="https://image.istarbucks.co.kr/upload/store/skuimg/2021/11/[9300000003570]_20211102085024757.jpg" alt=""></li></ul></div><div class="bx-controls bx-has-controls-direction"><div class="bx-controls-direction"><a class="bx-prev" href="">Prev</a><a class="bx-next" href="">Next</a></div></div></div>
@@ -788,13 +787,6 @@ var eFrequencyPlannerYn = 'Y';
                 <!-- 제품 상세보기 하단공통 end -->
             </div>
             <!-- container end -->
-            <form name="drinkViewForm" method="post">
-                <input type="hidden" name="product_cd">
-                <input type="hidden" name="pro_seq">
-            </form>
-            <form name="pairForm" method="post">
-            </form>
-			
 			
 
 
@@ -1517,5 +1509,81 @@ var eFrequencyPlannerYn = 'Y';
             <li><a href="javascript:void(0)" class="promotionLi" prod="\${pro_SEQ}">\${product_NM}</a></li>
         </script>
 		</div>
+<!-- 지혜 추가부분 0613 -->
+<script>
+	//현재 categoryType 획득 (01:음료, 02:Food, 03:상품)
+	var m_categoryType = "03";
+	var m_cateTypeText = "상품";
 	
+	var m_jsonMenuList    = null;
+	var m_nMenuListIdx    = null;
+	var m_arrCstSkuList   = new Array();
+	var m_arrPsOptCstList = new Array();
+	var coffee_url = null;
+	var skuName = null;
+	
+	$(document).ready(function () {
+		
+		// [나만의 음료로 등록] -변경 지혜 0613(나만의음료부분 다 지움 템플릿이랑 js)
+		$(".myDrink > a").on("click", function () {
+       		__ajaxCall("/starbucks/interface/checkLogin", {}, true, "json", "post"
+       			,function (_response) {
+       				if (_response.result_code == "SUCCESS") {
+       					myOrder();
+       				} else {
+       					alert("로그인이 필요한 기능 입니다.");
+       					
+       					var strHref = "product_view?product_cd=" + $PRODUCT_CD;
+       					if (m_categoryType == "05") {
+       						strHref = coffee_url + $PRODUCT_CD;
+       					}
+       					location.href = "login/login?redirect_url=" + encodeURIComponent(m_domain_http + strHref);
+       				}
+       			}
+       			,function (_error) {
+       			}
+       		);
+       	});
+       	
+	});
+    
+	//주문하기-지혜
+	function myOrder() {
+		var categoryType   = "03";
+		var p_img        = $(".product_thum li a").attr("data-image"); //아마도 주소
+		var p_name 			= $(".smap li .this").text();
+		
+		if(p_name==""){
+			p_name = m_title;
+		}
+		
+		var objParam = {
+			"categoryType"     : categoryType
+			,"p_name"          : p_name
+			,"p_img"		   : p_img
+		};
+		
+		req = new XMLHttpRequest();
+		req.onreadystatechange = resultAjax;
+		req.open('post', 'setOrderAjax')
+		data = JSON.stringify(objParam);//json의 자료형으로 변경해주기
+		//data의 타입 지정하기. 서버에서 확인하여 JSON의 타입으로 처리할 수 있다.
+		req.setRequestHeader('Content-Type', 'application/json; charset=UTF-8')
+		req.send(data);
+	}
+	
+	function resultAjax(){
+		if(req.readyState == 4 && req.status == 200){
+			var _response = req.responseText;
+			if (_response == "SUCCESS") {
+				alert('등록완료');
+			} else {
+				alert('처리중 오류가 발생하였습니다.');
+			}
+			location.href = 'orderList';
+		}
+	}
+	
+</script>
+<!-- 지혜 추가부분 end -->
 <div class="zoomContainer" style="-webkit-transform: translateZ(0);position:absolute;left:124.5px;top:219px;height:470px;width:450px;"><div class="zoomLens" style="background-position: 0px 0px;width: 305px;height: 234px;float: right;display: none;overflow: hidden;z-index: 999;-webkit-transform: translateZ(0);opacity:0.4;filter: alpha(opacity = 40); zoom:1;width:305px;height:234px;background-color:white;cursor:default;border: 1px solid #000;background-repeat: no-repeat;position: absolute;">&nbsp;</div><div class="zoomWindowContainer" style="width: 610px;"><div style="overflow: hidden; background-position: 0px 0px; text-align: center; background-color: rgb(255, 255, 255); width: 610px; height: 468px; float: left; background-size: 900px 940px; display: none; z-index: 100; border: 4px solid rgb(136, 136, 136); background-repeat: no-repeat; position: absolute; background-image: url(&quot;https://image.istarbucks.co.kr/upload/store/skuimg/2021/11/[9300000003570]_20211102085024757.jpg&quot;);" class="zoomWindow">&nbsp;</div></div></div><div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div></div></div></div></body></html>
