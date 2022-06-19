@@ -173,6 +173,11 @@ public class HomeController {
    public String my_index() {
       return "my/index";
    }
+   
+   @RequestMapping(value = "my/my_menu")
+   public String my_menu() {
+      return "my/my_menu";
+   }
 
    @RequestMapping(value = "my/mycard_charge")
    public String mycard_charge() {
@@ -227,13 +232,13 @@ public class HomeController {
       obj.addProperty("result_code", "SUCCESS");
 //      {
 //          "result_code": "FAIL",
-//          "error_msg": "",
+//          "_error": "",
 //          "alert_msg": "",
 //          "location_href": "",
 //          "location_replace": "",
 //          "custom_script": "",
 //          "total_cnt": 0,
-//          "data": null,
+//          "data": {}
 //          "result_api_code": ""
 //      }
       return obj.toString();

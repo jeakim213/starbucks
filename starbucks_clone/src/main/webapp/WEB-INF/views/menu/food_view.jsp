@@ -756,34 +756,6 @@ var eFrequencyPlannerYn = 'Y';
                                 </ul>
                                 <p class="more"><a href="#"><img src="//image.istarbucks.co.kr/common/img/menu/news_more.png" alt="프로모션 새소식 더보기"></a></p>
                             </div>
-                            <!-- <div class="productView_top_right">
-                                <dl>
-                                    <dt>
-                                        <p><a href="javascript:void(0)"><img src="//image.istarbucks.co.kr/common/img/menu/sample_reserve01.jpg" alt=""></a></p>
-                                    </dt>
-                                    <dd>
-                                        <p class="tit">온라인 케익 예약</p>
-                                        <p class="txt">특별한 날! 새로운 스타벅스 홀케이크을 어디에서나 간편하게 예약 주문하세요! 스타벅스 홀 케익 결제 시 스타벅스 음료 교환권 1장을 드립니다.</p>
-                                        <p class="reserve_btn"><a href="/wholecake/reserve_cake01">예약하기</a></p>
-                                    </dd>
-                                </dl>
-                            </div> -->
-                            <!-- 151124 남인태 크리스마스 홀케이크 -->
-							<!-- <div class="productView_top_right">
-								<dl>
-									<dt>
-										160429 홀케잌 이미지 수정
-										<p><a href="javascript:void(0)"><img src="//image.istarbucks.co.kr/common/img/menu/food_whole_reserve01.png" alt=""></a></p>
-										160429 홀케잌 이미지 수정 end
-									</dt>
-									<dd>
-										<p class="tit">온라인 케익 예약</p>
-										<p class="txt">특별한 날! 새로운 스타벅스 홀 케익을 어디에서나 간편하게 예약 주문하세요! 스타벅스 홀 케익 결제 시 스타벅스 음료 교환권 1장을 드립니다.</p>
-										<p class="reserve_btn"><a class="bgc_006633" href="/wholecake/reserve_cake01">예약하기</a></p>
-									</dd>
-								</dl>
-							</div> -->
-							<!-- 151124 남인태 크리스마스 홀케이크 end -->
 							<div class="productView_top_right">
 								<dl>
 									<dt>
@@ -806,19 +778,6 @@ var eFrequencyPlannerYn = 'Y';
 				 <!-- 제품 상세보기 하단공통 end -->
 			</div>
 			<!-- container end -->
-		
-          <form name="drinkViewForm" method="post">
-              <input type="hidden" name="product_cd">
-              <input type="hidden" name="pro_seq">
-          </form>
-          <form name="pairForm" method="post">
-          </form>
-		
-
-
-
-
-		
 			<!-- footer -->
 			<footer id="footer"> 
 				<div class="footer_wrap">
@@ -860,11 +819,6 @@ var eFrequencyPlannerYn = 'Y';
 						<ul>
 							<li class="footer_menu_ttl"><a class="en" id="goPage" href="javascript:void(0);">CORPORATE SALES<span class="footer_arrow_down"></span></a></li>
 							<li><a href="footer/co_sales/index">단체 및 기업 구매 안내</a></li>
-							<!-- <li><a href="footer/co_sales/sbcard_egift">스타벅스 <span class="en">e-Gift Card</span></a></li> -->
-							<!-- <li><a href="footer/co_sales/sbcard">스타벅스 카드</a></li> -->
-							<!-- <li><a href="footer/co_sales/co-branded"><span class="en">Co-branded</span> 카드</a></li> -->
-							<!-- <li><a href="footer/co_sales/sb_product">스타벅스 상품</a></li> -->
-							<!-- <li><a href="footer/co_sales/sbgift_certificate">스타벅스 상품권</a></li> -->
 						</ul>
 						<ul>
 							<li class="footer_menu_ttl"><a class="en" href="javascript:void(0);">PARTNERSHIP<span class="footer_arrow_down"></span></a></li>
@@ -1549,128 +1503,6 @@ var eFrequencyPlannerYn = 'Y';
 		
 
 <!-- 150902 DOM 수정 -->
-<div class="only_my_dimm" style="display:none;"></div>
-<div class="only_my_drink" style="display:none;" aria-labelledby="tit_my_food" role="dialog" aria-hidden="true"><!-- 접근성_20171123 aria, role 추가 -->
-	<div class="only_my_head">
-		<p class="tit">나만의 푸드</p>
-		<p class="close"><a href="javascript:void(0)" class="btn_close" role="button"><img src="../common/img/util/btn_closesa.png" alt="팝업 닫기"></a><!-- 접근성_20171123 role 추가 --></p>
-	</div>
-	<!-- Step 1 -->
-	<div class="only_my_cont my_drink_step1">
-		<div class="my_kind_view">
-			<p class="tit">분류 보기</p>
-			<ul>
-				<!-- 150915 구명준 -->
-				<!--
-				<li><input type="checkbox" name="my_kind1" id="my_kind1"> <label for="my_kind1">전체보기</label></li>
-				<li><input type="checkbox" name="my_kind2" id="my_kind2"> <label for="my_kind2">추천음료</label></li>
-				<li><input type="checkbox" name="my_kind3" id="my_kind3"> <label for="my_kind3">추천음료_NEW</label></li>
-				-->
-				<!-- 150915 구명준 end -->
-			</ul>
-		</div>
-		<p class="drink_tit"><!-- 브루드 커피 --></p>
-		<div class="my_drink_step1 my_drink_sel">
-			<ul class="drink_area">
-				<!--
-				<li>
-					<dl>
-						<dt><a href="javascript:void(0)"><img src="img/menu/sample1.jpg" alt=""></a></dt>
-						<dd><a href="javascript:void(0)">오늘의 커피</a></dd>
-					</dl>
-				</li>
-				-->
-			</ul>
-		</div>
-	</div>
-	<!-- Step 1 end -->
-		
-	<!-- Step 2 -->
-	<div class="only_my_cont my_drink_step2" style="display:none;">
-		<dl class="my_sel_drink">
-			<dt><img alt="" class="skuImgUrl"></dt>
-			<dd>
-				<p class="t1"><!-- 아이스 커피<br><span>Iced Brewed Coffee</span> --></p>
-				<div class="select_box">
-					<label for="opt_01" class="a11y"></label><!-- 접근성_20171123 label, class 값 변경 -->
-					<select id="opt_01">
-					<!--
-						<option value="Hot">Hot</option>
-						<option value="Ice">Ice</option>
-					-->
-					</select>
-				</div>
-			</dd>
-			<div class="menu_opt_wrap">
-				<p class="menu_opt_tit" style="display:none;">메뉴추가 옵션</p>
-				<ul class="menu_opt_list">
-				<!--
-					<li>
-						<p class="li1">딸기잼</p>
-						<p class="li2"><a href="javascript:void(0)"><img src="img/menu/minus.jpg" alt="-"></a><a href="javascript:void(0)" class="num">1</a><a href="javascript:void(0)"><img src="img/menu/plus.jpg" alt="+"></a></p>
-					</li>
-				-->
-				</ul>
-			</div>
-		</dl>
-		<ul class="btn_list">
-			<li class="li1"><a href="javascript:void(0)" class="btn_go_my_drink_step3" role="button">나만의 푸드에 등록</a><!-- 접근성_20171123 role 추가 --></li>
-			<li class="li2"><a href="javascript:void(0)" class="btn_close" role="button">취소</a></li><!-- 접근성_20171123 role 추가 -->
-		</ul>
-	</div>
-	<!-- Step 2 end-->
-</div>
-<!-- Step 3 -->
-<!-- 150915 구명준 -->
-<div class="only_my_drink2" style="display:none;" role="dialog" aria-hidden="true"><!-- 접근성_20171123 aria, role 추가 -->
-	<div class="only_my_head">
-		<p class="tit">나만의 푸드 이름을 지어보세요</p>
-		<p class="close"><a href="javascript:void(0)" class="btn_close" role="button"><img src="../common/img/util/btn_closesa.png" alt="팝업 닫기"><!-- 접근성_20171123 role 추가 --></a></p>
-	</div>
-	<div class="only_my_cont">
-		<p class="drink2_cont_input"><input type="text" id="nickname" title="메뉴이름"></p>
-		<ul class="btn_list">
-			<li class="li1"><a href="javascript:void(0)" role="button" title="나만의 푸드로 등록" class="btn_myMenuRegister">확인</a><!-- 접근성_20171123 role, title 추가 --></li>
-			<li class="li2"><a href="javascript:void(0)" role="button" class="btn_close">취소</a><!-- 접근성_20171123 role 추가 --></li>
-		</ul>
-	</div>
-</div>
-<!-- 150915 구명준 end -->
-<!-- Step 3 end -->
-<!-- 150902 DOM 수정 end -->
-	
-<script type="text/x-jquery-tmpl" id="categoryList">
-	<li><input type="radio" name="my_kind" id="my_kind_\${categoryCode}" value="\${categoryCode}"> <label for="my_kind_\${categoryCode}">\${categoryName}</label></li>
-</script>
-<script type="text/x-jquery-tmpl" id="menuList">
-   	<li>
-		<dl>
-			<dt><a href="javascript:void(0)" class="btn_go_my_drink_step2" data-idx="\${$item.getMenuListIdx1}" data-skuno="\${delegateSku.skuNo}"><img src="\${delegateSku.skuImgUrl}" alt=""></a></dt>
-			<dd><a href="javascript:void(0)" class="btn_go_my_drink_step2" data-idx="\${$item.getMenuListIdx2}" data-skuno="\${delegateSku.skuNo}">\${delegateSku.skuName}</a></dd>
-		</dl>
-	</li>
-</script>
-<script type="text/x-jquery-tmpl" id="psOptCateList">
-	<li>
-		<!-- 150915 구명준 -->
-		<p class="name">\${categoryName}<br><span>\${engCategoryName}</span></p>
-		<!-- 150915 구명준 end -->
-		<p class="btn"><a href="javascript:void(0)" role="button">상세옵션</a></p><!-- 접근성_20171123 role 추가, text 수정 -->
-		<div class="hidden_opt" data-optiontype="\${engCategoryName.toUpperCase()}">
-			<!-- 150904 수정 -->
-			<p class="hidden_info">\${categoryDesc}</p>
-			<!-- 150904 수정 end -->
-			{{html \$item.getHtmlDefaultOptions}}
-			{{html \$item.getHtmlAddedOptions}}
-			<div class="btns">
-				<ul>
-					<li class="li1"><a href="javascript:void(0)" class="btn_save_ps_opt_cst_sku_list" data-categoryname="\${categoryName}" data-applytype1="\${applyType1}" title=" 옵션 적용" role="button">적용하기</a><!-- 접근성_20171123 title,role 추가 --></li>
-					<li class="li2"><a href="javascript:void(0)" class="btn_init_ps_opt_cst_sku_list" title=" 옵션 초기화" role="button">초기화</a></li>
-				</ul>
-			</div>
-		</div>
-	</li>
-</script>
     
 <script>
 	var m_categoryType = "02";
@@ -1695,21 +1527,17 @@ var eFrequencyPlannerYn = 'Y';
 			coffee_url = "coffee/reserve_view?PRODUCT_CD=";
 		}
 
-		$(".only_my_drink .only_my_head .tit").text("나만의 " + m_cateTypeText);
-		$(".btn_go_my_drink_step3").text("나만의 " + m_cateTypeText + "에 등록");
-		$(".only_my_drink2 .only_my_head .tit").text("나만의 " + m_cateTypeText + " 이름을 지어보세요");
 		
-		// [나만의 음료로 등록]
+		// [나만의 음료로 등록] -변경 지혜 0613(나만의음료부분 다 지움 템플릿이랑 js)
        	$(".myDrink > a").on("click", function () {
        		__ajaxCall("/starbucks/interface/checkLogin", {}, true, "json", "post"
        			,function (_response) {
        				if (_response.result_code == "SUCCESS") {
-       					var drink_title = $('.smap .cate').text();
-       					showPopMyDrink(m_categoryType, drink_title);
+       					myOrder();
        				} else {
        					alert("로그인이 필요한 기능 입니다.");
        					
-       					var strHref = "menu/food_view?product_cd=" + $PRODUCT_CD;
+       					var strHref = "food_view?product_cd=" + $PRODUCT_CD;
        					if (m_categoryType == "05") {
        						strHref = coffee_url + $PRODUCT_CD;
        					}
@@ -1721,332 +1549,50 @@ var eFrequencyPlannerYn = 'Y';
        		);
        	});
        		
-       	// [닫기]
-       	$(".btn_close").on("click", hidePopMyDrink);
        		
-       	// 분류 보기 Radio 클릭 시
-       	$(document).on("click change", '[name="my_kind"]', showSkuList);// 접근성_20171123 change event listener
-       	
-       	// 상품 사진 클릭 시
-       	$(document).on("click", '.btn_go_my_drink_step2', goMyDrinkStep2);
        	
        	$(document).on("change", ".my_sel_drink .select_box select", function () {
        		var nIdx = $(".my_sel_drink .select_box select").index(this);
        		$(".my_sel_drink .select_box label").eq(nIdx).text( $(this).find("option:selected").text() );
        	});
        	
-     	// (수량) [빼기] / [더하기]
-       	$(document).on("click", ".btn_minus", minusQty);
-    	$(document).on("click", ".btn_plus", plusQty);
-    	
-    	
-    	// [나만의 음료에 등록]
-    	$(".btn_go_my_drink_step3").on("click", goMyDrinkStep3);
-    	
-    	// 나만의 음료에 등록
-    	$(".btn_myMenuRegister").on("click", myMenuRegister);
 	});
        	
-	// "나만의 음료로 등록" 팝업 출력
-    function showPopMyDrink(_categoryType, _drink_title) {
-    	m_jsonMenuList    = null;
-    	m_nMenuListIdx    = null;
-    	m_arrCstSkuList   = new Array();
-    	m_arrPsOptCstList = new Array();
-		var objParam = {
-       		 categoryType : _categoryType
-        };
-       	___ajaxCall("menu/getMsrXoCategoryListV2", objParam, false, "json", "post"
-        	,function(_response) { 
-       			if (_response.result_code == "SUCCESS") {
-       				var jsonData = jQuery.parseJSON(_response.data);
-       					
-       				if (jsonData.categoryList.length > 0) {
-       					$(".my_kind_view ul")('<li><input type="radio" name="my_kind" id="my_kind_ALL" value=""> <label for="my_kind_ALL">전체보기</label></li>');
-       						
-       					// 분류 보기 출력
-       					$("#categoryList").tmpl(jsonData.categoryList).appendTo(".my_kind_view ul");
-
-       					// 분류 보기 선택
-       					var categoryCode = "";
-       					$('[name="my_kind"]').each(function () {
-       						if ($(this).next().text() == _drink_title) {
-       							categoryCode = $(this).val(); 
-       						}
-       					});
-       					$('[name="my_kind"][value="' + categoryCode + '"]').prop("checked", true).trigger("click");
-       		        	
-       					// 커스텀스크롤 로드
-       					$('.only_my_drink div.my_drink_sel').mCustomScrollbar({
-       						 advanced : {
-       							 autoExpandHorizontalScroll : true
-       							,updateOnContentResize      : true
-       						}
-       					});
-       					
-       					// 레이어 팝업 출력
-       					$(".my_drink_step1").show();
-       					$(".my_drink_step2 , .personal_option_detail").hide();
-       					$(".only_my_dimm , .only_my_drink").fadeIn();
-       					$(".only_my_drink").attr("aria-hidden","false").attr("tabindex","0").focus();// 접근성_20171123 focus 이동 추가
-       				}
-       			}
-			}
-		);
-	}
-    
-	// "나만의 음료로 등록" 팝업 닫기
-	function hidePopMyDrink() {
-		  $(".only_my_dimm , .only_my_drink , .only_my_drink2").attr("aria-hidden","true").attr("tabindex", "-1").fadeOut();// 접근성_20171123 aria, tabindex 추가
-	      $(".myDrink > a").focus(); // 접근성_20171123 focus 이동 추가
-	}
-	
-
-	function getSkuListV2(_categoryType, _categoryCode) {
-		var gbn = "A";
-		if (_categoryCode != "") {
-			gbn = "C";
+	//주문하기-지혜
+	function myOrder() {
+		var categoryType   = "02";
+		var p_img        = $(".product_thum li a").attr("data-image"); //아마도 주소
+		var p_name 			= $(".smap li .this").text();
+		
+		if(p_name==""){
+			p_name = m_title;
 		}
-      		
+		
 		var objParam = {
-			 gbn          : gbn
-			,categoryType : _categoryType
-			,categoryCode : _categoryCode
+			"categoryType"     : categoryType
+			,"p_name"          : p_name
+			,"p_img"		   : p_img
 		};
-      	
-		return __ajaxCall("menu/getMsrXoSkuListV2", objParam, false, "json", "post"); 
+		
+		req = new XMLHttpRequest();
+		req.onreadystatechange = resultAjax;
+		req.open('post', 'setOrderAjax')
+		data = JSON.stringify(objParam);//json의 자료형으로 변경해주기
+		//data의 타입 지정하기. 서버에서 확인하여 JSON의 타입으로 처리할 수 있다.
+		req.setRequestHeader('Content-Type', 'application/json; charset=UTF-8')
+		req.send(data);
 	}
 	
-	// 카테고리별 SKU 목록 조회
-	function showSkuList() {
-		var categoryCode = $('[name="my_kind"]:checked').val();
-		
-		var res = getSkuListV2(m_categoryType, categoryCode);
-		if (res.result_code == "SUCCESS") {
-			var jsonData = jQuery.parseJSON(res.data);
-			
-			m_jsonMenuList = jsonData.menuList;
-			
-			if (m_jsonMenuList.length > 0) {
-				$(".drink_area").empty();
-				
-				var nMenuListIdx = 0;
-				
-				$("#menuList").tmpl(m_jsonMenuList, {
-					 getMenuListIdx1 : function () {
-						return nMenuListIdx;
-					}
-					,getMenuListIdx2 : function () {
-						return nMenuListIdx++;
-					}
-				}).appendTo(".drink_area");
-				
-				// 커스텀스크롤 업데이트
-				$('.only_my_drink div.my_drink_sel').mCustomScrollbar("update");
-			}
-		}
-	}
-	
-	function goMyDrinkStep2() {
-		m_nMenuListIdx = $(this).data("idx");
-		
-		var objMenuList    = m_jsonMenuList[m_nMenuListIdx];
-		var objDelegateSku = objMenuList.delegateSku;
-		
-		$(".my_sel_drink .skuImgUrl").attr("src", objDelegateSku.skuImgUrl);																// 대표 SKU 이미지
-		$(".my_sel_drink dd")('<p class="t1">' + objDelegateSku.skuName + '<br /><span>' + objDelegateSku.engSkuName + '</span></p>');	// 대표 SKU 명
-		skuName = objDelegateSku.skuName;
-		$(".menu_opt_tit").hide();
-		$(".menu_opt_list").empty();	// 메뉴추가 옵션 초기화
-		
-		if (objDelegateSku.customList != undefined
-				&& objDelegateSku.customList.length > 0) {
-			$.each(objDelegateSku.customList, function (_nIdx, _objCustomListRow) {
-				showCustiomList(_objCustomListRow);
-			});
-		}
-		
-		$(".my_drink_step1").slideUp();
-		$(".my_drink_step2").slideDown();
-	}
-	
-	function showCustiomList(_data) {
-		var html = "";
-		
-		// 접근성_20171123 class, text 변경
-		switch (_data.applyType2) {
-			case "01":
-				html  = '<div class="select_box">';
-				html += '	<label class="a11y" for="' + _data.categoryCode + '">'+ _data.categoryName+'</label>';
-				html += '	<select id="' + _data.categoryCode + '">';
-				if (m_categoryType == "05") {
-					html += '		<option value="" selected="selected">선택 안 함</option>';
-				}
-				$.each(_data.skuList, function (_idx, _row) {
-					var selected = "";
-					if (_row.stdCustomYn == "Y") {
-						selected = ' selected="selected"';
-					}
-					
-					html += '		<option value="' + _row.skuNo + '"' + selected + '>' + _row.skuName + '</option>';
-				});
-				html += '	</select>';
-				html += '</div>';
-				
-				$(".my_sel_drink dd").append(html);
-				$(".my_sel_drink dd select:last").trigger("change");
-				break;
-				
-			case "02":
-				var baseQty = 0;
-				if (_data.skuList[0].baseQty != "") {
-					baseQty = _data.skuList[0].baseQty;
-				}				
-				// 접근성_20171123 alt 수정
-				html  = '<li>';
-				html += '	<p class="li1">' + _data.categoryName + '</p>';
-				html += '	<p class="li2">';
-				html += '		<a href="javascript:void(0);" class="btn_minus"><img src="//image.istarbucks.co.kr/common/img/menu/minus.jpg" alt="'+_data.categoryName+' 수량 감소" />';
-				html += '		<a href="javascript:void(0);" class="num" id="' + _data.skuList[0].skuNo + '" tabindex="-1" aria-hidden="true" role="presentation">' + baseQty + '</a>';
-				html += '		<a href="javascript:void(0);" class="btn_plus" data-maxqty="' + _data.maxQty + '" data-maxqtymsg="' + _data.maxQtyMsg + '"><img src="//image.istarbucks.co.kr/common/img/menu/plus.jpg" alt="' + _data.categoryName +' 수량 증가"/>';
-				html += '	</p>';
-				html += '</li>';
-				
-				$(".menu_opt_list").append(html);
-				break;
-				
-			case "03":
-				break;
-		}
-		
-		if ($(".menu_opt_list li").length > 0) {
-			$(".menu_opt_tit").show();			
-		}
-	}
-	
-	
-	// "나만의 음료에 등록" 팝업 출력
-	function goMyDrinkStep3() {
-		$(".only_my_drink").attr("aria-hidden","true").fadeOut(); // 접근성_20171123 aria 추가
-	    $(".only_my_drink2").attr("aria-hidden","false").attr("tabindex","0").fadeIn(); // 접근성_20171123 aria, tabindex 추가
-		$("#nickname").attr("placeholder",skuName);
-		$("#nickname").focus();
-	}
-	
-	// 나만의 음료 등록
-	function myMenuRegister() {
-		var registerType = "F";
-		var delegateSku  = m_jsonMenuList[m_nMenuListIdx].delegateSku.skuNo;
-		var nickname     = $("#nickname").val();
-		if(nickname==""){
-			nickname = skuName;
-		}
-		var customFlag   = "N";
-		
-		if (nickname == "") {
-			alert("나만의 " + m_cateTypeText + " 이름을 입력 하세요.");
-			$("#nickname").focus();
-			return;
-		} else {
-			var rstCheckEucKr = checkEucKr(nickname); 
-			if (rstCheckEucKr != "") {
-				alert("'" + rstCheckEucKr + "'는(은) 사용할 수 없는 문자열 입니다.");
-				$("#nickname").focus();
-				return;
-			}
-		}
-		
-		var skuNo         = "";
-		var realCustomQty = 0;
-		var customList    = "";
-		
-		$(".my_sel_drink dd select").each(function () {
-			skuNo         = $(this).val();
-			realCustomQty = 1;
-			
-			if (skuNo != "") {
-				if (customList != "") {
-					customList += "|";
-				}
-				
-				customList += skuNo + ":" + realCustomQty;	
-			}
-		});
-		$(".menu_opt_list .num").each(function () {
-			skuNo         = $(this).attr("id");
-			realCustomQty = $(this).text();
-			
-			if (realCustomQty > 0) {
-				if (customList != "") {
-					customList += "|";
-				}
-				
-				customList += skuNo + ":" + realCustomQty;
-			}
-		});
-		
-		if (customList != "") {
-			customFlag = "Y";
-		}
-		
-		var objParam = {
-			 registerType : registerType
-			,categoryType : m_categoryType
-			,delegateSku  : delegateSku
-			,nickname     : repalceAnd(nickname)
-			,customFlag   : customFlag
-			,skuNo        : delegateSku
-			,qty          : 1
-			,customList   : customList
-		};
-
-		//console.log(customList);
-		
-		___ajaxCall("menu/setMsrXoMyMenuRegister", objParam, true, "json", "post"
-			,function(_response) {
-				if (_response.result_code == "SUCCESS") {
-					alert("나만의 " + m_cateTypeText + "에 등록 되었습니다.");
-					hidePopMyDrink();
-				} else {
-					var arr = _response.error_msg.split("|");
-					if (arr.length == 2) {
-						alert(arr[1]);
-					} else {
-						alert(arr[0]);
-					}
-				}
-			}
-		);
-	}
-	
-	// 수량형 빼기 처리
-	function minusQty() {
-		var $num = $(this).next();
-		var nQty = Number($num.text());
-		
-		if (nQty > 0) {
-			$num.text(nQty - 1);
-		}
-	}
-	
-	// 수량형 더하기 처리
-	function plusQty() {
-		var $num         = $(this).prev();
-		var nQty         = Number($num.text()); 
-		var nMaxQty      = Number($(this).data("maxqty"));
-		var strMaxQtyMsg = $(this).data("maxqtymsg");
-		
-		if (nQty >= nMaxQty) {
-			if (strMaxQtyMsg != "") {
-				alert(strMaxQtyMsg);	
+	function resultAjax(){
+		if(req.readyState == 4 && req.status == 200){
+			var _response = req.responseText;
+			if (_response == "SUCCESS") {
+				alert('등록완료');
 			} else {
-				alert("더 이상 추가 할 수 없습니다.");
+				alert('처리중 오류가 발생하였습니다.');
 			}
-			
-			return;
+			location.href = 'orderList';
 		}
-		
-		$num.text(nQty + 1);
 	}
 	
 	function repalceAnd(str) {
