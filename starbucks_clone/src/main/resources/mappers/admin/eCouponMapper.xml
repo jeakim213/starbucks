@@ -12,7 +12,7 @@
 		<selectKey keyProperty="pon_no" resultType="int" order="BEFORE">
 			SELECT NVL(MAX(pon_no),0)+1 FROM e_coupon
 		</selectKey>
-		INSERT INTO e_coupon VALUES(#{pon_no}, #{pon_category}, #{pon_num}, #{pon_name}, #{pon_startdate}, #{pon_enddate}, #{pon_used}, #{pon_usedate, jdbcType=DATE}, #{pon_cash})	
+		INSERT INTO e_coupon VALUES(#{pon_no}, #{pon_category}, #{pon_num}, #{pon_name}, #{pon_startdate}, #{pon_enddate}, #{pon_used}, #{pon_usedate, jdbcType=DATE}, #{pon_cash}, #{id, jdbcType=VARCHAR})	
 	</insert>
 	
 	</mapper>

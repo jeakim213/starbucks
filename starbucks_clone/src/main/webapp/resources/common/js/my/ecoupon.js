@@ -419,7 +419,8 @@ function registCoupon() {
 		objParam.giftSendCouponNum = $("#coupon_num1").val() + $("#coupon_num2").val() + $("#coupon_num3").val();
 		// 0609 다정 휴대폰번호 objParam.mobile = $("#myplane_date01").val() + "-" + $("#mobile_num2").val() + "-" + $("#mobile_num3").val();
 		objParam.type = couponType;
-		url = "interface/getMsrMyCouponRegist.do";
+		url = "couponRegisterProc";
+		/*url = "interface/getMsrMyCouponRegist.do";*/
 
 	} else if (couponType == "P") { // 영수증 쿠폰
 		// 쿠폰번호
@@ -438,7 +439,8 @@ function registCoupon() {
 		objParam.giftSendCouponNum = $("#rptcoupon_num1").val() + $("#rptcoupon_num2").val() + $("#rptcoupon_num3").val() + $("#rptcoupon_num4").val();
 		objParam.mobile = $("#regiCode").val();
 		objParam.type = couponType;
-		url = "interface/getMsrMyCouponRegist.do";
+		url = "couponRegisterProc";
+		/*url = "interface/getMsrMyCouponRegist.do";*/
 
 	} else if (couponType == "S") { // Star 쿠폰
 
@@ -465,15 +467,16 @@ function registCoupon() {
 			window.alert("PIN 번호를 다시 확인해주세요.");
 			return;
 		}
-
+		*/
 		var srTxt = "Star 쿠폰을 별로 전환하시겠습니까? \n등록 완료되어 별로 전환된 Star 쿠폰은 등록 취소 및 재사용 불가합니다.";
 		if(m_jsonRewardSummary != null && m_jsonRewardSummary.msrMemberYn == "Y" && confirm(srTxt)) {
 			objParam.rewardCouponNum = rewardCouponNum;
 			objParam.rewardCouponPinNum = $("#pinCode").val();
-			url = "interface/getMsrRewardCouponRegist.do";
+			url = "couponRegisterProc";
+			/*url = "interface/getMsrMyCouponRegist.do";*/
 		} else {
 			return;
-		}*/
+		}
 	}
 
 	___ajaxCall(url, objParam, false, "json", "post"

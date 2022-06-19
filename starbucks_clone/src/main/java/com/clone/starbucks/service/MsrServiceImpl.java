@@ -1,11 +1,26 @@
 package com.clone.starbucks.service;
 
+import java.io.BufferedReader;
+import java.io.DataOutputStream;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Properties;
 import java.util.Random;
 
+import javax.mail.Message;
+import javax.mail.PasswordAuthentication;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +33,7 @@ import com.clone.starbucks.DTO.CardDTO;
 public class MsrServiceImpl implements IMsrService{
 	
 	@Autowired private IMsrDAO msrDAO;
-	@Autowired private HttpSession session;
+//	@Autowired private HttpSession session;
 
 //----------------------------------------E-gift Card----------------------------------------------	
 	
@@ -43,28 +58,7 @@ public class MsrServiceImpl implements IMsrService{
 		String cardNum = firstNum + secondNum + thirdNum+ fourthNum; 
 		return cardNum;
 	}
-	
-//	@Override
-//	public String selectNo(E_couponDTO ecouponDTO) throws ParseException {
-//	if(ecouponDTO.getPon_category().isEmpty() ||ecouponDTO.getPon_num().isEmpty() ||ecouponDTO.getPon_name().isEmpty() || ecouponDTO.getPon_startdate()==null || ecouponDTO.getPon_enddate()==null || ecouponDTO.getPon_used()==0 || ecouponDTO.getPon_usedate()==null || ecouponDTO.getPon_cash()==0) {
-//		return "정보가 빈곳이 있습니다. 입력하세요.";
-//	}
-//	E_couponDTO check = adminDAO.selectNo(ecouponDTO.getPon_no());
-//
-//	if(check!=null && ecouponDTO.getPon_no()==check.getPon_no()) {
-//		session.setAttribute("pon_category", check.getPon_category());
-//		session.setAttribute("pon_num", check.getPon_num());
-//		session.setAttribute("pon_name", check.getPon_name());
-//		session.setAttribute("pon_startdate", check.getPon_startdate());
-//		session.setAttribute("pon_enddate", endDate(ecouponDTO));
-//		session.setAttribute("pon_used", check.getPon_used());
-//		session.setAttribute("pon_usedate", check.getPon_usedate());
-//		session.setAttribute("pon_cash", check.getPon_cash());
-//		return "등록 완료";
-//	}
-//	return "등록 실패";
-//	}	
-	
+
 	
 	//핀번호 생성
 	@Override
@@ -79,24 +73,16 @@ public class MsrServiceImpl implements IMsrService{
 
 	// 선물하기 페이지 정보 DB에 넣기
 	@Override
-	public String eGiftCardProc(CardDTO cardDTO, HttpServletRequest request) throws ParseException {
-		
-		//삭제..할지말지 고민
-		session.setAttribute("eGift_name", request.getParameter("name"));
-		session.setAttribute("eGift_email1", request.getParameter("email1"));
-		session.setAttribute("eGift_email2", request.getParameter("email2"));
-		session.setAttribute("eGift_message", request.getParameter("reqMsg"));
-		
-		
+	public CardDTO eGiftCardProc(CardDTO cardDTO, HttpServletRequest request) throws ParseException {
 		
 		
 		
 		//받는 사람
-		if(request.getParameter("name").isEmpty() || request.getParameter("name")==null) {
-			return "받는 사람의 이름을 입력하셔야 합니다.";
+		if(request.getParameter("name")==null) {
+			return null;
 		}
-		if(request.getParameter("email1").isEmpty() || request.getParameter("email1")==null ||request.getParameter("email2").isEmpty() || request.getParameter("email2")==null) {
-			return "이메일은 모두 입력하셔야 합니다.";
+		if(request.getParameter("email1")==null ||request.getParameter("email2")==null) {
+			return null;
 		}
 		
 		//카드 선택 << 기본선택 2022 Cherry Blossom
@@ -122,8 +108,103 @@ public class MsrServiceImpl implements IMsrService{
 		msrDAO.insertEgift(cardDTO);
 		
 		
-		return "완료";
+		return cardDTO;
 	}
+
+
+//	@Override
+//	public void sendMail(HttpServletRequest request, HttpServletResponse response) throws Exception {
+//		
+//		
+//		//메일 관련 정보
+//		String host = "smtp.naver.com";
+//		final String username = "dbdbdbgg";
+//		final String password = "afdfdf4933";
+//		int port = 587;
+//		
+//		//메일 내용
+//		String name = request.getParameter("name");
+//		String email1 = request.getParameter("email1");
+//		String email2 = request.getParameter("email2");
+//		String reqMsg = request.getParameter("reqMsg");
+//		
+//		
+//		String recipient = email1+"@"+email2;
+//		String subject = "♬ Starbucks E-gift Card 선물이 도착하였습니다 ♬";
+//		String content = name+"님 안녕하세요. 선물받은 E-gift Card가 도착하였습니다.\n\n"
+//				+ "--------------------------------------------"
+//				+ "카드번호 : "+""+"\n"
+//				+ "핀 번호 : "+""+"\n\n"
+//				+ "메세지 : "+reqMsg
+//				+ "--------------------------------------------"
+//				+ "* 위 정보를 스타벅스 홈페이지에서 등록해야 사용 하실 수 있습니다.\n"
+//				+ "스타벅스 홈페이지 : http://localhost:8085/starbucks/my/mycard_info_input";
+//		
+//		Properties props = System.getProperties();
+//		
+//		props.put("mail.smtp.host", host);
+//		props.put("mail.smtp.port", port);
+//		props.put("mail.smtp.auth", "true");
+//		props.put("mail.smtp.ssl.enable", "true");
+//		props.put("mail.smtp.trust", host);
+//		
+//		Session session = Session.getDefaultInstance(props, new javax.mail.Authenticator() {
+//			String un = username;
+//			String pw = password;
+//			protected PasswordAuthentication getPasswordAuthentication() {
+//				return new PasswordAuthentication(un, pw);
+//			}
+//		});
+//		
+//		session.setDebug(true);
+//		
+//		Message mimeMessage = new MimeMessage(session);
+//		mimeMessage.setFrom(new InternetAddress(recipient));
+//		mimeMessage.setRecipient(Message.RecipientType.TO, new InternetAddress(recipient));
+//		mimeMessage.setSubject(subject);
+//		mimeMessage.setText(content);
+//		Transport.send(mimeMessage);
+//		
+//	}
+	
+//	public String kakaoPay() {
+//		//카카오톡 결제(메소드 만들어서 불러오기)
+//				try {
+//					URL url = new URL("https://kapi.kakao.com/v1/payment/ready");
+//					HttpURLConnection serverConect = (HttpURLConnection) url.openConnection();
+//					serverConect.setRequestMethod("POST");
+//					serverConect.setRequestProperty("Authorization", "KakaoAK 3979c78b0f234feced0d69d19282e5e2");
+//					serverConect.setRequestProperty("Content-type", "application/x-www-form-urlencoded;charset=utf-8");
+//					serverConect.setDoOutput(true);
+//					String param = "cid=TC0ONETIME&partner_order_id=partner_order_id&partner_user_id=partner_user_id&item_name=초코파이&quantity=1&total_amount=2200&vat_amount=200&tax_free_amount=0&approval_url=http://localhost:8085/starbucks/&fail_url=http://localhost:8085/starbucks/msr/sceGift/gift_step1&cancel_url=http://localhost:8085/starbucks/msr/sceGift/gift_step1";
+//					OutputStream ops = serverConect.getOutputStream(); //보내는애
+//					DataOutputStream dops = new DataOutputStream(ops);
+//					dops.writeBytes(param);
+////					dops.flush(); //자기가 가지고있는것을 비운다. 전깃줄에 태워보내므로써 비움.
+//					dops.close();
+//					
+//					int result = serverConect.getResponseCode();
+//					
+//					InputStream ips; //받는 애
+//					if(result==200) {
+//						ips = serverConect.getInputStream();
+//					}else {
+//						ips = serverConect.getErrorStream();
+//					}
+//					InputStreamReader isr = new InputStreamReader(ips);
+//					BufferedReader bfrr = new BufferedReader(isr);
+//					
+//					String readline = bfrr.readLine();
+//					return readline;
+//					
+//				}catch (Exception e) {
+//					e.printStackTrace();
+//				}
+//				return "{\"result\":\"NO\"}";
+//	}
+//	
+	
+	
 //----------------------------------------E-gift Card----------------------------------------------
 
 
