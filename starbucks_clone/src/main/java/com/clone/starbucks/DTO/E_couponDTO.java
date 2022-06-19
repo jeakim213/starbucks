@@ -13,7 +13,11 @@ pon_name varchar2(50) not null,
 pon_startdate date default sysdate not null,
 pon_enddate date default sysdate+30 not null,
 pon_used char(1) check(pon_used in ('Y','N')) not null,
+<<<<<<< HEAD
 pon_usedate date default sysdate,
+=======
+pon_usedate date default sysdate null,
+>>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
 pon_cash number not null,
 id varchar2(30)
 );

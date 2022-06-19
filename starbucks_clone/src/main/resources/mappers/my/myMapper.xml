@@ -34,21 +34,21 @@
 		UPDATE e_coupon SET id=#{id} WHERE pon_num=#{pon_num}
 	</update>
 	
-	<!-- <select id="pon_noFind" parameterType="String" resultType="int">
-		SELECT pon_no FROM e_coupon WHERE pon_num=#{pon_num}
+	
+	
+	<!-- MY INDEX - 예은 -->
+	<select id="userCard" parameterType="com.clone.starbucks.DTO.CardDTO" resultType="int">
+		SELECT count(*) FROM card WHERE id=#{id}
 	</select>
 	
-	<update id="updateUser" parameterType="com.clone.starbucks.DTO.E_couponDTO">
-		UPDATE userInfo SET pon_no=#{pon_no} WHERE pon_no=#{pon_no}
-	</update> -->
+	<select id="userCoupon" parameterType="com.clone.starbucks.DTO.E_couponDTO" resultType="int">
+		SELECT count(*) FROM e_coupon WHERE id=#{id}
+	</select>
 	
-	
-	<!-- <selectKey keyProperty="pon_no" resultType="int" order="BEFORE">
-			SELECT pon_no FROM e_coupon WHERE pon_num=#{pon_num}
-		</selectKey> -->
-		
-	<!-- <update id="updatePon_no" parameterType="int">
-		UPDATE userinfo SET pon_no=#{pon_no} where id=#{id}
-	</update> -->
+	<select id="userAllInfo" parameterType="String" resultType="com.clone.starbucks.DTO.AllDTO">
+		SELECT a.id,a.star,a.grade,a.nickname,b.c_name,b.remaincost,b.c_num 
+		FROM userinfo a LEFT OUTER JOIN card b ON a.id = b.id
+		WHERE a.id = #{id}
+	</select>
 	
 	</mapper>

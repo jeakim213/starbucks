@@ -2,6 +2,7 @@ package com.clone.starbucks.DAO;
 
 import org.springframework.stereotype.Repository;
 
+import com.clone.starbucks.DTO.AllDTO;
 import com.clone.starbucks.DTO.CardDTO;
 import com.clone.starbucks.DTO.E_couponDTO;
 import com.clone.starbucks.DTO.UserInfoDTO;
@@ -19,6 +20,8 @@ public interface IMyDAO {
 	int cMaster1Bool(String id); 
 	
 	String cMaster1Num(String id);
+
+	int userCard(String id);
 	
 	//---------------------------------
 	
@@ -26,11 +29,11 @@ public interface IMyDAO {
 	
 	int idUpdate(E_couponDTO ecouponDTO);
 	
-//	Integer pon_noFind(String pon_num);
-//	
-//	int updatePon_no(int pon_no);
-//	
-//	int updateUser(UserInfoDTO userInfoDTO);
+	int userCoupon(String string);
+
+	AllDTO userAllInfo(String id);
+
 	
+		
 	
 }

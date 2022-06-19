@@ -1,5 +1,6 @@
 package com.clone.starbucks.service;
 
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
@@ -7,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.clone.starbucks.DAO.IMyDAO;
+import com.clone.starbucks.DTO.AllDTO;
 import com.clone.starbucks.DTO.CardDTO;
 import com.clone.starbucks.DTO.E_couponDTO;
 import com.clone.starbucks.DTO.UserInfoDTO;
@@ -17,7 +19,6 @@ public class MyServiceImpl implements IMyService {
 	@Autowired private IMyDAO myDAO;
 	@Autowired private HttpSession session;
 	
-
 //----------------------------------------E-gift Card 등록----------------------------------------------		
 	@Override
 	public String cardRegisterProc(CardDTO cardDTO, HttpServletRequest request) {
@@ -152,5 +153,33 @@ public class MyServiceImpl implements IMyService {
 		return "등록완료";
 	}
 	
-//----------------------------------------E-gift Card 등록----------------------------------------------	
+//----------------------------------------E-gift Card 등록----------------------------------------------
+	
+	//----------my/index
+		
+		// 카드 여부 확인으로 index 열기
+		@Override
+		public boolean isExistCard(UserInfoDTO userInfo, CardDTO cardDTO) {
+			session.setAttribute("id", "admin");
+			
+			String id = (String) session.getAttribute("id");
+			
+			int cardCount = myDAO.userCard(id);
+			
+			if(cardCount == 0 ) {
+				return false;
+			}
+			return true;
+		}
+	
+		
+		@Override
+		public AllDTO userAllInfo(String id) {
+	
+			AllDTO user = myDAO.userAllInfo(id);
+
+			return user;
+		}
+
+	
 }
