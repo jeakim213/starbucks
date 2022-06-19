@@ -1,6 +1,6 @@
 ﻿<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>   
 
 
 <!DOCTYPE html>
@@ -719,24 +719,40 @@ var eFrequencyPlannerYn = 'Y';
 					<div class="ms_cont">
 						<!-- 메인 카드 슬라이드 -->
 						<section class="my_ms_index_slide">
-		
+							<h2 style="font-size: 30px;">보유 카드 목록</h2>
+							<br><br>
 							<div class="my_ms_slider_txt">
-    <div class="my_ms_slider_txt_l"> <strong class="cardNickname">정다</strong> <a class="icon_pencil_g pencil"
-            href="javascript:void(0);" data-cardstatus="R" data-cardnickname="정다">정보수정버튼</a>
-        <div class="my_ms_card_slider_id_modify" style="display:none;"> <input class="my_nick_modify_input" type="text"
-                maxlength="20" value="정다"> <a class="my_nick_modify" href="javascript:void(0);"
-                data-cardregnumber="20817929">수정</a> <a class="my_nick_cancel" href="javascript:void(0);">취소</a> </div>
-        <p>●●●● - ●●●● - ●●75 - 4919</p>
-    </div>
-    <div class="my_ms_slider_txt_r"> 잔액 <strong class="en">100</strong>원
-    	<ul class="op0 my_ms_card_btns">
-            <li class="card_charge_btn"><a href="javascript:void(0);" data-type="CHARGE"
-                    data-cardregnumber="20817929">카드 충전</a></li>
-            <li class="card_manage_btn"><a href="javascript:void(0);" data-type="MANAGEMENT"
-                    data-cardregnumber="20817929">카드 관리</a></li>
-        </ul>
-    </div>
-</div>
+								<c:forEach var="cardDTO" items="${list }">
+								<table>
+								<tr>
+									<td style="width: 300px;">
+										<div class="my_ms_slider_txt_l"> <strong class="cardNickname">${cardDTO.c_name }</strong> 
+								    		<a class="icon_pencil_g pencil" href="javascript:void(0);" data-cardstatus="R" data-cardnickname="${cardDTO.c_name }">정보수정버튼</a>
+								        	<div class="my_ms_card_slider_id_modify" style="display:none;">
+											<input class="my_nick_modify_input" type="text" maxlength="20" value="${cardDTO.c_name }">
+											<a class="my_nick_modify" href="javascript:void(0);" data-cardregnumber="20817929">수정</a> 
+											<a class="my_nick_cancel" href="javascript:void(0);">취소</a> 
+										</div>
+							        <p>카드 번호 : ${cardDTO.c_num }</p>
+							    </div>
+									</td>
+									<td style="width: 400px;">
+										<div class="my_ms_slider_txt_r" style="width: 350px;"> 잔액 <strong class="en">${cardDTO.remaincost }</strong>원
+									    	<ul class="op0 my_ms_card_btns">
+									            <li class="card_charge_btn"><a href="javascript:void(0);" data-type="CHARGE"
+									                    data-cardregnumber="20817929">카드 충전</a></li>
+									            <li class="card_manage_btn"><a href="javascript:void(0);" data-type="MANAGEMENT"
+									                    data-cardregnumber="20817929">카드 관리</a></li>
+									        </ul>
+							    		</div>
+									</td>
+								</tr>
+							    </table>
+							    <br><br>
+							    <hr style="width: 700px; margin: 0px;"/>
+							    </c:forEach>
+							</div>
+							
 							<%-- <header>
 							<h5 class="userName">정다님의 스타벅스 카드</h5>
 								<strong>총 보유카드 : <span class="en totalCnt"></span>장</strong>

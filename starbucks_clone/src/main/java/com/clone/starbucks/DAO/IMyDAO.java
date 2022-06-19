@@ -1,5 +1,7 @@
 package com.clone.starbucks.DAO;
 
+import java.util.ArrayList;
+
 import org.springframework.stereotype.Repository;
 
 import com.clone.starbucks.DTO.AllDTO;
@@ -33,7 +35,7 @@ public interface IMyDAO {
 
 	AllDTO userAllInfo(String id);
 
-	
+	ArrayList<CardDTO> cardList(String id);
 		
 	
 }

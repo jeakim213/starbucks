@@ -819,7 +819,7 @@
 	div.my_ms_slider_txt li.my_ms_slider_txt3 { font-size:14px; width:170px; }
 	div.my_ms_slider_txt li.my_ms_slider_txt3 strong { color:#006541; font-size:24px; line-height:24px; }
 
-	.my_ms_slider_txt_l { background:url("../img/util/my_ms_slider_sep.gif") right center no-repeat; float:left; height:70px; padding:10px 0 0 3%;/*  width:47%; */ }
+	.my_ms_slider_txt_l {float:left; height:70px; padding:10px 0 0 3%;/*  width:47%; */ }
 	.my_ms_slider_txt_l strong { color:#555; float:left; font-size:18px; }
 	.my_ms_slider_txt_l p { color:#555; float:left; font-size:16px; margin-top:10px; text-align:left; width:100%; }
 	.my_ms_slider_txt_l 

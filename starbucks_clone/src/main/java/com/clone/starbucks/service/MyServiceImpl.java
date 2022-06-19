@@ -1,11 +1,15 @@
 package com.clone.starbucks.service;
 
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.ui.Model;
 
 import com.clone.starbucks.DAO.IMyDAO;
 import com.clone.starbucks.DTO.AllDTO;
@@ -21,9 +25,11 @@ public class MyServiceImpl implements IMyService {
 	
 //----------------------------------------E-gift Card 등록----------------------------------------------		
 	@Override
-	public String cardRegisterProc(CardDTO cardDTO, HttpServletRequest request) {
+	public String cardRegisterProc(UserInfoDTO userInfo,CardDTO cardDTO, HttpServletRequest request) {
 		
-		session.setAttribute("id", "쭈고");
+		session.setAttribute("id", "쭈고"); //나중에 지울것
+		//String id = (String) session.getAttribute(userInfo.getId()); <<나중에 주석 풀것
+		
 		
 		String cardNum = request.getParameter("c_num1")+request.getParameter("c_num2")+request.getParameter("c_num3")+request.getParameter("c_num4");
 		//cardDTO.setC_num(cardNum);
@@ -93,7 +99,8 @@ public class MyServiceImpl implements IMyService {
 
 	@Override
 	public String couponRegisterProc(UserInfoDTO userInfoDTO, E_couponDTO eCouponDTO, HttpServletRequest request) {
-		session.setAttribute("id", "쭈고");
+		session.setAttribute("id", "쭈고"); //나중에 지울것
+		//String id = (String) session.getAttribute(userInfo.getId()); <<나중에 주석 풀것
 		//1. 영수증 쿠폰인지, mms 쿠폰인지, star 쿠폰인지 구별.. (check박스가 아니기에 실패)
 		//2. 각각 선택지의 input 값 받아오기
 		String receipt_num = request.getParameter("rptcoupon_num1")+request.getParameter("rptcoupon_num2")+request.getParameter("rptcoupon_num3")+request.getParameter("rptcoupon_num4");
@@ -153,6 +160,15 @@ public class MyServiceImpl implements IMyService {
 		return "등록완료";
 	}
 	
+	@Override //카드 리스트 세션저장용
+	public void cardList(CardDTO cardDTO, Model model) {
+		session.setAttribute("id", "쭈고");
+		String id = (String)session.getAttribute("id");
+		ArrayList<CardDTO> list = myDAO.cardList(id);
+		model.addAttribute("list",list);
+	}
+	
+	
 //----------------------------------------E-gift Card 등록----------------------------------------------
 	
 	//----------my/index
@@ -180,6 +196,9 @@ public class MyServiceImpl implements IMyService {
 
 			return user;
 		}
+
+
+		
 
 	
 }

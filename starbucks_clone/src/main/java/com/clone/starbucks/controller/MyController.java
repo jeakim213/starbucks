@@ -2,6 +2,7 @@ package com.clone.starbucks.controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -31,8 +32,8 @@ public class MyController {
 
 	//my
 	@PostMapping(value="my/cardRegisterProc")
-	public String cardRegisterProc(CardDTO cardDTO, Model model, HttpServletRequest request, HttpServletResponse response)throws IOException {
-		String msg = myService.cardRegisterProc(cardDTO, request);
+	public String cardRegisterProc(UserInfoDTO userInfoDTO,CardDTO cardDTO, Model model, HttpServletRequest request, HttpServletResponse response)throws IOException {
+		String msg = myService.cardRegisterProc(userInfoDTO, cardDTO, request);
 		response.setContentType("text/html; charset=UTF-8");
 		PrintWriter out = response.getWriter();
 		if(msg.equals("등록완료")) {
@@ -56,13 +57,21 @@ public class MyController {
 	}
 	
 	@PostMapping(value="my/couponRegisterProc")
-	public String couponRegisterProc(UserInfoDTO userInfoDTO, E_couponDTO eCouponDTO, Model model, HttpServletRequest request) throws IOException {
+	public String couponRegisterProc(UserInfoDTO userInfoDTO, E_couponDTO eCouponDTO, Model model, HttpServletRequest request, HttpServletResponse response) throws IOException {
 		String msg = myService.couponRegisterProc(userInfoDTO, eCouponDTO, request);
+		response.setContentType("text/html; charset=UTF-8");
+		PrintWriter out = response.getWriter();
 		if(msg.equals("등록완료")) {
 			model.addAttribute("msg",msg);
+			out.println("<script>alert('쿠폰 등록이 완료되었습니다.'); location.href='mycard_info_input';</script>");
+			out.flush();
+			out.close();
 			return "my/ecoupon";
 		}else {
 			model.addAttribute("msg",msg);
+			out.println("<script>alert('쿠폰 등록이 실패되었습니다.'); location.href='mycard_info_input';</script>");
+			out.flush();
+			out.close();
 			return "my/ecoupon";
 		}
 	}
@@ -168,11 +177,22 @@ public class MyController {
 		return "my/mycard_charge-2";
 	}
 
+	
 	@RequestMapping(value = "my/mycard_index")
 	public String mycard_index() {
 		return "my/mycard_index";
 	}
+	
+	
+	@RequestMapping(value = "my/cardlistProc")
+	public String cardList(CardDTO cardDTO,Model model){
+		myService.cardList(cardDTO, model);
+		return "my/mycard_index";
+	}
 
+	
+	
+	
 	@RequestMapping(value = "my/mycard_info_input")
 	public String mycard_info_input() {
 		return "my/mycard_info_input";
