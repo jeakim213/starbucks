@@ -11,14 +11,15 @@ function check(){
 		return; 
 	}
 	*/
+	
 	document.getElementById('loginProc').submit();
-}
+
 
 var m_strChoiceId = "";
 
 $(document).ready(function () {
-	//주석 setCaptcha();
-	//setEvent();
+	setCaptcha();
+	setEvent();
 	
 	
 	if (Cookies.getCookie("idRemb") != "") {
@@ -481,4 +482,5 @@ function deleteId() {
 	);
 
 	goWithPostData(arrKeyAndValues, "/login/outDoubleJoinMember.do");
+}
 }

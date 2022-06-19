@@ -41,15 +41,17 @@ public class HomeController {
    public String checkLogin() {
       JsonObject obj = new JsonObject();
       obj.addProperty("result_code", "SUCCESS");
+      obj.addProperty("alert_msg", "");
+
 //      {
 //          "result_code": "FAIL",
-//          "error_msg": "",
+//          "_error": "",
 //          "alert_msg": "",
 //          "location_href": "",
 //          "location_replace": "",
 //          "custom_script": "",
 //          "total_cnt": 0,
-//          "data": null,
+//          "data": {}
 //          "result_api_code": ""
 //      }
 

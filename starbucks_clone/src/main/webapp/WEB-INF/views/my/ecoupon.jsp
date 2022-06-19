@@ -9,9 +9,20 @@
 
 
 
-
-
-
+<!-- 
+<script type="text/javascript">
+	function submitForm(){
+		send.addEventListener("click",function(){
+      	  var form = document.getElementById("couponRegister");
+      	  form.action = "my/couponRegisterProc";
+      	  form.metho = "POST";
+      	  form.submit();
+        });
+		
+		alert('${msg}');
+	}
+</script>
+ -->
 
 
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -698,11 +709,13 @@ var eFrequencyPlannerYn = 'Y';
 				<!-- 서브 타이틀 end -->
 				
 				<!-- 내용 -->
+				
 				<div class="ms_cont_wrap">
 					<div class="ms_cont">
 						<!-- My e-쿠폰 -->
 						<div class="ms_ecoupon">
-							<!-- My e-쿠폰 팝업 -->
+							<!-- My e-쿠폰 팝업  couponRegisterProc-->
+							<form action="couponRegisterProc" name="couponRegister" id="couponRegister" method="post">
 							<div class="ecPop">
 								<div class="head">
 									<p class="tt"><span class="en">My</span> 쿠폰 등록</p>
@@ -710,7 +723,7 @@ var eFrequencyPlannerYn = 'Y';
 								</div>
 								<!-- 20170726 추가 -->                                
                                 <div class="myPopInner">
-                                    <form name="efrm1" id="efrm1" method="post">
+                                    
                                         <fieldset>
                                             <legend class="hid">My 쿠폰 등록</legend>
                                             
@@ -727,13 +740,13 @@ var eFrequencyPlannerYn = 'Y';
                                                 <div class="coupon_input">
                                                     <label for="coupon_num1">영수증 쿠폰번호 16자리를 입력해주세요.</label>
                                                     <div class="input">
-                                                        <input type="tel" name="rptcoupon_num1" id="rptcoupon_num1" maxlength="4" ref="num" title="쿠폰 앞번호">
+                                                        <input type="text" name="rptcoupon_num1" id="rptcoupon_num1" maxlength="4" title="쿠폰 앞번호">
                                                         <span class="line"></span>
-                                                        <input type="tel" name="rptcoupon_num2" id="rptcoupon_num2" maxlength="4" ref="num" title="쿠폰 두번째 번호">
+                                                        <input type="text" name="rptcoupon_num2" id="rptcoupon_num2" maxlength="4" title="쿠폰 두번째 번호">
                                                         <span class="line"></span>
-                                                        <input type="tel" name="rptcoupon_num3" id="rptcoupon_num3" maxlength="4" ref="num" title="쿠폰 세번째 번호">
+                                                        <input type="text" name="rptcoupon_num3" id="rptcoupon_num3" maxlength="4" title="쿠폰 세번째 번호">
                                                         <span class="line"></span>
-                                                        <input type="tel" name="rptcoupon_num4" id="rptcoupon_num4" maxlength="4" ref="num" title="쿠폰 마지막 번호" class="last">
+                                                        <input type="text" name="rptcoupon_num4" id="rptcoupon_num4" maxlength="4" title="쿠폰 마지막 번호" class="last">
                                                     </div>
                                                     <div class="cpClear"></div>
                                                 </div>
@@ -751,11 +764,11 @@ var eFrequencyPlannerYn = 'Y';
                                                 <div class="coupon_input">
                                                     <label for="coupon_num3">MMS 쿠폰번호 13자리를 입력해주세요.</label>
                                                     <div class="input">
-                                                        <input type="tel" name="coupon_num1" id="coupon_num1" maxlength="4" ref="num" title="쿠폰 앞번호">
+                                                        <input type="text" name="coupon_num1" id="coupon_num1" maxlength="4" title="쿠폰 앞번호">
                                                         <span class="line"></span>
-                                                        <input type="tel" name="coupon_num2" id="coupon_num2" maxlength="4" ref="num" title="쿠폰 중간 번호"><!-- maxlength 5->4로 변경 -->
+                                                        <input type="text" name="coupon_num2" id="coupon_num2" maxlength="4" title="쿠폰 중간 번호"><!-- maxlength 5->4로 변경 -->
                                                         <span class="line"></span>
-                                                        <input type="tel" name="coupon_num3" id="coupon_num3" maxlength="5" ref="num" title="쿠폰 마지막 번호" class="last">
+                                                        <input type="text" name="coupon_num3" id="coupon_num3" maxlength="5" title="쿠폰 마지막 번호" class="last">
                                                     </div>
                                                     <div class="cpClear"></div>
                                                 </div>
@@ -789,11 +802,11 @@ var eFrequencyPlannerYn = 'Y';
 	                                            <div class="starcoupon_input">
 	                                                <label for="starcoupon_num1">Star 쿠폰번호 13자리를 입력해주세요.</label>
 	                                                <div class="input">
-	                                                    <input type="tel" name="starcoupon_num" id="starcoupon_num1" maxlength="4" ref="num" title="쿠폰 앞번호">
+	                                                    <input type="text" name="starcoupon_num1" id="starcoupon_num1" maxlength="4" title="쿠폰 앞번호">
 	                                                    <span class="line"></span>
-	                                                    <input type="tel" name="starcoupon_num" id="starcoupon_num2" maxlength="4" ref="num" title="쿠폰 중간 번호"><!-- maxlength 5->4로 수정 -->
+	                                                    <input type="text" name="starcoupon_num2" id="starcoupon_num2" maxlength="4" title="쿠폰 중간 번호"><!-- maxlength 5->4로 수정 -->
 	                                                    <span class="line"></span>
-	                                                    <input type="tel" name="starcoupon_num" id="starcoupon_num3" maxlength="5" ref="num" title="쿠폰 마지막 번호" class="last">
+	                                                    <input type="text" name="starcoupon_num3" id="starcoupon_num3" maxlength="5" title="쿠폰 마지막 번호" class="last">
 	                                                </div>
 	                                                <div class="cpClear"></div>
 	                                            </div>
@@ -807,7 +820,7 @@ var eFrequencyPlannerYn = 'Y';
 	                                        <!--// 3. Star 쿠폰 -->
 	                                        <!-- //e::211008 -->
                                         </fieldset>
-                                    </form>
+                                    
                                 </div>
                                 <!--// 20170726 추가 -->
                                 
@@ -840,11 +853,13 @@ var eFrequencyPlannerYn = 'Y';
 	                                    <li>Star 쿠폰은 상업적으로 이용할 수 없습니다.</li>
 	                                </ul>
 	                                <!-- //e::211008 -->
-
-                                    <p class="btns"><a href="javascript:void(0)" class="a1">쿠폰 등록</a> <a href="javascript:void(0)" class="a2">취소</a></p>
+	                                <button id="formSubmit" style="background: #e2c383; border: 1px solid #bb9f65; color: #222; font-size: 12px; font-weight: bold;float: left; width: 81px; height: 28px; line-height: 28px; border-radius: 3px; text-align: center;">등록하기</button>
+									<input type="reset" value="취소" style="float: left;width: 81px; height: 28px; line-height: 28px; border-radius: 3px; text-align: center; background: #222; border: 1px solid #222; color: #fff;font-size: 12px; font-weight: bold; margin-left: 5px;">
+                                    <!-- <p class="btns"><a href="javascript:void(0)" class="a1">쿠폰 등록</a> <a href="javascript:void(0)" class="a2">취소</a></p> -->
                                 </div>
                                 
 							</div>
+							</form>
 							<div class="ecPop2">
 								<div class="head">
 									<p class="tt">My 쿠폰 사용하기</p>

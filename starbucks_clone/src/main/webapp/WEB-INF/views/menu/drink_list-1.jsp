@@ -1,5 +1,4 @@
-﻿<%@page isELIgnored="true" %>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+﻿<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
 
@@ -1802,7 +1801,7 @@ var eFrequencyPlannerYn = 'Y';
                 
                 var url = '/menu/productListAjax';
     			
-                   url = '/upload/json/menu/' + pro_seq + '.js';
+                   url = '${pageContext.request.contextPath}/upload/json/menu/' + pro_seq + '.json';
                 
                 __ajaxCall(url, option , true, "JSON", "POST",
                 function(data) {
@@ -1814,13 +1813,13 @@ var eFrequencyPlannerYn = 'Y';
                             f_cate = $(this).attr('f_cate');
                             f = document.drinkListForm;
                             if(f_cate == "W0000001") {
-                                f.action = "menu/drink_view";
+                                f.action = "drink_view";
                             } else if(f_cate == "W0000012") {
-                                f.action = "menu/food_view";
+                                f.action = "food_view";
                             } else if(f_cate == "W0000022") {
-                                f.action = "menu/product_view";
+                                f.action = "product_view";
                             } else {
-                                f.action = "menu/drink_view";
+                                f.action = "drink_view";
                             }
                             f.product_cd.value = product_cd;
                             f.submit();
@@ -1874,7 +1873,7 @@ var eFrequencyPlannerYn = 'Y';
 					
 	                var url = '/menu/productListAjax';
 	    			
-	                   url = '/upload/json/menu/' + cngCateCode + '.js';
+	                   url = '${pageContext.request.contextPath}/upload/json/menu/' + cngCateCode + '.json';
 	                
 	                __ajaxCall(url, option , true, "JSON", "POST", 
 	                function(data) {
@@ -2047,10 +2046,10 @@ var eFrequencyPlannerYn = 'Y';
 			}
 		</script>
         <script type="text/x-jquery-tmpl" id="tpl_productPicList">
-            <li class="menuDataSet" new="${newicon}" sell="${sell_CAT}" recomm="${recomm}" sold="${sold_OUT}">
+            <li class="menuDataSet" new="\${newicon}" sell="\${sell_CAT}" recomm="\${recomm}" sold="\${sold_OUT}">
                 <dl>
                     <dt>
-                        <a href="javascript:void(0)" class="goDrinkView" prod="${product_CD}"><img src="${img_UPLOAD_PATH.replace("www", "image")}${file_PATH}" alt="${product_NM}"></a>
+                        <a href="javascript:void(0)" class="goDrinkView" prod="\${product_CD}"><img src="\${img_UPLOAD_PATH.replace("www", "image")}\${file_PATH}" alt="\${product_NM}"></a>
                         {{if newicon == 'Y' || sell_CAT == '1' || recomm != '0' || sold_OUT == 'Y'}}
                         <ul>
                             {{if newicon == 'Y'}}
@@ -2068,47 +2067,58 @@ var eFrequencyPlannerYn = 'Y';
                         </ul>
                         {{/if}}
                     </dt>
-                    <dd>${product_NM}</dd>
+                    <dd>\${product_NM}</dd>
                 </dl>
             </li>
         </script>
         <script type="text/x-jquery-tmpl" id="tpl_productNutTr">
             <tr>
-                <td>${product_NM}</td>
-                
+                <td>\${product_NM}</td>
+                <td>\${convertInfoText(kcal)}</td>
+                <td>\${convertInfoText(sugars)}</td>
+                <td>\${convertInfoText(protein)}</td>
+                <td>\${convertInfoText(sodium)}</td>
+                <td>\${convertInfoText(sat_FAT)}</td>
+                <td>\${convertInfoText(caffeine)}</td>
             </tr>
         </script>
         <script type="text/x-jquery-tmpl" id="tpl_productNutMob">
-            <p class="tit">${product_NM}</p>
+            <p class="tit">\${product_NM}</p>
             <ul>
                 <li>
                     <dl>
                         <dt>칼로리(Kcal)</dt>
+						<dd>\${convertInfoText(kcal)}</dd>
                     </dl>
                 </li>
                 <li>
                     <dl>
                         <dt>당류(g)</dt>
+						<dd>\${convertInfoText(sugars)}</dd>
                     </dl>
                 </li>
                 <li>
                     <dl>
                         <dt>단백질(g)</dt>
+						<dd>\${convertInfoText(protein)}</dd>
                     </dl>
                 </li>
                 <li>
                     <dl>
                         <dt>나트륨(mg)</dt>
+						<dd>\${convertInfoText(sodium)}</dd>
                     </dl>
                 </li>
                 <li>
                     <dl>
                         <dt>포화지방(g)</dt>
+						<dd>\${convertInfoText(sat_FAT)}</dd>
                     </dl>
                 </li>
                 <li>
                     <dl>
                         <dt>카페인(mg)</dt>
+						<dd>\${convertInfoText(caffeine)}</dd>
                     </dl>
                 </li>
             </ul>
@@ -2118,9 +2128,9 @@ var eFrequencyPlannerYn = 'Y';
             <li>
                 <dl>
                     <dt>
-                        <a href="javascript:void(0)" class="goServiceView" prod="${product_CD}" f_cate="${f_CATE_CD}"><img src="${img_UPLOAD_PATH.replace("www", "image")}${file_PATH}" alt="${product_NM}"></a>
+                        <a href="javascript:void(0)" class="goServiceView" prod="\${product_CD}" f_cate="\${f_CATE_CD}"><img src="\${img_UPLOAD_PATH.replace("www", "image")}\${file_PATH}" alt="\${product_NM}"></a>
                     </dt>
-                    <dd>${product_NM}</dd>
+                    <dd>\${product_NM}</dd>
                 </dl>
             </li>
         </script>

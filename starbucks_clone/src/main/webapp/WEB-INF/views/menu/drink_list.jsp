@@ -1945,7 +1945,7 @@ var eFrequencyPlannerYn = 'Y';
 	                        if(cate_chk_stat) {
 	                            $('.product_view_tab.product_view_tab01 .product_list > dl > dd > ul').each(function() {
 	                                var idx = $('.product_view_tab.product_view_tab01 .product_list > dl > dd > ul').index($(this));
-	                                if( $.trim($(this)()) != "" ) {
+	                                if( $.trim($(this)) != "" ) {
 	                                    $('.product_view_tab.product_view_tab01 .product_list > dl > dt').eq(idx).show();
 	                                    $('.product_view_tab.product_view_tab01 .product_list > dl > dd').eq(idx).show();
 

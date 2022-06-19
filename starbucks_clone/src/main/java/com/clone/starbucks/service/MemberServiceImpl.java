@@ -104,6 +104,7 @@ public class MemberServiceImpl implements IMemberService{
 
 				return "가입 완료";
 			}
+			
 			@Override
 			public String loginProc(UserInfoDTO member) {
 				if(member.getId() == null || member.getId().isEmpty())
@@ -115,6 +116,8 @@ public class MemberServiceImpl implements IMemberService{
 				UserInfoDTO check = memberDao.loginProc(member);
 				
 				BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+				String secure = encoder.encode(check.getPw());
+				member.setPw(secure);
 		
 				if(check != null && encoder.matches(member.getPw(), check.getPw())) {
 					session.setAttribute("id", check.getId());

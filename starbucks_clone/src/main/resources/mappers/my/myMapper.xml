@@ -23,6 +23,24 @@
 	</select>
 	
 	
+	<select id="cardList" parameterType="String" resultType="com.clone.starbucks.DTO.CardDTO">
+		SELECT * FROM card WHERE id=#{id}
+	</select>
+	
+	<!-- /eCard -->
+	
+	<!-- e-coupon -->
+	
+	<select id="pon_numCheck" parameterType="String" resultType="com.clone.starbucks.DTO.E_couponDTO">
+		SELECT * FROM e_coupon WHERE pon_num=#{pon_num} 
+	</select>
+	
+	<update id="idUpdate" parameterType="com.clone.starbucks.DTO.E_couponDTO">
+		UPDATE e_coupon SET id=#{id} WHERE pon_num=#{pon_num}
+	</update>
+	
+	
+	
 	<!-- MY INDEX - 예은 -->
 	<select id="userCard" parameterType="com.clone.starbucks.DTO.CardDTO" resultType="int">
 		SELECT count(*) FROM card WHERE id=#{id}

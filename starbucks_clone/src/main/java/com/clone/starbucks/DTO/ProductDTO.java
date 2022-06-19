@@ -14,16 +14,18 @@ p_price number not null
 
 public class ProductDTO {
 	
-	private char p_category1;	// 상품 카테고리1(ex. 커피, 음식, 상품, 카드) [not null]
+	private String p_category1;	// 상품 카테고리1(ex. 커피, 음식, 상품, 카드) [not null]
 	private String p_category2;	// 상품 카테고리2(ex. 콜드브루, etc(커스텀, 카드충전금액, 컵사이즈....)) [not null]
 	private String p_name;	// 상품 이름 [not null]
 	private int p_price;	// 상품 가격 [not null]
+	//인스턴스 추가 - 0613 지혜(장바구니사용)
+	private String p_img;
+	private String p_op;
 	
-	
-	public char getP_category1() {
+	public String getP_category1() {
 		return p_category1;
 	}
-	public void setP_category1(char p_category1) {
+	public void setP_category1(String p_category1) {
 		this.p_category1 = p_category1;
 	}
 	public String getP_category2() {
@@ -43,6 +45,18 @@ public class ProductDTO {
 	}
 	public void setP_price(int p_price) {
 		this.p_price = p_price;
+	}
+	public String getP_img() {
+		return p_img;
+	}
+	public void setP_img(String p_img) {
+		this.p_img = p_img;
+	}
+	public String getP_op() {
+		return p_op;
+	}
+	public void setP_op(String p_op) {
+		this.p_op = p_op;
 	}
 	
 	

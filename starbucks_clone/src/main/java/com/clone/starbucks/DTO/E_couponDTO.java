@@ -46,6 +46,7 @@ public class E_couponDTO {
 	@DateTimeFormat(pattern="yyyy-MM-dd")
 	private Date pon_usedate;	// 쿠폰 사용일자 [null, sysdate]
 	private int pon_cash;	// 쿠폰 금액 [not null]
+	private String id;	// 등록한 사용자 아이디
 	
 	
 	public int getPon_no() {
@@ -101,6 +102,12 @@ public class E_couponDTO {
 	}
 	public void setPon_cash(int pon_cash) {
 		this.pon_cash = pon_cash;
+	}
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
 	}
 
 }

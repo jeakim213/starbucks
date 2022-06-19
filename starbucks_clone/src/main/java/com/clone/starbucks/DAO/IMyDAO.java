@@ -1,9 +1,13 @@
 package com.clone.starbucks.DAO;
 
+import java.util.ArrayList;
+
 import org.springframework.stereotype.Repository;
 
 import com.clone.starbucks.DTO.AllDTO;
 import com.clone.starbucks.DTO.CardDTO;
+import com.clone.starbucks.DTO.E_couponDTO;
+import com.clone.starbucks.DTO.UserInfoDTO;
 
 @Repository
 public interface IMyDAO {
@@ -21,11 +25,17 @@ public interface IMyDAO {
 
 	int userCard(String id);
 	
+	//---------------------------------
+	
+	E_couponDTO pon_numCheck(String pon_num);
+	
+	int idUpdate(E_couponDTO ecouponDTO);
+	
 	int userCoupon(String string);
 
 	AllDTO userAllInfo(String id);
 
-	
+	ArrayList<CardDTO> cardList(String id);
 		
 	
 }
