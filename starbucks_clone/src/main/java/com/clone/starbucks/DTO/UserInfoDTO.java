@@ -12,40 +12,43 @@ DTPass varchar2(50),
 pon_no number
 );
 
+insert into userinfo values('admin', '1234', 9, 'GD', 'master', 'D', '1111', '1');
+insert into userinfo values('user1', '1111', 2, 'GR', '가나', 'S', '2222', '2');
+insert into userinfo values('user2', '2222', '1', 'WC', '다라', 'S', '3333', '3');
+insert into userinfo values('user3', '3333', '1', 'WC', '마바', 'S', '4444', '4');
+insert into userinfo values('user4', '4444', '1', 'WC', '사아', 'S', '5555', '5');
+insert into userinfo values('user5', '5555', '1', 'WC', '자차', 'S', '6666', '6');
+
 ===== default =====
 alter table userinfo modify star default 0;
 alter table userinfo modify grade default 'WC';
 alter table userinfo modify cupreward default 'S';
 
+===== sequence ===
+create sequence pon_no
+INCREMENT BY 1
+START WITH 0001
+MINVALUE 0001
+MAXVALUE 9999
+CYCLE
+NOCACHE
+ORDER;
+
 ===== fk =====
 alter table userinfo add foreign key(pon_no) references e_coupon(pon_no);
-
-
-<<<웰컴, 그린, 골드, 세이브, 디스카운트>>>
-<<<user -> 오라클 내에서 사용되는 예약어 -> 오류>>>*/
-
+*/
 
 public class UserInfoDTO {
 	
-	private String id;	// 아이디 [PK, not null]
-	private String pw;	// 비밀번호 [not null]
-	private String confirmPw;	// 디비에는 안들어가는 확인용
-	private int star;	// 별 [default 0]
-	private String grade;	// 등급 [not null, check, default wc]
-	private String nickname;	//닉네임
-	private char cupreward;	// 에코컵리워드 설정 [not null, check, default s]
-	private String DTPass;	//드라이브스루 패스 등록
-	private int pon_no; 	//쿠폰 넘버 [FK]
-	
-	
-	
-	public String getConfirmPw() {
-		return confirmPw;
-	}
-	
-	public void setConfirmPw(String confirmPw) {
-		this.confirmPw = confirmPw;
-	}
+	private String id;			// 아이디 [PK, not null]
+	private String pw;			// 비밀번호 [not null]
+	private String confirmPw;	// DB X
+	private int star;			// 별 [default 0]
+	private String grade;		// 등급 [not null, check, default wc]
+	private String nickname;	// 닉네임
+	private String cupreward;	// 에코컵리워드 설정 [not null, check, default s]
+	private String DTPass;		// 드라이브스루 패스 등록
+	private int pon_no; 		// 쿠폰 넘버 [FK]
 	
 	
 	public String getId() {
@@ -59,6 +62,12 @@ public class UserInfoDTO {
 	}
 	public void setPw(String pw) {
 		this.pw = pw;
+	}
+	public String getConfirmPw() {
+		return confirmPw;
+	}
+	public void setConfirmPw(String confirmPw) {
+		this.confirmPw = confirmPw;
 	}
 	public int getStar() {
 		return star;
@@ -78,10 +87,10 @@ public class UserInfoDTO {
 	public void setNickname(String nickname) {
 		this.nickname = nickname;
 	}
-	public char getCupreward() {
+	public String getCupreward() {
 		return cupreward;
 	}
-	public void setCupreward(char cupreward) {
+	public void setCupreward(String cupreward) {
 		this.cupreward = cupreward;
 	}
 	public String getDTPass() {
@@ -96,6 +105,5 @@ public class UserInfoDTO {
 	public void setPon_no(int pon_no) {
 		this.pon_no = pon_no;
 	}
-	
 	
 }
