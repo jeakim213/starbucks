@@ -22,29 +22,58 @@ import com.clone.starbucks.service.MemberServiceImpl;
 import com.google.gson.JsonObject;
 
 @Controller
-public class memberController {
+public class MemberController {
 	@Autowired MemberServiceImpl memberService;
 	@Autowired HttpSession session;
 	
 	
 	//login
-	
 	@RequestMapping(value = "login/login")
 	public String login() {
 		return "login/login";
 	}
 	
-	@PostMapping(value = "loginProc")
+	//로그인 버튼 - 설아
+	@RequestMapping(value = "login/loginProc" )
 	public String loginProc(UserInfoDTO member, Model model) {
 		String msg = memberService.loginProc(member);
 		if(msg.equals("로그인 성공")) {
+			model.addAttribute("msg",msg);
 			return "redirect:/index?formpath=index";
-		}
+		}else {
 		model.addAttribute("msg", msg);
-		return "forward:/index?formpath=login";
+		return "redirect:/index?formpath=login";
+		}
+}
+
+	@ResponseBody // 로그인 체크 - 설아
+	@PostMapping(value = "**/edt/edtCheckLogin", produces = "application/json; charset=UTF-8")
+	public String edtCheckLogin() {
+		JsonObject obj = new JsonObject();
+		obj.addProperty("result_code", "SUCCESS");
+		obj.addProperty("alert_msg", "");
+
+//      {
+//          "result_code": "SUCCESS",
+//          "alert_msg": ""
+//      }
+		return obj.toString();
 	}
-	
-	//카카오 인가코드 확인
+	@ResponseBody // 로그인 아이디저장 - 설아
+	@PostMapping(value = "**/interface/loginMember", produces = "application/json; charset=UTF-8")
+	public String loginMember() {
+		JsonObject obj = new JsonObject();
+		obj.addProperty("result_code", "SUCCESS");
+		obj.addProperty("alert_msg", "");
+
+//      {
+//          "result_code": "SUCCESS",
+//          "alert_msg": ""
+//      }
+		return obj.toString();
+	}
+
+	//카카오 인가코드 확인 - 설아
 	@RequestMapping("login/login/kakaoLogin")
 	public String kakaoLogin(String code) {
 		System.out.println("카카오 인가 코드 : " + code);
@@ -56,8 +85,8 @@ public class memberController {
 		session.setAttribute("accessToken", accessToken);
 		return "redirect:/index?formpath=index";
 	}
-
-	@GetMapping(value = "login/login")
+	//로그아웃 - 설아
+	@GetMapping(value = "logout")
 	public void logout(Model model) {
 		String accessToken = (String)session.getAttribute("accessToken");
 		memberService.logout(accessToken);
