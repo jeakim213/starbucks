@@ -1,4 +1,16 @@
+
 package com.clone.starbucks.DTO;
+
+
+/*
+create table product(
+p_category1 char(10) not null,
+p_category2 varchar2(30) not null,
+p_name varchar2(50) not null primary key,
+p_price number not null
+);
+*/
+
 
 public class ProductDTO {
 	
@@ -46,6 +58,7 @@ public class ProductDTO {
 	public void setP_op(String p_op) {
 		this.p_op = p_op;
 	}
+	
 	
 	
 	

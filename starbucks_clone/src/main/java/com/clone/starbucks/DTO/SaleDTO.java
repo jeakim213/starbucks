@@ -1,5 +1,7 @@
 package com.clone.starbucks.DTO;
 
+import java.util.Date;
+
 /*
 create table sale(
 sale_no number not null,
@@ -29,7 +31,6 @@ ORDER;
 
 */
 
-import java.sql.Date;
 
 public class SaleDTO {
 	

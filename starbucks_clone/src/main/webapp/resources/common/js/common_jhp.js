@@ -483,7 +483,7 @@ function cutStrKor(str, len, dot) {
 
 function getRewardSummary() {
 	if (m_jsonRewardSummary == null) {
-		___ajaxCall("/interface/getMsrRewardSummary.do", {}, false, "json", "post"
+		___ajaxCall("../interface/getMsrRewardSummary", {}, false, "json", "post"
 			,function (_response) {
 				if (_response.result_code == "SUCCESS") {
 					m_jsonRewardSummary = jQuery.parseJSON(_response.data);

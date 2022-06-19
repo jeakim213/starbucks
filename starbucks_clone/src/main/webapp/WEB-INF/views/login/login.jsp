@@ -1,14 +1,9 @@
 ﻿<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-	
-
-
-
-
-
 
 
 
@@ -92,8 +87,7 @@ var eFrequencyPlannerYn = 'Y';
 					<!-- <p class="account_text_tip">2015년 9월 30일 이후 일부 계정에 대한 이용에 제한이 있을 수 있습니다.</p> -->
 				</div>
 				<div class="account_combine_cont">
-					<ul class="account_combine_inner">
-					</ul>
+					<ul class="account_combine_inner"></ul>
 					<script id="doubleJoinList" type="text/x-jquery-tmpl">
 						<li>
 							<div class="account_combine_choice">
@@ -749,8 +743,10 @@ var eFrequencyPlannerYn = 'Y';
 				<div class="find_mem_wrap mem_wrap2"><!-- jsp 수정 : 클래스명 추가 -->
 					<!-- 20160804 수정 -->
 					<div class="find_mem_inner" style="margin:auto; width:500px;">
+						<form id="loginProc" action="loginProc" method="post"><!--설아추가-->
 						
-						<form id="frmLogin" action="login/login_proc" method="post">
+					<!--원본 <form id="frmLogin" action="login/login_proc" method="post"> -->
+						
 							<fieldset>
 								<legend class="hid">회원가입 이용약관 동의, 수집하는 개인정보의 항목, 개인정보의 수집 및 이용목적, 개인정보의 보유 및 이용기간 및 파기절차, 파기 방법에 관한 폼</legend>
 								<strong class="new_login_ttl">로그인</strong>
@@ -761,16 +757,17 @@ var eFrequencyPlannerYn = 'Y';
 									 <p class="find_form_txt">
 										<span class="t_006633">Welcome!</span><br class="for_mob"> 스타벅스 코리아에 오신 것을 환영합니다.
 									 </p> <!-- 220112 수정 -->
+			
 									
 									<div class="renew_input_box bd_none">
 										<label for="txt_user_id" class="hid">아이디</label>
 										<!-- 접근성_20171120 라벨 추가 -->
-										<input class="login_id mb10" id="txt_user_id" name="user_id" type="text" maxlength="20" placeholder="아이디를 입력해 주세요." required="required">
+										<input class="login_id mb10" id="id" name="id" type="text" maxlength="20" placeholder="아이디를 입력해 주세요." required="required">
 										<!-- 접근성_20171120 required 추가 -->
 										<p class="limit_txt user_id_txt"></p>
 										<label for="txt_user_pwd" class="hid">비밀번호</label>
 										<!-- 접근성_20171120 라벨 추가 -->
-										<input class="login_pw mb10" id="txt_user_pwd" name="user_pwd" type="password" maxlength="20" placeholder="비밀번호를 입력해 주세요." required="required" autocomplete="off">
+										<input class="login_pw mb10" id="pw" name="pw" type="password" maxlength="20" placeholder="비밀번호를 입력해 주세요." required="required" autocomplete="off">
 										<!-- 접근성_20171120 required 추가 , 20181025_autocomplete="off" 추가 -->
 										<p class="limit_txt user_pwd_txt"></p>
 										<!-- 접근성_20171120 포커스:  추가 -->
@@ -785,7 +782,8 @@ var eFrequencyPlannerYn = 'Y';
 											</a>
 											<br>
 										<p class="btn_mem_login">
-											<a class="btn_login" href="javascript:void(0);" role="submit">로그인</a><!-- 접근성_20171120 role 추가 -->
+											<a class="btn_login" href="javascript:void(0);" role="submit" onclick="check()" type="button">로그인</a>
+											<!-- 접근성_20171120 role 추가 -->
 										</p>
 										<p class="input_warn_text t_006633">
 											* 타 사이트와 비밀번호를 동일하게 사용할 경우 도용의 위험이 있으므로, 정기적인 비밀번호 변경을 해주시길 바랍니다.<br>
@@ -1203,7 +1201,7 @@ var eFrequencyPlannerYn = 'Y';
                 	/* 로그인 체크  */
                 	$.ajax({
                     	type: 'post',
-                    	url : '/edt/edtCheckLogin',
+                    	url : '/edt/edtCheckLogin',//'/edt/edtCheckLogin',
                     	data : {},
                     	dataType : 'json',
                     	jsonp : 'callback',

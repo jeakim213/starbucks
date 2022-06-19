@@ -943,18 +943,25 @@
 	.card_4input input { width:23.574%; float:left; margin-right:1.9%; }
 	.card_4input input.last { margin-right:0;}
 	.disabled { background:#f4f4f2; color:#222222; }
-	.user_gender { border:1px solid #b0b0b0; border-radius:3px; float:left; margin-left:2%; overflow:hidden; width:22.711%; }
-	.user_gender a { color:#b0b0b0; display:block; float:left; line-height:45px; text-align:center; width:50%; }
+	/* 0613 예은 수정 */
+	.name_chk input { border:1px solid #ddd; border-radius:3px; box-sizing:border-box; display:inline-block; /* margin-top:10px; */ max-width:300px; /*outline:none; */ padding:15px; width:100%;} /* 접근성_20171120 수정 */
+	.user_gender { border-radius:3px; float:right; margin-top:1.5%; overflow:hidden; width:22.711%; margin-right:70px; }
+	.user_gender input[type="radio"] { -webkit-appearance: none; position: relative; width: 16px; height: 16px; cursor: pointer; outline: none !important; border: 1px solid #eeeeee; border-radius: 2px; background: #fbfbfb; }
+ 	.user_gender input[type="radio"]::before {content: "선택됨"; font-size: 0; position: absolute; top: 50%; left: 50%; overflow: hidden; transform: scale(0) translate(-50%, -50%); line-height: 1; } 
+	.user_gender input[type="radio"]:hover {border-color: rgba(170, 170, 170, 0.5); } 
+	.user_gender input[type="radio"]:checked {background-color: #359e20; border-color: rgba(255, 255, 255, 0.3); color: white; }
+ 	.user_gender input[type="radio"]:checked::before { border-radius: 2px; transform: scale(1) translate(-50%, -50%);}
+	/* .user_gender a { color:#b0b0b0; display:block; float:left; line-height:45px; text-align:center; width:50%; }
 	.user_gender a.male { border-right:1px solid #ddd; box-sizing:border-box; width:50%; }
-	.user_gender a:after {content: '선택안됨' ;  font-size: 0;  line-height: 0; color: #fff; text-indent: -9999px; } /* 접근성_20171120   접근성 추가 */
+	.user_gender a:after {content: '선택안됨' ;  font-size: 0;  line-height: 0; color: #fff; text-indent: -9999px; } 접근성_20171120   접근성 추가
 	.user_gender a.on{ background:#f4f4f2; color:#222; }
-	.user_gender a.on:after  {content: '선택됨' ;  font-size: 0;  line-height: 0; color: #fff; text-indent: -9999px; } /* 접근성_20171120 추가 */
+	.user_gender a.on:after  {content: '선택됨' ;  font-size: 0;  line-height: 0; color: #fff; text-indent: -9999px; } 접근성_20171120 추가 */
 	.btn_change_name { background:#666; border-radius:3px; color:#fff; display:block; float:right; line-height:46px; text-align:center; width:24%; }
-	.renew_input_box.gender_chk input { width:49%; }
-	.nofix_name { width:100%; }
+	/* .renew_input_box.gender_chk input { width:49%; } */
+	/* .nofix_name { width:100%; } */
 	.renew_input_box.gender_chk .nofix_name.no_change { width:74.5%; }
-	.renew_input_box.gender_chk .nofix_name { width:49%; float:left; }
-	.nofix_name { background:#f4f4f2; border:1px solid #ddd; box-sizing:border-box; border-radius:3px; font-size:14px; padding:15px; }
+	
+	/* .nofix_name { background:#f4f4f2; border:1px solid #ddd; box-sizing:border-box; border-radius:3px; font-size:14px; padding:15px; } */
 	.select_birth_box:after { clear:both; content:""; display:block; }
 	.select_birth_box .birth_select { background:#fff url("../img/util/mem/icon_arrow_down.png") 90% center no-repeat;  float:left; position:relative; width:32%; }
 	.select_birth_box .birth_select { float:left; width:32%; margin-right:1.760%;  }	

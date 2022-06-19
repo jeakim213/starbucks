@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	<mapper namespace="com.clone.starbucks.DAO.IMyDAO">
+	
+	<select id="c_numCheck" parameterType="String" resultType="com.clone.starbucks.DTO.CardDTO">
+		SELECT * FROM card WHERE c_num=#{c_num}
+	</select>
+	
+	<select id="nameFind" parameterType="String" resultType="String">
+		SELECT c_name FROM card WHERE c_num=#{c_num}
+	</select>
+	
+	<update id="updateCard" parameterType="com.clone.starbucks.DTO.CardDTO">
+		UPDATE card SET c_name=#{c_name}, id=#{id}, c_master=#{c_master} WHERE c_num=#{c_num}
+	</update>
+	
+	<select id="cMaster1Bool" parameterType="String" resultType="int">
+		SELECT count(c_num) FROM card WHERE id=#{id} and c_master=1
+	</select>
+	
+	<select id="cMaster1Num" parameterType="String" resultType="String">
+		SELECT c_num FROM card WHERE id=#{id} and c_master=1
+	</select>
+	
+	<!-- /eCard -->
+	
+	<!-- e-coupon -->
+	
+	<select id="pon_numCheck" parameterType="String" resultType="com.clone.starbucks.DTO.E_couponDTO">
+		SELECT * FROM e_coupon WHERE pon_num=#{pon_num} 
+	</select>
+	
+	<update id="idUpdate" parameterType="com.clone.starbucks.DTO.E_couponDTO">
+		UPDATE e_coupon SET id=#{id} WHERE pon_num=#{pon_num}
+	</update>
+	
+	
+	
+	<!-- MY INDEX - 예은 -->
+	<select id="userCard" parameterType="com.clone.starbucks.DTO.CardDTO" resultType="int">
+		SELECT count(*) FROM card WHERE id=#{id}
+	</select>
+	
+	<select id="userCoupon" parameterType="com.clone.starbucks.DTO.E_couponDTO" resultType="int">
+		SELECT count(*) FROM e_coupon WHERE id=#{id}
+	</select>
+	
+	<select id="userAllInfo" parameterType="String" resultType="com.clone.starbucks.DTO.AllDTO">
+		SELECT a.id,a.star,a.grade,a.nickname,b.c_name,b.remaincost,b.c_num 
+		FROM userinfo a LEFT OUTER JOIN card b ON a.id = b.id
+		WHERE a.id = #{id}
+	</select>
+	
+	</mapper>

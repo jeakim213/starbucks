@@ -707,17 +707,18 @@ var eFrequencyPlannerYn = 'Y';
 						<section class="renew_joinform_v2">
 							<p class="join_last_txt">
 								<!-- 이단 -->
-								<!-- 홍길동  -->고객님!<br/>
+								${name }고객님!<br/>
 								스타벅스 코리아<br class="for_mob" />
 								회원가입이 완료되었습니다.
 							</p> <!-- 220112 수정 -->
 							<figure class="icon_mem_sally">
 								<img src="//image.istarbucks.co.kr/common/img/util/mem/icon_join_sally_last.jpg" alt="축하합니다" /><!-- 접근성_20171120 alt 추가 -->
 							</figure>
-							<div class="agreement_status_wrap">
-								<p class="status_txt dateTxt"><!-- 2016년 10월 18일 수신 동의 여부 처리 결과 --></p>
-								<!-- <div class="sms_agreement"><p>SMS<span>수신거부</span></p></div>
-								<div class="mail_agreement"><p>이메일</p><span>수신동의</span></div> -->
+							<!-- 예은 삭제 -->
+							<!-- <div class="agreement_status_wrap">
+								<p class="status_txt dateTxt">2016년 10월 18일 수신 동의 여부 처리 결과</p>
+								<div class="sms_agreement"><p>SMS<span>수신거부</span></p></div>
+								<div class="mail_agreement"><p>이메일</p><span>수신동의</span></div>
 								<div class="agreement_status">
 									<table summary="이메일 수신동의 여부 처리 결과">
 										<caption class="hid">sms, 이메일 수신동의 여부 처리 결과</caption>
@@ -726,12 +727,12 @@ var eFrequencyPlannerYn = 'Y';
 											<col width="50%">
 										</colgroup>
 										<tbody>
-										<!-- 20180807 2차 오은규 수정 -->
+										20180807 2차 오은규 수정
 											<tr>
 												<th>이메일 및 SMS 광고성 정보</th>
 												<td>수신거부</td>
 											</tr>
-										<!-- 
+										
 											<tr>
 												<th>SMS</th>
 												<td>수신거부</td>
@@ -740,11 +741,11 @@ var eFrequencyPlannerYn = 'Y';
 												<th class="last">이메일</th>
 												<td class="last">수신거부</td>
 											</tr>
-										-->
+										
 										</tbody>
 									</table>
 								</div>
-							</div>
+							</div> -->
 						</section>
 						<section class="renew_joinform_v2">
 							<p class="status_txt">스타벅스 카드를 등록하시고<br/> 스타벅스 리워드 혜택을 누려보세요.</p> <!-- 스타벅스 리워드 수정 -->
@@ -755,7 +756,7 @@ var eFrequencyPlannerYn = 'Y';
 								
 									
 
-										<a class="btn_detail" href="#" target="">자세히 보기</a>
+										<a class="btn_detail" href="${pageContext.request.contextPath}/msr/scard/about" target="">자세히 보기</a>
 									
 									
 								
