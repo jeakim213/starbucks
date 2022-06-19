@@ -31,7 +31,6 @@ $(document).ready(function () {
     '								<li><a href="/starbucks/coffee/cappuccino">카푸치노</a></li>' +
     '								<li><a href="/starbucks/coffee/latte">라떼</a></li>' +
     '								<li><a href="/starbucks/coffee/mocha">모카</a></li>' +
-    //'								<li><a href="/starbucks/coffee/flat_white">리스트레또 비안코</a></li>' + // 20210914 삭제
     '							</ul>' +
     //'							<ul>' +
     //'								<li class="gnb_sub_ttl"><a href="/starbucks/coffee/higher_enjoy">최상의 커피를 즐기는 법</a></li>' +
@@ -79,15 +78,15 @@ $(document).ready(function () {
     '						<div class="gnb_sub_inner">' +
     '							<ul>' +
     '								<li class="gnb_sub_ttl"><a href="/starbucks/menu/drink_list">음료</a></li>' +
-    '								<li><a href="/starbucks/menu/drink_list?CATE_CD=product_cold_brew">콜드 브루</a></li>' +
-    '								<li><a href="/starbucks/menu/drink_list?CATE_CD=product_brood">브루드 커피</a></li>' +
-    '								<li><a href="/starbucks/menu/drink_list?CATE_CD=product_espresso">에스프레소</a></li>' +
-    '								<li><a href="/starbucks/menu/drink_list?CATE_CD=product_frappuccino">프라푸치노</a></li>' +
-    '								<li><a href="/starbucks/menu/drink_list?CATE_CD=product_blended">블렌디드</a></li>' +
-    '								<li><a href="/starbucks/menu/drink_list?CATE_CD=product_fizzo">스타벅스 피지오</a></li>' +
-    '								<li><a href="/starbucks/menu/drink_list?CATE_CD=product_tea">티(티바나)</a></li>' +
-    '								<li><a href="/starbucks/menu/drink_list?CATE_CD=product_etc">기타 제조 음료</a></li>' +
-    '								<li><a href="/starbucks/menu/drink_list?CATE_CD=product_juice">스타벅스 주스(병음료)</a></li>' +
+    '								<li><a href="/starbucks/menu/drink_list?&CATE_CD=product_cold_brew">콜드 브루</a></li>' +
+    '								<li><a href="/starbucks/menu/drink_list?&CATE_CD=product_brood">브루드 커피</a></li>' +
+    '								<li><a href="/starbucks/menu/drink_list?&CATE_CD=product_espresso">에스프레소</a></li>' +
+    '								<li><a href="/starbucks/menu/drink_list?&CATE_CD=product_frappuccino">프라푸치노</a></li>' +
+    '								<li><a href="/starbucks/menu/drink_list?&CATE_CD=product_blended">블렌디드</a></li>' +
+    '								<li><a href="/starbucks/menu/drink_list?&CATE_CD=product_fizzo">스타벅스 피지오</a></li>' +
+    '								<li><a href="/starbucks/menu/drink_list?&CATE_CD=product_tea">티(티바나)</a></li>' +
+    '								<li><a href="/starbucks/menu/drink_list?&CATE_CD=product_etc">기타 제조 음료</a></li>' +
+    '								<li><a href="/starbucks/menu/drink_list?&CATE_CD=product_juice">스타벅스 주스(병음료)</a></li>' +
     '							</ul>' +
     '							<ul>' +
     '								<li class="gnb_sub_ttl"><a href="/starbucks/menu/food_list">푸드</a></li>' +

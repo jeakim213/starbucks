@@ -782,7 +782,7 @@ var eFrequencyPlannerYn = 'Y';
 											</a>
 											<br>
 										<p class="btn_mem_login">
-											<a class="btn_login" href="javascript:void(0);" role="submit" onclick="check()" type="button">로그인</a>
+											<a class="btn_login" href="javascript:void(0);" role="submit" onclick="check()">로그인</a>
 											<!-- 접근성_20171120 role 추가 -->
 										</p>
 										<p class="input_warn_text t_006633">
@@ -1199,6 +1199,27 @@ var eFrequencyPlannerYn = 'Y';
                 }
                 function fn_showrewardTumblerMsrCheckLayer(url){
                 	/* 로그인 체크  */
+	                	function check() {
+						var user_id  = $("#txt_user_id").val();
+						var user_pwd = $("#txt_user_pwd").val();
+					
+						try {
+							id  = id.trim();
+							pw = pw.trim();
+						} catch (_e) {
+						}
+						
+						if (id == "")  { 
+							alert("아이디를 입력해 주세요."); //접근성_20171120 수정 
+							$("#txt_user_id").focus();  
+							return; 
+						}
+						if (pw == "") {
+							alert("비밀번호를 입력해 주세요."); //접근성_20171120 수정 
+							$("#txt_user_pwd").focus(); 
+							return;
+						}
+						
                 	$.ajax({
                     	type: 'post',
                     	url : '/edt/edtCheckLogin',//'/edt/edtCheckLogin',
@@ -1212,7 +1233,8 @@ var eFrequencyPlannerYn = 'Y';
                             	if(url.length == 0){
                             		url = location.href;
                             	}  
-                            	location.href = "login/login?redirect_url=" + encodeURIComponent(url);
+                            	location.href = "login/login";
+                            	//원본location.href = "login/login?redirect_url=" + encodeURIComponent(url);
                     			
                     		}else{
                     			//MSR 회원 여부 체크
@@ -1239,7 +1261,24 @@ var eFrequencyPlannerYn = 'Y';
                     	}
                     });
                 }
-                
+            	//설아추가 (아이디 저장)
+            	var objParam = {
+            			 "id"  : id
+            			,"pw" : pw
+            			,"captcha"  : $("#captcha").val()
+            		};
+            	___ajaxCall("/interface/loginMember", objParam, false, "json", "post"
+            			,function (_response) {
+            				if (_response.result_code == "SUCCESS") {
+            					if ($("#idRemb").is(":checked")) {
+            						Cookies.setCookie("idRemb", user_id, 30);	
+            					} else {
+            						Cookies.setCookie("idRemb", user_id, 0);
+            					}
+            					
+            					if (_response.alert_msg != "") {
+            						alert(_response.alert_msg);
+            					}
                 function fn_showrewardTumblerMsrCheckPopup(obj){
                 	if( obj.msrMemberYn == "Y"){ /*msr 회원일 경우 페이지 이동*/
                 		location.href = "my/reward_tumbler";
@@ -1260,11 +1299,10 @@ var eFrequencyPlannerYn = 'Y';
                     $('#msrCheckPop_rewardTumblerContents').hide();
                     $('#tumblerPopConfirmBtn, #tumblerPopCancelBtn').hide();
                 });
+                
                 /* 개인컵 리워드 e */
-			</script>
-
-			<script src="../common/js/jquery.transit.min.js"></script>
-			<script>
+				</script>
+				<script>
 				// 150805 DOM 수정
 				$('div.msr_card_zone').bind('click', function(){
 					if($('div.mycard_area2').css("display")=="none"){
@@ -1298,11 +1336,9 @@ var eFrequencyPlannerYn = 'Y';
 					};
 				}(jQuery));
 				$('.mycard_one').seqfx();
-			</script>
-						
-			<script src='../common/js/makePCookie.js'></script>
-		
-			<script>
+				</script>
+				<script>
+				
 				$(document).ready(function () {
 					$('a[href*="card_list"] , a[href*="drink_list"] , a[href*="food_list"] , a[href*="product_list"]').on("click", function () {
 						Cookies.deleteCookie("MENU_TAB");
@@ -1316,8 +1352,10 @@ var eFrequencyPlannerYn = 'Y';
 		<script>
 			m_strTargetUrl = '/edt/expressDtList';
 		</script>
-
+		<script src="../common/js/jquery.transit.min.js"></script>
 		<script src="../common/js/login/login.js?v=200807"></script>
+		<script src='../common/js/makePCookie.js'></script>
+		
 	</div>
 </body>
 </html>

@@ -269,7 +269,7 @@ function ___ajaxCall(_strUrl, _objParams, _bAsync, _strDataType, _strMethod, _fn
 		option.jsonp         = "callback";
 	} else {
 		option.scriptCharset = "utf-8";
-		option.contentType   = "application/x-www-form-urlencoded; charset=UTF-8";
+		option.contentType   = "application/x-www-form-urlencoded; charset=UTF-8"; //
 	}
 	
 	$.ajax(option);
