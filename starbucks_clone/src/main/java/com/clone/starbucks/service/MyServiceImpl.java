@@ -176,15 +176,19 @@ public class MyServiceImpl implements IMyService {
 		// 카드 여부 확인으로 index 열기
 		@Override
 		public boolean isExistCard(UserInfoDTO userInfo, CardDTO cardDTO) {
-			session.setAttribute("id", "admin");
+
+			//UserInfoDTO user = (UserInfoDTO) session.getAttribute("userInfo");
 			
+			session.setAttribute("id", "admin");
 			String id = (String) session.getAttribute("id");
 			
+			//int cardCount = myDAO.userCard(user.getId());
 			int cardCount = myDAO.userCard(id);
-			
+			System.out.println("service ;;;; : " + cardCount);
 			if(cardCount == 0 ) {
 				return false;
 			}
+			System.out.println("true;;;;");
 			return true;
 		}
 	
@@ -192,9 +196,9 @@ public class MyServiceImpl implements IMyService {
 		@Override
 		public AllDTO userAllInfo(String id) {
 	
-			AllDTO user = myDAO.userAllInfo(id);
+			AllDTO all = myDAO.userAllInfo(id);
 
-			return user;
+			return all;
 		}
 
 

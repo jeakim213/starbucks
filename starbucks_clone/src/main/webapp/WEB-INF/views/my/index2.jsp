@@ -878,17 +878,7 @@ var eFrequencyPlannerYn = 'Y';
 
 												<div class="my_ms_slider_txt">
 													<div class="my_ms_slider_txt_l" style="background:none; float:left; height: 85px; padding: 60px 0 0 3%; width:47%;">
-														<strong class="cardNickname">${c_name }</strong> <a
-															class="icon_pencil_g pencil" href="javascript:void(0);"
-															data-cardstatus="R" data-cardnickname="정다">정보수정버튼</a>
-														<div class="my_ms_card_slider_id_modify"
-															style="display: none;">
-															<input class="my_nick_modify_input" type="text"
-																maxlength="20" value="정다"> <a
-																class="my_nick_modify" href="javascript:void(0);"
-																data-cardregnumber="20817929">수정</a> <a
-																class="my_nick_cancel" href="javascript:void(0);">취소</a>
-														</div>
+														<strong class="cardNickname">${c_name }</strong> 
 														<p>${c_num }</p>
 													</div>
 													<div class="my_ms_slider_txt_r" style="color:#222;font-size:16px;float:left;font-weight:bold;height: 234px;line-height:70px;position:relative;text-align:left; padding: 40px 0;  ">
@@ -898,7 +888,7 @@ var eFrequencyPlannerYn = 'Y';
 																href="../my/mycard_charge" data-type="CHARGE"
 																data-cardregnumber="20817929">카드 충전</a></li>
 															<li class="card_manage_btn"><a
-																href="../my/mycard_index;" data-type="MANAGEMENT"
+																href="../my/mycard_mycardProc" data-type="MANAGEMENT"
 																data-cardregnumber="20817929">카드 관리</a></li>
 														</ul>
 													</div>
