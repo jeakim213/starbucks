@@ -200,9 +200,9 @@ public class MenuServiceImpl implements IMenuService{
 
 	@Override
 	public void couponUse(E_couponDTO e_couponDTO, Model model) {
-		session.setAttribute("id", "쭈고");
+		session.setAttribute("id", "admin");
 		UserInfoDTO userInfo = new UserInfoDTO();
-		userInfo.setId("쭈고");
+		userInfo.setId("admin");
 		session.setAttribute("userInfo", userInfo);
 		UserInfoDTO user = (UserInfoDTO) session.getAttribute("userInfo");
 		String id = user.getId();

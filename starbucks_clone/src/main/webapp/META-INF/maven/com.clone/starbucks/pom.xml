@@ -128,8 +128,8 @@
 		<dependency>
 		    <groupId>com.zaxxer</groupId>
 		    <artifactId>HikariCP</artifactId>
-		    <!-- <version>5.0.1</version> -->
-		    <version>3.4.2</version>
+		    <version>5.0.1</version>
+		    <!-- <version>3.4.2</version> -->
 		</dependency>
 	
 	<!-- https://mvnrepository.com/artifact/org.springframework/spring-jdbc -->

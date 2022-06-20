@@ -47,9 +47,5 @@ public interface IMyDAO {
 
 	int masterUpdate(String id);
 
-	AllDTO cardMasterCheck(String id);
 
-	AllDTO cMasterUser(String id);
-	
-	int cMasterCheck(String id);
 }

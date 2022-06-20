@@ -74,14 +74,4 @@
 		WHERE a.id = #{id} and b.c_master = '1'
 	</select>
 
-	
-   
-   <select id="cMasterCheck" parameterType="String" resultType="int">
-      SELECT count(*) FROM alldto WHERE id=#{id} and c_master=1
-   </select>
-   
-   <select id="cMasterUser" parameterType="String" resultType="com.clone.starbucks.DTO.AllDTO">
-      SELECT * FROM alldto WHERE id=#{id} and c_master=1
-   </select>
-	
 	</mapper>

@@ -29,6 +29,7 @@ public class AdminController {
 
 	@PostMapping(value="admin/eCouponProc")
 	public String ecouponProc(E_couponDTO e_coupon, Model model, HttpServletRequest request, HttpServletResponse response) throws ParseException, IOException {
+		System.out.println("cont : " + e_coupon.getPon_startdate());
 		String msg = adminService.eCouponProc(e_coupon, request);
 		response.setContentType("text/html; charset=UTF-8");
 		PrintWriter out = response.getWriter();
