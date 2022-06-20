@@ -1,6 +1,5 @@
 package com.clone.starbucks.service;
 
-import java.util.ArrayList;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -24,6 +23,11 @@ public interface IMyService {
 	String couponRegisterProc(UserInfoDTO userInfoDTO, E_couponDTO eCouponDTO, HttpServletRequest request);
 
 	void cardList(CardDTO cardDTO, Model model);
+
+	void mycardProc(CardDTO cardDTO, Model model, HttpServletRequest request);
+	
+	String editCardProc(CardDTO cardDTO,HttpServletRequest request, Model model);
+
 
 	
 }

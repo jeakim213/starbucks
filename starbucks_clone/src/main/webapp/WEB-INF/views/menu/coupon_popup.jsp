@@ -1,10 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
+
 <title>쿠폰 선택 팝업</title>
+
 <script type="text/javascript">
 
 	<!-- function close 만들기-->
@@ -31,21 +34,16 @@
 					</tr>
 				</thead>
 				<tbody>
-					<%-- <c:forEach var="#" items="${e-coupon.list }">--%>
+					<c:forEach var="eCouponDTO" items="${list }">
 					<tr>
 						<td><input type="radio" name="couponChoose" style="text-align: center;"/></td>
-						<td style="padding:15px; width: 230px;">[발렌타인]당첨! 500원 할인 쿠폰<%-- ${e-coupon.pon_name }--%></td>
-						<td style="padding:15px; width: 140px;">22.05.30 ~ 22.06.30<%-- ${e-coupon.startdate }&nbsp;~&nbsp;${e-coupon.enddate }--%></td>
-						<td style="padding:15px; width: 120px;">500<%-- ${e-coupon.cash }--%>원</td>
+						<td style="padding:15px; width: 230px;"><p id="pon_name">${eCouponDTO.pon_name }</p></td>
+						<td style="padding:15px; width: 140px;">
+						<input type="hidden" id="pon_startdate" value="${eCouponDTO.pon_startdate }"><p id="startdate">${eCouponDTO.pon_startdate }</p>
+						- <input type="hidden" id="pon_enddate" value="${eCouponDTO.pon_enddate }"><p id="enddate">${eCouponDTO.pon_enddate }</p></td>
+						<td style="padding:15px; width: 120px;"><p id="pon_cash">${eCouponDTO.pon_cash }</p></td>
 					</tr>
-					<%-- </c:forEach>--%>
-					<!-- 목록 내용 채워넣으면 지워야 할 부분 (43~48)-->
-					<tr>
-						<td><input type="radio" name="couponChoose" style="text-align: center;"/></td>
-						<td style="padding:15px; width: 230px;">[멤버쉽]10% 할인 쿠폰<%-- ${e-coupon.pon_name }--%></td>
-						<td style="padding:15px; width: 140px;">22.05.30 ~ 22.06.30<%-- ${e-coupon.startdate }&nbsp;~&nbsp;${e-coupon.enddate }--%></td>
-						<td style="padding:15px; width: 120px;">금액의 10%<%-- ${e-coupon.cash }--%></td>
-					</tr>
+					</c:forEach>
 				</tbody>
 			</table>
 			<label style="color: red; font-size: 12px;"><b>쿠폰의 중복선택은 불가합니다.</b></label><br>
@@ -53,4 +51,7 @@
 	</form>
 </div>
 </body>
+<script type="text/javascript">
+	
+</script>
 </html>

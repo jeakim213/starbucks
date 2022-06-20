@@ -25,6 +25,10 @@ public interface IMyDAO {
 
 	int userCard(String id);
 	
+	int masterBool(String c_num);
+	
+	int countC_num(String id);
+	
 	//---------------------------------
 	
 	E_couponDTO pon_numCheck(String pon_num);
@@ -36,6 +40,14 @@ public interface IMyDAO {
 	AllDTO userAllInfo(String id);
 
 	ArrayList<CardDTO> cardList(String id);
-		
 	
+	int N_M_update(CardDTO cardDTO);
+
+	int masterUpdate(String id);
+
+	AllDTO cardMasterCheck(String id);
+
+	AllDTO cMasterUser(String id);
+	
+	int cMasterCheck(String id);
 }

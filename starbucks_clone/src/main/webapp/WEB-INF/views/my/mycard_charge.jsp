@@ -793,13 +793,13 @@ var eFrequencyPlannerYn = 'Y';
 												<td>
 													<div class="sel_wrap">
 														<p class="user_sel_wrap">
-															<label for="cardNumber_NORMAL"></label>
-															<select id="cardNumber_NORMAL" name="cardNumber">
-															<!-- 0614 해야함 -->
-																<%-- <c:forEach var="" items="">
-																	<option></option>
-																</c:forEach> --%>	
-															</select><br><br>
+															<label for="cardNumber_NORMAL" >충전 할 카드를 선택해주세요</label>
+															<select id="cardNumber_NORMAL" name="cardName">
+																<c:forEach var="cardDTO" items="${list }">
+																	<option value="${cardDTO.c_name }">${cardDTO.c_name }</option>
+																</c:forEach>
+															</select>
+															<br><br>
 														</p>
 														
 													</div>
@@ -812,8 +812,8 @@ var eFrequencyPlannerYn = 'Y';
 													</div> -->
 													<div>
 													<!-- 0614 header.js에서 cardNumber 검색하면 정보 불러오는 js 볼 수 있음 -->
-													<strong class="en cardNumber"></strong><br /><br />
-													카드 등록일 : <span class="cardRegDate"><%-- ${cardRegDate } --%></span>
+													<!-- <strong class="en cardNumber"></strong><br /><br />
+													카드 등록일 : <span class="cardRegDate"></span> -->
 													</div>
 												</td>
 											</tr>
@@ -822,9 +822,9 @@ var eFrequencyPlannerYn = 'Y';
 												<th scope="row">충전 금액 선택</th>
 												<td>
 												<!-- 20180117 수정 -->
-												<div class="sel_wrap">
-													<p class="charge_change">충전 후 총 카드 잔액 : <span class="en t_006633 afterChargeBalance" name="totPrice"><%-- ${} --%></span>원</p>
-												</div>
+												<%-- <div class="sel_wrap">
+													<p class="charge_change">충전 후 총 카드 잔액 : <span class="en t_006633 afterChargeBalance" name="totPrice">${}</span>원</p>
+												</div> --%>
 													<ul class="charge_options">
 							                          <li><label><input type="radio" value="100000" name="totPrice">10만원</label></li>
 							                          <li><label><input type="radio" value="50000" name="totPrice">5만원</label></li>
@@ -906,17 +906,21 @@ var eFrequencyPlannerYn = 'Y';
 										</table>
 										<!-- 웹테이블 end -->
 										<input type="text" style="display:none;" />
-									</form>									
+																		
 									<!-- 160125 김민호 추가 -->
-										<div class="ez-checkbox cahrge_page_ck">
-											<input type="checkbox" name="sui_index" id="notice_ck02" t="COMMON" title="선택" value="26" class="ez-hide delegatecardynChk" > 
+										<!-- <div class="ez-checkbox cahrge_page_ck">
+											<input type="checkbox" name="sui_index" id="notice_ck02" t="COMMON" title="선택" value="1" class="ez-hide delegatecardynChk" > 
 											<span class="charge_change">충전 후 대표카드 설정</span>
-										</div>
+										</div> -->
+									
 									<!-- 160125 김민호 추가 end -->
+									
+									<!-- 카드 충전 경로 바꿔야함!!! -->
 									<ul class="charge_tbl_btns">
-										<li class="charge_tbl_btn1"><a href='javascript:void(0);' class="charge_normal">카드 충전</a></li>
+										<li class="charge_tbl_btn1"><a href='javascript:history.back();' class="charge_normal">카드 충전</a></li>
 										<li class="charge_tbl_btn2"><a href="javascript:history.back();">취소</a></li>
 									</ul>
+									</form>	
 								</article>									
 							
 								

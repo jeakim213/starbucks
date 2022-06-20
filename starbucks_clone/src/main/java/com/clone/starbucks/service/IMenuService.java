@@ -4,6 +4,10 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.HashMap;
 
+import org.springframework.ui.Model;
+
+import com.clone.starbucks.DTO.E_couponDTO;
+
 public interface IMenuService {
 	
 	public boolean setOrderList(HashMap<String, String> data); //세션에 메뉴고른거 넣기
@@ -15,4 +19,7 @@ public interface IMenuService {
 	public int getPrice(String p_name);
 	
 	public void insertMenu(String menuName) throws FileNotFoundException, IOException; //DB에 메뉴넣기
+	
+	public void couponUse(E_couponDTO e_couponDTO, Model model);
+
 }

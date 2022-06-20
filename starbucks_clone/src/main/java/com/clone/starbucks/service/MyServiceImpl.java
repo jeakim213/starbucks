@@ -2,7 +2,6 @@ package com.clone.starbucks.service;
 
 
 import java.util.ArrayList;
-import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -25,10 +24,21 @@ public class MyServiceImpl implements IMyService {
 	
 //----------------------------------------E-gift Card 등록----------------------------------------------		
 	@Override
-	public String cardRegisterProc(UserInfoDTO userInfo,CardDTO cardDTO, HttpServletRequest request) {
+	public String cardRegisterProc(UserInfoDTO userInfo, CardDTO cardDTO, HttpServletRequest request) {
+		session.setAttribute("id", "옌");
+		String id = (String) session.getAttribute("id");
 		
-		session.setAttribute("id", "쭈고"); //나중에 지울것
+//		session.setAttribute("userInfo", userInfo);
+//		UserInfoDTO user = (UserInfoDTO) session.getAttribute("userInfo");
+//		String id = user.getId();
 		//String id = (String) session.getAttribute(userInfo.getId()); <<나중에 주석 풀것
+		
+		//0620
+		if(myDAO.countC_num(id)==0) {
+			cardDTO.setC_master(1);
+			System.out.println(cardDTO.getC_master());
+			myDAO.masterUpdate(id);
+		}
 		
 		
 		String cardNum = request.getParameter("c_num1")+request.getParameter("c_num2")+request.getParameter("c_num3")+request.getParameter("c_num4");
@@ -54,9 +64,8 @@ public class MyServiceImpl implements IMyService {
 			
 			//id 널이면 등록...?
 			//주카드아이디 검색
-			String strId = String.valueOf(session.getAttribute("id")); 
-			System.out.println("strId : "+strId);
-			cardDTO.setId(strId);
+			
+			cardDTO.setId(id);
 			
 			//카드명 업데이트
 			String oldName = myDAO.nameFind(cardNum);
@@ -75,11 +84,11 @@ public class MyServiceImpl implements IMyService {
 			
 			
 			//System.out.println("strId : " + strId);
-			int masterCheck = myDAO.cMaster1Bool(strId);
+			int masterCheck = myDAO.cMaster1Bool(id);
 			//System.out.println("1인가요? : "+masterCheck);
 			
 			if(masterCheck==1) {
-				String cMaster1CardNum = myDAO.cMaster1Num(strId);
+				String cMaster1CardNum = myDAO.cMaster1Num(id);
 				check = myDAO.c_numCheck(cMaster1CardNum);
 				check.setC_master(0);
 				myDAO.updateCard(check);
@@ -99,8 +108,11 @@ public class MyServiceImpl implements IMyService {
 
 	@Override
 	public String couponRegisterProc(UserInfoDTO userInfoDTO, E_couponDTO eCouponDTO, HttpServletRequest request) {
-		session.setAttribute("id", "쭈고"); //나중에 지울것
-		//String id = (String) session.getAttribute(userInfo.getId()); <<나중에 주석 풀것
+		UserInfoDTO userInfo = new UserInfoDTO();
+		userInfo.setId("쭈고");
+		session.setAttribute("userInfo", userInfo);
+		UserInfoDTO user = (UserInfoDTO) session.getAttribute("userInfo");
+		String id = user.getId();
 		//1. 영수증 쿠폰인지, mms 쿠폰인지, star 쿠폰인지 구별.. (check박스가 아니기에 실패)
 		//2. 각각 선택지의 input 값 받아오기
 		String receipt_num = request.getParameter("rptcoupon_num1")+request.getParameter("rptcoupon_num2")+request.getParameter("rptcoupon_num3")+request.getParameter("rptcoupon_num4");
@@ -119,9 +131,7 @@ public class MyServiceImpl implements IMyService {
 			eCouponDTO.setPon_num(receipt_num);
 			if(check.getId()==null) {
 				//아이디 저장
-				String strId = String.valueOf(session.getAttribute("id")); 
-				System.out.println("strId : "+strId);
-				eCouponDTO.setId(strId);
+				eCouponDTO.setId(id);
 				System.out.println("1인가요 ? : "+myDAO.idUpdate(eCouponDTO));
 				myDAO.idUpdate(eCouponDTO);
 			}
@@ -134,9 +144,7 @@ public class MyServiceImpl implements IMyService {
 			eCouponDTO.setPon_num(mms_num);
 			if(check.getId()==null) {
 				//아이디 저장
-				String strId = String.valueOf(session.getAttribute("id")); 
-				System.out.println("strId : "+strId);
-				eCouponDTO.setId(strId);
+				eCouponDTO.setId(id);
 				System.out.println("1인가요 ? : "+myDAO.idUpdate(eCouponDTO));
 				myDAO.idUpdate(eCouponDTO);
 			}
@@ -149,9 +157,7 @@ public class MyServiceImpl implements IMyService {
 			eCouponDTO.setPon_num(star_num);
 			if(check.getId()==null) {
 				//아이디 저장
-				String strId = String.valueOf(session.getAttribute("id")); 
-				System.out.println("strId : "+strId);
-				eCouponDTO.setId(strId);
+				eCouponDTO.setId(id);
 				System.out.println("1인가요 ? : "+myDAO.idUpdate(eCouponDTO));
 				myDAO.idUpdate(eCouponDTO);
 			}
@@ -163,11 +169,74 @@ public class MyServiceImpl implements IMyService {
 	@Override //카드 리스트 세션저장용
 	public void cardList(CardDTO cardDTO, Model model) {
 		session.setAttribute("id", "쭈고");
-		String id = (String)session.getAttribute("id");
+		UserInfoDTO userInfo = new UserInfoDTO();
+		userInfo.setId("쭈고");
+		session.setAttribute("userInfo", userInfo);
+		UserInfoDTO user = (UserInfoDTO) session.getAttribute("userInfo");
+		String id = user.getId();
 		ArrayList<CardDTO> list = myDAO.cardList(id);
 		model.addAttribute("list",list);
 	}
 	
+	@Override
+	public void mycardProc(CardDTO cardDTO, Model model, HttpServletRequest request) {
+		UserInfoDTO userInfo = new UserInfoDTO();
+		userInfo.setId("쭈고");
+		session.setAttribute("id", "쭈고");
+		session.setAttribute("userInfo", userInfo);
+		UserInfoDTO user = (UserInfoDTO) session.getAttribute("userInfo");
+		session.setAttribute("c_num", request.getParameter("cardNum"));
+		CardDTO card =  myDAO.c_numCheck(request.getParameter("cardNum"));
+		model.addAttribute("c_name",card.getC_name());
+		int c_master = myDAO.masterBool(request.getParameter("cardNum"));
+		model.addAttribute("c_master", c_master);
+	}
+	
+	
+
+
+	@Override
+	public String editCardProc(CardDTO cardDTO, HttpServletRequest request, Model model) {
+		session.setAttribute("id", "쭈고");
+		UserInfoDTO userInfo = new UserInfoDTO();
+		userInfo.setId("쭈고");
+		session.setAttribute("userInfo", userInfo);
+		UserInfoDTO user = (UserInfoDTO) session.getAttribute("userInfo");
+		String id = user.getId();
+		
+		System.out.println("수정할 받아온 이름 값 : "+cardDTO.getC_name());
+		
+		String cardNum = (String) session.getAttribute("c_num");
+		System.out.println("받아온 카드 넘버 : "+session.getAttribute("c_num"));
+		cardDTO.setC_num(cardNum);
+		
+		String cardName = myDAO.nameFind(cardNum);
+		System.out.println("카드 넘버의 카드이름 : "+cardName);
+		
+		int cardMaster = cardDTO.getC_master();
+		int c_master = myDAO.masterBool(cardNum);
+		session.setAttribute("c_master", c_master);
+		System.out.println("카드 마스터 설정되어있는지(1?0?) : "+cardMaster);
+		
+		CardDTO check = myDAO.c_numCheck(cardNum);
+		
+		int masterCheck = myDAO.cMaster1Bool(id);
+		//System.out.println("1인가요? : "+masterCheck);
+		
+		if(masterCheck==1) {
+			String cMaster1CardNum = myDAO.cMaster1Num(id);
+			check = myDAO.c_numCheck(cMaster1CardNum);
+			check.setC_master(0);
+			myDAO.updateCard(check);
+		}
+			
+		myDAO.N_M_update(cardDTO);
+		System.out.println("수정완료 됐나요? : "+myDAO.N_M_update(cardDTO));
+		return "완료";
+	}
+
+
+
 	
 //----------------------------------------E-gift Card 등록----------------------------------------------
 	
@@ -199,6 +268,5 @@ public class MyServiceImpl implements IMyService {
 
 
 		
-
 	
 }
