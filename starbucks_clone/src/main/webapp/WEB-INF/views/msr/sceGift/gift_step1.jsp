@@ -2503,7 +2503,8 @@ function requestPay(){
                         <div class="gift_info_send_btns">
                             <ul>
                                 <li class="gift_info_send_btn1"><input type="reset" style="border-radius:3px; color:#fff; display:block; background: #666; font-size:12px;font-weight:bold;height:45px;line-height:45px; text-align:center; width:84px; border-style: none;" class="btn123" value="취소" /></li>
-                                <li class="gift_info_send_btn2"><input type="button" value="결제하기" id="send" style="border-radius:3px; color:#fff;display:block; font-size:12px;font-weight:bold;height:45px;line-height:45px; text-align:center; width:84px; background:#222; border-style: none;" /></li>
+                                <!-- 0620예은 -->
+                                <li class="gift_info_send_btn2"><input type="submit" value="결제하기" id="send" onclick="this.form.action='eGiftCardProc';" style="border-radius:3px; color:#fff;display:block; font-size:12px;font-weight:bold;height:45px;line-height:45px; text-align:center; width:84px; background:#222; border-style: none;" /></li>
                             </ul>
                         </div>
                     </fieldset>

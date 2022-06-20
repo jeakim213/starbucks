@@ -97,63 +97,54 @@ public class MyController {
 	}
 	
 	
+	// 예은 - 마이스타벅스
 	@RequestMapping(value = "my/index")
-	public String my_index(UserInfoDTO userInfo, CardDTO cardDTO, Model model, HttpSession session) {
+	public String my_index(UserInfoDTO userInfo, CardDTO cardDTO, Model model) {
 
-		String id = (String) session.getAttribute(userInfo.getId());
+		UserInfoDTO user = (UserInfoDTO) session.getAttribute("userInfo");
 		
 		boolean b = myService.isExistCard(userInfo, cardDTO);
 		
 		// 카드 없는 회원
 		if(b==false) {
-//			UserInfoDTO userinfo = new UserInfoDTO();
-//				userinfo.setId("id");
-//				userinfo.setPw("pw");
-//				userinfo.setConfirmPw("cpw");
-//				userinfo.setStar(0);
-//				userinfo.setGrade("wc");
-//				userinfo.setNickname("닉네임");
-//				userinfo.setCupreward('s');
-//				
-//				session.setAttribute("session", userinfo);
-				
-				int couponCount = myDAO.userCoupon("admin");
+						
+				int couponCount = myDAO.userCoupon(user.getId());
 				model.addAttribute("couponCount", couponCount);
 				
 				return "my/index";
 		}		
 		
 		
-		// 카드 있는 회원 (지금 넣은 임의값("admin") 바꿔주기)
-		AllDTO user = myService.userAllInfo("admin");
+		// 카드 있는 회원)
+		AllDTO all = myService.userAllInfo(user.getId());
 		
 		
 		// 등급명 변경
-		if(user.getGrade().equals("WC")) {
-			user.setGrade("Welcome Level");
-		}else if(user.getGrade().equals("GR")) {
-			user.setGrade("Green Level");
+		if(all.getGrade().equals("WC")) {
+			all.setGrade("Welcome Level");
+		}else if(all.getGrade().equals("GR")) {
+			all.setGrade("Green Level");
 		}else {
-			user.setGrade("Gold Level");
+			all.setGrade("Gold Level");
 		}
 		
 		
 		// 카드 갯수
 		
-		int cardCount = myDAO.userCard("admin");
+		int cardCount = myDAO.userCard(user.getId());
 		
 		// 쿠폰 갯수
 
-		int couponCount = myDAO.userCoupon("admin");
+		int couponCount = myDAO.userCoupon(user.getId());
 		System.out.println(couponCount);
 		
 		//views로 넘겨주는 값
-		model.addAttribute("nickname", user.getNickname());
-		model.addAttribute("grade", user.getGrade());
-		model.addAttribute("star", user.getStar());
-		model.addAttribute("c_name", user.getC_name());
-		model.addAttribute("c_num", user.getC_num());
-		model.addAttribute("remaincost", user.getRemaincost());
+		model.addAttribute("nickname", all.getNickname());
+		model.addAttribute("grade", all.getGrade());
+		model.addAttribute("star", all.getStar());
+		model.addAttribute("c_name", all.getC_name());
+		model.addAttribute("c_num", all.getC_num());
+		model.addAttribute("remaincost", all.getRemaincost());
 		model.addAttribute("cardCount", cardCount);
 		model.addAttribute("couponCount", couponCount);
 		

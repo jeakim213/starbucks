@@ -1356,6 +1356,10 @@ var eFrequencyPlannerYn = 'Y';
 													<br>
 													<strong>음료 판매 순위</strong>
 												</header>
+													<figure>
+															<a href="javascript:void(0);" class="goDrink">
+														<img alt="" src="../img/my/coffee.png"></a>
+													</figure>
 												<p class="first_rank" style="border-bottom:2px dotted #ddd; display:table; height:30px; left: 20px; position:absolute; top:215px; width:206px;">
 													<span class="left" style="background:url('../img/util/rank_bg.gif'); float:left; font-size:16px; height:30px; line-height:30px; width:25px;">
 													<strong>1위</strong></span> 
@@ -1380,7 +1384,10 @@ var eFrequencyPlannerYn = 'Y';
 													<br>
 													<strong>음료 판매 순위</strong>
 												</header>
-												
+													<figure>
+															<a href="javascript:void(0);" class="goDrink">
+														<img alt="" src="../img/my/coffee.png"></a>
+													</figure>
 												<p class="first_rank" style="border-bottom:2px dotted #ddd; display:table; height:30px; left: 20px;  position:absolute; top:215px; width:206px;">
 													<span class="left" style="background:url('../img/util/rank_bg.gif'); float:left; font-size:16px; height:30px; line-height:30px; width:25px;">
 													<strong>1위</strong></span> 
@@ -1719,6 +1726,10 @@ var eFrequencyPlannerYn = 'Y';
 													<br>
 													<strong>푸드 판매 순위</strong>
 												</header>
+													<figure>
+															<a href="javascript:void(0);" class="goFood">
+														<img alt="" src="../img/my/french-bread.png"></a>
+													</figure>
 												<p class="first_rank" style="border-bottom:2px dotted #ddd; display:table; height:30px; left: 20px; position:absolute; top:215px; width:206px;">
 													<span class="left" style="background:url('../img/util/rank_bg.gif'); float:left; font-size:16px; height:30px; line-height:30px; width:25px;">
 													<strong>1위</strong></span> 
@@ -1743,7 +1754,10 @@ var eFrequencyPlannerYn = 'Y';
 													<br>
 													<strong>푸드 판매 순위</strong>
 												</header>
-												
+													<figure>
+															<a href="javascript:void(0);" class="goFood">
+														<img alt="" src="../img/my/french-bread.png"></a>
+													</figure>
 												<p class="first_rank" style="border-bottom:2px dotted #ddd; display:table; height:30px; left: 20px;  position:absolute; top:215px; width:206px;">
 													<span class="left" style="background:url('../img/util/rank_bg.gif'); float:left; font-size:16px; height:30px; line-height:30px; width:25px;">
 													<strong>1위</strong></span> 
@@ -1924,6 +1938,10 @@ var eFrequencyPlannerYn = 'Y';
 													<br>
 													<strong>원두 판매 순위</strong>
 												</header>
+													<figure>
+															<a href="javascript:void(0);" class="goCoffee">
+														<img alt="" src="../img/my/shopping-trolley.png"></a>
+													</figure>
 												<p class="first_rank" style="border-bottom:2px dotted #ddd; display:table; height:30px; left: 20px; position:absolute; top:215px; width:206px;">
 													<span class="left" style="background:url('../img/util/rank_bg.gif'); float:left; font-size:16px; height:30px; line-height:30px; width:25px;">
 													<strong>1위</strong></span> 
@@ -1948,7 +1966,10 @@ var eFrequencyPlannerYn = 'Y';
 													<br>
 													<strong>원두 판매 순위</strong>
 												</header>
-												
+														<figure>
+															<a href="javascript:void(0);" class="goCoffee">
+														<img alt="" src="../img/my/shopping-trolley.png"></a>
+													</figure>
 												<p class="first_rank" style="border-bottom:2px dotted #ddd; display:table; height:30px; left: 20px;  position:absolute; top:215px; width:206px;">
 													<span class="left" style="background:url('../img/util/rank_bg.gif'); float:left; font-size:16px; height:30px; line-height:30px; width:25px;">
 													<strong>1위</strong></span> 
