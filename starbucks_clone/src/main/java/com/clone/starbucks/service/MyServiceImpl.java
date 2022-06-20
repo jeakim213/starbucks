@@ -184,11 +184,11 @@ public class MyServiceImpl implements IMyService {
 			
 			//int cardCount = myDAO.userCard(user.getId());
 			int cardCount = myDAO.userCard(id);
-			System.out.println("service ;;;; : " + cardCount);
+
 			if(cardCount == 0 ) {
 				return false;
 			}
-			System.out.println("true;;;;");
+			
 			return true;
 		}
 	

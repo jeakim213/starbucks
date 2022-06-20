@@ -110,7 +110,7 @@ public class MyController {
 		String id = (String) session.getAttribute("id");
 		
 		boolean b = myService.isExistCard(userInfo, cardDTO);
-		System.out.println(b);
+
 		// 카드 없는 회원
 		if(b==false) {
 						
@@ -125,7 +125,6 @@ public class MyController {
 		// 카드 있는 회원)
 		//AllDTO all = myService.userAllInfo(user.getId());
 		AllDTO all = myService.userAllInfo(id);
-		System.out.println(all.getC_master());
 		// 등급명 변경
 		if(all.getGrade().equals("WC")) {
 			all.setGrade("Welcome Level");
@@ -140,12 +139,10 @@ public class MyController {
 		
 		//int cardCount = myDAO.userCard(user.getId());
 		int cardCount = myDAO.userCard(id);
-		System.out.println("cardCount : " + cardCount);
 		// 쿠폰 갯수
 
 		//int couponCount = myDAO.userCoupon(user.getId());
 		int couponCount = myDAO.userCoupon(id);
-		System.out.println(couponCount);
 		
 		//views로 넘겨주는 값
 	

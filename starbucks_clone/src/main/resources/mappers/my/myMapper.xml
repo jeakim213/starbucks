@@ -55,13 +55,6 @@
 		FROM userinfo a LEFT OUTER JOIN card b ON a.id = b.id
 		WHERE a.id = #{id} and b.c_master = '1'
 	</select>
-	
-	<select id="cMasterCheck" parameterType="String" resultType="int">
-		SELECT count(*) FROM card WHERE id=#{id} and c_master=1
-	</select>
-	
-	<select id="cMasterUser" parameterType="String" resultType="list">
-		SELECT * FROM card WHERE id=#{id} and c_master=1
-	</select>
+
 	
 	</mapper>

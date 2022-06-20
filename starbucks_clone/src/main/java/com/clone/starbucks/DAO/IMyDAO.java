@@ -26,9 +26,7 @@ public interface IMyDAO {
 
 	int userCard(String id);
 	
-	int cMasterCheck(String id);
-	
-	AllDTO cMasterUser(String id);
+
 	
 	
 	//---------------------------------
