@@ -575,7 +575,10 @@ var eFrequencyPlannerYn = 'Y';
 <ul>
 	<li class="util_nav01 sign_out" style="display:none;"><a href="/starbucks;">Sign out</a></li>
 	<li class="util_nav01 sign_in"  style=""><a href="/starbucks/login/login">Sign In</a></li>
-	<li class="util_nav02"><a href="my/index" required="login">My Starbucks</a></li>
+	
+	<!-- <li class="util_nav02"><a href="my/index" required="login">My Starbucks</a></li> -->
+	<li class="util_nav02"><a href="/starbucks/admin/memberListForm">My Starbucks</a></li>
+	
 	<li class="util_nav03"><a href="menu/orderList">Order</a></li>
 	<li class="util_nav04"><a href="store/store_map">Find a Store</a></li>
 </ul>

@@ -3,11 +3,13 @@ package com.clone.starbucks.controller;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import org.apache.ibatis.exceptions.TooManyResultsException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -97,66 +99,53 @@ public class MyController {
 	}
 	
 	
-	@RequestMapping(value = "my/index")
-	public String my_index(UserInfoDTO userInfo, CardDTO cardDTO, Model model, HttpSession session) {
-
-//		UserInfoDTO user = (UserInfoDTO) session.getAttribute("userInfo");
-//		String id = (String) session.getAttribute(userInfo.getId());
-		
-		
-		
-		session.setAttribute("id", "admin");
-		String id = (String)session.getAttribute("id");
-		
-		
-		boolean b = myService.isExistCard(userInfo, cardDTO);
-		
-		// 카드 없는 회원
-		if(b==false) {
-//			UserInfoDTO userinfo = new UserInfoDTO();
-//				userinfo.setId("id");
-//				userinfo.setPw("pw");
-//				userinfo.setConfirmPw("cpw");
-//				userinfo.setStar(0);
-//				userinfo.setGrade("wc");
-//				userinfo.setNickname("닉네임");
-//				userinfo.setCupreward('s');
-//				
-//				session.setAttribute("session", userinfo);
-				
-				int couponCount = myDAO.userCoupon("admin");
-				model.addAttribute("couponCount", couponCount);
-				
-				return "my/index";
-		}		
-		
-		
-		// 카드 있는 회원 (지금 넣은 임의값("admin") 바꿔주기)
-		AllDTO all = myService.userAllInfo("admin");
-		
-		
-		// 등급명 변경
-		if(all.getGrade().equals("WC")) {
-			all.setGrade("Welcome Level");
-		}else if(all.getGrade().equals("GR")) {
-			all.setGrade("Green Level");
-		}else {
-			all.setGrade("Gold Level");
-		}
-		
-		
-		// 카드 갯수
-		
-		int cardCount = myDAO.userCard("admin");
-		
-		// 쿠폰 갯수
-
-		int couponCount = myDAO.userCoupon("admin");
-		System.out.println(couponCount);
-		
-		//views로 넘겨주는 값
+	// 예은 - 마이스타벅스
+	   @RequestMapping(value = "my/index")
+	   public String my_index(UserInfoDTO userInfo, CardDTO cardDTO, Model model){
 	      
-	      // 카드가 1개일 때
+	   
+	      //UserInfoDTO user = (UserInfoDTO) session.getAttribute("userInfo");
+	      
+	      session.setAttribute("id", "admin");
+	      String id = (String) session.getAttribute("id");
+	      
+	      boolean b = myService.isExistCard(userInfo, cardDTO);
+
+	      // 카드 없는 회원
+	      if(b==false) {
+	                  
+	            //int couponCount = myDAO.userCoupon(user.getId());
+	            int couponCount = myDAO.userCoupon(id);
+	            model.addAttribute("couponCount", couponCount);
+	            
+	            return "my/index";
+	      }      
+	      
+	      
+	      // 카드 있는 회원)
+	      //AllDTO all = myService.userAllInfo(user.getId());
+	      AllDTO all = myService.userAllInfo(id);
+	      // 등급명 변경
+	      if(all.getGrade().equals("WC")) {
+	         all.setGrade("Welcome Level");
+	      }else if(all.getGrade().equals("GR")) {
+	         all.setGrade("Green Level");
+	      }else {
+	         all.setGrade("Gold Level");
+	      }
+	      
+	      
+	      // 카드 갯수
+	      
+	      //int cardCount = myDAO.userCard(user.getId());
+	      int cardCount = myDAO.userCard(id);
+	      // 쿠폰 갯수
+
+	      //int couponCount = myDAO.userCoupon(user.getId());
+	      int couponCount = myDAO.userCoupon(id);
+	      
+	      //views로 넘겨주는 값
+	   
 	      model.addAttribute("nickname", all.getNickname());
 	      model.addAttribute("grade", all.getGrade());
 	      model.addAttribute("star", all.getStar());
@@ -166,24 +155,11 @@ public class MyController {
 	      model.addAttribute("cardCount", cardCount);
 	      model.addAttribute("couponCount", couponCount);
 	      
-	      // 카드가 2개 이상인데, 주카드 찾을 떄
-	      AllDTO masterUser = myDAO.cMasterUser(id);
-	      System.out.println(myDAO.cMasterCheck(id));
-	      
-	      if(myDAO.cMasterCheck(id)==1) {
-	         model.addAttribute("nickname", masterUser.getNickname());
-	         model.addAttribute("grade", masterUser.getGrade());
-	         model.addAttribute("star", masterUser.getStar());
-	         model.addAttribute("c_name", masterUser.getC_name());
-	         model.addAttribute("c_num", masterUser.getC_num());
-	         model.addAttribute("remaincost", masterUser.getRemaincost());
-	         model.addAttribute("cardCount", cardCount);
-	         model.addAttribute("couponCount", couponCount);
-	      }
-	         
-		return "my/index2";
 
-	}
+	   
+	      return "my/index2";
+
+	   }
 
 	@RequestMapping(value = "my/mycard_charge")
 	public String mycard_charge() {

@@ -1,6 +1,7 @@
 ﻿<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
 <html lang="ko"><head>
  
 
@@ -219,7 +220,7 @@ var eFrequencyPlannerYn = 'Y';
 						<div class="notice_icon3">
 							<a href="my/ecoupon">
 								<p>
-									<span class="validCoupontCnt">0</span>
+									<!-- <span class="validCoupontCnt">0</span> -->
 								</p>
 								<span>e-쿠폰</span>	
 							</a>
@@ -692,67 +693,64 @@ var eFrequencyPlannerYn = 'Y';
                 <!-- 내용 -->
                 <div class="ms_cont_wrap">
                     <div class="ms_cont">
-                    
-                    
-	<!-- 관리자 -->
-	<%-- <c:if test="${empty sessionScope.id }">
-		<script>
-			location.href = 'index?formpath=login';
-		</script>
-	</c:if> --%>
-	
-	<center>
-	
-		<table style="width: 600px;">
+
+<!-- 관리자 -->
+<%-- <c:if test="${empty sessionScope.id }">
+	<script>
+		location.href = 'index?formpath=login';
+	</script>
+</c:if> --%>
+<div align="center">
+	<table style="width: 600px;">
+		<tr>
+			<td align="center" colspan=3><h2>회원 목록</h2></td>
+		</tr>
+		<tr>
+			<td><hr></td>
+		</tr>
+	</table>
+	<table style="width: 600px;">
+		<thead>
 			<tr>
-				<td align="center" colspan=3><h2>회원 목록</h2></td>
+				<th style="width: 300px; height:20px; line-height: 20px;" align="left">아이디</th>
+				<th style="width: 250px; height:20px; line-height: 20px;" align="left">등급</th>
+				<th style="width: 100px; height:20px; line-height: 20px;" align="left">가입일</th>
 			</tr>
+		</thead>
+		<tr>
+			<td colspan=3><hr></td>
+		</tr>
+		<%-- <c:forEach var="all" items="${list }"> --%>
+		<c:forEach var="db" items="${sessionScope.list }">
 			<tr>
-				<td><hr></td>
+				<td style="height:40px; line-height: 40px;" align="left">
+					<a href="userInfoForm?id=${db.id }">${db.id }</a>
+				</td>
+				<td style="height:40px; line-height: 40px;" align="left">${db.grade }</td>
+				<td style="height:40px; line-height: 40px;" align="left">${db.registerdate }</td>
+			</tr>
+		</c:forEach>
+		<tr>
+			<td colspan=3><hr></td>
+		</tr>
+	</table>
+	<!-- 이전 1 2 3 4 다음 -->
+	${sessionScope.page }
+	<form>
+		<table>
+			<tr>
+				<td>
+					<select name="select">
+						<option value="">전체</option>
+						<option value="id">아이디</option>
+					</select>
+					<input type=text name='search'/>
+					<button name='searchBtn'>검색</button>
+				</td>
 			</tr>
 		</table>
-	
-		<table style="width: 600px;">
-			<thead>
-				<tr>
-					<th style="width: 100px; height:20px;" align="left">아이디</th>
-					<th style="width: 50px; height:20px;" align="left">등급</th>
-					<th style="width: 100px; height:20px;" align="left">가입일</th>
-				</tr>
-			</thead>
-			<tr>
-				<td align="center" colspan=3><hr></td>
-			</tr>
-			<c:forEach var="db" items="${sessionScope.list }">
-				<tr>
-					<td style="width: 100px; height:40px;" align="left">
-						<a href="userInfoProc?id=${db.id}">${db.id }</a>
-					</td>
-					<td style="width: 50px; height:40px;" align="left">${db.grade}</td>
-					<td style="width: 100px; height:40px;" align="left">${db.registerdate}</td>
-				</tr>
-			</c:forEach>
-			<tr>
-				<td colspan=3><hr></td>
-			</tr>
-		</table>
-			이전 1 2 3 4 다음
-			${sessionScope.page }
-		<form>
-			<table>
-				<tr>
-					<td>
-						<select name="select">
-							<option value="">전체</option>
-							<option value="id">아이디</option>
-						</select>
-						<input type=text name='search'/>
-						<button name='searchBtn'>검색</button>
-					</td>
-				</tr>
-			</table>
-		</form>
-	</center>					
+	</form>
+</div>					
 
 
                        
@@ -967,12 +965,6 @@ var eFrequencyPlannerYn = 'Y';
 				<li><a href="saleChart-3" <%-- required="login" --%> data-href="admin/saleChart-3">· PRODUCT 매출 분석</a></li>
 			</ul>
 		</li>
-		<li>
-			<a href="javascript:void(0);">쿠폰발급<span class="sbox_arrow_down"></span></a>
-			<ul>
-				<li><a href="adminCouponMake" <%-- required="login" --%> data-href="admin/adminCouponMake">· 쿠폰발급하기</a></li>
-			</ul>
-		</li>
 	</ul>
 </nav>
                 </div>
@@ -1129,7 +1121,6 @@ var eFrequencyPlannerYn = 'Y';
 			</footer>
 			<!-- footer end -->
 		
-			
 			<script src="//image.istarbucks.co.kr/common/js/jquery-1.10.2.min.js"></script>
 			<script src="https://image.istarbucks.co.kr/common/js/@common.js"></script>
 			<script src="https://image.istarbucks.co.kr/common/js/jquery-ui.min.js?v=220207"></script>
@@ -1313,9 +1304,13 @@ var eFrequencyPlannerYn = 'Y';
 					var url = document.location.pathname;
 					fn_showrewardTumblerMsrCheckLayer(url);
                 }
-                function fn_showrewardTumblerMsrCheckLayer(url){
+                //단
+                /* function fn_showrewardTumblerMsrCheckLayer(url){ */
+                	
                 	/* 로그인 체크  */
-                	$.ajax({
+                	
+                	//단
+                	/* $.ajax({
                     	type: 'post',
                     	url : '/edt/edtCheckLogin',
                     	data : {},
@@ -1354,7 +1349,7 @@ var eFrequencyPlannerYn = 'Y';
                     		}
                     	}
                     });
-                }
+                } */
                 
                 function fn_showrewardTumblerMsrCheckPopup(obj){
                 	if( obj.msrMemberYn == "Y"){ /*msr 회원일 경우 페이지 이동*/
@@ -1441,7 +1436,7 @@ var eFrequencyPlannerYn = 'Y';
                 }                
             </script>
             <script src="../common/js/common_jhp.js"></script>
-            <script src="../common/js/my/index.js?v=210420"></script>
+            <!-- <script src="../common/js/my/index.js?v=210420"></script> -->
             <script src="../common/js/my/index_level_web.js"></script>
         </div>
 

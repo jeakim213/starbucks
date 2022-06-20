@@ -71,7 +71,15 @@
 	<select id="userAllInfo" parameterType="String" resultType="com.clone.starbucks.DTO.AllDTO">
 		SELECT a.id,a.star,a.grade,a.nickname,b.c_name,b.remaincost,b.c_num, b.c_master
 		FROM userinfo a LEFT OUTER JOIN card b ON a.id = b.id
-		WHERE a.id = #{id}
+		WHERE a.id = #{id} and b.c_master = '1'
+	</select>
+	
+	<select id="cMasterCheck" parameterType="String" resultType="int">
+		SELECT count(*) FROM card WHERE id=#{id} and c_master=1
+	</select>
+	
+	<select id="cMasterUser" parameterType="String" resultType="list">
+		SELECT * FROM card WHERE id=#{id} and c_master=1
 	</select>
 	
    
