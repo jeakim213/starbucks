@@ -25,9 +25,11 @@ public interface IMyDAO {
 	String cMaster1Num(String id);
 
 	int userCard(String id);
-	
 
+	int masterBool(String c_num);
 	
+	int countC_num(String id);
+
 	
 	//---------------------------------
 	
@@ -41,11 +43,13 @@ public interface IMyDAO {
 
 	ArrayList<CardDTO> cardList(String id);
 
-	
+	int N_M_update(CardDTO cardDTO);
 
-	
+	int masterUpdate(String id);
 
+	AllDTO cardMasterCheck(String id);
 
-		
+	AllDTO cMasterUser(String id);
 	
+	int cMasterCheck(String id);
 }

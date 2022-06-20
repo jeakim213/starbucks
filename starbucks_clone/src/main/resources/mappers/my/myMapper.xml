@@ -26,6 +26,24 @@
 	<select id="cardList" parameterType="String" resultType="com.clone.starbucks.DTO.CardDTO">
 		SELECT * FROM card WHERE id=#{id}
 	</select>
+
+
+	<update id="N_M_update" parameterType="com.clone.starbucks.DTO.CardDTO">
+		UPDATE card SET c_name=#{c_name}, c_master=#{c_master} WHERE c_num=#{c_num}
+	</update>
+	
+	
+	<select id="masterBool" parameterType="String" resultType="int">
+		SELECT c_master FROM card WHERE c_num=#{c_num}
+	</select>
+	
+	<select id="countC_num" parameterType="String" resultType="int">
+		SELECT count(c_num) FROM card WHERE id=#{id}
+	</select>
+	
+	<update id="masterUpdate" parameterType="String">
+		UPDATE card SET c_master=#{c_master} WHERE id=#{id}
+	</update>
 	
 	<!-- /eCard -->
 	
@@ -56,5 +74,14 @@
 		WHERE a.id = #{id} and b.c_master = '1'
 	</select>
 
+	
+   
+   <select id="cMasterCheck" parameterType="String" resultType="int">
+      SELECT count(*) FROM alldto WHERE id=#{id} and c_master=1
+   </select>
+   
+   <select id="cMasterUser" parameterType="String" resultType="com.clone.starbucks.DTO.AllDTO">
+      SELECT * FROM alldto WHERE id=#{id} and c_master=1
+   </select>
 	
 	</mapper>
