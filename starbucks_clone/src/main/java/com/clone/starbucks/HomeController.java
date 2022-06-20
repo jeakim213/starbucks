@@ -80,13 +80,10 @@ public class HomeController {
 		return obj.toString();
 	}
    
-  
-
-	//에러페이지 - 단
+	//단 - 에러페이지
 	@RequestMapping("error_page")
 	   public String error_page() {
 	      return "error_page";
 	   }
 	
-
 }

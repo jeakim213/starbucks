@@ -18,6 +18,8 @@ insert into userinfo values('user2', '2222', '1', 'WC', '다라', 'S', '3333', '
 insert into userinfo values('user3', '3333', '1', 'WC', '마바', 'S', '4444', '4');
 insert into userinfo values('user4', '4444', '1', 'WC', '사아', 'S', '5555', '5');
 insert into userinfo values('user5', '5555', '1', 'WC', '자차', 'S', '6666', '6');
+insert into userinfo values('user6', '6666', '1', 'WC', '카타', 'S', '7777', '7');
+insert into userinfo values('user7', '7777', '1', 'WC', '파하', 'S', '8888', '8');
 
 ===== default =====
 alter table userinfo modify star default 0;
