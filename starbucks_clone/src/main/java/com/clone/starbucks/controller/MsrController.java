@@ -14,12 +14,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.clone.starbucks.DTO.CardDTO;
+import com.clone.starbucks.service.MailSenderService;
 import com.clone.starbucks.service.MsrServiceImpl;
 
 @Controller
 public class MsrController {
 	@Autowired MsrServiceImpl msrService;
 	@Autowired HttpSession session;
+	@Autowired MailSenderService mail;
 	//msr
 	
 	@ResponseBody
@@ -38,6 +40,9 @@ public class MsrController {
 		if(dto!=null) {
 //			//메일
 //			msrService.sendMail(request, response);
+			// <!-- 0620예은- 메일전송 -->
+			mail.mailSend("inis2510@naver.com");
+
 			out.println("<script>alert('쿠폰 구매 완료되었습니다.'); location.href='msr/sceGift/gift_step1';</script>");
 			out.flush();
 			out.close();

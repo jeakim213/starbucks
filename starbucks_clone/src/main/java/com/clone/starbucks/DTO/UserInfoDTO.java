@@ -12,18 +12,33 @@ DTPass varchar2(50),
 pon_no number
 );
 
+insert into userinfo values('admin', '1234', 9, 'GD', 'master', 'D', '1111', '1');
+insert into userinfo values('user1', '1111', 2, 'GR', '가나', 'S', '2222', '2');
+insert into userinfo values('user2', '2222', '1', 'WC', '다라', 'S', '3333', '3');
+insert into userinfo values('user3', '3333', '1', 'WC', '마바', 'S', '4444', '4');
+insert into userinfo values('user4', '4444', '1', 'WC', '사아', 'S', '5555', '5');
+insert into userinfo values('user5', '5555', '1', 'WC', '자차', 'S', '6666', '6');
+insert into userinfo values('user6', '6666', '1', 'WC', '카타', 'S', '7777', '7');
+insert into userinfo values('user7', '7777', '1', 'WC', '파하', 'S', '8888', '8');
+
 ===== default =====
 alter table userinfo modify star default 0;
 alter table userinfo modify grade default 'WC';
 alter table userinfo modify cupreward default 'S';
 
+===== sequence ===
+create sequence pon_no
+INCREMENT BY 1
+START WITH 0001
+MINVALUE 0001
+MAXVALUE 9999
+CYCLE
+NOCACHE
+ORDER;
+
 ===== fk =====
 alter table userinfo add foreign key(pon_no) references e_coupon(pon_no);
-
-
-<<<웰컴, 그린, 골드, 세이브, 디스카운트>>>
-<<<user -> 오라클 내에서 사용되는 예약어 -> 오류>>>*/
-
+*/
 
 public class UserInfoDTO {
 	
@@ -38,15 +53,6 @@ public class UserInfoDTO {
 	
 	
 	
-	public String getConfirmPw() {
-		return confirmPw;
-	}
-	
-	public void setConfirmPw(String confirmPw) {
-		this.confirmPw = confirmPw;
-	}
-	
-	
 	public String getId() {
 		return id;
 	}
@@ -58,6 +64,12 @@ public class UserInfoDTO {
 	}
 	public void setPw(String pw) {
 		this.pw = pw;
+	}
+	public String getConfirmPw() {
+		return confirmPw;
+	}
+	public void setConfirmPw(String confirmPw) {
+		this.confirmPw = confirmPw;
 	}
 	public int getStar() {
 		return star;
@@ -89,6 +101,5 @@ public class UserInfoDTO {
 	public void setDTPass(String dTPass) {
 		DTPass = dTPass;
 	}
-	
 	
 }

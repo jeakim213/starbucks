@@ -2,6 +2,7 @@ package com.clone.starbucks.service;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.Random;
 
@@ -13,6 +14,8 @@ import org.springframework.stereotype.Service;
 
 import com.clone.starbucks.DAO.IAdminDAO;
 import com.clone.starbucks.DTO.E_couponDTO;
+import com.clone.starbucks.DTO.RegisterDTO;
+import com.clone.starbucks.DTO.UserInfoDTO;
 
 @Service
 public class AdminServiceImpl implements IAdminService {
@@ -249,4 +252,68 @@ public class AdminServiceImpl implements IAdminService {
 
 
 //----------------------------------------E-coupon----------------------------------------------
+
+	//단 - 목록
+	@Override
+	public void memberListForm(int currentPage, String select, String search) {
+		int pageBlock = 5; //한 화면에 보여줄 데이터 수
+		int totalCount = adminDAO.memberCount(); //총 데이터의 수 
+		int end = currentPage * pageBlock; //데이터의 끝 번호
+		int begin = end+1 - pageBlock; //데이터의 시작 번호
+		ArrayList<RegisterDTO> list = adminDAO.memberListForm(begin, end, select, search);
+		session.setAttribute("list", list);
+		String url = "/starbucks/admin/memberListForm?currentPage=";
+		session.setAttribute("page", PageService.getNavi(currentPage, pageBlock, totalCount, url));
+	}
+	
+	//단 - 정보
+	@Override
+	public RegisterDTO userInfoForm(String id) {
+		RegisterDTO reg = adminDAO.userInfoForm(id);
+		UserInfoDTO user = adminDAO.info(id);
+		RegisterDTO all = new RegisterDTO();
+		if (reg != null) {
+			all.setId(reg.getId());
+			all.setName(reg.getName());
+			all.setPhone(reg.getPhone());
+			all.setEmail(reg.getEmail());
+			all.setBirth_year(reg.getBirth_year());
+			all.setBirth_month(reg.getBirth_month());
+			all.setBirth_day(reg.getBirth_day());
+			all.setGender(reg.getGender());
+			all.setEvent_sms(reg.getEvent_sms());
+			all.setEvent_e(reg.getEvent_e());
+		}
+		if (user != null) {
+			all.setStar(user.getStar());
+			all.setGrade(user.getGrade());
+			all.setNickname(user.getNickname());
+			all.setCupreward(user.getCupreward());
+		}
+		return all;
+	}
+	
+	//단
+//		@Value("${ADMIN:admin}")
+//		private String adminAccount;
+	
+	//단 - 수정
+	@Override
+	public String memberModifyProc(RegisterDTO all, UserInfoDTO userInfo) {
+		adminDAO.updateReg(all);
+		UserInfoDTO user = (UserInfoDTO) all;
+		adminDAO.updateUser(user);
+		return "회원 수정 완료";
+	}
+
+	//단 - 삭제
+	@Override
+	public String deleteProc(RegisterDTO all, UserInfoDTO userInfo) {
+		adminDAO.deleteReg(all.getId());
+		UserInfoDTO user = (UserInfoDTO) all;
+		adminDAO.deleteUser(user.getId());
+		System.out.println("넷");
+		return "회원 삭제 완료";
+	}
+	
 }

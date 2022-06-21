@@ -6,6 +6,8 @@ import java.util.Date;
 import javax.servlet.http.HttpServletRequest;
 
 import com.clone.starbucks.DTO.E_couponDTO;
+import com.clone.starbucks.DTO.RegisterDTO;
+import com.clone.starbucks.DTO.UserInfoDTO;
 
 public interface IAdminService {
 //----------------------------------------E-coupon----------------------------------------------	
@@ -20,4 +22,13 @@ public interface IAdminService {
 		Date endDate(E_couponDTO ecouponDTO) throws ParseException;
 		
 //----------------------------------------E-coupon----------------------------------------------	
+
+	void memberListForm(int currentPage, String select, String search);
+	
+	RegisterDTO userInfoForm(String id);
+	
+	String memberModifyProc(RegisterDTO all, UserInfoDTO userInfo);
+	
+	String deleteProc(RegisterDTO all, UserInfoDTO userInfo);
+	
 }

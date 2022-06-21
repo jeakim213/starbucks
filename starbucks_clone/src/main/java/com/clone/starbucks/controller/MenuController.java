@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.clone.starbucks.DTO.E_couponDTO;
 import com.clone.starbucks.service.MenuServiceImpl;
 import com.google.gson.Gson;
 import com.google.gson.JsonElement;
@@ -197,10 +198,21 @@ public class MenuController {
 		return "menu/myOrder";
 	}
 
+	
+	
 	@RequestMapping(value = "menu/coupon_popup")
 	public String menu_coupon_popup() {
 		return "menu/coupon_popup";
 	}
+	
+	@RequestMapping(value="menu/couponUse")
+	public String couponUse(E_couponDTO eCouponDTO, Model model) {
+		service.couponUse(eCouponDTO, model);
+		return "menu/coupon_popup";
+	}
+	
+	
+	
 
 	@RequestMapping(value = "menu/starbucksCard")
 	public String starbucksCard() {

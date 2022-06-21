@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -31,8 +32,8 @@ public class MyController {
 
 	//my
 	@PostMapping(value="my/cardRegisterProc")
-	public String cardRegisterProc(CardDTO cardDTO, Model model, HttpServletRequest request, HttpServletResponse response)throws IOException {
-		String msg = myService.cardRegisterProc(cardDTO, request);
+	public String cardRegisterProc(UserInfoDTO userInfoDTO,CardDTO cardDTO, Model model, HttpServletRequest request, HttpServletResponse response)throws IOException {
+		String msg = myService.cardRegisterProc(userInfoDTO, cardDTO, request);
 		response.setContentType("text/html; charset=UTF-8");
 		PrintWriter out = response.getWriter();
 		if(msg.equals("등록완료")) {
@@ -56,13 +57,21 @@ public class MyController {
 	}
 	
 	@PostMapping(value="my/couponRegisterProc")
-	public String couponRegisterProc(UserInfoDTO userInfoDTO, E_couponDTO eCouponDTO, Model model, HttpServletRequest request) throws IOException {
+	public String couponRegisterProc(UserInfoDTO userInfoDTO, E_couponDTO eCouponDTO, Model model, HttpServletRequest request, HttpServletResponse response) throws IOException {
 		String msg = myService.couponRegisterProc(userInfoDTO, eCouponDTO, request);
+		response.setContentType("text/html; charset=UTF-8");
+		PrintWriter out = response.getWriter();
 		if(msg.equals("등록완료")) {
 			model.addAttribute("msg",msg);
+			out.println("<script>alert('쿠폰 등록이 완료되었습니다.'); location.href='mycard_info_input';</script>");
+			out.flush();
+			out.close();
 			return "my/ecoupon";
 		}else {
 			model.addAttribute("msg",msg);
+			out.println("<script>alert('쿠폰 등록이 실패되었습니다.'); location.href='mycard_info_input';</script>");
+			out.flush();
+			out.close();
 			return "my/ecoupon";
 		}
 	}
@@ -88,79 +97,78 @@ public class MyController {
 	}
 	
 	
-	@RequestMapping(value = "my/index")
-	public String my_index(UserInfoDTO userInfo, CardDTO cardDTO, Model model, HttpSession session) {
+	// 예은 - 마이스타벅스
+	   @RequestMapping(value = "my/index")
+	   public String my_index(UserInfoDTO userInfo, CardDTO cardDTO, Model model){
+	      
+	   
+	      //UserInfoDTO user = (UserInfoDTO) session.getAttribute("userInfo");
+	      
+	      session.setAttribute("id", "admin");
+	      String id = (String) session.getAttribute("id");
+	      
+	      boolean b = myService.isExistCard(userInfo, cardDTO);
 
-		String id = (String) session.getAttribute(userInfo.getId());
-		
-		boolean b = myService.isExistCard(userInfo, cardDTO);
-		
-		// 카드 없는 회원
-		if(b==false) {
-//			UserInfoDTO userinfo = new UserInfoDTO();
-//				userinfo.setId("id");
-//				userinfo.setPw("pw");
-//				userinfo.setConfirmPw("cpw");
-//				userinfo.setStar(0);
-//				userinfo.setGrade("wc");
-//				userinfo.setNickname("닉네임");
-//				userinfo.setCupreward('s');
-//				
-//				session.setAttribute("session", userinfo);
-				
-				int couponCount = myDAO.userCoupon("admin");
-				model.addAttribute("couponCount", couponCount);
-				
-				return "my/index";
-		}		
-		
-		
-		// 카드 있는 회원 (지금 넣은 임의값("admin") 바꿔주기)
-		AllDTO user = myService.userAllInfo("admin");
-		
-		
-		// 등급명 변경
-		if(user.getGrade().equals("WC")) {
-			user.setGrade("Welcome Level");
-		}else if(user.getGrade().equals("GR")) {
-			user.setGrade("Green Level");
-		}else {
-			user.setGrade("Gold Level");
-		}
-		
-		
-		// 카드 갯수
-		
-		int cardCount = myDAO.userCard("admin");
-		
-		// 쿠폰 갯수
+	      // 카드 없는 회원
+	      if(b==false) {
+	                  
+	            //int couponCount = myDAO.userCoupon(user.getId());
+	            int couponCount = myDAO.userCoupon(id);
+	            model.addAttribute("couponCount", couponCount);
+	            
+	            return "my/index";
+	      }      
+	      
+	      
+	      // 카드 있는 회원)
+	      //AllDTO all = myService.userAllInfo(user.getId());
+	      AllDTO all = myService.userAllInfo(id);
+	      // 등급명 변경
+	      if(all.getGrade().equals("WC")) {
+	         all.setGrade("Welcome Level");
+	      }else if(all.getGrade().equals("GR")) {
+	         all.setGrade("Green Level");
+	      }else {
+	         all.setGrade("Gold Level");
+	      }
+	      
+	      
+	      // 카드 갯수
+	      
+	      //int cardCount = myDAO.userCard(user.getId());
+	      int cardCount = myDAO.userCard(id);
+	      // 쿠폰 갯수
 
-		int couponCount = myDAO.userCoupon("admin");
-		System.out.println(couponCount);
-		
-		//views로 넘겨주는 값
-		model.addAttribute("nickname", user.getNickname());
-		model.addAttribute("grade", user.getGrade());
-		model.addAttribute("star", user.getStar());
-		model.addAttribute("c_name", user.getC_name());
-		model.addAttribute("c_num", user.getC_num());
-		model.addAttribute("remaincost", user.getRemaincost());
-		model.addAttribute("cardCount", cardCount);
-		model.addAttribute("couponCount", couponCount);
-		
-		return "my/index2";
+	      //int couponCount = myDAO.userCoupon(user.getId());
+	      int couponCount = myDAO.userCoupon(id);
+	      
+	      //views로 넘겨주는 값
+	   
+	      model.addAttribute("nickname", all.getNickname());
+	      model.addAttribute("grade", all.getGrade());
+	      model.addAttribute("star", all.getStar());
+	      model.addAttribute("c_name", all.getC_name());
+	      model.addAttribute("c_num", all.getC_num());
+	      model.addAttribute("remaincost", all.getRemaincost());
+	      model.addAttribute("cardCount", cardCount);
+	      model.addAttribute("couponCount", couponCount);
+	      
 
-	}
+	   
+	      return "my/index2";
 
-	// ===========
+	   }
+	   
+	   
 	@RequestMapping(value = "my/mycard_charge")
 	public String mycard_charge() {
 		return "my/mycard_charge";
 	}
 
 	@RequestMapping(value = "my/mycard_charge_1")
-	public String mycard_charge_1() {
-		return "my/mycard_charge-1";
+	public String mycard_charge_1(CardDTO cardDTO,Model model, HttpServletRequest request) {
+		myService.cardList(cardDTO, model);
+		return "my/mycard_charge";
 	}
 
 	@RequestMapping(value = "my/mycard_charge_2")
@@ -168,11 +176,46 @@ public class MyController {
 		return "my/mycard_charge-2";
 	}
 
+	
 	@RequestMapping(value = "my/mycard_index")
 	public String mycard_index() {
 		return "my/mycard_index";
 	}
+	
+	
+	@RequestMapping(value = "my/cardList")
+	public String cardList(CardDTO cardDTO,Model model){
+		myService.cardList(cardDTO, model);
+		return "my/mycard_index";
+	}
+	
+	@RequestMapping(value="my/mycardProc")
+	public String mycardProc(CardDTO cardDTO, Model model, HttpServletRequest request) {
+		myService.mycardProc(cardDTO, model, request);
+		return "my/mycard";
+	}
+	
+	@RequestMapping(value="my/editCardProc")
+	public String editCardProc(CardDTO cardDTO, Model model, HttpServletRequest request, HttpServletResponse response) throws IOException {
+		String msg = myService.editCardProc(cardDTO, request, model);
+		response.setContentType("text/html; charset=UTF-8");
+		PrintWriter out = response.getWriter();
+		if(msg.equals("완료")) {
+			model.addAttribute("msg",msg);
+			out.println("<script>alert('카드 정보 수정이 완료되었습니다.'); location.href='cardList';</script>");
+			out.flush();
+			out.close();
+			return "my/cardList";
+		}else {
+			model.addAttribute("msg",msg);
+			out.println("<script>alert('카드 정보 수정이 실패하였습니다.'); window.location.href='my/mycard';</script>");
+			out.flush();
+			out.close();
+			return "my/mycard";
+		}
+	}
 
+	
 	@RequestMapping(value = "my/mycard_info_input")
 	public String mycard_info_input() {
 		return "my/mycard_info_input";

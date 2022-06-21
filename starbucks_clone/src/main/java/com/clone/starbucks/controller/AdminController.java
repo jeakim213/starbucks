@@ -13,18 +13,23 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.clone.starbucks.DTO.E_couponDTO;
+import com.clone.starbucks.DTO.RegisterDTO;
+import com.clone.starbucks.DTO.UserInfoDTO;
 import com.clone.starbucks.service.AdminServiceImpl;
 
 @Controller
 public class AdminController {
 
+//	@Autowired private IAdminService adminService;
 	@Autowired AdminServiceImpl adminService;
 	@Autowired HttpSession session;
 
 	@PostMapping(value="admin/eCouponProc")
 	public String ecouponProc(E_couponDTO e_coupon, Model model, HttpServletRequest request, HttpServletResponse response) throws ParseException, IOException {
+		System.out.println("cont : " + e_coupon.getPon_startdate());
 		String msg = adminService.eCouponProc(e_coupon, request);
 		response.setContentType("text/html; charset=UTF-8");
 		PrintWriter out = response.getWriter();
@@ -49,31 +54,6 @@ public class AdminController {
 	      return "admin/adminCouponMake";
 	   }
 	
-	   @RequestMapping(value="admin/memberListForm")
-	   public String memberListForm() {
-	      return "admin/memberListForm";
-	   }
-	   
-	   @RequestMapping(value="admin/userInfoForm")
-	   public String userInfoForm() {
-	      return "admin/userInfoForm";
-	   }
-	   
-	   @RequestMapping(value="admin/modifyCheckForm")
-	   public String modifyCheckForm() {
-	      return "admin/modifyCheckForm";
-	   }
-	   
-	   @RequestMapping(value="admin/memberModifyForm")
-	   public String memberModifyForm() {
-	      return "admin/memberModifyForm";
-	   }
-	   
-	   @RequestMapping(value="admin/deleteCheckForm")
-	   public String deleteCheckForm() {
-	      return "admin/deleteCheckForm";
-	   }
-	   
 	   //0601 다정 커피
 	   @RequestMapping(value="admin/saleChart-1")
 	   public String saleChart1() {
@@ -91,5 +71,72 @@ public class AdminController {
 	   public String saleChart3() {
 	      return "admin/saleChart-3";
 	   }
+	   
+	   
+	   
+	   
+	   
+	//단 - 목록
+	@RequestMapping(value = "admin/memberListForm")
+	public String memberListForm(Model model, 
+			@RequestParam(value = "currentPage", required=false, defaultValue = "1") int currentPage,
+			String select, String search) {
+		adminService.memberListForm(currentPage, select, search);
+		return "admin/memberListForm";
+	}
+	
+	//단 - 정보
+	@RequestMapping(value = "admin/userInfoForm")
+	public String userInfoForm(String id, Model model) {
+			model.addAttribute("all", adminService.userInfoForm(id));
+			return "admin/userInfoForm";
+	}
+	
+	//단 - 정보(로그인 필요)
+//		@Value("${ADMIN:admin}") private String adminAccount;
+//		@RequestMapping(value = "admin/userInfoForm") // memberListForm.jsp에서 사용자의 아이디를 클릭 시 요청을 받음.
+//		public String userInfoForm(String id, HttpSession session, Model model) {
+//			//String sessionId = (String) session.getAttribute("id");
+//			UserInfoDTO user = (UserInfoDTO) session.getAttribute("userInfo");
+//			if (id == "" || id == null || sessionId == "" || sessionId == null) {
+//				return "redirect:admin/memberListForm";
+//			}
+//			if (sessionId.equals(id) || adminAccount.equals(sessionId)) {
+//				model.addAttribute("all", adminService.userInfoForm(id));
+//				return "admin/userInfoForm";
+//			}
+//			return "redirect:admin/memberListForm";
+//		}
+	
+	//단 - 수정
+	@RequestMapping(value = "admin/memberModifyForm")
+	public String memberModifyForm(RegisterDTO all, Model model) {
+		model.addAttribute("all", all);
+		return "admin/memberModifyForm";
+	}
+	@RequestMapping(value = "admin/memberModifyProc")
+	public String memberModifyProc(RegisterDTO all, UserInfoDTO userInfo) {
+		String msg = adminService.memberModifyProc(all, userInfo);
+		if(msg.equals("회원 수정 완료")) {
+			return "redirect:/admin/memberListForm";
+		}
+		return "redirect:/";
+	}
+	
+	//단 - 삭제
+	@RequestMapping(value = "admin/memberDelete")
+	public String memberDelete(RegisterDTO all, Model model) {
+		System.out.println("셋");
+		model.addAttribute("all", all);
+		return "admin/memberListForm";
+	}
+	@RequestMapping(value = "admin/deleteProc")
+	public String deleteProc(RegisterDTO all, UserInfoDTO userInfo) {
+		String msg = adminService.deleteProc(all, userInfo);
+		if(msg.equals("회원 삭제 완료")) {
+			return "redirect:/admin/memberListForm";
+		}
+		return "redirect:/";
+	}
 	
 }

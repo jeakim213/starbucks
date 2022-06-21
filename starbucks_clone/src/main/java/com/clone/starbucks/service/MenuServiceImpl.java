@@ -15,9 +15,11 @@ import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Service;
+import org.springframework.ui.Model;
 
 import com.clone.starbucks.DAO.IMemberDAO;
 import com.clone.starbucks.DAO.IMenuDAO;
+import com.clone.starbucks.DTO.E_couponDTO;
 import com.clone.starbucks.DTO.ProductDTO;
 import com.clone.starbucks.DTO.SaleDTO;
 import com.clone.starbucks.DTO.UserInfoDTO;
@@ -230,6 +232,19 @@ public class MenuServiceImpl implements IMenuService{
 			dto.setP_price(tmp.get("p_price").getAsInt());
 			dao.insertProduct(dto);
 		}
+	}
+
+
+	@Override
+	public void couponUse(E_couponDTO e_couponDTO, Model model) {
+		session.setAttribute("id", "admin");
+		UserInfoDTO userInfo = new UserInfoDTO();
+		userInfo.setId("admin");
+		session.setAttribute("userInfo", userInfo);
+		UserInfoDTO user = (UserInfoDTO) session.getAttribute("userInfo");
+		String id = user.getId();
+		ArrayList<E_couponDTO> list =  dao.couponList(id);
+		model.addAttribute("list",list);
 	}
 	
 }

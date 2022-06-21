@@ -29,7 +29,6 @@ public class MemberController {
 	
 	
 	//login
-	
 	@RequestMapping(value = "login/login")
 	public String login() {
 		return "login/login";
@@ -70,9 +69,9 @@ public class MemberController {
 			data.setBirth_year(2000);
 			data.setBirth_month(Integer.parseInt(userInfo.get("birthday").substring(0, 1)));
 			data.setBirth_day(Integer.parseInt(userInfo.get("birthday").substring(2)));
-			data.setGender(userInfo.get("gender").charAt(0));
-			data.setEvent_e('Y');
-			data.setEvent_sms('Y');
+			data.setGender(userInfo.get("gender"));
+			data.setEvent_e("Y");
+			data.setEvent_sms("Y");
 			
 			System.out.println(memberService.memberProc(data));
 			user = (UserInfoDTO)data;

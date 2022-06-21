@@ -22,7 +22,7 @@
 
 <title id="titleJoin">My Starbucks | Starbucks Korea</title> <!-- 220117 수정 -->
 <link rel="shortcut icon" href="https://image.istarbucks.co.kr/common/img/common/favicon.ico?v=200828" type="image/ico"> <!-- 20200827 파비콘 교체 및 CDN 변수처리 -->
-<link href="../common/css/admin_memberModify_1.css" rel="stylesheet">
+<link href="../common/css/admin_memberModify_3.css" rel="stylesheet">
 <link href="../common/css/style.css?v=210721" rel="stylesheet">
 <link href="../common/css/jquery.bxslider.css" rel="stylesheet">
 <link href="../common/css/idangerous.swiper.css" rel="stylesheet">
@@ -652,10 +652,10 @@ var eFrequencyPlannerYn = 'Y';
 					
 								
 <ul>
-	<li class="util_nav01 sign_out" style=""><a href="/starbucks">Sign out</a></li>
-	<li class="util_nav01 sign_in" style="display: none;"><a href="/starbucks/login/login">Sign In</a></li>
-	<li class="util_nav02"><a href="/starbucks/admin/memberListForm">My Starbucks</a></li>
-	<li class="util_nav03"><a href="/starbucks/menu/orderList">Order</a></li>
+	<li class="util_nav01 sign_out" style="display:none;"><a href="/starbucks">Sign out</a></li>
+	<li class="util_nav01 sign_in"><a href="/starbucks/login/login">Sign In</a></li>
+	<li class="util_nav02"><a href="/starbucks/my/index" required="login">My Starbucks</a></li>
+	<li class="util_nav03"><a href="/starbucks/menu/orderList" required="login">Order</a></li>
 	<li class="util_nav04"><a href="/starbucks/store/store_map">Find a Store</a></li>
 </ul>
 				</nav>
@@ -694,190 +694,145 @@ var eFrequencyPlannerYn = 'Y';
                     <div class="ms_cont">
                     
                     
-	<!-- 관리자 -->
+<!-- 관리자 -->
 <%-- <c:if test="${empty sessionScope.id }">
 	<script>
 		location.href = 'index?formpath=login';
 	</script>
 </c:if> --%>
-
-<!-- <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
-<script>
-	function daumPost(){
-		
-	    new daum.Postcode({
-	        oncomplete: function(data) {
-	   			var addr = "";
-	   			// R == 도로명 주소, J == 지번 주소
-	   			if(data.userSelectedType == "R")
-	   				addr = data.roadAddress;
-	   			else{
-	   				addr = data.jibunAddress;
-	   			}
-	   			document.getElementById('zonecode').value= data.zonecode; // 우편번호
-	   			document.getElementById('addr1').value = addr;
-	   			document.getElementById('addr2').focus();
-	        }
-	    }).open();
-	    
-	}
-</script> -->
-
-<center>
-
+<div align="center">
 <%-- <h3>
 	<font color="red" id="msg">${msg } </font>
 </h3> --%>
-
-<h2 class="h2">회원 정보 수정</h2>
-
-<!-- <form action="memberModifyProc" method="post"> -->
-
-	<table>
+<form action="memberListForm" method="post">
+	<table id="t">
 		<tr>
-			<td width=90 align='right' height=35>아이디</td>
-			<td><input class="text" type=text name='id' value="${user.id }" disabled="disabled"/></td>
+			<td></td>
+			<td><h2 class="h2">회원 정보 수정</h2></td>
 		</tr>
 		<tr>
-			<td width=90 align='right' height=35>패스워드</td>
-			<td><input class="text" type=text name='pw' placeholder='패스워드 입력'/></td>
+			<td id="l" width=90 align='right' height=35>아이디</td>
+			<td><input class="text" type=text name='id' value="${all.id }" readonly="readonly"/></td>
 		</tr>
 		<tr>
-			<td width=90 align='right' height=35>패스워드 확인</td>
-			<td><input class="text" type=text name='pw' placeholder='패스워드 입력'/></td>
+			<td id="l" width=90 align='right' height=35>이름</td>
+			<td><input class="text" type=text name='name' value="${all.name }"/></td>
 		</tr>
 		<tr>
-			<td width=90 align='right' height=35>닉네임</td>
-			<td><input class="text" type=text name='email' value="${user.nickname }"/></td>
-		</tr>
-		<tr>
-			<td width=90 align='right' height=35>성별</td>
+			<td id="lh" width=90 align='right' height=35>성별</td>
 			<td>
 				<c:choose>
-					<c:when test="${user.gender == 'm' }">
-						<input class="radio" type=radio name='gender' value='m' checked="checked"/>&nbsp;남&nbsp;&nbsp;
-						<input type=radio name='gender' value='w' disabled="disabled"/>&nbsp;여
+					<c:when test="${all.gender == 'M' }">
+						<input class="radio" type=radio name='gender' value='M' checked onclick="return(false);"/>&nbsp;남&nbsp;&nbsp;&nbsp;
+						<input type=radio name='gender' value='F' onclick="return(false);"/>&nbsp;여
 					</c:when>
-					<%-- <c:when test="${user.gender == 'w' }">
-						<input class="radio" type=radio name='gender' value='m' disabled="disabled"/>&nbsp;남&nbsp;&nbsp;
-						<input type=radio name='gender' value='w' checked="checked"/>&nbsp;여
-					</c:when> --%>
-					<c:otherwise>
-						<input class="radio" type=radio name='gender' value='m' disabled="disabled"/>&nbsp;남&nbsp;&nbsp;
-						<input type=radio name='gender' value='w' checked="checked"/>&nbsp;여
-					</c:otherwise>
+					<c:when test="${all.gender == 'F' }">
+						<input class="radio" type=radio name='gender' value='M' onclick="return(false);"/>&nbsp;남&nbsp;&nbsp;&nbsp;
+						<input type=radio name='gender' value='F' checked onclick="return(false);"/>&nbsp;여
+					</c:when>
 				</c:choose>
 			</td>
 		</tr>
 		<tr>
-			<td width=90 align='right' height=35>생년월일</td>
-			<td><input class="text" type=text name='email' value="${user.birthyear }${user.birthmonth }${user.birthday }"/></td>
+			<td id="l" width=90 align='right' height=35>생년월일</td>
+			<td>
+				<input id="birth" class="text" type=text name='birth_year' value="${all.birth_year }"/> 년&nbsp;&nbsp;&nbsp;
+				<input id="birth" class="text" type=text name='birth_month' value="${all.birth_month }"/> 월&nbsp;&nbsp;&nbsp;
+				<input id="birth" class="text" type=text name='birth_day' value="${all.birth_day }"/> 일
+			</td>
 		</tr>
 		<tr>
-			<td width=90 align='right' height=35>전화번호</td>
-			<td><input class="text" type=text name='email' value="${user.phone }"/></td>
+			<td id="l" width=90 align='right' height=35>전화번호</td>
+			<td><input class="text" type=text name='phone' value="${all.phone }"/></td>
 		</tr>
 		<tr>
-			<td width=90 align='right' height=35>SMS 수신</td>
+			<td id="lh" width=90 align='right' height=35>SMS 수신</td>
 			<td>
 				<c:choose>
-					<c:when test="${user.event_sms == 'y' }">
-						<input class="radio" type=radio name='event_sms' value='y' checked="checked"/>&nbsp;동의e&nbsp;&nbsp;
-						<input type=radio name='event_sms' value='n' disabled="disabled"/>&nbsp;비동의
+					<c:when test="${all.event_sms == 'Y' }">
+						<input class="radio" type=radio name='event_sms' value='Y' checked onclick="return(false);"/>&nbsp;동의&nbsp;&nbsp;&nbsp;
+						<input type=radio name='event_sms' value='N' onclick="return(false);"/>&nbsp;비동의
 					</c:when>
-					<%-- <c:when test="${user.event_sms == 'n' }">
-						<input class="radio" type=radio name='event_sms' value='y' disabled="disabled"/>&nbsp;동의&nbsp;&nbsp;
-						<input type=radio name='event_sms' value='n' checked="checked"/>&nbsp;비동의
-					</c:when> --%>
-					<c:otherwise>
-						<input class="radio" type=radio name='event_sms' value='y' disabled="disabled"/>&nbsp;동의&nbsp;&nbsp;
-						<input type=radio name='event_sms' value='n' checked="checked"/>&nbsp;비동의
-					</c:otherwise>
+					<c:when test="${all.event_sms == 'N' }">
+						<input class="radio" type=radio name='event_sms' value='Y' onclick="return(false);"/>&nbsp;동의&nbsp;&nbsp;&nbsp;
+						<input type=radio name='event_sms' value='N' checked onclick="return(false);"/>&nbsp;비동의
+					</c:when>
 				</c:choose>
 			</td>
 		</tr>
 		<tr>
-			<td width=90 align='right' height=35>이메일</td>
-			<td><input class="text" type=text name='email' value="${user.email }"/></td>
+			<td id="l" width=90 align='right' height=35>이메일</td>
+			<td><input class="text" type=text name='email' value="${all.email }"/></td>
 		</tr>
 		<tr>
-			<td width=90 align='right' height=35>SMS 수신</td>
+			<td id="lh" width=90 align='right' height=35>Email 수신</td>
 			<td>
 				<c:choose>
-					<c:when test="${user.event_e == 'y' }">
-						<input class="radio" type=radio name='event_e' value='y' checked="checked"/>&nbsp;동의&nbsp;&nbsp;
-						<input type=radio name='event_e' value='n'/ disabled="disabled">&nbsp;비동의
+					<c:when test="${all.event_e == 'Y' }">
+						<input class="radio" type=radio name='event_e' value='Y' checked onclick="return(false);"/>&nbsp;동의&nbsp;&nbsp;&nbsp;
+						<input type=radio name='event_e' value='N' onclick="return(false);">&nbsp;비동의
 					</c:when>
-					<%-- <c:when test="${user.event_e == 'n' }">
-						<input class="radio" type=radio name='event_e' value='y' disabled="disabled"/>&nbsp;동의&nbsp;&nbsp;
-						<input type=radio name='event_e' value='n' checked="checked"/>&nbsp;비동의
-					</c:when> --%>
-					<c:otherwise>
-						<input class="radio" type=radio name='event_e' value='y' disabled="disabled"/>&nbsp;동의&nbsp;&nbsp;
-						<input type=radio name='event_e' value='n' checked="checked"/>&nbsp;비동의
-					</c:otherwise>
+					<c:when test="${all.event_e == 'N' }">
+						<input class="radio" type=radio name='event_e' value='Y' onclick="return(false);"/>&nbsp;동의&nbsp;&nbsp;&nbsp;
+						<input type=radio name='event_e' value='N' checked onclick="return(false);"/>&nbsp;비동의
+					</c:when>
 				</c:choose>
 			</td>
 		</tr>
 		<tr>
-			<td width=90 align='right' height=35>등급</td>
+			<td id="l" width=90 align='right' height=35>닉네임</td>
+			<td><input class="text" type=text name='nickname' value="${all.nickname }"/></td>
+		</tr>
+		<tr>
+			<td id="l" width=90 align='right' height=35>별</td>
+			<td><input class="text" type=text name='star' value="${all.star }"/></td>
+		</tr>
+		<tr>
+			<td id="lh" width=90 align='right' height=35>등급</td>
 			<td>
 				<c:choose>
-					<c:when test="${user.grade == 'wc' }">
-						<input class="radio" type=radio name='grade' value='wc' checked="checked"/>&nbsp;Welcome&nbsp;&nbsp;
-						<input type=radio name='grade' value='gr'/>&nbsp;Green&nbsp;&nbsp;
-						<input type=radio name='grade' value='gd'/>&nbsp;Gold
+					<c:when test="${all.grade == 'WC' }">
+						<input class="radio" type=radio name='grade' value='WC' checked="checked"/>&nbsp;Welcome&nbsp;&nbsp;&nbsp;
+						<input type=radio name='grade' value='GR'/>&nbsp;Green&nbsp;&nbsp;&nbsp;
+						<input type=radio name='grade' value='GD'/>&nbsp;Gold
 					</c:when>
-					<c:when test="${user.grade == 'gr' }">
-						<input class="radio" type=radio name='grade' value='wc'/>&nbsp;Welcome&nbsp;&nbsp;
-						<input type=radio name='grade' value='gr' checked="checked"/>&nbsp;Green&nbsp;&nbsp;
-						<input type=radio name='grade' value='gd'/>&nbsp;Gold
+					<c:when test="${all.grade == 'GR' }">
+						<input class="radio" type=radio name='grade' value='WC'/>&nbsp;Welcome&nbsp;&nbsp;&nbsp;
+						<input type=radio name='grade' value='GR' checked="checked"/>&nbsp;Green&nbsp;&nbsp;&nbsp;
+						<input type=radio name='grade' value='GD'/>&nbsp;Gold
 					</c:when>
-					<%-- <c:when test="${user.grade == 'gd' }">
-						<input class="radio" type=radio name='grade' value='wc'/>&nbsp;Welcome&nbsp;&nbsp;
-						<input type=radio name='grade' value='gr'/>&nbsp;Green&nbsp;&nbsp;
-						<input type=radio name='grade' value='gd' checked="checked"/>&nbsp;Gold
-					</c:when> --%>
-					<c:otherwise>
-						<input class="radio" type=radio name='grade' value='wc'/>&nbsp;Welcome&nbsp;&nbsp;
-						<input type=radio name='grade' value='gr'/>&nbsp;Green&nbsp;&nbsp;
-						<input type=radio name='grade' value='gd' checked="checked"/>&nbsp;Gold
-					</c:otherwise>
+					<c:when test="${all.grade == 'GD' }">
+						<input class="radio" type=radio name='grade' value='WC'/>&nbsp;Welcome&nbsp;&nbsp;&nbsp;
+						<input type=radio name='grade' value='GR'/>&nbsp;Green&nbsp;&nbsp;&nbsp;
+						<input type=radio name='grade' value='GD' checked="checked"/>&nbsp;Gold
+					</c:when>
 				</c:choose>
 			</td>
 		</tr>
 		<tr>
-			<td width=90 align='right' height=35>별</td>
-			<td><input class="text" type=text name='email' value="${user.email }"/></td>
-		</tr>
-		<tr>
-			<td width=90 align='right' height=35>개인컵</td>
+			<td id="lh" width=90 align='right' height=35>개인컵</td>
 			<td>
 				<c:choose>
-					<c:when test="${user.cupreward == 's' }">
-						<input class="radio" type=radio name='cupreward' value='s' checked="checked"/>&nbsp;에코 보너스 스타 적립&nbsp;&nbsp;
-						<input type=radio name='cupreward' value='d'>&nbsp;300원 할인
+					<c:when test="${all.cupreward == 'S' }">
+						<input class="radio" type=radio name='cupreward' value='S' checked="checked"/>&nbsp;에코 보너스 스타 적립&nbsp;&nbsp;
+						<input type=radio name='cupreward' value='D'>&nbsp;300원 할인
 					</c:when>
-					<%-- <c:when test="${user.cupreward == 'd' }">
-						<input class="radio" type=radio name='cupreward' value='s'/>&nbsp;에코 보너스 스타 적립&nbsp;&nbsp;
-						<input type=radio name='cupreward' value='d' checked="checked"/>&nbsp;300원 할인
-					</c:when> --%>
-					<c:otherwise>
-						<input class="radio" type=radio name='cupreward' value='s'/>&nbsp;에코 보너스 스타 적립&nbsp;&nbsp;
-						<input type=radio name='cupreward' value='d' checked="checked"/>&nbsp;300원 할인
-					</c:otherwise>
+					<c:when test="${all.cupreward == 'D' }">
+						<input class="radio" type=radio name='cupreward' value='S'/>&nbsp;에코 보너스 스타 적립&nbsp;&nbsp;
+						<input type=radio name='cupreward' value='D' checked="checked"/>&nbsp;300원 할인
+					</c:when>
 				</c:choose>
 			</td>
 		</tr>
 		<tr>
 			<td align='right' height=35 colspan=4>
-				<button type="submit" onclick="location.href='userInfoForm'">수정 완료</button>
-				<button type="reset">취소</button>	 
+				<button type="submit" onclick="this.form.action='memberModifyProc'">저장</button>
+				<button type="button" onclick="location.href='userInfoForm?id=${all.id }'">취소</button>	 
 			</td>
 		</tr>
 	</table>
-<!-- </form> -->
-</center>
+</form>
+</div>
 					
 
 
@@ -1091,12 +1046,6 @@ var eFrequencyPlannerYn = 'Y';
 				<li><a href="saleChart-1" <%-- required="login" --%> data-href="admin/saleChart-1">· COFFEE 매출 분석</a></li>
 				<li><a href="saleChart-2" <%-- required="login" --%> data-href="admin/saleChart-2">· FOOD 매출 분석</a></li>
 				<li><a href="saleChart-3" <%-- required="login" --%> data-href="admin/saleChart-3">· PRODUCT 매출 분석</a></li>
-			</ul>
-		</li>
-		<li>
-			<a href="javascript:void(0);">쿠폰발급<span class="sbox_arrow_down"></span></a>
-			<ul>
-				<li><a href="adminCouponMake" <%-- required="login" --%> data-href="admin/adminCouponMake">· 쿠폰발급하기</a></li>
 			</ul>
 		</li>
 	</ul>
@@ -1567,7 +1516,7 @@ var eFrequencyPlannerYn = 'Y';
                 }                
             </script>
             <script src="../common/js/common_jhp.js"></script>
-            <script src="../common/js/my/index.js?v=210420"></script>
+            <!-- <script src="../common/js/my/index.js?v=210420"></script> -->
             <script src="../common/js/my/index_level_web.js"></script>
         </div>
 

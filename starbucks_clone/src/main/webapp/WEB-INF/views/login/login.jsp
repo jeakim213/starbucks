@@ -754,7 +754,7 @@ var eFrequencyPlannerYn = 'Y';
 											</a>
 											<br>
 										<p class="btn_mem_login">
-											<a class="btn_login" href="javascript:void(0);" role="submit" onclick="check()" type="button">로그인</a>
+											<a class="btn_login" href="javascript:void(0);" role="submit" onclick="check()">로그인</a>
 											<!-- 접근성_20171120 role 추가 -->
 										</p>
 										<p class="input_warn_text t_006633">
@@ -1037,8 +1037,10 @@ var eFrequencyPlannerYn = 'Y';
 		<script>
 			m_strTargetUrl = '/edt/expressDtList';
 		</script>
-
+		<script src="../common/js/jquery.transit.min.js"></script>
 		<script src="../common/js/login/login.js?v=200807"></script>
+		<script src='../common/js/makePCookie.js'></script>
+		
 	</div>
 </body>
 </html>

@@ -22,7 +22,7 @@
 
 <title id="titleJoin">My Starbucks | Starbucks Korea</title> <!-- 220117 수정 -->
 <link rel="shortcut icon" href="https://image.istarbucks.co.kr/common/img/common/favicon.ico?v=200828" type="image/ico"> <!-- 20200827 파비콘 교체 및 CDN 변수처리 -->
-<link href="../common/css/admin_userInfo_2.css" rel="stylesheet">
+<link href="../common/css/admin_userInfo_1.css" rel="stylesheet">
 <link href="../common/css/style.css?v=210721" rel="stylesheet">
 <link href="../common/css/jquery.bxslider.css" rel="stylesheet">
 <link href="../common/css/idangerous.swiper.css" rel="stylesheet">
@@ -652,10 +652,10 @@ var eFrequencyPlannerYn = 'Y';
 					
 								
 <ul>
-	<li class="util_nav01 sign_out" style=""><a href="/starbucks">Sign out</a></li>
-	<li class="util_nav01 sign_in" style="display: none;"><a href="/starbucks/login/login">Sign In</a></li>
-	<li class="util_nav02"><a href="/starbucks/admin/memberListForm">My Starbucks</a></li>
-	<li class="util_nav03"><a href="/starbucks/menu/orderList">Order</a></li>
+	<li class="util_nav01 sign_out" style="display:none;"><a href="/starbucks">Sign out</a></li>
+	<li class="util_nav01 sign_in"><a href="/starbucks/login/login">Sign In</a></li>
+	<li class="util_nav02"><a href="/starbucks/my/index" required="login">My Starbucks</a></li>
+	<li class="util_nav03"><a href="/starbucks/menu/orderList" required="login">Order</a></li>
 	<li class="util_nav04"><a href="/starbucks/store/store_map">Find a Store</a></li>
 </ul>
 				</nav>
@@ -695,17 +695,30 @@ var eFrequencyPlannerYn = 'Y';
                     
                     
 <!-- 관리자 -->
-
 <%-- <c:if test="${empty sessionScope.id }">
 	<script>
 		location.href = 'index?formpath=login'
 	</script>
 </c:if> --%>
-
 <c:url var="root" value="/" />
-
-	<center>
-		<%-- <h3><font color="#036635" id="msg">${msg }</font></h3> --%>
+<div align="center">
+	<%-- <h3><font color="#036635" id="msg">${msg }</font></h3> --%>
+	<form action="memberModifyForm" method="post">
+		<input type="hidden" value="${all.id }" name="id"/>
+		<input type="hidden" value="${all.name }" name="name"/>
+		<input type="hidden" value="${all.nickname }" name="nickname"/>
+		<input type="hidden" value="${all.gender }" name="gender"/>
+		<input type="hidden" value="${all.birth_year }" name="birth_year"/>
+		<input type="hidden" value="${all.birth_month }" name="birth_month"/>
+		<input type="hidden" value="${all.birth_day }" name="birth_day"/>
+		<input type="hidden" value="${all.phone }" name="phone"/>
+		<input type="hidden" value="${all.email }" name="email"/>
+		<input type="hidden" value="${all.event_sms }" name="event_sms"/>
+		<input type="hidden" value="${all.event_e }" name="event_e"/>
+		<input type="hidden" value="${all.grade }" name="grade"/>
+		<input type="hidden" value="${all.star }" name="star"/>
+		<input type="hidden" value="${all.cupreward }" name="cupreward"/>
+		
 		<table border="1" style="width: 450px;">
 			<tr>
 				<td colspan=2 align="center" style="height: 40px; padding: 10px;">
@@ -713,119 +726,131 @@ var eFrequencyPlannerYn = 'Y';
 				</td>
 			</tr>
 			<tr>
-				<td style="width: 100px; height: 40px;" align="center" valign="center"><b>아이디</b></td>
-				<td style="width: 250px; height: 40px;" align="center" valign="center">${user.id }</td>
+				<td style="width: 100px; height: 40px;" align="center"><b>아이디</b></td>
+				<%-- <td style="width: 250px; height: 40px;" align="center">${sessionScope.id }</td> --%>
+				<td style="width: 250px; height: 40px;" align="center">${all.id }</td>
 			</tr>
 			<tr>
-				<td style="width: 100px; height: 40px;" align="center" valign="center"><b>닉네임</b></td>
-				<td style="width: 250px; height: 40px;" align="center" valign="center">${user.nickname }</td>
+				<td style="width: 100px; height: 40px;" align="center"><b>이름</b></td>
+				<td style="width: 250px; height: 40px;" align="center">${all.name }</td>
 			</tr>
 			<tr>
-				<td style="width: 100px; height: 40px;" align="center" valign="center"><b>성별</b></td>
+				<td style="width: 100px; height: 40px;" align="center"><b>성별</b></td>
 				<c:choose>
-					<c:when test="${user.gender == 'm'}">
-						<td style="width: 250px; height: 40px;" align="center" valign="center">남</td>
+					<c:when test="${all.gender == 'M'}">
+						<td style="width: 250px; height: 40px;" align="center">남</td>
 					</c:when>
-					<c:when test="${user.gender == 'w'}">
-						<td style="width: 250px; height: 40px;" align="center" valign="center">여</td>
+					<c:when test="${all.gender == 'F'}">
+						<td style="width: 250px; height: 40px;" align="center">여</td>
 					</c:when>
 				</c:choose>
 			</tr>
 			<tr>
-				<td style="width: 100px; height: 40px;" align="center" valign="center"><b>생년월일</b></td>
-				<td style="width: 250px; height: 40px;" align="center" valign="center">
-					${user.birthyear }${user.birthmonth }${user.birthday }
+				<td style="width: 100px; height: 40px;" align="center"><b>생년월일</b></td>
+				<td style="width: 250px; height: 40px;" align="center">
+					${all.birth_year }년&nbsp;&nbsp;${all.birth_month }월&nbsp;&nbsp;${all.birth_day }일
 				</td>
 			</tr>
 			<tr>
-				<td style="width: 100px; height: 40px;" align="center" valign="center"><b>전화번호</b></td>
-				<td style="width: 250px; height: 40px;" align="center" valign="center">${user.phone }</td>
+				<td style="width: 100px; height: 40px;" align="center"><b>전화번호</b></td>
+				<td style="width: 250px; height: 40px;" align="center">${all.phone }</td>
 			</tr>
 			<%-- <tr>
-				<td style="width: 100px; height: 40px;" align="center" valign="center"><b>SMS 수신</b></td>
+				<td style="width: 100px; height: 40px;" align="center"><b>SMS 수신</b></td>
 				<c:choose>
-					<c:when test="${user.event_sms == 'y'}">
-						<td style="width: 250px; height: 40px;" align="center" valign="center">동의</td>
+					<c:when test="${all.event_sms == 'Y'}">
+						<td style="width: 250px; height: 40px;" align="center">동의</td>
 					</c:when>
-					<c:when test="${user.event_sms == 'n'}">
-						<td style="width: 250px; height: 40px;" align="center" valign="center">비동의</td>
+					<c:when test="${all.event_sms == 'N'}">
+						<td style="width: 250px; height: 40px;" align="center">비동의</td>
 					</c:when>
 				</c:choose>
 			</tr> --%>
 			<tr>
-				<td style="width: 100px; height: 40px;" align="center" valign="center"><b>이메일</b></td>
-				<td style="width: 250px; height: 40px;" align="center" valign="center">${user.email }</td>
+				<td style="width: 100px; height: 40px;" align="center"><b>이메일</b></td>
+				<td style="width: 250px; height: 40px;" align="center">${all.email }</td>
 			</tr>
 			<%-- <tr>
-				<td style="width: 100px; height: 40px;" align="center" valign="center"><b>email 수신</b></td>
+				<td style="width: 100px; height: 40px;" align="center"><b>email 수신</b></td>
 				<c:choose>
-					<c:when test="${user.event_e == 'y'}">
-						<td style="width: 250px; height: 40px;" align="center" valign="center">동의</td>
+					<c:when test="${all.event_e == 'Y'}">
+						<td style="width: 250px; height: 40px;" align="center">동의</td>
 					</c:when>
-					<c:when test="${user.event_e == 'n'}">
-						<td style="width: 250px; height: 40px;" align="center" valign="center">비동의</td>
+					<c:when test="${all.event_e == 'N'}">
+						<td style="width: 250px; height: 40px;" align="center">비동의</td>
 					</c:when>
 				</c:choose>
 			</tr> --%>
 			<tr>
-				<td style="width: 100px; height: 40px;" align="center" valign="center"><b>SMS/E-mail<br>수신 동의</b></td>
+				<td style="width: 100px; height: 40px;" align="center"><b>SMS/E-mail<br>수신 동의</b></td>
 				<c:choose>
-					<c:when test="${user.event_sms == 'y' && user.event_e == 'y'}">
-						<td style="width: 250px; height: 40px;" align="center" valign="center">
-							<input type="checkbox" name="event_sms" value="y" checked disabled="disabled">&nbsp;SMS&nbsp;&nbsp;
-							<input type="checkbox" name="event_e" value="y" checked disabled="disabled">&nbsp;E-mail
+					<c:when test="${all.event_sms == 'Y' && all.event_e == 'Y'}">
+						<td style="width: 250px; height: 40px;" align="center">
+							<input type="checkbox" name="event_sms" value="Y" checked disabled="disabled">&nbsp;SMS&nbsp;&nbsp;
+							<input type="checkbox" name="event_e" value="Y" checked disabled="disabled">&nbsp;E-mail
 						</td>
 					</c:when>
-					<c:when test="${user.event_sms == 'y' && user.event_e == 'n'}">
-						<td style="width: 250px; height: 40px;" align="center" valign="center">
-							<input type="checkbox" name="event_sms" value="y" checked disabled="disabled">&nbsp;SMS&nbsp;&nbsp;
-							<input type="checkbox" name="event_e" value="n" disabled="disabled">&nbsp;E-mail
+					<c:when test="${all.event_sms == 'Y' && all.event_e == 'N'}">
+						<td style="width: 250px; height: 40px;" align="center">
+							<input type="checkbox" name="event_sms" value="Y" checked disabled="disabled">&nbsp;SMS&nbsp;&nbsp;
+							<input type="checkbox" name="event_e" value="N" disabled="disabled">&nbsp;E-mail
 						</td>
 					</c:when>
-					<c:when test="${user.event_sms == 'n' && user.event_e == 'y'}">
-						<td style="width: 250px; height: 40px;" align="center" valign="center">
-							<input type="checkbox" name="event_sms" value="n" disabled="disabled">&nbsp;SMS&nbsp;&nbsp;
-							<input type="checkbox" name="event_e" value="y" checked disabled="disabled">&nbsp;E-mail
+					<c:when test="${all.event_sms == 'N' && all.event_e == 'Y'}">
+						<td style="width: 250px; height: 40px;" align="center">
+							<input type="checkbox" name="event_sms" value="N" disabled="disabled">&nbsp;SMS&nbsp;&nbsp;
+							<input type="checkbox" name="event_e" value="Y" checked disabled="disabled">&nbsp;E-mail
 						</td>
 					</c:when>
-					<%-- <c:when test="${user.event_sms == 'n' && user.event_e == 'n'}">
-						<td style="width: 250px; height: 40px;" align="center" valign="center">
-							<input type="checkbox" name="event_sms" value="n" disabled="disabled">&nbsp;SMS&nbsp;&nbsp;
-							<input type="checkbox" name="event_e" value="n" disabled="disabled">&nbsp;E-mail
+					<c:when test="${all.event_sms == 'N' && all.event_e == 'N'}">
+						<td style="width: 250px; height: 40px;" align="center">
+							<input type="checkbox" name="event_sms" value="N" disabled="disabled">&nbsp;SMS&nbsp;&nbsp;
+							<input type="checkbox" name="event_e" value="N" disabled="disabled">&nbsp;E-mail
 						</td>
-					</c:when> --%>
-					<c:otherwise>
-						<td style="width: 250px; height: 40px;" align="center" valign="center">
-							<input type="checkbox" name="event_sms" value="n" disabled="disabled">&nbsp;SMS&nbsp;&nbsp;
-							<input type="checkbox" name="event_e" value="n" checked disabled="disabled">&nbsp;E-mail
-						</td>
-					</c:otherwise>
-					
+					</c:when>
 				</c:choose>
 			</tr>
 			<tr>
-				<td style="width: 100px; height: 40px;" align="center" valign="center"><b>등급</b></td>
-				<td style="width: 250px; height: 40px;" align="center" valign="center">${user.grade }</td>
+				<td style="width: 100px; height: 40px;" align="center"><b>닉네임</b></td>
+				<td style="width: 250px; height: 40px;" align="center">${all.nickname }</td>
 			</tr>
 			<tr>
-				<td style="width: 100px; height: 40px;" align="center" valign="center"><b>별</b></td>
-				<td style="width: 250px; height: 40px;" align="center" valign="center">${user.star }</td>
+				<td style="width: 100px; height: 40px;" align="center"><b>별</b></td>
+				<td style="width: 250px; height: 40px;" align="center">${all.star }</td>
 			</tr>
 			<tr>
-				<td style="width: 100px; height: 40px;" align="center" valign="center"><b>개인컵</b></td>
-				<td style="width: 250px; height: 40px;" align="center" valign="center">${user.cupreward }</td>
+				<td style="width: 100px; height: 40px;" align="center"><b>등급</b></td>
+				<c:choose>
+					<c:when test="${all.grade == 'WC'}">
+						<td style="width: 250px; height: 40px;" align="center">Welcome</td>
+					</c:when>
+					<c:when test="${all.grade == 'GR'}">
+						<td style="width: 250px; height: 40px;" align="center">Green</td>
+					</c:when>
+					<c:when test="${all.grade == 'GD'}">
+						<td style="width: 250px; height: 40px;" align="center">Gold</td>
+					</c:when>
+				</c:choose>
+			</tr>
+			<tr>
+				<td style="width: 100px; height: 40px;" align="center"><b>개인컵</b></td>
+				<c:choose>
+					<c:when test="${all.cupreward == 'S'}">
+						<td style="width: 250px; height: 40px;" align="center">에코 보너스 스타 적립</td>
+					</c:when>
+					<c:when test="${all.cupreward == 'D'}">
+						<td style="width: 250px; height: 40px;" align="center">300원 할인</td>
+					</c:when>
+				</c:choose>
 			</tr>
 		</table>
-		<div style="width: 450px; text-align: right; margin: 2px;">
-			<%-- <button onclick="location.href='${root}index?formpath=modifyCheck&modifyId=${user.id }'">수정</button>
-			<button onclick="location.href='${root}index?formpath=memberDelete&modifyId=${user.id }'">삭제</button>
-			<button onclick="location.href='memberListProc'">목록</button> --%>
-			
-			<button onclick="location.href='modifyCheckForm'">수정</button>
-			<button onclick="location.href='deleteCheckForm'">삭제</button>
-			<button onclick="location.href='memberListForm'">목록</button>
+		<div style="width: 450px; text-align: center; margin: 2px;">
+			<button type="submit">수정</button>
+			<button type="submit" onclick="this.form.action='deleteProc'">삭제</button>
+			<button type="button" onclick="location.href='/starbucks/admin/memberListForm'">목록</button>
 		</div>
-	</center>
+	</form>
+</div>
 
                        
                         <!-- msr 회원 -->
@@ -1037,12 +1062,6 @@ var eFrequencyPlannerYn = 'Y';
 				<li><a href="saleChart-1" <%-- required="login" --%> data-href="admin/saleChart-1">· COFFEE 매출 분석</a></li>
 				<li><a href="saleChart-2" <%-- required="login" --%> data-href="admin/saleChart-2">· FOOD 매출 분석</a></li>
 				<li><a href="saleChart-3" <%-- required="login" --%> data-href="admin/saleChart-3">· PRODUCT 매출 분석</a></li>
-			</ul>
-		</li>
-		<li>
-			<a href="javascript:void(0);">쿠폰발급<span class="sbox_arrow_down"></span></a>
-			<ul>
-				<li><a href="adminCouponMake" <%-- required="login" --%> data-href="admin/adminCouponMake">· 쿠폰발급하기</a></li>
 			</ul>
 		</li>
 	</ul>
@@ -1513,7 +1532,7 @@ var eFrequencyPlannerYn = 'Y';
                 }                
             </script>
             <script src="../common/js/common_jhp.js"></script>
-            <script src="../common/js/my/index.js?v=210420"></script>
+            <!-- <script src="../common/js/my/index.js?v=210420"></script> -->
             <script src="../common/js/my/index_level_web.js"></script>
         </div>
 
