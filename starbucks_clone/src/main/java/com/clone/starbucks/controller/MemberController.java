@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
@@ -148,23 +149,21 @@ public class MemberController {
 	
 	@RequestMapping(value = "mem/memberProc")
 	public String memberProc(RegisterDTO member, Model model, RedirectAttributes ra, HttpServletRequest req) {
+	
+		//수신동의 값 변경
+		if(member.getEvent_sms() == null) {
+			member.setEvent_sms("N");
+		}
+		
+		if( member.getEvent_e() == null) {
+			member.setEvent_e("N");
+		
+		}
 
+		
 		String msg = memberService.memberProc(member);
-
-		/*
-		 * System.out.println("ddd"); System.out.println(login.getId());
-		 * System.out.println(login.getPw()); System.out.println(login.getNickname());
-		 * 
-		 * System.out.println("============"); System.out.println(member.getId());
-		 * System.out.println(member.getName()); System.out.println(member.getPhone());
-		 * System.out.println(member.getEmail());
-		 * System.out.println(member.getBirth_year());
-		 * System.out.println(member.getBirth_month());
-		 * System.out.println(member.getBirth_day());
-		 * System.out.println(member.getGender());
-		 * System.out.println(member.getEvent_e());
-		 * System.out.println(member.getEvent_sms());
-		 */
+	
+		
 		
 		if (msg.equals("가입 완료")) {
 			ra.addFlashAttribute("msg", msg);

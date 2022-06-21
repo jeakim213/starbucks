@@ -657,7 +657,7 @@ var eFrequencyPlannerYn = 'Y';
 					
 								
 <ul>
-	<li class="util_nav01 sign_out" style="display:none;"><a href="/starbucks">Sign out</a></li>
+	<li class="util_nav01 sign_out" style="display:none;"><a href="/starbucks/login/logout">Sign out</a></li>
 	<li class="util_nav01 sign_in"><a href="/starbucks/login/login">Sign In</a></li>
 	<li class="util_nav02"><a href="/starbucks/my/index" required="login">My Starbucks</a></li>
 	<li class="util_nav03"><a href="/starbucks/menu/orderList" required="login">Order</a></li>
@@ -809,9 +809,9 @@ var eFrequencyPlannerYn = 'Y';
 										<div class="choice_agreement border "> <!-- 20170626  class add : border -->
 											<div class="choice_agreement_txt"><!--  20170626  p 태그 에서 div 태그 로 변경-->
 												<span class="agree-check2"><!-- 접근성_20171120 수정 -->
-													<input type="checkbox" name="event_sms" id="agreement1"  class="mem2" onclick="eventCheck('sms')" />
+													<input type="checkbox" name="event_sms" id="agreement1" value="Y" class="mem2" onclick="eventCheck('sms')"/>
 													<label for="agreement1">SMS를 통한 이벤트 및 신규 매장 정보 수신에 동의합니다.[선택]</label>
-													<input type="hidden" name="event_sms" value="N" id="agreement2" />
+													<!-- <input type="hidden" name="event_sms" id="agreement2" />  -->
 												</span>
 											</div>
 										</div>
@@ -844,9 +844,9 @@ var eFrequencyPlannerYn = 'Y';
 											<div class="choice_agreement_txt"> <!--  20170626  p 태그 에서 div 태그 로 변경-->
 												<!-- 접근성_20171120 추가 -->
 												<span class="agree-check2">
-													<input type="checkbox"  name="event_e" id="agreement3"   class="mem2" onclick="eventCheck('email')" />
+													<input type="checkbox"  name="event_e" id="agreement3" value="Y" class="mem2" onclick="eventCheck('email')" />
 													<label for="agreement3">이메일을 통한 이벤트 및 신규 매장 정보 수신에 동의합니다.[선택]</label>
-													<input type="hidden" name="event_e" value="N" id="agreement4" />
+													<!-- <input type="hidden" name="event_e" id="agreement4" /> -->
 												</span>
 												<!-- 접근성_20171120 추가 끝 -->
 											</div>
@@ -993,8 +993,8 @@ var eFrequencyPlannerYn = 'Y';
 			<!-- 내용 end -->
 		</div>
 		
-		<input type="hidden" name="sms_yn" value="N" id="agreement2" />
-		<input type="hidden" name="mail_yn" value="N" id="agreement4" />
+	<!-- 	<input type="hidden" name="sms_yn" value="N" id="agreement2" />
+		<input type="hidden" name="mail_yn" value="N" id="agreement4" /> -->
 		
 		
 
@@ -1446,170 +1446,42 @@ var eFrequencyPlannerYn = 'Y';
 					});
 				});
 			</script>
-		
-		
 
-<!-- 170103 주소 찾기 팝업 -->
-<div class="adr_find_pop" tabindex="1" role="dialog" aria-labelledby="adr_find_tit"> <!-- 접근성_20171120 수정  -->
-	<div class="adr_find_head">
-		<p class="tit" id="adr_find_tit">주소 찾기</p>
-		<p class="close"><a href="javascript:void(0)" title="주소검색 닫기" role="button" tabindex="1"><img src="//image.istarbucks.co.kr/common/img/responsibility/enviro_pop_close.jpg" alt="닫기" /></a></p>
-	</div>
-	<div class="adr_find_cont">
-		<!-- 170112 황기흠 수정 -->
-		<div class="doro_wrap sch_add_wrap">
-			<label for="adr_keyword" class="hid">검색어</label><input class="adr_inputbox01" type="text" id="adr_keyword" placeholder="검색어를 입력하세요." tabindex="1" maxlength="60" /> <!-- 접근성_20171120: tabindex 추가  -->
-          	<a href="javascript:void(0);" class="btn_sch_add" role="button" tabindex="1">검색</a> <!-- 접근성_20171120: tabindex 추가  -->
-		</div>
-		<p class="doro_add_txt">예 : 도로명(반포대교 58), 지번(삼성동 25)</p>
-		<!-- 170112 황기흠 수정 end -->
-
-		<p class="have_result_with" style="display:none;">* 도로명주소 검색 결과 <span class="adr_total_cnt" style="font-weight:bold; font-size:14px; "></span></p>
-		<div class="adr_cbox" style="display:none;">
-			<table width="100%" border="0" cellspacing="0" cellpadding="0">
-				<caption class="hide">주소찾기 테이블</caption>
-				<colgroup>
-					<col width="15%">
-					<col width="60%">
-					<col width="25%">
-				</colgroup>
-				<thead>
-					<tr>
-						<th scope="col">NO</th>
-						<th scope="col">도로명 주소</th>
-						<th scope="col">우편번호</th>
-					</tr>
-				</thead>
-				<tbody id="tbody_adr_result">
-					<!-- 검색 결과 있는 경우
-					<tr>
-						<td>1</td>
-						<td class="t_lft"><a href="javascript:void(0);">서울특별시 중구 을지로 30(소공동)<br>[지번]서울특별시 중구 소공동 1 롯데호텔</a></td>
-						<td>04533</td>
-					</tr> -->
-					
-					<!-- 검색결과 없을 경우
-					<tr>
-						<td colspan="3">검색결과가 없습니다.</td>
-					</tr> -->
-				</tbody>
-			</table>
-			<div class="tbl_pager">
-				<div class="tbl_pager_inner">
-					<ul class="pager">
-						<!-- <li class="btn_pager"><a href="javascript:void(0);"><img alt="처음으로" src="//image.istarbucks.co.kr/common/img/common/btn_pager_first.png"></a></li>
-						<li class="btn_pager"><a href="javascript:void(0);"><img alt="앞으로" src="//image.istarbucks.co.kr/common/img/common/btn_pager_prev.png"></a></li>
-						<li><a class="on" href="javascript:void(0);">1</a></li>
-						<li><a href="javascript:void(0);">2</a></li>
-						<li><a href="javascript:void(0);">3</a></li>
-						<li><a href="javascript:void(0);">4</a></li>
-						<li class="btn_pager"><a href="javascript:void(0);"><img alt="뒤로" src="//image.istarbucks.co.kr/common/img/common/btn_pager_next.png"></a></li>
-						<li class="btn_pager"><a href="javascript:void(0);"><img alt="끝으로" src="//image.istarbucks.co.kr/common/img/common/btn_pager_last.png"></a></li> -->
-					</ul>
-				</div>
-			</div>
-		</div>
-		<div class="btn_addrpop_close_wrap">
-			<a href="javascript:void(0);" tabindex="1" title="주소검색 닫기" role="button">닫기</a> <!-- 접근성_20171120: tabindex 추가  -->
-		</div>
-	</div>
-</div>
-<!-- 170103 주소 찾기 팝업 end -->
 
 <script type="text/javascript">
 
-
-	
-
-	
 	// 예은 수신동의
-	function eventCheck(val){
+	 function eventCheck(val){
 		
 		if(val == "sms"){
 			var check = document.getElementById('agreement1').checked;
 			if(check){
 				document.getElementById('agreement1').value = 'Y';
-				//alert(a);
+				alert(check);
 			}else{
 				document.getElementById('agreement1').value = 'N';
-				//alert(a);
+				alert(check);
 			}
 		}else if(val == "email"){
 			var check = document.getElementById('agreement3').checked;
+			
 			if(check){
-				document.getElementById('agreement3').value = 'Y';
-				
+				var a = document.getElementById('agreement3').value = 'Y';
+				alert(a);
 			}else{
-				document.getElementById('agreement3').value = 'N';
-				
+				var a = document.getElementById('agreement3').value = 'N';
+				alert(a);
 			}
 		}
-	}
+	} 
 	
 	$(document).ready(function () {
 		var srmSeq = 0;
-		document.getElementById('agreement3').value = 'N';
+ 	 	document.getElementById('agreement3').value = 'N';
 		
-		document.getElementById('agreement1').value = 'N';
+		document.getElementById('agreement1').value = 'N'; 
 
-		//170103 주소찾기 팝업
-		$('.mem_address > a, .btn_zipcode, .sel_wrap > .addrBtn').bind('click', function(){
-			$('.adr_find_pop ').fadeIn();
-			$('.adr_find_pop ').focus();/* 접근성_20171120  추가 */
-			$('.myDimm').show();
-			$('.pop_up_dimm').show();
-			$('.adr_find_pop').css({
-				'top' : $(window).scrollTop() + 'px',
-				'margin-top' : '200px'
-			});
-			if (location.href.indexOf("srm/") > -1) {
-				srmSeq = $(".btn_zipcode").index(this);
-			}
-		});
 		
-		$('.adr_find_head p.close a, .btn_addrpop_close_wrap a').bind('click', function(){
-			$('.adr_find_pop , .myDimm').fadeOut();
-			$("#adr_keyword").val("");
-			$(".have_result_with , .adr_cbox").hide();
-			$('.user_nick_nm_chk input').focus();/* 접근성_20171120  추가 */
-		});
-		// 170103 주소찾기 팝업 end
-		
-		$("#adr_keyword").on("keydown", function (_e) {
-			if (_e.keyCode == 13) {
-				searchAddr();
-			}
-		});
-		
-		$(".btn_sch_add").on("click", searchAddr);
-		
-		$(document).on("click", "a.btn_select_address", function () {
-			var zipcode = $(this).data("zipcode");
-			var address  = $(this).data("address");
-			
-			if (location.href.indexOf("srm/") > -1) {
-				if (srmSeq == 0) {
-					$("#ZIP_CODE").val(zipcode);
-					$("#ADDRESS_LOC").val(address);
-					$("#ADDRESS_TEXT").focus();
-				} else {
-					$("#PLANT_ZIP_CODE").val(zipcode);
-					$("#PLANT_ADDRESS").val(address);
-					$("#PLANT_ADDRESS_TEXT").focus();					
-				}
-				
-				$('.pop_up_dimm, .adr_find_pop').fadeOut();
-			} else {
-				$(".addressInput").removeClass('address_hidden');
-				$("#zipcode").val(zipcode + " " + address);
-				$("#zipcode_1").val(zipcode);
-				$("#zipcode_2").val("");
-				$("#address1").val(address);
-				$("#address2").focus();
-				
-				$('.myDimm, .adr_find_pop').fadeOut();
-			}
-		});
 	});
 	
 	//특수문자, 특정문자열(sql예약어의 앞뒤공백포함) 제거

@@ -579,10 +579,10 @@ var eFrequencyPlannerYn = 'Y';
 	<li class="util_nav02"><a href="/starbucks/admin/memberListForm">My Starbucks</a></li>
 	</c:when>
 	<c:otherwise>
-	<li class="util_nav02"><a href="my/index" required="login">My Starbucks</a></li>
+	<li class="util_nav02"><a href="/starbucks/my/index" required="login">My Starbucks</a></li>
 	</c:otherwise>
 </c:choose>
-	<li class="util_nav03"><a href="menu/orderList">Order</a></li>
+	<li class="util_nav03"><a href="/starbucks/menu/orderList">Order</a></li>
 	<li class="util_nav04"><a href="store/store_map">Find a Store</a></li>
 </ul>
 				</nav>
@@ -770,7 +770,7 @@ var eFrequencyPlannerYn = 'Y';
 			<!-- 프로모션 배너 end -->
 			
 			<!-- 메인 스타벅스 리워드 리뉴얼 -->
-			<section class="new-rewards_wrap" style="display:none;">
+			<!-- <section class="new-rewards_wrap" style="display:none;">
 				<div class="new-rewards_inner">
 					<div class="new-rewards_logo">
 						<img src="common/img/main/rewards-logo.png" alt="Starbucks Rewards"> 20200821 수정
@@ -808,7 +808,7 @@ var eFrequencyPlannerYn = 'Y';
 						</div>
 					</div>
 				</div>
-			</section>
+			</section> -->
 			<!-- //메인 스타벅스 리워드 리뉴얼 -->
 					<!-- 유저레벨 -->
 					<!-- MSR 회원 -->
