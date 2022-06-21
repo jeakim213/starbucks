@@ -2,6 +2,7 @@ package com.clone.starbucks.service;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.text.ParseException;
 import java.util.HashMap;
 
 import org.springframework.ui.Model;
@@ -20,6 +21,6 @@ public interface IMenuService {
 	
 	public void insertMenu(String menuName) throws FileNotFoundException, IOException; //DB에 메뉴넣기
 	
-	public void couponUse(E_couponDTO e_couponDTO, Model model);
+	public void couponUse(E_couponDTO e_couponDTO, Model model) throws ParseException;
 
 }

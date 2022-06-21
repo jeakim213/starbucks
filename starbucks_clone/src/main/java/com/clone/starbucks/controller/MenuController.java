@@ -3,6 +3,7 @@ package com.clone.starbucks.controller;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.text.ParseException;
 import java.util.HashMap;
 
 import javax.servlet.http.HttpServletRequest;
@@ -205,7 +206,7 @@ public class MenuController {
 	}
 	
 	@RequestMapping(value="menu/couponUse")
-	public String couponUse(E_couponDTO eCouponDTO, Model model) {
+	public String couponUse(E_couponDTO eCouponDTO, Model model) throws ParseException  {
 		service.couponUse(eCouponDTO, model);
 		return "menu/coupon_popup";
 	}
