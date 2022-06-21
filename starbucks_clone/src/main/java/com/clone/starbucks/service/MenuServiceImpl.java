@@ -188,7 +188,7 @@ public class MenuServiceImpl implements IMenuService{
 	
 	@Override //결제후 DB저장-지혜
 	public int payment(HashMap<String,String> data) throws ParseException {
-		UserInfoDTO user = (UserInfoDTO)session.getAttribute("userinfo");
+		UserInfoDTO user = (UserInfoDTO)session.getAttribute("userInfo");
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 		//"pay_date" : new Date().getTime(),
 //		"amount" : rsp.paid_amount,
