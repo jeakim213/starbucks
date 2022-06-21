@@ -19,6 +19,7 @@ import org.springframework.ui.Model;
 
 import com.clone.starbucks.DAO.IMemberDAO;
 import com.clone.starbucks.DAO.IMenuDAO;
+import com.clone.starbucks.DTO.CardDTO;
 import com.clone.starbucks.DTO.E_couponDTO;
 import com.clone.starbucks.DTO.ProductDTO;
 import com.clone.starbucks.DTO.SaleDTO;
@@ -246,6 +247,8 @@ public class MenuServiceImpl implements IMenuService{
 	      
 	      ArrayList<E_couponDTO> list =  dao.couponList(id);
 	      
+	      
+	      //시작날-끝날 날짜 변환코드
 	      ArrayList<String> startList = new ArrayList<String>();
 	      ArrayList<String> endList = new ArrayList<String>();
 	      
@@ -268,27 +271,30 @@ public class MenuServiceImpl implements IMenuService{
 		      endList.add(pon_endDate);
 		      System.out.println("변환끝날짜 : "+endList.get(i));
 	      }
-	      
-	      
-	      
-	      
-	      
-	      
-	      
-//	      for(int i=0; i<list.size();i++) {
-//	    	  list.get(i).setPon_startdate(startDate);
-//	    	  list.get(i).setPon_enddate(endDate);
-//	      }
-	      
-//	          Date utilDate = new Date();
-//	          java.sql.Date sqlDate = new java.sql.Date(utilDate.getTime());
-//
-//	          list.get(0).setPon_startdate(sqlDate);
-//	          System.out.println("확인 : " + list.get(0).getPon_startdate());
 	      model.addAttribute("list",list);
 	      model.addAttribute("startList",startList);
 	      model.addAttribute("endList",endList);
 	   }
+
+
+	@Override
+	public void cardChoice(CardDTO cardDTO, Model model) {
+		session.setAttribute("id", "쭈고");
+	    UserInfoDTO userInfo = new UserInfoDTO();
+	    userInfo.setId("쭈고");
+	    session.setAttribute("userInfo", userInfo);
+	    UserInfoDTO user = (UserInfoDTO) session.getAttribute("userInfo");
+	    String id = user.getId();
+	    
+	    ArrayList<CardDTO> list = dao.cardList(id);
+	    
+	    for(int i =0 ; i<list.size();i++) {
+	    	System.out.println(list.get(i));
+	    }
+	    
+	    model.addAttribute("list", list);
+		
+	}
 	   
 }
 	

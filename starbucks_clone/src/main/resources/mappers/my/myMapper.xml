@@ -45,6 +45,10 @@
 		UPDATE card SET c_master=#{c_master} WHERE id=#{id}
 	</update>
 	
+	<update id="remainUpdate" parameterType="String">
+		UPDATE card SET remaincost=#{remaincost} WHERE c_num=#{c_num}
+	</update>
+	
 	<!-- /eCard -->
 	
 	<!-- e-coupon -->

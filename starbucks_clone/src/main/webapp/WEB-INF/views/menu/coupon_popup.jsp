@@ -36,7 +36,6 @@
 				<tbody>
 					<c:set var="i" value="0"/>
 					<c:forEach var="eCouponDTO" items="${list }">
-					
 					<tr>
 						<td><input type="radio" name="couponChoose" style="text-align: center;"/></td>
 						<td style="padding:15px; width: 230px;"><p id="pon_name">${eCouponDTO.pon_name }</p></td>

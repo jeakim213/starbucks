@@ -7,6 +7,7 @@ import java.util.HashMap;
 
 import org.springframework.ui.Model;
 
+import com.clone.starbucks.DTO.CardDTO;
 import com.clone.starbucks.DTO.E_couponDTO;
 
 public interface IMenuService {
@@ -24,6 +25,8 @@ public interface IMenuService {
 	public void couponUse(E_couponDTO e_couponDTO, Model model) throws ParseException;
 
 	public int payment(HashMap<String,String> data) throws ParseException;
+	
+	public void cardChoice(CardDTO cardDTO, Model model); 
 	
 
 }

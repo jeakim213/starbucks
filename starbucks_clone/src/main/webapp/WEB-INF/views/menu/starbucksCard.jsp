@@ -21,47 +21,30 @@
 					<tr>
 						<th colspan="2" style="padding:25px; width: 25px;"></th>
 						<th style="padding:25px; width: 180px;">카드종류</th>
-						<th style="padding:25px; width: 100px;">닉네임</th>
 						<th style="padding:25px; width: 120px;">잔여금액</th>
 					</tr>
 				</thead>
 				<tbody>
 					<!-- ↓ 주석처리 지우면 됨 -->
-					<%-- <c:forEach var="#" items="${card.list }">--%>
-					<%-- <c:choose>
-					<c:when test="${card.c_master }==1">
-						<tr><b>
-							<td><input type="radio" checked="checked" id="${card.c_name}Choose" name="cardChoose" style="text-align: center;"/></td>name은 el태그${}쓰기
-							<td style="padding:15px; width: 215px;">${card.c_name}</td>
-							<td style="padding:15px; width: 100px;">정다${card.id}</td>
-							<td style="padding:15px; width: 120px;">7800${card.remaincost }원</td>
-						</b></tr>
-					</c:when>
-					<c:otherwise>
-						<tr>
-							<td><input type="radio" id="${card.c_name}Choose" name="cardChoose" style="text-align: center;"/></td>name은 el태그${}쓰기
-							<td style="padding:15px; width: 215px;">${card.c_name}</td>
-							<td style="padding:15px; width: 100px;">${card.id}</td>
-							<td style="padding:15px; width: 120px;">${card.remaincost }원</td>
-						</tr>
-					</c:otherwise>
-					</c:choose> --%>
-					<%-- </c:forEach>--%>
-					<!-- 아래는 예시화면 나중에 지우면 됨 -->
-					<tr>
-						<td style="padding:15px; width: 25px; color: red;"><b>★</b></td>
-						<td><input type="radio" checked="checked" id="다다Choose" name="cardChoose" style="text-align: center;"/></td>
-						<td style="padding:15px; width: 215px;">2022 Cherry Blossom</td>
-						<td style="padding:15px; width: 100px;"><b>다다</b></td>
-						<td style="padding:15px; width: 120px;"><b>76800원</b></td>
-					</tr>
-					<tr>
-						<td style="padding:15px; width: 25px;"></td>
-						<td><input type="radio" id="정다Choose" name="cardChoose" style="text-align: center;"/></td>
-						<td style="padding:15px; width: 215px;">Thank You!</td>
-						<td style="padding:15px; width: 100px;">정다</td>
-						<td style="padding:15px; width: 120px;">7800원</td>
-					</tr>
+					<c:forEach var="cardDTO" items="${list}">
+						<c:choose>
+							<c:when test="${cardDTO.c_master==1}">
+								<tr>
+									<td colspan="2" style="text-align: right; padding-right: 15px;"><label style="color: red; font-weight: bold;" >★</label><input type="radio" id="Choose" name="cardChoose" style="text-align: center;"/></td>
+									<td style="padding:15px; width: 215px;">${cardDTO.c_name}</td>
+									<td style="padding:15px; width: 120px;">${cardDTO.remaincost }원</td>
+								</tr>
+							</c:when>
+							<c:otherwise>
+								<tr>
+									<td colspan="2" style="text-align: right;padding-right: 15px;"><input type="radio" id="Choose" name="cardChoose" style="text-align: center;"/></td>
+									<td style="padding:15px; width: 215px;">${cardDTO.c_name}</td>
+									<td style="padding:15px; width: 120px;">${cardDTO.remaincost }원</td>
+								</tr>
+							</c:otherwise>
+						</c:choose>
+					</c:forEach>
+					
 				</tbody>	
 			</table>
 			<label style="color: red; font-size: 11px;"><b>★ 표시는 자주 사용하는 카드로 등록된 카드 입니다.</b></label><br>
