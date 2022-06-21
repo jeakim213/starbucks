@@ -10,7 +10,7 @@ import com.clone.starbucks.DTO.UserInfoDTO;
 @Repository
 public interface IMemberDAO {
 	
-	UserInfoDTO loginProc(UserInfoDTO member);
+	UserInfoDTO loginProc(String id);
 
 	UserInfoDTO selectId(String id);
 

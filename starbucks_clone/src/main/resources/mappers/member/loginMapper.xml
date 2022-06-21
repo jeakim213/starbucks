@@ -3,7 +3,7 @@
   <mapper namespace="com.clone.starbucks.DAO.IMemberDAO">
 
 	<select id="loginProc" 
-		parameterType="com.clone.starbucks.DTO.UserInfoDTO" 
+		parameterType="String" 
 		resultType="com.clone.starbucks.DTO.UserInfoDTO" >
 		SELECT * FROM userInfo WHERE id=#{id}
 	</select>

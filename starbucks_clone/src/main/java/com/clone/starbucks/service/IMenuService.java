@@ -2,6 +2,7 @@ package com.clone.starbucks.service;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.text.ParseException;
 import java.util.HashMap;
 
 public interface IMenuService {
@@ -15,4 +16,6 @@ public interface IMenuService {
 	public int getPrice(String p_name);
 	
 	public void insertMenu(String menuName) throws FileNotFoundException, IOException; //DB에 메뉴넣기
+	
+	public int payment(HashMap<String,String> data) throws ParseException;
 }

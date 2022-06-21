@@ -14,12 +14,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.clone.starbucks.DTO.CardDTO;
-import com.clone.starbucks.service.KakaoPay;
 import com.clone.starbucks.service.MsrServiceImpl;
 
 @Controller
 public class MsrController {
-	@Autowired KakaoPay kakaoPay;
 	@Autowired MsrServiceImpl msrService;
 	@Autowired HttpSession session;
 	//msr
@@ -107,6 +105,5 @@ public class MsrController {
 	//카카오페이결제 sale/kakaopay
 //	@RequestMapping(value="sale/kakaopay")
 //	public String 
->>>>>>> branch 'main' of https://github.com/jeakim213/stabucks.git
 	
 }

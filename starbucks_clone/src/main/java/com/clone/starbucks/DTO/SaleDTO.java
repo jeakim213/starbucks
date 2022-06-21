@@ -9,9 +9,8 @@ id varchar2(30) not null,
 p_name varchar2(50) not null,
 salecount number not null,
 saledate date default sysdate not null,
-s_name varchar2(50) not null,
 salemethod varchar2(50) not null,
-pon_no number not null
+pon_no number
 );
 
 ===== fk =====
@@ -39,7 +38,6 @@ public class SaleDTO {
 	private String p_name;	// 상품 이름 [FK, not null]
 	private int salecount;	// 판매 갯수 [not null]
 	private Date saledate;	// 판매일자 [not null, sysdate]
-	private String s_name;	// 지점명 [not null]
 	private String salemethod;	// 구매 수단 [not null]
 	private int pon_no;	// 쿠폰 순서 [FK, not null]
 	
@@ -73,12 +71,6 @@ public class SaleDTO {
 	}
 	public void setSaledate(Date saledate) {
 		this.saledate = saledate;
-	}
-	public String getS_name() {
-		return s_name;
-	}
-	public void setS_name(String s_name) {
-		this.s_name = s_name;
 	}
 	public String getSalemethod() {
 		return salemethod;

@@ -4,6 +4,7 @@ import javax.servlet.http.HttpServletRequest;
 
 import com.clone.starbucks.DTO.AllDTO;
 import com.clone.starbucks.DTO.CardDTO;
+import com.clone.starbucks.DTO.E_couponDTO;
 import com.clone.starbucks.DTO.UserInfoDTO;
 
 public interface IMyService {

@@ -1,6 +1,7 @@
 package com.clone.starbucks.controller;
 
 import java.util.HashMap;
+import java.util.Random;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -34,35 +35,62 @@ public class MemberController {
 		return "login/login";
 	}
 	
-	@PostMapping(value = "loginProc")
+	@PostMapping(value = "login/loginProc")//지혜
 	public String loginProc(UserInfoDTO member, Model model) {
 		String msg = memberService.loginProc(member);
 		if(msg.equals("로그인 성공")) {
-			return "redirect:/index?formpath=index";
+			return "redirect:/index";
 		}
 		model.addAttribute("msg", msg);
-		return "forward:/index?formpath=login";
+		return "redirect:/login/login";
 	}
 	
-	//카카오 인가코드 확인
-	@RequestMapping("login/login/kakaoLogin")
+	//카카오 인가코드 확인- 지혜
+	@RequestMapping("login/kakaoLogin")
 	public String kakaoLogin(String code) {
-		System.out.println("카카오 인가 코드 : " + code);
+		//카카오에서 url에 인가코드를 담아서 get방식으로 전해준다.
+		//전해준 인가코드를 확인 후 카카오서버에서 accessToken 값을 돌려준다.
 		String accessToken = memberService.getAccessToken(code);
-		HashMap<String, Object> userInfo = memberService.getUserInfo(accessToken);
+		//사용자의 accessToken값으로 정보를 얻어낸다.
+		HashMap<String, String> userInfo = memberService.getUserInfo(accessToken);
+		String id = userInfo.get("email").toString();
+		UserInfoDTO user = memberService.memberCheck(id);
 		
-		System.out.println("카카오 로그인 사용자의 닉네임 : " + userInfo.get("nickname"));
-		session.setAttribute("id", userInfo.get("nickname"));
-		session.setAttribute("accessToken", accessToken);
-		return "redirect:/index?formpath=index";
+		if(user == null) { //카카오로그인 가입이 없는경우 기본정보 입력해줌
+			Random rd = new Random();
+			RegisterDTO data = new RegisterDTO();
+			data.setId(id);
+			data.setPw("kakao" + (rd.nextInt(99) + 1));
+			data.setNickname(userInfo.get("nickname"));
+			data.setName(userInfo.get("nickname"));
+			int num = rd.nextInt(99999999) + 1;
+			String phoneNum = "010"+String.format("%08d", num) ;
+			data.setPhone(phoneNum);
+			data.setEmail(id);
+			data.setBirth_year(2000);
+			data.setBirth_month(Integer.parseInt(userInfo.get("birthday").substring(0, 1)));
+			data.setBirth_day(Integer.parseInt(userInfo.get("birthday").substring(2)));
+			data.setGender(userInfo.get("gender").charAt(0));
+			data.setEvent_e('Y');
+			data.setEvent_sms('Y');
+			
+			System.out.println(memberService.memberProc(data));
+			user = (UserInfoDTO)data;
+		}
+		
+		session.setAttribute("userInfo", user);
+		session.setAttribute("accessToken", accessToken); //로그아웃시 넘겨줄 accessToken값 저장
+		return "redirect:/index";
 	}
-
-	@GetMapping(value = "login/login")
-	public void logout(Model model) {
+	
+	@GetMapping(value = "login/logout") //지혜
+	public String logout(Model model) {
 		String accessToken = (String)session.getAttribute("accessToken");
-		memberService.logout(accessToken);
-		session.invalidate();
-		model.addAttribute("msg", "로그 아웃");
+		if(accessToken != null) memberService.logout(accessToken);
+		
+		if(memberService.logoutProc() == 1)
+			model.addAttribute("msg", "로그아웃 완료");
+		return "redirect:/index";
 	}
 	
 	

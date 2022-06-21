@@ -33,9 +33,8 @@ public class UserInfoDTO {
 	private int star;	// 별 [default 0]
 	private String grade;	// 등급 [not null, check, default wc]
 	private String nickname;	//닉네임
-	private char cupreward;	// 에코컵리워드 설정 [not null, check, default s]
+	private String cupreward;	// 에코컵리워드 설정 [not null, check, default s] :s는 별적립 d는 할인
 	private String DTPass;	//드라이브스루 패스 등록
-	private int pon_no; 	//쿠폰 넘버 [FK]
 	
 	
 	
@@ -78,10 +77,10 @@ public class UserInfoDTO {
 	public void setNickname(String nickname) {
 		this.nickname = nickname;
 	}
-	public char getCupreward() {
+	public String getCupreward() {
 		return cupreward;
 	}
-	public void setCupreward(char cupreward) {
+	public void setCupreward(String cupreward) {
 		this.cupreward = cupreward;
 	}
 	public String getDTPass() {
@@ -89,12 +88,6 @@ public class UserInfoDTO {
 	}
 	public void setDTPass(String dTPass) {
 		DTPass = dTPass;
-	}
-	public int getPon_no() {
-		return pon_no;
-	}
-	public void setPon_no(int pon_no) {
-		this.pon_no = pon_no;
 	}
 	
 	

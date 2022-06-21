@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 
@@ -101,7 +102,9 @@ var eFrequencyPlannerYn = 'Y';
   
 </script>
 
-
+<c:if test="${msg != ''}">
+	<script>alert('${msg}');</script>
+</c:if>
 <!-- 접근성_20171106 건너뛰기 링크  추가 -->
 	<div id="skip-menu">
 	  <a href="#gnb">메뉴바로가기</a>
@@ -122,10 +125,6 @@ var eFrequencyPlannerYn = 'Y';
 
 <!-- MSR 영역 -->
 
-
-
-
-			
 			<!-- MSR 영역 -->
 			<div id="top_MSR" class="eFreqTop"><!-- 20170510 수정 : 클래스 eFreqTop 추가 -->
 				<div class="top_msr_wrap" style="display:none;">
@@ -573,7 +572,7 @@ var eFrequencyPlannerYn = 'Y';
 					
 								
 <ul>
-	<li class="util_nav01 sign_out" style="display:none;"><a href="/starbucks;">Sign out</a></li>
+	<li class="util_nav01 sign_out" style="display:none;"><a href="/starbucks/login/logout;">Sign out</a></li>
 	<li class="util_nav01 sign_in"  style=""><a href="/starbucks/login/login">Sign In</a></li>
 	<li class="util_nav02"><a href="my/index" required="login">My Starbucks</a></li>
 	<li class="util_nav03"><a href="menu/orderList">Order</a></li>
