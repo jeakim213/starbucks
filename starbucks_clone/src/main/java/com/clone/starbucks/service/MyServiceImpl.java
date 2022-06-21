@@ -246,18 +246,15 @@ public class MyServiceImpl implements IMyService {
 		@Override
 		public boolean isExistCard(UserInfoDTO userInfo, CardDTO cardDTO) {
 
-			//UserInfoDTO user = (UserInfoDTO) session.getAttribute("userInfo");
+			UserInfoDTO user = (UserInfoDTO) session.getAttribute("userInfo");
 			
-			session.setAttribute("id", "admin");
-			String id = (String) session.getAttribute("id");
-			
-			//int cardCount = myDAO.userCard(user.getId());
-			int cardCount = myDAO.userCard(id);
-			System.out.println("service ;;;; : " + cardCount);
+			int cardCount = myDAO.userCard(user.getId());
+
+
 			if(cardCount == 0 ) {
 				return false;
 			}
-			System.out.println("true;;;;");
+			
 			return true;
 		}
 	

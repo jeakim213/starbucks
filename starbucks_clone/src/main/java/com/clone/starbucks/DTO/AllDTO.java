@@ -28,12 +28,6 @@ public class AllDTO extends UserInfoDTO{
 	public void setC_num(String c_num) {
 		this.c_num = c_num;
 	}
-	public int getC_master() {
-		return c_master;
-	}
-	public void setC_master(int c_master) {
-		this.c_master = c_master;
-	}		
 	
 	
 

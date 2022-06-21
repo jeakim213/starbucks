@@ -653,10 +653,10 @@ var eFrequencyPlannerYn = 'Y';
 					
 								
 <ul>
-	<li class="util_nav01 sign_out" style=""><a href="/starbucks">Sign out</a></li>
-	<li class="util_nav01 sign_in" style="display: none;"><a href="/starbucks/login/login">Sign In</a></li>
-	<li class="util_nav02"><a href="/starbucks/admin/memberListForm">My Starbucks</a></li>
-	<li class="util_nav03"><a href="/starbucks/menu/orderList">Order</a></li>
+	<li class="util_nav01 sign_out" style="display:none;"><a href="/starbucks/login/logout">Sign out</a></li>
+	<li class="util_nav01 sign_in"><a href="/starbucks/login/login">Sign In</a></li>
+	<li class="util_nav02"><a href="/starbucks/my/index" required="login">My Starbucks</a></li>
+	<li class="util_nav03"><a href="/starbucks/menu/orderList" required="login">Order</a></li>
 	<li class="util_nav04"><a href="/starbucks/store/store_map">Find a Store</a></li>
 </ul>
 				</nav>
@@ -712,29 +712,32 @@ var eFrequencyPlannerYn = 'Y';
 	<table style="width: 600px;">
 		<thead>
 			<tr>
-				<th style="width: 300px; height:20px; line-height: 20px;" align="left">아이디</th>
-				<th style="width: 250px; height:20px; line-height: 20px;" align="left">등급</th>
-				<th style="width: 100px; height:20px; line-height: 20px;" align="left">가입일</th>
+				<th style="width: 10px; height:20px; line-height: 20px;" align="left"></th>
+				<th style="width: 275px; height:20px; line-height: 20px;" align="left">아이디</th>
+				<th style="width: 205px; height:20px; line-height: 20px;" align="left">등급</th>
+				<th style="width: 100px; height:20px; line-height: 20px;" align="right">가입일</th>
+				<th style="width: 10px; height:20px; line-height: 20px;" align="left"></th>
 			</tr>
 		</thead>
 		<tr>
-			<td colspan=3><hr></td>
+			<td colspan=5><hr></td>
 		</tr>
 		<%-- <c:forEach var="all" items="${list }"> --%>
 		<c:forEach var="db" items="${sessionScope.list }">
 			<tr>
+				<td></td>
 				<td style="height:40px; line-height: 40px;" align="left">
 					<a href="userInfoForm?id=${db.id }">${db.id }</a>
 				</td>
 				<td style="height:40px; line-height: 40px;" align="left">${db.grade }</td>
-				<td style="height:40px; line-height: 40px;" align="left">${db.registerdate }</td>
+				<td style="height:40px; line-height: 40px;" align="right">${db.registerdate }</td>
+				<td></td>
 			</tr>
 		</c:forEach>
 		<tr>
-			<td colspan=3><hr></td>
+			<td colspan=5><hr></td>
 		</tr>
 	</table>
-	<!-- 이전 1 2 3 4 다음 -->
 	${sessionScope.page }
 	<form>
 		<table>

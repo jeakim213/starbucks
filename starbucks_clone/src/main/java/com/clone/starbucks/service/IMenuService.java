@@ -23,4 +23,7 @@ public interface IMenuService {
 	
 	public void couponUse(E_couponDTO e_couponDTO, Model model) throws ParseException;
 
+	public int payment(HashMap<String,String> data) throws ParseException;
+	
+
 }

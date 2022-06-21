@@ -5,8 +5,8 @@ import java.util.Date;
 
 import javax.servlet.http.HttpServletRequest;
 
-import com.clone.starbucks.DTO.AllDTO2;
 import com.clone.starbucks.DTO.E_couponDTO;
+import com.clone.starbucks.DTO.RegisterDTO;
 import com.clone.starbucks.DTO.UserInfoDTO;
 
 public interface IAdminService {
@@ -23,16 +23,12 @@ public interface IAdminService {
 		
 //----------------------------------------E-coupon----------------------------------------------	
 
-
-
-	public void memberListForm(int currentPage, String select, String search);
+	void memberListForm(int currentPage, String select, String search);
 	
-	public AllDTO2 userInfoForm(String id);
+	RegisterDTO userInfoForm(String id);
 	
-	public String memberModifyForm(AllDTO2 all);
-
-//	public boolean deleteAndCheckProc(UserInfoDTO check);
+	String memberModifyProc(RegisterDTO all, UserInfoDTO userInfo);
 	
-	public String deleteProc(UserInfoDTO user);
+	String deleteProc(RegisterDTO all, UserInfoDTO userInfo);
 	
 }

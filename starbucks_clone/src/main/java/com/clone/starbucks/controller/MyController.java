@@ -2,14 +2,12 @@ package com.clone.starbucks.controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.ArrayList;
-import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import org.apache.ibatis.exceptions.TooManyResultsException;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -104,18 +102,16 @@ public class MyController {
 	   public String my_index(UserInfoDTO userInfo, CardDTO cardDTO, Model model){
 	      
 	   
-	      //UserInfoDTO user = (UserInfoDTO) session.getAttribute("userInfo");
+	      UserInfoDTO user = (UserInfoDTO) session.getAttribute("userInfo");
 	      
-	      session.setAttribute("id", "admin");
-	      String id = (String) session.getAttribute("id");
 	      
 	      boolean b = myService.isExistCard(userInfo, cardDTO);
 
 	      // 카드 없는 회원
 	      if(b==false) {
 	                  
-	            //int couponCount = myDAO.userCoupon(user.getId());
-	            int couponCount = myDAO.userCoupon(id);
+	            int couponCount = myDAO.userCoupon(user.getId());
+	          
 	            model.addAttribute("couponCount", couponCount);
 	            
 	            return "my/index";
@@ -123,8 +119,8 @@ public class MyController {
 	      
 	      
 	      // 카드 있는 회원)
-	      //AllDTO all = myService.userAllInfo(user.getId());
-	      AllDTO all = myService.userAllInfo(id);
+	      AllDTO all = myService.userAllInfo(user.getId());
+	      
 	      // 등급명 변경
 	      if(all.getGrade().equals("WC")) {
 	         all.setGrade("Welcome Level");
@@ -137,12 +133,12 @@ public class MyController {
 	      
 	      // 카드 갯수
 	      
-	      //int cardCount = myDAO.userCard(user.getId());
-	      int cardCount = myDAO.userCard(id);
+	      int cardCount = myDAO.userCard(user.getId());
+	      
 	      // 쿠폰 갯수
 
-	      //int couponCount = myDAO.userCoupon(user.getId());
-	      int couponCount = myDAO.userCoupon(id);
+	      int couponCount = myDAO.userCoupon(user.getId());
+	      
 	      
 	      //views로 넘겨주는 값
 	   
@@ -160,7 +156,8 @@ public class MyController {
 	      return "my/index2";
 
 	   }
-
+	   
+	   
 	@RequestMapping(value = "my/mycard_charge")
 	public String mycard_charge() {
 		return "my/mycard_charge";

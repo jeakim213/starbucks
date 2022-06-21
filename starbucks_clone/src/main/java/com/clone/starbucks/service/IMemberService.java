@@ -20,8 +20,9 @@ public interface IMemberService {
 	//로그인버튼 클릭시
 	public String loginProc(UserInfoDTO member);
 	public String getAccessToken(String code);
-	public HashMap<String, Object> getUserInfo(String accessToken);
-   
+	public HashMap<String, String> getUserInfo(String accessToken);
+	public UserInfoDTO memberCheck(String id);
+	
 	//로그아웃
 	public void logout(String accessToken);
 

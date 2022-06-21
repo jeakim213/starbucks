@@ -600,7 +600,7 @@ var eFrequencyPlannerYn = 'Y';
 					
 								
 <ul>
-	<li class="util_nav01 sign_out" style="display:none;"><a href="/starbucks">Sign out</a></li>
+	<li class="util_nav01 sign_out" style="display:none;"><a href="/starbucks/login/logout">Sign out</a></li>
 	<li class="util_nav01 sign_in"><a href="/starbucks/login/login">Sign In</a></li>
 	<li class="util_nav02"><a href="/starbucks/my/index" required="login">My Starbucks</a></li>
 	<li class="util_nav03"><a href="/starbucks/menu/orderList" required="login">Order</a></li>
@@ -635,7 +635,6 @@ var eFrequencyPlannerYn = 'Y';
 					</div>
 				</div>
 				<!-- 서브 타이틀 end -->
-				
 				
 				<!-- 0530 다정 장바구니 제작 -->
 				<!-- 내용 부분 -->

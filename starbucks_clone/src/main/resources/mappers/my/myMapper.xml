@@ -73,6 +73,5 @@
 		FROM userinfo a LEFT OUTER JOIN card b ON a.id = b.id
 		WHERE a.id = #{id} and b.c_master = '1'
 	</select>
-	
-	
+
 	</mapper>
