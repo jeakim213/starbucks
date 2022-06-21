@@ -1768,8 +1768,8 @@ function requestPay(){
 
 
                             <ul>
-                                <li class="util_nav01 sign_out" style=""><a href="javascript:void(0);">Sign out</a></li>
-                                <li class="util_nav01 sign_in" style="display: none;"><a href="javascript:void(0);">Sign
+                                <li class="util_nav01 sign_out" style=""><a href="/starbucks/login/logout">Sign out</a></li>
+                                <li class="util_nav01 sign_in" style="display: none;"><a href="/starbucks/login/login">Sign
                                         In</a></li>
                                 <li class="util_nav02"><a href="javascript:void(0);" required="login"
                                         data-href="my/index">My Starbucks</a></li>
