@@ -1,11 +1,14 @@
 package com.clone.starbucks.service;
 
 import java.text.ParseException;
+import java.util.HashMap;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+
+import org.springframework.ui.Model;
 
 import com.clone.starbucks.DTO.CardDTO;
+import com.clone.starbucks.DTO.RegisterDTO;
 
 public interface IMsrService {
 
@@ -16,7 +19,9 @@ public interface IMsrService {
 	
 	CardDTO eGiftCardProc(CardDTO cardDTO, HttpServletRequest request) throws ParseException;
 	
-//	void sendMail(HttpServletRequest request, HttpServletResponse response) throws Exception;
+	boolean setPurchaseData(HashMap<String, String> data);
+	
+	void regInfo(RegisterDTO registerDTO, Model model);
 	
 //----------------------------------------E-gift Card----------------------------------------------
 

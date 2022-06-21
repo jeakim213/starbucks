@@ -10,7 +10,7 @@
 	
 	<!-- coupon_popup -->
 	<select id="couponList" parameterType="String" resultType="com.clone.starbucks.DTO.E_couponDTO">
-		SELECT * FROM e_coupon WHERE id=#{id}
+		SELECT * FROM e_coupon WHERE id=#{id} pon_used='N'
 	</select>
 	
 	<select id="cardList" parameterType="String" resultType="com.clone.starbucks.DTO.CardDTO">

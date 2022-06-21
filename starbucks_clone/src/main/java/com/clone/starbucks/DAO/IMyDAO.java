@@ -30,7 +30,7 @@ public interface IMyDAO {
 	
 	int countC_num(String id);
 	
-	int remainUpdate(CardDTO cardDTO);
+	int remainUpdate(CardDTO check);
 
 	
 	//---------------------------------

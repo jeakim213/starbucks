@@ -276,8 +276,10 @@ public class MyServiceImpl implements IMyService {
 			int newCost =  check.getRemaincost()+Integer.parseInt(chargePrice);
 			check.setRemaincost(newCost);
 			if(myDAO.remainUpdate(check)==1) {
+				System.out.println("성공~");
 				return true;
 			}else {
+				System.out.println("실패ㅠㅠ");
 				return false;
 			}
 			
