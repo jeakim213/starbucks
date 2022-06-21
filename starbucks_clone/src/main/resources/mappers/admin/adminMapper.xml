@@ -3,12 +3,9 @@
 <mapper namespace="com.clone.starbucks.DAO.IAdminDAO">
 
 	<select id="memberListForm" resultType="com.clone.starbucks.DTO.RegisterDTO">
-		SELECT A.id, A.grade, (SELECT B.registerdate FROM register B WHERE A.id = B.id) AS registerdate FROM userInfo A
-	</select>
-	<!-- <select id="memberListForm" resultType="com.clone.starbucks.DTO.RegisterDTO">
 		SELECT B.* FROM(
 			SELECT rownum rn, A.* FROM( 
-				SELECT * FROM register 
+				SELECT A.id, A.grade, (SELECT B.registerdate FROM register B WHERE A.id = B.id) AS registerdate FROM userInfo A
 				<choose>
 					<when test="sel == 'id'">
 						WHERE id like '%'||#{search}||'%'
@@ -17,21 +14,12 @@
 						WHERE registerdate like '%'||#{search}||'%'
 					</when>
 				</choose>
-			)A, SELECT rownum rn, C.* FROM( 
-				SELECT * FROM userInfo 
-				<choose>
-					<when test="sel == 'grade'">
-						WHERE grade like '%'||#{search}||'%'
-					</when>
-				</choose>
-			)C
+			)A
 		)B WHERE rn BETWEEN #{b} and #{e}
-	</select> -->
+	</select>
 	<select id="memberCount" resultType="int">
 		SELECT count(*) FROM register
 	</select>
-	
-	
 	
 	<select id="userInfoForm" resultType="com.clone.starbucks.DTO.RegisterDTO">
 		SELECT * FROM register WHERE id=#{id}
@@ -39,8 +27,6 @@
 	<select id="info" resultType="com.clone.starbucks.DTO.UserInfoDTO">
 		SELECT star, grade, nickname, cupreward FROM userInfo WHERE id=#{id}
 	</select>
-	
-	
 	
 	<update id="updateReg" parameterType="com.clone.starbucks.DTO.RegisterDTO" >
 		UPDATE register SET name=#{name}, phone=#{phone}, email=#{email},
@@ -52,9 +38,10 @@
 		UPDATE userInfo SET star=#{star}, grade=#{grade}, nickname=#{nickname}, cupreward=#{cupreward} WHERE id=#{id}
 	</update>
 	
-	
-	
-	<delete id="deleteLogin" parameterType="String">
+	<delete id="deleteReg" parameterType="String">
+		DELETE FROM register WHERE id=#{id}
+	</delete>
+	<delete id="deleteUser" parameterType="String">
 		DELETE FROM userInfo WHERE id=#{id}
 	</delete>
 	

@@ -13,7 +13,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.clone.starbucks.DAO.IAdminDAO;
-import com.clone.starbucks.DTO.AllDTO2;
 import com.clone.starbucks.DTO.E_couponDTO;
 import com.clone.starbucks.DTO.RegisterDTO;
 import com.clone.starbucks.DTO.UserInfoDTO;
@@ -254,28 +253,25 @@ public class AdminServiceImpl implements IAdminService {
 
 //----------------------------------------E-coupon----------------------------------------------
 
-	
-	
-	//목록
+	//단 - 목록
 	@Override
 	public void memberListForm(int currentPage, String select, String search) {
 		int pageBlock = 5; //한 화면에 보여줄 데이터 수
 		int totalCount = adminDAO.memberCount(); //총 데이터의 수 
 		int end = currentPage * pageBlock; //데이터의 끝 번호
 		int begin = end+1 - pageBlock; //데이터의 시작 번호
-		
 		ArrayList<RegisterDTO> list = adminDAO.memberListForm(begin, end, select, search);
 		session.setAttribute("list", list);
 		String url = "/starbucks/admin/memberListForm?currentPage=";
 		session.setAttribute("page", PageService.getNavi(currentPage, pageBlock, totalCount, url));
 	}
 	
-	//정보
+	//단 - 정보
 	@Override
-	public AllDTO2 userInfoForm(String id) {
+	public RegisterDTO userInfoForm(String id) {
 		RegisterDTO reg = adminDAO.userInfoForm(id);
 		UserInfoDTO user = adminDAO.info(id);
-		AllDTO2 all = new AllDTO2();
+		RegisterDTO all = new RegisterDTO();
 		if (reg != null) {
 			all.setId(reg.getId());
 			all.setName(reg.getName());
@@ -297,47 +293,26 @@ public class AdminServiceImpl implements IAdminService {
 		return all;
 	}
 	
-//	@Value("${ADMIN:admin}")
-//	private String adminAccount;
+	//단
+//		@Value("${ADMIN:admin}")
+//		private String adminAccount;
 	
-	//수정
+	//단 - 수정
 	@Override
-	public String memberModifyForm(AllDTO2 all) {
-//		BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
-//
-		AllDTO2 oldUserInfo = (AllDTO2) session.getAttribute("all");
-		if (all.getName() != "") {
-			RegisterDTO reg = all;
-			adminDAO.updateReg(reg);
-		}
-		if (all.getNickname() != "") {
-			UserInfoDTO user = all;
-//			UserInfoDTO user = new UserInfoDTO();
-			user.setNickname(all.getNickname());
-			user.setStar(all.getStar());
-			user.setGrade(all.getGrade());
-			user.setCupreward(all.getCupreward());
-			adminDAO.updateUser(user);
-		}
-		return "회원 수정";
+	public String memberModifyProc(RegisterDTO all, UserInfoDTO userInfo) {
+		adminDAO.updateReg(all);
+		UserInfoDTO user = (UserInfoDTO) all;
+		adminDAO.updateUser(user);
+		return "회원 수정 완료";
 	}
-	
+
+	//단 - 삭제
 	@Override
-	public String deleteProc(UserInfoDTO user) {
-
-		// 세션 아이디로 비밀번호 확인(일반사용자 또는 관리자 계정)
-//		String id = (String) session.getAttribute("id");
-
-//		BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
-//		UserInfoDTO login = adminDAO.userPassword(id);
-		
-		// 계정 삭제
-		String Id = (String)session.getAttribute("Id");
-		adminDAO.deleteLogin(Id);
-		
-		// 관리자 계정과 로그인된 계정이 다르거나 관리자 계정과 수정계정이 같으면 세션 삭제
-//		if(adminAccount.equals(id) == false || adminAccount.equals(Id))
-//			session.invalidate();
+	public String deleteProc(RegisterDTO all, UserInfoDTO userInfo) {
+		adminDAO.deleteReg(all.getId());
+		UserInfoDTO user = (UserInfoDTO) all;
+		adminDAO.deleteUser(user.getId());
+		System.out.println("넷");
 		return "회원 삭제 완료";
 	}
 	

@@ -652,10 +652,10 @@ var eFrequencyPlannerYn = 'Y';
 					
 								
 <ul>
-	<li class="util_nav01 sign_out" style=""><a href="/starbucks">Sign out</a></li>
-	<li class="util_nav01 sign_in" style="display: none;"><a href="/starbucks/login/login">Sign In</a></li>
-	<li class="util_nav02"><a href="/starbucks/admin/memberListForm">My Starbucks</a></li>
-	<li class="util_nav03"><a href="/starbucks/menu/orderList">Order</a></li>
+	<li class="util_nav01 sign_out" style="display:none;"><a href="/starbucks">Sign out</a></li>
+	<li class="util_nav01 sign_in"><a href="/starbucks/login/login">Sign In</a></li>
+	<li class="util_nav02"><a href="/starbucks/my/index" required="login">My Starbucks</a></li>
+	<li class="util_nav03"><a href="/starbucks/menu/orderList" required="login">Order</a></li>
 	<li class="util_nav04"><a href="/starbucks/store/store_map">Find a Store</a></li>
 </ul>
 				</nav>
@@ -808,12 +808,6 @@ var eFrequencyPlannerYn = 'Y';
 							<input type="checkbox" name="event_e" value="N" disabled="disabled">&nbsp;E-mail
 						</td>
 					</c:when>
-					<%-- <c:otherwise>
-						<td style="width: 250px; height: 40px;" align="center">
-							<input type="checkbox" name="event_sms" value="N" disabled="disabled">&nbsp;SMS&nbsp;&nbsp;
-							<input type="checkbox" name="event_e" value="N" checked disabled="disabled">&nbsp;E-mail
-						</td>
-					</c:otherwise> --%>
 				</c:choose>
 			</tr>
 			<tr>
@@ -852,9 +846,7 @@ var eFrequencyPlannerYn = 'Y';
 		</table>
 		<div style="width: 450px; text-align: center; margin: 2px;">
 			<button type="submit">수정</button>
-			<%-- <input type=button style="width: 60px;" value='삭제'
-				onclick="location.href='${root}index?formpath=memberDelete&modifyId=${user.id }'" /> --%>
-			<button type="button" onclick="location.href='${root}memberDelete?Id=${all.id }'">삭제</button>
+			<button type="submit" onclick="this.form.action='deleteProc'">삭제</button>
 			<button type="button" onclick="location.href='/starbucks/admin/memberListForm'">목록</button>
 		</div>
 	</form>

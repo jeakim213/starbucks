@@ -23,17 +23,15 @@ public interface IAdminDAO {
 	
 	ArrayList<RegisterDTO> memberListForm(@Param("b")int begin, @Param("e")int end, 
 			@Param("sel")String select, @Param("search")String search);
-	
 	int memberCount();
 	
 	RegisterDTO userInfoForm(String id);
-	
 	UserInfoDTO info(String id);
 
-	int updateReg(RegisterDTO reg);
-
+	int updateReg(RegisterDTO all);
 	int updateUser(UserInfoDTO user);
-	
-	void deleteLogin(String Id);
+
+	void deleteReg(String Id);
+	void deleteUser(String Id);
 	
 }

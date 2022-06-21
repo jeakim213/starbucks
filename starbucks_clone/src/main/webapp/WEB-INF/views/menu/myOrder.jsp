@@ -586,6 +586,7 @@ var eFrequencyPlannerYn = 'Y';
 							</div>
 							<div class="order_coupon&disc" style="margin-bottom: 50px;">
 							<h3>쿠폰사용</h3><br>
+							<c:set var="discount" value="0"/>
 							<div class="order_coupon&disc_inner" style="text-align: center;">
 								<table class="coupon" style="border:solid; border-color: #dfdfdf; font-size: 14px; margin:auto;">
 								<thead>
@@ -594,17 +595,24 @@ var eFrequencyPlannerYn = 'Y';
 										<th style="padding:25px; width: 140px;">사용기한</th>
 										<th style="padding:25px; width: 120px;">쿠폰금액</th>
 									</tr>
+									
 								</thead>
 								<tbody>
 									<%-- <c:forEach var="#" items="${coupon.list }">--%>
 									<tr>
+										<td><input type="hidden" id="pon_no"/></td><%--쿠폰넘버 넘겨주기 --%>
 										<td style="padding:25px; width: 230px;">1<%-- ${coupon.name }--%></td>
 										<td style="padding:25px; width: 140px;">2 ~ 3<%-- ${coupon.start }&nbsp;~&nbsp;${coupon.end }--%></td>
 										<td style="padding:25px; width: 120px;">4<%-- ${coupon.cost }--%>원</td>
+										<%-- <c:set var="discount" value="${discount + coupon.cost }"/> --%>
 									</tr>
 									<%-- </c:forEach>--%>
 								</tbody>	
 								</table>
+								<c:if test="${sessionScope.userinfo.cupreward == 'D'}">
+									<p style="color: red;">* 리워드 할인이 적용되었습니다.</p>
+									<c:set var="discount" value="${discount + 400 }"/>
+								</c:if>
 								<br>
 								<input type="button" class="btn_coupon" value="쿠폰 검색" onclick="window.open('coupon_popup','COUPON 적용하기','width=700 ,height=315 ,location=no,status=no, scrollbars=yes')"><br>
 							</div>
@@ -630,13 +638,13 @@ var eFrequencyPlannerYn = 'Y';
 									</tr>
 									<tr>
 										<td><label style="color:red;">할인 금액&nbsp;&nbsp;</label></td>
-										<td><label class="discountMoney" style="font-size: 17px; color:red;">0 원<%--{할인금액:쿠폰금액} --%></label></td>
+										<td><label class="discountMoney" style="font-size: 17px; color:red;">${discount } 원</label></td>
 									</tr>
 								</table>
 								<br><br><br>
 								<p>
 									<label>최종 결제 금액&nbsp;&nbsp;</label>
-									<label class="payMoney" style="font-size: 27px;">4500 원<%--${productprice - 할인금액} --%></label>
+									<label class="payMoney" style="font-size: 27px;">${productprice - discount} 원</label>
 								</p>
 							</div>
 						</div>
@@ -645,7 +653,7 @@ var eFrequencyPlannerYn = 'Y';
 						</div> -->
 						
 						<div class="order_submit" style="margin: auto; text-align: center;">
-							<input type="submit" value="결제" class="submitResetBtn" style="background: #006633; color: white;">
+							<input type="button" value="결제" class="submitResetBtn" onclick="payment();" style="background: #006633; color: white;">
 							<input type="reset" value="취소" class="submitResetBtn" style="background: #f6f6f6; ">
 						</div>
 						
@@ -849,22 +857,26 @@ var eFrequencyPlannerYn = 'Y';
 						
 			<script src="//image.istarbucks.co.kr/common/js/makePCookie.js"></script>
 		
-			<form name="drinkListForm" method="get">
-                <input type="hidden" name="product_cd">
-			</form>
 			
-			<input type="hidden" name="themeType" id="themeType" value="">
-			<input type="hidden" name="selIndex" id="selIndex" value="">
 		</div>
 		
 		<script src="../common/js/jquery.ezmark.min.js"></script>
         <script src="../common/js/menu.js"></script>
         <script src="../common/js/jquery.async.min.js"></script>
         <script src="../common/js/menu/patch4sm.js"></script>
-<script type="text/javascript">
-				
+        <script src="https://service.iamport.kr/js/iamport.payment-1.1.5.js"></script>
+		<!-- 아임포트 -->
+		<script src ="https://cdn.iamport.kr/js/iamport.payment-1.1.5.js" type="text/javascript"></script>
+		        
+<script type="text/javascript">//결제페이지-지혜0620
+	var req;
+	var reward = "<c:out value='${sessionScope.userinfo.cupreward}'/>";
+	var IMP = window.IMP;
+	var code = "imp86654742"; //가맹점 식별코드
+	IMP.init(code);
+	
 	$(document).ready(function(){
-		__ajaxCall("interface/checkLogin", {}, true, "json", "post"
+		__ajaxCall("starbucks/interface/checkLogin", {}, true, "json", "post"
    			,function (_response) {
    				if (_response.result_code == "FAIL") {
    					alert("로그인이 필요한 기능 입니다.");
@@ -876,9 +888,64 @@ var eFrequencyPlannerYn = 'Y';
    		);
 	});
 	
-	/* 개인컵 리워드 확인 */
-	$('div.msr_card_zone').bind('click', function(){
-				});
-	             
+	function payment(){
+		price = $(".payMoney").text().slice(0, -2);
+		payway = $("input[name='payway']:checked").val();
+		//couponNum = $("#pon_no").val();
+		
+		var msg;
+		if(payway == 'kakao'){//카카오페이결제시
+			//결제요청
+			IMP.request_pay({
+				//name과 amout만있어도 결제 진행가능
+				pg : 'kakao', //pg사 선택 (kakao, kakaopay 둘다 가능)
+				pay_method: 'card',
+				merchant_uid : 'merchant_' + new Date().getTime(),
+				name : '스타벅스 음료 및 푸드', // 상품명
+				amount : price,
+				buyer_name : '<c:out value="${sessionScope.userinfo.id }"/>',
+				buyer_tel : '010-2178-9724',  //필수항목
+			}, function(rsp){
+				if(rsp.success){//결제 성공시 판매날짜랑 판매수단, 가격
+					msg = '결제가 완료되었습니다';
+					var result = {
+					"pay_date" : new Date(),
+					"amount" : rsp.paid_amount,
+					"method" : 'kakao',
+					//"couponNum" : couponNum
+					}
+					
+					req = new XMLHttpRequest();
+					req.onreadystatechange = resultAjax;
+					req.open('post', 'payment')
+					data = JSON.stringify(objParam);//json의 자료형으로 변경해주기
+					//data의 타입 지정하기. 서버에서 확인하여 JSON의 타입으로 처리할 수 있다.
+					req.setRequestHeader('Content-Type', 'application/json; charset=UTF-8')
+					req.send(data);
+					
+				}
+				else{//결제 실패시
+					msg = '결제에 실패했습니다';
+					msg += '에러 : ' + rsp.error_msg
+					alert(msg);
+				}
+			});//pay
+			
+		}else{//스벅카드결제시
+			
+		}
+	}
+	
+	function resultAjax(){
+		if(req.readyState == 4 && req.status == 200){
+			var _response = req.responseText;
+			if (_response == 1) {
+				msg = "주문을 완료하였습니다.\n주문내역은 마이페이지 > 전자영수증에서 확인 가능합니다.";
+			} else {
+				msg = ("ajax통신실패");
+			}
+			//location.href = 'index';
+		}
+	}
 </script>
 <div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div></div></div></div></body></html>

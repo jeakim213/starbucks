@@ -14,13 +14,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.clone.starbucks.DTO.CardDTO;
-import com.clone.starbucks.service.KakaoPay;
 import com.clone.starbucks.service.MailSenderService;
 import com.clone.starbucks.service.MsrServiceImpl;
 
 @Controller
 public class MsrController {
-	@Autowired KakaoPay kakaoPay;
 	@Autowired MsrServiceImpl msrService;
 	@Autowired HttpSession session;
 	@Autowired MailSenderService mail;
