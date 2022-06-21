@@ -13,4 +13,8 @@
 		SELECT * FROM e_coupon WHERE id=#{id}
 	</select>
 	
+	<select id="cardList" parameterType="String" resultType="com.clone.starbucks.DTO.CardDTO">
+		SELECT * FROM card WHERE id=#{id}
+	</select>
+	
 </mapper>

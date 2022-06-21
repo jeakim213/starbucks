@@ -591,7 +591,7 @@ var eFrequencyPlannerYn = 'Y';
 								</thead>
 								<tbody>
 									<tr>
-										<td style="padding:25px; width: 230px;" id="pon_name"><input type="hidden" id="pon_no" value="n"/></td>
+										<td style="padding:25px; width: 230px;" id="pon_name"></td>
 										<td style="padding:25px; width: 140px;" id="pon_date"></td>
 										<td style="padding:25px; width: 120px;" >
 										<input type="text" id="pon_cost" style="border: none; width: 35px;" readonly="readonly" onclick="setCost();"/></td>
@@ -610,7 +610,7 @@ var eFrequencyPlannerYn = 'Y';
 							<h3>결제수단</h3><br>
 							<div class="order_pay_inner" style="text-align: center;">
 								<input type="radio" name="payway" value="sbcard" checked="checked" style="margin-top: 50px; width:20px;height:20px;border:1px;">
-								<input type="button" value="스타벅스 카드" class="btn_pay" style="background: #006633; color: white"><!-- onclick="window.open('starbucksCard','카드 선택하기','width=700 ,height=700 ,location=no,status=no, scrollbars=yes')" -->
+								<input type="button" value="스타벅스 카드" class="btn_pay" style="background: #006633; color: white">
 								<input type="radio" name="payway" value="kakao" style="margin-top: 50px; margin-left: 50px; width:20px;height:20px;border:1px;">
 								<input type="button" value="Kakao Pay" class="btn_pay" style="background: #fae100;" ><br>
 							</div>
@@ -640,7 +640,9 @@ var eFrequencyPlannerYn = 'Y';
 						<!-- <div class="order_orderbtn" style="margin-bottom: 50px;">
 							<h3>결제화면</h3>
 						</div> -->
-						
+						<input type="hidden" id="ponNo" value="">
+						<input type="hidden" id="cardNum" value="" onclick="cardPayment();">
+						<input type="hidden" id="cardMoney" value="">
 						<div class="order_submit" style="margin: auto; text-align: center;">
 							<input type="button" value="결제" class="submitResetBtn" onclick="payment();" style="background: #006633; color: white;">
 							<input type="reset" value="취소" class="submitResetBtn" style="background: #f6f6f6; ">
@@ -881,7 +883,7 @@ var eFrequencyPlannerYn = 'Y';
 	function payment(){
 		price = $(".payMoney").text().slice(0, -2);
 		payway = $("input[name='payway']:checked").val();
-		couponNum = $("#pon_no").val();
+		couponNum = $("#ponNo").val();
 		
 		var msg;
 		if(payway == 'kakao'){//카카오페이결제시
@@ -922,7 +924,10 @@ var eFrequencyPlannerYn = 'Y';
 			});//pay
 			
 		}else{//스벅카드결제시
-			
+			//카드목록창 open
+			window.open('cardChoice','카드 선택하기','width=700 ,height=700 ,location=no,status=no, scrollbars=yes');
+			//값 선택시 히든input에 카드잔액&카드num받아오기.
+			//강제 액션넣어 function동작
 		}
 	}
 	
@@ -932,16 +937,47 @@ var eFrequencyPlannerYn = 'Y';
 			if (_response == 1) {
 				msg = "주문을 완료하였습니다.\n주문내역은 마이페이지 > 전자영수증에서 확인 가능합니다.";
 			} else {
-				msg = ("ajax통신실패");
+				msg = ("통신실패");
 			}
 			alert(msg);
-			//location.href = 'index';
+			location.href = '${pageContext.request.contextPath}/index';
+		}
+	}
+	
+	function cardPayment(){
+		var card_num = $("#cardNum").val();
+		var card_money = parseInt($("#cardMoney").val());
+		var ponno = $("#ponNo").val();
+		console.log(ponno);
+		
+		if(card_num == ''){
+			alert("결제실패: 선택된 카드가 없습니다.");
+		}else{
+			if(card_money >= price){
+				var objParam = {
+					"pay_date" : new Date(),
+					"amount" : price,
+					"method" : 'sbcard',
+					"couponNum" : ponno,
+					"card_num" : card_num
+				}
+					
+				req = new XMLHttpRequest();
+				req.onreadystatechange = resultAjax;
+				req.open('post', 'payment')
+				data = JSON.stringify(objParam);//json의 자료형으로 변경해주기
+				//data의 타입 지정하기. 서버에서 확인하여 JSON의 타입으로 처리할 수 있다.
+				req.setRequestHeader('Content-Type', 'application/json; charset=UTF-8')
+				req.send(data);
+			}else{
+				alert("결제실패: 카드 잔액이 부족합니다. 충전해주세요.");
+				location.href = '${pageContext.request.contextPath}/my/mycard_charge_1';
+			}
 		}
 	}
 	
 	function setCost(){
 		var pondis = parseInt($('#pon_cost').val());
-		console.log('쿠폰'+pondis);
 		var discount = parseInt($('.discountMoney').text().slice(0, -2));
 		var discost = pondis + discount;
 		var paycost = parseInt($('.payMoney').text().slice(0, -2));

@@ -36,7 +36,6 @@
 				<tbody>
 					<c:set var="i" value="0"/>
 					<c:forEach var="eCouponDTO" items="${list }">
-					
 					<tr>
 						<td><input type="radio" name="couponChoose" style="text-align: center;" value="${eCouponDTO.pon_no }"/></td>
 						<td style="padding:15px; width: 230px;"><p>${eCouponDTO.pon_name }</p>
@@ -56,14 +55,14 @@
 </div>
 </body>
 <script src="//image.istarbucks.co.kr/common/js/jquery-1.10.2.min.js"></script>
-<script type="text/javascript">
+<script type="text/javascript"> //지혜 0621
 	function sendCoupon(){
 		num = $("input[name='couponChoose']:checked");
 		obj = $(num).closest('tr');//부모요소
 		name = $(obj).find("#pon_name").val();
 		date = $(obj).find("#pon_date").val();
 		cost = $(obj).find("#pon_cash").val();
-		window.opener.document.getElementById('pon_no').value = $(num).val();
+		window.opener.document.getElementById('ponNo').value = $(num).val();
 		window.opener.document.getElementById('pon_name').innerText = name;
 		window.opener.document.getElementById('pon_date').innerText = date;
 		window.opener.document.getElementById('pon_cost').value = cost;

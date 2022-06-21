@@ -29,6 +29,8 @@ public interface IMyDAO {
 	int masterBool(String c_num);
 	
 	int countC_num(String id);
+	
+	int remainUpdate(CardDTO cardDTO);
 
 	
 	//---------------------------------
@@ -47,5 +49,5 @@ public interface IMyDAO {
 
 	int masterUpdate(String id);
 
-
+	int useCoupon(String pon_no);
 }

@@ -206,11 +206,9 @@ public class MenuController {
 		return "menu/coupon_popup";
 	}
 	
-	
-
-	@RequestMapping(value = "menu/starbucksCard")
-	public String starbucksCard(Model model) {
-		
+	@RequestMapping(value="menu/cardChoice")
+	public String cardChoice(CardDTO cardDTO, Model model) {
+		service.cardChoice(cardDTO, model);
 		return "menu/starbucksCard";
 	}
 
@@ -338,35 +336,18 @@ public class MenuController {
 	}
 	
 	@ResponseBody // 나만의 음료 등록하기-지혜
-	@PostMapping(value = "menu/setMsrXoMyMenuRegister", produces = "application/json; charset=UTF-8")
-	public String setMsrXoMyMenuRegister(HttpServletRequest request) throws FileNotFoundException, IOException {
-//			"registerType" 	   : registerType
-//			,"categoryType"    : categoryType
-//			,"delegateSku"     : delegateSku
-//			,"nickname"        : repalceAnd(nickname)
-//			,"customFlag"      : customFlag
-//			,"qty"             : 1
-//			,"fullCallingName" : repalceAnd(getCallingName())
-//			,"skuNo"           : delegateSku
-//			,"cupType"         : cupType
-//			,"customList"      : customList
-//		registerType: F
-//		categoryType: 01
-//		delegateSku: 9200000003286
-//		nickname: 콜드 브루 오트 라떼
-//		customFlag: N
-//		qty: 1
-//		fullCallingName: 그란데 콜드 브루 오트 라떼
-//		skuNo: 9200000003286
-//		cupType: 0
-//		customList: 
-		String product_cd = request.getParameter("product_cd");
-		String mappingPath = "upload/json/menu/detail/.json";
-		ClassPathResource resource = new ClassPathResource(mappingPath);
-		FileReader reader = new FileReader(resource.getFile());
-		Gson gson = new Gson();
-		JsonObject obj = gson.fromJson(reader, JsonObject.class);
-		return obj.toString();
+	@PostMapping(value = "menu/setMsrXoMyMenuRegister")
+	public String setMsrXoMyMenuRegister(@RequestBody HashMap<String,String> data){
+//		"delegateSku"     : delegateSku
+//		,"nickname"        : repalceAnd(nickname)
+//		,"p_name"		   : p_name
+//		,"customFlag"      : customFlag
+//		,"cupType"         : cupType
+//		,"customList"      : customList
+		if(data != null) {
+			if(service.setMyMenu(data)) return "SUCCESS";
+		}
+		return "FAIL";
 	}
 	
 	
@@ -391,7 +372,7 @@ public class MenuController {
 	}
 	
 	@RequestMapping(value = "menu/payment")
-	@ResponseBody
+	@ResponseBody // 결제하기 - 지혜
 	public int payment(@RequestBody HashMap<String,String> data) throws ParseException {
 		System.out.println(data);
 		String date = data.get("pay_date");
@@ -474,7 +455,7 @@ public class MenuController {
 	}
 */	
 	
-	//DB에 값 넣는 작업 **딱 한번만 실행**
+	//DB에 값 넣는 작업 **딱 한번만 실행** 지혜
 	@RequestMapping("init/initDrink")
 	public String initDrink() throws FileNotFoundException, IOException{
 		service.insertMenu("drink");

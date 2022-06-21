@@ -1,5 +1,5 @@
-var m_domain_ssl  = "https://" + location.hostname + (location.port == "" ? "" : ":" + location.port);
-var m_domain_http = "https://" + location.hostname + (location.port == "" ? "" : ":" + location.port);
+var m_domain_ssl  = "http://" + location.hostname + (location.port == "" ? "" : ":" + location.port);
+var m_domain_http = "http://" + location.hostname + (location.port == "" ? "" : ":" + location.port);
 
 var m_strTargetUrl      = "";
 var m_jsonRewardSummary = null;
@@ -139,7 +139,7 @@ $.loginLib = {
 				,function (_error) {
 				}
 			);
-		});		
+		});
 		
 		/*
 		$(".login_info_input_wrap .btn_login").on("click", this.login);

@@ -66,23 +66,6 @@ public class MemberServiceImpl implements IMemberService{
 			public String memberProc(RegisterDTO member) {
 				UserInfoDTO userinfo = member;
 
-				/*
-				 * System.out.println("service"); System.out.println(userinfo.getId());
-				 * System.out.println(userinfo.getPw());
-				 * System.out.println(userinfo.getNickname());
-				 * 
-				 * System.out.println("============"); System.out.println(member.getId());
-				 * System.out.println(member.getName()); System.out.println(member.getPhone());
-				 * System.out.println(member.getEmail());
-				 * System.out.println(member.getBirth_year());
-				 * System.out.println(member.getBirth_month());
-				 * System.out.println(member.getBirth_day());
-				 * System.out.println(member.getGender());
-				 * System.out.println(member.getEvent_e());
-				 * System.out.println(member.getEvent_sms());
-				 */
-
-
 				if(userinfo.getId() == null || userinfo.getId().isEmpty())
 					return "아이디를 입력하세요.";
 				if(userinfo.getPw() == null || userinfo.getPw().isEmpty())
@@ -94,12 +77,17 @@ public class MemberServiceImpl implements IMemberService{
 				BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
 				String securePw = encoder.encode(userinfo.getPw());
 				userinfo.setPw(securePw);
+				
+				// 성별 값 변경
+				String genderStr = member.getGender().substring(0,1);
+				member.setGender(genderStr);
 
+				
 				memberDao.insertUserInfo(userinfo);
-
-
+				
+				
 				memberDao.insertMember(member);
-
+				
 
 
 				return "가입 완료";

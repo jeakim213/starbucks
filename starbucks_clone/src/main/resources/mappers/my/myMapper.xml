@@ -45,6 +45,10 @@
 		UPDATE card SET c_master=#{c_master} WHERE id=#{id}
 	</update>
 	
+	<update id="remainUpdate" parameterType="com.clone.starbucks.DTO.CardDTO">
+		UPDATE card SET remaincost=#{remaincost} WHERE c_num=#{c_num}
+	</update>
+	
 	<!-- /eCard -->
 	
 	<!-- e-coupon -->
@@ -73,5 +77,9 @@
 		FROM userinfo a LEFT OUTER JOIN card b ON a.id = b.id
 		WHERE a.id = #{id} and b.c_master = '1'
 	</select>
-
+	
+	<update id="useCoupon" parameterType="String">
+		update e_coupon set pon_used='Y', pon_usedate=default where pon_no=#{pon_no}
+	</update>
+	
 	</mapper>
