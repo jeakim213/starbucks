@@ -31,6 +31,10 @@ public interface IAdminDAO {
 	int updateReg(RegisterDTO all);
 	int updateUser(UserInfoDTO user);
 
+	void deleteCustom(String Id);
+	void deleteSale(String Id);
+	void deleteE_coupon(String Id);
+	void deleteCard(String Id);
 	void deleteReg(String Id);
 	void deleteUser(String Id);
 	

@@ -161,9 +161,6 @@ public class MenuServiceImpl implements IMenuService{
 			cart.put("Food", food);
 			session.setAttribute("list", cart);
 		}
-		UserInfoDTO user = new UserInfoDTO();
-		user.setCupreward("D");
-		session.setAttribute("userinfo", user);
 		return true;
 	}
 	
@@ -212,7 +209,8 @@ public class MenuServiceImpl implements IMenuService{
 	        int result = dao.insertSale(dto);
 	        if(result != 1) System.out.println(dto.getP_name() + "DB입력에러");
 		}
-		
+		session.removeAttribute("saleCount");
+		session.removeAttribute("list");
 		
 		return 1;
 	}

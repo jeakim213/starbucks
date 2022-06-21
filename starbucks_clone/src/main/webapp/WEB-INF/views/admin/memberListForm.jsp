@@ -744,7 +744,7 @@ var eFrequencyPlannerYn = 'Y';
 			<tr>
 				<td>
 					<select name="select">
-						<option value="">전체</option>
+						<option value="">선택</option>
 						<option value="id">아이디</option>
 					</select>
 					<input type=text name='search'/>
@@ -966,6 +966,12 @@ var eFrequencyPlannerYn = 'Y';
 				<li><a href="saleChart-1" <%-- required="login" --%> data-href="admin/saleChart-1">· COFFEE 매출 분석</a></li>
 				<li><a href="saleChart-2" <%-- required="login" --%> data-href="admin/saleChart-2">· FOOD 매출 분석</a></li>
 				<li><a href="saleChart-3" <%-- required="login" --%> data-href="admin/saleChart-3">· PRODUCT 매출 분석</a></li>
+			</ul>
+		</li>
+		<li>
+			<a href="javascript:void(0);">쿠폰발급<span class="sbox_arrow_down"></span></a>
+			<ul>
+				<li><a href="adminCouponMake" <%-- required="login" --%> data-href="admin/adminCouponMake">· 쿠폰발급하기</a></li>
 			</ul>
 		</li>
 	</ul>

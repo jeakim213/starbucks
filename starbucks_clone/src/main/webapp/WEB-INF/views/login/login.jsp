@@ -152,18 +152,6 @@ var eFrequencyPlannerYn = 'Y';
 							<tbody>
 							</tbody>
 						</table>
-						<script id="doubleJoinCardList" type="text/x-jquery-tmpl">
-							<tr>
-								<td class="card"><img src="${cardImgUrl}" alt=""></td>
-								<td>
-									<p class="p1">${cardNickname}</p>
-									<p class="p2 en">${$item.getCardNo}</p>
-									<p class="p3 en">${balanceConfirmDate}</p>
-									<p class="p4 en">${cardRegDate}</p>
-									<p class="p5">${$.number(balance)}</p>
-								</td>
-							</tr>
-						</script>
 					</div>
 				</section>
 				<!-- 상단 end -->

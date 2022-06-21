@@ -102,7 +102,7 @@ var eFrequencyPlannerYn = 'Y';
   
 </script>
 
-<c:if test="${msg != ''}">
+<c:if test="${!empty msg }">
 	<script>alert('${msg}');</script>
 </c:if>
 <!-- 접근성_20171106 건너뛰기 링크  추가 -->
@@ -770,7 +770,7 @@ var eFrequencyPlannerYn = 'Y';
 			<!-- 프로모션 배너 end -->
 			
 			<!-- 메인 스타벅스 리워드 리뉴얼 -->
-			<section class="new-rewards_wrap" style="display:none;">
+			<!-- <section class="new-rewards_wrap" style="display:none;">
 				<div class="new-rewards_inner">
 					<div class="new-rewards_logo">
 						<img src="common/img/main/rewards-logo.png" alt="Starbucks Rewards"> 20200821 수정
@@ -808,7 +808,7 @@ var eFrequencyPlannerYn = 'Y';
 						</div>
 					</div>
 				</div>
-			</section>
+			</section> -->
 			<!-- //메인 스타벅스 리워드 리뉴얼 -->
 					<!-- 유저레벨 -->
 					<!-- MSR 회원 -->

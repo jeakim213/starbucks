@@ -93,20 +93,20 @@ public class AdminController {
 	}
 	
 	//단 - 정보(로그인 필요)
-//		@Value("${ADMIN:admin}") private String adminAccount;
-//		@RequestMapping(value = "admin/userInfoForm") // memberListForm.jsp에서 사용자의 아이디를 클릭 시 요청을 받음.
-//		public String userInfoForm(String id, HttpSession session, Model model) {
-//			//String sessionId = (String) session.getAttribute("id");
-//			UserInfoDTO user = (UserInfoDTO) session.getAttribute("userInfo");
-//			if (id == "" || id == null || sessionId == "" || sessionId == null) {
-//				return "redirect:admin/memberListForm";
-//			}
-//			if (sessionId.equals(id) || adminAccount.equals(sessionId)) {
-//				model.addAttribute("all", adminService.userInfoForm(id));
-//				return "admin/userInfoForm";
-//			}
+//	@Value("${ADMIN:admin}") private String adminAccount;
+//	@RequestMapping(value = "admin/userInfoForm") // memberListForm.jsp에서 사용자의 아이디를 클릭 시 요청을 받음.
+//	public String userInfoForm(String id, HttpSession session, Model model) {
+//		//String sessionId = (String) session.getAttribute("id");
+//		UserInfoDTO user = (UserInfoDTO) session.getAttribute("userInfo");
+//		if (id == "" || id == null || sessionId == "" || sessionId == null) {
 //			return "redirect:admin/memberListForm";
 //		}
+//		if (sessionId.equals(id) || adminAccount.equals(sessionId)) {
+//			model.addAttribute("all", adminService.userInfoForm(id));
+//			return "admin/userInfoForm";
+//		}
+//		return "redirect:admin/memberListForm";
+//	}
 	
 	//단 - 수정
 	@RequestMapping(value = "admin/memberModifyForm")
@@ -126,7 +126,6 @@ public class AdminController {
 	//단 - 삭제
 	@RequestMapping(value = "admin/memberDelete")
 	public String memberDelete(RegisterDTO all, Model model) {
-		System.out.println("셋");
 		model.addAttribute("all", all);
 		return "admin/memberListForm";
 	}
