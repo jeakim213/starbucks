@@ -2,6 +2,7 @@ package com.clone.starbucks.controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.HashMap;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -13,7 +14,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.clone.starbucks.DAO.IMyDAO;
 import com.clone.starbucks.DTO.AllDTO;
@@ -168,10 +171,16 @@ public class MyController {
 		myService.cardList(cardDTO, model);
 		return "my/mycard_charge";
 	}
-
-	@RequestMapping(value = "my/mycard_charge_2")
-	public String mycard_charge_2() {
-		return "my/mycard_charge-2";
+	
+	@ResponseBody 
+	@RequestMapping(value="my/setChargeAjax")
+	public int mycard_charge_2(@RequestBody HashMap<String,String> data, HttpServletResponse response, CardDTO cardDTO) {
+		if(data != null) {
+			if(myService.setChargeData(data)) {
+			return 1;
+			}
+		}
+		return 0;
 	}
 
 	

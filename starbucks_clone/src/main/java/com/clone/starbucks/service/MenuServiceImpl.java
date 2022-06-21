@@ -19,6 +19,7 @@ import org.springframework.ui.Model;
 
 import com.clone.starbucks.DAO.IMemberDAO;
 import com.clone.starbucks.DAO.IMenuDAO;
+import com.clone.starbucks.DTO.CardDTO;
 import com.clone.starbucks.DTO.E_couponDTO;
 import com.clone.starbucks.DTO.ProductDTO;
 import com.clone.starbucks.DTO.SaleDTO;
@@ -160,9 +161,6 @@ public class MenuServiceImpl implements IMenuService{
 			cart.put("Food", food);
 			session.setAttribute("list", cart);
 		}
-		UserInfoDTO user = new UserInfoDTO();
-		user.setCupreward("D");
-		session.setAttribute("userinfo", user);
 		return true;
 	}
 	
@@ -211,7 +209,8 @@ public class MenuServiceImpl implements IMenuService{
 	        int result = dao.insertSale(dto);
 	        if(result != 1) System.out.println(dto.getP_name() + "DB입력에러");
 		}
-		
+		session.removeAttribute("saleCount");
+		session.removeAttribute("list");
 		
 		return 1;
 	}
@@ -235,16 +234,65 @@ public class MenuServiceImpl implements IMenuService{
 	}
 
 
+	   @Override
+	   public void couponUse(E_couponDTO e_couponDTO, Model model) throws ParseException {
+	      session.setAttribute("id", "쭈고");
+	      UserInfoDTO userInfo = new UserInfoDTO();
+	      userInfo.setId("쭈고");
+	      session.setAttribute("userInfo", userInfo);
+	      UserInfoDTO user = (UserInfoDTO) session.getAttribute("userInfo");
+	      String id = user.getId();
+	      
+	      ArrayList<E_couponDTO> list =  dao.couponList(id);
+	      
+	      
+	      //시작날-끝날 날짜 변환코드
+	      ArrayList<String> startList = new ArrayList<String>();
+	      ArrayList<String> endList = new ArrayList<String>();
+	      
+	      SimpleDateFormat sdf = new SimpleDateFormat("yy/MM/dd");
+	      for(int i=0; i<list.size();i++) {
+	    	  System.out.println("시작 날짜 : "+list.get(i).getPon_startdate());
+	    	  //startDate
+	    	  Date sdate = list.get(i).getPon_startdate();
+	    	  String pon_startDate = sdf.format(sdate);
+	    	  
+	    	  //시작날짜 리스트에 저장
+	    	  startList.add(pon_startDate);
+	    	  System.out.println("변환 시작 날짜 : "+startList.get(i));
+	    	  
+		      System.out.println("끝 날짜 : "+list.get(i).getPon_enddate());
+		      //endDate
+		      Date edate = list.get(i).getPon_enddate();
+		      String pon_endDate = sdf.format(edate);
+		      
+		      endList.add(pon_endDate);
+		      System.out.println("변환끝날짜 : "+endList.get(i));
+	      }
+	      model.addAttribute("list",list);
+	      model.addAttribute("startList",startList);
+	      model.addAttribute("endList",endList);
+	   }
+
+
 	@Override
-	public void couponUse(E_couponDTO e_couponDTO, Model model) {
-		session.setAttribute("id", "admin");
-		UserInfoDTO userInfo = new UserInfoDTO();
-		userInfo.setId("admin");
-		session.setAttribute("userInfo", userInfo);
-		UserInfoDTO user = (UserInfoDTO) session.getAttribute("userInfo");
-		String id = user.getId();
-		ArrayList<E_couponDTO> list =  dao.couponList(id);
-		model.addAttribute("list",list);
+	public void cardChoice(CardDTO cardDTO, Model model) {
+		session.setAttribute("id", "쭈고");
+	    UserInfoDTO userInfo = new UserInfoDTO();
+	    userInfo.setId("쭈고");
+	    session.setAttribute("userInfo", userInfo);
+	    UserInfoDTO user = (UserInfoDTO) session.getAttribute("userInfo");
+	    String id = user.getId();
+	    
+	    ArrayList<CardDTO> list = dao.cardList(id);
+	    
+	    for(int i =0 ; i<list.size();i++) {
+	    	System.out.println(list.get(i));
+	    }
+	    
+	    model.addAttribute("list", list);
+		
 	}
-	
+	   
 }
+	

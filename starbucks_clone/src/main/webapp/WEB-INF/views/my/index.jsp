@@ -853,20 +853,7 @@ var eFrequencyPlannerYn = 'Y';
 											</div>
 										</div> -->
 									</div>
-									<script id="storeList" type="text/x-jquery-tmpl">
-                                        	<li>
-                                                <a href="store/store_map?in_biz_cd=\${s_biz_code}">
-                                                    <div class="ms_sstore_slider_img">
-                                                        <img alt="" src="\${defaultimage}" onerror="this.src='../common/img/util/edwDefault.png'">
-                                                    </div>
-                                                    <div class="ms_sstore_slider_txt">
-                                                        <strong>\${s_name}</strong><br>
-                                                        \${sido_name} \${gugun_name}<br>
-                                                        <span class="date">\${open_dt.substr(0, 4)}-\${open_dt.substr(4, 2)}-\${open_dt.substr(6, 2)}</span>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                    	</script>
+									
                                     </div>
                                 </article>
                                 <article class="ms_sstore_charging_r">
@@ -969,63 +956,7 @@ var eFrequencyPlannerYn = 'Y';
                                     <div class="my_ms_card_cont">
                                         <ul class="slider">
                                         </ul>
-                                        <script id="cardList" type="text/x-jquery-tmpl">
-                                            <li>
-												<figure>
-													{{if delegateCardYn == 'Y'}}
-													<!-- 160125 김민호 시작 -->
-													<!-- 접근성_20171201 aria 추가 -->
-														<i class="representative_icon" aria-hidden="true"></i>
-													<!-- 160125 김민호 end -->
-													{{/if}}
-													<img alt="\${cardNickname}" src="\${cardImgUrl}" onerror="this.src='https://image.istarbucks.co.kr/upload/common/img/icon/card_672x423.png';" />
-												</figure>
-                                                <div class="my_ms_card_info">
-													{{if cardStatus == 'R'}}
-                                                	    <p class="my_ms_card_id">
-                                                        <span>\${cardNickname}</span>
-															<!-- 접근성_20171201 title 추가 -->
-												            <a href="javascript:void(0);" class="icon_pencil" data-cardstatus="\${cardStatus}"  data-cardNickname="\${cardNickname}" title=" 카드명 수정">정보수정</a>
-													    </p>
-														<p class="my_ms_card_id_modify" style="display:none;">
-														<label class="a11y" for="cardName_">카드명</label><!-- 접근성_20171201 label 추가 -->
-															<input class="my_nick_modify_input" id="cardName_" type="text" maxlength="20" value="\${cardNickname}" /><!-- 접근성_20171201 id 추가 -->
-															<a class="my_nick_modify" href="javascript:void(0);" data-cardregnumber="\${cardRegNumber}" role="button" title="카드명 수정">수정</a><!-- 접근성_20171201 role, title 추가 -->
-															<a class="my_nick_cancel" href="javascript:void(0);" role="button">취소</a><!-- 접근성_20171201 role 추가 -->
-														</p>
-													{{/if}}
-													{{if goldCardRegStatus == 'X' || goldCardRegStatus == 'R'}}
-														<p class="my_ms_card_price"><span class="a11y">잔여금액</span><!-- 접근성_20171201 span 추가 --><strong class="en t_0d5f34">\${$item.getBalance}</strong>원</p>
-	                                                    <p class="my_ms_card_date">최종 사용일 : <span class="en">\${balanceConfirmDate}</span></p>
-	                                                    <div class="my_ms_card_btns">
-															{{if cardStatus == 'R'}}
-	                                                    	    <p class="my_ms_card_btn1"><a href="javascript:void(0);" data-type="MANAGEMENT" data-cardregnumber="\${cardRegNumber}">카드 관리</a></p>
-	                                                        	<p class="my_ms_card_btn2"><a href="javascript:void(0);" data-type="CHARGE" data-cardregnumber="\${cardRegNumber}">충전하기</a></p>
-															{{else [cardStatus == 'S']}}
-																{{if balance > 0}}
-																	{{if enableTransferYn == 'Y' }}
-																		<p class="my_ms_card_btn1"><a href="javascript:void(0);" data-type="TRANSFER" data-cardregnumber="\${cardRegNumber}" data-cardnickname="\${cardNickname}" data-balance="\${balance}">잔액 이전</a></p>
-																	{{/if}}
-																	{{if refundableYn == 'Y' }}
-																		<p class="my_ms_card_btn1"><a href="javascript:void(0);" data-type="REFUND" data-cardregnumber="\${cardRegNumber}" data-cardnickname="\${cardNickname}" data-balance="\${balance}">잔액 환불</a></p>
-																	{{/if}}
-																{{else}}
-																	<p class="my_ms_card_btn1"><a href="javascript:void(0);" data-type="DELETE" data-cardregnumber="\${cardRegNumber}">카드삭제</a></p>
-																{{/if}}
-															{{/if}}
-	                                                    </div>
-													{{else}}
-														<p class="my_ms_state">\${getGoldCardRegStatusText(goldCardRegStatus)}</p>
-														<div class="my_ms_card_btns">
-															<p class="my_ms_card_btn1"><a href="javascript:void(0);" data-type="MANAGEMENT" data-cardregnumber="\${cardRegNumber}">카드 관리</a></p>
-															{{if goldCardRegStatus == 'A'}}															
-																<p class="my_ms_card_btn2"><a href="javascript:void(0);" data-type="MODIFY_GOLD_INFO" data-cardregnumber="\${cardRegNumber}">신청정보수정</a></p>
-															{{/if}}
-														</div>	                                                    
-                                                    {{/if}}
-                                                </div>
-                                            </li>
-                                        </script>
+                                        
                                     </div>
                                 </div>
                             </section>

@@ -102,7 +102,7 @@ var eFrequencyPlannerYn = 'Y';
   
 </script>
 
-<c:if test="${msg != ''}">
+<c:if test="${!empty msg }">
 	<script>alert('${msg}');</script>
 </c:if>
 <!-- 접근성_20171106 건너뛰기 링크  추가 -->

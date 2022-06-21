@@ -667,8 +667,8 @@ var eFrequencyPlannerYn = 'Y';
 					
 								
 <ul>
-	<li class="util_nav01 sign_out" style="display:none;"><a href="/starbucks/login/logout">Sign out</a></li>
-	<li class="util_nav01 sign_in"><a href="/starbucks/login/login">Sign In</a></li>
+	<li class="util_nav01 sign_out" style="display:none;"><a href="javascript:void(0);">Sign out</a></li>
+	<li class="util_nav01 sign_in"><a href="javascript:void(0);">Sign In</a></li>
 	<li class="util_nav02"><a href="my/index" required="login">My Starbucks</a></li>
 	<li class="util_nav03"><a href="menu/orderList">Order</a></li>
 	<li class="util_nav04"><a href="strore/store_map">Find a Store</a></li>
@@ -1653,7 +1653,7 @@ var eFrequencyPlannerYn = 'Y';
 		
 			
 			<script src="../common/js/common_jhp.js"></script>
-			<script src="../common/js/my/ecoupon.js?v=211115"></script>
+			<script src="https://www.starbucks.co.kr/common/js/my/ecoupon.js?v=211115"></script>
 			
 			<script type="text/javascript">
 				<!-- 20170726추가 -->

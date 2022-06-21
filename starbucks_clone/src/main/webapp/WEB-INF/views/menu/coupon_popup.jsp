@@ -34,15 +34,16 @@
 					</tr>
 				</thead>
 				<tbody>
+					<c:set var="i" value="0"/>
 					<c:forEach var="eCouponDTO" items="${list }">
 					<tr>
 						<td><input type="radio" name="couponChoose" style="text-align: center;"/></td>
 						<td style="padding:15px; width: 230px;"><p id="pon_name">${eCouponDTO.pon_name }</p></td>
 						<td style="padding:15px; width: 140px;">
-						<input type="hidden" id="pon_startdate" value="${eCouponDTO.pon_startdate }"><p id="startdate">${eCouponDTO.pon_startdate }</p>
-						- <input type="hidden" id="pon_enddate" value="${eCouponDTO.pon_enddate }"><p id="enddate">${eCouponDTO.pon_enddate }</p></td>
+						${startList[i]} - ${endList[i]}</td>
 						<td style="padding:15px; width: 120px;"><p id="pon_cash">${eCouponDTO.pon_cash }</p></td>
 					</tr>
+					<c:set var="i" value="${i+1 }"/>
 					</c:forEach>
 				</tbody>
 			</table>

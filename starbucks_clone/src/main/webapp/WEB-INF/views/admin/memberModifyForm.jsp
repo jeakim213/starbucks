@@ -652,7 +652,7 @@ var eFrequencyPlannerYn = 'Y';
 					
 								
 <ul>
-	<li class="util_nav01 sign_out" style="display:none;"><a href="/starbucks">Sign out</a></li>
+	<li class="util_nav01 sign_out" style="display:none;"><a href="/starbucks/login/logout">Sign out</a></li>
 	<li class="util_nav01 sign_in"><a href="/starbucks/login/login">Sign In</a></li>
 	<li class="util_nav02"><a href="/starbucks/my/index" required="login">My Starbucks</a></li>
 	<li class="util_nav03"><a href="/starbucks/menu/orderList" required="login">Order</a></li>
@@ -1046,6 +1046,12 @@ var eFrequencyPlannerYn = 'Y';
 				<li><a href="saleChart-1" <%-- required="login" --%> data-href="admin/saleChart-1">· COFFEE 매출 분석</a></li>
 				<li><a href="saleChart-2" <%-- required="login" --%> data-href="admin/saleChart-2">· FOOD 매출 분석</a></li>
 				<li><a href="saleChart-3" <%-- required="login" --%> data-href="admin/saleChart-3">· PRODUCT 매출 분석</a></li>
+			</ul>
+		</li>
+		<li>
+			<a href="javascript:void(0);">쿠폰발급<span class="sbox_arrow_down"></span></a>
+			<ul>
+				<li><a href="adminCouponMake" <%-- required="login" --%> data-href="admin/adminCouponMake">· 쿠폰발급하기</a></li>
 			</ul>
 		</li>
 	</ul>

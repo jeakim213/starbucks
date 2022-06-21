@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
@@ -36,12 +35,13 @@ public class MemberController {
 	}
 	
 	@PostMapping(value = "login/loginProc")//지혜
-	public String loginProc(UserInfoDTO member, Model model) {
+	public String loginProc(UserInfoDTO member, RedirectAttributes ra) {
 		String msg = memberService.loginProc(member);
 		if(msg.equals("로그인 성공")) {
+			ra.addFlashAttribute("msg", msg);
 			return "redirect:/index";
 		}
-		model.addAttribute("msg", msg);
+		ra.addFlashAttribute("msg", msg);
 		return "redirect:/login/login";
 	}
 	
@@ -84,12 +84,12 @@ public class MemberController {
 	}
 	
 	@GetMapping(value = "login/logout") //지혜
-	public String logout(Model model) {
+	public String logout(RedirectAttributes ra) {
 		String accessToken = (String)session.getAttribute("accessToken");
 		if(accessToken != null) memberService.logout(accessToken);
 		
 		if(memberService.logoutProc() == 1)
-			model.addAttribute("msg", "로그아웃 완료");
+			ra.addFlashAttribute("msg", "로그아웃 되셨습니다.");
 		return "redirect:/index";
 	}
 	

@@ -2,6 +2,7 @@ package com.clone.starbucks.service;
 
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -25,7 +26,7 @@ public class MyServiceImpl implements IMyService {
 //----------------------------------------E-gift Card 등록----------------------------------------------		
 	@Override
 	public String cardRegisterProc(UserInfoDTO userInfo, CardDTO cardDTO, HttpServletRequest request) {
-		session.setAttribute("id", "옌");
+		session.setAttribute("id", "핫핫");
 		String id = (String) session.getAttribute("id");
 		
 //		session.setAttribute("userInfo", userInfo);
@@ -265,6 +266,21 @@ public class MyServiceImpl implements IMyService {
 			AllDTO all = myDAO.userAllInfo(id);
 
 			return all;
+		}
+
+
+		public boolean setChargeData(HashMap<String, String> data) {
+			String c_num = data.get("c_num");
+			String chargePrice = data.get("price");
+			CardDTO check = myDAO.c_numCheck(c_num);
+			int newCost =  check.getRemaincost()+Integer.parseInt(chargePrice);
+			check.setRemaincost(newCost);
+			if(myDAO.remainUpdate(c_num)==1) {
+				return true;
+			}else {
+				return false;
+			}
+			
 		}
 
 

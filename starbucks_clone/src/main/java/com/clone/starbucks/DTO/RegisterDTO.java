@@ -13,16 +13,6 @@ birth_day number not null,
 gender char(1) check(gender in ('M','F')) not null,
 event_e char(1) check(event_e in ('Y','N')) not null,
 event_SMS char(1) check(event_SMS in ('Y','N')) not null
-);
-
-insert into register values('admin', '이단', '22/06/10', '010-1234-5678', 'admin@star.com', '1996', '12', '13', 'F', 'Y', 'Y');
-insert into register values('user1', '김가나', '22/06/11', '010-2022-0525', 'a@star.com', '1989', '12', '14', 'M', 'N', 'N');
-insert into register values('user2', '이다라', '22/06/12', '010-2022-0526', 'b@star.com', '1990', '04', '08', 'M', 'N', 'N');
-insert into register values('user3', '박마바', '22/06/13', '010-2022-0527', 'c@star.com', '1991', '09', '23', 'M', 'N', 'N');
-insert into register values('user4', '최사아', '22/06/14', '010-2022-0528', 'd@star.com', '1991', '12', '09', 'M', 'N', 'Y');
-insert into register values('user5', '장자차', '22/06/15', '010-2022-0529', 'e@star.com', '1993', '07', '18', 'M', 'Y', 'N');
-insert into register values('user6', '윤아야', '22/06/15', '010-2022-0530', 'f@star.com', '1993', '07', '18', 'M', 'Y', 'N');
-insert into register values('user7', '조조조', '22/06/15', '010-2022-0531', 'g@star.com', '1993', '07', '18', 'M', 'Y', 'N');
 
 ===== fk =====
 alter table register add foreign key(id) references userInfo(id);

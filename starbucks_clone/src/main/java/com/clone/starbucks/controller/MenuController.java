@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.clone.starbucks.DTO.CardDTO;
 import com.clone.starbucks.DTO.E_couponDTO;
 import com.clone.starbucks.service.MenuServiceImpl;
 import com.google.gson.Gson;
@@ -206,7 +207,7 @@ public class MenuController {
 	}
 	
 	@RequestMapping(value="menu/couponUse")
-	public String couponUse(E_couponDTO eCouponDTO, Model model) {
+	public String couponUse(E_couponDTO eCouponDTO, Model model) throws ParseException  {
 		service.couponUse(eCouponDTO, model);
 		return "menu/coupon_popup";
 	}
@@ -216,6 +217,12 @@ public class MenuController {
 
 	@RequestMapping(value = "menu/starbucksCard")
 	public String starbucksCard() {
+		return "menu/starbucksCard";
+	}
+	
+	@RequestMapping(value="menu/cardChoice")
+	public String cardChoice(CardDTO cardDTO, Model model) {
+		service.cardChoice(cardDTO, model);
 		return "menu/starbucksCard";
 	}
 

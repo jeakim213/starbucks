@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import org.springframework.stereotype.Repository;
 
+import com.clone.starbucks.DTO.CardDTO;
 import com.clone.starbucks.DTO.E_couponDTO;
 import com.clone.starbucks.DTO.ProductDTO;
 import com.clone.starbucks.DTO.SaleDTO;
@@ -17,4 +18,6 @@ public interface IMenuDAO {
 	int insertSale(SaleDTO dto);
 	
 	ArrayList<E_couponDTO> couponList(String id);
+	
+	ArrayList<CardDTO> cardList(String id);
 }

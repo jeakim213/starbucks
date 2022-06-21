@@ -26,7 +26,7 @@
      
      <mybatis-spring:scan base-package="com.clone.starbucks.DAO"/>
      
-	<!-- 0620예은- 메일전송 -->
+     <!-- 0620예은- 메일전송 -->
      <bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
 		<property name="host" value="smtp.naver.com" />
 		<property name="port" value="465" />

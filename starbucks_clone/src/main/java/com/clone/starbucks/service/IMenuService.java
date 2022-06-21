@@ -7,6 +7,7 @@ import java.util.HashMap;
 
 import org.springframework.ui.Model;
 
+import com.clone.starbucks.DTO.CardDTO;
 import com.clone.starbucks.DTO.E_couponDTO;
 
 public interface IMenuService {
@@ -21,8 +22,11 @@ public interface IMenuService {
 	
 	public void insertMenu(String menuName) throws FileNotFoundException, IOException; //DB에 메뉴넣기
 	
+	public void couponUse(E_couponDTO e_couponDTO, Model model) throws ParseException;
+
 	public int payment(HashMap<String,String> data) throws ParseException;
 	
-	public void couponUse(E_couponDTO e_couponDTO, Model model);
+	public void cardChoice(CardDTO cardDTO, Model model); 
+	
 
 }

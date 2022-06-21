@@ -106,8 +106,6 @@ public class MemberServiceImpl implements IMemberService{
 				UserInfoDTO check = memberDao.loginProc(member.getId());
 				
 				BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
-				String secure = encoder.encode(check.getPw());
-				member.setPw(secure);
 		
 				if(check != null && encoder.matches(member.getPw(), check.getPw())) {
 					session.setAttribute("userInfo", check);
