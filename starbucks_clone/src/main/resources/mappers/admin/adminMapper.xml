@@ -38,6 +38,18 @@
 		UPDATE userInfo SET star=#{star}, grade=#{grade}, nickname=#{nickname}, cupreward=#{cupreward} WHERE id=#{id}
 	</update>
 	
+	<delete id="deleteCustom" parameterType="String">
+		DELETE FROM custom WHERE id=#{id}
+	</delete>
+	<delete id="deleteSale" parameterType="String">
+		DELETE FROM sale WHERE id=#{id}
+	</delete>
+	<delete id="deleteE_coupon" parameterType="String">
+		DELETE FROM e_coupon WHERE id=#{id}
+	</delete>
+	<delete id="deleteCard" parameterType="String">
+		DELETE FROM card WHERE id=#{id}
+	</delete>
 	<delete id="deleteReg" parameterType="String">
 		DELETE FROM register WHERE id=#{id}
 	</delete>

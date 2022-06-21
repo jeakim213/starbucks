@@ -309,10 +309,13 @@ public class AdminServiceImpl implements IAdminService {
 	//단 - 삭제
 	@Override
 	public String deleteProc(RegisterDTO all, UserInfoDTO userInfo) {
+		adminDAO.deleteCustom(all.getId());
+		adminDAO.deleteSale(all.getId());
+		adminDAO.deleteE_coupon(all.getId());
+		adminDAO.deleteCard(all.getId());
 		adminDAO.deleteReg(all.getId());
 		UserInfoDTO user = (UserInfoDTO) all;
 		adminDAO.deleteUser(user.getId());
-		System.out.println("넷");
 		return "회원 삭제 완료";
 	}
 	
