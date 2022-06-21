@@ -235,16 +235,60 @@ public class MenuServiceImpl implements IMenuService{
 	}
 
 
-	@Override
-	public void couponUse(E_couponDTO e_couponDTO, Model model) {
-		session.setAttribute("id", "admin");
-		UserInfoDTO userInfo = new UserInfoDTO();
-		userInfo.setId("admin");
-		session.setAttribute("userInfo", userInfo);
-		UserInfoDTO user = (UserInfoDTO) session.getAttribute("userInfo");
-		String id = user.getId();
-		ArrayList<E_couponDTO> list =  dao.couponList(id);
-		model.addAttribute("list",list);
-	}
-	
+	   @Override
+	   public void couponUse(E_couponDTO e_couponDTO, Model model) throws ParseException {
+	      session.setAttribute("id", "쭈고");
+	      UserInfoDTO userInfo = new UserInfoDTO();
+	      userInfo.setId("쭈고");
+	      session.setAttribute("userInfo", userInfo);
+	      UserInfoDTO user = (UserInfoDTO) session.getAttribute("userInfo");
+	      String id = user.getId();
+	      
+	      ArrayList<E_couponDTO> list =  dao.couponList(id);
+	      
+	      ArrayList<String> startList = new ArrayList<String>();
+	      ArrayList<String> endList = new ArrayList<String>();
+	      
+	      SimpleDateFormat sdf = new SimpleDateFormat("yy/MM/dd");
+	      for(int i=0; i<list.size();i++) {
+	    	  System.out.println("시작 날짜 : "+list.get(i).getPon_startdate());
+	    	  //startDate
+	    	  Date sdate = list.get(i).getPon_startdate();
+	    	  String pon_startDate = sdf.format(sdate);
+	    	  
+	    	  //시작날짜 리스트에 저장
+	    	  startList.add(pon_startDate);
+	    	  System.out.println("변환 시작 날짜 : "+startList.get(i));
+	    	  
+		      System.out.println("끝 날짜 : "+list.get(i).getPon_enddate());
+		      //endDate
+		      Date edate = list.get(i).getPon_enddate();
+		      String pon_endDate = sdf.format(edate);
+		      
+		      endList.add(pon_endDate);
+		      System.out.println("변환끝날짜 : "+endList.get(i));
+	      }
+	      
+	      
+	      
+	      
+	      
+	      
+	      
+//	      for(int i=0; i<list.size();i++) {
+//	    	  list.get(i).setPon_startdate(startDate);
+//	    	  list.get(i).setPon_enddate(endDate);
+//	      }
+	      
+//	          Date utilDate = new Date();
+//	          java.sql.Date sqlDate = new java.sql.Date(utilDate.getTime());
+//
+//	          list.get(0).setPon_startdate(sqlDate);
+//	          System.out.println("확인 : " + list.get(0).getPon_startdate());
+	      model.addAttribute("list",list);
+	      model.addAttribute("startList",startList);
+	      model.addAttribute("endList",endList);
+	   }
+	   
 }
+	
