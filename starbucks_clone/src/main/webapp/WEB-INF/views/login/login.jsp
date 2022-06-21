@@ -30,19 +30,6 @@
 <link href="../common/css/ezmark.css" rel="stylesheet">
 <link href="../common/css/style_dt.css?v=20191211" rel="stylesheet"> <!-- 20191211 수정 -->
 
-<!--[if lt IE 9]>
-	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-	<link href="/common/css_ie/style.css" rel="stylesheet">
-	<script>
-		document.createElement('header');
-		document.createElement('nav');
-		document.createElement('section');
-		document.createElement('figure');
-		document.createElement('article');
-		document.createElement('aside');
-		document.createElement('footer');
-	</script>
-<![endif]-->
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -701,7 +688,7 @@ var eFrequencyPlannerYn = 'Y';
 					
 								
 <ul>
-	<li class="util_nav01 sign_out" style="display:none;"><a href="/starbucks">Sign out</a></li>
+	<li class="util_nav01 sign_out" style="display:none;"><a href="/starbucks/login/logout">Sign out</a></li>
 	<li class="util_nav01 sign_in"><a href="/starbucks/login/login">Sign In</a></li>
 	<li class="util_nav02"><a href="/starbucks/my/index" required="login">My Starbucks</a></li>
 	<li class="util_nav03"><a href="/starbucks/menu/orderList" required="login">Order</a></li>
@@ -724,18 +711,6 @@ var eFrequencyPlannerYn = 'Y';
 		
 		<div id="container">
 			<!-- 서브 타이틀 -->
-			<!-- <header class="mem_sub_tit_wrap">
-				<div class="mem_sub_tit_bg">
-					<div class="mem_sub_tit_inner">
-						<h4><img alt="회원가입" src="//image.istarbucks.co.kr/common/img/util/mem/login_titl.png"></h4>
-						<ul class="smap">
-							<li><a href="/"><img src="//image.istarbucks.co.kr/common/img/common/icon_home_w.png" alt="홈으로" /></a></li>
-							<li><img class="arrow" src="//image.istarbucks.co.kr/common/img/common/icon_arrow_w.png" alt="하위메뉴" /></li>
-							<li><a href="/login/login">로그인</a></li>
-						</ul>
-					</div>
-				</div>
-			</header> -->
 			<!-- 서브 타이틀 end -->
 			<!-- 161116 문진욱 수정 -->
 			<div class="new_login_bg_wrap">
@@ -771,13 +746,10 @@ var eFrequencyPlannerYn = 'Y';
 										<!-- 접근성_20171120 required 추가 , 20181025_autocomplete="off" 추가 -->
 										<p class="limit_txt user_pwd_txt"></p>
 										<!-- 접근성_20171120 포커스:  추가 -->
-										<span class="checkWrap">
-											<input type="checkbox" name="idRemb" id="idRemb" class="mem2">
-											<label for="idRemb">아이디 저장</label>
-										</span>
+										<p/>
 										<!-- 접근성_20171120 포커스:  추가 끝 -->
-										<!-- 설아 카카오톡 로그인 추가 -->
-											<a href="https://kauth.kakao.com/oauth/authorize?response_type=code&client_id=ab059dba3e0aaba211e0b759d7ed4e3b&redirect_uri=http://localhost:8085/starbucks/login/login/kakaoLogin&response_type=code">
+										<!-- 지혜 카카오톡 로그인 추가 -->
+											<a href="https://kauth.kakao.com/oauth/authorize?response_type=code&client_id=8f741cbc7673a04d6bfdf330732780bd&redirect_uri=http://localhost:8085/starbucks/login/kakaoLogin&response_type=code">
 											<img src="../common/img/login/o.jpg" width="500px" height="60px" style="border-radius: 5px;">
 											</a>
 											<br>
@@ -853,20 +825,6 @@ var eFrequencyPlannerYn = 'Y';
 				<!-- 내용 end -->
 			</div>
 		</div>
-		
-		
-        
-        
-            
-        
-		
-        
-		
-
-
-
-
-		
 			<!-- footer -->
 			<footer id="footer"> 
 				<div class="footer_wrap">
@@ -1044,13 +1002,6 @@ var eFrequencyPlannerYn = 'Y';
 			<script src="../common/js/jquery.tmpl.js"></script>
 			<script src="../common/js/jquery.tmplPlus.min.js"></script>
 			<script src="../common/js/jquery.ezmark.min.js"></script>
-			<!-- <script src="/developers.kakao.com/sdk/js/kakao.min.js"></script> -->
-			
-			<!--
-			<script src="../common/js/swiper.jquery.min.js"></script>
-			<script src="../common/js/swiper.min.js"></script>
-			<script src="../common/js/util.js"></script>
-			-->
 			
 		
 			<script src="../common/js/openevent/openevent.js"></script>
@@ -1060,293 +1011,27 @@ var eFrequencyPlannerYn = 'Y';
 				var mrSlider;
 				
 				$(document).ready(function(){
-					/* 20171204 kbs 페이지별 head 내 title 변경 */
-					if( $('.smap li').last().text() == "" )
-					{
-						$('#titleJoin').text("Starbucks Korea"); //220117 수정
-					}
-					else
-					{
-						$('#titleJoin').text( $('.smap li').last().text() + " | Starbucks Korea" ); //220117 수정	
-					}
 					
-					$('#pickDate1, #pickDate2').datepicker({
-						 "dateFormat"      : "yy-mm-dd"
-						/* ,"dayNamesMin"     : ['일', '월', '화', '수', '목', '금', '토'] */
-						,"maxDate"         : "+0m +0w"
-						/* ,"monthNamesShort" : ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'] */
-					});
-			
-// 					var sbox = $('.my_ms_select select');
-// 					sbox.change(function(){
-// 						접근성_20171123 삭제
-// 						var sbox_name = $(this).children('option:selected').text();
-// 						$(this).siblings('label').text(sbox_name);
-// 					});접근성_20171201 삭제
+					__ajaxCall("starbucks/interface/checkLogin", {}, true, "json", "post"
+			   			,function (_response) {
+			   				if (_response.result_code == "SUCCESS") {
+			   					location.href = "index";
+			   				}
+			   			}
+			   			,function (_error) {
+			   			}
+			   		);
+					
 
-					/* s::20210714 수정 */
-					/* 170201 수정 - 황기흠 */
-					if ((myWindow > 640) && (myWindow <= 1200)) {
-						var faSlider = $('.footer_awards_slider').bxSlider({
-							minSlides:3,
-							maxSlides:3,
-							slideWidth:210,
-							slideMargin:0,
-							controls:false,
-							auto:true,
-							autoControls:true,
-							autoControlsCombine:true,
-							pause:3000,
-							infiniteLoop: true,
-							pagerSelector:'.footer_slider_pagers',
-							autoControlsSelector:'.footer_slider_controls'
-						});
-					} else if (myWindow <= 640) {
-						var faSlider = $('.footer_awards_slider').bxSlider({
-							minSlides:1,
-							maxSlides:1,
-							slideWidth:320,
-							slideMargin:0,
-							controls:false,
-							auto:true,
-							autoControls:true,
-							autoControlsCombine:true,
-							pause:3000,
-							infiniteLoop: true,
-							pagerSelector:'.footer_slider_pagers',
-							autoControlsSelector:'.footer_slider_controls'
-						});
-					}
-					/* 170201 수정 - 황기흠 end */
-					/* e::20210714 수정 */
-					
-					/* 구명준 추가 시작 탭 */			
-					/* 20171127 중복 스크립트 삭제 coffee.js 내 존재 */
-// 					$(".content_tabmenu > .tab").bind("click focusin", function(){
-// 						if(!$(this).hasClass("on")) {
-// 							$(this).parent().children(".on").removeClass("on");
-// 							var index = $(this).addClass("on").closest(".content_tabmenu").children(".tab").index(this);
-// 							$(this).parent().children(".panel").hide().eq(index).show();
-// 						}
-// 						return false;
-// 					});
-// 					$(".content_tabmenu > .tab").bind("click focusout", function(){
-// 						if(!$(this).hasClass("on")) {
-// 							$(this).parent().children(".on").removeClass("on");
-// 							var index = $(this).addClass("on").closest(".content_tabmenu").children(".tab").index(this);
-// 							$(this).parent().children(".panel").hide().eq(index).show();
-// 						}
-// 						return false;
-// 					});
-					/* 구명준 끝 */
-
-					/* 150714 추가 - 박종현 */
-					var itvChangeLink = setInterval(function() {
-						if (m_jsonRewardSummary != null) {
-							// 등록된 카드가 없으면 링크 변경
-							if (m_jsonRewardSummary.cardInfo.cardNumber == "") {
-								if (location.href.indexOf("my/") > -1) {
-									var url = "my/mycard_none";
-									
-									$('a[data-href="..-my/mycard_index"]').attr("data-href", url);
-									$('a[data-href="..-my/mycard"]').attr("data-href", url);
-									$('a[data-href="..-my/mycard_charge"]').attr("data-href", url);
-									$('a[data-href="..-my/mycard_lost"]').attr("data-href", url);
-								}
-							}
-							
-							// 로그인 상태에 따라 등록 및 조회 페이지 링크 변경
-							if (m_jsonRewardSummary.msrMemberYn == "Y") {
-								$('a[href="msr/scard/register_inquiry"]').attr("href", "my/mycard_info_input");
-							} else {
-								$('a[href="msr/scard/register_inquiry"]').attr("href", "my/reward");
-							}
-							
-							clearInterval(itvChangeLink);
-						}
-					}, 150);
-					/* 150714 추가 - 박종현 end */
-					$('#goPage').bind('click', function(){
-						if (myWindow > 640) {
-							location.href="footer/co_sales/index";
-						}
-					});
-					
-                    /*kbs Express DT 접근 시 MSR 회원 체크, 비밀번호 체크*/
-                    var dtPopHt = $('.dtPop').height() * -0.5;
-                    $('.dtPop').css('margin-top',dtPopHt);
-                    
-                    $('#dtPopCancelBtn, #dtPopCommonCloseBtn, #dtPopCancelBtnMsr, #dtPopCommonCloseBtnMsr, .commonBtn, .commonBtnMsr').click(function(){
-                        $('#msrCheckPop').fadeOut();
-                        $('#commonPop').fadeOut();
-                        $('.dt_pop_up_dimm').fadeOut();
-                    });
-                    
-                    $('#dtClauseCloseBtn').click(function(){
-                        $('#privatePop').fadeOut();
-                    });
-                    
-					$('#dtClauseCloseXBtn').click(function(){
-						$('#privatePop').fadeOut();
-					});
                 });
                 
-                /* 개인컵 리워드 s */
-                function fn_rewardTumblerMsrCheck(){
-                	fn_hideGnbMenu();
-					var url = document.location.pathname;
-					fn_showrewardTumblerMsrCheckLayer(url);
-                }
-                function fn_showrewardTumblerMsrCheckLayer(url){
-                	/* 로그인 체크  */
-	                	function check() {
-						var user_id  = $("#txt_user_id").val();
-						var user_pwd = $("#txt_user_pwd").val();
-					
-						try {
-							id  = id.trim();
-							pw = pw.trim();
-						} catch (_e) {
-						}
-						
-						if (id == "")  { 
-							alert("아이디를 입력해 주세요."); //접근성_20171120 수정 
-							$("#txt_user_id").focus();  
-							return; 
-						}
-						if (pw == "") {
-							alert("비밀번호를 입력해 주세요."); //접근성_20171120 수정 
-							$("#txt_user_pwd").focus(); 
-							return;
-						}
-						
-                	$.ajax({
-                    	type: 'post',
-                    	url : '/edt/edtCheckLogin',//'/edt/edtCheckLogin',
-                    	data : {},
-                    	dataType : 'json',
-                    	jsonp : 'callback',
-                    	success : function(_response){
-                    		
-                    		if(_response.result_code != "SUCCESS"){
-                    			
-                            	if(url.length == 0){
-                            		url = location.href;
-                            	}  
-                            	location.href = "login/login";
-                            	//원본location.href = "login/login?redirect_url=" + encodeURIComponent(url);
-                    			
-                    		}else{
-                    			//MSR 회원 여부 체크
-                    			if (m_jsonRewardSummary == null) {
-                    				 $.ajax({
-                                     	type: 'post',
-                                     	url : '/interface/getMsrRewardSummary',
-                                     	data : {},
-                                     	dataType : 'json',
-                                     	jsonp : 'callback',
-                                     	async : false,
-                                     	success : function(_response){
-                                     		if (_response.result_code == "SUCCESS") {
-												m_jsonRewardSummary = jQuery.parseJSON(_response.data);
-												fn_showrewardTumblerMsrCheckPopup(m_jsonRewardSummary);
-											}
-                                     	}
-                                   	});
-								}else{
-									
-									fn_showrewardTumblerMsrCheckPopup(m_jsonRewardSummary);
-								}
-                    		}
-                    	}
-                    });
-                }
-            	//설아추가 (아이디 저장)
-            	var objParam = {
-            			 "id"  : id
-            			,"pw" : pw
-            			,"captcha"  : $("#captcha").val()
-            		};
-            	___ajaxCall("/interface/loginMember", objParam, false, "json", "post"
-            			,function (_response) {
-            				if (_response.result_code == "SUCCESS") {
-            					if ($("#idRemb").is(":checked")) {
-            						Cookies.setCookie("idRemb", user_id, 30);	
-            					} else {
-            						Cookies.setCookie("idRemb", user_id, 0);
-            					}
-            					
-            					if (_response.alert_msg != "") {
-            						alert(_response.alert_msg);
-            					}
-                function fn_showrewardTumblerMsrCheckPopup(obj){
-                	if( obj.msrMemberYn == "Y"){ /*msr 회원일 경우 페이지 이동*/
-                		location.href = "my/reward_tumbler";
-                    }else{/* msr 비회원일 경우 팝업창 노출 */
-                        $('#msrCheckPop_rewardTumbler').fadeIn();
-                        $('.dt_pop_up_dimm').fadeIn();
-                        $('#msrCheckPop_rewardTumblerContents').show();
-                        $('#tumblerPopConfirmBtn, #tumblerPopCancelBtn').show();
-                        $('#tumblerPopConfirmBtn').on('click', function(){
-                        	// msr 비회원일 경우 카드 등록 페이지로 이동
-                        	location.href = "my/mycard_info_input";
-                        });
-                    }
-                }
-                $('#tumblerPopCommonCloseBtn, #tumblerPopCancelBtn').click(function(){
-                    $('#msrCheckPop_rewardTumbler').fadeOut();
-                    $('.dt_pop_up_dimm').fadeOut();
-                    $('#msrCheckPop_rewardTumblerContents').hide();
-                    $('#tumblerPopConfirmBtn, #tumblerPopCancelBtn').hide();
-                });
                 
-                /* 개인컵 리워드 e */
-				</script>
-				<script>
-				// 150805 DOM 수정
-				$('div.msr_card_zone').bind('click', function(){
-					if($('div.mycard_area2').css("display")=="none"){
-						$('div.mycard_area1').hide();
-						$('div.mycard_area2').fadeIn();
-						$('.mycard_one img').attr('src', '//image.istarbucks.co.kr/common/img/common/payment_icon2.png').attr('alt','결제하기'); // 접근성_20171106 alt 추가
-					}else{
-						$('div.mycard_area1').fadeIn();
-						$('div.mycard_area2').hide();
-						$('.mycard_one img').attr('src', '//image.istarbucks.co.kr/common/img/common/payment_icon1.png').attr('alt', '결제완료');// 접근성_20171106 alt 추가
-					}
-				});
-				// 150805 DOM 수정 end
-			
-				(function($) {
-					$.fn.seqfx = function() {
-						var elements = this,
-							l = elements.length,
-							i = 0;
-		
-						function execute() {
-							var current = $(elements[i]);
-							i = (i + 1) % l;
-		
-							current
-								.animate({ rotateY: '360deg' }, 2000)
-								.animate({ rotateY: '-360deg' }, 2000, execute);
-						}
-						execute();
-						return this;
-					};
-				}(jQuery));
-				$('.mycard_one').seqfx();
-				</script>
-				<script>
-				
-				$(document).ready(function () {
-					$('a[href*="card_list"] , a[href*="drink_list"] , a[href*="food_list"] , a[href*="product_list"]').on("click", function () {
-						Cookies.deleteCookie("MENU_TAB");
-						Cookies.deleteCookie("MENU_CATE");
-						Cookies.deleteCookie("MENU_OPT");
-					});
-				});
 			</script>
+
+			<script src="../common/js/jquery.transit.min.js"></script>
+						
+			<script src='../common/js/makePCookie.js'></script>
+		
 
 		<script src="../common/js/common_jhp-1.js?v=161014"></script>
 		<script>

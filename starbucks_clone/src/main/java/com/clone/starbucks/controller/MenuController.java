@@ -3,6 +3,7 @@ package com.clone.starbucks.controller;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.text.ParseException;
 import java.util.HashMap;
 
 import javax.servlet.http.HttpServletRequest;
@@ -392,6 +393,22 @@ public class MenuController {
 			if(service.setOrderCount(data)) return "SUCCESS";
 		}
 		return "FAIL";
+	}
+	
+	@RequestMapping(value = "menu/payment")
+	@ResponseBody
+	public int pay(@RequestBody HashMap<String,String> data) throws ParseException {
+		System.out.println(data);
+		String date = data.get("pay_date");
+		date = date.substring(0, 19).replace("T", " ");
+		data.put("pay_date", date);
+		
+		int res = service.payment(data);
+		if(res == 1) {
+			System.out.println("결제값 저장 완료");
+		}
+		//성공시 1반환
+		return res;
 	}
 	
 /*	

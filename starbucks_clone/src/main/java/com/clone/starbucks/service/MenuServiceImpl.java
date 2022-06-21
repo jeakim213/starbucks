@@ -3,8 +3,11 @@ package com.clone.starbucks.service;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Date;
 import java.util.HashMap;
 
 import javax.servlet.http.HttpSession;
@@ -14,9 +17,11 @@ import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
 
+import com.clone.starbucks.DAO.IMemberDAO;
 import com.clone.starbucks.DAO.IMenuDAO;
 import com.clone.starbucks.DTO.E_couponDTO;
 import com.clone.starbucks.DTO.ProductDTO;
+import com.clone.starbucks.DTO.SaleDTO;
 import com.clone.starbucks.DTO.UserInfoDTO;
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
@@ -26,6 +31,7 @@ import com.google.gson.JsonObject;
 public class MenuServiceImpl implements IMenuService{
 	@Autowired HttpSession session;
 	@Autowired IMenuDAO dao;
+	@Autowired IMemberDAO memberDao;
 	
 	//0613-지혜
 		//장바구니 구현. 구조는 map(String, map(String,Object)) 푸드, 상품은 map으로, 음료는 배열로
@@ -154,6 +160,9 @@ public class MenuServiceImpl implements IMenuService{
 			cart.put("Food", food);
 			session.setAttribute("list", cart);
 		}
+		UserInfoDTO user = new UserInfoDTO();
+		user.setCupreward("D");
+		session.setAttribute("userinfo", user);
 		return true;
 	}
 	
@@ -177,7 +186,35 @@ public class MenuServiceImpl implements IMenuService{
 		}
 	}
 	
-	
+	@Override //결제후 DB저장-지혜
+	public int payment(HashMap<String,String> data) throws ParseException {
+		UserInfoDTO user = (UserInfoDTO)session.getAttribute("userInfo");
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		//"pay_date" : new Date().getTime(),
+//		"amount" : rsp.paid_amount,
+//		"method" : 'kakao'
+		HashMap<String,String> sale = (HashMap<String,String>)session.getAttribute("saleCount");
+		//키(상품):벨류(판매개수)
+		//{pay_date=2022-06-20T12:10:48.910Z, amount=2600, method=kakao, couponNum=}
+		for(String key : sale.keySet()) {
+			int count = Integer.parseInt(sale.get(key));
+			SaleDTO dto = new SaleDTO();
+			dto.setId(user.getId());
+			dto.setP_name(key);
+			dto.setSalecount(count);
+	        dto.setSaledate(sdf.parse(data.get("pay_date")));;
+	        dto.setSalemethod(data.get("method"));
+//	        if(!data.get("couponNum").isBlank()) {
+//	        	int ponNo = Integer.parseInt(data.get("couponNum"));
+//	        	dto.setPon_no(ponNo);
+//	        }
+	        int result = dao.insertSale(dto);
+	        if(result != 1) System.out.println(dto.getP_name() + "DB입력에러");
+		}
+		
+		
+		return 1;
+	}
 	
 	@Override //DB생성 - 지혜
 	public void insertMenu(String menuName) throws FileNotFoundException, IOException {

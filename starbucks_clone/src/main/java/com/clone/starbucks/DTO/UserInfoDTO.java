@@ -42,15 +42,15 @@ alter table userinfo add foreign key(pon_no) references e_coupon(pon_no);
 
 public class UserInfoDTO {
 	
-	private String id;			// 아이디 [PK, not null]
-	private String pw;			// 비밀번호 [not null]
-	private String confirmPw;	// DB X
-	private int star;			// 별 [default 0]
-	private String grade;		// 등급 [not null, check, default wc]
-	private String nickname;	// 닉네임
-	private String cupreward;	// 에코컵리워드 설정 [not null, check, default s]
-	private String DTPass;		// 드라이브스루 패스 등록
-	private int pon_no; 		// 쿠폰 넘버 [FK]
+	private String id;	// 아이디 [PK, not null]
+	private String pw;	// 비밀번호 [not null]
+	private String confirmPw;	// 디비에는 안들어가는 확인용
+	private int star;	// 별 [default 0]
+	private String grade;	// 등급 [not null, check, default wc]
+	private String nickname;	//닉네임
+	private String cupreward;	// 에코컵리워드 설정 [not null, check, default s] :s는 별적립 d는 할인
+	private String DTPass;	//드라이브스루 패스 등록
+	
 	
 	
 	public String getId() {
@@ -100,12 +100,6 @@ public class UserInfoDTO {
 	}
 	public void setDTPass(String dTPass) {
 		DTPass = dTPass;
-	}
-	public int getPon_no() {
-		return pon_no;
-	}
-	public void setPon_no(int pon_no) {
-		this.pon_no = pon_no;
 	}
 	
 }
