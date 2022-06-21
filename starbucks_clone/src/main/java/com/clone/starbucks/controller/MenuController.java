@@ -206,7 +206,7 @@ public class MenuController {
 	}
 	
 	@RequestMapping(value="menu/couponUse")
-	public String couponUse(E_couponDTO eCouponDTO, Model model) {
+	public String couponUse(E_couponDTO eCouponDTO, Model model) throws ParseException  {
 		service.couponUse(eCouponDTO, model);
 		return "menu/coupon_popup";
 	}

@@ -652,7 +652,7 @@ var eFrequencyPlannerYn = 'Y';
 					
 								
 <ul>
-	<li class="util_nav01 sign_out" style=""><a href="/starbucks">Sign out</a></li>
+	<li class="util_nav01 sign_out" style=""><a href="/starbucks/login/logout">Sign out</a></li>
 	<li class="util_nav01 sign_in" style="display: none;"><a href="/starbucks/login/login">Sign In</a></li>
 	<li class="util_nav02"><a href="/starbucks/my/index">My Starbucks</a></li>
 	<li class="util_nav03"><a href="/starbucks/menu/orderList">Order</a></li>
