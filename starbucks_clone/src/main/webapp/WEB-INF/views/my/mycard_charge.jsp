@@ -1616,7 +1616,7 @@ var eFrequencyPlannerYn = 'Y';
 		<script src ="https://cdn.iamport.kr/js/iamport.payment-1.1.5.js" type="text/javascript"></script>
 		
 			
-<script type="text/javascript">//결제페이지-지혜0620
+<script type="text/javascript">//결제페이지-다정0621
 	var req;
 	var IMP = window.IMP;
 	var code = "imp86654742"; //가맹점 식별코드
@@ -1659,15 +1659,15 @@ var eFrequencyPlannerYn = 'Y';
 				if(rsp.success){//결제 성공시 판매날짜랑 판매수단, 가격
 					msg = '결제가 완료되었습니다';
 					var result = {
-					"c_num" : c_num,
-					"price" : price,
+						"c_num" : c_num,
+						"price" : price,
 					//"couponNum" : couponNum
 					}
 					
 					req = new XMLHttpRequest();
 					req.onreadystatechange = resultAjax;
-					req.open('post', 'mycard_charge_2')
-					data = JSON.stringify(objParam);//json의 자료형으로 변경해주기
+					req.open('post', 'setChargeAjax')
+					data = JSON.stringify(result);//json의 자료형으로 변경해주기
 					//data의 타입 지정하기. 서버에서 확인하여 JSON의 타입으로 처리할 수 있다.
 					req.setRequestHeader('Content-Type', 'application/json; charset=UTF-8')
 					req.send(data);

@@ -45,7 +45,7 @@
 		UPDATE card SET c_master=#{c_master} WHERE id=#{id}
 	</update>
 	
-	<update id="remainUpdate" parameterType="String">
+	<update id="remainUpdate" parameterType="com.clone.starbucks.DTO.CardDTO">
 		UPDATE card SET remaincost=#{remaincost} WHERE c_num=#{c_num}
 	</update>
 	

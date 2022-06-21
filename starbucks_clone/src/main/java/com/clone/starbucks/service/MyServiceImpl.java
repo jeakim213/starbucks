@@ -275,9 +275,11 @@ public class MyServiceImpl implements IMyService {
 			CardDTO check = myDAO.c_numCheck(c_num);
 			int newCost =  check.getRemaincost()+Integer.parseInt(chargePrice);
 			check.setRemaincost(newCost);
-			if(myDAO.remainUpdate(c_num)==1) {
+			if(myDAO.remainUpdate(check)==1) {
+				System.out.println("성공~");
 				return true;
 			}else {
+				System.out.println("실패ㅠㅠ");
 				return false;
 			}
 			

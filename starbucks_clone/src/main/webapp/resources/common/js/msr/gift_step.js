@@ -623,9 +623,9 @@ function addEmailArea() {
 
   var div = '<div class="tbl_card_sending">';
   div += '	<input id="name" class="sender2" placeholder="받는 사람 이름" type="text" name="name" />';
-  div += '	<input class="em_input" name="email1" title="이메일 앞주소" type="text" />';
+  div += '	<input class="em_input" id="email1" name="email1" title="이메일 앞주소" type="text" />';
   div += '	<span>@</span>';
-  div += '	<input class="em_input" name="email2" title="이메일 뒷주소" type="text" />';
+  div += '	<input class="em_input" id="email2" name="email2" title="이메일 뒷주소" type="text" />';
   div += '	<div class="em_sel_wrap">';
   div += '		<div class="tbl_em_select">';
   div += '			<label for="em_select3_">직접입력</label>';

@@ -154,8 +154,6 @@ public class MyController {
 	      model.addAttribute("cardCount", cardCount);
 	      model.addAttribute("couponCount", couponCount);
 	      
-
-	   
 	      return "my/index2";
 
 	   }
@@ -174,7 +172,7 @@ public class MyController {
 	
 	@ResponseBody 
 	@RequestMapping(value="my/setChargeAjax")
-	public int mycard_charge_2(@RequestBody HashMap<String,String> data, HttpServletResponse response, CardDTO cardDTO) {
+	public int setChargeAjax(@RequestBody HashMap<String,String> data) {
 		if(data != null) {
 			if(myService.setChargeData(data)) {
 			return 1;
