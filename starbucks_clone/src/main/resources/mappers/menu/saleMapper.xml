@@ -3,12 +3,12 @@
 <mapper namespace="com.clone.starbucks.DAO.IMenuDAO">
 	<insert id="insertSale" parameterType="com.clone.starbucks.DTO.SaleDTO">
 		<selectKey keyProperty="sale_no" resultType="int" order="BEFORE">
-			select sale_no.nextval as sale_no from sys.dual
+			select sale_no.nextval as sale_no from DUAL
 		</selectKey>
-		insert into sale values(${sale_no}, #{id}, #{p_name}, #{salecount}, #{saledate}, #{salemethod}
+		
 		<choose>
-			<when test="pon_no != null">, #{pon_no})</when>
-			<otherwise>)</otherwise>
+			<when test="pon_no != ''">insert into sale (sale_no, id, p_name, salecount, saledate, salemethod, pon_no) values(#{sale_no}, #{id}, #{p_name}, #{salecount}, #{saledate}, #{salemethod}, #{pon_no})</when>
+			<otherwise>insert into sale (sale_no, id, p_name, salecount, saledate, salemethod) values(#{sale_no}, #{id}, #{p_name}, #{salecount}, #{saledate}, #{salemethod})</otherwise>
 		</choose>
 	</insert>
 </mapper>

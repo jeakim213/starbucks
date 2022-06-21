@@ -160,9 +160,6 @@ public class MenuServiceImpl implements IMenuService{
 			cart.put("Food", food);
 			session.setAttribute("list", cart);
 		}
-		UserInfoDTO user = new UserInfoDTO();
-		user.setCupreward("D");
-		session.setAttribute("userinfo", user);
 		return true;
 	}
 	
@@ -188,7 +185,7 @@ public class MenuServiceImpl implements IMenuService{
 	
 	@Override //결제후 DB저장-지혜
 	public int payment(HashMap<String,String> data) throws ParseException {
-		UserInfoDTO user = (UserInfoDTO)session.getAttribute("userinfo");
+		UserInfoDTO user = (UserInfoDTO)session.getAttribute("userInfo");
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 		//"pay_date" : new Date().getTime(),
 //		"amount" : rsp.paid_amount,
@@ -211,7 +208,8 @@ public class MenuServiceImpl implements IMenuService{
 	        int result = dao.insertSale(dto);
 	        if(result != 1) System.out.println(dto.getP_name() + "DB입력에러");
 		}
-		
+		session.removeAttribute("saleCount");
+		session.removeAttribute("list");
 		
 		return 1;
 	}

@@ -138,14 +138,6 @@ var eFrequencyPlannerYn = 'Y';
 					<span class="msr_sep_line"></span>
 
 					<!-- 유저레벨 -->
-					<!-- MSR 회원 -->
-					<div class="user_level" style="display:none;">
-						<a href="my/reward">
-							<p class="level_star_bg en">0</p>
-							<p class="user_level_txt"><!-- <strong class="t_ac8432 en userGrade">Gold Level</strong><br /><strong>무료음료</strong> 획득 별까지<br><strong class="necessaryStar">0개</strong> 남았습니다. --></p>
-						</a>
-					</div>
-					<!-- MSR 회원 end -->
 
 					<span class="msr_sep_line"></span>
 
@@ -908,7 +900,8 @@ var eFrequencyPlannerYn = 'Y';
 			}, function(rsp){
 				if(rsp.success){//결제 성공시 판매날짜랑 판매수단, 가격
 					msg = '결제가 완료되었습니다';
-					var result = {
+					
+					var objParam = {
 					"pay_date" : new Date(),
 					"amount" : rsp.paid_amount,
 					"method" : 'kakao',
@@ -922,7 +915,6 @@ var eFrequencyPlannerYn = 'Y';
 					//data의 타입 지정하기. 서버에서 확인하여 JSON의 타입으로 처리할 수 있다.
 					req.setRequestHeader('Content-Type', 'application/json; charset=UTF-8')
 					req.send(data);
-					
 				}
 				else{//결제 실패시
 					msg = '결제에 실패했습니다';
