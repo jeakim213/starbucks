@@ -293,9 +293,9 @@ public class AdminServiceImpl implements IAdminService {
 		return all;
 	}
 	
-	//단
-//		@Value("${ADMIN:admin}")
-//		private String adminAccount;
+	
+//	@Value("${ADMIN:admin}")
+//	private String adminAccount;
 	
 	//단 - 수정
 	@Override
