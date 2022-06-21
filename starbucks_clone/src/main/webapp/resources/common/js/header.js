@@ -139,7 +139,7 @@ $.loginLib = {
 				,function (_error) {
 				}
 			);
-		});		
+		});
 		
 		/*
 		$(".login_info_input_wrap .btn_login").on("click", this.login);
