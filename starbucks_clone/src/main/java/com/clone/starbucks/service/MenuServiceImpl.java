@@ -187,12 +187,13 @@ public class MenuServiceImpl implements IMenuService{
 	public int payment(HashMap<String,String> data) throws ParseException {
 		UserInfoDTO user = (UserInfoDTO)session.getAttribute("userInfo");
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-		//"pay_date" : new Date().getTime(),
-//		"amount" : rsp.paid_amount,
-//		"method" : 'kakao'
 		HashMap<String,String> sale = (HashMap<String,String>)session.getAttribute("saleCount");
-		//키(상품):벨류(판매개수)
 		//{pay_date=2022-06-20T12:10:48.910Z, amount=2600, method=kakao, couponNum=}
+		if(!data.get("couponNum").equals("n")) {//쿠폰 있는 경우 사용상태로 변경해줌
+			
+		}
+		
+		//sale DB등록
 		for(String key : sale.keySet()) {
 			int count = Integer.parseInt(sale.get(key));
 			SaleDTO dto = new SaleDTO();
@@ -235,10 +236,6 @@ public class MenuServiceImpl implements IMenuService{
 
 	   @Override
 	   public void couponUse(E_couponDTO e_couponDTO, Model model) throws ParseException {
-	      session.setAttribute("id", "쭈고");
-	      UserInfoDTO userInfo = new UserInfoDTO();
-	      userInfo.setId("쭈고");
-	      session.setAttribute("userInfo", userInfo);
 	      UserInfoDTO user = (UserInfoDTO) session.getAttribute("userInfo");
 	      String id = user.getId();
 	      

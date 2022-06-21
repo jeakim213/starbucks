@@ -104,6 +104,7 @@ public class MemberServiceImpl implements IMemberService{
 
 				return "가입 완료";
 			}
+			
 			@Override //로그인 - 설아
 			public String loginProc(UserInfoDTO member) {
 				if(member.getId() == null || member.getId().isEmpty())

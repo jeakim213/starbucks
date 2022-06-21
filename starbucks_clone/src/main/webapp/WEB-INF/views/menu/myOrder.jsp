@@ -590,15 +590,12 @@ var eFrequencyPlannerYn = 'Y';
 									
 								</thead>
 								<tbody>
-									<%-- <c:forEach var="#" items="${coupon.list }">--%>
 									<tr>
-										<td><input type="hidden" id="pon_no"/></td><%--쿠폰넘버 넘겨주기 --%>
-										<td style="padding:25px; width: 230px;">1<%-- ${coupon.name }--%></td>
-										<td style="padding:25px; width: 140px;">2 ~ 3<%-- ${coupon.start }&nbsp;~&nbsp;${coupon.end }--%></td>
-										<td style="padding:25px; width: 120px;">4<%-- ${coupon.cost }--%>원</td>
-										<%-- <c:set var="discount" value="${discount + coupon.cost }"/> --%>
+										<td style="padding:25px; width: 230px;" id="pon_name"><input type="hidden" id="pon_no" value="n"/></td>
+										<td style="padding:25px; width: 140px;" id="pon_date"></td>
+										<td style="padding:25px; width: 120px;" >
+										<input type="text" id="pon_cost" style="border: none; width: 35px;" readonly="readonly" onclick="setCost();"/></td>
 									</tr>
-									<%-- </c:forEach>--%>
 								</tbody>	
 								</table>
 								<c:if test="${sessionScope.userinfo.cupreward == 'D'}">
@@ -606,7 +603,7 @@ var eFrequencyPlannerYn = 'Y';
 									<c:set var="discount" value="${discount + 400 }"/>
 								</c:if>
 								<br>
-								<input type="button" class="btn_coupon" value="쿠폰 검색" onclick="window.open('coupon_popup','COUPON 적용하기','width=700 ,height=315 ,location=no,status=no, scrollbars=yes')"><br>
+								<input type="button" class="btn_coupon" value="쿠폰 검색" onclick="window.open('couponUse','COUPON 적용하기','width=700 ,height=315 ,location=no,status=no, scrollbars=yes')"><br>
 							</div>
 						</div>
 							<div class="order_pay" style="margin-bottom: 50px;">
@@ -868,6 +865,7 @@ var eFrequencyPlannerYn = 'Y';
 	IMP.init(code);
 	
 	$(document).ready(function(){
+		
 		__ajaxCall("starbucks/interface/checkLogin", {}, true, "json", "post"
    			,function (_response) {
    				if (_response.result_code == "FAIL") {
@@ -883,7 +881,7 @@ var eFrequencyPlannerYn = 'Y';
 	function payment(){
 		price = $(".payMoney").text().slice(0, -2);
 		payway = $("input[name='payway']:checked").val();
-		//couponNum = $("#pon_no").val();
+		couponNum = $("#pon_no").val();
 		
 		var msg;
 		if(payway == 'kakao'){//카카오페이결제시
@@ -896,7 +894,7 @@ var eFrequencyPlannerYn = 'Y';
 				name : '스타벅스 음료 및 푸드', // 상품명
 				amount : price,
 				buyer_name : '<c:out value="${sessionScope.userinfo.id }"/>',
-				buyer_tel : '010-2178-9724',  //필수항목
+				buyer_tel : '010-1234-1234',  //필수항목
 			}, function(rsp){
 				if(rsp.success){//결제 성공시 판매날짜랑 판매수단, 가격
 					msg = '결제가 완료되었습니다';
@@ -905,7 +903,7 @@ var eFrequencyPlannerYn = 'Y';
 					"pay_date" : new Date(),
 					"amount" : rsp.paid_amount,
 					"method" : 'kakao',
-					//"couponNum" : couponNum
+					"couponNum" : couponNum
 					}
 					
 					req = new XMLHttpRequest();
@@ -936,8 +934,20 @@ var eFrequencyPlannerYn = 'Y';
 			} else {
 				msg = ("ajax통신실패");
 			}
+			alert(msg);
 			//location.href = 'index';
 		}
+	}
+	
+	function setCost(){
+		var pondis = parseInt($('#pon_cost').val());
+		console.log('쿠폰'+pondis);
+		var discount = parseInt($('.discountMoney').text().slice(0, -2));
+		var discost = pondis + discount;
+		var paycost = parseInt($('.payMoney').text().slice(0, -2));
+		var finalcost = paycost - discost;
+		$('.discountMoney').text(discost + ' 원');
+		$('.payMoney').text(finalcost + ' 원');
 	}
 </script>
 <div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div></div></div></div></body></html>

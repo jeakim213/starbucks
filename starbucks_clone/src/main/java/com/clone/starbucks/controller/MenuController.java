@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.clone.starbucks.DTO.CardDTO;
 import com.clone.starbucks.DTO.E_couponDTO;
 import com.clone.starbucks.service.MenuServiceImpl;
 import com.google.gson.Gson;
@@ -199,12 +200,6 @@ public class MenuController {
 	}
 
 	
-	
-	@RequestMapping(value = "menu/coupon_popup")
-	public String menu_coupon_popup() {
-		return "menu/coupon_popup";
-	}
-	
 	@RequestMapping(value="menu/couponUse")
 	public String couponUse(E_couponDTO eCouponDTO, Model model) throws ParseException  {
 		service.couponUse(eCouponDTO, model);
@@ -212,10 +207,10 @@ public class MenuController {
 	}
 	
 	
-	
 
 	@RequestMapping(value = "menu/starbucksCard")
-	public String starbucksCard() {
+	public String starbucksCard(Model model) {
+		
 		return "menu/starbucksCard";
 	}
 
@@ -397,7 +392,7 @@ public class MenuController {
 	
 	@RequestMapping(value = "menu/payment")
 	@ResponseBody
-	public int pay(@RequestBody HashMap<String,String> data) throws ParseException {
+	public int payment(@RequestBody HashMap<String,String> data) throws ParseException {
 		System.out.println(data);
 		String date = data.get("pay_date");
 		date = date.substring(0, 19).replace("T", " ");
