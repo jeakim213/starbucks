@@ -1762,7 +1762,7 @@ function requestPay(){
                 <!-- 서브 gnb -->
                 <div class="sub_gnb_wrap">
                     <div class="sub_gnb_wrap_inner">
-                        <h1 class="logo"><a href="/" title="스타벅스 메인페이지">스타벅스 코리아</a><!-- 접근성_20171106 title 추가 -->
+                        <h1 class="logo"><a href="/starbucks" title="스타벅스 메인페이지">스타벅스 코리아</a><!-- 접근성_20171106 title 추가 -->
                         </h1>
                         <nav class="util_nav">
 
@@ -1771,10 +1771,10 @@ function requestPay(){
                                 <li class="util_nav01 sign_out" style=""><a href="/starbucks/login/logout">Sign out</a></li>
                                 <li class="util_nav01 sign_in" style="display: none;"><a href="/starbucks/login/login">Sign
                                         In</a></li>
-                                <li class="util_nav02"><a href="javascript:void(0);" required="login"
+                                <li class="util_nav02"><a href="/starbucks/my/index" required="login"
                                         data-href="my/index">My Starbucks</a></li>
-                                <li class="util_nav03"><a href="menu/orderList">Order</a></li>
-                                <li class="util_nav04"><a href="store/store_map">Find a Store</a></li>
+                                <li class="util_nav03"><a href="/starbucks/menu/orderList">Order</a></li>
+                                <li class="util_nav04"><a href="/starbucks/store/store_map">Find a Store</a></li>
                             </ul>
                         </nav>
                        
@@ -2718,7 +2718,6 @@ function requestPay(){
         </footer>
         <!-- footer end -->
 
-
         <script src="//image.istarbucks.co.kr/common/js/jquery-1.10.2.min.js"></script>
         <script src="https://image.istarbucks.co.kr/common/js/@common.js"></script>
         <script src="https://image.istarbucks.co.kr/common/js/jquery-ui.min.js?v=220207"></script>
@@ -3022,7 +3021,7 @@ function requestPay(){
 
     <script src="../../common/js/util.js"></script>
     <script src="../../common/js/gnbward.js"></script>
-
+	
     <script src="../../common/js/jquery.form.min.js"></script>
     <script src="../../common/js/jquery.numeric.min.js"></script>
     <script src="../../common/js/common_jhp.js"></script>

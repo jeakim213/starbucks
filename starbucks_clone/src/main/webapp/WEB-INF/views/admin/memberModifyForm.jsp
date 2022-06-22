@@ -22,7 +22,7 @@
 
 <title id="titleJoin">My Starbucks | Starbucks Korea</title> <!-- 220117 수정 -->
 <link rel="shortcut icon" href="https://image.istarbucks.co.kr/common/img/common/favicon.ico?v=200828" type="image/ico"> <!-- 20200827 파비콘 교체 및 CDN 변수처리 -->
-<link href="../common/css/admin_memberModify_3.css" rel="stylesheet">
+<link href="../common/css/admin_memberModify_5.css" rel="stylesheet">
 <link href="../common/css/style.css?v=210721" rel="stylesheet">
 <link href="../common/css/jquery.bxslider.css" rel="stylesheet">
 <link href="../common/css/idangerous.swiper.css" rel="stylesheet">
@@ -781,7 +781,7 @@ var eFrequencyPlannerYn = 'Y';
 		</tr>
 		<tr>
 			<td id="l" width=90 align='right' height=35>닉네임</td>
-			<td><input class="text" type=text name='nickname' value="${all.nickname }"/></td>
+			<td><input maxlength="6" class="textN" type=text name='nickname' value="${all.nickname }"/></td>
 		</tr>
 		<tr>
 			<td id="l" width=90 align='right' height=35>별</td>
@@ -833,10 +833,21 @@ var eFrequencyPlannerYn = 'Y';
 	</table>
 </form>
 </div>
-					
 
-
-                       
+<!-- 닉네임 한글 6자리 -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+<script type="text/javascript">
+$(function(){
+    $(".textN").keyup(function (event) {
+         regexp = /[a-z0-9]|[ \[\]{}()<>?|`~!@#$%^&*-_+=,.;:\"'\\]/g;
+         v = $(this).val();
+         if (regexp.test(v)) {
+             alert("닉네임은 한글 6자리 이내로 입력해주세요.");
+             $(this).val(v.replace(regexp, ''));
+         }
+     });
+});
+</script>
                         <!-- msr 회원 -->
                         <div class="msr_user_index" style="display: none;">
                             <!-- 유저정보 -->
@@ -1522,7 +1533,7 @@ var eFrequencyPlannerYn = 'Y';
                 }                
             </script>
             <script src="../common/js/common_jhp.js"></script>
-            <!-- <script src="../common/js/my/index.js?v=210420"></script> -->
+            <!-- <script src="../common/js/myㄱ?v=210420"></script> -->
             <script src="../common/js/my/index_level_web.js"></script>
         </div>
 
