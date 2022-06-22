@@ -10,23 +10,27 @@ import java.net.URL;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.Random;
 
 
 import javax.servlet.http.HttpServletRequest;
-
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.ui.Model;
 
 import com.clone.starbucks.DAO.IMsrDAO;
 import com.clone.starbucks.DTO.CardDTO;
+import com.clone.starbucks.DTO.RegisterDTO;
+import com.clone.starbucks.DTO.UserInfoDTO;
 
 @Service
 public class MsrServiceImpl implements IMsrService{
 	
 	@Autowired private IMsrDAO msrDAO;
-//	@Autowired private HttpSession session;
+	@Autowired private HttpSession session;
 
 //----------------------------------------E-gift Card----------------------------------------------	
 	
@@ -68,8 +72,6 @@ public class MsrServiceImpl implements IMsrService{
 	@Override
 	public CardDTO eGiftCardProc(CardDTO cardDTO, HttpServletRequest request) throws ParseException {
 		
-		
-		
 		//받는 사람
 		if(request.getParameter("name")==null) {
 			return null;
@@ -100,103 +102,59 @@ public class MsrServiceImpl implements IMsrService{
 		//insert
 		msrDAO.insertEgift(cardDTO);
 		
+		session.setAttribute("cardDTO", cardDTO);
+		
 		
 		return cardDTO;
 	}
 
+	@Override
+	public boolean setPurchaseData(HashMap<String, String> data) {
+		String name = data.get("name");
+		String email1 = data.get("email1");
+		String email2 = data.get("email2");
+		String reqMsg = data.get("reqMsg");
+		String price = data.get("price");
+		String c_name = data.get("c_name");
+		
+		if(name.isEmpty() || email1.isEmpty() || email2.isEmpty() || reqMsg.isEmpty()) {
+			return false;
+		}
+		
+		session.setAttribute("name", name);
+		session.setAttribute("email1", email1);
+		session.setAttribute("email2", email2);
+		session.setAttribute("reqMsg", reqMsg);
+		session.setAttribute("price", price);
+		session.setAttribute("c_name",c_name);
+		
+		System.out.println("에이젝스 옵니다~");
+		return true;
+	}
 
-//	@Override
-//	public void sendMail(HttpServletRequest request, HttpServletResponse response) throws Exception {
-//		
-//		
-//		//메일 관련 정보
-//		String host = "smtp.naver.com";
-//		final String username = "dbdbdbgg";
-//		final String password = "afdfdf4933";
-//		int port = 587;
-//		
-//		//메일 내용
-//		String name = request.getParameter("name");
-//		String email1 = request.getParameter("email1");
-//		String email2 = request.getParameter("email2");
-//		String reqMsg = request.getParameter("reqMsg");
-//		
-//		
-//		String recipient = email1+"@"+email2;
-//		String subject = "♬ Starbucks E-gift Card 선물이 도착하였습니다 ♬";
-//		String content = name+"님 안녕하세요. 선물받은 E-gift Card가 도착하였습니다.\n\n"
-//				+ "--------------------------------------------"
-//				+ "카드번호 : "+""+"\n"
-//				+ "핀 번호 : "+""+"\n\n"
-//				+ "메세지 : "+reqMsg
-//				+ "--------------------------------------------"
-//				+ "* 위 정보를 스타벅스 홈페이지에서 등록해야 사용 하실 수 있습니다.\n"
-//				+ "스타벅스 홈페이지 : http://localhost:8085/starbucks/my/mycard_info_input";
-//		
-//		Properties props = System.getProperties();
-//		
-//		props.put("mail.smtp.host", host);
-//		props.put("mail.smtp.port", port);
-//		props.put("mail.smtp.auth", "true");
-//		props.put("mail.smtp.ssl.enable", "true");
-//		props.put("mail.smtp.trust", host);
-//		
-//		Session session = Session.getDefaultInstance(props, new javax.mail.Authenticator() {
-//			String un = username;
-//			String pw = password;
-//			protected PasswordAuthentication getPasswordAuthentication() {
-//				return new PasswordAuthentication(un, pw);
-//			}
-//		});
-//		
-//		session.setDebug(true);
-//		
-//		Message mimeMessage = new MimeMessage(session);
-//		mimeMessage.setFrom(new InternetAddress(recipient));
-//		mimeMessage.setRecipient(Message.RecipientType.TO, new InternetAddress(recipient));
-//		mimeMessage.setSubject(subject);
-//		mimeMessage.setText(content);
-//		Transport.send(mimeMessage);
-//		
-//	}
-	
-//	public String kakaoPay() {
-//		//카카오톡 결제(메소드 만들어서 불러오기)
-//				try {
-//					URL url = new URL("https://kapi.kakao.com/v1/payment/ready");
-//					HttpURLConnection serverConect = (HttpURLConnection) url.openConnection();
-//					serverConect.setRequestMethod("POST");
-//					serverConect.setRequestProperty("Authorization", "KakaoAK 3979c78b0f234feced0d69d19282e5e2");
-//					serverConect.setRequestProperty("Content-type", "application/x-www-form-urlencoded;charset=utf-8");
-//					serverConect.setDoOutput(true);
-//					String param = "cid=TC0ONETIME&partner_order_id=partner_order_id&partner_user_id=partner_user_id&item_name=초코파이&quantity=1&total_amount=2200&vat_amount=200&tax_free_amount=0&approval_url=http://localhost:8085/starbucks/&fail_url=http://localhost:8085/starbucks/msr/sceGift/gift_step1&cancel_url=http://localhost:8085/starbucks/msr/sceGift/gift_step1";
-//					OutputStream ops = serverConect.getOutputStream(); //보내는애
-//					DataOutputStream dops = new DataOutputStream(ops);
-//					dops.writeBytes(param);
-////					dops.flush(); //자기가 가지고있는것을 비운다. 전깃줄에 태워보내므로써 비움.
-//					dops.close();
-//					
-//					int result = serverConect.getResponseCode();
-//					
-//					InputStream ips; //받는 애
-//					if(result==200) {
-//						ips = serverConect.getInputStream();
-//					}else {
-//						ips = serverConect.getErrorStream();
-//					}
-//					InputStreamReader isr = new InputStreamReader(ips);
-//					BufferedReader bfrr = new BufferedReader(isr);
-//					
-//					String readline = bfrr.readLine();
-//					return readline;
-//					
-//				}catch (Exception e) {
-//					e.printStackTrace();
-//				}
-//				return "{\"result\":\"NO\"}";
-//	}
-//	
-	
+	@Override
+	public void regInfo(RegisterDTO registerDTO, Model model) {
+		
+		UserInfoDTO userInfo = new UserInfoDTO();
+//		userInfo.setId("쭈고");
+		session.setAttribute("userInfo", userInfo);
+		UserInfoDTO user = (UserInfoDTO) session.getAttribute("userInfo");
+		String id = user.getId();
+		
+		//session.setAttribute("id", "moon_614@daum.net");
+		//String id = (String)session.getAttribute("id");
+		RegisterDTO register =  msrDAO.idCheck(id);
+		
+		String name = register.getName();
+		String email = register.getEmail();
+//		String[] mailSplit = email.split("@");
+//		String email1 = mailSplit[0];
+//		String email2 = mailSplit[1];
+		
+		model.addAttribute("name",name);
+		model.addAttribute("email",email);
+	}
+
 	
 //----------------------------------------E-gift Card----------------------------------------------
 

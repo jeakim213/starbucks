@@ -1,5 +1,6 @@
 ﻿<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="ko">
 	<head>
@@ -22,6 +23,9 @@
 <meta property="og:description" content="Starbucks">
 
 <title id="titleJoin">Starbucks Korea</title> <!-- 220117 수정 -->
+<script type="text/javascript" charset="utf-8">
+	sessionStorage.setItem("contextpath", "${pageContext.request.contextPath}");
+</script>
 <link rel="shortcut icon" href="../common/img/common/favicon.ico?v=200828" type="image/ico"> <!-- 20200827 파비콘 교체 및 CDN 변수처리 -->
 <link href="../common/css/reset.css" rel="stylesheet">
 <link href="../common/css/style.css?v=210721" rel="stylesheet">

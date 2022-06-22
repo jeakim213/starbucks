@@ -2,6 +2,7 @@ package com.clone.starbucks.controller;
 
 
 import java.io.PrintWriter;
+import java.util.HashMap;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -11,9 +12,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.clone.starbucks.DTO.CardDTO;
+import com.clone.starbucks.DTO.RegisterDTO;
 import com.clone.starbucks.service.MailSenderService;
 import com.clone.starbucks.service.MsrServiceImpl;
 
@@ -24,38 +25,52 @@ public class MsrController {
 	@Autowired MailSenderService mail;
 	//msr
 	
-	@ResponseBody
+	
 	@RequestMapping(value="msr/sceGift/eGiftCardProc")
 	public String eGiftCardProc(CardDTO cardDTO, Model model, HttpServletRequest request, HttpServletResponse response) throws Exception {
 		
 		//카카오톡 결제(메소드 만들어서 불러오기)
-		//kakaoPay.kakaoPay();
-		//DB저장 <<카드값 저장
 		
+		//DB저장 <<카드값 저장
 		CardDTO dto = msrService.eGiftCardProc(cardDTO, request);
 		
-		//되는가 안되는ㄱ ㅏ확인
+		
+		//alert
 		response.setContentType("text/html; charset=UTF-8");
 		PrintWriter out = response.getWriter();
-		if(dto!=null) {
-//			//메일
-//			msrService.sendMail(request, response);
+		
+		
+		if(dto!=null) {	
 			// <!-- 0620예은- 메일전송 -->
-			mail.mailSend("inis2510@naver.com");
-
-			out.println("<script>alert('쿠폰 구매 완료되었습니다.'); location.href='msr/sceGift/gift_step1';</script>");
+			
+			String name = request.getParameter("name");
+			String email1 = request.getParameter("email1");
+			String email2 = request.getParameter("email2");
+			String email = email1+"@"+email2;
+			String subject = "♬ Starbucks E-Gift 카드가 도착하였습니다 ♬";
+			String reqMsg = request.getParameter("reqMsg");
+			
+			String cardNum = dto.getC_num();
+			String cardPin = dto.getC_pin();
+			String ment = name+"님! E-gift 카드가 도착하였습니다! "
+					+ "\n카드번호 : "+cardNum
+					+ "\n핀번호 : "+cardPin
+					+ "\n보내시는 분의 메세지 : "+reqMsg;
+			
+			mail.mailSend(email, name, subject, ment);
+			out.println("<script>alert('카드 구매가 완료되었습니다.'); location.href='gift_step1';</script>");
 			out.flush();
 			out.close();
 			return "msr/sceGift/gift_step1";
 		}else {
-//			model.addAttribute("msg",msg);
-			out.println("<script>alert('구매 실패 하였습니다.');location.href='msr/sceGift/gift_step1';</script>");
+			out.println("<script>alert('카드 구매를 실패하였습니다.'); location.href='gift_step1';</script>");
 			out.flush();
 			out.close();
 			return "msr/sceGift/gift_step1";
 		}
 		
 	}
+	
 	
 	@RequestMapping(value = "msr/msreward/about")
 	public String msreward_about() {
@@ -99,6 +114,12 @@ public class MsrController {
 
 	@RequestMapping(value = "msr/sceGift/gift_step1")
 	public String sceGift_gift_step1() {
+		return "msr/sceGift/gift_step1";
+	}
+	
+	@RequestMapping(value="msr/sceGift/gift_step2")
+	public String gift_step2(RegisterDTO registerDTO, Model model, HttpServletRequest request) {
+		msrService.regInfo(registerDTO,model);
 		return "msr/sceGift/gift_step1";
 	}
 

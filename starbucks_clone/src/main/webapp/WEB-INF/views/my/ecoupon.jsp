@@ -1632,7 +1632,7 @@ var eFrequencyPlannerYn = 'Y';
 		
 			
 			<script src="../common/js/common_jhp.js"></script>
-			<script src="../common/js/my/ecoupon.js?v=211115"></script>
+			<script src="https://www.starbucks.co.kr/common/js/my/ecoupon.js?v=211115"></script>
 			
 			<script type="text/javascript">
 				<!-- 20170726추가 -->

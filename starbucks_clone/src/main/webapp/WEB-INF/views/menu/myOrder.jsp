@@ -590,15 +590,12 @@ var eFrequencyPlannerYn = 'Y';
 									
 								</thead>
 								<tbody>
-									<%-- <c:forEach var="#" items="${coupon.list }">--%>
 									<tr>
-										<td><input type="hidden" id="pon_no"/></td><%--쿠폰넘버 넘겨주기 --%>
-										<td style="padding:25px; width: 230px;">1<%-- ${coupon.name }--%></td>
-										<td style="padding:25px; width: 140px;">2 ~ 3<%-- ${coupon.start }&nbsp;~&nbsp;${coupon.end }--%></td>
-										<td style="padding:25px; width: 120px;">4<%-- ${coupon.cost }--%>원</td>
-										<%-- <c:set var="discount" value="${discount + coupon.cost }"/> --%>
+										<td style="padding:25px; width: 230px;" id="pon_name"></td>
+										<td style="padding:25px; width: 140px;" id="pon_date"></td>
+										<td style="padding:25px; width: 120px;" >
+										<input type="text" id="pon_cost" style="border: none; width: 35px;" readonly="readonly" onclick="setCost();"/></td>
 									</tr>
-									<%-- </c:forEach>--%>
 								</tbody>	
 								</table>
 								<c:if test="${sessionScope.userinfo.cupreward == 'D'}">
@@ -606,14 +603,14 @@ var eFrequencyPlannerYn = 'Y';
 									<c:set var="discount" value="${discount + 400 }"/>
 								</c:if>
 								<br>
-								<input type="button" class="btn_coupon" value="쿠폰 검색" onclick="window.open('coupon_popup','COUPON 적용하기','width=700 ,height=315 ,location=no,status=no, scrollbars=yes')"><br>
+								<input type="button" class="btn_coupon" value="쿠폰 검색" onclick="window.open('couponUse','COUPON 적용하기','width=700 ,height=315 ,location=no,status=no, scrollbars=yes')"><br>
 							</div>
 						</div>
 							<div class="order_pay" style="margin-bottom: 50px;">
 							<h3>결제수단</h3><br>
 							<div class="order_pay_inner" style="text-align: center;">
 								<input type="radio" name="payway" value="sbcard" checked="checked" style="margin-top: 50px; width:20px;height:20px;border:1px;">
-								<input type="button" value="스타벅스 카드" class="btn_pay" style="background: #006633; color: white"><!-- onclick="window.open('starbucksCard','카드 선택하기','width=700 ,height=700 ,location=no,status=no, scrollbars=yes')" -->
+								<input type="button" value="스타벅스 카드" class="btn_pay" style="background: #006633; color: white">
 								<input type="radio" name="payway" value="kakao" style="margin-top: 50px; margin-left: 50px; width:20px;height:20px;border:1px;">
 								<input type="button" value="Kakao Pay" class="btn_pay" style="background: #fae100;" ><br>
 							</div>
@@ -643,7 +640,9 @@ var eFrequencyPlannerYn = 'Y';
 						<!-- <div class="order_orderbtn" style="margin-bottom: 50px;">
 							<h3>결제화면</h3>
 						</div> -->
-						
+						<input type="hidden" id="ponNo" value="">
+						<input type="hidden" id="cardNum" value="" onclick="cardPayment();">
+						<input type="hidden" id="cardMoney" value="">
 						<div class="order_submit" style="margin: auto; text-align: center;">
 							<input type="button" value="결제" class="submitResetBtn" onclick="payment();" style="background: #006633; color: white;">
 							<input type="reset" value="취소" class="submitResetBtn" style="background: #f6f6f6; ">
@@ -868,6 +867,7 @@ var eFrequencyPlannerYn = 'Y';
 	IMP.init(code);
 	
 	$(document).ready(function(){
+		
 		__ajaxCall("starbucks/interface/checkLogin", {}, true, "json", "post"
    			,function (_response) {
    				if (_response.result_code == "FAIL") {
@@ -883,7 +883,7 @@ var eFrequencyPlannerYn = 'Y';
 	function payment(){
 		price = $(".payMoney").text().slice(0, -2);
 		payway = $("input[name='payway']:checked").val();
-		//couponNum = $("#pon_no").val();
+		couponNum = $("#ponNo").val();
 		
 		var msg;
 		if(payway == 'kakao'){//카카오페이결제시
@@ -896,7 +896,7 @@ var eFrequencyPlannerYn = 'Y';
 				name : '스타벅스 음료 및 푸드', // 상품명
 				amount : price,
 				buyer_name : '<c:out value="${sessionScope.userinfo.id }"/>',
-				buyer_tel : '010-2178-9724',  //필수항목
+				buyer_tel : '010-1234-1234',  //필수항목
 			}, function(rsp){
 				if(rsp.success){//결제 성공시 판매날짜랑 판매수단, 가격
 					msg = '결제가 완료되었습니다';
@@ -905,7 +905,7 @@ var eFrequencyPlannerYn = 'Y';
 					"pay_date" : new Date(),
 					"amount" : rsp.paid_amount,
 					"method" : 'kakao',
-					//"couponNum" : couponNum
+					"couponNum" : couponNum
 					}
 					
 					req = new XMLHttpRequest();
@@ -924,7 +924,10 @@ var eFrequencyPlannerYn = 'Y';
 			});//pay
 			
 		}else{//스벅카드결제시
-			
+			//카드목록창 open
+			window.open('cardChoice','카드 선택하기','width=700 ,height=700 ,location=no,status=no, scrollbars=yes');
+			//값 선택시 히든input에 카드잔액&카드num받아오기.
+			//강제 액션넣어 function동작
 		}
 	}
 	
@@ -934,10 +937,53 @@ var eFrequencyPlannerYn = 'Y';
 			if (_response == 1) {
 				msg = "주문을 완료하였습니다.\n주문내역은 마이페이지 > 전자영수증에서 확인 가능합니다.";
 			} else {
-				msg = ("ajax통신실패");
+				msg = ("통신실패");
 			}
-			//location.href = 'index';
+			alert(msg);
+			location.href = '${pageContext.request.contextPath}/index';
 		}
+	}
+	
+	function cardPayment(){
+		var card_num = $("#cardNum").val();
+		var card_money = parseInt($("#cardMoney").val());
+		var ponno = $("#ponNo").val();
+		console.log(ponno);
+		
+		if(card_num == ''){
+			alert("결제실패: 선택된 카드가 없습니다.");
+		}else{
+			if(card_money >= price){
+				var objParam = {
+					"pay_date" : new Date(),
+					"amount" : price,
+					"method" : 'sbcard',
+					"couponNum" : ponno,
+					"card_num" : card_num
+				}
+					
+				req = new XMLHttpRequest();
+				req.onreadystatechange = resultAjax;
+				req.open('post', 'payment')
+				data = JSON.stringify(objParam);//json의 자료형으로 변경해주기
+				//data의 타입 지정하기. 서버에서 확인하여 JSON의 타입으로 처리할 수 있다.
+				req.setRequestHeader('Content-Type', 'application/json; charset=UTF-8')
+				req.send(data);
+			}else{
+				alert("결제실패: 카드 잔액이 부족합니다. 충전해주세요.");
+				location.href = '${pageContext.request.contextPath}/my/mycard_charge_1';
+			}
+		}
+	}
+	
+	function setCost(){
+		var pondis = parseInt($('#pon_cost').val());
+		var discount = parseInt($('.discountMoney').text().slice(0, -2));
+		var discost = pondis + discount;
+		var paycost = parseInt($('.payMoney').text().slice(0, -2));
+		var finalcost = paycost - discost;
+		$('.discountMoney').text(discost + ' 원');
+		$('.payMoney').text(finalcost + ' 원');
 	}
 </script>
 <div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div></div></div></div></body></html>

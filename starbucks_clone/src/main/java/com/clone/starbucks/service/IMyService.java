@@ -1,6 +1,8 @@
 package com.clone.starbucks.service;
 
 
+import java.util.HashMap;
+
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.ui.Model;
@@ -28,6 +30,6 @@ public interface IMyService {
 	
 	String editCardProc(CardDTO cardDTO,HttpServletRequest request, Model model);
 
-
+	boolean setChargeData(HashMap<String, String> data);
 	
 }

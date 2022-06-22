@@ -24,7 +24,7 @@
 </head>
 <body>
 <div class="popup" style="margin:auto;text-align: center;">
-	<form action="#">
+	<form action="javascript:void(0)">
 		<table class="coupon" style="border:solid; border-color: #dfdfdf; font-size: 14px; margin:auto;">
 				<thead>
 					<tr>
@@ -36,24 +36,39 @@
 				<tbody>
 					<c:set var="i" value="0"/>
 					<c:forEach var="eCouponDTO" items="${list }">
-					
 					<tr>
-						<td><input type="radio" name="couponChoose" style="text-align: center;"/></td>
-						<td style="padding:15px; width: 230px;"><p id="pon_name">${eCouponDTO.pon_name }</p></td>
-						<td style="padding:15px; width: 140px;">
-						${startList[i]} - ${endList[i]}</td>
-						<td style="padding:15px; width: 120px;"><p id="pon_cash">${eCouponDTO.pon_cash }</p></td>
+						<td><input type="radio" name="couponChoose" style="text-align: center;" value="${eCouponDTO.pon_no }"/></td>
+						<td style="padding:15px; width: 230px;"><p>${eCouponDTO.pon_name }</p>
+						<input type="hidden" id="pon_name" value="${eCouponDTO.pon_name }"/></td>
+						<td style="padding:15px; width: 140px;"><p>${startList[i]} ~ ${endList[i]}</p>
+						<input type="hidden" id="pon_date" value="${startList[i]} ~ ${endList[i]}"/></td>
+						<td style="padding:15px; width: 120px;"><p>${eCouponDTO.pon_cash }</p>
+						<input type="hidden" id="pon_cash" value="${eCouponDTO.pon_cash }"/></td>
 					</tr>
 					<c:set var="i" value="${i+1 }"/>
 					</c:forEach>
 				</tbody>
 			</table>
 			<label style="color: red; font-size: 12px;"><b>쿠폰의 중복선택은 불가합니다.</b></label><br>
-			<input type="submit" class="submitResetBtn" style="color: white; background: #006633;" value="쿠폰선택" <%--onclick="close();"--%>onclick="window.close()"><input type="reset" style="background: #f62222; color: white;" class="submitResetBtn" value="취소">
+			<input type="button" class="submitResetBtn" style="color: white; background: #006633;" value="쿠폰선택" onclick="sendCoupon();"><input type="reset" style="background: #C22505; color: white;" onclick="window.close()" class="submitResetBtn" value="취소">
 	</form>
 </div>
 </body>
-<script type="text/javascript">
-	
+<script src="//image.istarbucks.co.kr/common/js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript"> //지혜 0621
+	function sendCoupon(){
+		num = $("input[name='couponChoose']:checked");
+		obj = $(num).closest('tr');//부모요소
+		name = $(obj).find("#pon_name").val();
+		date = $(obj).find("#pon_date").val();
+		cost = $(obj).find("#pon_cash").val();
+		window.opener.document.getElementById('ponNo').value = $(num).val();
+		window.opener.document.getElementById('pon_name').innerText = name;
+		window.opener.document.getElementById('pon_date').innerText = date;
+		window.opener.document.getElementById('pon_cost').value = cost;
+		window.opener.document.getElementById('pon_cost').click();
+		
+		window.close();
+	}
 </script>
 </html>

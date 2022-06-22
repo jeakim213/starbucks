@@ -1,3 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="mappers.menu.customMapper"></mapper>
+<mapper namespace="com.clone.starbucks.DAO.IMenuDAO">
+	<insert id="insertMyMenu" parameterType="com.clone.starbucks.DTO.CustomDTO">
+		insert into custom values(#{id}, #{p_name}, #{cus_nickname}, default, #{cus_op})
+	</insert>
+</mapper>

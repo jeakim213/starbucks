@@ -23,8 +23,8 @@
 	
 	
 	<insert id="insertMember" parameterType="com.clone.starbucks.DTO.RegisterDTO">
-		INSERT INTO register (id, name, phone, email, birth_year, birth_month, birth_day ,gender, event_e, event_sms) 
-		VALUES(#{id}, #{name}, #{phone}, #{email}, #{birth_year}, #{birth_month},#{birth_day}, #{gender}, #{event_e}, #{event_sms})
+		INSERT INTO register (id, name, phone, email, birth_year, birth_month, birth_day, gender, event_e, event_sms) 
+		VALUES(#{id}, #{name}, #{phone}, #{email}, #{birth_year}, #{birth_month}, #{birth_day}, #{gender}, #{event_e}, #{event_sms})
 	</insert>
 
 	

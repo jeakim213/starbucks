@@ -2179,7 +2179,7 @@ function requestPay(){
 
             <!-- 내용   form action eGiftCardProc -->
             <section class="card_gift_info_section">
-                <form action="#" method="post" id="egift_f">
+                <form method="post" id="egift_f">
                     <!-- <input type="hidden" name="b2bYn" value="N">
                     <input type="hidden" id="egiftImgMngSeq" value="326">
                     <input type="hidden" id="cardName" value="고맙습니다 e-Gift">
@@ -2234,7 +2234,7 @@ function requestPay(){
 							    <tr>
 							        <th>받는 사람<br>
 							        	<!-- 0615 다정 나에게 선물하기 정보 불러오는 주석 풀어야함 -->
-							            <p><div class="ez-checkbox"><input type="checkbox" id="giftMe" data-username="정다정" data-phone="010-4036-4933" data-email="wjdekwjd02@naver.com" class="ez-hide"></div><label for="giftMe">나에게 선물하기</label></p>
+							            <p><div class="ez-checkbox"><input type="checkbox" id="giftMe" data-username="${name }" data-phone="010-0000-0000" data-email="${email }" class="ez-hide"></div><label for="giftMe">나에게 선물하기</label></p>
 							        	<%-- <p><div class="ez-checkbox"><input type="checkbox" id="giftMe" data-username="${register.name }" data-phone="${register.phone }" data-email="${register.email }" class="ez-hide"></div><label for="giftMe">나에게 선물하기</label></p> --%>
 							        </th>
 							        <td>
@@ -2378,7 +2378,7 @@ function requestPay(){
 							    <tr>
 							    	<th>카드 선택</th>
 							    	<td>
-							    		<select style="border-color:#ddd; height:26px; color:#666; border-radius: 3px;" name="c_name">
+							    		<select style="border-color:#ddd; height:26px; color:#666; border-radius: 3px;" name="c_name" id="c_name">
 							    			<option value="2022 Cherry Blossom" selected="selected">2022 Cherry Blossom</option>
 							    			<option value="고맙습니다 e-Gift">고맙습니다 e-Gift</option>
 							    			<option value="Thank You!">Thank You!</option>
@@ -2504,7 +2504,7 @@ function requestPay(){
                             <ul>
                                 <li class="gift_info_send_btn1"><input type="reset" style="border-radius:3px; color:#fff; display:block; background: #666; font-size:12px;font-weight:bold;height:45px;line-height:45px; text-align:center; width:84px; border-style: none;" class="btn123" value="취소" /></li>
                                 <!-- 0620예은 -->
-                                <li class="gift_info_send_btn2"><input type="submit" value="결제하기" id="send" onclick="this.form.action='eGiftCardProc';" style="border-radius:3px; color:#fff;display:block; font-size:12px;font-weight:bold;height:45px;line-height:45px; text-align:center; width:84px; background:#222; border-style: none;" /></li>
+                                <li class="gift_info_send_btn2"><input type="button" value="결제하기" id="send" onclick="cardPurchase();" style="border-radius:3px; color:#fff;display:block; font-size:12px;font-weight:bold;height:45px;line-height:45px; text-align:center; width:84px; background:#222; border-style: none;" /></li>
                             </ul>
                         </div>
                     </fieldset>
@@ -3762,7 +3762,7 @@ function requestPay(){
             }
 
             // 현재 사용자 ID
-            , getCurrentUserId: function () {
+            /* , */ /* getCurrentUserId: function () {
                 ___ajaxCall("starbucks/interface/getCurrentUserId", {}, false, "json", "post"
                     , function (_response) {
                         if (_response.result_code == "SUCCESS") {
@@ -3770,10 +3770,10 @@ function requestPay(){
                         }
                     }
                 );
-            }
+            } */
 
             // 현재 사용자 전화번호
-            , getCurrentUserPhone: function () {
+            /* , getCurrentUserPhone: function () {
                 var currentUserPhone = "";
 
                 ___ajaxCall("interface/getCurrentUserPhone", {}, false, "json", "post"
@@ -3785,10 +3785,10 @@ function requestPay(){
                 );
 
                 return currentUserPhone;
-            }
+            } */
 
             // 인증 여부 조회
-            , getCurrentPhoneCertInfo: function (_phoneType) {
+            /* , getCurrentPhoneCertInfo: function (_phoneType) {
                 var certInfo = {
                     after_phone: "NONE"
                     , before_phone: "NONE"
@@ -3833,9 +3833,9 @@ function requestPay(){
 
                 return certInfo;
             }
-
+ */
             // 인증 요청
-            , callPhoneCert: function () {
+            /* , callPhoneCert: function () {
                 if ($.phoneCertLib.isCalling) {
                     alert("전화 요청 중입니다. 잠시만 기다려 주세요.");
                     return;
@@ -3913,7 +3913,7 @@ function requestPay(){
                         alert("ARS 인증 중 에러가 발생하였습니다.\n인증을 다시 시도하여 주시기 바랍니다.(9001)");
                     }
                 );
-            }
+            } */
 
             // 인증 요청 로그 기록
             /* ,setPhoneCertCallLog : function () {
@@ -4149,6 +4149,114 @@ function requestPay(){
 
         };
     </script>
+
+<!-- 아임포트 -->
+		<script src ="https://cdn.iamport.kr/js/iamport.payment-1.1.5.js" type="text/javascript"></script>
+		
+			
+
+<script type="text/javascript">//결제페이지-다정0621
+	var req;
+	var IMP = window.IMP;
+	var code = "imp86654742"; //가맹점 식별코드
+	IMP.init(code);
+	
+	$(document).ready(function(){
+		__ajaxCall("starbucks/interface/checkLogin", {}, true, "json", "post"
+   			,function (_response) {
+   				if (_response.result_code == "FAIL") {
+   					alert("로그인이 필요한 기능 입니다.");
+   					location.href = "login/login";
+   				}
+   			}
+   			,function (_error) {
+   			}
+   		);
+	});
+	
+	function cardPurchase(){
+		var name = document.getElementById('name').value;
+		var email1 = document.getElementsByName('email1').value;
+		var email2 = document.getElementsByName('email2').value;
+		var reqMsg = document.getElementsByName('reqMsg').value;
+		
+		var s = document.getElementById('c_name');
+		var c_name = s.options[s.selectedIndex].value;
+		
+		var price_length = document.getElementsByName('remaincost').length;
+		var price;
+		 for (var i=0; i<price_length; i++) {
+	            if (document.getElementsByName("remaincost")[i].checked == true) {
+	            	price = document.getElementsByName("remaincost")[i].value;
+	            }
+	     }
+		 
+		var msg;
+			//결제요청
+			IMP.request_pay({
+				//name과 amout만있어도 결제 진행가능
+				pg : 'kakao', //pg사 선택 (kakao, kakaopay 둘다 가능)
+				pay_method: 'card',
+				merchant_uid : 'merchant_' + new Date().getTime(),
+				name : 'Starbucks e-gift 카드 선물하기', // 상품명
+				amount : price,
+				buyer_name : '<c:out value="${sessionScope.userinfo.id }"/>',
+				buyer_tel : '010-1234-1234',  //필수항목
+			}, function(rsp){
+				if(rsp.success){//결제 성공시 판매날짜랑 판매수단, 가격
+					msg = '결제가 완료되었습니다';
+					var result = {
+						"name" : name,
+						"email1" : email1,
+						"email2" : email2,
+						"reqMsg" : reqMsg,
+						"c_name" : c_name,
+						"price" : price
+					//"couponNum" : couponNum
+					}
+					/* 
+					req = new XMLHttpRequest();
+					req.onreadystatechange = resultAjax;
+					req.open('post', 'setPurchaseAjax') */
+					data = JSON.stringify(result);//json의 자료형으로 변경해주기
+					//data의 타입 지정하기. 서버에서 확인하여 JSON의 타입으로 처리할 수 있다.
+					/* req.setRequestHeader('Content-Type', 'application/json; charset=UTF-8')
+					req.send(data); */
+					var form = document.getElementById('egift_f');
+					form.action='eGiftCardProc';
+					form.submit();
+					
+				}
+				else{//결제 실패시
+					msg = '결제에 실패했습니다';
+					msg += '에러 : ' + rsp.error_msg
+					alert(msg);
+				}
+			});//pay
+			
+	}
+	
+	/* function resultAjax(){
+		var price_length = document.getElementsByName('remaincost').length;
+		var price;
+		 for (var i=0; i<price_length; i++) {
+	            if (document.getElementsByName("remaincost")[i].checked == true) {
+	            	price = document.getElementsByName("remaincost")[i].value;
+	            }
+	     }
+		
+		if(req.readyState == 4 && req.status == 200){
+			var _response = req.responseText;
+			if (_response == 1) {
+				msg = price+"원 충전을 완료하였습니다.";
+			} else {
+				msg = ("ajax통신실패");
+			}
+			//alert(msg);
+			location.href = 'eGiftCardProc';
+		}
+	} */
+</script>
 
 
 

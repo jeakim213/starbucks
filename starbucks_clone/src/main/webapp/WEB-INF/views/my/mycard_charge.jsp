@@ -796,7 +796,7 @@ var eFrequencyPlannerYn = 'Y';
 															<label for="cardNumber_NORMAL" >충전 할 카드를 선택해주세요</label>
 															<select id="cardNumber_NORMAL" name="cardName">
 																<c:forEach var="cardDTO" items="${list }">
-																	<option value="${cardDTO.c_name }">${cardDTO.c_name }</option>
+																	<option id="c_num" value="${cardDTO.c_num }">${cardDTO.c_name }</option>
 																</c:forEach>
 															</select>
 															<br><br>
@@ -917,7 +917,7 @@ var eFrequencyPlannerYn = 'Y';
 									
 									<!-- 카드 충전 경로 바꿔야함!!! -->
 									<ul class="charge_tbl_btns">
-										<li class="charge_tbl_btn1"><a href='javascript:history.back();' class="charge_normal">카드 충전</a></li>
+										<li class="charge_tbl_btn1"><a href='javascript:void(0);' onclick="chargeMoney();" class="charge_normal">카드 충전</a></li>
 										<li class="charge_tbl_btn2"><a href="javascript:history.back();">취소</a></li>
 									</ul>
 									</form>	
@@ -1590,6 +1590,98 @@ var eFrequencyPlannerYn = 'Y';
 			
 			<script src="../common/js/common_jhp.js"></script>
 			<script src="../common/js/my/mycard_charge.js?v=220117"></script>
+			
+			<!-- 아임포트 -->
+		<script src ="https://cdn.iamport.kr/js/iamport.payment-1.1.5.js" type="text/javascript"></script>
+		
+			
+<script type="text/javascript">//결제페이지-다정0621
+	var req;
+	var IMP = window.IMP;
+	var code = "imp86654742"; //가맹점 식별코드
+	IMP.init(code);
+	
+	$(document).ready(function(){
+		__ajaxCall("starbucks/interface/checkLogin", {}, true, "json", "post"
+   			,function (_response) {
+   				if (_response.result_code == "FAIL") {
+   					alert("로그인이 필요한 기능 입니다.");
+   					location.href = "login/login";
+   				}
+   			}
+   			,function (_error) {
+   			}
+   		);
+	});
+	
+	function chargeMoney(){
+		var price_length = document.getElementsByName('totPrice').length;
+		var price;
+		 for (var i=0; i<price_length; i++) {
+	            if (document.getElementsByName("totPrice")[i].checked == true) {
+	            	price = document.getElementsByName("totPrice")[i].value;
+	            }
+	     }
+		 var c_num = document.getElementById('c_num').value;
+		var msg;
+			//결제요청
+			IMP.request_pay({
+				//name과 amout만있어도 결제 진행가능
+				pg : 'kakao', //pg사 선택 (kakao, kakaopay 둘다 가능)
+				pay_method: 'card',
+				merchant_uid : 'merchant_' + new Date().getTime(),
+				name : 'Starbucks Card 금액 충전', // 상품명
+				amount : price,
+				buyer_name : '<c:out value="${sessionScope.userinfo.id }"/>',
+				buyer_tel : '010-1234-1234',  //필수항목
+			}, function(rsp){
+				if(rsp.success){//결제 성공시 판매날짜랑 판매수단, 가격
+					msg = '결제가 완료되었습니다';
+					var result = {
+						"c_num" : c_num,
+						"price" : price,
+					//"couponNum" : couponNum
+					}
+					
+					req = new XMLHttpRequest();
+					req.onreadystatechange = resultAjax;
+					req.open('post', 'setChargeAjax')
+					data = JSON.stringify(result);//json의 자료형으로 변경해주기
+					//data의 타입 지정하기. 서버에서 확인하여 JSON의 타입으로 처리할 수 있다.
+					req.setRequestHeader('Content-Type', 'application/json; charset=UTF-8')
+					req.send(data);
+					
+				}
+				else{//결제 실패시
+					msg = '결제에 실패했습니다';
+					msg += '에러 : ' + rsp.error_msg
+					alert(msg);
+				}
+			});//pay
+			
+	}
+	
+	function resultAjax(){
+		var price_length = document.getElementsByName('totPrice').length;
+		var price;
+		 for (var i=0; i<price_length; i++) {
+	            if (document.getElementsByName("totPrice")[i].checked == true) {
+	            	price = document.getElementsByName("totPrice")[i].value;
+	            }
+	     }
+		
+		if(req.readyState == 4 && req.status == 200){
+			var _response = req.responseText;
+			if (_response == 1) {
+				msg = price+"원 충전을 완료하였습니다.";
+			} else {
+				msg = ("ajax통신실패");
+			}
+			alert(msg);
+			//location.href = 'index';
+		}
+	}
+</script>
 		</div>
 		
 		
