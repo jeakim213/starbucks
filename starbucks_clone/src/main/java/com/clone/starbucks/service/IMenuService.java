@@ -16,6 +16,8 @@ public interface IMenuService {
 	
 	public boolean setOrderCount(HashMap<String, String> data); //세션에 결제할 아이템&수량저장
 	
+	public boolean setMyMenu(HashMap<String, String> data); //나만의메뉴 등록
+	
 	public void resetOrderList(); //결제 실패시 장바구니 세션 삭제
 	
 	public int getPrice(String p_name);

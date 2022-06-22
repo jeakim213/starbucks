@@ -662,16 +662,16 @@ var eFrequencyPlannerYn = 'Y';
 		<!-- 서브 gnb -->
 		<div class="sub_gnb_wrap">
 			<div class="sub_gnb_wrap_inner">
-				<h1 class="logo"><a href="/" title="스타벅스 메인페이지" >스타벅스 코리아</a><!-- 접근성_20171106 title 추가 --></h1>
+				<h1 class="logo"><a href="/starbucks" title="스타벅스 메인페이지" >스타벅스 코리아</a><!-- 접근성_20171106 title 추가 --></h1>
 				<nav class="util_nav">
 					
 								
 <ul>
-	<li class="util_nav01 sign_out" style="display:none;"><a href="javascript:void(0);">Sign out</a></li>
-	<li class="util_nav01 sign_in"><a href="javascript:void(0);">Sign In</a></li>
-	<li class="util_nav02"><a href="my/index" required="login">My Starbucks</a></li>
-	<li class="util_nav03"><a href="menu/orderList">Order</a></li>
-	<li class="util_nav04"><a href="strore/store_map">Find a Store</a></li>
+	<li class="util_nav01 sign_out" style="display:none;"><a href="/starbucks/login/logout">Sign out</a></li>
+	<li class="util_nav01 sign_in"><a href="/starbucks/login/login">Sign In</a></li>
+	<li class="util_nav02"><a href="/starbucks/my/index" required="login">My Starbucks</a></li>
+	<li class="util_nav03"><a href="/starbucks/menu/orderList">Order</a></li>
+	<li class="util_nav04"><a href="/starbucks/store/store_map">Find a Store</a></li>
 </ul>
 				</nav>
 				<a href="javascript:void(0);" class="rCup3_wrap" role="button" title="마이 리워드 레이어 열기"><!-- 접근성_20171201 class, role, title 추가 --><span class="rCup3"></span></a><!-- 150714 DOM 수정 - 떨어지는 메뉴 부분에 jsMovie 추가 -->
@@ -694,12 +694,12 @@ var eFrequencyPlannerYn = 'Y';
 		<div class="ms_sub_tit_inner">
 			<h4><img alt="My 음료/매장" src="//image.istarbucks.co.kr/common/img/util/ec/tit01.png"></h4>
 			<ul class="smap">
-				<li><a href="/"><img src="//image.istarbucks.co.kr/common/img/common/icon_home_w.png" alt="홈으로"></a></li>
+				<li><a href="/starbucks"><img src="//image.istarbucks.co.kr/common/img/common/icon_home_w.png" alt="홈으로"></a></li>
 				<li><img class="arrow" src="//image.istarbucks.co.kr/common/img/common/icon_arrow_w.png" alt="작은 맵 화살표"></li>
-				<li><a href="my/index">My Starbucks</a></li>
+				<li><a href="/starbucks/my/index">My Starbucks</a></li>
 				
 					<li><img class="arrow" src="//image.istarbucks.co.kr/common/img/common/icon_arrow_w.png" alt="작은 맵 화살표"></li>
-					<li><a href="my/ecoupon">My 쿠폰</a></li>
+					<li><a href="/starbucks/my/ecoupon">My 쿠폰</a></li>
 				
 				
 			</ul>
@@ -1120,70 +1120,49 @@ var eFrequencyPlannerYn = 'Y';
 <nav class="ms_nav" id="msRnb">					
 	<ul>
 		<li>
-			<a href="javascript:void(0);">My 리워드<span class="sbox_arrow_down"></span></a>
-			<ul>
-				<!-- 160609 텍스트 수정 -->
-				<li><a href="my/reward" required="login">· 리워드 및 혜택</a></li>
-				<li><a href="my/reward_star_history" required="login">· 별 히스토리</a></li>
-				<!-- 160609 텍스트 수정 end -->
-			</ul>
-		</li>
-		<li>
 			<a href="javascript:void(0);">My 스타벅스 카드<span class="sbox_arrow_down"></span></a>
 			<ul>
 				<!-- 160609 텍스트 수정 -->
-				<li><a href="my/mycard_index" required="login">· 보유 카드</a></li>
-				<li><a href="my/mycard_info_input" required="login">· 카드 등록</a></li>
-				<li><a href="my/mycard_charge" required="login">· 카드 충전</a></li>
-				<li><a href="my/mycard_lost" required="login">· 분실신고/잔액이전</a></li>
+				<li><a href="../my/mycard_index" required="login" data-href="my/mycard_none">· 보유 카드</a></li>
+				<li><a href="../my/mycard_info_input" required="login" data-href="my/mycard_info_input">· 카드 등록</a></li>
+				<li><a href="../my/mycard_charge" required="login" data-href="my/mycard_none">· 카드 충전</a></li>
+				<!-- <li><a href="javascript:void(0);" required="login" data-href="my/mycard_none">· 분실신고/잔액이전</a></li> -->
 				<!-- 160609 텍스트 수정 end -->
 			</ul>
 		</li>
 		<li>
 			<a href="javascript:void(0);">My 스타벅스 e-Gift Card<span class="sbox_arrow_down"></span></a>
 			<ul>
-				<li><a href="msr/sceGift/gift_step1" required="login">· 선물하기</a></li>
-				<li><a href="my/egiftCard" required="login">· 선물 내역</a></li>
-				<li><a href="my/egiftCard_shopping_bag" required="login">· 장바구니 내역</a></li>
+				<li><a href="../msr/sceGift/gift_step1" required="login" data-href="msr/sceGift/gift_step1">· 선물하기</a></li>
+				<!-- <li><a href="javascript:void(0);" required="login" data-href="my/egiftCard">· 선물 내역</a></li>
+				<li><a href="javascript:void(0);" required="login" data-href="my/egiftCard_shopping_bag">· 장바구니 내역</a></li> -->
 			</ul>
 		</li>
 		<li class="msRnb_btn">
-			<a href="javascript:void(0);" required="login">My 쿠폰<span class="sbox_arrow_down"></span></a>
+			<a href="javascript:void(0);" required="login" data-href="javascript:void(0);">My 쿠폰<span class="sbox_arrow_down"></span></a>
 			<ul>
-				<li><a href="my/ecoupon?t=REG">· 등록하기</a></li>
-				<li><a href="my/ecoupon?t=GIFT">· 선물하기</a></li>
-				<li><a href="my/ecoupon?t=USE">· 사용하기</a></li>
+				<li><a href="../my/ecoupon">· 등록하기</a></li>
+				<!-- <li><a href="my/ecoupon?t=GIFT">· 선물하기</a></li>
+				<li><a href="my/ecoupon?t=USE">· 사용하기</a></li> -->
+				<li><a href="../my/ecoupon">· 보유 쿠폰 내역</a></li>
 			</ul>
 		</li>
-		<li class="msRnb_btn"><a href="my/calendar" required="login">My 캘린더</a></li>
 		<!-- <li class="msRnb_btn"><a href="my/drink_shop" required="login">My 음료/매장</a></li> -->
-		<li class="msRnb_btn"><a href="my/my_menu" required="login">My 메뉴</a></li>
+		<li class="msRnb_btn"><a href="../my/my_menu" required="login" data-href="my/my_menu">My 메뉴</a></li>
 		
 		 
-		<li>
-			<a href="javascript:void(0);">My e-프리퀀시<span class="sbox_arrow_down"></span></a>
-			<ul>
-				<li><a href="eFreq/guide?promoSeq=172">· 이용안내</a></li>
-				<li><a href="eFreq/status?promoSeq=172" required="login">· 이용현황</a></li>
-			</ul>
-		</li>
-		
-		
-		<li>
-			<a href="my/vocList" required="login">My 고객의 소리</a>
-		</li>
 		<!-- <li class="msRnb_btn"><a href="my/order_status_list" required="login">케익 주문 현황</a></li> -->
-		<li class="msRnb_btn"><a href="my/eReceiptList" required="login">전자영수증</a></li>
-		<li class="msRnb_btn"><a href="javascript:void(0);"  onclick="fn_rewardTumblerMsrCheck();">개인컵 리워드 설정</a></li>
-		<li class="msRnb_btn"><a href="edt/expressDtList" required="login">My DT Pass</a></li>
-		<li>
+		<li class="msRnb_btn"><a href="../my/eReceipList" required="login" data-href="my/eReceiptList">전자영수증</a></li>
+		<li class="msRnb_btn"><a href="javascript:void(0);" onclick="fn_rewardTumblerMsrCheck();">개인컵 리워드 설정</a></li>
+		<li class="msRnb_btn"><a href="javascript:void(0);" required="login" data-href="edt/expressDtList">My DT Pass</a></li>
+		<!-- <li>
 			<a href="javascript:void(0);">개인정보관리<span class="sbox_arrow_down"></span></a>
 			<ul>
-				<li><a href="my/myinfo_modify_login" required="login">· 개인정보확인 및 수정</a></li>
-				<li><a href="my/myinfo_out" required="login">· 회원 탈퇴</a></li>
-				<li><a href="my/myinfo_modify_pwd" required="login">· 비밀번호 변경</a></li>
+				<li><a href="javascript:void(0);" required="login" data-href="my/myinfo_modify_login">· 개인정보확인 및 수정</a></li>
+				<li><a href="javascript:void(0);" required="login" data-href="my/myinfo_out">· 회원 탈퇴</a></li>
+				<li><a href="javascript:void(0);" required="login" data-href="my/myinfo_modify_pwd">· 비밀번호 변경</a></li>
 			</ul>
-		</li>
+		</li> -->
 	</ul>
 </nav>
 				</div>

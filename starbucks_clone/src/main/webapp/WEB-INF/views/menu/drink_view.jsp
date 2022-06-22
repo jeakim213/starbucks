@@ -2730,14 +2730,14 @@ var eFrequencyPlannerYn = 'Y';
 		$("#nickname").focus();
 	}
 	
-	// 나만의 음료 등록
+	// 나만의 음료 등록 - 지혜 0622
 	function myMenuRegister() {
-		var registerType   = "F";
-		var categoryType   = "01";
-		//var delegateSku    = m_jsonMenuList[m_nMenuListIdx].delegateSku.skuNo;
-		var delegateSku    = $("#delegateSize > option:selected").data("skuno");
+		var delegateSku    = $("#delegateSize > option:selected").val();
 		var nickname       = $("#nickname").val();
 		
+		if(p_name==""){
+			p_name = m_title;
+		}
 		
 		if(nickname==""){
 			nickname = m_title;
@@ -2779,32 +2779,21 @@ var eFrequencyPlannerYn = 'Y';
 		}
 		
 		var objParam = {
-			 "registerType"    : registerType
-			,"categoryType"    : categoryType
-			,"delegateSku"     : delegateSku
+			"delegateSku"     : delegateSku
 			,"nickname"        : repalceAnd(nickname)
+			,"p_name"		   : p_name
 			,"customFlag"      : customFlag
-			,"qty"             : 1
-			,"fullCallingName" : repalceAnd(getCallingName())
-			,"skuNo"           : delegateSku
 			,"cupType"         : cupType
 			,"customList"      : customList
 		};
-		___ajaxCall("menu/setMsrXoMyMenuRegister", objParam, true, "json", "post"
-			,function(_response) {
-				if (_response.result_code == "SUCCESS") {
-					alert("나만의 음료에 등록 되었습니다.");
-					hidePopMyDrink();
-				} else {
-					var arr = _response.error_msg.split("|");
-					if (arr.length == 2) {
-						alert(arr[1]);
-					} else {
-						alert(arr[0]);
-					}
-				}
-			}
-		);
+		
+		req = new XMLHttpRequest();
+		req.onreadystatechange = resultAjax;
+		req.open('post', 'setMsrXoMyMenuRegister')
+		data = JSON.stringify(objParam);//json의 자료형으로 변경해주기
+		//data의 타입 지정하기. 서버에서 확인하여 JSON의 타입으로 처리할 수 있다.
+		req.setRequestHeader('Content-Type', 'application/json; charset=UTF-8')
+		req.send(data);
 	}
 	
 	var req;
@@ -2864,7 +2853,7 @@ var eFrequencyPlannerYn = 'Y';
 			} else {
 				alert('처리중 오류가 발생하였습니다.');
 			}
-			location.href = 'orderList';
+			location.href = '${pageContext.request.contextPath}/index';
 		}
 	}
 	

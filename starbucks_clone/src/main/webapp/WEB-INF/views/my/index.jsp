@@ -678,9 +678,9 @@ var eFrequencyPlannerYn = 'Y';
 		<div class="ms_sub_tit_inner">
 			<h4><img alt="My 음료/매장" src="../common/img/util/ms_ttl.png"></h4>
 			<ul class="smap">
-				<li><a href="/"><img src="//image.istarbucks.co.kr/common/img/common/icon_home_w.png" alt="홈으로"></a></li>
+				<li><a href="/starbucks"><img src="//image.istarbucks.co.kr/common/img/common/icon_home_w.png" alt="홈으로"></a></li>
 				<li><img class="arrow" src="//image.istarbucks.co.kr/common/img/common/icon_arrow_w.png" alt="작은 맵 화살표"></li>
-				<li><a href="my/index">My Starbucks</a></li>
+				<li><a href="/starbucks/my/index">My Starbucks</a></li>
 				
 				
 			</ul>
@@ -733,7 +733,7 @@ var eFrequencyPlannerYn = 'Y';
 										<!-- 150706 DOM 수정 - 텍스트 수정 -->
 										<div class="card_adv_txt2"><strong>스타벅스만의 특별한 혜택이 궁금하신가요?</strong><br>혜택에 편리함까지 더한 스타벅스 리워드로<br> 한층 더 스타벅스를 특별하게 즐기세요.</div> <!-- 스타벅스 리워드 수정 -->
 										<!-- 150706 DOM 수정 - 텍스트 수정 end -->
-										<p class="card_adv_btn card_adv_btn3"><a href="msr/msreward/level_benefit">스타벅스 혜택보기</a></p>
+										<p class="card_adv_btn card_adv_btn3"><a href="/starbucks/msr/msreward/level_benefit">스타벅스 혜택보기</a></p>
 									</div>
 								</div>
 							</section>
@@ -2016,15 +2016,6 @@ var eFrequencyPlannerYn = 'Y';
 <nav class="ms_nav" id="msRnb">					
 	<ul>
 		<li>
-			<a href="javascript:void(0);">My 리워드<span class="sbox_arrow_down"></span></a>
-			<ul>
-				<!-- 160609 텍스트 수정 -->
-				<li><a href="../my/reward" required="login" data-href="my/reward">· 리워드 및 혜택</a></li>
-				<!-- <li><a href="javascript:void(0);" required="login" data-href="my/reward_star_history">· 별 히스토리</a></li> -->
-				<!-- 160609 텍스트 수정 end -->
-			</ul>
-		</li>
-		<li>
 			<a href="javascript:void(0);">My 스타벅스 카드<span class="sbox_arrow_down"></span></a>
 			<ul>
 				<!-- 160609 텍스트 수정 -->
@@ -2541,8 +2532,8 @@ var eFrequencyPlannerYn = 'Y';
                 var $edwSlider2 = null;
                 var $edwSlider3 = null;
 
-                var $userBirth  = "1996-12-13";
-                var $userGender = "F";
+                var $userBirth  = "";
+                var $userGender = "";
                 
                 if (new Date() < new Date(2016, 1 - 1, 1, 0, 0, 0)) {
                 	$(".my_ms_evbnr").prepend('<a href="eFreq/index" required="login"><img alt="" src="//image.istarbucks.co.kr/common/img/util/ms_efreq_bn.jpg"></a><br /><br />');

@@ -1999,15 +1999,6 @@ var eFrequencyPlannerYn = 'Y';
 <nav class="ms_nav" id="msRnb">					
 	<ul>
 		<li>
-			<a href="javascript:void(0);">My 리워드<span class="sbox_arrow_down"></span></a>
-			<ul>
-				<!-- 160609 텍스트 수정 -->
-				<li><a href="../my/reward" required="login" data-href="my/reward">· 리워드 및 혜택</a></li>
-				<!-- <li><a href="javascript:void(0);" required="login" data-href="my/reward_star_history">· 별 히스토리</a></li> -->
-				<!-- 160609 텍스트 수정 end -->
-			</ul>
-		</li>
-		<li>
 			<a href="javascript:void(0);">My 스타벅스 카드<span class="sbox_arrow_down"></span></a>
 			<ul>
 				<!-- 160609 텍스트 수정 -->
