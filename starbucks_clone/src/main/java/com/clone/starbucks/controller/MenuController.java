@@ -364,7 +364,6 @@ public class MenuController {
 	@ResponseBody // 결제하기 값 세팅-지혜
 	@PostMapping(value = "menu/setOrderCountAjax")
 	public String setOrderCountAjax(@RequestBody HashMap<String,String> data){
-		System.out.println("결제값" + data);
 		if(data != null) {
 			if(service.setOrderCount(data)) return "SUCCESS";
 		}

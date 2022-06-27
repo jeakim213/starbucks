@@ -50,4 +50,6 @@ public interface IMyDAO {
 	int masterUpdate(String id);
 
 	int useCoupon(String pon_no);
+	
+	int updateStar(UserInfoDTO user);
 }

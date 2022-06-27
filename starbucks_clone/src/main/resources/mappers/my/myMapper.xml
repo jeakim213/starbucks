@@ -82,4 +82,10 @@
 		update e_coupon set pon_used='Y', pon_usedate=default where pon_no=#{pon_no}
 	</update>
 	
+	
+	<!-- Star 지혜 -->
+	<update id="updateStar" parameterType="com.clone.starbucks.DTO.UserInfoDTO">
+		UPDATE userinfo SET star=#{star} WHERE id=#{id}
+	</update>
+	
 	</mapper>

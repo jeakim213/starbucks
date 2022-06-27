@@ -28,7 +28,7 @@ public class AdminServiceImpl implements IAdminService {
 	
 	//영수증쿠폰(16자) 랜덤숫자 생성
 	@Override
-	public String receiptCoupon_NumMake(E_couponDTO ecouponDTO) {
+	public String receiptCoupon_NumMake() {
 		Random random = new Random();
 		Date date = new Date();
 		SimpleDateFormat df = new SimpleDateFormat("yyyyMMdd");
@@ -52,7 +52,7 @@ public class AdminServiceImpl implements IAdminService {
 	
 	//mms쿠폰(13자) 랜덤숫자 생성
 	@Override
-	public String mmsCoupon_NumMake(E_couponDTO ecouponDTO) {
+	public String mmsCoupon_NumMake() {
 		Random random = new Random();
 		Date date = new Date();
 		SimpleDateFormat df = new SimpleDateFormat("yyyyMMdd");
@@ -72,7 +72,7 @@ public class AdminServiceImpl implements IAdminService {
 
 	//스타쿠폰(13자) 랜덤숫자 생성
 	@Override
-	public String starCoupon_NumMake(E_couponDTO ecouponDTO) {
+	public String starCoupon_NumMake() {
 		Random random = new Random();
 		Date date = new Date();
 		SimpleDateFormat df = new SimpleDateFormat("yyyyMMdd");
@@ -176,11 +176,11 @@ public class AdminServiceImpl implements IAdminService {
 		
 		//쿠폰 카테고리 확인해서 번호 입력 (pon_num)
 		if(eCouponDTO.getPon_category().equals("receipt")) {
-			eCouponDTO.setPon_num(receiptCoupon_NumMake(eCouponDTO));
+			eCouponDTO.setPon_num(receiptCoupon_NumMake());
 		}else if(eCouponDTO.getPon_category().equals("mms")) {
-			eCouponDTO.setPon_num(mmsCoupon_NumMake(eCouponDTO));
+			eCouponDTO.setPon_num(mmsCoupon_NumMake());
 		}else if(eCouponDTO.getPon_category().equals("star")) {
-			eCouponDTO.setPon_num(starCoupon_NumMake(eCouponDTO));
+			eCouponDTO.setPon_num(starCoupon_NumMake());
 		}else {
 			return "카테고리를 선택해야합니다.";
 		}

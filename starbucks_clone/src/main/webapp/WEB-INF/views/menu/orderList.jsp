@@ -644,7 +644,7 @@ var eFrequencyPlannerYn = 'Y';
 						<div class="order_orderConfirm" style="margin-bottom: 50px;">
 							<h3>주문내역 확인</h3><br>
 							<div class="order_orderConfirm_inner" style="padding:15px;">
-								<p style="padding-left:100px;">* 음료를 제외한 푸드, 상품은 결제시 수량을 확인 해주세요.</p><br>
+								<p style="padding-left:80px;">* 음료를 제외한 푸드, 상품은 결제시 수량을 확인 해주세요.</p><br>
 								<table id="ordertab" style="border: thin; border-color: #dfdfdf; margin: auto;">
 									<tr>
 										<th colspan="5" style="padding: 25px; width: 800px; background: #006633; color: white; font-size: 23px;">주문 목록</th>
@@ -673,7 +673,8 @@ var eFrequencyPlannerYn = 'Y';
 													<tr>
 													<td style="vertical-align: middle; padding-right: 20px; padding-left: 18px;" align="center"><input type="checkbox" class="ckbox"></td>
 													<td><img src="${sessionScope.list[keyVal][thisKey].p_img }" class="order_list_img"></td>
-													<td class="menu_list_info" style="width:450px; padding-left: 30px;" ><b>${sessionScope.list[keyVal][thisKey].p_name }</b></td>
+													<td class="menu_list_info" style="width:450px; padding-left: 30px;" ><b>${sessionScope.list[keyVal][thisKey].p_name }</b>
+													<br><span></span></td>
 													<td class="menu_list_price" style="width:100px; vertical-align: middle;">${sessionScope.list[keyVal][thisKey].p_price }원</td>
 													<td style="width:100px; vertical-align: middle;">
 														<select style="hight:20px;" class="selcount">
@@ -883,23 +884,21 @@ var eFrequencyPlannerYn = 'Y';
 		//만약 결제 취소 or 실패시 세션의 주문내역 날리기.
 		var tdArr = $("#ordertbody tr") //주문내역테이블 값
 		var jsonObj		= new Object(); //서버에 보낼 json값 {상품명:개수}
-		
 		for(var i=0; i < tdArr.length; i++){
-			
 			var cells = tdArr[i];
-			if($(cells).hasClass('noMenu')) continue; //noMenu클래스가 있으면 패스
+			if($(cells).hasClass('noMenu')) {
+				continue; //noMenu클래스가 있으면 패스
+			}
 			var cell_checkbox = $(cells).find('.ckbox').is(':checked');
 			if(cell_checkbox){//체크된 항목만
 				cell_name = $(cells).find('.menu_list_info b').text(); //b태그 안에 상품명, br뒤에 옵션
-				
 				//옵션체크 있으면 음료
 				var op = $(cells).find('.menu_list_info span').text();
 				if(op != ""){
-					console.log('오피확인'+op);
 					jsonObj[cell_name] = 1; //음료는 한개 고정
 					var opArr = op.split('|');
 					if(opArr.length > 2){ //컵사이즈, 컵형태 외에 옵션선택한게 있는지.
-						for(var i=2; i < opArr.length; i++){
+						for(var j=2; j < opArr.length; j++){
 							if(opArr[i].includes('에스프레소 샷')){//기본옵션인지 확인
 								if(i > opArr.length){
 									if(!opArr[i+1].includes('에스프레소 샷')) {
@@ -955,6 +954,10 @@ var eFrequencyPlannerYn = 'Y';
 				console.log(JSON.stringify(jsonObj));
 			}
 		}
+		gogoAjax(jsonObj);
+	}
+	
+	function gogoAjax(jsonObj){
 		req = new XMLHttpRequest();
 		req.onreadystatechange = resultAjax;
 		req.open('post', 'setOrderCountAjax')
