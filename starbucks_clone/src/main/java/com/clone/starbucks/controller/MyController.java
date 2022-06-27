@@ -30,7 +30,7 @@ import com.clone.starbucks.service.MyServiceImpl;
 public class MyController {
 
 	@Autowired MyServiceImpl myService;
-	@Autowired private IMyDAO myDAO;
+	@Autowired IMyDAO myDAO;
 	@Autowired HttpSession session;
 
 	//my
@@ -105,11 +105,20 @@ public class MyController {
 	   public String my_index(UserInfoDTO userInfo, CardDTO cardDTO, Model model){
 	      
 	   
+		   
 	      UserInfoDTO user = (UserInfoDTO) session.getAttribute("userInfo");
-	      model.addAttribute("nickname", user.getNickname());
+	      
+	      // 로그인 안했을때 로그인창으로 이동
+	      if(user == null) {
+	    	  return "redirect:/login/login";
+	      }
+	      
 	      
 	      boolean b = myService.isExistCard(userInfo, cardDTO);
 	      System.out.println("카드확인 :" + b);
+	      
+	      model.addAttribute("nickname", user.getNickname());
+	      
 
 	      // 카드 없는 회원
 	      if(b==false) {
@@ -124,6 +133,7 @@ public class MyController {
 	      
 	      // 카드 있는 회원)
 	      System.out.println("아이디확인 : "+user.getId());
+	      System.out.println("등급 : " + user.getGrade());
 	      AllDTO all = myService.userAllInfo(user.getId());
 	      
 	      // 등급명 변경
@@ -141,8 +151,15 @@ public class MyController {
 	      int cardCount = myDAO.userCard(user.getId());
 	      
 	      // 쿠폰 갯수
+	      
+	      int useCouponCount = myDAO.useCouponCount(user.getId());
+	      
+	      int couponCount = (myDAO.userCoupon(user.getId())-useCouponCount);
+	      System.out.println("==================");
+	      System.out.println(myDAO.userCoupon(user.getId()));
+	      System.out.println(useCouponCount);
 
-	      int couponCount = myDAO.userCoupon(user.getId());
+
 	      
 	      
 	      //views로 넘겨주는 값

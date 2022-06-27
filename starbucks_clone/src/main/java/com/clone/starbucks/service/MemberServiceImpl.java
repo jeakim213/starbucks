@@ -34,8 +34,8 @@ import com.google.gson.JsonParser;
 
 @Service
 public class MemberServiceImpl implements IMemberService{
-			@Autowired private IMemberDAO memberDao;
-			@Autowired private HttpSession session;
+			@Autowired IMemberDAO memberDao;
+			@Autowired HttpSession session;
 			
 			@Override
 			public int isExistPhone(String phone) {

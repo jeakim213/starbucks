@@ -20,8 +20,8 @@ import com.clone.starbucks.DTO.UserInfoDTO;
 @Service
 public class MyServiceImpl implements IMyService {
 	
-	@Autowired private IMyDAO myDAO;
-	@Autowired private HttpSession session;
+	@Autowired IMyDAO myDAO;
+	@Autowired HttpSession session;
 	
 //----------------------------------------E-gift Card 등록----------------------------------------------		
 	@Override
@@ -241,7 +241,7 @@ public class MyServiceImpl implements IMyService {
 		
 		@Override
 		public AllDTO userAllInfo(String id) {
-	
+			
 			AllDTO all = myDAO.userAllInfo(id);
 
 			return all;

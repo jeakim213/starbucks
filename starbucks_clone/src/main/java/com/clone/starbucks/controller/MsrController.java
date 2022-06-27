@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.clone.starbucks.DTO.CardDTO;
 import com.clone.starbucks.DTO.RegisterDTO;
+import com.clone.starbucks.DTO.UserInfoDTO;
 import com.clone.starbucks.service.MailSenderService;
 import com.clone.starbucks.service.MsrServiceImpl;
 
