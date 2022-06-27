@@ -12,7 +12,7 @@ import com.clone.starbucks.config.SmsConfig;
 
 @Service
 public class SmsService {
-	@Autowired private HttpSession session;
+	@Autowired HttpSession session;
 
 	public String sendRandomMessage(String phone) {
 	    SmsConfig message = new SmsConfig();

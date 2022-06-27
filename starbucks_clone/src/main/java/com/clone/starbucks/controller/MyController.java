@@ -30,7 +30,7 @@ import com.clone.starbucks.service.MyServiceImpl;
 public class MyController {
 
 	@Autowired MyServiceImpl myService;
-	@Autowired private IMyDAO myDAO;
+	@Autowired IMyDAO myDAO;
 	@Autowired HttpSession session;
 
 	//my
@@ -124,6 +124,7 @@ public class MyController {
 	      
 	      // 카드 있는 회원)
 	      System.out.println("아이디확인 : "+user.getId());
+	      System.out.println("등급 : " + user.getGrade());
 	      AllDTO all = myService.userAllInfo(user.getId());
 	      
 	      // 등급명 변경

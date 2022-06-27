@@ -1,14 +1,13 @@
 package com.clone.starbucks.DAO;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
 import com.clone.starbucks.DTO.AllDTO;
 import com.clone.starbucks.DTO.CardDTO;
 import com.clone.starbucks.DTO.E_couponDTO;
-import com.clone.starbucks.DTO.UserInfoDTO;
+
 
 @Repository
 public interface IMyDAO {

@@ -20,8 +20,8 @@ import com.clone.starbucks.DTO.UserInfoDTO;
 @Service
 public class AdminServiceImpl implements IAdminService {
 	
-	@Autowired private IAdminDAO adminDAO;
-	@Autowired private HttpSession session;
+	@Autowired IAdminDAO adminDAO;
+	@Autowired HttpSession session;
 	
 	
 //----------------------------------------E-coupon----------------------------------------------

@@ -802,7 +802,7 @@ var eFrequencyPlannerYn = 'Y';
 										<!-- <div class="choice_cont_phone"> -->
 										<p class="nofix_num">${pnum }</p>
 										<label class="a11y" for="phone">휴대폰번호<span class="type_green">(필수)</span></label> <!-- 20200826 수정 -->
-										<input type="hidden" name="phone" id="phone" maxlength="13" value="01020061119"/>
+										<input type="hidden" name="phone" id="phone" maxlength="13" value="${pnum }"/>
 										<p class="limit_txt phone_txt" id="phone_txt"></p><!-- 접근성_20171120 id 값 추가 -->
 										<!-- </div>  -->
 										<!-- 20180726 영역삭제 -->

@@ -29,8 +29,8 @@ import com.clone.starbucks.DTO.UserInfoDTO;
 @Service
 public class MsrServiceImpl implements IMsrService{
 	
-	@Autowired private IMsrDAO msrDAO;
-	@Autowired private HttpSession session;
+	@Autowired IMsrDAO msrDAO;
+	@Autowired HttpSession session;
 
 //----------------------------------------E-gift Card----------------------------------------------	
 	
