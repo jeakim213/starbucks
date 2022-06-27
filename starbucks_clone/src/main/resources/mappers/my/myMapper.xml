@@ -61,6 +61,10 @@
 		UPDATE e_coupon SET id=#{id} WHERE pon_num=#{pon_num}
 	</update>
 	
+		
+	<update id="useCoupon" parameterType="String">
+		update e_coupon set pon_used='Y', pon_usedate=default where pon_no=#{pon_no}
+	</update>
 	
 	
 	<!-- MY INDEX - 예은 -->
@@ -78,8 +82,10 @@
 		WHERE a.id = #{id} and b.c_master = '1'
 	</select>
 	
-	<update id="useCoupon" parameterType="String">
-		update e_coupon set pon_used='Y', pon_usedate=default where pon_no=#{pon_no}
-	</update>
+	<select id="useCouponCount" parameterType="com.clone.starbucks.DTO.E_couponDTO" resultType="int">
+		SELECT count(*) FROM e_coupon WHERE id=#{id} and pon_used='Y'
+	</select>
+	
+
 	
 	</mapper>
