@@ -105,11 +105,20 @@ public class MyController {
 	   public String my_index(UserInfoDTO userInfo, CardDTO cardDTO, Model model){
 	      
 	   
+		   
 	      UserInfoDTO user = (UserInfoDTO) session.getAttribute("userInfo");
-	      model.addAttribute("nickname", user.getNickname());
+	      
+	      // 로그인 안했을때 로그인창으로 이동
+	      if(user == null) {
+	    	  return "redirect:/login/login";
+	      }
+	      
 	      
 	      boolean b = myService.isExistCard(userInfo, cardDTO);
 	      System.out.println("카드확인 :" + b);
+	      
+	      model.addAttribute("nickname", user.getNickname());
+	      
 
 	      // 카드 없는 회원
 	      if(b==false) {

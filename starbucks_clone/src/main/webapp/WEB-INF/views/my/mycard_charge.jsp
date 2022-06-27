@@ -1619,7 +1619,7 @@ var eFrequencyPlannerYn = 'Y';
    			,function (_response) {
    				if (_response.result_code == "FAIL") {
    					alert("로그인이 필요한 기능 입니다.");
-   					location.href = "login/login";
+   					location.href = "../login/login";
    				}
    			}
    			,function (_error) {
