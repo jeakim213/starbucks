@@ -359,23 +359,19 @@ var eFrequencyPlannerYn = 'Y';
 									<li><a href="my/mycard_index" required="login">보유 카드</a></li>
 									<li><a href="my/mycard_info_input" required="login">카드 등록</a></li>
 									<li><a href="my/mycard_charge" required="login">카드 충전</a></li>
-									<li><a href="my/mycard_lost" required="login">분실신고/잔액이전</a></li>
 								</ul>
 							</li>
 							<li>
 								<a role="button" href="javascript:void(0);">My 스타벅스 e-Gift Card<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 -->
 								<ul>
 									<li><a href="msr/sceGift/gift_step1" required="login">선물하기</a></li>
-									<li><a href="my/egiftCard" required="login">선물 내역</a></li>
-									<li><a href="my/egiftCard_shopping_bag" required="login">장바구니 내역</a></li>
 								</ul>
 							</li>
 							<li>
 								<a role="button" href="javascript:void(0);">My 쿠폰<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 -->
 								<ul>
-									<li><a href="my/ecoupon?t=REG" required="login">등록하기</a></li>
-									<li><a href="my/ecoupon?t=GIFT" required="login">선물하기</a></li>
-									<li><a href="my/ecoupon?t=USE" required="login">사용하기</a></li>
+									<li><a href="my/ecoupon" required="login">등록하기</a></li>
+									<li><a href="../menu/couponUse" required="login">보유 쿠폰 내역</a></li>
 								</ul>
 							</li>
 							<li><a href="my/calendar" required="login">My 캘린더</a></li>
@@ -948,27 +944,23 @@ var eFrequencyPlannerYn = 'Y';
 			<a href="javascript:void(0);">My 스타벅스 카드<span class="sbox_arrow_down"></span></a>
 			<ul>
 				<!-- 160609 텍스트 수정 -->
-				<li><a href="my/mycard_index" required="login">· 보유 카드</a></li>
-				<li><a href="my/mycard_info_input" required="login">· 카드 등록</a></li>
-				<li><a href="my/mycard_charge" required="login">· 카드 충전</a></li>
-				<li><a href="my/mycard_lost" required="login">· 분실신고/잔액이전</a></li>
+				<li><a href="cardList" required="login">· 보유 카드</a></li>
+				<li><a href="mycard_info_input" required="login">· 카드 등록</a></li>
+				<li><a href="mycard_charge_1" required="login">· 카드 충전</a></li>
 				<!-- 160609 텍스트 수정 end -->
 			</ul>
 		</li>
 		<li>
 			<a href="javascript:void(0);">My 스타벅스 e-Gift Card<span class="sbox_arrow_down"></span></a>
 			<ul>
-				<li><a href="msr/sceGift/gift_step1" required="login">· 선물하기</a></li>
-				<li><a href="my/egiftCard" required="login">· 선물 내역</a></li>
-				<li><a href="my/egiftCard_shopping_bag" required="login">· 장바구니 내역</a></li>
+				<li><a href="../msr/sceGift/gift_step2" required="login">· 선물하기</a></li>
 			</ul>
 		</li>
 		<li class="msRnb_btn">
 			<a href="javascript:void(0);" required="login">My 쿠폰<span class="sbox_arrow_down"></span></a>
 			<ul>
-				<li><a href="my/ecoupon?t=REG">· 등록하기</a></li>
-				<li><a href="my/ecoupon?t=GIFT">· 선물하기</a></li>
-				<li><a href="my/ecoupon?t=USE">· 사용하기</a></li>
+				<li><a href="ecoupon">· 등록하기</a></li>
+				<li><a href="../menu/couponUse">· 보유 쿠폰 내역</a></li>
 			</ul>
 		</li>
 		<li class="msRnb_btn"><a href="my/calendar" required="login">My 캘린더</a></li>

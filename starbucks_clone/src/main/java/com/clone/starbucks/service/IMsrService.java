@@ -9,6 +9,7 @@ import org.springframework.ui.Model;
 
 import com.clone.starbucks.DTO.CardDTO;
 import com.clone.starbucks.DTO.RegisterDTO;
+import com.clone.starbucks.DTO.UserInfoDTO;
 
 public interface IMsrService {
 

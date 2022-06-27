@@ -135,14 +135,10 @@ public class MsrServiceImpl implements IMsrService{
 	@Override
 	public void regInfo(RegisterDTO registerDTO, Model model) {
 		
-		UserInfoDTO userInfo = new UserInfoDTO();
-//		userInfo.setId("쭈고");
-		session.setAttribute("userInfo", userInfo);
 		UserInfoDTO user = (UserInfoDTO) session.getAttribute("userInfo");
 		String id = user.getId();
+		System.out.println("id :"+id);
 		
-		//session.setAttribute("id", "moon_614@daum.net");
-		//String id = (String)session.getAttribute("id");
 		RegisterDTO register =  msrDAO.idCheck(id);
 		
 		String name = register.getName();
