@@ -160,8 +160,15 @@ public class MyController {
 	      int cardCount = myDAO.userCard(user.getId());
 	      
 	      // 쿠폰 갯수
+	      
+	      int useCouponCount = myDAO.useCouponCount(user.getId());
+	      
+	      int couponCount = (myDAO.userCoupon(user.getId())-useCouponCount);
+	      System.out.println("==================");
+	      System.out.println(myDAO.userCoupon(user.getId()));
+	      System.out.println(useCouponCount);
 
-	      int couponCount = myDAO.userCoupon(user.getId());
+
 	      
 	      
 	      //views로 넘겨주는 값
