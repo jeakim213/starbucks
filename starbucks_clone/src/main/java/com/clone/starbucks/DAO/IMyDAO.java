@@ -41,6 +41,8 @@ public interface IMyDAO {
 
 	int masterUpdate(String id);
 	
+	int couponCount(String id);
+	
 	
 	//---------------------------------
 	// my index - 예은

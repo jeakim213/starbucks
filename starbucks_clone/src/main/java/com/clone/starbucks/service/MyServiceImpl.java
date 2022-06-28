@@ -264,6 +264,17 @@ public class MyServiceImpl implements IMyService {
 			
 		}
 
+		@Override
+		public void couponCount(E_couponDTO eCouponDTO, Model model) {
+			UserInfoDTO user = (UserInfoDTO) session.getAttribute("userInfo");
+		    String id = user.getId();
+		    
+		    int count = myDAO.couponCount(id);
+		    System.out.println("쿠폰 갯수 : "+count);
+		    model.addAttribute("couponCount",count);
+			
+		}
+
 
 		
 	

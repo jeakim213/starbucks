@@ -975,7 +975,7 @@ var eFrequencyPlannerYn = 'Y';
 	                                    </div>
 	                                    <!-- //e::211008 -->
 
-										<p class="mc">사용 가능한 보유 쿠폰 : <span class="totalCnt"></span></p>
+										<p class="mc">사용 가능한 보유 쿠폰 : ${couponCount }<span class="totalCnt"></span></p>
 										<!-- 쿠폰리스트 150616 - 문진욱 -->
 										<section class="ecoupon_list_wrap">
 											<ul>

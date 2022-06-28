@@ -83,7 +83,8 @@ public class MyController {
 	}
 	
 	@RequestMapping(value = "my/ecoupon")
-	public String ecoupon() {
+	public String ecoupon(E_couponDTO eCouponDTO, Model model) throws ParseException {
+		myService.couponCount(eCouponDTO,model);
 		return "my/ecoupon";
 	}
 	
