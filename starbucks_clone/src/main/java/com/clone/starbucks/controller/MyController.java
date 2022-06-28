@@ -264,6 +264,13 @@ public class MyController {
 	public String reward() {
 		return "my/reward";
 	}
+	
+	
+	@RequestMapping(value = "my/dtpass")
+	public String dtpass() {
+		return "my/dtpass";
+	}
+	
 
 	@GetMapping("userInfo")
 	public String userInfoLoad(UserInfoDTO userinfo, RegisterDTO member, HttpServletRequest req, Model model) {
