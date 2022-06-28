@@ -2,6 +2,7 @@ package com.clone.starbucks.controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.text.ParseException;
 import java.util.HashMap;
 
 import javax.servlet.http.HttpServletRequest;
@@ -24,11 +25,13 @@ import com.clone.starbucks.DTO.CardDTO;
 import com.clone.starbucks.DTO.E_couponDTO;
 import com.clone.starbucks.DTO.RegisterDTO;
 import com.clone.starbucks.DTO.UserInfoDTO;
+import com.clone.starbucks.service.MenuServiceImpl;
 import com.clone.starbucks.service.MyServiceImpl;
 
 @Controller
 public class MyController {
-
+	
+	@Autowired MenuServiceImpl menuService;
 	@Autowired MyServiceImpl myService;
 	@Autowired IMyDAO myDAO;
 	@Autowired HttpSession session;
@@ -82,6 +85,12 @@ public class MyController {
 	@RequestMapping(value = "my/ecoupon")
 	public String ecoupon() {
 		return "my/ecoupon";
+	}
+	
+	@RequestMapping(value="my/couponList")
+	public String couponList(E_couponDTO eCouponDTO, Model model) throws ParseException {
+		menuService.couponUse(eCouponDTO, model);
+		return "my/couponList";
 	}
 	
 	@RequestMapping(value = "my/egiftCard_shopping_bag")

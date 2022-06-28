@@ -681,16 +681,16 @@ var eFrequencyPlannerYn = 'Y';
 		<!-- 서브 gnb -->
 		<div class="sub_gnb_wrap">
 			<div class="sub_gnb_wrap_inner">
-				<h1 class="logo"><a href="/" title="스타벅스 메인페이지" >스타벅스 코리아</a><!-- 접근성_20171106 title 추가 --></h1>
+				<h1 class="logo"><a href="../" title="스타벅스 메인페이지" >스타벅스 코리아</a><!-- 접근성_20171106 title 추가 --></h1>
 				<nav class="util_nav">
 					
 								
 <ul>
 	<li class="util_nav01 sign_out" style="display:none;"><a href="/starbucks/login/logout">Sign out</a></li>
 	<li class="util_nav01 sign_in"><a href="/starbucks/login/login">Sign In</a></li>
-	<li class="util_nav02"><a href="my/index" required="login">My Starbucks</a></li>
-	<li class="util_nav03"><a href="menu/orderList">Order</a></li>
-	<li class="util_nav04"><a href="store/store_map">Find a Store</a></li>
+	<li class="util_nav02"><a href="/starbucks/my/index">My Starbucks</a></li>
+	<li class="util_nav03"><a href="/starbucks/menu/orderList">Order</a></li>
+	<li class="util_nav04"><a href="/starbucks/store/store_map">Find a Store</a></li>
 </ul>
 				</nav>
 				<a href="javascript:void(0);" class="rCup3_wrap" role="button" title="마이 리워드 레이어 열기"><!-- 접근성_20171201 class, role, title 추가 --><span class="rCup3"></span></a><!-- 150714 DOM 수정 - 떨어지는 메뉴 부분에 jsMovie 추가 -->
@@ -960,7 +960,7 @@ var eFrequencyPlannerYn = 'Y';
 			<a href="javascript:void(0);" required="login">My 쿠폰<span class="sbox_arrow_down"></span></a>
 			<ul>
 				<li><a href="ecoupon">· 등록하기</a></li>
-				<li><a href="../menu/couponUse">· 보유 쿠폰 내역</a></li>
+				<li><a href="couponList">· 보유 쿠폰 내역</a></li>
 			</ul>
 		</li>
 		<li class="msRnb_btn"><a href="my/calendar" required="login">My 캘린더</a></li>
