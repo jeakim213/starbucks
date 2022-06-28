@@ -2021,7 +2021,7 @@ var eFrequencyPlannerYn = 'Y';
 		<li>
 			<a href="javascript:void(0);">My 스타벅스 e-Gift Card<span class="sbox_arrow_down"></span></a>
 			<ul>
-				<li><a href="../msr/sceGift/gift_step1" required="login" data-href="msr/sceGift/gift_step1">· 선물하기</a></li>
+				<li><a href="../msr/sceGift/gift_step2" required="login" data-href="msr/sceGift/gift_step1">· 선물하기</a></li>
 				<!-- <li><a href="javascript:void(0);" required="login" data-href="my/egiftCard">· 선물 내역</a></li>
 				<li><a href="javascript:void(0);" required="login" data-href="my/egiftCard_shopping_bag">· 장바구니 내역</a></li> -->
 			</ul>
@@ -2032,7 +2032,7 @@ var eFrequencyPlannerYn = 'Y';
 				<li><a href="../my/ecoupon">· 등록하기</a></li>
 				<!-- <li><a href="my/ecoupon?t=GIFT">· 선물하기</a></li>
 				<li><a href="my/ecoupon?t=USE">· 사용하기</a></li> -->
-				<li><a href="../my/ecoupon">· 보유 쿠폰 내역</a></li>
+				<li><a href="../my/couponList">· 보유 쿠폰 내역</a></li>
 			</ul>
 		</li>
 		<!-- <li class="msRnb_btn"><a href="my/drink_shop" required="login">My 음료/매장</a></li> -->

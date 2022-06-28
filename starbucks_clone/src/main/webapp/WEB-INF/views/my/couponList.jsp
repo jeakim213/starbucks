@@ -1,7 +1,6 @@
-﻿<%@ page language="java" contentType="text/html; charset=UTF-8"
+<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>   
-
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <!DOCTYPE html>
 <html lang="ko">
@@ -10,9 +9,20 @@
 
 
 
-
-
-
+<!-- 
+<script type="text/javascript">
+	function submitForm(){
+		send.addEventListener("click",function(){
+      	  var form = document.getElementById("couponRegister");
+      	  form.action = "my/couponRegisterProc";
+      	  form.metho = "POST";
+      	  form.submit();
+        });
+		
+		alert('${msg}');
+	}
+</script>
+ -->
 
 
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -61,7 +71,10 @@
   ga('send', 'pageview');
 </script>
 
-
+<style type="text/css">
+	.btn_coupon{background:#f6f6f6; margin: 10px; padding-top: 30px;padding-bottom: 30px; padding-left:50px; padding-right:50px;font-family: "맑은 고딕"; font-size:"16px"; border-style: none; border-radius:14px;}
+	.submitResetBtn{margin: 10px; padding-top: 14px;padding-bottom: 14px; padding-left:50px; padding-right:50px;font-family: "맑은 고딕"; font-size:"16px"; border-style: none; border-radius:14px;}
+</style>
 
 
 
@@ -72,27 +85,13 @@ var eFrequencyPlannerYn = 'Y';
 </script>
 
 		
-		<link href="../common/css/style_util.css" rel="stylesheet">
+		<link href="../common/css/style_util.css?" rel="stylesheet">
+		<link href="../common/css/style_util2.css" rel="stylesheet"><!-- 20180906 추가 -->
+		<link href="../common/css/style_star.css" rel="stylesheet">
+		<!-- <link href="https://www.starbucks.co.kr/common/css/style_star.css?v=211112" rel="stylesheet">211008 추가 -->
 	</head>
 	<body>
-		
-		<!--20171017추가 : 전자영수증 팝업-->
-		<div class="myDimm" style="display: none;"></div>
-		
-		<!-- 전자영수증 안내 팝업-->
-        <div id="receiptNoticePop" class="receiptPopWrap receiptPopSt2" style="display: none;"> <!--20180523수정 : receiptPopSt2 클래스 추가-->
-            <div class="receiptPop"> 
-                <strong>스타벅스 리워드 회원이 <br class="pcHide">되신 것을 축하 드립니다!</strong> <!-- 스타벅스 리워드 수정 -->
-                <p>회원님들의 매장 방문 거래 및 사이렌 오더 내역은 전자영수증만 기본 발급되며, [My Starbucks &gt; 전자영수증] 메뉴에서 언제든 확인이 가능합니다.</p>
-                <p class="mt10 fontGold">종이영수증이 필요하신 경우, 주문 시 파트너에게 요청해주세요!</p> <!--20180523 수정-->
-                <div class="rpBtnWrap">
-                    <a id="rpBtnPopConfirm" href="javascript:void(0);">확인</a>
-                </div>
-            </div>
-        </div>
-		
-		
-		
+		<div class="myDimm"></div>
 		<div id="wrap">
 			
 <script>
@@ -300,12 +299,12 @@ var eFrequencyPlannerYn = 'Y';
 
 			<!-- 960 gnb -->
 			<div class="tablet_gnb_wrap">
-				<h1 class="logo"><a href="../">스타벅스 코리아</a></h1>
+				<h1 class="logo"><a href="/">스타벅스 코리아</a></h1>
 				<nav class="tablet_gnb_sep">
 					<ul>
 						<li class="tablet_gnb01"><a href="javascript:void(0);" role="button" title="마이 리워드 레이어 열기"><!-- 접근성_20171106 role, title 추가 --><span class="rCup2"></span></a></li><!-- 150709 클레스 수정 -->
 						<li class="tablet_gnb02"><a href="my/index" required="login"><span class="a11y">마이스타벅스</span></a><!-- 접근성_20171106 span추가 --></li>
-						<li class="tablet_gnb03"><a href="store/store_map"><span class="a11y">매장찾기</span></a><!-- 접근성_20171106 span추가 --></li>
+						<li class="tablet_gnb03"><a href="strore/store_map"><span class="a11y">매장찾기</span></a><!-- 접근성_20171106 span추가 --></li>
 						<li class="tablet_gnb04"><a href="javascript:void(0);"><span class="a11y" role="button">메뉴열기</span></a><!-- 접근성_20171106 span추가 --></li>
 					</ul>
 				</nav>
@@ -337,9 +336,10 @@ var eFrequencyPlannerYn = 'Y';
 							<li>
 								<a role="button" href="javascript:void(0);">My 스타벅스 카드<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 -->
 								<ul>
-									<li><a href="my/cardList" required="login">보유 카드</a></li>
+									<li><a href="my/mycard_index" required="login">보유 카드</a></li>
 									<li><a href="my/mycard_info_input" required="login">카드 등록</a></li>
 									<li><a href="my/mycard_charge" required="login">카드 충전</a></li>
+									<li><a href="my/mycard_lost" required="login">분실신고/잔액이전</a></li>
 								</ul>
 							</li>
 							<li>
@@ -513,31 +513,31 @@ var eFrequencyPlannerYn = 'Y';
 							<li>
 								<a role="button" href="javascript:void(0);">메뉴 이야기<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 -->
 								<ul>
-									<li><a href="store/store_nitro_coldbrew">나이트로 콜드브루</a></li>
-									<li><a href="store/store_coldbrew">콜드 브루</a></li>
+									<li><a href="strore/store_nitro_coldbrew">나이트로 콜드브루</a></li>
+									<li><a href="strore/store_coldbrew">콜드 브루</a></li>
 									<li><a href="menuStory/teavana">스타벅스 티바나</a></li>
 								</ul>
 							</li>
 						</ul>
 						<ul>
 							<li class="mob_gnb_ttl2"><a role="button" class="en" href="javascript:void(0);">STORE<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 --></li>
-							<li><a href="store/index">한눈에 보기</a></li>
+							<li><a href="strore/index">한눈에 보기</a></li>
 							<li>
 								<a role="button" href="javascript:void(0);">매장 찾기<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 -->
 								<ul>
-									<li><a href="store/store_map?disp=quick">빠른 검색</a></li>
-									<li><a href="store/store_map?disp=locale">지역 검색</a></li>
+									<li><a href="strore/store_map?disp=quick">빠른 검색</a></li>
+									<li><a href="strore/store_map?disp=locale">지역 검색</a></li>
 								</ul>
 							</li>
-							<li><a href="store/store_drive">드라이브 스루 매장</a></li>
-							<li><a href="store/store_reserve">스타벅스 리저브™ 매장</a></li>
-							<li><a href="store/store_community">커뮤니티 스토어 매장</a></li>
+							<li><a href="strore/store_drive">드라이브 스루 매장</a></li>
+							<li><a href="strore/store_reserve">스타벅스 리저브™ 매장</a></li>
+							<li><a href="strore/store_community">커뮤니티 스토어 매장</a></li>
 							<li>
 								<a role="button" href="javascript:void(0);">매장 이야기<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 -->
 								<ul>
-									<!-- <li><a href="store/store_cheongdam">청담스타</a></li> 20210727 메뉴 비노출 -->
-									<li><a href="store/store_star_field">티바나 바 매장</a></li>
-									<!-- <li><a href="store/store_park">파미에파크</a></li> 20210727 메뉴 비노출 -->
+									<!-- <li><a href="strore/store_cheongdam">청담스타</a></li> 20210727 메뉴 비노출 -->
+									<li><a href="strore/store_star_field">티바나 바 매장</a></li>
+									<!-- <li><a href="strore/store_park">파미에파크</a></li> 20210727 메뉴 비노출 -->
 								</ul>
 							</li>
 						</ul>
@@ -670,8 +670,8 @@ var eFrequencyPlannerYn = 'Y';
 					
 								
 <ul>
-	<li class="util_nav01 sign_out" style="display:none;"><a href="/starbucks/login/logout">Sign out</a></li>
-	<li class="util_nav01 sign_in"><a href="/starbucks/login/login">Sign In</a></li>
+	<li class="util_nav01 sign_out" style="display:none;"><a href="javascript:void(0);">Sign out</a></li>
+	<li class="util_nav01 sign_in"><a href="javascript:void(0);">Sign In</a></li>
 	<li class="util_nav02"><a href="index">My Starbucks</a></li>
 	<li class="util_nav03"><a href="../menu/orderList">Order</a></li>
 	<li class="util_nav04"><a href="../store/store_map">Find a Store</a></li>
@@ -691,107 +691,309 @@ var eFrequencyPlannerYn = 'Y';
 
 			<div id="container">
 				<!-- 서브 타이틀 -->
-				<header class="ms_sub_tit_wrap">
-					<div class="ms_sub_tit_bg">
-						<div class="ms_sub_tit_inner">
-							<!-- 160609 텍스트 수정 -->
-							<h4><img alt="보유 카드" src="//image.istarbucks.co.kr/common/img/util/inmycard_ttl.png"></h4>
-							<!-- 160609 텍스트 수정 end -->
-							<ul class="smap">
-								<li><a href="/"><img src="//image.istarbucks.co.kr/common/img/common/icon_home_w.png" alt="홈으로"></a></li>
-								<li><img class="arrow" src="//image.istarbucks.co.kr/common/img/common/icon_arrow_w.png" alt="하위메뉴"></li>
-								<li><a href="my/index">My Starbucks</a></li>
-								<li><img class="arrow" src="//image.istarbucks.co.kr/common/img/common/icon_arrow_w.png" alt="하위메뉴"></li>
-								<li><a href="my/mycard_index">My 스타벅스 카드</a></li>
-								<li><img class="arrow" src="//image.istarbucks.co.kr/common/img/common/icon_arrow_w.png" alt="하위메뉴"></li>
-								<!-- 160609 텍스트 수정 -->
-								<li><a href="my/mycard_index">보유 카드</a></li>
-								<!-- 160609 텍스트 수정 end -->
-							</ul>
-						</div>
-					</div>
-				</header>
+				
+<header class="ms_sub_tit_wrap">
+	<div class="ms_sub_tit_bg">
+		<div class="ms_sub_tit_inner">
+			<h4><img alt="My 음료/매장" src="//image.istarbucks.co.kr/common/img/util/ec/tit01.png"></h4>
+			<ul class="smap">
+				<li><a href="/"><img src="//image.istarbucks.co.kr/common/img/common/icon_home_w.png" alt="홈으로"></a></li>
+				<li><img class="arrow" src="//image.istarbucks.co.kr/common/img/common/icon_arrow_w.png" alt="작은 맵 화살표"></li>
+				<li><a href="my/index">My Starbucks</a></li>
+				
+					<li><img class="arrow" src="//image.istarbucks.co.kr/common/img/common/icon_arrow_w.png" alt="작은 맵 화살표"></li>
+					<li><a href="my/ecoupon">My 쿠폰</a></li>
+				
+				
+			</ul>
+		</div>
+	</div>
+</header>
 				<!-- 서브 타이틀 end -->
 				
-				
-				<!-- 0620다정 -->
 				<!-- 내용 -->
+				
 				<div class="ms_cont_wrap">
 					<div class="ms_cont">
-						<!-- 메인 카드 슬라이드 -->
-						<section class="my_ms_index_slide">
-							<h2 style="font-size: 30px;">보유 카드 목록</h2>
-							<br><br>
-							<div class="my_ms_slider_txt">
-								<form id="mycardProc" name="mycardProc">
-								<input type="hidden" id="cardNum" name="cardNum" value="">
-								<c:forEach var="cardDTO" items="${list }">
-								<table>
-								<tr class="NumFindTr"> <!-- 부모.find --> 
-									<td style="width: 250px;">
-										<div class="my_ms_slider_txt_l"> <strong class="cardNickname">${cardDTO.c_name }</strong> 
-								    		<%-- <a class="icon_pencil_g pencil" href="javascript:void(0);" data-cardstatus="R" data-cardnickname="${cardDTO.c_name }">정보수정버튼</a> --%>
-								        	<div class="my_ms_card_slider_id_modify" style="display:none;">
-											<input class="my_nick_modify_input" type="text" maxlength="20" value="${cardDTO.c_name }">
-											<!-- <a class="my_nick_modify" href="javascript:void(0);" data-cardregnumber="20817929">수정</a> 
-											<a class="my_nick_cancel" href="javascript:void(0);">취소</a>  -->
-										</div>
-							        <p class="thisCardNum">${cardDTO.c_num }</p>
-							    </div>
-									</td>
-									<td style="width: 400px;">
-										<div class="my_ms_slider_txt_r" style="width: 350px;"> 잔액 <strong class="en">${cardDTO.remaincost }</strong>원
-									    	<ul class="op0 my_ms_card_btns">
-									            <li class="card_charge_btn">
-									                <a href="mycard_charge_1" data-type="CHARGE" data-cardregnumber="20817929">카드 충전</a>
-									            </li>
-									            <li class="card_manage_btn">
-									            	<button id="editBtn${cardDTO.c_num }" onclick="formSubmit(this);" style="color: #fff; display: block; font-size: 12px; height: 28px; line-height: 28px; text-align: center; text-indent: 0;text-decoration: none; background: #222; width: 81px; font-family: 'nbg', '맑은 고딕', HelveticaNeue, DroidSans, Sans-serif, Helvetica; font-weight: bold;border: 1px solid #222;cursor: pointer;">카드 관리</button> 
-									            </li>
-									        </ul>
-							    		</div>
-									</td>
-								</tr>
-							    </table>
-							    <br><br>
-							    <hr style="width: 700px; margin: 0px;"/>
-							    </c:forEach>
-							    </form>
+						<!-- My e-쿠폰 -->
+						<div class="ms_ecoupon">
+							<!-- My e-쿠폰 팝업  couponRegisterProc-->
+							<form action="couponRegisterProc" name="couponRegister" id="couponRegister" method="post">
+							<div class="ecPop">
+								<div class="head">
+									<p class="tt"><span class="en">My</span> 쿠폰 등록</p>
+									<p class="close" onclick="window.close();"><a><img src="//image.istarbucks.co.kr/common/img/util/cal/calpop_close2.png" alt="닫기"></a></p>
+								</div>
+								<!-- 20170726 추가 -->                                
+                                <div class="myPopInner">
+                                    
+                                        <fieldset>
+                                            <legend class="hid">My 쿠폰 등록</legend>
+                                            
+                                            <p class="couponTabTit">영수증 쿠폰, MMS 쿠폰 또는 Star 쿠폰 중 등록하고자 하시는 쿠폰을 선택하세요.</p> <!-- 211008 수정 -->
+                                            <ul class="couponTabList">
+                                                <li class="cpTab1 cpTabOn"><a href="#">영수증 쿠폰</a></li>
+                                                <li class="cpTab2"><a href="#">MMS 쿠폰</a></li>
+                                                <li class="cpTab3" id="couponTypeStar"><a href="#">Star 쿠폰</a></li> <!-- 211008 추가 -->
+                                            </ul>
+                                            <div class="cpClear"></div>
+                                            <!-- 퀵 서치 -->
+                                            <!-- 1. 영수증쿠폰 -->
+                                            <div class="myCouponCb myCouponCb1 myCouponWrap" > <!-- 211008 클래스 추가 -->
+                                                <div class="coupon_input">
+                                                    <label for="coupon_num1">영수증 쿠폰번호 16자리를 입력해주세요.</label>
+                                                    <div class="input">
+                                                        <input type="text" name="rptcoupon_num1" id="rptcoupon_num1" maxlength="4" title="쿠폰 앞번호">
+                                                        <span class="line"></span>
+                                                        <input type="text" name="rptcoupon_num2" id="rptcoupon_num2" maxlength="4" title="쿠폰 두번째 번호">
+                                                        <span class="line"></span>
+                                                        <input type="text" name="rptcoupon_num3" id="rptcoupon_num3" maxlength="4" title="쿠폰 세번째 번호">
+                                                        <span class="line"></span>
+                                                        <input type="text" name="rptcoupon_num4" id="rptcoupon_num4" maxlength="4" title="쿠폰 마지막 번호" class="last">
+                                                    </div>
+                                                    <div class="cpClear"></div>
+                                                </div>
+                                                <!-- <div class="mobile_input mobile_input2">
+                                                    <p class="con">e-쿠폰 등록코드 8자리를 입력해주세요.</p>
+                                                    <div class="input">
+                                                        <input type="tel" name="regiCode" id="regiCode" maxlength="8" ref="num" value="" title="e-쿠폰 등록코드">
+                                                    </div>
+                                                </div> -->
+                                            </div>
+                                            <!--// 1. 영수증쿠폰 -->
+                                            
+                                            <!-- 2. mms쿠폰 -->
+                                            <div class="myCouponCb myCouponCb2 myCouponWrap" style="display: none"> <!-- 211008 클래스 추가 -->
+                                                <div class="coupon_input">
+                                                    <label for="coupon_num3">MMS 쿠폰번호 13자리를 입력해주세요.</label>
+                                                    <div class="input">
+                                                        <input type="text" name="coupon_num1" id="coupon_num1" maxlength="4" title="쿠폰 앞번호">
+                                                        <span class="line"></span>
+                                                        <input type="text" name="coupon_num2" id="coupon_num2" maxlength="4" title="쿠폰 중간 번호"><!-- maxlength 5->4로 변경 -->
+                                                        <span class="line"></span>
+                                                        <input type="text" name="coupon_num3" id="coupon_num3" maxlength="5" title="쿠폰 마지막 번호" class="last">
+                                                    </div>
+                                                    <div class="cpClear"></div>
+                                                </div>
+                                                <!-- <div class="mobile_input">
+                                                    <p class="con">수신자(선물 받은 사람)의 휴대폰 번호를 입력해주세요.</p>
+                                                    <div class="input">
+                                                        <div class="select_box select_box03">
+                                                            <label class="value" for="myplane_date01">선택</label>
+                                                            <select title="휴대폰 앞번호" id="myplane_date01">
+                                                                <option value="" selected="selected">선택</option>
+                                                                <option value="010">010</option>
+                                                                <option value="011">011</option>
+                                                                <option value="016">016</option>
+                                                                <option value="017">017</option>
+                                                                <option value="018">018</option>
+                                                                <option value="019">019</option>
+                                                            </select>
+                                                        </div>
+                                                        <span class="line"></span>
+                                                        <input type="tel" name="mobile_num2" id="mobile_num2" maxlength="4" ref="num" value="" title="휴대폰 중간번호">
+                                                        <span class="line"></span>
+                                                        <input type="tel" name="mobile_num3" id="mobile_num3" maxlength="4" ref="num" value="" title="휴대폰 마지막 번호" class="last">
+                                                    </div>
+                                                </div> -->
+                                            </div>
+                                            <!--// 2. mms쿠폰 -->
+                                            
+                                            <!-- s::211008 추가 -->
+	                                        <!-- 3. Star 쿠폰 -->
+	                                        <div class="myCouponCb myCouponCb3 myCouponWrap nonsr_user" style="display: none"> <!-- 211101 수정 -->
+	                                            <div class="starcoupon_input">
+	                                                <label for="starcoupon_num1">Star 쿠폰번호 13자리를 입력해주세요.</label>
+	                                                <div class="input">
+	                                                    <input type="text" name="starcoupon_num1" id="starcoupon_num1" maxlength="4" title="쿠폰 앞번호">
+	                                                    <span class="line"></span>
+	                                                    <input type="text" name="starcoupon_num2" id="starcoupon_num2" maxlength="4" title="쿠폰 중간 번호"><!-- maxlength 5->4로 수정 -->
+	                                                    <span class="line"></span>
+	                                                    <input type="text" name="starcoupon_num3" id="starcoupon_num3" maxlength="5" title="쿠폰 마지막 번호" class="last">
+	                                                </div>
+	                                                <div class="cpClear"></div>
+	                                            </div>
+	                                            <!-- <div class="pin_input">
+	                                                <p class="con">PIN 번호 8자리를 입력해주세요.</p>
+	                                                <div class="input">
+	                                                    <input type="tel" name="pinCode" id="pinCode" maxlength="8" ref="num" value="" title="PIN 번호">
+	                                                </div>
+	                                            </div> -->
+	                                        </div>
+	                                        <!--// 3. Star 쿠폰 -->
+	                                        <!-- //e::211008 -->
+                                        </fieldset>
+                                    
+                                </div>
+                                <!--// 20170726 추가 -->
+                                
+                                <div class="info_wrap cpBg">
+                                    <!-- 1. 영수증쿠폰 -->
+                                    <ul class="myCouponCb myCouponCb1"> <!-- 211008 클래스 추가 -->
+                                        <li>e-쿠폰으로 등록한 영수증 쿠폰은 등록해지가 불가능하며, 등록이후 기존의 실물 쿠폰은 더 이상 사용하실 수 없습니다.</li>
+                                        <li>등록된 e-쿠폰은 해당 계정에 등록된 스타벅스 카드 또는 쿠폰의 QR코드를 제시하여 사용하실 수 있습니다.</li>
+                                        <li>e-쿠폰 및 실물 쿠폰은 상업적으로 이용할 수 없으며, 스타벅스에서 제공하는e-쿠폰 선물하기 기능 외 방법으로 전달된 쿠폰 사용으로 인해 발생된 문제에 대해서는 스타벅스가 책임지지 않습니다.</li>
+                                        <li>쿠폰이 발행된 원 거래가 취소되는 경우, 등록된 e-쿠폰도 즉시 회수됩니다.</li>
+                                    </ul>
+                                    
+                                    <!-- 2. mms쿠폰 -->
+                                    <ul class="myCouponCb myCouponCb2" style="display: none"> <!-- 211008 클래스 추가 -->
+                                        <li>e-쿠폰 등록 후에는 선물 받은 쿠폰의 문자 메시지가 삭제되었더라도 해당 계정에 등록된 스타벅스 카드 또는 쿠폰 QR코드를 제시하시면 사용하실 수 있습니다.</li>
+                                        <li>e-쿠폰 및 실물 쿠폰은 상업적으로 이용할 수 없으며, 스타벅스에서 제공하는 e-쿠폰 선물하기 기능 외 방법으로 전달된 쿠폰 사용으로 인해 발생된 문제에 대해서는 스타벅스가 책임지지 않습니다.</li>
+                                        <li>쿠폰이 발행된 원 거래가 취소되는 경우, 등록된 e-쿠폰도 즉시 회수됩니다.</li>
+                                    </ul>
+
+                                    <!-- s::211008 추가 -->
+	                                <!-- 3. Star 쿠폰 -->
+	                                <ul class="myCouponCb myCouponCb3" style="display: none">
+	                                	<li class="green"><strong>Star 쿠폰은 스타벅스 리워드 회원에 한해서만 등록 및 사용이 가능한 쿠폰입니다.</strong></li> <!-- 211101 추가 -->
+	                                    <li>하나의 Star 쿠폰에는 여러 개의 별이 들어 있으며, Star 쿠폰을 My 쿠폰으로 등록하는 즉시 별로 전환됩니다. 전환된 별은 별 History에서 확인 가능합니다.</li>
+	                                    <li>전환된 별은 별 정책에 따라 승급/별 12개 쿠폰 발행에 사용됩니다.</li>
+	                                    <li>Star 쿠폰은 쿠폰 그 자체로 사용할 수 없으며, My 쿠폰 등록을 통해 별로 전환하여 사용 가능합니다.</li>
+	                                    <li>Star 쿠폰 유효기간 내에만 쿠폰 등록이 가능합니다.</li>
+	                                    <li>Star 쿠폰으로 전환되는 별의 유효기간은 별 전환 시점으로부터 1년입니다.</li>
+	                                    <li>등록 완료되어 별로 전환된 Star 쿠폰은 등록 취소 및 재사용 불가합니다.</li>
+	                                    <li>Star 쿠폰은 상업적으로 이용할 수 없습니다.</li>
+	                                </ul>
+	                                <!-- //e::211008 -->
+	                                <button id="formSubmit" style="background: #e2c383; border: 1px solid #bb9f65; color: #222; font-size: 12px; font-weight: bold;float: left; width: 81px; height: 28px; line-height: 28px; border-radius: 3px; text-align: center;">등록하기</button>
+									<input type="reset" value="취소" style="float: left;width: 81px; height: 28px; line-height: 28px; border-radius: 3px; text-align: center; background: #222; border: 1px solid #222; color: #fff;font-size: 12px; font-weight: bold; margin-left: 5px;">
+                                    <!-- <p class="btns"><a href="javascript:void(0)" class="a1">쿠폰 등록</a> <a href="javascript:void(0)" class="a2">취소</a></p> -->
+                                </div>
+                                
 							</div>
-							
-							<%-- <header>
-							<h5 class="userName">정다님의 스타벅스 카드</h5>
-								<strong>총 보유카드 : <span class="en totalCnt"></span>장</strong>
-							</header>
-							<article class="my_ms_slide_wrap">
-								<div class="align" style="width:85%; margin: auto;">
-									<div class="my_ms_slider_txt">
-									<h1 style="top: 400px; padding-left: 3%; font-size: 24px;">정다정님의 카드 목록</h1>
-										<!-- 다정 stlye에서 블락, 논 되어있는것은 서로 반대된다. block되어있는 부분들을 none으로 고치면 none부분을 block으로 고쳐야함 -->
-									    <div class="my_ms_slider_txt_l1">
-									    	<strong class="cardNickname" style="display: block;">정다</strong> 
-									        <a class="icon_pencil_g pencil" href="javascript:void(0);" data-cardstatus="R" data-cardnickname="정다" style="display: block;">정보수정버튼</a>
-									        <div class="my_ms_card_slider_id_modify" style="display:none;">
-									            <input class="my_nick_modify_input" type="text" maxlength="20" value="정다">
-									            <a class="my_nick_modify" href="javascript:void(0);" data-cardregnumber="20817929">수정</a>
-									            <a class="my_nick_cancel" href="javascript:void(0);">취소</a>
-									        </div>
-									        <p>●●●● - ●●●● - ●●75 - 4919</p>
-									    </div>
-									    <div class="my_ms_slider_txt_r"> 잔액 <strong class="en">100</strong>원
-									        <ul class="op0 my_ms_card_btns">
-									            <li class="card_charge_btn"><a href="javascript:void(0);" data-type="CHARGE"
-									                    data-cardregnumber="20817929">카드 충전</a></li>
-									            <li class="card_manage_btn"><a href="javascript:void(0);" data-type="MANAGEMENT"
-									                    data-cardregnumber="20817929">카드 관리</a></li>
-									        </ul>
-									    </div>
+							</form>
+							<div class="ecPop2">
+								<div class="head">
+									<p class="tt">My 쿠폰 사용하기</p>
+									<p class="close"><a href="javascript:void(0)">닫기</a></p>
+								</div>
+								<div class="myPopInner">
+									<div class="myPopScroll designScroll">
+										<div class="ec_use">
+											<p class="tt couponName"><!-- [BOGO] 라스베리 트러플 모카 --></p>
+											<p class="qr"><img alt="" /></p>
+											<p class="qr_txt">이 QR코드는 <span id="timer">00:00:00</span>까지 유효합니다.</p><!-- 20180906 추가 -->
+											<p class="coffee"><img src="//image.istarbucks.co.kr/common/img/util/ec/icon_cup.jpg" alt="" /></p>
+											<ul>
+												<li>
+													<dl>
+														<dt>유효기간</dt>
+														<dd class="validDt"><!-- 2015-03-10 ~ 2015-04-22 --></dd>
+													</dl>
+												</li>
+												<li>
+													<dl>
+														<dt>쿠폰내역</dt>
+														<dd class="couponHistList"><!-- 2015-03-10&nbsp;&nbsp;발급<br>2015-03-23&nbsp;&nbsp;선물<br>2015-03-23&nbsp;&nbsp;회수 --></dd>
+													</dl>
+												</li>
+												<li>
+													<dl>
+														<dt>상세정보</dt>
+														<dd class="couponDetail">
+															<!--
+															- 스타벅스 매장 내에서 파트너가 제조한 음료 구매시 동일한 음료 한잔 더 증정<br>-  병음료 , 생수, 요거트, POC 브루드커피, 바
+															-->
+														</dd>
+													</dl>
+												</li>
+											</ul>
+											<input type="hidden" id="couponNumber" />
+										</div>
 									</div>
-								</div>	 --%>
-							</article>
-						</section>
-						<!-- 메인 카드 슬라이드 end -->
-						
+								</div>
+								<div class="info_wrap">
+									<p class="con" id="useGuide">* 계산대에서 파트너에게 QR코드를 제시하면 해당 쿠폰을 사용하실 수 있습니다.</p>
+									<p class="btns">
+										<a href="javascript:void(0)" class="a3 btn_gift_coupon" style="display:none;">쿠폰 선물하기</a>
+									</p>
+								</div>
+							</div>
+							<div class="ecPop3">
+								<div class="head">
+									<p class="tt">상세보기</p>
+									<p class="close"><a href="javascript:void(0)">닫기</a></p>
+								</div>
+								<div class="myPopInner">
+									<div class="myPopScroll designScroll">
+										<div class="myCoupon">
+											<p class="tit"><img id="myCouponImg" src="//image.istarbucks.co.kr/common/img/util/ec/icon_ecoupon03.png" alt="">&nbsp;&nbsp;<span class="couponName"></span></p>
+											<ul>
+												<li>
+													<dl>
+														<dt>유효기간</dt>
+														<dd class="validDt"></dd>
+													</dl>
+												</li>
+												<li>
+													<dl>
+														<dt>쿠폰내역</dt>
+														<dd class="CouponHistory"></dd>
+													</dl>
+												</li>
+												<li>
+													<dl>
+														<dt>쿠폰 받는 분</dt>
+														<dd class="phone"></dd>
+													</dl>
+												</li>
+												<li class="message">
+													<dl>
+														<dt>메시지 내용</dt>
+														<dd class="giftMmsContents"></dd>
+													</dl>
+												</li>
+												<li class="last">
+													<dl class="warning">
+														<dt>유의사항</dt>
+														<dd>
+															<ul class="useNotice"></ul>
+														</dd>
+													</dl>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="info_wrap">
+									<p class="btns">
+										<a href="javascript:void(0)" class="a4 btn_gift_recall" style="display:none;">선물회수</a>
+										<a href="javascript:void(0)" class="a5 btn_gift_message_resend" style="display:none;">재발송</a>
+									</p>
+								</div>
+							</div>
+							<!-- My e-쿠폰 팝업 end -->
+							<div class="popup" style="margin:auto;text-align: center;">
+	<form action="javascript:void(0)">
+	<h1 style="font-size: 30px; font-weight:bold; text-align: left; padding-bottom: 50px;">보유 쿠폰 내역</h1>
+		<table class="coupon" style="border:solid; border-color: #dfdfdf; font-size: 14px; margin:auto;">
+				<thead>
+					<tr>
+						<th style="padding:25px; width: 140px;">보유한 쿠폰명</th>
+						<th style="padding:25px; width: 230px;">사용기한</th>
+						<th style="padding:25px; width: 120px;">할인금액</th>
+					</tr>
+				</thead>
+				<tbody>
+					<c:set var="i" value="0"/>
+					<c:forEach var="eCouponDTO" items="${list }">
+					<tr>
+						<td style="padding:15px; width: 230px;"><p>${eCouponDTO.pon_name }</p>
+						<input type="hidden" id="pon_name" value="${eCouponDTO.pon_name }"/></td>
+						<td style="padding:15px; width: 140px;"><p>${startList[i]} ~ ${endList[i]}</p>
+						<input type="hidden" id="pon_date" value="${startList[i]} ~ ${endList[i]}"/></td>
+						<td style="padding:15px; width: 120px;"><p>${eCouponDTO.pon_cash }</p>
+						<input type="hidden" id="pon_cash" value="${eCouponDTO.pon_cash }"/></td>
+					</tr>
+					<c:set var="i" value="${i+1 }"/>
+					</c:forEach>
+				</tbody>
+			</table>
+	</form>
+</div>
+						</div>
+						<!-- My e-쿠폰 end -->
 					</div>
 					
 					
@@ -879,16 +1081,16 @@ var eFrequencyPlannerYn = 'Y';
 					<div class="footer_menus">
 						<ul class="footer_first_menu">
 							<li class="footer_menu_ttl"><a class="en" href="javascript:void(0);">CUSTOMER SERVICE &amp; IDEAS<span class="footer_arrow_down"></span></a></li>
-							<li><a href=util/faq">자주 하는 질문</a></li><!-- 20210809 수정 -->
+							<li><a href="util/faq">자주 하는 질문</a></li><!-- 20210809 수정 -->
 							<li><a href="customer/suggestionWrite">고객의 소리</a></li>
 							<li class="footer_2depth_ttl"><a href="javascript:void(0)">스타벅스 이용 팁<span class="footer_arrow_down"></span></a>
 								<ul>
-									<li><a href=util/web_tip">홈페이지 이용 팁</a></li>
-									<li><a href=util/app_tip">애플리케이션 이용 팁</a></li>
-									<li><a href=util/partnership_card">제휴카드 안내</a></li>
+									<li><a href="util/web_tip">홈페이지 이용 팁</a></li>
+									<li><a href="util/app_tip">애플리케이션 이용 팁</a></li>
+									<li><a href="util/partnership_card">제휴카드 안내</a></li>
 								</ul>
 							</li>
-							<li><a href=util/online_survey">고객 경험 설문조사</a></li> <!-- 20210811 수정  -->
+							<li><a href="util/online_survey">고객 경험 설문조사</a></li> <!-- 20210811 수정  -->
 							
 							
 						</ul>
@@ -1071,19 +1273,8 @@ var eFrequencyPlannerYn = 'Y';
 		
 			<script src="//image.istarbucks.co.kr/common/js/openevent/openevent.js"></script>
 			<script src="//image.istarbucks.co.kr/common/js/open_event_control.js"></script>
-			
-			<!-- 0620다정 -->
 			<script type="text/javascript">
-				function formSubmit(obj){
-					var cardnum = $(obj).attr('id').slice(7,23);
-					document.getElementById("cardNum").value = cardnum;
-					var form = document.getElementById("mycardProc");
-					form.action ="mycardProc";
-					form.submit();
-				}
-			</script>
-			<script type="text/javascript">
-			
+				
 				var mrSlider;
 				
 				$(document).ready(function(){
@@ -1228,7 +1419,7 @@ var eFrequencyPlannerYn = 'Y';
                 	/* 로그인 체크  */
                 	$.ajax({
                     	type: 'post',
-                    	url : '/edt/edtCheckLogin',
+                    	url : 'edt/edtCheckLogin',
                     	data : {},
                     	dataType : 'json',
                     	jsonp : 'callback',
@@ -1341,66 +1532,84 @@ var eFrequencyPlannerYn = 'Y';
 		
 			
 			<script src="../common/js/common_jhp.js"></script>
-			<script src="../common/js/my/mycard_index.js?v=200319"></script>
+			<script src="../common/js/my/ecoupon.js"></script>
+			<!-- <script src="https://www.starbucks.co.kr/common/js/my/ecoupon.js?v=211115"></script> -->
 			
-			<script>
-				m_cardRegNumber = "";
-				
-				$(document).ready(function(){
-					
-					if (myWindow <= 640) {
-						// 150819 DOM 추가 구명준
-						$('.mycardvip_one').on('click', function(){
-							if($('div.mycardvip_area2').css("display")=="none"){
-								$('figure.swiper-slide_img').hide();
-								$('div.mycardvip_area2').fadeIn();
-								$('.mycardvip_one img').attr('src','//image.istarbucks.co.kr/common/img/common/payment_icon2.png');
-							} else {
-								$('figure.swiper-slide_img').fadeIn();
-								$('div.mycardvip_area2').hide();
-								$('.mycardvip_one img').attr('src','//image.istarbucks.co.kr/common/img/common/payment_icon1.png');
-							}
-						});
-						// 150819 DOM 추가 구명준 end
-						
-						// 150819 DOM 추가 구명준
-						(function($) {
-							$.fn.seqfx = function() {
-								var elements = this,
-									l = elements.length,
-									i = 0;
-		
-								function execute() {
-									var current = $(elements[i]);
-									i = (i + 1) % l;
-		
-									current
-										.animate({ rotateY: '360deg' }, 2000)
-										.animate({ rotateY: '-360deg' }, 2000, execute);
-								}
-								execute();
-								return this;
-							};
-						}(jQuery));
-						$('.mycardvip_one').seqfx();
-						// 150819 DOM 추가 구명준 end
+			
+			
+			<script type="text/javascript">
+				<!-- 20170726추가 -->
+				$(document).ready(function () {
+					if(m_jsonRewardSummary != null && m_jsonRewardSummary.msrMemberYn == "Y") {
+						$('input[name=starcoupon_num]').prop("disabled", false);
+						$('#pinCode').prop("disabled", false);
+						$('#starCouponRegInfo').removeClass('nonsr_user');
 					}
-					
-					
-					
-	            	
-	            	$('#rpBtnPopConfirm').on('click', function(e){
-                        e.preventDefault();
-                        $('.receiptPopWrap, .myDimm').fadeOut();
-                    });
-	            	
-					
+
+					//s::211008 수정
+					$('.couponTabList li').on('click', function(){
+
+						var idx = $(this).index(),
+						$couponContent = $('.myCouponCb');
+
+						$("form").each(function() { // form reset
+							if(this.id == "efrm1") this.reset();
+						});
+
+						$(this).addClass('cpTabOn').siblings().removeClass('cpTabOn');
+
+						$couponContent.hide();
+						$('.myCouponCb'+(idx+1)).show();
+
+					});
+					//e::211008
 				});
+				<!--// 20170726추가 -->
+
+				$(".select_box select").on("change",function(){
+					$(this).prev()($(this).find("option:selected").text());
+					}).prev().html(function() {
+					return $(this).next().find("option:selected").text();
+				});
+	
+
+	/*
+				$("a.detailView").bind("click", function(){
+	
+					var ww = $(window).scrollTop();
+					$("div.ecPop3").css('top', ww + "px");
+					$("div.myDimm").show();
+					$("div.ecPop3").fadeIn();
+					return false;
+				});
+	*/
+
+	
+				$(".designScroll").mCustomScrollbar(); // 팝업 스크롤
+				/* 성연욱 추가 end */
+				
+				(function($) {
+					$.fn.seqfx = function() {
+						var elements = this,
+							l = elements.length,
+							i = 0;
+	
+						function execute() {
+							var current = $(elements[i]);
+							i = (i + 1) % l;
+	
+							current
+								.animate({ rotateY: '360deg' }, 2000)
+								.animate({ rotateY: '-360deg' }, 2000, execute);
+						}
+						execute();
+						return this;
+					};
+				}(jQuery));
+				$('.coffee').seqfx();
 				
 				
-	            
-	            
-	            
+				var m_strType = '';
 			</script>
 		</div>
 	</body>
