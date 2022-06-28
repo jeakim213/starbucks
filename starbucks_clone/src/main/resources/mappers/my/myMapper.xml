@@ -66,6 +66,10 @@
 		update e_coupon set pon_used='Y', pon_usedate=default where pon_no=#{pon_no}
 	</update>
 	
+	<select id="couponCount" parameterType="String" resultType="int">
+		SELECT count(*) FROM e_coupon WHERE id=#{id} and pon_used='N'
+	</select>
+	
 	
 	<!-- MY INDEX - 예은 -->
 	<select id="userCard" parameterType="com.clone.starbucks.DTO.CardDTO" resultType="int">
@@ -86,6 +90,11 @@
 		SELECT count(*) FROM e_coupon WHERE id=#{id} and pon_used='Y'
 	</select>
 	
-
+	
+	
+	<!-- Star 지혜 -->
+	<update id="updateStar" parameterType="com.clone.starbucks.DTO.UserInfoDTO">
+		UPDATE userinfo SET star=#{star} WHERE id=#{id}
+	</update>
 	
 	</mapper>

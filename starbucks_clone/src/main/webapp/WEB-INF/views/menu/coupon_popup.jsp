@@ -55,13 +55,27 @@
 </div>
 </body>
 <script src="//image.istarbucks.co.kr/common/js/jquery-1.10.2.min.js"></script>
-<script type="text/javascript"> //지혜 0621
+<script type="text/javascript"> 
+	
+	
+	
+	//지혜 0621
 	function sendCoupon(){
 		num = $("input[name='couponChoose']:checked");
 		obj = $(num).closest('tr');//부모요소
 		name = $(obj).find("#pon_name").val();
 		date = $(obj).find("#pon_date").val();
 		cost = $(obj).find("#pon_cash").val();
+		
+		//지혜 0628
+		var drink = "<c:out value='${sessionScope.drink}'/>";
+		if(name == '[음료전용]별 적립 쿠폰'){
+			if(drink == 'N'){
+				alert('별 쿠폰은 음료 구매 시에만 적용 가능합니다.');
+				return;
+			}
+		}
+		
 		window.opener.document.getElementById('ponNo').value = $(num).val();
 		window.opener.document.getElementById('pon_name').innerText = name;
 		window.opener.document.getElementById('pon_date').innerText = date;

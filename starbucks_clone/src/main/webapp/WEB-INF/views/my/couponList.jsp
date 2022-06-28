@@ -1,18 +1,28 @@
-﻿<%@ page language="java" contentType="text/html; charset=UTF-8"
+<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-
-
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <!DOCTYPE html>
 <html lang="ko">
 	<head>
-	
+		
 
 
 
-
-
-
+<!-- 
+<script type="text/javascript">
+	function submitForm(){
+		send.addEventListener("click",function(){
+      	  var form = document.getElementById("couponRegister");
+      	  form.action = "my/couponRegisterProc";
+      	  form.metho = "POST";
+      	  form.submit();
+        });
+		
+		alert('${msg}');
+	}
+</script>
+ -->
 
 
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -61,7 +71,10 @@
   ga('send', 'pageview');
 </script>
 
-
+<style type="text/css">
+	.btn_coupon{background:#f6f6f6; margin: 10px; padding-top: 30px;padding-bottom: 30px; padding-left:50px; padding-right:50px;font-family: "맑은 고딕"; font-size:"16px"; border-style: none; border-radius:14px;}
+	.submitResetBtn{margin: 10px; padding-top: 14px;padding-bottom: 14px; padding-left:50px; padding-right:50px;font-family: "맑은 고딕"; font-size:"16px"; border-style: none; border-radius:14px;}
+</style>
 
 
 
@@ -71,26 +84,14 @@ var eFrequencySeq = '172';
 var eFrequencyPlannerYn = 'Y';
 </script>
 
-		<link href="../common/css/style_main.css" rel="stylesheet">
-		<link href="../common/css/style_util.css" rel="stylesheet">
-		<link href="../common/css/style_menu.css" rel="stylesheet">
-		<link href ="../common/css/style_utilPop.css" rel="stylesheet" /> <!-- 20170731추가 -->
-		<link href ="../common/css/style_star.css?v=211119" rel="stylesheet" /> <!-- 211008 추가 -->
 		
-		<link href="../common/css/style_app.css" rel="stylesheet">
-		<link href="../common/css/style_app_dt.css?v=20190924" rel="stylesheet">
-		<link href="../common/css/style_ecoBonus.css" rel="stylesheet">
-		<link href="../common/css/style_mycardRegister.css" rel="stylesheet">
+		<link href="../common/css/style_util.css?" rel="stylesheet">
+		<link href="../common/css/style_util2.css" rel="stylesheet"><!-- 20180906 추가 -->
+		<link href="../common/css/style_star.css" rel="stylesheet">
+		<!-- <link href="https://www.starbucks.co.kr/common/css/style_star.css?v=211112" rel="stylesheet">211008 추가 -->
 	</head>
-
-<!-- 약관 (차량번호 수집 및 이용동의) -->
-
-	
-	
-
-
-
-<body>                     
+	<body>
+		<div class="myDimm"></div>
 		<div id="wrap">
 			
 <script>
@@ -182,7 +183,7 @@ var eFrequencyPlannerYn = 'Y';
 					<!-- MSR 회원 -->
 					<!-- 150805 DOM 수정 -->
 					<div class="msr_card_info w_card_pic">
-						<p class="msr_card_area" onclick="location.href = '/my/mycard_index';" style="cursor:pointer;"><img alt="" /></p>
+						<p class="msr_card_area" onclick="location.href = 'my/mycard_index';" style="cursor:pointer;"><img alt="" /></p>
 						<p class="card_info_txt">잔액 <strong class="en balance">0</strong>원</p>
 						<!-- 150924 - 다른카드보기버튼 추가 -->
 						<p class="btn_other_more"><a href="my/mycard_index">다른 카드 보기</a></p>
@@ -214,7 +215,7 @@ var eFrequencyPlannerYn = 'Y';
 					<!-- 일반회원 -->
 					<div class="sb_card_regi">
 						<a href="javascript:void(0);">
-							<p class="icon_add_card" onclick="location.href = '/my/mycard_info_input';"><img alt="카드등록 아이콘" src="//image.istarbucks.co.kr/common/img/common/icon_add_card.png"></p>
+							<p class="icon_add_card" onclick="location.href = 'my/mycard_info_input';"><img alt="카드등록 아이콘" src="//image.istarbucks.co.kr/common/img/common/icon_add_card.png"></p>
 							<p class="sb_card_regi_txt"><strong>스타벅스 카드 등록</strong><br>카드를 등록하시고<br>다양한 리워드를<br>만나보세요.</p>
 						</a>
 					</div>
@@ -298,12 +299,12 @@ var eFrequencyPlannerYn = 'Y';
 
 			<!-- 960 gnb -->
 			<div class="tablet_gnb_wrap">
-				<h1 class="logo"><a href="../">스타벅스 코리아</a></h1>
+				<h1 class="logo"><a href="/">스타벅스 코리아</a></h1>
 				<nav class="tablet_gnb_sep">
 					<ul>
 						<li class="tablet_gnb01"><a href="javascript:void(0);" role="button" title="마이 리워드 레이어 열기"><!-- 접근성_20171106 role, title 추가 --><span class="rCup2"></span></a></li><!-- 150709 클레스 수정 -->
 						<li class="tablet_gnb02"><a href="my/index" required="login"><span class="a11y">마이스타벅스</span></a><!-- 접근성_20171106 span추가 --></li>
-						<li class="tablet_gnb03"><a href="store/store_map"><span class="a11y">매장찾기</span></a><!-- 접근성_20171106 span추가 --></li>
+						<li class="tablet_gnb03"><a href="strore/store_map"><span class="a11y">매장찾기</span></a><!-- 접근성_20171106 span추가 --></li>
 						<li class="tablet_gnb04"><a href="javascript:void(0);"><span class="a11y" role="button">메뉴열기</span></a><!-- 접근성_20171106 span추가 --></li>
 					</ul>
 				</nav>
@@ -338,6 +339,7 @@ var eFrequencyPlannerYn = 'Y';
 									<li><a href="my/mycard_index" required="login">보유 카드</a></li>
 									<li><a href="my/mycard_info_input" required="login">카드 등록</a></li>
 									<li><a href="my/mycard_charge" required="login">카드 충전</a></li>
+									<li><a href="my/mycard_lost" required="login">분실신고/잔액이전</a></li>
 								</ul>
 							</li>
 							<li>
@@ -511,31 +513,31 @@ var eFrequencyPlannerYn = 'Y';
 							<li>
 								<a role="button" href="javascript:void(0);">메뉴 이야기<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 -->
 								<ul>
-									<li><a href="store/store_nitro_coldbrew">나이트로 콜드브루</a></li>
-									<li><a href="store/store_coldbrew">콜드 브루</a></li>
+									<li><a href="strore/store_nitro_coldbrew">나이트로 콜드브루</a></li>
+									<li><a href="strore/store_coldbrew">콜드 브루</a></li>
 									<li><a href="menuStory/teavana">스타벅스 티바나</a></li>
 								</ul>
 							</li>
 						</ul>
 						<ul>
 							<li class="mob_gnb_ttl2"><a role="button" class="en" href="javascript:void(0);">STORE<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 --></li>
-							<li><a href="store/index">한눈에 보기</a></li>
+							<li><a href="strore/index">한눈에 보기</a></li>
 							<li>
 								<a role="button" href="javascript:void(0);">매장 찾기<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 -->
 								<ul>
-									<li><a href="store/store_map?disp=quick">빠른 검색</a></li>
-									<li><a href="store/store_map?disp=locale">지역 검색</a></li>
+									<li><a href="strore/store_map?disp=quick">빠른 검색</a></li>
+									<li><a href="strore/store_map?disp=locale">지역 검색</a></li>
 								</ul>
 							</li>
-							<li><a href="store/store_drive">드라이브 스루 매장</a></li>
-							<li><a href="store/store_reserve">스타벅스 리저브™ 매장</a></li>
-							<li><a href="store/store_community">커뮤니티 스토어 매장</a></li>
+							<li><a href="strore/store_drive">드라이브 스루 매장</a></li>
+							<li><a href="strore/store_reserve">스타벅스 리저브™ 매장</a></li>
+							<li><a href="strore/store_community">커뮤니티 스토어 매장</a></li>
 							<li>
 								<a role="button" href="javascript:void(0);">매장 이야기<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 -->
 								<ul>
-									<!-- <li><a href="store/store_cheongdam">청담스타</a></li> 20210727 메뉴 비노출 -->
-									<li><a href="store/store_star_field">티바나 바 매장</a></li>
-									<!-- <li><a href="store/store_park">파미에파크</a></li> 20210727 메뉴 비노출 -->
+									<!-- <li><a href="strore/store_cheongdam">청담스타</a></li> 20210727 메뉴 비노출 -->
+									<li><a href="strore/store_star_field">티바나 바 매장</a></li>
+									<!-- <li><a href="strore/store_park">파미에파크</a></li> 20210727 메뉴 비노출 -->
 								</ul>
 							</li>
 						</ul>
@@ -588,7 +590,7 @@ var eFrequencyPlannerYn = 'Y';
 									<li><a href="msr/msreward/about">스타벅스 리워드 소개</a></li> <!-- 스타벅스 리워드 수정 -->
 									<li><a href="msr/msreward/level_benefit">등급 및 혜택</a></li>
 									<li><a href="msr/msreward/star">스타벅스 별</a></li>
-									<li><a href="comminity/faq?menu_cd=STB2703&cate=F17">자주 하는 질문</a></li> <!-- 20210809 수정 -->
+									<li><a href="community/faq?menu_cd=STB2703&cate=F17">자주 하는 질문</a></li> <!-- 20210809 수정 -->
 								</ul>
 							</li>
 							<li>
@@ -599,7 +601,7 @@ var eFrequencyPlannerYn = 'Y';
 									<li><a href="msr/scard/register_inquiry">등록 및 조회</a></li>
 									<li><a href="msr/scard/charge_information">충전 및 이용안내</a></li>
 									<li><a href="msr/scard/lost_report">분실신고/환불신청</a></li>
-									<li><a href="comminity/faq?menu_cd=STB2703&cate=F05">자주 하는 질문</a></li> <!-- 20210809 수정 -->
+									<li><a href="community/faq?menu_cd=STB2703&cate=F05">자주 하는 질문</a></li> <!-- 20210809 수정 -->
 								</ul>
 							</li>
 							<li>
@@ -608,7 +610,7 @@ var eFrequencyPlannerYn = 'Y';
 									<li><a href="msr/sceGift/egift_information">스타벅스 e-Gift Card 소개</a></li>
 									<li><a href="msr/sceGift/msr_useguide">이용안내</a></li>
 									<li><a href="msr/sceGift/gift_step1" required="login">선물하기</a></li>
-									<li><a href="comminity/faq?menu_cd=STB2703&cate=F22">자주 하는 질문</a></li> <!-- 20210809 수정 -->
+									<li><a href="community/faq?menu_cd=STB2703&cate=F22">자주 하는 질문</a></li> <!-- 20210809 수정 -->
 								</ul>
 							</li>
 						</ul>
@@ -668,8 +670,8 @@ var eFrequencyPlannerYn = 'Y';
 					
 								
 <ul>
-	<li class="util_nav01 sign_out" style="display:none;"><a href="/starbucks/login/logout">Sign out</a></li>
-	<li class="util_nav01 sign_in"><a href="/starbucks/login/login">Sign In</a></li>
+	<li class="util_nav01 sign_out" style="display:none;"><a href="javascript:void(0);">Sign out</a></li>
+	<li class="util_nav01 sign_in"><a href="javascript:void(0);">Sign In</a></li>
 	<li class="util_nav02"><a href="/starbucks/my/index">My Starbucks</a></li>
 	<li class="util_nav03"><a href="/starbucks/menu/orderList">Order</a></li>
 	<li class="util_nav04"><a href="/starbucks/store/store_map">Find a Store</a></li>
@@ -686,224 +688,314 @@ var eFrequencyPlannerYn = 'Y';
 	</div>
 </div>			
 
-			
-			
-			
-			
+
 			<div id="container">
 				<!-- 서브 타이틀 -->
-				<header class="ms_sub_tit_wrap">
-					<div class="ms_sub_tit_bg">
-						<div class="ms_sub_tit_inner">
-							<!-- 160609 텍스트 수정 -->
-							<h4><img alt="카드 등록" src="//image.istarbucks.co.kr/common/img/util/reg_card_ttl.png"></h4>
-							<!-- 160609 텍스트 수정 end -->
-							<ul class="smap">
-								<li><a href="/"><img src="//image.istarbucks.co.kr/common/img/common/icon_home_w.png" alt="홈으로"></a></li>
-								<li><img class="arrow" src="//image.istarbucks.co.kr/common/img/common/icon_arrow_w.png" alt="하위메뉴"></li>
-								<li><a href="my/index">My Starbucks</a></li>
-								<li><img class="arrow" src="//image.istarbucks.co.kr/common/img/common/icon_arrow_w.png" alt="하위메뉴"></li>
-								<li><a href="my/mycard_index">My 스타벅스 카드</a></li>
-								<li><img class="arrow" src="//image.istarbucks.co.kr/common/img/common/icon_arrow_w.png" alt="하위메뉴"></li>
-								<!-- 160609 텍스트 수정 -->
-								<li><a href="my/mycard_info_input">카드 등록</a></li>
-								<!-- 160609 텍스트 수정 end -->
-							</ul>
-						</div>
-					</div>
-				</header>
+				
+<header class="ms_sub_tit_wrap">
+	<div class="ms_sub_tit_bg">
+		<div class="ms_sub_tit_inner">
+			<h4><img alt="My 음료/매장" src="//image.istarbucks.co.kr/common/img/util/ec/tit01.png"></h4>
+			<ul class="smap">
+				<li><a href="/"><img src="//image.istarbucks.co.kr/common/img/common/icon_home_w.png" alt="홈으로"></a></li>
+				<li><img class="arrow" src="//image.istarbucks.co.kr/common/img/common/icon_arrow_w.png" alt="작은 맵 화살표"></li>
+				<li><a href="my/index">My Starbucks</a></li>
+				
+					<li><img class="arrow" src="//image.istarbucks.co.kr/common/img/common/icon_arrow_w.png" alt="작은 맵 화살표"></li>
+					<li><a href="my/ecoupon">My 쿠폰</a></li>
+				
+				
+			</ul>
+		</div>
+	</div>
+</header>
 				<!-- 서브 타이틀 end -->
 				
 				<!-- 내용 -->
-				<div class="ms_cont_wrap">
 				
-			        <div class="myPopInner">
-					<div class="myDimm"></div>
-						<div class="dtPopWrap new_dtMainPopCon" style="display:none; top:0;">
-							<!--type1 : 제목, 본문, 설명글 -->
+				<div class="ms_cont_wrap">
+					<div class="ms_cont">
+						<!-- My e-쿠폰 -->
+						<div class="ms_ecoupon">
+							<!-- My e-쿠폰 팝업  couponRegisterProc-->
+							<form action="couponRegisterProc" name="couponRegister" id="couponRegister" method="post">
 							<div class="ecPop">
 								<div class="head">
-									<p class="tt"><span class="en">My</span>무기명 카드 등록</p>
-									<p class="close"><a href="javascript:void(0)"><img src="//image.istarbucks.co.kr/common/img/util/cal/calpop_close2.png" alt="닫기"></a></p>
+									<p class="tt"><span class="en">My</span> 쿠폰 등록</p>
+									<p class="close" onclick="window.close();"><a><img src="//image.istarbucks.co.kr/common/img/util/cal/calpop_close2.png" alt="닫기"></a></p>
 								</div>
-								
+								<!-- 20170726 추가 -->                                
+                                <div class="myPopInner">
+                                    
+                                        <fieldset>
+                                            <legend class="hid">My 쿠폰 등록</legend>
+                                            
+                                            <p class="couponTabTit">영수증 쿠폰, MMS 쿠폰 또는 Star 쿠폰 중 등록하고자 하시는 쿠폰을 선택하세요.</p> <!-- 211008 수정 -->
+                                            <ul class="couponTabList">
+                                                <li class="cpTab1 cpTabOn"><a href="#">영수증 쿠폰</a></li>
+                                                <li class="cpTab2"><a href="#">MMS 쿠폰</a></li>
+                                                <li class="cpTab3" id="couponTypeStar"><a href="#">Star 쿠폰</a></li> <!-- 211008 추가 -->
+                                            </ul>
+                                            <div class="cpClear"></div>
+                                            <!-- 퀵 서치 -->
+                                            <!-- 1. 영수증쿠폰 -->
+                                            <div class="myCouponCb myCouponCb1 myCouponWrap" > <!-- 211008 클래스 추가 -->
+                                                <div class="coupon_input">
+                                                    <label for="coupon_num1">영수증 쿠폰번호 16자리를 입력해주세요.</label>
+                                                    <div class="input">
+                                                        <input type="text" name="rptcoupon_num1" id="rptcoupon_num1" maxlength="4" title="쿠폰 앞번호">
+                                                        <span class="line"></span>
+                                                        <input type="text" name="rptcoupon_num2" id="rptcoupon_num2" maxlength="4" title="쿠폰 두번째 번호">
+                                                        <span class="line"></span>
+                                                        <input type="text" name="rptcoupon_num3" id="rptcoupon_num3" maxlength="4" title="쿠폰 세번째 번호">
+                                                        <span class="line"></span>
+                                                        <input type="text" name="rptcoupon_num4" id="rptcoupon_num4" maxlength="4" title="쿠폰 마지막 번호" class="last">
+                                                    </div>
+                                                    <div class="cpClear"></div>
+                                                </div>
+                                                <!-- <div class="mobile_input mobile_input2">
+                                                    <p class="con">e-쿠폰 등록코드 8자리를 입력해주세요.</p>
+                                                    <div class="input">
+                                                        <input type="tel" name="regiCode" id="regiCode" maxlength="8" ref="num" value="" title="e-쿠폰 등록코드">
+                                                    </div>
+                                                </div> -->
+                                            </div>
+                                            <!--// 1. 영수증쿠폰 -->
+                                            
+                                            <!-- 2. mms쿠폰 -->
+                                            <div class="myCouponCb myCouponCb2 myCouponWrap" style="display: none"> <!-- 211008 클래스 추가 -->
+                                                <div class="coupon_input">
+                                                    <label for="coupon_num3">MMS 쿠폰번호 13자리를 입력해주세요.</label>
+                                                    <div class="input">
+                                                        <input type="text" name="coupon_num1" id="coupon_num1" maxlength="4" title="쿠폰 앞번호">
+                                                        <span class="line"></span>
+                                                        <input type="text" name="coupon_num2" id="coupon_num2" maxlength="4" title="쿠폰 중간 번호"><!-- maxlength 5->4로 변경 -->
+                                                        <span class="line"></span>
+                                                        <input type="text" name="coupon_num3" id="coupon_num3" maxlength="5" title="쿠폰 마지막 번호" class="last">
+                                                    </div>
+                                                    <div class="cpClear"></div>
+                                                </div>
+                                                <!-- <div class="mobile_input">
+                                                    <p class="con">수신자(선물 받은 사람)의 휴대폰 번호를 입력해주세요.</p>
+                                                    <div class="input">
+                                                        <div class="select_box select_box03">
+                                                            <label class="value" for="myplane_date01">선택</label>
+                                                            <select title="휴대폰 앞번호" id="myplane_date01">
+                                                                <option value="" selected="selected">선택</option>
+                                                                <option value="010">010</option>
+                                                                <option value="011">011</option>
+                                                                <option value="016">016</option>
+                                                                <option value="017">017</option>
+                                                                <option value="018">018</option>
+                                                                <option value="019">019</option>
+                                                            </select>
+                                                        </div>
+                                                        <span class="line"></span>
+                                                        <input type="tel" name="mobile_num2" id="mobile_num2" maxlength="4" ref="num" value="" title="휴대폰 중간번호">
+                                                        <span class="line"></span>
+                                                        <input type="tel" name="mobile_num3" id="mobile_num3" maxlength="4" ref="num" value="" title="휴대폰 마지막 번호" class="last">
+                                                    </div>
+                                                </div> -->
+                                            </div>
+                                            <!--// 2. mms쿠폰 -->
+                                            
+                                            <!-- s::211008 추가 -->
+	                                        <!-- 3. Star 쿠폰 -->
+	                                        <div class="myCouponCb myCouponCb3 myCouponWrap nonsr_user" style="display: none"> <!-- 211101 수정 -->
+	                                            <div class="starcoupon_input">
+	                                                <label for="starcoupon_num1">Star 쿠폰번호 13자리를 입력해주세요.</label>
+	                                                <div class="input">
+	                                                    <input type="text" name="starcoupon_num1" id="starcoupon_num1" maxlength="4" title="쿠폰 앞번호">
+	                                                    <span class="line"></span>
+	                                                    <input type="text" name="starcoupon_num2" id="starcoupon_num2" maxlength="4" title="쿠폰 중간 번호"><!-- maxlength 5->4로 수정 -->
+	                                                    <span class="line"></span>
+	                                                    <input type="text" name="starcoupon_num3" id="starcoupon_num3" maxlength="5" title="쿠폰 마지막 번호" class="last">
+	                                                </div>
+	                                                <div class="cpClear"></div>
+	                                            </div>
+	                                            <!-- <div class="pin_input">
+	                                                <p class="con">PIN 번호 8자리를 입력해주세요.</p>
+	                                                <div class="input">
+	                                                    <input type="tel" name="pinCode" id="pinCode" maxlength="8" ref="num" value="" title="PIN 번호">
+	                                                </div>
+	                                            </div> -->
+	                                        </div>
+	                                        <!--// 3. Star 쿠폰 -->
+	                                        <!-- //e::211008 -->
+                                        </fieldset>
+                                    
+                                </div>
+                                <!--// 20170726 추가 -->
                                 
                                 <div class="info_wrap cpBg">
                                     <!-- 1. 영수증쿠폰 -->
-                                    <ul class="myCouponCb1">
-                                    
-									<div id="message" class="dtPopCon new_dtPopCon" style="display:"> </div>
-									
+                                    <ul class="myCouponCb myCouponCb1"> <!-- 211008 클래스 추가 -->
+                                        <li>e-쿠폰으로 등록한 영수증 쿠폰은 등록해지가 불가능하며, 등록이후 기존의 실물 쿠폰은 더 이상 사용하실 수 없습니다.</li>
+                                        <li>등록된 e-쿠폰은 해당 계정에 등록된 스타벅스 카드 또는 쿠폰의 QR코드를 제시하여 사용하실 수 있습니다.</li>
+                                        <li>e-쿠폰 및 실물 쿠폰은 상업적으로 이용할 수 없으며, 스타벅스에서 제공하는e-쿠폰 선물하기 기능 외 방법으로 전달된 쿠폰 사용으로 인해 발생된 문제에 대해서는 스타벅스가 책임지지 않습니다.</li>
+                                        <li>쿠폰이 발행된 원 거래가 취소되는 경우, 등록된 e-쿠폰도 즉시 회수됩니다.</li>
                                     </ul>
-                                    <p class="btns"><a href="javascript:fn_historyConcubineData()" class="a1">확인</a> <a href="javascript:void(0)" class="a2">취소</a></p>
                                     
-									<!--버튼2개-->
-									<!--<div class="dtPopBtn2" ></div>-->
+                                    <!-- 2. mms쿠폰 -->
+                                    <ul class="myCouponCb myCouponCb2" style="display: none"> <!-- 211008 클래스 추가 -->
+                                        <li>e-쿠폰 등록 후에는 선물 받은 쿠폰의 문자 메시지가 삭제되었더라도 해당 계정에 등록된 스타벅스 카드 또는 쿠폰 QR코드를 제시하시면 사용하실 수 있습니다.</li>
+                                        <li>e-쿠폰 및 실물 쿠폰은 상업적으로 이용할 수 없으며, 스타벅스에서 제공하는 e-쿠폰 선물하기 기능 외 방법으로 전달된 쿠폰 사용으로 인해 발생된 문제에 대해서는 스타벅스가 책임지지 않습니다.</li>
+                                        <li>쿠폰이 발행된 원 거래가 취소되는 경우, 등록된 e-쿠폰도 즉시 회수됩니다.</li>
+                                    </ul>
+
+                                    <!-- s::211008 추가 -->
+	                                <!-- 3. Star 쿠폰 -->
+	                                <ul class="myCouponCb myCouponCb3" style="display: none">
+	                                	<li class="green"><strong>Star 쿠폰은 스타벅스 리워드 회원에 한해서만 등록 및 사용이 가능한 쿠폰입니다.</strong></li> <!-- 211101 추가 -->
+	                                    <li>하나의 Star 쿠폰에는 여러 개의 별이 들어 있으며, Star 쿠폰을 My 쿠폰으로 등록하는 즉시 별로 전환됩니다. 전환된 별은 별 History에서 확인 가능합니다.</li>
+	                                    <li>전환된 별은 별 정책에 따라 승급/별 12개 쿠폰 발행에 사용됩니다.</li>
+	                                    <li>Star 쿠폰은 쿠폰 그 자체로 사용할 수 없으며, My 쿠폰 등록을 통해 별로 전환하여 사용 가능합니다.</li>
+	                                    <li>Star 쿠폰 유효기간 내에만 쿠폰 등록이 가능합니다.</li>
+	                                    <li>Star 쿠폰으로 전환되는 별의 유효기간은 별 전환 시점으로부터 1년입니다.</li>
+	                                    <li>등록 완료되어 별로 전환된 Star 쿠폰은 등록 취소 및 재사용 불가합니다.</li>
+	                                    <li>Star 쿠폰은 상업적으로 이용할 수 없습니다.</li>
+	                                </ul>
+	                                <!-- //e::211008 -->
+	                                <button id="formSubmit" style="background: #e2c383; border: 1px solid #bb9f65; color: #222; font-size: 12px; font-weight: bold;float: left; width: 81px; height: 28px; line-height: 28px; border-radius: 3px; text-align: center;">등록하기</button>
+									<input type="reset" value="취소" style="float: left;width: 81px; height: 28px; line-height: 28px; border-radius: 3px; text-align: center; background: #222; border: 1px solid #222; color: #fff;font-size: 12px; font-weight: bold; margin-left: 5px;">
+                                    <!-- <p class="btns"><a href="javascript:void(0)" class="a1">쿠폰 등록</a> <a href="javascript:void(0)" class="a2">취소</a></p> -->
                                 </div>
+                                
 							</div>
-						</div>
-					</div>
-					
-					
-					<script type="text/javascript">
-						
-						function check(){
-							var cardNum1 = document.getElementById('cardReg_f').CR2.value;
-							var cardNum2 = document.getElementById('cardReg_f').CR2_2.value;
-							var cardNum3 = document.getElementById('cardReg_f').CR2_3.value;
-							var cardNum4 = document.getElementById('cardReg_f').CR2_4.value;
-							
-							if(!cardNum1 || !cardNum2 || !cardNum3 || !cardNum4 ){
-								alert('카드번호를 제대로 입력해주세요');
-							}
-							
-							var pin = document.getElementById('cardReg_f').CR3.value;
-							
-							if(!pin){
-								alert('핀번호는 필수 입력값입니다.');
-							}
-						}
-						
-						
-					</script>
-					
-					<div class="ms_cont">
-						<!-- 카드 정보 입력  150628 디자인 변경 수정 -->
-						<form action="cardRegisterProc" method="post" id='cardReg_f'>
-							<fieldset>
-								<legend>카드 정보 입력폼</legend>
-								<section class="my_card_info_wrap">
-									<header>
-										<h6>스타벅스 카드 정보 입력</h6>
-										<a class="btnScardInfo">카드 등록 안내 팝업</a><!-- 20191112 추가 -->
-										<span>표시 항목은 필수 입력 사항입니다.</span>
-									</header>
-									<!-- 150624 입력폼 구조 변경 - 문진욱 -->
-									<section class="card_regi_tbl">
-										<dl class="card_regi_dl">
-											<dt><label for="CR1">카드명</label></dt>
-											<dd>
-												<input class="card_regi_input1" name="c_name" id="CR1" maxlength="20" placeholder="카드명 최대 20자 (선택)" type="text">
-												<!-- 150707 DOM 수정 - 텍스트 추가 -->
-												&nbsp;&nbsp;&nbsp;<span style="font-size:11px; color:#666;">* 카드명은 미입력 시 자동으로 부여됩니다.</span>
-												<!-- 150707 DOM 수정 - 텍스트 추가 end -->
-											</dd>
-										</dl>
-										<dl class="card_regi_dl">
-											<dt><label for="CR2">카드번호 (16자리)</label><img alt="" src="//image.istarbucks.co.kr/common/img/common/bullet_star_red.gif"></dt>
-											<dd>
-												<input class="card_regi_input2" name="c_num1" id="CR2" title="카드 첫째 자리" type="tel" maxlength="4" autocomplete="off" ref="num" />
-												<span class="hyphen_bg17"></span>
-												<input class="card_regi_input2" id="CR2_2_1" title="카드 둘째 자리" type="tel" maxlength="4" autocomplete="off" ref="num" onfocus = "this.value" onblur ="cardMasking(this.value)" />
-												<input class="card_regi_input2" name="c_num2" id="CR2_2" title="카드 둘째 자리" type="hidden" maxlength="4" autocomplete="off" ref="num" value =""/>
-												<span class="hyphen_bg17"></span>
-												<input class="card_regi_input2" id="CR2_3_1" title="카드 셋째 자리" type="tel" maxlength="4" autocomplete="off" ref="num" onfocus = "this.value" onblur ="cardMasking2(this.value)" />
-												<input class="card_regi_input2" name="c_num3" id="CR2_3" title="카드 셋째 자리" type="hidden" maxlength="4" autocomplete="off" ref="num" value =""/>
-												<span class="hyphen_bg17"></span>
-												<input class="card_regi_input2" name="c_num4" id="CR2_4" title="카드 넷째 자리" type="tel" maxlength="4" autocomplete="off" ref="num" />
-											</dd>
-										</dl>
-										<dl class="card_regi_dl">
-											<dt><label for="CR3"><p>PIN 번호</p></label><img alt="" src="//image.istarbucks.co.kr/common/img/common/bullet_star_red.gif"></dt>
-											<dd><input type="tel" name="c_pin" id="CR3" class="card_regi_input1" placeholder="PIN 번호 6자리 입력 (필수)" maxlength="6" autocomplete="off" ref="num" />
-											<div class="ez-checkbox cahrge_page_ck">
-												<div class="ez-checkbox">
-													<div class="ez-checkbox ez-checked">
-														<input type="checkbox" name="c_master" id="notice_ck02" t="COMMON" title="선택" value="1" class="ez-hide">
-													</div>
-												</div> 
-												<span class="charge_change">등록 후 대표카드 설정</span>
-												</div>
-											</dd>
-										</dl>
-										<dl class="card_regi_dl" id="recommendStoreView" style="display:none;">
-											<dt><label for="recommendStoreCode"><p>추천매장</p></label><i class="icon_mark_point icon_mark_point_btn1"></i></dt>
-											<dd><input type="tel" name="recommendStoreCode" id="recommendStoreCode" class="card_regi_input1" placeholder="매장 코드 4자리" maxlength="4" ref="num" data-eventCode="" /></dd>
-										</dl>
-										
-										<!-- 20170731 추가 : popup -->
-										<div class="info_btn_inner info_btn_inner_con1" style="display: none;">
-											<div class="info_btn_box">	
-												<p class="btn_close"><a href="javascript:void(0);"><img alt="닫기" src="https://image.istarbucks.co.kr/common/img/util/ec/btn_close2.png"></a></p>
-												<dl>
-													<dt>추천매장 코드 확인 방법</dt>
-													<dd>스타벅스 카드 충전 시 받은 영수증 상단 ‘매장#’ 우측에 표시된 숫자 4자리를 입력하세요.</dd>
-													<dd class="imgBox"><img src="//image.istarbucks.co.kr/common/img/util/mem/img_shopguide.png" alt="" /></dd>
-												</dl>
-												<p class="btn_close02"><a href="javascript:void(0);">닫기</a></p>															
-											</div>
+							</form>
+							<div class="ecPop2">
+								<div class="head">
+									<p class="tt">My 쿠폰 사용하기</p>
+									<p class="close"><a href="javascript:void(0)">닫기</a></p>
+								</div>
+								<div class="myPopInner">
+									<div class="myPopScroll designScroll">
+										<div class="ec_use">
+											<p class="tt couponName"><!-- [BOGO] 라스베리 트러플 모카 --></p>
+											<p class="qr"><img alt="" /></p>
+											<p class="qr_txt">이 QR코드는 <span id="timer">00:00:00</span>까지 유효합니다.</p><!-- 20180906 추가 -->
+											<p class="coffee"><img src="//image.istarbucks.co.kr/common/img/util/ec/icon_cup.jpg" alt="" /></p>
+											<ul>
+												<li>
+													<dl>
+														<dt>유효기간</dt>
+														<dd class="validDt"><!-- 2015-03-10 ~ 2015-04-22 --></dd>
+													</dl>
+												</li>
+												<li>
+													<dl>
+														<dt>쿠폰내역</dt>
+														<dd class="couponHistList"><!-- 2015-03-10&nbsp;&nbsp;발급<br>2015-03-23&nbsp;&nbsp;선물<br>2015-03-23&nbsp;&nbsp;회수 --></dd>
+													</dl>
+												</li>
+												<li>
+													<dl>
+														<dt>상세정보</dt>
+														<dd class="couponDetail">
+															<!--
+															- 스타벅스 매장 내에서 파트너가 제조한 음료 구매시 동일한 음료 한잔 더 증정<br>-  병음료 , 생수, 요거트, POC 브루드커피, 바
+															-->
+														</dd>
+													</dl>
+												</li>
+											</ul>
+											<input type="hidden" id="couponNumber" />
 										</div>
-										<!--// 20170731 추가 : popup -->
-										
-									</section>
-									<!-- 150809 -->
-									<section class="scard_term scardArea" style="display:none;"><!-- 20191105 class="scardArea" 추가 -->
-										<!-- 20191105 추가(기존 타이틀 p태그 영역 삭제) -->
-										<div class="areeTitle">
-											<h6>스타벅스 카드 이용약관 동의 <span class="t_006633">(필수)</span></h6>
-											<span class="agreeCheck">
-												<input type="checkbox" name="agree" id="scard_agree_yes" class="scardAgree" />
-												<label for="scard_agree_yes">동의</label>
-											</span>
-										</div>
-										<!-- //20191105 추가 -->
-										
-										<div class="scard_term_area">
-											<div class="scard_term_cont">
-												<!-- 202101 스타벅스 카드 이용약관 동의 수정 -->
-							                    <div class="privacy_cont">
-									            	<p class="card_text" id="card_text"></p>
-												</div>
-											</div>
-										</div>
-									</section>
-									<!-- 150809 end -->
-									
-									<!-- 150809 -->
-									<section class="scard_term purposeArea" style="display:none;"><!-- 20191105 class="purposeArea" 추가 -->
-										<!-- 20191105 추가(기존 타이틀 p태그 영역 삭제) -->
-										<div class="areeTitle">
-											<h6>개인정보 수집∙이용 동의<span class="t_006633">(필수)</span></h6> <!-- 20201127 수정 -->
-											<span class="agreeCheck">
-												<input type="checkbox" name="agree" id="pur_agree_yes" class="scardAgree" />
-												<label for="pur_agree_yes">동의</label>
-											</span>
-										</div>
-										<!-- //20191105 추가 -->
-										<div class="scard_term_area">
-											<div class="scard_term_cont">
-												<!-- 202101 개인정보 수집 · 이용 · 취급위탁 동의 약관 수정 -->
-												<div class="privacy_cont">
-								            		<p class="private_text" id="private_text"></p>
-												</div>
-											</div>
-										</div>
-									</section>
-									<!-- 150809 end -->
-									
-									<!-- 20191106 이용약관 s -->
-									
-									
-									<!-- //20181126 추가 -->
-									
-									<!-- 20191106 이용약관 e -->
-									
-									<div class="my_card_info_inner">
-										
-										<ul class="card_regi_btns">
-											<li><button class="btn123" onclick="check()" style="border-radius:3px; color:#fff;display:block; font-size:12px;font-weight:bold;height:28px;line-height:28px; text-align:center; width:84px; background:#e2c383; border:1px solid #bb9f65 ;">등록하기</button></li>
-											<li><input type="reset" style="margin-left:5px; border-radius:3px; color:#fff; display:block; background: #222; font-size:12px;font-weight:bold;height:28px;line-height:28px; text-align:center; width:84px; border-style: none;" class="btn123" value="취소" /></li>
-										</ul>
 									</div>
-									
-									<!-- 150624 입력폼 구조 변경 - 문진욱 end -->
-								</section>
-							</fieldset>
-						</form>
-						<!-- 카드 정보 입력 end -->
+								</div>
+								<div class="info_wrap">
+									<p class="con" id="useGuide">* 계산대에서 파트너에게 QR코드를 제시하면 해당 쿠폰을 사용하실 수 있습니다.</p>
+									<p class="btns">
+										<a href="javascript:void(0)" class="a3 btn_gift_coupon" style="display:none;">쿠폰 선물하기</a>
+									</p>
+								</div>
+							</div>
+							<div class="ecPop3">
+								<div class="head">
+									<p class="tt">상세보기</p>
+									<p class="close"><a href="javascript:void(0)">닫기</a></p>
+								</div>
+								<div class="myPopInner">
+									<div class="myPopScroll designScroll">
+										<div class="myCoupon">
+											<p class="tit"><img id="myCouponImg" src="//image.istarbucks.co.kr/common/img/util/ec/icon_ecoupon03.png" alt="">&nbsp;&nbsp;<span class="couponName"></span></p>
+											<ul>
+												<li>
+													<dl>
+														<dt>유효기간</dt>
+														<dd class="validDt"></dd>
+													</dl>
+												</li>
+												<li>
+													<dl>
+														<dt>쿠폰내역</dt>
+														<dd class="CouponHistory"></dd>
+													</dl>
+												</li>
+												<li>
+													<dl>
+														<dt>쿠폰 받는 분</dt>
+														<dd class="phone"></dd>
+													</dl>
+												</li>
+												<li class="message">
+													<dl>
+														<dt>메시지 내용</dt>
+														<dd class="giftMmsContents"></dd>
+													</dl>
+												</li>
+												<li class="last">
+													<dl class="warning">
+														<dt>유의사항</dt>
+														<dd>
+															<ul class="useNotice"></ul>
+														</dd>
+													</dl>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="info_wrap">
+									<p class="btns">
+										<a href="javascript:void(0)" class="a4 btn_gift_recall" style="display:none;">선물회수</a>
+										<a href="javascript:void(0)" class="a5 btn_gift_message_resend" style="display:none;">재발송</a>
+									</p>
+								</div>
+							</div>
+							<!-- My e-쿠폰 팝업 end -->
+							<div class="popup" style="margin:auto;text-align: center;">
+	<form action="javascript:void(0)">
+	<h1 style="font-size: 30px; font-weight:bold; text-align: left; padding-bottom: 50px;">보유 쿠폰 내역</h1>
+		<table class="coupon" style="border:solid; border-color: #dfdfdf; font-size: 14px; margin:auto;">
+				<thead>
+					<tr>
+						<th style="padding:25px; width: 140px;">보유한 쿠폰명</th>
+						<th style="padding:25px; width: 230px;">사용기한</th>
+						<th style="padding:25px; width: 120px;">할인금액</th>
+					</tr>
+				</thead>
+				<tbody>
+					<c:set var="i" value="0"/>
+					<c:forEach var="eCouponDTO" items="${list }">
+					<tr>
+						<td style="padding:15px; width: 230px;"><p>${eCouponDTO.pon_name }</p>
+						<input type="hidden" id="pon_name" value="${eCouponDTO.pon_name }"/></td>
+						<td style="padding:15px; width: 140px;"><p>${startList[i]} ~ ${endList[i]}</p>
+						<input type="hidden" id="pon_date" value="${startList[i]} ~ ${endList[i]}"/></td>
+						<td style="padding:15px; width: 120px;"><p>${eCouponDTO.pon_cash }</p>
+						<input type="hidden" id="pon_cash" value="${eCouponDTO.pon_cash }"/></td>
+					</tr>
+					<c:set var="i" value="${i+1 }"/>
+					</c:forEach>
+				</tbody>
+			</table>
+	</form>
+</div>
+						</div>
+						<!-- My e-쿠폰 end -->
 					</div>
 					
-					<!-- 네비 -->
 					
 
 
@@ -973,13 +1065,10 @@ var eFrequencyPlannerYn = 'Y';
 		</li>
 	</ul>
 </nav>
-					<!-- //네비 -->
 				</div>
 				<!-- 내용 end -->
 			</div>
 
-			<input type="hidden" name="asr_yn" value="N" id="agreement2" />
-			<!-- footer -->
 			
 
 
@@ -1330,7 +1419,7 @@ var eFrequencyPlannerYn = 'Y';
                 	/* 로그인 체크  */
                 	$.ajax({
                     	type: 'post',
-                    	url : '/edt/edtCheckLogin',
+                    	url : 'edt/edtCheckLogin',
                     	data : {},
                     	dataType : 'json',
                     	jsonp : 'callback',
@@ -1348,7 +1437,7 @@ var eFrequencyPlannerYn = 'Y';
                     			if (m_jsonRewardSummary == null) {
                     				 $.ajax({
                                      	type: 'post',
-                                     	url : '/interface/getMsrRewardSummary',
+                                     	url : 'interface/getMsrRewardSummary',
                                      	data : {},
                                      	dataType : 'json',
                                      	jsonp : 'callback',
@@ -1441,492 +1530,87 @@ var eFrequencyPlannerYn = 'Y';
 				});
 			</script>
 		
-			<!-- footer end -->
-		</div>
-
-		<!-- MY DT PASS 팝업 -->
-		<div class="dtPop" id="commonPop" style="display:none;">
-			<div class="head">
-				<p class="tt"></p>
-				<p id="dtPopCommonCloseBtn" class="close dtPopClose"><a href="javascript:void(0)"></a></p> <!-- 팝업 닫힘 클래스 : dtPopClose -->
-			</div>  
-			<div id="dtPopContents" class="dtPopInner"></div>
-			<!-- 버튼 -->
-			<div id="commonPopBtn" class="dtPopBtn"></div>
-			<!-- // 버튼 -->
-		</div>
-		<!-- MY DT PASS 팝업 END-->
-		
-		<!-- s::20191106 소유주 인증 팝업 추가 -->
-		<div class="dtPop ownerPop" id="ownerPop" style="display:none;">
-			<div class="head">
-				<p class="tt">차량 소유주 인증</p>
-				<p id="withdrawalPopCloseBtn" class="close dtPopClose"><a href="javascript:void(0)"></a></p>
-			</div>
-	
-			<div class="dtPopInner">
-				<div class="dpAreaaWrap">
-					<div class="dtAgreeTitle">
-						<p>자동차 등록번호 소유자 확인 서비스 수집 이용 동의<span class="t_006633">(필수)</span></p>
-						<span class="agree-check">
-							<input type="checkbox" name="ownerAgree" id="dt_owner_yes" class="dtpass" >
-							<label for="dt_owner_yes">동의</label>
-						</span>
-					</div>
-				</div>
-				
-				<div class="ownerAgreeBox">
-				
-				</div>
-				<div class="ownerNameArea">
-					<input class="owner_regi_input" name="ownerName" placeholder="차량 소유주 이름을 입력해 주세요" type="text" value="" maxlength="30" disabled />
-					<p>* 차량 소유주 인증을 위해 개인정보 수집 이용 동의에 동의해 주세요.</p>
-				</div>
-			</div>
-	
-			<div class="dtPopBtn">
-				<a href="javascript:void(0)" class="dtPopBtn1 disableBtn">인증</a><!-- 20190614 비활성화 class="disableBtn" 추가 -->
-				<a href="javascript:void(0)" class="dtPopBtn2 dtPopClose">취소</a> 
-			</div>
-		</div>
-		<!-- e::20191106 소유주 인증 팝업 추가 -->
-		
-		<!-- s::20191112 카드 등록 안내 -->
-		<div class="dtPop scardInfoPop"><!-- 20191112 class="scardInfoPop" 추가  -->
-			<div class="head">
-				<p class="tt">카드 등록 안내</p>
-				<p class="close dtPopClose"><a href="javascript:void(0)"></a></p>
-			</div>
-			<div class="card_pop_regi_guide">
-				<img class="pc_pop_gurde" alt="카드 등록" src="https://www.starbucks.co.kr/common/img/util/pop_card_regi_img_guide.jpg" />
-			</div>
-			<p>· 스타벅스 카드 등록 시, 실물 카드와 카드 바코드 모두 사용 가능합니다.</p>
-			<div class="dtPopBtn">
-				<a id="dtPopCommonBtn" class="dtPopBtn2 commonBtn" style="">닫기</a>
-			</div>
-		</div>
-		<!-- e::20191112 카드 등록 안내 -->
-		
-		<!-- s::211008 추가 -->
-		<!-- Star Code 입력 팝업 -->
-		<div class="scPop" id="starCodePopup">
-			<div class="sc_head">
-				<p class="tt"><span class="en">Star Code</span></p>
-				<p class="close"><a href="javascript:starCodePopupClose();"><img src="//image.istarbucks.co.kr/common/img/util/cal/calpop_close2.png" alt="닫기"></a></p>
-			</div>
-			<div class="sc_contents">
-				<form name="" id="" method="post">
-					<fieldset>
-						<legend class="hid">Star Code 등록</legend>
-	
-						<p class="sc_desc">스타벅스 카드를 구입해주셔서 감사합니다.</p>
-						<p class="sc_desc mt10">고객님은 현재 진행중인 Star Code 이벤트 대상자입니다.<br>스타벅스 카드와 함께 제공된 Star Code를 아래에 입력해주시면 이벤트 별★을 증정해 드립니다.</p>
-						<div class="sc_input">
-							<p class="con">Star Code 10자리를 입력해주세요. (선택)</p>
-								<div class="input">
-									<input type="text" id="starCode" maxlength="10" value="" title="Star Code">
-								</div>
-						</div>
-					</fieldset>
-				</form>
-			</div>
-			<div class="sc_info">
-				<div class="sc_info_cont">
-					<div id="starCodeInfoArea">
-					</div>
-				</div>
-				<!-- s::211015 수정 -->
-				<div class="sc_btns">
-					<a href="javascript:void(0)" class="btn_register" id="starCodeReg">등록</a>
-					<a href="javascript:void(0)" class="btn_skip" id="starCodeSkip">SKIP</a>
-				</div>
-				<!-- e::211015 -->
-			</div>
-		</div>
-		<!-- //e::211008 -->
-		
-		<script src="../common/js/common_jhp.js"></script>
-		<script src="../common/js/my/mycard_info_input.js?v=220415"></script>
-		<script>
-		var carClauseFlag	= "N" == "Y" ? true : false; //약관동의 상태 
-		
-			$(document).ready(function(){
-				// 카드 이용약관, 개인정보 이용동의 불러오기
-				setClause("card_text", "CARD", "Y");
-				setClause("private_text", "STB4010", "Y");
-				
-				$('.ez-checkbox input[type=checkbox]').ezMark(); //20191107 수정
-				$('.scardToggleWrap .privacy_cont').mCustomScrollbar(); //이용동의 내용 스크롤
-				
-				$("#cancleBtn").click(function(){
-					if ( document.referrer == "" ) { 
-						location.href = "my/index";
+			
+			<script src="../common/js/common_jhp.js"></script>
+			<script src="../common/js/my/ecoupon.js"></script>
+			<!-- <script src="https://www.starbucks.co.kr/common/js/my/ecoupon.js?v=211115"></script> -->
+			
+			
+			
+			<script type="text/javascript">
+				<!-- 20170726추가 -->
+				$(document).ready(function () {
+					if(m_jsonRewardSummary != null && m_jsonRewardSummary.msrMemberYn == "Y") {
+						$('input[name=starcoupon_num]').prop("disabled", false);
+						$('#pinCode').prop("disabled", false);
+						$('#starCouponRegInfo').removeClass('nonsr_user');
 					}
-					else { 
-						history.back();
-					}
-				});
-				
-				$('#pickDate1, #pickDate2').datepicker();
 
-				/* 150604 - 문진욱 */
-				$('i.icon_i a').click(function(){
-					$('.device_card_regi_guide').slideToggle();
-				});
-				/* 150604 - 문진욱 end */
+					//s::211008 수정
+					$('.couponTabList li').on('click', function(){
 
-				var sbox = $('.my_ms_select select');
-				sbox.change(function(){
-					var sbox_name = $(this).children('option:selected').text();
-					$(this).siblings('label').text(sbox_name);
-				});
-				
-				/* 150809 */
-				$('.scard_term_cont').mCustomScrollbar();
-				
-				/*20180604 수정*/
-				$('.icon_mark_point_btn1').on('click', function(){
-					$('.info_btn_inner_con1').fadeIn();
-				});
-				$('.btn_close, .btn_close02').on('click', function(){
-					$('.info_btn_inner_con1').fadeOut();
-				});
-				/*20180604 수정*/
+						var idx = $(this).index(),
+						$couponContent = $('.myCouponCb');
 
-				/* 카드 등록 시 MDP 다시보지않기 :s */
-				if(Cookies.getCookie($('#closeMdpUser').val()+"notMdpPop") == 'Y') { 
-					$(".scardDtWrap").hide();
-				}
-				
-				$('#notMdpPopCheck').on('click', function(){
-					var message = "차량번호 등록을 원하시는 경우 \n"
-							+ "My Starbucks > My DT Pass 메뉴에서 등록 가능합니다.";
-					alert(message);
-					Cookies.setCookie($('#closeMdpUser').val()+"notMdpPop", 'Y', 365);
-					$(".scardDtWrap").hide();
-					
-				});
-				/* 카드 등록 시 MDP 다시보지않기 :e */
-				
-				//카드 등록 안내 팝업
-				$('.btnScardInfo').on('click', function(){
-					var dtPopHt = $(".dtPop.scardInfoPop").height();
-					var dtPopTop = dtPopHt * -0.5
-					
-					$('.dtPop.scardInfoPop').show();
-					$('.dt_pop_up_dimm').show();
-					$(".dtPop.scardInfoPop").css("margin-top", dtPopTop);//팝업창 화면 중앙 노출
-				});
-				
-				//차카드등록 안내 팝업 닫기
-				$('.dtPop.scardInfoPop .dtPopClose, .dtPop.scardInfoPop .dtPopBtn2').click(function(){
-					$('.dtPop.scardInfoPop').hide();
-					$(".dt_pop_up_dimm").hide();
-				});
-				
-				//차량번호 클릭시 토글
-				$('.btnScardToggle').click(function(){
-					if($('.scardToggleWrap').is(":visible"))
-					{
-						$('.scardToggleWrap').slideUp();
-						$(this).addClass('on');
-					}else{
-						$('.scardToggleWrap').slideDown();
-						$('.btnScardToggle').removeClass('on');
-					}
-				});
-				
-					
-			}).on("change", "#dt_agree_yes", function() {
-				var agreeFlag 	= $(this).prop("checked");
-				var $inputTag 	= $(".card_regi_input3");
-				
-				$mdpCarInfo	= $(".mdpCarInfo");
-				
-				
-				if (carClauseFlag && !agreeFlag) {
-					$(this).prop("checked", !agreeFlag);
-							
-				
-				} else if (agreeFlag && !carClauseFlag && $inputTag.length == 1 && $inputTag.val() == "") {
-					$(".card_regi_input3").attr("placeholder", "차량번호 (12가1234) 입력(선택)");
-					$(".card_regi_input3").prop("disabled", false).attr("disabled", false);
-					$(".card_regi_input3").focus();
-					
-				
-				} else if (!agreeFlag && !carClauseFlag) {
-					$(".card_regi_input3").val("");
-					$(".card_regi_input3").attr("placeholder", "약관에 동의해 주세요.");
-					$(".card_regi_input3").prop("disabled", true).attr("disabled", true);
-					
-				}
-				
-				
-			}).on("focus", ".card_regi_input2", function() {
-				$(this).val("");
-				$(this).attr("data-edityn", "N");
-				$(this).removeAttr("data-owner-name");
-				$(this).next().addClass("disable");
-			
-			
-			}).on("keyup", ".card_regi_input2", function() {
-				var carNo = $(this).val();
-				
-				if(carNo.length < 7) {
-					$(this).next().addClass("disable");
-				} else {
-					$(this).next().removeClass("disable");
-				}
-				
-			
-			});
-
-			
-			function setClause(elementById, clauseType, clauseYn) {
-				var objParam = {
-					"reqClientType" : "WEB",
-					"clause_type" : clauseType,
-					"clause_yn" : clauseYn
-				};
-				__ajaxCall("interface/reqWebClauseData", objParam, true, "json",
-						"post", function(_response) {
-							if (_response.resultCode == "0000") {
-								var str = _response.data.contents;
-								$("#" + elementById)(_response.data.contents);
-							} else {
-								alert(_response.resultMessage);
-							}
-						}, function(_error) {
+						$("form").each(function() { // form reset
+							if(this.id == "efrm1") this.reset();
 						});
-			}
-			
-		
-		function fn_showMessage(msgType, title, message, gubun, idx){
-			var btnStr = "";
-			
-			$("#commonPop > .head > .tt")(title);
-			$("#dtPopContents")(message);
-			
-			if(msgType == "confrm"){
-				if(gubun == "auth"){
-					btnStr 	= "<a href='javascript:fn_ownerAuthPop(\"" + idx + "\");' class='dtPopBtn1 dtPopClose expreeDt'>인증</a>"
-							+ " <a href='javascript:void(0);' class='dtPopBtn2 dtPopClose expreeDt'>취소</a>";
-				}
-			}
-			
-			$("#commonPopBtn")(btnStr);
-			$("#commonPop").show();
-			$(".dt_pop_up_dimm").show();
-			
-			$(".dtPopClose").click(function(){
-				$("#commonPop").hide();
-				$(".dt_pop_up_dimm").hide();
-			});
-		}
-			
-		function fn_carNoOverLab(obj){
-			if(!$(obj).hasClass("disable")){
-				var carNo = $(obj).prev().val();
-				var pattern = /[~`'"?{}\[\]\\|!@#$%<>^&*\()=+_\’;:,.\s|a-z|A-Z]/g;
+
+						$(this).addClass('cpTabOn').siblings().removeClass('cpTabOn');
+
+						$couponContent.hide();
+						$('.myCouponCb'+(idx+1)).show();
+
+					});
+					//e::211008
+				});
+				<!--// 20170726추가 -->
+
+				$(".select_box select").on("change",function(){
+					$(this).prev()($(this).find("option:selected").text());
+					}).prev().html(function() {
+					return $(this).next().find("option:selected").text();
+				});
+	
+
+	/*
+				$("a.detailView").bind("click", function(){
+	
+					var ww = $(window).scrollTop();
+					$("div.ecPop3").css('top', ww + "px");
+					$("div.myDimm").show();
+					$("div.ecPop3").fadeIn();
+					return false;
+				});
+	*/
+
+	
+				$(".designScroll").mCustomScrollbar(); // 팝업 스크롤
+				/* 성연욱 추가 end */
 				
-				if(pattern.test(carNo)){
-					var msg = "사용할 수 없는 차량 번호입니다.";
-					alert(msg);
-					$(obj).prev().val("");
-					$(obj).addClass("disable");
-					
-				} else {
-					fn_carNoOverlapCheck(obj, carNo);
-				}
-			}
-		}
-		
-		
-		function fn_carNoOverlapCheck(obj, carNo){
-			var param = {"carNo" : carNo};
-			__ajaxCall("edt/isExistCarNoWeb", param, true, "json", "post"
-				, function (data) {
-					var resultCode 		= data.result_code;
-					var resultMessage 	= data.result_message;
-					var title 			= "";
-					var message 		= "";
-					
-					if(resultCode == "000") { //MDP와 동일한 팝업
-						message = carNo + "은(는) 등록 가능합니다. \n"
-								+ "차량번호를 잘못 입력할 경우, \n"
-								+ "다른 고객의 차량으로 결제가 될 수 있습니다. \n"
-								+ "차량번호를 올바르게 입력했는지 확인 후 이용하세요.";
-						alert(message);
-						$(obj).prev().attr("data-edityn", "Y");
-						$(obj).addClass("disable");
-					
-					
-					} else if(resultCode == "9999") {
-						message = "입력시간이 초과되어 설정화면으로 돌아갑니다.\n 다시 선택하여 입력해주세요.";					
-						alert(message);
-						document.location.href='/login/login?redirect_url=' + encodeURIComponent("my/mycard_info_input");
-					
-					
-					} else if(resultCode == '851'){
-						alert(resultMessage);
-						$(obj).prev().val("");
-						
-					
-					} else if(resultCode == '852'){
-						var idx	= $("a.dtDDBtn").index(obj);
-						title	= "차량번호 중복 오류";
-						message = "<p>입력한 차량번호는 이미 등록되어 있습니다.<br />"
-								+ "차량 소유주 인증을 하면 등록이 가능합니다.<br />"
-								+ "차량 소유주 인증을 하시겠습니까?</p>";
-						fn_showMessage("confrm", title, message, "auth", idx);
-						
-					
-					} else if(resultCode == '854'){
-						message = "이미 입력된 고객님 차량 정보가 있습니다. \n"
-								+ "차량번호를 다시 확인해 주세요.";
-						alert(message);
-						$(obj).prev().val("");
-					
-					
-					} else {
-						alert(resultMessage);
-						$(obj).prev().val("");
-					}
-				}
-			
-			);
-		}
-		
-		
-		function fn_ownerAuthPop(idx) {
-			var dtPopHt = $("#ownerPop").height();
-			var dtPopTop = dtPopHt * -0.5
-			
-			
-			$("#dt_owner_yes").prop("checked", false);
-			$(".owner_regi_input").val("");
-			$(".owner_regi_input").prop("disabled", true);
-			$("#ownerPop .dtPopBtn .dtPopBtn1").addClass("disableBtn");
-			
-			$("#ownerPop").css("margin-top", dtPopTop);
-			$("#ownerPop .ownerAgreeBox").mCustomScrollbar();
-			$("#ownerPop").show();
-			$(".dt_pop_up_dimm").show();
-			
-			
-			$("#dt_owner_yes").off("click").on("click", function(){
-				if ($("#dt_owner_yes").is(":checked")){
-					$(".owner_regi_input").prop("disabled", false);
-					$(".owner_regi_input").val("");
-					$(".owner_regi_input").focus();
-					$("#ownerPop .dtPopBtn .dtPopBtn1").addClass("disableBtn");
-				} else {
-					$(".owner_regi_input").val("");
-					$(".owner_regi_input").prop("disabled", true);
-					$("#ownerPop .dtPopBtn .dtPopBtn1").addClass("disableBtn");
-				}
-			});
-			
-			
-			$(".owner_regi_input").off("keyup").on("keyup", function() {
-				if($(this).val().length > 1) {
-					$("#ownerPop .dtPopBtn .dtPopBtn1").removeClass("disableBtn");
-				} else {
-					$("#ownerPop .dtPopBtn .dtPopBtn1").addClass("disableBtn");
-				}
-			});
-			
-			
-			$("#ownerPop .dtPopClose").off("click").on("click", function(){
-				$("#ownerPop").hide();
-				$(".dt_pop_up_dimm").hide();
-			});
-			
-			$("#ownerPop .dtPopBtn .dtPopBtn1").off("click").on("click", function(){
-				if(!$(this).hasClass("disableBtn")) {
-					var ownerName = $(".owner_regi_input").val();
-					
-					$("#ownerPop").hide();
-					$(".dt_pop_up_dimm").hide();
-					
-					fn_ownerAuth(idx, ownerName);
-				}
-			});
-		}
-		
-		
-		function fn_ownerAuth(idx, ownerName){
-			var carNo		= $("a.dtDDBtn").eq(idx).prev().val();
-			var param = {
-						"carNo" 			: carNo
-						, "carOwnerName" 	: ownerName
-				};
-			__ajaxCall("edt/mdpOwnerAuthAjax", param, true, "json", "post"
-				, function (data) {
-					var resultCode 		= data.result_code;
-					var resultMessage	= data.result_message;
-					var title 			= "";
-					var message 		= "";
-					
-					
-					if(resultCode == "000") {
-						alert("차량 소유주 인증이 완료 되었습니다.");
-						
-						$("a.dtDDBtn").eq(idx).prev().attr("data-edityn", "Y");
-						$("a.dtDDBtn").eq(idx).prev().attr("data-owner-name", ownerName);
-						$("a.dtDDBtn").eq(idx).addClass("disable");
-					
-					
-					} else if(resultCode == "9999") {
-						message = "입력시간이 초과되어 설정화면으로 돌아갑니다.\n 다시 선택하여 입력해주세요.";					
-						alert(message);
-						document.location.href='/login/login?redirect_url=' + encodeURIComponent("my/mycard_info_input");
-					
-					
-					} else if(resultCode == "858") {
-						message = "입력한 차량번호는 고객님의 소유가 아닌 것으로 확인됩니다. \n"
-								+ "입력한 차량이 고객님의 소유일 경우, \n"
-								+ "추가 확인을 위해 고객센터로 문의하시기 바랍니다. \n"
-								+ "고객 센터 : 1522-3232";			
-						alert(message);
-						
-					
-					} else {
-						resultMessage = resultMessage.replaceAll("<br>", "\n");
-						alert(resultMessage);
-					}
-				}
-			
-			);
-		}
-
-		
-		function cardMasking(num){
-
-			var test2_2_1 = document.getElementById("CR2_2_1").value;
-			$('#CR2_2').val(test2_2_1);
-
-			if(test2_2_1.length > 3) {
-				test2_2_1 = $("#CR2_2_1").val( test2_2_1.substr(0, 2) + "**") ;
-				return;
-			}
-		}
-
-		
-		function cardMasking2(num){
-
-			var test2_3_1 = document.getElementById("CR2_3_1").value;
-			$('#CR2_3').val(test2_3_1);
-
-			if(test2_3_1.length > 3) {
-				test2_3_1 =  $("#CR2_3_1").val("****");
-				return;
-			}
-		}
-
-		</script>
-		
+				(function($) {
+					$.fn.seqfx = function() {
+						var elements = this,
+							l = elements.length,
+							i = 0;
+	
+						function execute() {
+							var current = $(elements[i]);
+							i = (i + 1) % l;
+	
+							current
+								.animate({ rotateY: '360deg' }, 2000)
+								.animate({ rotateY: '-360deg' }, 2000, execute);
+						}
+						execute();
+						return this;
+					};
+				}(jQuery));
+				$('.coffee').seqfx();
+				
+				
+				var m_strType = '';
+			</script>
+		</div>
 	</body>
-
 </html>
-				

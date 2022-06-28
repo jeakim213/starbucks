@@ -7,6 +7,7 @@ import org.springframework.stereotype.Repository;
 import com.clone.starbucks.DTO.AllDTO;
 import com.clone.starbucks.DTO.CardDTO;
 import com.clone.starbucks.DTO.E_couponDTO;
+import com.clone.starbucks.DTO.UserInfoDTO;
 
 
 @Repository
@@ -40,6 +41,8 @@ public interface IMyDAO {
 
 	int masterUpdate(String id);
 	
+	int couponCount(String id);
+	
 	
 	//---------------------------------
 	// my index - 예은
@@ -48,6 +51,8 @@ public interface IMyDAO {
 	
 	int userCoupon(String string);
 
+	int updateStar(UserInfoDTO user);
+	
 	AllDTO userAllInfo(String id);
 
 	int useCouponCount(String id);

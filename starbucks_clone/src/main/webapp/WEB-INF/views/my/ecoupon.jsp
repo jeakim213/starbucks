@@ -296,11 +296,11 @@ var eFrequencyPlannerYn = 'Y';
 
 			<!-- 960 gnb -->
 			<div class="tablet_gnb_wrap">
-				<h1 class="logo"><a href="/">스타벅스 코리아</a></h1>
+				<h1 class="logo"><a href="../">스타벅스 코리아</a></h1>
 				<nav class="tablet_gnb_sep">
 					<ul>
 						<li class="tablet_gnb01"><a href="javascript:void(0);" role="button" title="마이 리워드 레이어 열기"><!-- 접근성_20171106 role, title 추가 --><span class="rCup2"></span></a></li><!-- 150709 클레스 수정 -->
-						<li class="tablet_gnb02"><a href="my/index" required="login"><span class="a11y">마이스타벅스</span></a><!-- 접근성_20171106 span추가 --></li>
+						<li class="tablet_gnb02"><a href="index"><span class="a11y">마이스타벅스</span></a><!-- 접근성_20171106 span추가 --></li>
 						<li class="tablet_gnb03"><a href="strore/store_map"><span class="a11y">매장찾기</span></a><!-- 접근성_20171106 span추가 --></li>
 						<li class="tablet_gnb04"><a href="javascript:void(0);"><span class="a11y" role="button">메뉴열기</span></a><!-- 접근성_20171106 span추가 --></li>
 					</ul>
@@ -333,26 +333,22 @@ var eFrequencyPlannerYn = 'Y';
 							<li>
 								<a role="button" href="javascript:void(0);">My 스타벅스 카드<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 -->
 								<ul>
-									<li><a href="my/mycard_index" required="login">보유 카드</a></li>
-									<li><a href="my/mycard_info_input" required="login">카드 등록</a></li>
-									<li><a href="my/mycard_charge" required="login">카드 충전</a></li>
-									<li><a href="my/mycard_lost" required="login">분실신고/잔액이전</a></li>
+									<li><a href="cardList" required="login">보유 카드</a></li>
+									<li><a href="mycard_info_input" required="login">카드 등록</a></li>
+									<li><a href="mycard_charge_1" required="login">카드 충전</a></li>
 								</ul>
 							</li>
 							<li>
 								<a role="button" href="javascript:void(0);">My 스타벅스 e-Gift Card<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 -->
 								<ul>
-									<li><a href="msr/sceGift/gift_step1" required="login">선물하기</a></li>
-									<li><a href="my/egiftCard" required="login">선물 내역</a></li>
-									<li><a href="my/egiftCard_shopping_bag" required="login">장바구니 내역</a></li>
+									<li><a href="../msr/sceGift/gift_step2" required="login">선물하기</a></li>
 								</ul>
 							</li>
 							<li>
 								<a role="button" href="javascript:void(0);">My 쿠폰<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 -->
 								<ul>
-									<li><a href="my/ecoupon?t=REG" required="login">등록하기</a></li>
-									<li><a href="my/ecoupon?t=GIFT" required="login">선물하기</a></li>
-									<li><a href="my/ecoupon?t=USE" required="login">사용하기</a></li>
+									<li><a href="ecoupon" required="login">등록하기</a></li>
+									<li><a href="couponList" required="login">보유 쿠폰 내역</a></li>
 								</ul>
 							</li>
 							<li><a href="my/calendar" required="login">My 캘린더</a></li>
@@ -662,16 +658,16 @@ var eFrequencyPlannerYn = 'Y';
 		<!-- 서브 gnb -->
 		<div class="sub_gnb_wrap">
 			<div class="sub_gnb_wrap_inner">
-				<h1 class="logo"><a href="/" title="스타벅스 메인페이지" >스타벅스 코리아</a><!-- 접근성_20171106 title 추가 --></h1>
+				<h1 class="logo"><a href="../" title="스타벅스 메인페이지" >스타벅스 코리아</a><!-- 접근성_20171106 title 추가 --></h1>
 				<nav class="util_nav">
 					
 								
 <ul>
 	<li class="util_nav01 sign_out" style="display:none;"><a href="javascript:void(0);">Sign out</a></li>
 	<li class="util_nav01 sign_in"><a href="javascript:void(0);">Sign In</a></li>
-	<li class="util_nav02"><a href="my/index" required="login">My Starbucks</a></li>
-	<li class="util_nav03"><a href="menu/orderList">Order</a></li>
-	<li class="util_nav04"><a href="strore/store_map">Find a Store</a></li>
+	<li class="util_nav02"><a href="/starbucks/my/index">My Starbucks</a></li>
+	<li class="util_nav03"><a href="/starbucks/menu/orderList">Order</a></li>
+	<li class="util_nav04"><a href="/starbucks/store/store_map">Find a Store</a></li>
 </ul>
 				</nav>
 				<a href="javascript:void(0);" class="rCup3_wrap" role="button" title="마이 리워드 레이어 열기"><!-- 접근성_20171201 class, role, title 추가 --><span class="rCup3"></span></a><!-- 150714 DOM 수정 - 떨어지는 메뉴 부분에 jsMovie 추가 -->
@@ -979,7 +975,7 @@ var eFrequencyPlannerYn = 'Y';
 	                                    </div>
 	                                    <!-- //e::211008 -->
 
-										<p class="mc">사용 가능한 보유 쿠폰 : <span class="totalCnt"></span></p>
+										<p class="mc">사용 가능한 보유 쿠폰 : ${couponCount }<span class="totalCnt"></span></p>
 										<!-- 쿠폰리스트 150616 - 문진욱 -->
 										<section class="ecoupon_list_wrap">
 											<ul>
@@ -1132,27 +1128,23 @@ var eFrequencyPlannerYn = 'Y';
 			<a href="javascript:void(0);">My 스타벅스 카드<span class="sbox_arrow_down"></span></a>
 			<ul>
 				<!-- 160609 텍스트 수정 -->
-				<li><a href="my/mycard_index" required="login">· 보유 카드</a></li>
-				<li><a href="my/mycard_info_input" required="login">· 카드 등록</a></li>
-				<li><a href="my/mycard_charge" required="login">· 카드 충전</a></li>
-				<li><a href="my/mycard_lost" required="login">· 분실신고/잔액이전</a></li>
+				<li><a href="cardList" required="login">· 보유 카드</a></li>
+				<li><a href="mycard_info_input" required="login">· 카드 등록</a></li>
+				<li><a href="mycard_charge_1" required="login">· 카드 충전</a></li>
 				<!-- 160609 텍스트 수정 end -->
 			</ul>
 		</li>
 		<li>
 			<a href="javascript:void(0);">My 스타벅스 e-Gift Card<span class="sbox_arrow_down"></span></a>
 			<ul>
-				<li><a href="msr/sceGift/gift_step1" required="login">· 선물하기</a></li>
-				<li><a href="my/egiftCard" required="login">· 선물 내역</a></li>
-				<li><a href="my/egiftCard_shopping_bag" required="login">· 장바구니 내역</a></li>
+				<li><a href="../msr/sceGift/gift_step2" required="login">· 선물하기</a></li>
 			</ul>
 		</li>
 		<li class="msRnb_btn">
 			<a href="javascript:void(0);" required="login">My 쿠폰<span class="sbox_arrow_down"></span></a>
 			<ul>
-				<li><a href="my/ecoupon?t=REG">· 등록하기</a></li>
-				<li><a href="my/ecoupon?t=GIFT">· 선물하기</a></li>
-				<li><a href="my/ecoupon?t=USE">· 사용하기</a></li>
+				<li><a href="ecoupon">· 등록하기</a></li>
+				<li><a href="couponList">· 보유 쿠폰 내역</a></li>
 			</ul>
 		</li>
 		<li class="msRnb_btn"><a href="my/calendar" required="login">My 캘린더</a></li>

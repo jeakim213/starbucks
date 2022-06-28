@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.Set;
 
 import javax.servlet.http.HttpSession;
 
@@ -17,6 +18,7 @@ import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
 
+import com.clone.starbucks.DAO.IAdminDAO;
 import com.clone.starbucks.DAO.IMemberDAO;
 import com.clone.starbucks.DAO.IMenuDAO;
 import com.clone.starbucks.DAO.IMyDAO;
@@ -36,6 +38,8 @@ public class MenuServiceImpl implements IMenuService{
 	@Autowired IMenuDAO dao;
 	@Autowired IMemberDAO memberDao;
 	@Autowired IMyDAO myDao;
+	@Autowired AdminServiceImpl adminService;
+	@Autowired IAdminDAO adminDao;
 	
 	//0613-지혜
 		//장바구니 구현. 구조는 map(String, map(String,Object)) 푸드, 상품은 map으로, 음료는 배열로
@@ -58,7 +62,8 @@ public class MenuServiceImpl implements IMenuService{
 			dto.setP_op(op);
 			Drink.add(dto);
 			cart.put("Drink", Drink);
-		}else if(data.get("categoryType").equals("02")) {
+		}
+		if(data.get("categoryType").equals("02")) {
 			HashMap<String, ProductDTO> Food = (HashMap<String, ProductDTO>)cart.get("Food");
 			if(Food == null) Food = new HashMap<String, ProductDTO>();
 			
@@ -173,13 +178,19 @@ public class MenuServiceImpl implements IMenuService{
 		if(food != null) {
 			Collection<ProductDTO> foodDtos = food.values();
 			for(ProductDTO dto : foodDtos) {
-				System.out.println(dto.getP_name());
-				if(dto.getP_category1().equals("02"))
-					dto.setP_price(dto.getP_price()*Integer.parseInt(data.get(dto.getP_name())));
+				if(dto.getP_category1().equals("02")) {
+					int count = Integer.parseInt(data.get(dto.getP_name()));
+					dto.setP_price(dto.getP_price()* count);
+				}
 			}
 			cart.put("Food", food);
 			session.setAttribute("list", cart);
 		}
+		
+		//지혜 0628
+		if(!cart.containsKey("Drink"))//별쿠폰 음료만 적용을 위해 세션에 저장
+			session.setAttribute("drink", "N");
+			
 		return true;
 	}
 	
@@ -209,16 +220,19 @@ public class MenuServiceImpl implements IMenuService{
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 		HashMap<String,String> sale = (HashMap<String,String>)session.getAttribute("saleCount");
 		
-		if(data.get("couponNum") != null) {//쿠폰 있는 경우 사용상태로 변경해줌
+		if(!data.get("couponNum").isEmpty()) {//쿠폰 있는 경우 사용상태로 변경해줌
 			if(myDao.useCoupon(data.get("couponNum")) < 1)  return 0;
 		}
-		
-//		if(data.get("method").equals("sbcard")) {//카드결제의 경우 결제값 빼주기
-//			int amount = Integer.parseInt(data.get("amount"));
-//			CardDTO dto = myDao.c_numCheck(data.get("card_num"));
-//			if(dto != null) dto.setRemaincost((dto.getRemaincost() - amount));
-//			else return 0;
-//		}
+		String method = data.get("method");
+		if(method.equals("sbcard")) {//카드결제의 경우 결제값 빼주기
+			int amount = Integer.parseInt(data.get("amount"));
+			CardDTO dto = myDao.c_numCheck(data.get("card_num"));
+			if(dto != null) {
+				dto.setRemaincost((dto.getRemaincost() - amount));
+				myDao.remainUpdate(dto);
+			}
+			else return 0;
+		}
 		
 		//sale DB등록
 		for(String key : sale.keySet()) {
@@ -229,15 +243,18 @@ public class MenuServiceImpl implements IMenuService{
 			dto.setSalecount(count);
 	        dto.setSaledate(sdf.parse(data.get("pay_date")));;
 	        dto.setSalemethod(data.get("method"));
-	        if(!data.get("couponNum").equals("n")) {
+	        if(!data.get("couponNum").isBlank()) {
 	        	int ponNo = Integer.parseInt(data.get("couponNum"));
 	        	dto.setPon_no(ponNo);
 	        }
 	        int result = dao.insertSale(dto);
 	        if(result != 1) System.out.println(dto.getP_name() + "DB입력에러");
 		}
-		session.removeAttribute("saleCount");
-		session.removeAttribute("list");
+		makeStar(user, sale.keySet(), sdf.parse(data.get("pay_date")));//별 생성
+		
+		session.removeAttribute("saleCount");//판매개수
+		session.removeAttribute("list");//장바구니
+		session.removeAttribute("drink");//음료 유무
 		
 		return 1;
 	}
@@ -259,9 +276,40 @@ public class MenuServiceImpl implements IMenuService{
 			dao.insertProduct(dto);
 		}
 	}
+	
+	//별쿠폰 생성-지혜0627
+	private void makeStar(UserInfoDTO user, Set<String> set, Date start) throws ParseException {
+		HashMap<String, ArrayList<ProductDTO>> cart = (HashMap<String, ArrayList<ProductDTO>>)session.getAttribute("list");
+		ArrayList<ProductDTO> drink = (ArrayList<ProductDTO>)cart.get("Drink");
+		int count = 0;
+		for(ProductDTO product : drink) {
+			String pro = product.getP_name();
+			for(String pname : set)
+				if(pro.equals(pname)) count++;
+		}
+		System.out.println("음료개수적립 : " + count);
+		int userStar = user.getStar() + count;
+		if(userStar > 11) { //적립별이 12개이상이면 별쿠폰 적립 후 별 차감
+			System.out.println("더한개수 : "+userStar);
+			userStar -= 12;
+			E_couponDTO coupon = new E_couponDTO();
+			coupon.setPon_category("star");
+			coupon.setPon_num(adminService.starCoupon_NumMake());
+			coupon.setPon_name("[음료전용]별 적립 쿠폰");
+			coupon.setPon_startdate(start);
+			coupon.setPon_used('N');
+			coupon.setPon_enddate(adminService.endDate(coupon));
+			coupon.setPon_cash(5600);
+			coupon.setId(user.getId());
+			adminDao.insertEcoupon(coupon);
+		}
+		user.setStar(userStar);
+		myDao.updateStar(user);
+	}
 
-
-	   @Override
+	
+	
+	   @Override //다정
 	   public void couponUse(E_couponDTO e_couponDTO, Model model) throws ParseException {
 	      UserInfoDTO user = (UserInfoDTO) session.getAttribute("userInfo");
 	      String id = user.getId();
@@ -275,22 +323,18 @@ public class MenuServiceImpl implements IMenuService{
 	      
 	      SimpleDateFormat sdf = new SimpleDateFormat("yy/MM/dd");
 	      for(int i=0; i<list.size();i++) {
-	    	  System.out.println("시작 날짜 : "+list.get(i).getPon_startdate());
 	    	  //startDate
 	    	  Date sdate = list.get(i).getPon_startdate();
 	    	  String pon_startDate = sdf.format(sdate);
 	    	  
 	    	  //시작날짜 리스트에 저장
 	    	  startList.add(pon_startDate);
-	    	  System.out.println("변환 시작 날짜 : "+startList.get(i));
 	    	  
-		      System.out.println("끝 날짜 : "+list.get(i).getPon_enddate());
 		      //endDate
 		      Date edate = list.get(i).getPon_enddate();
 		      String pon_endDate = sdf.format(edate);
 		      
 		      endList.add(pon_endDate);
-		      System.out.println("변환끝날짜 : "+endList.get(i));
 	      }
 	      model.addAttribute("list",list);
 	      model.addAttribute("startList",startList);
@@ -298,7 +342,7 @@ public class MenuServiceImpl implements IMenuService{
 	   }
 
 
-	@Override
+	@Override //다정
 	public void cardChoice(CardDTO cardDTO, Model model) {
 	    UserInfoDTO userInfo = (UserInfoDTO) session.getAttribute("userInfo");
 	    String id = userInfo.getId();
