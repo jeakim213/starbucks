@@ -4,6 +4,7 @@
 	<select id="selectPrice" parameterType="String" resultType="int">
 		select p_price from product where p_name=#{p_name}
 	</select>
+	
 	<insert id="insertProduct" parameterType="com.clone.starbucks.DTO.ProductDTO">
 		insert into product values(#{p_category1}, #{p_category2}, #{p_name}, #{p_price})
 	</insert>

@@ -1419,7 +1419,7 @@ var eFrequencyPlannerYn = 'Y';
                             	if(url.length == 0){
                             		url = location.href;
                             	}  
-                            	location.href = "login/login?redirect_url=" + encodeURIComponent(url);
+                            	location.href = "login/login?;
                     			
                     		}else{
                     			//MSR 회원 여부 체크

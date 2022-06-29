@@ -6,7 +6,7 @@ package com.clone.starbucks.DTO;
 create table product(
 p_category1 char(10) not null,
 p_category2 varchar2(30) not null,
-p_name varchar2(50) not null primary key,
+p_name varchar2(80) not null primary key,
 p_price number not null
 );
 */

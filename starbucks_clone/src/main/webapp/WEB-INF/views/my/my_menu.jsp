@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="ko">
 
@@ -218,34 +219,7 @@ var eFrequencyPlannerYn = 'Y';
 					<!-- 일반 회원 end -->
 
 					<span class="msr_sep_line"></span>
-					<!-- 알림아이콘 -->
-					<div class="notice_icons">
-						<div class="notice_icon2">
-							<a href="/my/calendar">
-								<p></p>
-								<span>캘린더</span>
-							</a>
-						</div>
-						<div class="notice_icon3">
-							<a href="/my/ecoupon">
-								<p>
-									<span class="validCoupontCnt">0</span>
-								</p>
-								<span>e-쿠폰</span>	
-							</a>
-						</div>
-						
-						<!-- 20170510 추가 : 아이콘추가 -->
-						<div class="notice_icon4">
-							<a href="/eFreq/status?TYPE=BARCODE">
-								<p></p>
-								<span>e-프리퀀시<br/>바코드</span>
-							</a>
-						</div>
-						<!--// 20170510 추가 : 아이콘추가 -->
-						
-					</div>
-					<!-- 알림아이콘 end -->
+					
 				</div>
 
 				<div class="top_msr_nologin">
@@ -680,6 +654,7 @@ var eFrequencyPlannerYn = 'Y';
 	</div>
 </div>			
 
+
 		<div id="container">
 			<!-- 서브 타이틀 -->
 			<header class="ms_sub_tit_wrap">
@@ -702,8 +677,6 @@ var eFrequencyPlannerYn = 'Y';
 			<div class="ms_cont_wrap">
 				<!-- ms_cont -->
 				<div class="ms_cont">
-					<!-- (My 음료/매장) 최근 마신 음료 안내 -->						
-					<!-- (My 음료/매장) 최근 마신 음료 안내 end -->
 
 					<!-- (My 음료/매장) info -->
 					<div class="drinkShop_info">
@@ -725,38 +698,49 @@ var eFrequencyPlannerYn = 'Y';
 										</colgroup>
 										<thead>
 											<tr>
-												<th scope="col"><div class="ez-checkbox"><div class="ez-checkbox"><div class="ez-checkbox"><input type="checkbox" name="drinkShop_view_ck_all" class="chkAll ez-hide" title="전체 선택"></div></div></div></th>
+												<th scope="col">
+													<div class="ez-checkbox">
+														<input type="checkbox" id="drinkShop_view_ck_all" name="drinkShop_view_ck_all" title="전체 선택">
+													</div>
+												</th>
 												<th class="en" scope="col">No</th>
 												<th scope="col">음료명</th>
 												<th scope="col">퍼스널 옵션</th>
 												<th scope="col">등록일</th>
 											</tr>
 										</thead>
-										<tbody><tr>               <td><div class="ez-checkbox"><input type="checkbox" name="drinkShop_view_ck2" title="선택" value="12022061410240798239" class="ez-hide"></div></td>               <td>6</td>               <td class="tl">                               <a href="javascript:void(0);" class="btn_show_pop_detail" data-favoriteno="12022061410240798239">아이스 스타벅스 돌체 라떼</a>                              </td>               <td></td>               <td>2022-06-14 10:24:07</td>              </tr><tr>               <td><div class="ez-checkbox"><input type="checkbox" name="drinkShop_view_ck2" title="선택" value="12022061315104393827" class="ez-hide"></div></td>               <td>5</td>               <td class="tl">                               <a href="javascript:void(0);" class="btn_show_pop_detail" data-favoriteno="12022061315104393827">ss</a>                              </td>               <td>에스프레소 샷(2), 드립 커피</td>               <td>2022-06-13 15:10:43</td>              </tr><tr>               <td><div class="ez-checkbox"><input type="checkbox" name="drinkShop_view_ck2" title="선택" value="12022060601522659453" class="ez-hide"></div></td>               <td>4</td>               <td class="tl">                               <a href="javascript:void(0);" class="btn_show_pop_detail" data-favoriteno="12022060601522659453">ㅇㅇㅇㅇ</a>                              </td>               <td>에스프레소 샷(3), 헤이즐넛 시럽(1), 카라멜 시럽(1), 두유, 우유(or두유) 적게, 얼음 많이</td>               <td>2022-06-06 01:52:26</td>              </tr><tr>               <td><div class="ez-checkbox"><input type="checkbox" name="drinkShop_view_ck2" title="선택" value="12021010117130701599" class="ez-hide"></div></td>               <td>3</td>               <td class="tl">                               <a href="javascript:void(0);" class="btn_show_pop_detail" data-favoriteno="12021010117130701599">자허블진하게</a>                              </td>               <td>허니자몽소스(4), 티 많이</td>               <td>2021-01-01 17:13:07</td>              </tr><tr>               <td><div class="ez-checkbox"><input type="checkbox" name="drinkShop_view_ck2" title="선택" value="12021010117105001580" class="ez-hide"></div></td>               <td>2</td>               <td class="tl">                               <a href="javascript:void(0);" class="btn_show_pop_detail" data-favoriteno="12021010117105001580">쿠앤크</a>                              </td>               <td>에스프레소 샷(1), 바닐라 시럽(3), 무지방 우유, 얼음 적게, 프라푸치노 자바칩(1), 초콜릿 드리즐</td>               <td>2021-01-01 17:10:50</td>              </tr></tbody>
+										<tbody><!-- 0628 지혜 -->
+										<c:set var="i" value="0"/><!-- 넘버링 하기  -->
+										<c:forEach var="item" items="${custom }">
+											<tr>
+												<td><div class="ez-checkbox"><input type="checkbox" name="drinkShop_view_ck2" title="선택" value="${item.cus_no }" ></div></td>
+												<td>번호</td>
+												<c:choose>
+													<c:when test="${empty item.cus_nickname }">
+														<td class="tl"> ${item.p_name }</td>
+													</c:when>
+													<c:otherwise>
+														<td class="tl"> ${item.cus_nickname }</td>
+													</c:otherwise>
+												</c:choose>
+												<td>${item.cus_op }</td>
+												<td>${item.cus_date }</td>
+											</tr>
+										</c:forEach>
+										</tbody>
 									</table>
 									<!-- (My 음료/매장) 목록 end -->
 									
 									<!-- (My 음료/매장) 버튼 -->
 									<div class="drinkShop_btnZone">
 										<ul>
-											<li><a href="javascript:void(0);" class="btn_all_check">전체선택</a></li>
-											<li><a href="javascript:void(0);" class="btn_selected_del">선택삭제</a></li>
+											<li><a href="javascript:deleteCus();" class="btn_selected_del">선택삭제</a></li>
 										</ul>														
 									</div>
 									<!-- (My 음료/매장) 버튼 end -->
 								</fieldset>
 							</article>
 							<!-- (My 음료/매장) 목록 end -->
-							
-							
-							
-							<!-- 음료 팝업 시작 150818 구명준 -->
-							<div class="sArea_pop" id="pop02" style="display: none;">
-								<p class="btn_pop_close"><a href="javascript:void(0);">닫기</a></p>
-								<section class="sArea_pop_inner">
-								</section>														
-							</div> 
-							<!-- 음료 팝업 150818 구명준 end -->
 						</dd>
 						<dd class="panel on content_panel" id="dd_01"><!-- 여기임 -->
 							<p class="tip02"><!-- span>최근 3개월 기준 자료입니다.</span --></p>
@@ -775,55 +759,38 @@ var eFrequencyPlannerYn = 'Y';
 <nav class="ms_nav" id="msRnb">					
 	<ul>
 		<li>
-			<a href="javascript:void(0);">My 리워드<span class="sbox_arrow_down"></span></a>
-			<ul>
-				<!-- 160609 텍스트 수정 -->
-				<li><a href="../my/reward" required="login">· 리워드 및 혜택</a></li>
-				<li><a href="../my/reward_star_history" required="login">· 별 히스토리</a></li>
-				<!-- 160609 텍스트 수정 end -->
-			</ul>
-		</li>
-		<li>
 			<a href="javascript:void(0);">My 스타벅스 카드<span class="sbox_arrow_down"></span></a>
 			<ul>
 				<!-- 160609 텍스트 수정 -->
-				<li><a href="../my/mycard_index" required="login">· 보유 카드</a></li>
-				<li><a href="../my/mycard_info_input" required="login">· 카드 등록</a></li>
-				<li><a href="../my/mycard_charge" required="login">· 카드 충전</a></li>
-				<li><a href="../my/mycard_lost" required="login">· 분실신고/잔액이전</a></li>
+				<li><a href="cardList" required="login">· 보유 카드</a></li>
+				<li><a href="mycard_info_input" required="login">· 카드 등록</a></li>
+				<li><a href="mycard_charge_1" required="login">· 카드 충전</a></li>
 				<!-- 160609 텍스트 수정 end -->
 			</ul>
 		</li>
 		<li>
 			<a href="javascript:void(0);">My 스타벅스 e-Gift Card<span class="sbox_arrow_down"></span></a>
 			<ul>
-				<li><a href="../msr/sceGift/gift_step1" required="login">· 선물하기</a></li>
-				<li><a href="../my/egiftCard" required="login">· 선물 내역</a></li>
-				<li><a href="../my/egiftCard_shopping_bag" required="login">· 장바구니 내역</a></li>
+				<li><a href="../msr/sceGift/gift_step2" required="login">· 선물하기</a></li>
 			</ul>
 		</li>
 		<li class="msRnb_btn">
 			<a href="javascript:void(0);" required="login">My 쿠폰<span class="sbox_arrow_down"></span></a>
 			<ul>
-				<li><a href="../my/ecoupon?t=REG">· 등록하기</a></li>
-				<li><a href="../my/ecoupon?t=GIFT">· 선물하기</a></li>
-				<li><a href="../my/ecoupon?t=USE">· 사용하기</a></li>
+				<li><a href="ecoupon">· 등록하기</a></li>
+				<li><a href="couponList">· 보유 쿠폰 내역</a></li>
 			</ul>
 		</li>
-		<!-- <li class="msRnb_btn"><a href="/my/drink_shop" required="login">My 음료/매장</a></li> -->
-		<li class="msRnb_btn"><a href="../my/my_menu" required="login">My 메뉴</a></li>
-		
-		
-		<!-- <li class="msRnb_btn"><a href="/my/order_status_list" required="login">케익 주문 현황</a></li> -->
-		<li class="msRnb_btn"><a href="../my/eReceiptList" required="login">전자영수증</a></li>
+		<li class="msRnb_btn"><a href="my_menu" required="login">My 메뉴</a></li>
+		<li class="msRnb_btn"><a href="eReceiptList" required="login">전자영수증</a></li>
 		<li class="msRnb_btn"><a href="javascript:void(0);"  onclick="fn_rewardTumblerMsrCheck();">개인컵 리워드 설정</a></li>
 		<li class="msRnb_btn"><a href="../edt/expressDtList" required="login">My DT Pass</a></li>
 		<li>
 			<a href="javascript:void(0);">개인정보관리<span class="sbox_arrow_down"></span></a>
 			<ul>
-				<li><a href="../my/myinfo_modify_login" required="login">· 개인정보확인 및 수정</a></li>
-				<li><a href="../my/myinfo_out" required="login">· 회원 탈퇴</a></li>
-				<li><a href="../my/myinfo_modify_pwd" required="login">· 비밀번호 변경</a></li>
+				<li><a href="my/myinfo_modify_login" required="login">· 개인정보확인 및 수정</a></li>
+				<li><a href="my/myinfo_out" required="login">· 회원 탈퇴</a></li>
+				<li><a href="my/myinfo_modify_pwd" required="login">· 비밀번호 변경</a></li>
 			</ul>
 		</li>
 	</ul>
@@ -1033,384 +1000,71 @@ var eFrequencyPlannerYn = 'Y';
 		
 			<script src="//image.istarbucks.co.kr/common/js/openevent/openevent.js"></script>
 			<script src="//image.istarbucks.co.kr/common/js/open_event_control.js"></script>
-			<script type="text/javascript">
-				
-				var mrSlider;
-				
-				$(document).ready(function(){
-					/* 20171204 kbs 페이지별 head 내 title 변경 */
-					if( $('.smap li').last().text() == "" )
-					{
-						$('#titleJoin').text("Starbucks Korea"); //220117 수정
-					}
-					else
-					{
-						$('#titleJoin').text( $('.smap li').last().text() + " | Starbucks Korea" ); //220117 수정	
-					}
-					
-					$('#pickDate1, #pickDate2').datepicker({
-						 "dateFormat"      : "yy-mm-dd"
-						/* ,"dayNamesMin"     : ['일', '월', '화', '수', '목', '금', '토'] */
-						,"maxDate"         : "+0m +0w"
-						/* ,"monthNamesShort" : ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'] */
-					});
-			
-// 					var sbox = $('.my_ms_select select');
-// 					sbox.change(function(){
-// 						접근성_20171123 삭제
-// 						var sbox_name = $(this).children('option:selected').text();
-// 						$(this).siblings('label').text(sbox_name);
-// 					});접근성_20171201 삭제
-
-					/* s::20210714 수정 */
-					/* 170201 수정 - 황기흠 */
-					if ((myWindow > 640) && (myWindow <= 1200)) {
-						var faSlider = $('.footer_awards_slider').bxSlider({
-							minSlides:3,
-							maxSlides:3,
-							slideWidth:210,
-							slideMargin:0,
-							controls:false,
-							auto:true,
-							autoControls:true,
-							autoControlsCombine:true,
-							pause:3000,
-							infiniteLoop: true,
-							pagerSelector:'.footer_slider_pagers',
-							autoControlsSelector:'.footer_slider_controls'
-						});
-					} else if (myWindow <= 640) {
-						var faSlider = $('.footer_awards_slider').bxSlider({
-							minSlides:1,
-							maxSlides:1,
-							slideWidth:320,
-							slideMargin:0,
-							controls:false,
-							auto:true,
-							autoControls:true,
-							autoControlsCombine:true,
-							pause:3000,
-							infiniteLoop: true,
-							pagerSelector:'.footer_slider_pagers',
-							autoControlsSelector:'.footer_slider_controls'
-						});
-					}
-					/* 170201 수정 - 황기흠 end */
-					/* e::20210714 수정 */
-					
-					/* 구명준 추가 시작 탭 */			
-					/* 20171127 중복 스크립트 삭제 coffee.js 내 존재 */
-// 					$(".content_tabmenu > .tab").bind("click focusin", function(){
-// 						if(!$(this).hasClass("on")) {
-// 							$(this).parent().children(".on").removeClass("on");
-// 							var index = $(this).addClass("on").closest(".content_tabmenu").children(".tab").index(this);
-// 							$(this).parent().children(".panel").hide().eq(index).show();
-// 						}
-// 						return false;
-// 					});
-// 					$(".content_tabmenu > .tab").bind("click focusout", function(){
-// 						if(!$(this).hasClass("on")) {
-// 							$(this).parent().children(".on").removeClass("on");
-// 							var index = $(this).addClass("on").closest(".content_tabmenu").children(".tab").index(this);
-// 							$(this).parent().children(".panel").hide().eq(index).show();
-// 						}
-// 						return false;
-// 					});
-					/* 구명준 끝 */
-
-					/* 150714 추가 - 박종현 */
-					var itvChangeLink = setInterval(function() {
-						if (m_jsonRewardSummary != null) {
-							// 등록된 카드가 없으면 링크 변경
-							if (m_jsonRewardSummary.cardInfo.cardNumber == "") {
-								if (location.href.indexOf("/my/") > -1) {
-									var url = "/my/mycard_none";
-									
-									$('a[data-href="/my/mycard_index"]').attr("data-href", url);
-									$('a[data-href="/my/mycard"]').attr("data-href", url);
-									$('a[data-href="/my/mycard_charge"]').attr("data-href", url);
-									$('a[data-href="/my/mycard_lost"]').attr("data-href", url);
-								}
-							}
-							
-							// 로그인 상태에 따라 등록 및 조회 페이지 링크 변경
-							if (m_jsonRewardSummary.msrMemberYn == "Y") {
-								$('a[href="/msr/scard/register_inquiry"]').attr("href", "/my/mycard_info_input");
-							} else {
-								$('a[href="/msr/scard/register_inquiry"]').attr("href", "/my/reward");
-							}
-							
-							clearInterval(itvChangeLink);
-						}
-					}, 150);
-					/* 150714 추가 - 박종현 end */
-					$('#goPage').bind('click', function(){
-						if (myWindow > 640) {
-							location.href="/footer/co_sales/index";
-						}
-					});
-					
-                    /*kbs Express DT 접근 시 MSR 회원 체크, 비밀번호 체크*/
-                    var dtPopHt = $('.dtPop').height() * -0.5;
-                    $('.dtPop').css('margin-top',dtPopHt);
-                    
-                    $('#dtPopCancelBtn, #dtPopCommonCloseBtn, #dtPopCancelBtnMsr, #dtPopCommonCloseBtnMsr, .commonBtn, .commonBtnMsr').click(function(){
-                        $('#msrCheckPop').fadeOut();
-                        $('#commonPop').fadeOut();
-                        $('.dt_pop_up_dimm').fadeOut();
-                    });
-                    
-                    $('#dtClauseCloseBtn').click(function(){
-                        $('#privatePop').fadeOut();
-                    });
-                    
-					$('#dtClauseCloseXBtn').click(function(){
-						$('#privatePop').fadeOut();
-					});
-                });
-                
-                /* 개인컵 리워드 s */
-                function fn_rewardTumblerMsrCheck(){
-                	fn_hideGnbMenu();
-					var url = document.location.pathname;
-					fn_showrewardTumblerMsrCheckLayer(url);
-                }
-                function fn_showrewardTumblerMsrCheckLayer(url){
-                	/* 로그인 체크  */
-                	$.ajax({
-                    	type: 'post',
-                    	url : '/edt/edtCheckLogin',
-                    	data : {},
-                    	dataType : 'json',
-                    	jsonp : 'callback',
-                    	success : function(_response){
-                    		
-                    		if(_response.result_code != "SUCCESS"){
-                    			
-                            	if(url.length == 0){
-                            		url = location.href;
-                            	}  
-                            	location.href = "/login/login?redirect_url=" + encodeURIComponent(url);
-                    			
-                    		}else{
-                    			//MSR 회원 여부 체크
-                    			if (m_jsonRewardSummary == null) {
-                    				 $.ajax({
-                                     	type: 'post',
-                                     	url : '/interface/getMsrRewardSummary',
-                                     	data : {},
-                                     	dataType : 'json',
-                                     	jsonp : 'callback',
-                                     	async : false,
-                                     	success : function(_response){
-                                     		if (_response.result_code == "SUCCESS") {
-												m_jsonRewardSummary = jQuery.parseJSON(_response.data);
-												fn_showrewardTumblerMsrCheckPopup(m_jsonRewardSummary);
-											}
-                                     	}
-                                   	});
-								}else{
-									
-									fn_showrewardTumblerMsrCheckPopup(m_jsonRewardSummary);
-								}
-                    		}
-                    	}
-                    });
-                }
-                
-                function fn_showrewardTumblerMsrCheckPopup(obj){
-                	if( obj.msrMemberYn == "Y"){ /*msr 회원일 경우 페이지 이동*/
-                		location.href = "/my/reward_tumbler";
-                    }else{/* msr 비회원일 경우 팝업창 노출 */
-                        $('#msrCheckPop_rewardTumbler').fadeIn();
-                        $('.dt_pop_up_dimm').fadeIn();
-                        $('#msrCheckPop_rewardTumblerContents').show();
-                        $('#tumblerPopConfirmBtn, #tumblerPopCancelBtn').show();
-                        $('#tumblerPopConfirmBtn').on('click', function(){
-                        	// msr 비회원일 경우 카드 등록 페이지로 이동
-                        	location.href = "/my/mycard_info_input";
-                        });
-                    }
-                }
-                $('#tumblerPopCommonCloseBtn, #tumblerPopCancelBtn').click(function(){
-                    $('#msrCheckPop_rewardTumbler').fadeOut();
-                    $('.dt_pop_up_dimm').fadeOut();
-                    $('#msrCheckPop_rewardTumblerContents').hide();
-                    $('#tumblerPopConfirmBtn, #tumblerPopCancelBtn').hide();
-                });
-                /* 개인컵 리워드 e */
-			</script>
 
 			<script src="//image.istarbucks.co.kr/common/js/jquery.transit.min.js"></script>
-			<script>
-				// 150805 DOM 수정
-				$('div.msr_card_zone').bind('click', function(){
-					if($('div.mycard_area2').css("display")=="none"){
-						$('div.mycard_area1').hide();
-						$('div.mycard_area2').fadeIn();
-						$('.mycard_one img').attr('src', '//image.istarbucks.co.kr/common/img/common/payment_icon2.png').attr('alt','결제하기'); // 접근성_20171106 alt 추가
-					}else{
-						$('div.mycard_area1').fadeIn();
-						$('div.mycard_area2').hide();
-						$('.mycard_one img').attr('src', '//image.istarbucks.co.kr/common/img/common/payment_icon1.png').attr('alt', '결제완료');// 접근성_20171106 alt 추가
-					}
-				});
-				// 150805 DOM 수정 end
-			
-				(function($) {
-					$.fn.seqfx = function() {
-						var elements = this,
-							l = elements.length,
-							i = 0;
-		
-						function execute() {
-							var current = $(elements[i]);
-							i = (i + 1) % l;
-		
-							current
-								.animate({ rotateY: '360deg' }, 2000)
-								.animate({ rotateY: '-360deg' }, 2000, execute);
-						}
-						execute();
-						return this;
-					};
-				}(jQuery));
-				$('.mycard_one').seqfx();
-			</script>
 						
 			<script src='//image.istarbucks.co.kr/common/js/makePCookie.js'></script>
-		
-			<script>
-				$(document).ready(function () {
-					$('a[href*="card_list"] , a[href*="drink_list"] , a[href*="food_list"] , a[href*="product_list"]').on("click", function () {
-						Cookies.deleteCookie("MENU_TAB");
-						Cookies.deleteCookie("MENU_CATE");
-						Cookies.deleteCookie("MENU_OPT");
-					});
-				});
-			</script>
-		
-		
 		<script src="../common/js/common_jhp.js"></script>
 		<script src="../common/js/my/my_menu.js?v=210731"></script>
 		<script src="../common/js/jquery.ezmark.min.js"></script>
+<script> //0628 지혜
+	$(document).ready(function () {
+		__ajaxCall("starbucks/interface/checkLogin", {}, true, "json", "post"
+   			,function (_response) {
+   				if (_response.result_code == "FAIL") {
+   					alert("로그인이 필요한 기능 입니다.");
+   					location.href = "../login/login";
+   				}
+   			}
+   			,function (_error) {
+   			}
+   		);
 		
-		<script>
-			
+		
+		//리스트만들기..
+		
+		
+		//전체선택 - 지혜 0628
+		$("#drinkShop_view_ck_all").click(function() {
+			if($("#drinkShop_view_ck_all").is(":checked")) $("input[name=drinkShop_view_ck2]").prop("checked", true);
+			else $("input[name=drinkShop_view_ck2]").prop("checked", false);
+		});
+		
+		
+	});
 	
-			
 	
 	
-			function pop_init() {
+	function deleteCus(){//커스텀메뉴 삭제 - 지혜 0628
+		var tableArr = new Array();
+		
+		//체크값 배열에 담기
+		$("input[name='drinkShop_view_ck2']:checked").each(function() { 
+	      var tmpVal = $(this).val(); 
+	      tableArr.push(tmpVal);
+	    });
+		
+		console.log(tableArr);
+		/* req = new XMLHttpRequest();
+		req.onreadystatechange = resultAjax;
+		req.open('post', 'setOrderCountAjax')
+		data = JSON.stringify(jsonObj);
+		req.setRequestHeader('Content-Type', 'application/json; charset=UTF-8')
+		req.send(data); */
+	}
 	
-				$('.btn_shop_area, .btn_shop_bookmark').click(function(){
-					$('.pop_up_dimm, .shopArea_pop01').fadeIn();
-				});
-	
-				$('.shopArea_pop01 p.btn_pop_close a, .pop_up_dimm').click(function(){
-					$('.pop_up_dimm, .shopArea_pop01, .sArea_pop').fadeOut();
-	
-					// 150604 성연욱 추가 - 팝업 초기화
-					$('div.box_info dl.box_tabmenu dt').removeClass('on');
-					$('div.box_info dl.box_tabmenu dd.panel').hide();
-					// 150604 성연욱 추가 - 팝업 초기화 end
-				});					
-	
+	function resultAjax(){
+		if(req.readyState == 4 && req.status == 200){
+			var _response = req.responseText;
+			if (_response == "SUCCESS") {
+				location.href = 'my_menu';
+			} else {
+				alert('처리중 오류가 발생하였습니다.');
 			}
+		}
+	}
 	
-			function pop_slide_init() {
-				var mrSlider = $('.my_ms_shopArea_bar ul').bxSlider({
-					pager:false,
-					slideMargin:0
-				});
-			}
-	
-			function box_tabmenu(){					
-				/* original jQuery
-				$(".box_tabmenu > .tab").bind("click ", function(){
-					if(!$(this).hasClass("on")) {
-						$(this).parent().children(".on").removeClass("on");
-						var index = $(this).addClass("on").closest(".box_tabmenu").children(".tab").index(this);
-						$(this).parent().children(".panel").hide().eq(index).show();
-					}
-					return false;
-				});
-				*/
-				// 20150604 성연욱 작업
-				$(".box_tabmenu > .tab").bind("click", function(){
-					$(this).siblings('dt').removeClass('on');
-					$(this).toggleClass('on');
-					$(this).next().siblings('dd').hide();
-					$(this).next().toggle();
-				});
-				// 20150604 성연욱 작업 end
-				
-			}
-	
-			function m_mybrink_list(){
-	
-				//셋팅
-				$(".info dd.box").show();
-				$('dl.info dt.tbox a').text('자세히 보기');
-	
-				$("dl.info dt.tbox a").bind("click", function(){				
-					if($(this).parents('dt.tbox').hasClass('on')){
-						$(this).text('자세히 보기');
-					}else{
-						$(this).text('닫기');
-					}
-				});
-	
-				$(".ms_info_box1 dt.tbox a").bind("click", function(){
-					$(".ms_info_box1").find("dd.box").each(function(){
-						if($(this).next("dd.box")){
-							$(this).toggle();			
-							$(this).prev().toggleClass("on");				
-						}else{
-							$(this).hide();					
-							$(this).prev().removeClass("on");				
-						}
-					});
-				});				
-	
-				$(".ms_info_box2 dt.tbox a").bind("click", function(){						
-					$(".ms_info_box2").find("dd.box").each(function(){
-						if($(this).next("dd.box")){
-							$(this).toggle();			
-							$(this).prev().toggleClass("on");				
-						}else{
-							$(this).hide();					
-							$(this).prev().removeClass("on");				
-						}
-					});
-				});
-	
-				$(".ms_info_box3 dt.tbox a").bind("click", function(){					
-					$(".ms_info_box3").find("dd.box").each(function(){
-						if($(this).next("dd.box")){
-							$(this).toggle();			
-							$(this).prev().toggleClass("on");				
-						}else{
-							$(this).hide();					
-							$(this).prev().removeClass("on");				
-						}
-					});
-				});
-	
-				$(".ms_info_box4 dt.tbox a").bind("click", function(){					
-					$(".ms_info_box4").find("dd.box").each(function(){
-						if($(this).next("dd.box")){
-							$(this).toggle();			
-							$(this).prev().toggleClass("on");				
-						}else{
-							$(this).hide();					
-							$(this).prev().removeClass("on");				
-						}
-					});
-				});
-			}
-			/* 구명준 끝 */
-		</script>
+</script>
 	</div>
 	
 	

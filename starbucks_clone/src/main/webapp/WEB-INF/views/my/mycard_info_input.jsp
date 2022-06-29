@@ -911,15 +911,6 @@ var eFrequencyPlannerYn = 'Y';
 <nav class="ms_nav" id="msRnb">					
 	<ul>
 		<li>
-			<a href="javascript:void(0);">My 리워드<span class="sbox_arrow_down"></span></a>
-			<ul>
-				<!-- 160609 텍스트 수정 -->
-				<li><a href="my/reward" required="login">· 리워드 및 혜택</a></li>
-				<li><a href="my/reward_star_history" required="login">· 별 히스토리</a></li>
-				<!-- 160609 텍스트 수정 end -->
-			</ul>
-		</li>
-		<li>
 			<a href="javascript:void(0);">My 스타벅스 카드<span class="sbox_arrow_down"></span></a>
 			<ul>
 				<!-- 160609 텍스트 수정 -->
@@ -942,27 +933,10 @@ var eFrequencyPlannerYn = 'Y';
 				<li><a href="couponList">· 보유 쿠폰 내역</a></li>
 			</ul>
 		</li>
-		<li class="msRnb_btn"><a href="my/calendar" required="login">My 캘린더</a></li>
-		<!-- <li class="msRnb_btn"><a href="my/drink_shop" required="login">My 음료/매장</a></li> -->
-		<li class="msRnb_btn"><a href="my/my_menu" required="login">My 메뉴</a></li>
-		
-		 
-		<li>
-			<a href="javascript:void(0);">My e-프리퀀시<span class="sbox_arrow_down"></span></a>
-			<ul>
-				<li><a href="eFreq/guide?promoSeq=172">· 이용안내</a></li>
-				<li><a href="eFreq/status?promoSeq=172" required="login">· 이용현황</a></li>
-			</ul>
-		</li>
-		
-		
-		<li>
-			<a href="my/vocList" required="login">My 고객의 소리</a>
-		</li>
-		<!-- <li class="msRnb_btn"><a href="my/order_status_list" required="login">케익 주문 현황</a></li> -->
-		<li class="msRnb_btn"><a href="my/eReceiptList" required="login">전자영수증</a></li>
+		<li class="msRnb_btn"><a href="my_menu" required="login">My 메뉴</a></li>
+		<li class="msRnb_btn"><a href="eReceiptList" required="login">전자영수증</a></li>
 		<li class="msRnb_btn"><a href="javascript:void(0);"  onclick="fn_rewardTumblerMsrCheck();">개인컵 리워드 설정</a></li>
-		<li class="msRnb_btn"><a href="edt/expressDtList" required="login">My DT Pass</a></li>
+		<li class="msRnb_btn"><a href="../edt/expressDtList" required="login">My DT Pass</a></li>
 		<li>
 			<a href="javascript:void(0);">개인정보관리<span class="sbox_arrow_down"></span></a>
 			<ul>
