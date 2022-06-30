@@ -276,6 +276,37 @@ public class MyServiceImpl implements IMyService {
 		}
 
 
+		//----------- dt pass
+		
+		@Override
+		public String isExistCar(String carNo) {
+			if(carNo == null || carNo == "")
+				return "차량 번호 입력 후, 다시 시도하세요.";
+			int count = myDAO.isExistCar(carNo);
+			if(count == 1)			
+				return "중복 차량 번호";
+			
+			return "등록 가능 차량 번호";
+			
+		}
+
+		@Override
+		public String dtpassProc(UserInfoDTO userInfo) {
+
+			myDAO.updateDtpass(userInfo);
+			
+			return "등록 완료";
+		}
+
+		@Override
+		public String deleteProc(UserInfoDTO userInfo) {
+			
+			
+		    myDAO.deleteDtpass(userInfo);
+		  
+
+			return "삭제 완료";
+		}
 		
 	
 }

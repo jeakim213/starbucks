@@ -14,10 +14,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.clone.starbucks.DAO.IMyDAO;
 import com.clone.starbucks.DTO.AllDTO;
@@ -27,6 +29,7 @@ import com.clone.starbucks.DTO.RegisterDTO;
 import com.clone.starbucks.DTO.UserInfoDTO;
 import com.clone.starbucks.service.MenuServiceImpl;
 import com.clone.starbucks.service.MyServiceImpl;
+import com.google.gson.JsonObject;
 
 @Controller
 public class MyController {
@@ -280,6 +283,108 @@ public class MyController {
 	public String dtpass() {
 		return "my/dtpass";
 	}
+	
+	
+
+	
+	@ResponseBody // 차량번호 중복 체크-예은
+	@PostMapping(value = "my/isExistCarNoWeb", produces = "application/json; charset=UTF-8")
+	public String isExistId(@RequestBody(required = false) String carNo) {
+		// @RequestBody : 클라이언트가 보낸 데이터 / (required = true / false) 기본필수값
+		
+		
+		
+		String str = carNo;
+		String[] strAry = str.split("\\&|\\=");
+		JsonObject obj = new JsonObject();
+
+		for (String a : strAry)
+
+			carNo = strAry[1];
+
+		String msg = myService.isExistCar(carNo);
+		if (msg.equals("등록 가능 차량 번호")) {
+			obj.addProperty("result_code", "000");
+			obj.addProperty("message", "");
+		} else if (msg.equals("중복 차랑 변호")) {
+			obj.addProperty("result_code", "ERROR");
+			obj.addProperty("message", "");
+		}
+		return obj.toString();
+	}
+	
+	
+	@RequestMapping(value = "my/dtpassProc")	// 차량번호 등록
+	public String dtpassProc(@ModelAttribute UserInfoDTO userInfo, Model model, RedirectAttributes ra, HttpServletResponse response) throws IOException {
+	
+		 UserInfoDTO user = (UserInfoDTO) session.getAttribute("userInfo");
+	      
+	      // 로그인 안했을때 로그인창으로 이동
+	      if(user == null) {
+	    	  return "redirect:/login/login";
+	      }
+	    //System.out.println(userInfo.getDTPass());
+
+	    userInfo.setId(user.getId());
+		String msg = myService.dtpassProc(userInfo);
+
+		response.setContentType("text/html; charset=UTF-8");
+		PrintWriter out = response.getWriter();
+
+		
+		if (msg.equals("등록 완료")) {
+			model.addAttribute("msg", msg);
+			user.setDTPass(userInfo.getDTPass());
+			session.setAttribute("userInfo", user);
+			out.println("<script>alert('차랑 번호가 등록되었습니다.'); window.location.href='../my/index';</script>");
+			out.flush();
+			out.close();
+			return "my/index";
+			
+
+		} else {
+			model.addAttribute("msg", msg);
+			out.println("<script>alert('차랑 번호 등록에 실패하였습니다.'); window.location.href='../my/dtpass';</script>");
+			out.flush();
+			out.close();
+			return "my/dtpass";
+
+		}
+
+	}
+	
+	@RequestMapping(value = "my/deleteProc")	// 차량번호 삭제
+	public String deleteProc(UserInfoDTO userInfo, Model model, HttpServletResponse response) throws IOException{
+	
+		 UserInfoDTO user = (UserInfoDTO) session.getAttribute("userInfo");
+
+		 
+	      // 로그인 안했을때 로그인창으로 이동
+	      if(user == null) {
+	    	  return "redirect:/login/login";
+	      }
+	    //System.out.println(userInfo.getDTPass());
+
+	    userInfo.setId(user.getId());
+	    userInfo.setDTPass(user.getDTPass());
+	 
+		String msg = myService.deleteProc(userInfo);
+
+			
+		if (msg.equals("삭제 완료")) {
+			user.setDTPass("");
+			session.setAttribute("userInfo", user);
+			
+			return "redirect:/my/index";
+			
+
+		} else {
+			return "redirect:/my/dtpass";
+
+		}
+
+	}
+	
 	
 
 	@GetMapping("userInfo")

@@ -356,7 +356,7 @@ var eFrequencyPlannerYn = 'Y';
 									<li style="display: none;"><a href="javascript:void(0);" required="login" data-href="my/vocList">My 고객의 소리</a></li>
 							<li style="display: none;"><a href="javascript:void(0);" required="login" data-href="my/eReceiptList">전자영수증</a></li>
 							<li class="msRnb_btn" style="display: none;"><a href="javascript:void(0);" onclick="fn_rewardTumblerMsrCheck();">개인컵 리워드 설정</a></li>
-							<li style="display: none;"><a href="javascript:void(0);" required="login" data-href="edt/expressDtList">My DT Pass</a></li>
+							<li style="display: none;"><a href="javascript:void(0);" required="login" data-href="my/dtpass">My DT Pass</a></li>
 							<li style="display: none;">
 								<a role="button" href="javascript:void(0);">개인정보관리<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 -->
 								<ul>
@@ -2059,7 +2059,7 @@ var eFrequencyPlannerYn = 'Y';
 		<!-- <li class="msRnb_btn"><a href="my/order_status_list" required="login">케익 주문 현황</a></li> -->
 		<li class="msRnb_btn"><a href="../my/eReceipList" required="login" data-href="my/eReceiptList">전자영수증</a></li>
 		<li class="msRnb_btn"><a href="javascript:void(0);" onclick="fn_rewardTumblerMsrCheck();">개인컵 리워드 설정</a></li>
-		<li class="msRnb_btn"><a href="javascript:void(0);" required="login" data-href="edt/expressDtList">My DT Pass</a></li>
+		<li class="msRnb_btn"><a href="../my/dtpass" data-href="my/dtpass">My DT Pass</a></li>
 		<!-- <li>
 			<a href="javascript:void(0);">개인정보관리<span class="sbox_arrow_down"></span></a>
 			<ul>

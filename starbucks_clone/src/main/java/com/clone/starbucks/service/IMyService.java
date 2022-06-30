@@ -33,4 +33,10 @@ public interface IMyService {
 	boolean setChargeData(HashMap<String, String> data);
 	
 	void couponCount(E_couponDTO eCouponDTO, Model model);
+
+	String isExistCar(String carNo);
+
+	String dtpassProc(UserInfoDTO userInfo);
+
+	String deleteProc(UserInfoDTO userInfo);
 }

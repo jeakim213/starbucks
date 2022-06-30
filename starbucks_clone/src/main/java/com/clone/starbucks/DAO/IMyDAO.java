@@ -56,4 +56,10 @@ public interface IMyDAO {
 	AllDTO userAllInfo(String id);
 
 	int useCouponCount(String id);
+
+	int isExistCar(String carNo);
+
+	int updateDtpass(UserInfoDTO userInfo);
+
+	int deleteDtpass(UserInfoDTO userInfo);
 }

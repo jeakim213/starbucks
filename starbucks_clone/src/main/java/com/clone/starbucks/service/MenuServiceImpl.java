@@ -250,11 +250,14 @@ public class MenuServiceImpl implements IMenuService{
 	        int result = dao.insertSale(dto);
 	        if(result != 1) System.out.println(dto.getP_name() + "DB입력에러");
 		}
-		makeStar(user, sale.keySet(), sdf.parse(data.get("pay_date")));//별 생성
-		
+		//0628지혜
+		String check = (String)session.getAttribute("drink");
+		if(!check.equals("N")) {
+			makeStar(user, sale.keySet(), sdf.parse(data.get("pay_date")));//별 생성
+			session.removeAttribute("drink");//음료 유무
+		}
 		session.removeAttribute("saleCount");//판매개수
 		session.removeAttribute("list");//장바구니
-		session.removeAttribute("drink");//음료 유무
 		
 		return 1;
 	}
