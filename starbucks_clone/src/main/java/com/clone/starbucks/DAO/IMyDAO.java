@@ -1,6 +1,7 @@
 package com.clone.starbucks.DAO;
 
 import java.util.ArrayList;
+import java.util.Map;
 
 import org.springframework.stereotype.Repository;
 
@@ -58,7 +59,9 @@ public interface IMyDAO {
 
 	int useCouponCount(String id);
 	
-	ArrayList<CustomDTO> customList(String id); //지혜
+	ArrayList<CustomDTO> customList(Map<String, Object> paramMap); //지혜
+	
+	int cusCount(String id); //지혜
 	
 	int deleteCustom(int cus_no); //지혜
 	

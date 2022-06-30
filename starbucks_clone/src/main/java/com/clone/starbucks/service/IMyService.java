@@ -36,7 +36,7 @@ public interface IMyService {
 	
 	void couponCount(E_couponDTO eCouponDTO, Model model);
 	
-	ArrayList<CustomDTO> setCusTable();
+	ArrayList<CustomDTO> setCusTable(int myCustomPage, Model model);
 	
 	String deleteCustom(ArrayList<Integer> cusNoArr);
 }

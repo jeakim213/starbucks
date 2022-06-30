@@ -98,12 +98,18 @@
 	</update>
 	
 	<!-- My메뉴 지혜 -->
-	<select id="customList" parameterType="String" resultType="com.clone.starbucks.DTO.CustomDTO">
-		select * from custom where id=#{id}
+	<select id="customList" parameterType="Map" resultType="com.clone.starbucks.DTO.CustomDTO">
+		select list.* from(
+			select rownum rn, numbering.* from(select * from custom where id=#{id})numbering
+		)list where rn between #{begin} and #{end}
+	</select>
+	
+	<select id="cusCount" parameterType="String" resultType="int">
+		select count(*) from custom where id=#{id}
 	</select>
 	
 	<delete id="deleteCustom" parameterType="int">
-		delete * from custom where cus_no=#{cus_no}
+		delete from custom where cus_no=#{cus_no}
 	</delete>
 	
 	</mapper>
