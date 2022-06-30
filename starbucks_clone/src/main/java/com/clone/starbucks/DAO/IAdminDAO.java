@@ -6,6 +6,7 @@ import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
 import com.clone.starbucks.DTO.E_couponDTO;
+import com.clone.starbucks.DTO.RankDTO;
 import com.clone.starbucks.DTO.RegisterDTO;
 import com.clone.starbucks.DTO.UserInfoDTO;
 
@@ -16,8 +17,6 @@ public interface IAdminDAO {
 	void insertEcoupon(E_couponDTO eCoupon);
 	
 	E_couponDTO selectNo(int pon_no);
-	
-	
 	
 	
 	
@@ -38,4 +37,9 @@ public interface IAdminDAO {
 	void deleteReg(String Id);
 	void deleteUser(String Id);
 	
+	Integer salesDrinkCount(String saledate);
+	
+	ArrayList<RankDTO> drinkRank();
+	
+	int allCount();
 }

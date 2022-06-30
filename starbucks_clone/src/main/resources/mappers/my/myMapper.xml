@@ -91,6 +91,18 @@
 	</select>
 	
 	
+	<!-- DTPASS - 예은 -->
+	<select id="isExistCar" parameterType="String" resultType="int">
+		SELECT count(*) FROM userinfo WHERE DTPass= #{DTPass}
+	</select>
+
+	<update id="updateDtpass" parameterType="com.clone.starbucks.DTO.UserInfoDTO">
+		update userinfo set DTPass=#{DTPass} where id=#{id}
+	</update>
+	
+	<update id="deleteDtpass" parameterType="com.clone.starbucks.DTO.UserInfoDTO">
+		update userinfo set DTPass='' where id=#{id}
+	</update>
 	
 	<!-- Star 지혜 -->
 	<update id="updateStar" parameterType="com.clone.starbucks.DTO.UserInfoDTO">

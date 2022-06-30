@@ -251,6 +251,7 @@ public class MenuServiceImpl implements IMenuService{
 	        if(result != 1) System.out.println(dto.getP_name() + "DB입력에러");
 		}
 		//0628지혜
+
 		String check = (String)session.getAttribute("drink");
 		if(!check.equals("N")) {
 			makeStar(user, sale.keySet(), sdf.parse(data.get("pay_date")));//별 생성
