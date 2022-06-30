@@ -1,6 +1,7 @@
 package com.clone.starbucks.service;
 
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 import javax.servlet.http.HttpServletRequest;
@@ -9,6 +10,7 @@ import org.springframework.ui.Model;
 
 import com.clone.starbucks.DTO.AllDTO;
 import com.clone.starbucks.DTO.CardDTO;
+import com.clone.starbucks.DTO.CustomDTO;
 //github.com/jeakim213/stabucks.git
 import com.clone.starbucks.DTO.E_couponDTO;
 import com.clone.starbucks.DTO.UserInfoDTO;
@@ -33,4 +35,8 @@ public interface IMyService {
 	boolean setChargeData(HashMap<String, String> data);
 	
 	void couponCount(E_couponDTO eCouponDTO, Model model);
+	
+	ArrayList<CustomDTO> setCusTable();
+	
+	String deleteCustom(ArrayList<Integer> cusNoArr);
 }

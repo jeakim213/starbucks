@@ -251,13 +251,14 @@ public class MenuServiceImpl implements IMenuService{
 	        if(result != 1) System.out.println(dto.getP_name() + "DB입력에러");
 		}
 		//0628지혜
-	    String check = (String)session.getAttribute("drink");
-	    if(!check.equals("N")) {
-	       makeStar(user, sale.keySet(), sdf.parse(data.get("pay_date")));//별 생성
-	       session.removeAttribute("drink");//음료 유무
-	    }
-	    session.removeAttribute("saleCount");//판매개수
-	    session.removeAttribute("list");//장바구니
+
+		String check = (String)session.getAttribute("drink");
+		if(!check.equals("N")) {
+			makeStar(user, sale.keySet(), sdf.parse(data.get("pay_date")));//별 생성
+			session.removeAttribute("drink");//음료 유무
+		}
+		session.removeAttribute("saleCount");//판매개수
+		session.removeAttribute("list");//장바구니
 		
 		return 1;
 	}

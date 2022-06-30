@@ -1735,8 +1735,7 @@ var eFrequencyPlannerYn = 'Y';
        				} else {
        					alert("로그인이 필요한 기능 입니다.");
        					
-       					var strHref = m_domain_http + "drink_view?product_cd=" + $PRODUCT_CD;
-       					location.href = "login/login?redirect_url=" + encodeURIComponent(strHref);
+       					location.href = "${pageContext.request.contextPath}/login/login";
        				}
        			}
        			,function (_error) {

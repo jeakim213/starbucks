@@ -2,7 +2,9 @@ package com.clone.starbucks.DTO;
 
 import java.util.Date;
 
-/*create table custom(
+/*
+create table custom(
+cus_no number not null primary key,
 id varchar2(30) not null,
 p_name varchar2(50) not null,
 cus_nickname varchar2(50),
@@ -11,16 +13,34 @@ cus_op varchar2(100)
 );
 
 alter table custom add foreign key(id) references userinfo(id);
-alter table custom add foreign key(p_name) references product(p_name);*/
+alter table custom add foreign key(p_name) references product(p_name);
+
+===== sequence ===
+create sequence cus_no
+INCREMENT BY 1
+START WITH 0001
+MINVALUE 0001
+MAXVALUE 9999
+CYCLE
+NOCACHE
+ORDER;
+*/
 
 public class CustomDTO {
-	private String id;
-	private String p_name;
-	private String cus_nickname;
-	private Date cus_date;
-	private String cus_op;
+	private int cus_no; //커스텀고유번호 not null sequence
+	private String id; //저장한 아이디 not null
+	private String p_name; //제품이름 not null
+	private String cus_nickname; //애칭 
+	private Date cus_date; //등록일 not null, default sysdate
+	private String cus_op; //커스텀옵션 
 	
 	
+	public void setCus_no(int cus_no) {
+		this.cus_no = cus_no;
+	}
+	public int getCus_no() {
+		return cus_no;
+	}
 	public String getId() {
 		return id;
 	}

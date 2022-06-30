@@ -1591,7 +1591,7 @@ var eFrequencyPlannerYn = 'Y';
 			} else {
 				alert('처리중 오류가 발생하였습니다.');
 			}
-			location.href = 'orderList';
+			location.href = '${pageContext.request.contextPath}/index';
 		}
 	}
 	
