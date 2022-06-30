@@ -866,60 +866,53 @@ var eFrequencyPlannerYn = 'Y';
 
 <nav class="ms_nav" id="msRnb">					
 	<ul>
-		<li>
-			<a href="javascript:void(0);">My 리워드<span class="sbox_arrow_down"></span></a>
-			<ul>
-				<!-- 160609 텍스트 수정 -->
-				<li><a href="../my/reward" required="login" data-href="my/reward">· 리워드 및 혜택</a></li>
-				<!-- <li><a href="javascript:void(0);" required="login" data-href="my/reward_star_history">· 별 히스토리</a></li> -->
-				<!-- 160609 텍스트 수정 end -->
-			</ul>
-		</li>
+	
 		<li>
 			<a href="javascript:void(0);">My 스타벅스 카드<span class="sbox_arrow_down"></span></a>
 			<ul>
 				<!-- 160609 텍스트 수정 -->
-				<li><a href="../my/mycard_index" required="login" data-href="my/mycard_none">· 보유 카드</a></li>
-				<li><a href="../my/mycard_info_input" required="login" data-href="my/mycard_info_input">· 카드 등록</a></li>
-				<li><a href="../my/mycard_charge" required="login" data-href="my/mycard_none">· 카드 충전</a></li>
-				<!-- <li><a href="javascript:void(0);" required="login" data-href="my/mycard_none">· 분실신고/잔액이전</a></li> -->
+
+				<li><a href="cardList" required="login">· 보유 카드</a></li>
+				<li><a href="mycard_info_input" required="login">· 카드 등록</a></li>
+				<li><a href="mycard_charge_1" required="login">· 카드 충전</a></li>
+
 				<!-- 160609 텍스트 수정 end -->
 			</ul>
 		</li>
 		<li>
 			<a href="javascript:void(0);">My 스타벅스 e-Gift Card<span class="sbox_arrow_down"></span></a>
 			<ul>
-				<li><a href="../msr/sceGift/gift_step2" required="login" data-href="msr/sceGift/gift_step1">· 선물하기</a></li>
-				<!-- <li><a href="javascript:void(0);" required="login" data-href="my/egiftCard">· 선물 내역</a></li>
-				<li><a href="javascript:void(0);" required="login" data-href="my/egiftCard_shopping_bag">· 장바구니 내역</a></li> -->
+
+				<li><a href="../msr/sceGift/gift_step2" required="login">· 선물하기</a></li>
+
 			</ul>
 		</li>
 		<li class="msRnb_btn">
-			<a href="javascript:void(0);" required="login" data-href="javascript:void(0);">My 쿠폰<span class="sbox_arrow_down"></span></a>
+			<a href="javascript:void(0);" required="login">My 쿠폰<span class="sbox_arrow_down"></span></a>
 			<ul>
-				<li><a href="../my/ecoupon">· 등록하기</a></li>
-				<!-- <li><a href="my/ecoupon?t=GIFT">· 선물하기</a></li>
-				<li><a href="my/ecoupon?t=USE">· 사용하기</a></li> -->
-				<li><a href="../my/couponList">· 보유 쿠폰 내역</a></li>
+				<li><a href="ecoupon">· 등록하기</a></li>
+				<li><a href="couponList">· 보유 쿠폰 내역</a></li>
+
 			</ul>
 		</li>
-		<!-- <li class="msRnb_btn"><a href="my/drink_shop" required="login">My 음료/매장</a></li> -->
-		<li class="msRnb_btn"><a href="../my/my_menu" required="login" data-href="my/my_menu">My 메뉴</a></li>
 		
-		 
-		<!-- <li class="msRnb_btn"><a href="my/order_status_list" required="login">케익 주문 현황</a></li> -->
-		<li class="msRnb_btn"><a href="../my/eReceipList" required="login" data-href="my/eReceiptList">전자영수증</a></li>
-		<li class="msRnb_btn"><a href="javascript:void(0);" onclick="fn_rewardTumblerMsrCheck();">개인컵 리워드 설정</a></li>
-		<li class="msRnb_btn"><a href="javascript:void(0);" required="login" data-href="my/dtpass">My DT Pass</a></li>
-		<!-- <li>
-			<a href="javascript:void(0);">개인정보관리<span class="sbox_arrow_down"></span></a>
-			<ul>
-				<li><a href="javascript:void(0);" required="login" data-href="my/myinfo_modify_login">· 개인정보확인 및 수정</a></li>
-				<li><a href="javascript:void(0);" required="login" data-href="my/myinfo_out">· 회원 탈퇴</a></li>
-				<li><a href="javascript:void(0);" required="login" data-href="my/myinfo_modify_pwd">· 비밀번호 변경</a></li>
-			</ul>
-                </div>
-               
+			<li class="msRnb_btn"><a href="my_menu" required="login">My 메뉴</a></li>
+			<li class="msRnb_btn"><a href="eReceiptList" required="login">전자영수증</a></li>
+			<li class="msRnb_btn"><a href="javascript:void(0);"  onclick="fn_rewardTumblerMsrCheck();">개인컵 리워드 설정</a></li>
+			<li class="msRnb_btn"><a href="dtpass" required="login">My DT Pass</a></li>
+			<li>
+				<a href="javascript:void(0);">개인정보관리<span class="sbox_arrow_down"></span></a>
+				<ul>
+              
+					<li><a href="my/myinfo_modify_login" required="login">· 개인정보확인 및 수정</a></li>
+					<li><a href="my/myinfo_out" required="login">· 회원 탈퇴</a></li>
+					<li><a href="my/myinfo_modify_pwd" required="login">· 비밀번호 변경</a></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+					<!-- //네비 -->
+				</div>
                 <!-- 내용 end -->
             </div>
 	
@@ -1316,16 +1309,7 @@ var eFrequencyPlannerYn = 'Y';
 				location.href="../my/dtpass";
 			
 			};
-						
-			
-			
-	/* 		function fn_deletePop(el) {
-			if(!$(el).hasClass("disable")) {
-				var message	= "등록된 번호를 삭제하였습니다.";
-				alert(message);
-				
-			}
-		}; */
+
 			
 
 		</script>

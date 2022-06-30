@@ -3,6 +3,7 @@ package com.clone.starbucks.controller;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.text.ParseException;
+import java.util.ArrayList;
 import java.util.HashMap;
 
 import javax.servlet.http.HttpServletRequest;
@@ -24,6 +25,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import com.clone.starbucks.DAO.IMyDAO;
 import com.clone.starbucks.DTO.AllDTO;
 import com.clone.starbucks.DTO.CardDTO;
+import com.clone.starbucks.DTO.CustomDTO;
 import com.clone.starbucks.DTO.E_couponDTO;
 import com.clone.starbucks.DTO.RegisterDTO;
 import com.clone.starbucks.DTO.UserInfoDTO;
@@ -284,6 +286,7 @@ public class MyController {
 		return "my/dtpass";
 	}
 	
+
 	
 
 	
@@ -387,6 +390,14 @@ public class MyController {
 	
 	
 
+	@RequestMapping(value = "my/my_menu")
+	public String my_menu(Model model) {
+		ArrayList<CustomDTO> list = myService.setCusTable();
+		model.addAttribute("custom", list);
+		return "my/my_menu";
+	}
+
+
 	@GetMapping("userInfo")
 	public String userInfoLoad(UserInfoDTO userinfo, RegisterDTO member, HttpServletRequest req, Model model) {
 		String name = member.getName();
@@ -395,6 +406,6 @@ public class MyController {
 		return "my/index";
 	}
 
-	
+
 	
 }

@@ -6,6 +6,7 @@ import org.springframework.stereotype.Repository;
 
 import com.clone.starbucks.DTO.AllDTO;
 import com.clone.starbucks.DTO.CardDTO;
+import com.clone.starbucks.DTO.CustomDTO;
 import com.clone.starbucks.DTO.E_couponDTO;
 import com.clone.starbucks.DTO.UserInfoDTO;
 
@@ -62,4 +63,10 @@ public interface IMyDAO {
 	int updateDtpass(UserInfoDTO userInfo);
 
 	int deleteDtpass(UserInfoDTO userInfo);
+
+	
+	ArrayList<CustomDTO> customList(String id); //지혜
+	
+	int deleteCustom(int cus_no); //지혜
+
 }

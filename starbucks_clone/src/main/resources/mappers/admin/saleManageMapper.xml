@@ -1,3 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="mappers.admin.saleManageMapper"></mapper>
+<mapper namespace="com.clone.starbucks.DAO.IAdminDAO">
+	
+	<select id="salesDrinkCount" parameterType="String" resultType="Integer">
+		SELECT SUM(salecount) from sale a JOIN product b ON a.p_name=b.p_name WHERE TO_CHAR(a.saledate,'MM')=#{saledate} AND b.p_category1='음료'
+	</select>
+	
+	<select id="drinkRank" resultType="com.clone.starbucks.DTO.RankDTO">
+		select DISTINCT a.p_name, sum(a.salecount) sumcount, dense_rank() OVER (PARTITION BY b.p_category1 ORDER BY sum(a.salecount) DESC) rank from sale a LEFT OUTER JOIN product b ON a.p_name=b.p_name where b.p_category1='음료' group by a.p_name, b.p_category1 
+	</select>
+	
+	<select id="allCount" resultType="int">
+		select sum(a.salecount) from sale a JOIN product b ON a.p_name=b.p_name where b.p_category1='음료'
+	</select>
+	
+
+</mapper>

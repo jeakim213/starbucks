@@ -14,6 +14,7 @@ import org.springframework.ui.Model;
 import com.clone.starbucks.DAO.IMyDAO;
 import com.clone.starbucks.DTO.AllDTO;
 import com.clone.starbucks.DTO.CardDTO;
+import com.clone.starbucks.DTO.CustomDTO;
 import com.clone.starbucks.DTO.E_couponDTO;
 import com.clone.starbucks.DTO.UserInfoDTO;
 
@@ -275,7 +276,6 @@ public class MyServiceImpl implements IMyService {
 			
 		}
 
-
 		//----------- dt pass
 		
 		@Override
@@ -307,6 +307,26 @@ public class MyServiceImpl implements IMyService {
 
 			return "삭제 완료";
 		}
+
+	@Override //커스텀메뉴 리스트 - 지혜 0628
+	public ArrayList<CustomDTO> setCusTable() {
+		UserInfoDTO user = (UserInfoDTO) session.getAttribute("userInfo");
+	    String id = user.getId();
+	    ArrayList<CustomDTO> result = myDAO.customList(id);
 		
+		return result;
+	}
+	
+	@Override //커스텀메뉴 삭제 - 지혜 0629
+	public String deleteCustom(ArrayList<Integer> cusNoArr) {
+		//배열에서 cus_no하나씩 꺼내서 delete작업
+		//성공결과 실패결과 String으로 담아서 전달하기.
+		String msg = "성공";
+		for(Integer aa : cusNoArr) {
+			int result = myDAO.deleteCustom(aa.intValue());
+			if(result < 1) msg = "실패";
+		}
+		return msg;
+	}
 	
 }

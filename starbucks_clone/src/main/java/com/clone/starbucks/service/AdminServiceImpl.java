@@ -4,6 +4,8 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Random;
 
 import javax.servlet.http.HttpServletRequest;
@@ -11,10 +13,14 @@ import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.ui.Model;
 
 import com.clone.starbucks.DAO.IAdminDAO;
 import com.clone.starbucks.DTO.E_couponDTO;
+import com.clone.starbucks.DTO.ProductDTO;
+import com.clone.starbucks.DTO.RankDTO;
 import com.clone.starbucks.DTO.RegisterDTO;
+import com.clone.starbucks.DTO.SaleDTO;
 import com.clone.starbucks.DTO.UserInfoDTO;
 
 @Service
@@ -318,5 +324,62 @@ public class AdminServiceImpl implements IAdminService {
 		adminDAO.deleteUser(user.getId());
 		return "회원 삭제 완료";
 	}
+	//----------------------sale----------------------------
+
+	@Override
+	public void drinkCount(Model model) {
+		//월별 카운트 뽑아내기
+		Integer JanDrink = adminDAO.salesDrinkCount("01");
+		Integer FebDrink = adminDAO.salesDrinkCount("02");
+		Integer MarDrink = adminDAO.salesDrinkCount("03");
+		Integer AprDrink = adminDAO.salesDrinkCount("04");
+		Integer MayDrink = adminDAO.salesDrinkCount("05");
+		Integer JunDrink = adminDAO.salesDrinkCount("06");
+		Integer JulDrink = adminDAO.salesDrinkCount("07");
+		Integer AugDrink = adminDAO.salesDrinkCount("08");
+		Integer SepDrink = adminDAO.salesDrinkCount("09");
+		Integer OctDrink = adminDAO.salesDrinkCount("10");
+		Integer NovDrink = adminDAO.salesDrinkCount("11");
+		Integer DecDrink = adminDAO.salesDrinkCount("12");
+		
+		model.addAttribute("drink1",JanDrink);
+		model.addAttribute("drink2",FebDrink);
+		model.addAttribute("drink3",MarDrink);
+		model.addAttribute("drink4",AprDrink);
+		model.addAttribute("drink5",MayDrink);
+		model.addAttribute("drink6",JunDrink);
+		model.addAttribute("drink7",JulDrink);
+		model.addAttribute("drink8",AugDrink);
+		model.addAttribute("drink9",SepDrink);
+		model.addAttribute("drink10",OctDrink);
+		model.addAttribute("drink11",NovDrink);
+		model.addAttribute("drink12",DecDrink);
+	}
+	
+	public void drinkRank(Model model) {
+		ArrayList<RankDTO> list = adminDAO.drinkRank();
+		double allCount = (double)adminDAO.allCount();
+		
+		
+		model.addAttribute("name1", list.get(0).getP_name());
+		model.addAttribute("name2", list.get(1).getP_name());
+		model.addAttribute("name3", list.get(2).getP_name());
+		model.addAttribute("name4", list.get(3).getP_name());
+		model.addAttribute("name5", list.get(4).getP_name());
+		model.addAttribute("name6", list.get(5).getP_name());
+		
+		model.addAttribute("value1",String.format("%.02f", (((double)(list.get(0).getSumcount()))/allCount)*100));
+		model.addAttribute("value2",String.format("%.02f", (((double)(list.get(1).getSumcount()))/allCount)*100));
+		model.addAttribute("value3",String.format("%.02f", (((double)(list.get(2).getSumcount()))/allCount)*100));
+		model.addAttribute("value4",String.format("%.02f", (((double)(list.get(3).getSumcount()))/allCount)*100));
+		model.addAttribute("value5",String.format("%.02f", (((double)(list.get(4).getSumcount()))/allCount)*100));
+		model.addAttribute("value6",String.format("%.02f", (((double)(list.get(5).getSumcount()))/allCount)*100));
+		model.addAttribute("other",String.format("%.02f", ((double)(allCount-(list.get(1).getSumcount()+list.get(2).getSumcount()+list.get(3).getSumcount()+list.get(4).getSumcount()+list.get(5).getSumcount()+list.get(0).getSumcount()))/allCount)*100));
+		
+		
+	}
+	
+	
+	
 	
 }

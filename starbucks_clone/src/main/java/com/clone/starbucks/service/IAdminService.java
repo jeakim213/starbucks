@@ -1,12 +1,18 @@
 package com.clone.starbucks.service;
 
 import java.text.ParseException;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.springframework.ui.Model;
+
 import com.clone.starbucks.DTO.E_couponDTO;
+import com.clone.starbucks.DTO.ProductDTO;
 import com.clone.starbucks.DTO.RegisterDTO;
+import com.clone.starbucks.DTO.SaleDTO;
 import com.clone.starbucks.DTO.UserInfoDTO;
 
 public interface IAdminService {
@@ -30,5 +36,11 @@ public interface IAdminService {
 	String memberModifyProc(RegisterDTO all, UserInfoDTO userInfo);
 	
 	String deleteProc(RegisterDTO all, UserInfoDTO userInfo);
+
+//------------------------------------------sale------------------------------------------------
+	
+	void drinkCount(Model model);
+	
+//------------------------------------------sale------------------------------------------------	
 	
 }
