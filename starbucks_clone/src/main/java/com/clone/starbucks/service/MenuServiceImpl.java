@@ -220,7 +220,7 @@ public class MenuServiceImpl implements IMenuService{
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 		HashMap<String,String> sale = (HashMap<String,String>)session.getAttribute("saleCount");
 		
-		if(!data.get("couponNum").isEmpty()) {//쿠폰 있는 경우 사용상태로 변경해줌
+		if(!data.get("couponNum").isBlank()) {//쿠폰 있는 경우 사용상태로 변경해줌
 			if(myDao.useCoupon(data.get("couponNum")) < 1)  return 0;
 		}
 		String method = data.get("method");
@@ -250,11 +250,14 @@ public class MenuServiceImpl implements IMenuService{
 	        int result = dao.insertSale(dto);
 	        if(result != 1) System.out.println(dto.getP_name() + "DB입력에러");
 		}
-		makeStar(user, sale.keySet(), sdf.parse(data.get("pay_date")));//별 생성
-		
-		session.removeAttribute("saleCount");//판매개수
-		session.removeAttribute("list");//장바구니
-		session.removeAttribute("drink");//음료 유무
+		//0628지혜
+	    String check = (String)session.getAttribute("drink");
+	    if(!check.equals("N")) {
+	       makeStar(user, sale.keySet(), sdf.parse(data.get("pay_date")));//별 생성
+	       session.removeAttribute("drink");//음료 유무
+	    }
+	    session.removeAttribute("saleCount");//판매개수
+	    session.removeAttribute("list");//장바구니
 		
 		return 1;
 	}

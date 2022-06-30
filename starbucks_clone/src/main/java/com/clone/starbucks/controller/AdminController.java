@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.clone.starbucks.DTO.E_couponDTO;
 import com.clone.starbucks.DTO.RegisterDTO;
+import com.clone.starbucks.DTO.SaleDTO;
 import com.clone.starbucks.DTO.UserInfoDTO;
 import com.clone.starbucks.service.AdminServiceImpl;
 
@@ -56,7 +57,9 @@ public class AdminController {
 	
 	   //0601 다정 커피
 	   @RequestMapping(value="admin/saleChart-1")
-	   public String saleChart1() {
+	   public String saleChart1(Model model) {
+		  adminService.drinkCount(model);
+		  adminService.drinkRank(model);
 	      return "admin/saleChart-1";
 	   }
 	   
@@ -137,5 +140,6 @@ public class AdminController {
 		}
 		return "redirect:/";
 	}
+	
 	
 }
