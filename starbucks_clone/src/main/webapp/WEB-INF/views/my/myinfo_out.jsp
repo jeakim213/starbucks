@@ -647,1329 +647,290 @@ var eFrequencyPlannerYn = 'Y';
 </div>			
 
 
-            <div id="container">
-                <!-- 서브 타이틀 -->
-                
+       		<div id="container">
+				<!-- 서브 타이틀 -->
+				
 <header class="ms_sub_tit_wrap">
 	<div class="ms_sub_tit_bg">
 		<div class="ms_sub_tit_inner">
-			<h4><img alt="My 음료/매장" src="../common/img/util/ms_ttl.png"></h4>
+			<h4><img alt="My 음료/매장" src="../common/img/util/myinfo/tit02.png"></h4>
 			<ul class="smap">
 				<li><a href="/"><img src="//image.istarbucks.co.kr/common/img/common/icon_home_w.png" alt="홈으로"></a></li>
 				<li><img class="arrow" src="//image.istarbucks.co.kr/common/img/common/icon_arrow_w.png" alt="작은 맵 화살표"></li>
-				<li><a href="my/index">My Starbucks</a></li>
+				<li><a href="/my/index.do">My Starbucks</a></li>
 				
+					<li><img class="arrow" src="//image.istarbucks.co.kr/common/img/common/icon_arrow_w.png" alt="작은 맵 화살표"></li>
+					<li><a href="/my/myinfo_modify.do">개인정보관리</a></li>
+				
+				
+					<li><img class="arrow" src="//image.istarbucks.co.kr/common/img/common/icon_arrow_w.png" alt="작은 맵 화살표"></li>
+					<li><a href="/my/myinfo_out.do">회원탈퇴</a></li>
 				
 			</ul>
 		</div>
 	</div>
 </header>
-                <!-- 서브 타이틀 end -->
-                
-                <!-- 내용 -->
-                <div class="ms_cont_wrap">
-                    <div class="ms_cont">
-                        <!-- 150528 - 문진욱 -->
-                        <!-- 일반회원 -->
-                        <div class="regular_user_index" style="display:none;">
-                            <!-- 일반회원정보 -->
-                            <section class="regu_user_info regu_info_add"><!-- 20200129 class="regu_info_add" 추가 -->
-                                <article class="regu_user_info_center">
-                                	<!-- 이단 -->
-                                    <p><strong class="userName"><!-- 홍길동 --></strong> 님 안녕하세요.<br><span>(지금 스타벅스 카드를 등록하시면 <span class="en">Starbucks Rewards</span> 혜택을 받으실 수 있습니다.)</span></p> <!-- 스타벅스 리워드 수정 -->
-                                    <!-- <a href="./myinfo_modify">개인정보 수정</a> -->
-                                    <!-- 20160929 김민호 수정 -->
-									<a href="./myinfo_modify_login">개인정보 수정</a>
-									<a class="gray" href="./myinfo_modify_pwd">비밀번호 변경</a>
-									<!-- 20160929 김민호 수정 end -->
-                                </article>
-                            </section>
-                            <!-- 일반회원정보 end -->
-                            <!-- 카드혜택보기 -->
-							<section class="card_advantage_wrap">
-								<div class="card_advantage_int">
-									<div class="card_advantage_icon">
-										<figure class="card_advantage_icon1"></figure>
-									</div>
-									<div class="card_advantage_cont">
-										<!-- 150706 DOM 수정 - 텍스트 수정 -->
-										<div class="card_adv_txt1"><strong>아직 등록된 스타벅스 카드가 없으신가요?</strong><br>스타벅스 카드를 등록하시고 생일 무료음료 쿠폰과 다양한 스타벅스의<br> 리워드를 경험하세요. 스타벅스만의 특별한 혜택을 경험하실 수 있습니다.</div>
-										<!-- 150706 DOM 수정 - 텍스트 수정 end -->
-										<p class="card_adv_btn card_adv_btn1"><a href="menu/card_list">스타벅스 카드 보기</a></p>
-										<p class="card_adv_btn card_adv_btn2"><a href="msr/sceGift/gift_step1">스타벅스 e-Gift Card 구매</a></p>
+				<!-- 서브 타이틀 end -->
+				
+				<!-- 내용 -->
+				<div class="ms_cont_wrap">
+					<div class="ms_cont">
+						<!-- 회원탈퇴 -->
+						<section class="ms_myinfo_section ms_myinfo_add">
+							<div class="ms_myinfo">
+								<div class="mem_info_wrap">
+									<div class="mem_txt_zone">
+										<p class="p1">
+											<span class="s1 userName"></span>님의
+											<span class="year"></span>년
+											<span class="month"></span>월
+											<span class="date"></span>일
+											<span class="end">현재 스타벅스 서비스 현황입니다.</span><br />
+											<span class="s2">아래 사항들을 확인하시고,</span>
+											<span class="s2 end">회원탈퇴에 대해 다시 한번 신중히 결정해주세요.</span>
+										</p>
+										<ul class="mem_level">
+											<li class="li1"></li>
+											<li class="li2">유효한 스타벅스 별 : <span>0개</span></li>
+											<li class="li3">사용 가능한 쿠폰 : <span>0장</span></li>
+										</ul>
 									</div>
 								</div>
-								<div class="card_advantage_inb">
-									<div class="card_advantage_icon">
-										<figure class="card_advantage_icon2"></figure>
-									</div>
-									<div class="card_advantage_cont2">
-										<!-- 150706 DOM 수정 - 텍스트 수정 -->
-										<div class="card_adv_txt2"><strong>스타벅스만의 특별한 혜택이 궁금하신가요?</strong><br>혜택에 편리함까지 더한 스타벅스 리워드로<br> 한층 더 스타벅스를 특별하게 즐기세요.</div> <!-- 스타벅스 리워드 수정 -->
-										<!-- 150706 DOM 수정 - 텍스트 수정 end -->
-										<p class="card_adv_btn card_adv_btn3"><a href="msr/msreward/level_benefit">스타벅스 혜택보기</a></p>
-									</div>
+								<div class="mem_tit_area">
+									<p class="mem_tit"><span class="userName"></span>님의 등록된 스타벅스 카드</p>
+									<p class="mem_my_card">총 보유카드 : 0장</p>
 								</div>
-							</section>
-							<!-- 카드혜택보기 end -->                 
-                            <!-- 매장 & 카드 -->
-                            <section class="ms_sstore_charging">
-                                <article class="ms_sstore_charging_l">
-                                    <header><strong>새로운 스타벅스 매장을 소개합니다.</strong><br>전국의 새로운 스타벅스의 얼굴들을 만나보세요~!</header>
-                                    <div class="ms_sstore_slider">
-                                    	<!-- 150721 수정 - 신규매장이 없을 경우  -->
-                                    	<div class="no_store_wrap" style="display: none;">
-	                                    	<figure><img src="//image.istarbucks.co.kr/common/img/util/no_store.jpg" alt=""></figure>
-											<p class="cont">신규 매장이 없습니다.</p>
-										</div>
-                                    	<!-- 150721 수정 - 신규매장이 없을 경우  end -->
-                                        <div class="bx-wrapper" style="max-width: 286px; margin: 0px auto;"><div class="bx-viewport" style="width: 100%; overflow: hidden; position: relative; height: 209px;"><ul class="yes_store_wrap" style="width: 515%; position: relative; transition-duration: 0s; transform: translate3d(-300px, 0px, 0px);"><li style="float: left; list-style: none; position: relative; width: 130px; margin-right: 20px;" class="bx-clone">                                                 <a href="store/store_map?in_biz_cd=4157">                                                     <div class="ms_sstore_slider_img">                                                         
-                                        <img alt="" src="../common/img/util/4157.jpg" onerror="this.src='../common/img/util/edwDefault.png'">                                                     </div>                                                     <div class="ms_sstore_slider_txt">                                                         <strong>양산물금DT</strong><br>                                                         경남 양산시<br>                                                         <span class="date">2022-06-02</span>                                                     </div>                                                 </a>                                             </li><li style="float: left; list-style: none; position: relative; width: 130px; margin-right: 20px;" class="bx-clone">                                                 <a href="store/store_map?in_biz_cd=4322">                                                     <div class="ms_sstore_slider_img">                                                         
-                                        <img alt="" src="../common/img/util/4322.jpg" onerror="this.src='../common/img/util/edwDefault.png'">                                                     </div>                                                     <div class="ms_sstore_slider_txt">                                                         <strong>대구이월드</strong><br>                                                         대구 달서구<br>                                                         <span class="date">2022-05-27</span>                                                     </div>                                                 </a>                                             </li>
-                                        <li style="float: left; list-style: none; position: relative; width: 130px; margin-right: 20px;">                                                 <a href="store/store_map?in_biz_cd=4298">                                                     <div class="ms_sstore_slider_img">                                                         
-                                        <img alt="" src="../common/img/util/4298.jpg" onerror="this.src='../common/img/util/edwDefault.png'">                                                     </div>                                                     <div class="ms_sstore_slider_txt">                                                         <strong>가산현대아울렛</strong><br>                                                         서울 금천구<br>                                                         <span class="date">2022-06-03</span>                                                     </div>                                                 </a>                                             </li><li style="float: left; list-style: none; position: relative; width: 130px; margin-right: 20px;">                                                 <a href="store/store_map?in_biz_cd=4157">                                                     <div class="ms_sstore_slider_img">                                                         
-                                        <img alt="" src="../common/img/util/4157.jpg" onerror="this.src='../common/img/util/edwDefault.png'">                                                     </div>                                                     <div class="ms_sstore_slider_txt">                                                         <strong>양산물금DT</strong><br>                                                         경남 양산시<br>                                                         <span class="date">2022-06-02</span>                                                     </div>                                                 </a>                                             </li><li style="float: left; list-style: none; position: relative; width: 130px; margin-right: 20px;">                                                 <a href="store/store_map?in_biz_cd=4322">                                                     <div class="ms_sstore_slider_img">                                                         
-                                        <img alt="" src="../common/img/util/4322.jpg" onerror="this.src='../common/img/util/edwDefault.png'">                                                     </div>                                                     <div class="ms_sstore_slider_txt">                                                         <strong>대구이월드</strong><br>                                                         대구 달서구<br>                                                         <span class="date">2022-05-27</span>                                                     </div>                                                 </a>                                             </li><li style="float: left; list-style: none; position: relative; width: 130px; margin-right: 20px;" class="bx-clone">                                                 <a href="store/store_map?in_biz_cd=4298">                                                     <div class="ms_sstore_slider_img">                                                         
-                                        <img alt="" src="../common/img/util/4298.jpg" onerror="this.src='../common/img/util/edwDefault.png'">                                                     </div>                                                     <div class="ms_sstore_slider_txt">                                                         <strong>가산현대아울렛</strong><br>                                                         서울 금천구<br>                                                         <span class="date">2022-06-03</span>                                                     </div>                                                 </a>                                             </li><li style="float: left; list-style: none; position: relative; width: 130px; margin-right: 20px;" class="bx-clone">                                                 <a href="store/store_map?in_biz_cd=4157">                                                     <div class="ms_sstore_slider_img">                                                         
-                                        <img alt="" src="../common/img/util/4157.jpg" onerror="this.src='../common/img/util/edwDefault.png'">                                                     </div>                                                     <div class="ms_sstore_slider_txt">                                                         <strong>양산물금DT</strong><br>                                                         경남 양산시<br>                                                         <span class="date">2022-06-02</span>                                                     </div>                                                 </a>                                             </li></ul></div><div class="bx-controls bx-has-controls-direction"><div class="bx-controls-direction"><a class="bx-prev" href="">Prev</a><a class="bx-next" href="">Next</a></div></div></div>
-                                        <script id="storeList" type="text/x-jquery-tmpl">
-                                        	<li>
-                                                <a href="store/store_map?in_biz_cd=\${s_biz_code}">
-                                                    <div class="ms_sstore_slider_img">
-                                                        <img alt="" src="\${defaultimage}" onerror="this.src='../common/img/util/edwDefault.png'">
-                                                    </div>
-                                                    <div class="ms_sstore_slider_txt">
-                                                        <strong>\${s_name}</strong><br>
-                                                        \${sido_name} \${gugun_name}<br>
-                                                        <span class="date">\${open_dt.substr(0, 4)}-\${open_dt.substr(4, 2)}-\${open_dt.substr(6, 2)}</span>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                    	</script>
-                                    </div>
-                                </article>
-                                <article class="ms_sstore_charging_r">
-                                    <div class="ms_regi_card">
-                                        <a href="javascript:void(0);" required="login" data-href="my/mycard_info_input">
-                                            <figure class="icon_ms_regi_card"></figure>
-                                            <p><strong>카드등록</strong><br>카드를 등록하시고 다양한 리워드를 만나보세요.</p>
-                                            <strong>카드등록</strong>
-                                        </a>
-                                    </div>
-                                    <div class="ms_charge_card">
-                                        <a href="javascript:void(0);" required="login" data-href="my/mycard_none">
-                                            <figure class="icon_ms_charge_card"></figure>
-                                            <p><strong>카드충전</strong><br>매장과 온라인에서 간편하게 충전하세요.</p>
-                                            <strong>카드충전</strong>
-                                        </a>
-                                    </div>
-                                    <div class="regu_mem_icon_wrap" >
-                                        <a class="regu_mem_icon1"  href="javascript:void(0);" required="login" data-href="javascript:void(0);">
-                                            <span class="regu_icon"></span> <!-- 20210302 수정 -->
-                                            <span class="regu_txt">전자영수증</span> <!-- 20210302 수정 -->
-                                        </a>
-                                        <a class="regu_mem_icon3" href="javascript:void(0);" required="login" data-href="javascript:void(0);">
-                                            <span class="regu_icon"><i>0</i></span>
-                                            <span class="regu_txt">e-쿠폰</span>
-                                        </a>
-                                    </div>
-                                </article>
-                            </section>
-                            <!-- 매장 & 카드 end -->
-                        </div>
-                        <!-- 일반회원 end -->
-
-                        <!-- msr 회원 -->
-                        <div class="msr_user_index">
-                            <!-- 유저정보 -->
-                            <section class="ms_user_info ms_user_add"><!-- 20200123 class="ms_user_add" 추가 -->
-                            	<!-- s::20200123 페이스북 프로필 기능 삭제 관련 메인 수정 -->
-                                <article class="ms_user_info_left">
-                                	<h5><span class="en">My</span> 리워드</h5>
-                                	<%-- <p class="ms_user_stat mo_block">
-                                		<span><strong class="userName">${nickname }</strong> 님은</span><br>
-                                		<span>현재 <strong class="en userGrade"><!-- Green Level --></strong>이십니다.</span>
-                                	</p>
-                                	<!-- 20200805 PLCC 추가 -->
-                               		<div class="plcc-logo" style="display:none;">
-                               			<img src="../common/img/util/plcc-logo.png" alt="Hyundai Card + STARBUCKS">
-                               		</div> --%>
-                               		<!-- 예은 수정 -->
-                                	<figure class="en ms_user_starbg" style="display:block;width:67.5%;height: 90%; position:relative; top:inherit; left:inherit; line-height:inherit; background-size:100%;background-position: 50% 50%;background-repeat: no-repeat; margin:0 auto;">
-                                	<span class="totalStar" style="display:block; width:100%; height:100%;padding-top: 25%; margin-left:-1%;text-align: center;box-sizing: border-box;"><strong>${star }</strong></span></figure>
-                                    <!-- <p class="ms_user_stat_notice"><strong class="en t_bd9b60">OOO Level</strong>을 유지 중 입니다.<br>무료음료 쿠폰 발행까지 개의 별이 남았습니다.</p> -->
-                                </article>
-                                <article class="ms_user_info_right" style="width:50%;box-sizing: border-box;padding: 80px 0 0 50px;">
-                                    <p class="ms_user_stat"><span><strong class="userName">${nickname }</strong> 님은</span> <span>현재 <strong class="en userGrade">${grade }</strong>이십니다.</span></p>
-                                    <!-- 20200805 PLCC 추가 -->
-                               		<div class="plcc-logo" style="display:none;">
-                               			<img src="../common/img/util/plcc-logo.png" alt="Hyundai Card + STARBUCKS">
-                               		</div>
-                                   <!--  <div class="ms_user_stat_btns">
-                                        <ul>
-											<li><a href="./reward">리워드 및 혜택</a></li>
-											<li><a href="./reward_star_history">별 히스토리</a></li>
-											<li class="btn_black"><a href="./myinfo_modify_login">개인정보 수정</a></li>
-											<li class="btn_gray"><a class="gray" href="./myinfo_modify_pwd">비밀번호 변경</a></li>
-                                        </ul>
-                                    </div> -->
-                                </article>
-                                <!-- e::20200123 페이스북 프로필 기능 삭제 관련 메인 수정 -->
-                            </section>
-                            <!-- 유저정보 end -->
-                            <!-- 등록된 카드 없음 -->
-							<section class="have_no_ms_card" style="display:none;">
-								<i class="icon_nocard"></i>
-								<p class="nocard_txt_guide"><strong>현재 등록된 스타벅스 카드가 없습니다.</strong><br>스타벅스만의 특별한 혜택을 이용하시기 위해서는 카드가 필요합니다.<br>스타벅스 카드를 등록하시고 생일 무료음료 쿠폰과<br>다양한 스타벅스의 리워드를 이용하세요.</p>
-								<div class="nocard_btns">
+								<table summary="나의 스타벅스 카드 웹 버전" class="myCardInfo mb50">
+									<caption class="hid">나의 스타벅스 카드, 카드명, 카드번호, 최종 사용일 카드 등록일, 잔액에 대한 테이블</caption>
+									<colgroup>
+										<col width="165">
+										<col width="121">
+										<col width="179">
+										<col width="159">
+										<col width="117">
+										<col width="89">
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col">카드</th>
+											<th scope="col">카드명</th>
+											<th scope="col">카드번호</th>
+											<th scope="col">최종 사용일</th>
+											<th scope="col">카드 등록일</th>
+											<th scope="col">잔액</th>
+										</tr>
+									</thead>
+									<tbody>
+									</tbody>
+								</table>
+								<script id="cardList" type="text/x-jquery-tmpl">
+									<tr>
+										<td><img src="${cardThumbnailIimgUrl}" alt="" class="cardImg" /></td>
+										<td>${cardNickname}</td>
+										<td class="en">${$item.getCardNumber}</td>
+										<td class="en">${balanceConfirmDate}</td>
+										<td class="en">${cardRegDate}</td>
+										<td class="b"><span class="en"><strong>${$.number(balance)}</strong></span>원</td>
+									</tr>
+								</script>
+								
+								<table summary="나의 스타벅스 카드 모바일 버전" class="m_myCardInfo">
+									<caption class="hid">나의 스타벅스 카드, 카드명, 카드번호, 최종 사용일 카드 등록일, 잔액에 대한 테이블</caption>
+									<colgroup>
+										<col width="46.5625%">
+										<col width="53.4375%">
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col">카드</th>
+											<th scope="col">카드명, 카드번호, 최종 사용일 카드 등록일, 잔액에 대한 테이블</th>
+										</tr>
+									</thead>
+									<tbody>
+									</tbody>
+								</table>
+								<script id="cardList_MOBILE" type="text/x-jquery-tmpl">
+									<tr>
+										<td class="card"><img src="${cardThumbnailIimgUrl}" alt=""></td>
+										<td>
+											<p class="p1">${cardNickname}</p>
+											<p class="p2 en">${$item.getCardNumber}</p>
+											<p class="p3 en">${balanceConfirmDate}</p>
+											<p class="p4 en">${cardRegDate}</p>
+										</td>
+									</tr>
+								</script>
+								
+								<ul class="pager mb40">
+								</ul>
+								<!--
+								<p class="mem_tit"><span class="userName"></span>님의 e-프리퀀시</p>
+								<div class="efreq_info_wrap">
+									<dl class="card">
+										<dt>
+											<p class="bc"><img src="//image.istarbucks.co.kr/common/img/util/myinfo/bc_sam.jpg" alt="" /></p>
+											<p class="num n1">2533  5896  5651 2542</p>
+											<p class="num n2">1234</p>
+										</dt>
+										<dd>e-프리퀀시 바코드: <span class="en">2533-5896-5651-2542</span></dd>
+									</dl>
+									<p class="date">카드등록일: 2015-02-01</p>
+								</div>
+								<p class="efreq_no_ment">현재 진행중인(이용중인) e-프리퀀시 프로모션이 없습니다.</p>
+								-->
+							</div>
+							<div class="ms_warning">
+								<p class="myinfo_tit">스타벅스 리워드 서비스 해지 시 유의사항</p> <!-- 스타벅스 리워드 수정 -->
+								<!-- s::211221 수정 -->
+								<div class="warning">
 									<ul>
-										<li class="nocard_btn1"><a href="msr/scard/about">스타벅스 카드 보기</a></li>
-										<li class="nocard_btn2"><a href="msr/sceGift/gift_step1">스타벅스 e-Gift Card 구매</a></li>
+										<li>회원 탈퇴는 계정에 등록된 스타벅스 카드에 잔액이 없는 경우 또는 잔액이 있는 스타벅스 카드가 모두 등록 해지된 경우 가능합니다. 스타벅스 카드에 잔액이 있는 경우, 전액 소진, 잔액이전 또는 환불 신청 등을 통해 잔액이 0원이 된 후 회원 탈퇴가 가능합니다.</li>
+										<li>회원 탈퇴 시에는 고객님의 개인정보 및 등록된 스타벅스 카드의 정보가 모두 삭제되어 더 이상 스타벅스 리워드 혜택을 받으실 수 없습니다.</li>
+										<li>회원 탈퇴 시 등록 해지한 스타벅스 카드는 등록하지 않은 상태에서도 스타벅스에서 정상적으로 사용 가능하지만 별 적립, 분실신고 시 잔액보장 등의 스타벅스 리워드 혜택을 받으실 수 없습니다.</li>
+										<li>중지된 스타벅스 카드에 잔액이 있는 경우, 잔액이전 또는 환불을 통해 잔액이 0원이 되어야 회원 탈퇴가 가능하며, 중지된 스타벅스 카드는 재사용 또는 계정 재등록이 불가합니다. </li>
+										<li>골드카드는 수령 등록이 완료된 경우에만 회원 탈퇴가 가능합니다.</li>
+										<li>잔액이 남아있지 않은 골드카드는 탈퇴와 함께 자동으로 중지되어 재사용 또는 재등록이 불가합니다.</li>
+										<li>Gift 배송하기 서비스의 진행 중인 주문 내역 등이 있는 경우, 배송완료일로부터 9일 이후 회원 탈퇴가 가능합니다.</li>
+										<li class="last">회원 탈퇴한 날로부터 30일 이후 회원가입이 가능합니다.</li>
 									</ul>
 								</div>
-							</section>
-							<!-- 등록된 카드 없음 end -->
-                            <!-- My 스타벅스 카드 -->
-                            <section class="my_ms_card" style="background:url('../img/util/card_wave_pattern.png'); background-position: center bottom; background-repeat: no-repeat; border:1px solid #ddd; border-radius:3px;height: 240px; margin-top:40px; width:828px;">
-                                <div class="my_ms_card_inner">
-                                    <header>
-                                        <h5><span class="en">My</span> 스타벅스 카드</h5>
-                                        <p class="recent_card">총 보유카드 : ${cardCount }장</p>
-                                     <!--    <aside>
-                                            <span><strong class="curSlideNo">1</strong>/<span class="totalCnt">5</span></span>
-                                            <p>
-                                                <a class="back" href="javascript:void(0);">이전카드 보기</a>접근성_20171201 수정
-                                                <a class="forward" href="javascript:void(0);">다음카드 보기</a>접근성_20171201 수정
-                                            </p>
-                                        </aside>
-                                        160125 김민호 시작
-										<i class="card_list_btn1"><a href="my/mycard_list"><img src="//image.istarbucks.co.kr/common/img/util/card_list_btn1.png" alt="보유카드 상세정보">접근성_20171201 alt 수정</a></i> -->
-										<!-- 160125 김민호 end -->
-                                    </header>
-                                    <!-- 예은 수정 -->
-                                    <div class="my_ms_card_cont" style="border-radius:3px;height:150px;width:770px;">
-										<div class="ms_cont">
-											<!-- 메인 카드 슬라이드 -->
-											<section class="my_ms_index_slide" >
-
-												<div class="my_ms_slider_txt">
-													<div class="my_ms_slider_txt_l" style="background:none; float:left; height: 85px; padding: 60px 0 0 3%; width:47%;">
-														<strong class="cardNickname">${c_name }</strong> 
-														<p>${c_num }</p>
-													</div>
-													<div class="my_ms_slider_txt_r" style="color:#222;font-size:16px;float:left;font-weight:bold;height: 234px;line-height:70px;position:relative;text-align:left; padding: 40px 0;  ">
-														잔액 <strong class="en">${remaincost }</strong>원
-														<ul class="op0 my_ms_card_btns" style=" padding: 40px 0; ">
-															<li class="card_charge_btn"><a
-																href="../my/mycard_charge" data-type="CHARGE"
-																data-cardregnumber="20817929">카드 충전</a></li>
-															<li class="card_manage_btn"><a
-																href="../my/mycard_mycardProc" data-type="MANAGEMENT"
-																data-cardregnumber="20817929">카드 관리</a></li>
-														</ul>
-													</div>
-												</div>
-											</section>
-										</div>
-									</div>
+								<!-- e::211221 -->
+								<p class="agree_txt mb40"><input type="checkbox" name="agree1" id="agree1" /> <label for="agree1">회원탈퇴 후 스타벅스 리워드 혜택 및 등록한 스타벅스 카드의 소유권 상실에 대해 동의합니다.</label></p> <!-- 스타벅스 리워드 수정 -->
+								<!-- 20200821 수정 -->
+								<!--
+								<p class="myinfo_tit">e-프리퀀시 서비스 해지 시 유의사항</p>
+								<div class="warning">
+									<ul>
+										<li>회원탈퇴 시 고객님의 e-프리퀀시 바코드는 고객님의 계정에서 등록해지되며 적립되어 있던 e-스티커 등의 내용은 등록하여 이용하던 e-프리퀀시 바코드에 그대로 담겨 있습니다.</li>
+										<li>정상 이용하셨던 e-프리퀀시 바코드 번호는 회원 재가입 후 본인 및 다른 사용자에 의해 다시 등록될 수 있으며 남아있던 e-스티커 등은 새로운 바코드 등록 사용자에게 소유권이 이전됩니다.</li>
+										<li>사용하던 e-프리퀀시 바코드를 재등록 하는 경우, 남아있던 e-스티커의 잔여 수량만 제공되며 거래에 대한 히스토리 정보는 등록한 이후의 내용만 확인하실 수 있습니다.</li>
+										<li class="last">(신규/교체)등록은 e-프리퀀시 바코드 번호 및 Pin 번호를 모두 알고 있어야 가능하며, 스타벅스 리워드 회원에게 자동발급되는 디지털 e-프리퀀시 바코드는 회원 탈퇴 후 재사용하실 수 없습니다.</li> 
+									</ul>
 								</div>
-							</section>
-									
-                            <!-- My 스타벅스 카드 end -->
-                            <!-- 개인화 아이콘 -->
-                            <!-- 예은 수정 -->
-                            <section class="my_ms_per_icon">
-                                <ul  style="padding-left: 140px; margin-left: auto; margin-right: auto; text-align:center;">
-                                    <li class="my_ms_per_icon1" style="display:inline-block">
-                                        <a href="eReceiptList">
-                                            <span class="icon"></span>                                            
-                                            <span class="txt">전자영수증</span> <!-- 20210302 수정(인박스-전자영수증으로 변경) -->
-                                        </a>
-                                    </li>
-                                    <li class="my_ms_per_icon3" style="display:inline-block">
-                                        <a href="ecoupon">
-                                            <span class="icon"><strong class="validCouponCnt">${couponCount}</strong></span>
-                                            <span class="txt">e-쿠폰</span>
-                                        </a>
-                                    </li>
-                                    <li class="my_ms_per_icon4" style="display:inline-block">
-                                        <a href="../my/mycard_charge">
-                                            <span class="icon"></span>
-                                             <!-- 160609 텍스트 수정 -->
-											<span class="txt">카드 충전</span>
-											<!-- 160609 텍스트 수정 end -->
-                                        </a>
-                                    </li>
-                                    
-                                    <li class="my_ms_per_icon5" style="display:inline-block">
-                                        <a href="../my/mycard_info_input">
-                                            <span class="icon"></span>
-                                            <!-- 160609 텍스트 수정 -->
-											<span class="txt">카드 등록</span>
-											<!-- 160609 텍스트 수정 end -->
-                                            
-                                        </a>
-                                    </li>
-                                    
-                                </ul>
-                            </section>
-                            <!-- 개인화 아이콘 end -->
-                            <!-- 최근 마신 음료 -->
-                        <!--     <section class="recent_bev_bg" style="display:none;">
-                                <p class="recent_bev">가장 최근 2015년 3월 11일에 <strong>스타벅스 소공동점</strong>에서 <strong class="t_0d5f34">라스베리 블랙커런트 블렌디드 주스</strong>를 마셨습니다.</p>
-                                <span class="icon_recent_bev"></span>
-                            </section> -->
-                            <!-- 최근 마신 음료 end -->
-                        </div>
-                        <!-- msr 회원 end -->
-                        <!-- 150528 - 문진욱 end -->
-                        <!-- 메뉴 순위 -->
-                      <!--   <section class="my_ms_rank">
-                            <form name="edwForm" method="post">
-                                <fieldset>
-                                    <legend>스타벅스 메뉴 순위 폼</legend>
-                                    <header class="my_ms_rank_head">
-                                        <p class="p1">스타벅스 코리아를 사랑하는</p>
-                                        <div class="my_ms_select">
-                                            <label for="my_ms_age" class="a11y">연령대</label>접근성_20171201 class 추가, 텍스트 수정
-                                            <select id="my_ms_age" class="rank_select">접근성_20171201 class 추가
-                                                <option value="10">10대</option>
-                                                <option value="20" selected="selected">20대</option>
-                                                <option value="30">30대</option>
-                                                <option value="40">40대</option>
-                                                <option value="50">50대</option>
-                                            </select>
-                                        </div>
-                                        <div class="my_ms_select">
-                                            <label for="my_ms_select" class="a11y">성별</label>접근성_20171201 class 추가, 텍스트 수정
-                                            <select id="my_ms_select" class="rank_select">접근성_20171201 class 추가
-                                                <option value="M">남성</option>
-                                                <option value="F" selected="selected">여성</option>
-                                            </select>
-                                        </div>
-                                        150706 DOM 수정 - 텍스트 수정
-										<p class="my_ms_last_txt">이 즐기는 메뉴가 궁금하시죠?</p>
-										150706 DOM 수정 - 텍스트 수정 end
-										<a href="javascript:void(0)" class="my_ms_setBtn" role="button" title="메뉴 확인하기">확인</a>접근성_20171201 확인버튼 추가
-                                    </header>
-                                    <span class="criteria">스타벅스 리워드<br>최근 일주일 판매 집계 기준</span> 스타벅스 리워드 수정
-                                    <article class="my_ms_rank_wrap">
-                                        <div class="my_ms_rank_each my_ms_rank_each1">
-                                            <div class="bx-wrapper" style="max-width: 100%; margin: 0px auto;"><div class="bx-viewport" style="width: 100%; overflow: hidden; position: relative; height: 317px;"><ul class="edw1" style="width: 1115%; position: relative; transition-duration: 0s; transform: translate3d(-184px, 0px, 0px);"><li style="float: left; list-style: none; position: relative; width: 184px;" class="bx-clone">	<header>부문별 음료 판매 순위<br><strong>콜드 브루</strong></header>	<figure><a href="javascript:void(0);" class="goDrink" data-sku="9200000000487"><img alt="" src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[9200000000487]_20210430112319040.jpg"></a></figure>	<p class="first_bev">1위</p>	<p class="coffee_name"><a href="javascript:void(0);" class="goDrink" data-sku="9200000000487">바닐라 크림 콜드 브루</a></p>	<p class="second_rank">		<span class="left"><strong>2위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goDrink" data-sku="9200000000038">콜드 브루</a></span>	</p>	<p class="third_rank">		<span class="left"><strong>3위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goDrink" data-sku="9200000002081">돌체 콜드 브루</a></span>	</p></li><li style="float: left; list-style: none; position: relative; width: 184px;">	<header>부문별 음료 판매 순위<br><strong>에스프레소</strong></header>	<figure><a href="javascript:void(0);" class="goDrink" data-sku="110563"><img alt="" src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[110563]_20210426095937808.jpg"></a></figure>	<p class="first_bev">1위</p>	<p class="coffee_name"><a href="javascript:void(0);" class="goDrink" data-sku="110563">아이스 카페 아메리카노</a></p>	<p class="second_rank">		<span class="left"><strong>2위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goDrink" data-sku="110569">아이스 카페 라떼</a></span>	</p>	<p class="third_rank">		<span class="left"><strong>3위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goDrink" data-sku="128695">아이스 스타벅스 돌체 라떼</a></span>	</p></li><li style="float: left; list-style: none; position: relative; width: 184px;">	<header>부문별 음료 판매 순위<br><strong>프라푸치노</strong></header>	<figure><a href="javascript:void(0);" class="goDrink" data-sku="168016"><img alt="" src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[168016]_20210415154152122.jpg"></a></figure>	<p class="first_bev">1위</p>	<p class="coffee_name"><a href="javascript:void(0);" class="goDrink" data-sku="168016">P 자바 칩 프라푸치노</a></p>	<p class="second_rank">		<span class="left"><strong>2위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goDrink" data-sku="9200000002760">더블 에스프레소 칩 프라푸치노</a></span>	</p>	<p class="third_rank">		<span class="left"><strong>3위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goDrink" data-sku="9200000002502">유기농 말차로 만든 크림 프라푸치노</a></span>	</p></li><li style="float: left; list-style: none; position: relative; width: 184px;">	<header>부문별 음료 판매 순위<br><strong>블렌디드</strong></header>	<figure><a href="javascript:void(0);" class="goDrink" data-sku="9200000003991"><img alt="" src="https://image.istarbucks.co.kr/upload/store/skuimg/2022/04/[9200000003991]_20220406123619904.jpg"></a></figure>	<p class="first_bev">1위</p>	<p class="coffee_name"><a href="javascript:void(0);" class="goDrink" data-sku="9200000003991">펀치 그래피티 블렌디드</a></p>	<p class="second_rank">		<span class="left"><strong>2위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goDrink" data-sku="9200000003276">딸기 딜라이트 요거트 블렌디드</a></span>	</p>	<p class="third_rank">		<span class="left"><strong>3위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goDrink" data-sku="9200000002766">피치   레몬 블렌디드</a></span>	</p></li><li style="float: left; list-style: none; position: relative; width: 184px;">	<header>부문별 음료 판매 순위<br><strong>기타 제조 음료</strong></header>	<figure><a href="javascript:void(0);" class="goDrink" data-sku="110621"><img alt="" src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[110621]_20210415140901611.jpg"></a></figure>	<p class="first_bev">1위</p>	<p class="coffee_name"><a href="javascript:void(0);" class="goDrink" data-sku="110621">아이스 시그니처 초콜릿</a></p>	<p class="second_rank">		<span class="left"><strong>2위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goDrink" data-sku="72">시그니처 핫 초콜릿</a></span>	</p>	<p class="third_rank">		<span class="left"><strong>3위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goDrink" data-sku="9200000001302">아이스 제주 까망 라떼</a></span>	</p></li><li style="float: left; list-style: none; position: relative; width: 184px;">	<header>부문별 음료 판매 순위<br><strong>브루드 커피</strong></header>	<figure><a href="javascript:void(0);" class="goDrink" data-sku="106509"><img alt="" src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[106509]_20210430111852870.jpg"></a></figure>	<p class="first_bev">1위</p>	<p class="coffee_name"><a href="javascript:void(0);" class="goDrink" data-sku="106509">아이스 커피</a></p>	<p class="second_rank">		<span class="left"><strong>2위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goDrink" data-sku="2">오늘의 커피</a></span>	</p></li><li style="float: left; list-style: none; position: relative; width: 184px;">	<header>부문별 음료 판매 순위<br><strong>스타벅스 피지오</strong></header>	<figure><a href="javascript:void(0);" class="goDrink" data-sku="9200000004121"><img alt="" src="https://image.istarbucks.co.kr/upload/store/skuimg/2022/05/[9200000004121]_20220517102911610.jpg"></a></figure>	<p class="first_bev">1위</p>	<p class="coffee_name"><a href="javascript:void(0);" class="goDrink" data-sku="9200000004121">유자 패션 피지오</a></p>	<p class="second_rank">		<span class="left"><strong>2위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goDrink" data-sku="107051">쿨 라임 피지오</a></span>	</p>	<p class="third_rank">		<span class="left"><strong>3위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goDrink" data-sku="107031">패션 탱고 티 레모네이드 피지오</a></span>	</p></li><li style="float: left; list-style: none; position: relative; width: 184px;">	<header>부문별 음료 판매 순위<br><strong>스타벅스 주스(병음료)</strong></header>	<figure><a href="javascript:void(0);" class="goDrink" data-sku="5210008070"><img alt="" src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[5210008070]_20210426095034991.jpg"></a></figure>	<p class="first_bev">1위</p>	<p class="coffee_name"><a href="javascript:void(0);" class="goDrink" data-sku="5210008070">딸기주스 190M</a></p>	<p class="second_rank">		<span class="left"><strong>2위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goDrink" data-sku="5210008072">케일 사과주스 190M</a></span>	</p>	<p class="third_rank">		<span class="left"><strong>3위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goDrink" data-sku="9300000003775">딸기 가득 요거트 190M</a></span>	</p></li><li style="float: left; list-style: none; position: relative; width: 184px;">	<header>부문별 음료 판매 순위<br><strong>티</strong></header>	<figure><a href="javascript:void(0);" class="goDrink" data-sku="9200000000190"><img alt="" src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[9200000000190]_20210419131723532.jpg"></a></figure>	<p class="first_bev">1위</p>	<p class="coffee_name"><a href="javascript:void(0);" class="goDrink" data-sku="9200000000190">쉐이큰 자몽허니 블랙티</a></p>	<p class="second_rank">		<span class="left"><strong>2위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goDrink" data-sku="9200000002959">아이스 유자 민트 티</a></span>	</p>	<p class="third_rank">		<span class="left"><strong>3위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goDrink" data-sku="9200000003994">포멜로 플로우 그린 티</a></span>	</p></li><li style="float: left; list-style: none; position: relative; width: 184px;">	<header>부문별 음료 판매 순위<br><strong>콜드 브루</strong></header>	<figure><a href="javascript:void(0);" class="goDrink" data-sku="9200000000487"><img alt="" src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[9200000000487]_20210430112319040.jpg"></a></figure>	<p class="first_bev">1위</p>	<p class="coffee_name"><a href="javascript:void(0);" class="goDrink" data-sku="9200000000487">바닐라 크림 콜드 브루</a></p>	<p class="second_rank">		<span class="left"><strong>2위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goDrink" data-sku="9200000000038">콜드 브루</a></span>	</p>	<p class="third_rank">		<span class="left"><strong>3위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goDrink" data-sku="9200000002081">돌체 콜드 브루</a></span>	</p></li><li style="float: left; list-style: none; position: relative; width: 184px;" class="bx-clone">	<header>부문별 음료 판매 순위<br><strong>에스프레소</strong></header>	<figure><a href="javascript:void(0);" class="goDrink" data-sku="110563"><img alt="" src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[110563]_20210426095937808.jpg"></a></figure>	<p class="first_bev">1위</p>	<p class="coffee_name"><a href="javascript:void(0);" class="goDrink" data-sku="110563">아이스 카페 아메리카노</a></p>	<p class="second_rank">		<span class="left"><strong>2위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goDrink" data-sku="110569">아이스 카페 라떼</a></span>	</p>	<p class="third_rank">		<span class="left"><strong>3위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goDrink" data-sku="128695">아이스 스타벅스 돌체 라떼</a></span>	</p></li></ul></div><div class="bx-controls bx-has-controls-direction"><div class="bx-controls-direction"><a class="bx-prev" href="">Prev</a><a class="bx-next" href="">Next</a></div></div></div>
-                                        </div>
-                                        <div class="my_ms_rank_each my_ms_rank_each2">
-                                            <div class="bx-wrapper" style="max-width: 100%; margin: 0px auto;"><div class="bx-viewport" style="width: 100%; overflow: hidden; position: relative; height: 317px;"><ul class="edw2" style="width: 1115%; position: relative; transition-duration: 0s; transform: translate3d(-184px, 0px, 0px);"><li style="float: left; list-style: none; position: relative; width: 184px;" class="bx-clone">	<header>부문별 푸드 판매 순위<br><strong>브런치유어웨이</strong></header>	<figure><a href="javascript:void(0);" class="goFood" data-sku="5110003062"><img alt="" src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[5110003062]_20210421162339549.jpg"></a></figure>	<p class="first_bev">1위</p>	<p class="coffee_name"><a href="javascript:void(0);" class="goFood" data-sku="5110003062">바비큐 치킨 치즈 치아바타</a></p>	<p class="second_rank">		<span class="left"><strong>2위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goFood" data-sku="9300000002178">베이컨 치즈 토스트</a></span>	</p>	<p class="third_rank">		<span class="left"><strong>3위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goFood" data-sku="9300000001777">햄 루꼴라 올리브 샌드위치</a></span>	</p></li><li style="float: left; list-style: none; position: relative; width: 184px;">	<header>부문별 푸드 판매 순위<br><strong>브레드</strong></header>	<figure><a href="javascript:void(0);" class="goFood" data-sku="9300000003223"><img alt="" src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/03/[9300000003223]_20210315170846073.jpg"></a></figure>	<p class="first_bev">1위</p>	<p class="coffee_name"><a href="javascript:void(0);" class="goFood" data-sku="9300000003223">바질 토마토 크림치즈 베이글</a></p>	<p class="second_rank">		<span class="left"><strong>2위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goFood" data-sku="9300000004026">티라미수 크림 데니쉬</a></span>	</p>	<p class="third_rank">		<span class="left"><strong>3위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goFood" data-sku="5110006070">하트 파이</a></span>	</p></li><li style="float: left; list-style: none; position: relative; width: 184px;">	<header>부문별 푸드 판매 순위<br><strong>케이크</strong></header>	<figure><a href="javascript:void(0);" class="goFood" data-sku="5110007181"><img alt="" src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[5110007181]_20210421164728509.jpg"></a></figure>	<p class="first_bev">1위</p>	<p class="coffee_name"><a href="javascript:void(0);" class="goFood" data-sku="5110007181">부드러운 생크림 카스텔라</a></p>	<p class="second_rank">		<span class="left"><strong>2위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goFood" data-sku="9300000004034">딸기 쏙 생크림 케이크</a></span>	</p>	<p class="third_rank">		<span class="left"><strong>3위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goFood" data-sku="9300000004174">크런치 쿠키 마스카포네 케이크</a></span>	</p></li><li style="float: left; list-style: none; position: relative; width: 184px;">	<header>부문별 푸드 판매 순위<br><strong>샌드위치&amp;샐러드</strong></header>	<figure><a href="javascript:void(0);" class="goFood" data-sku="5110003062"><img alt="" src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[5110003062]_20210421162339549.jpg"></a></figure>	<p class="first_bev">1위</p>	<p class="coffee_name"><a href="javascript:void(0);" class="goFood" data-sku="5110003062">바비큐 치킨 치즈 치아바타</a></p>	<p class="second_rank">		<span class="left"><strong>2위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goFood" data-sku="9300000002178">베이컨 치즈 토스트</a></span>	</p>	<p class="third_rank">		<span class="left"><strong>3위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goFood" data-sku="9300000001777">햄 루꼴라 올리브 샌드위치</a></span>	</p></li><li style="float: left; list-style: none; position: relative; width: 184px;">	<header>부문별 푸드 판매 순위<br><strong>따뜻한 푸드</strong></header>	<figure><a href="javascript:void(0);" class="goFood" data-sku="9900000000680"><img alt="" src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[9900000000680]_20210426103936780.jpg"></a></figure>	<p class="first_bev">1위</p>	<p class="coffee_name"><a href="javascript:void(0);" class="goFood" data-sku="9900000000680">판매트러플 머쉬룸 수프</a></p>	<p class="second_rank">		<span class="left"><strong>2위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goFood" data-sku="9900000001201">판매 토마토 로제 수프</a></span>	</p>	<p class="third_rank">		<span class="left"><strong>3위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goFood" data-sku="9900000001200">판매 단호박 크림 수프</a></span>	</p></li><li style="float: left; list-style: none; position: relative; width: 184px;">	<header>부문별 푸드 판매 순위<br><strong>과일&amp;요거트</strong></header>	<figure><a href="javascript:void(0);" class="goFood" data-sku="5110009051"><img alt="" src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[5110009051]_20210422111651003.jpg"></a></figure>	<p class="first_bev">1위</p>	<p class="coffee_name"><a href="javascript:void(0);" class="goFood" data-sku="5110009051">하루 한 컵 레드</a></p>	<p class="second_rank">		<span class="left"><strong>2위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goFood" data-sku="9300000002619">20 밀크 푸딩</a></span>	</p>	<p class="third_rank">		<span class="left"><strong>3위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goFood" data-sku="9300000003232">오가닉 프로틴 그릭 요거트   그래놀라</a></span>	</p></li><li style="float: left; list-style: none; position: relative; width: 184px;">	<header>부문별 푸드 판매 순위<br><strong>스낵&amp;미니디저트</strong></header>	<figure><a href="javascript:void(0);" class="goFood" data-sku="9300000002517"><img alt="" src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[9300000002517]_20210421163620436.jpg"></a></figure>	<p class="first_bev">1위</p>	<p class="coffee_name"><a href="javascript:void(0);" class="goFood" data-sku="9300000002517">더블 치즈 베이글 칩</a></p>	<p class="second_rank">		<span class="left"><strong>2위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goFood" data-sku="9300000004045">리얼 두부칩</a></span>	</p>	<p class="third_rank">		<span class="left"><strong>3위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goFood" data-sku="9300000002556">자일리톨 캔디 크리스탈 레몬</a></span>	</p></li><li style="float: left; list-style: none; position: relative; width: 184px;">	<header>부문별 푸드 판매 순위<br><strong>아이스크림</strong></header>	<figure><a href="javascript:void(0);" class="goFood" data-sku="5110009050"><img alt="" src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[5110009050]_20210422110047018.jpg"></a></figure>	<p class="first_bev">1위</p>	<p class="coffee_name"><a href="javascript:void(0);" class="goFood" data-sku="5110009050">유기농 아이스크림 바닐라볼</a></p>	<p class="second_rank">		<span class="left"><strong>2위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goFood" data-sku="9900000000031">바닐라 아포가토볼</a></span>	</p>	<p class="third_rank">		<span class="left"><strong>3위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goFood" data-sku="9300000000810">유기농 아이스크림 초콜릿볼</a></span>	</p></li><li style="float: left; list-style: none; position: relative; width: 184px;">	<header>부문별 푸드 판매 순위<br><strong>프리미어 푸드</strong></header>	<figure><a href="javascript:void(0);" class="goFood" data-sku="9300000001785"><img alt="" src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[9300000001785]_20210422124351504.jpg"></a></figure>	<p class="first_bev">1위</p>	<p class="coffee_name"><a href="javascript:void(0);" class="goFood" data-sku="9300000001785">리저브초콜릿 월넛 돔 쿠키</a></p></li><li style="float: left; list-style: none; position: relative; width: 184px;">	<header>부문별 푸드 판매 순위<br><strong>브런치유어웨이</strong></header>	<figure><a href="javascript:void(0);" class="goFood" data-sku="5110003062"><img alt="" src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[5110003062]_20210421162339549.jpg"></a></figure>	<p class="first_bev">1위</p>	<p class="coffee_name"><a href="javascript:void(0);" class="goFood" data-sku="5110003062">바비큐 치킨 치즈 치아바타</a></p>	<p class="second_rank">		<span class="left"><strong>2위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goFood" data-sku="9300000002178">베이컨 치즈 토스트</a></span>	</p>	<p class="third_rank">		<span class="left"><strong>3위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goFood" data-sku="9300000001777">햄 루꼴라 올리브 샌드위치</a></span>	</p></li><li style="float: left; list-style: none; position: relative; width: 184px;" class="bx-clone">	<header>부문별 푸드 판매 순위<br><strong>브레드</strong></header>	<figure><a href="javascript:void(0);" class="goFood" data-sku="9300000003223"><img alt="" src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/03/[9300000003223]_20210315170846073.jpg"></a></figure>	<p class="first_bev">1위</p>	<p class="coffee_name"><a href="javascript:void(0);" class="goFood" data-sku="9300000003223">바질 토마토 크림치즈 베이글</a></p>	<p class="second_rank">		<span class="left"><strong>2위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goFood" data-sku="9300000004026">티라미수 크림 데니쉬</a></span>	</p>	<p class="third_rank">		<span class="left"><strong>3위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goFood" data-sku="5110006070">하트 파이</a></span>	</p></li></ul></div><div class="bx-controls bx-has-controls-direction"><div class="bx-controls-direction"><a class="bx-prev" href="">Prev</a><a class="bx-next" href="">Next</a></div></div></div>
-                                        </div>
-                                        <div class="my_ms_rank_each my_ms_rank_each3">
-                                            <div class="bx-wrapper" style="max-width: 100%; margin: 0px auto;"><div class="bx-viewport" style="width: 100%; overflow: hidden; position: relative; height: 317px;"><ul class="edw3" style="width: 515%; position: relative; transition-duration: 0s; transform: translate3d(-184px, 0px, 0px);"><li style="float: left; list-style: none; position: relative; width: 184px;" class="bx-clone">	<header>부문별 원두 판매 순위<br><strong>스타벅스 비아</strong></header>	<figure><a href="javascript:void(0);" class="goCoffee" data-sku="11089092"><img alt="" src="https://image.istarbucks.co.kr/upload/store/skuimg/2019/05/[11089092]_20190527140748520.jpg"></a></figure>	<p class="first_bev">1위</p>	<p class="coffee_name"><a href="javascript:void(0);" class="goCoffee" data-sku="11089092">비아 아이스 커피 5개입</a></p>	<p class="second_rank">		<span class="left"><strong>2위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goCoffee" data-sku="11023539">비아 콜롬비아 12개입</a></span>	</p>	<p class="third_rank">		<span class="left"><strong>3위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goCoffee" data-sku="11037708">비아 하우스 블렌드 12개입</a></span>	</p></li><li style="float: left; list-style: none; position: relative; width: 184px;">	<header>부문별 원두 판매 순위<br><strong>스타벅스 원두</strong></header>	<figure><a href="javascript:void(0);" class="goCoffee" data-sku="11017015"><img alt="" src="https://image.istarbucks.co.kr/upload/store/skuimg/2015/07/[11017015]_20150722234902895.jpg"></a></figure>	<p class="first_bev">1위</p>	<p class="coffee_name"><a href="javascript:void(0);" class="goCoffee" data-sku="11017015">하우스 블렌드 250</a></p>	<p class="second_rank">		<span class="left"><strong>2위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goCoffee" data-sku="11017011">카페 베로나 250</a></span>	</p>	<p class="third_rank">		<span class="left"><strong>3위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goCoffee" data-sku="11017024">에스프레소 로스트 250</a></span>	</p></li><li style="float: left; list-style: none; position: relative; width: 184px;">	<header>부문별 원두 판매 순위<br><strong>리저브 원두</strong></header>	<figure><a href="javascript:void(0);" class="goCoffee" data-sku="11133545"><img alt="" src="https://image.istarbucks.co.kr/upload/store/skuimg/2022/03/[11133545]_20220324145738445.jpg"></a></figure>	<p class="first_bev">1위</p>	<p class="coffee_name"><a href="javascript:void(0);" class="goCoffee" data-sku="11133545">Reserve 브라질 파젠다 카탄두바 250</a></p>	<p class="second_rank">		<span class="left"><strong>2위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goCoffee" data-sku="11115491">Reserve 인도네시아 웨스트 자바 250</a></span>	</p>	<p class="third_rank">		<span class="left"><strong>3위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goCoffee" data-sku="11133775">Reserve SD 콜롬비아 핀카 250</a></span>	</p></li><li style="float: left; list-style: none; position: relative; width: 184px;">	<header>부문별 원두 판매 순위<br><strong>스타벅스 비아</strong></header>	<figure><a href="javascript:void(0);" class="goCoffee" data-sku="11089092"><img alt="" src="https://image.istarbucks.co.kr/upload/store/skuimg/2019/05/[11089092]_20190527140748520.jpg"></a></figure>	<p class="first_bev">1위</p>	<p class="coffee_name"><a href="javascript:void(0);" class="goCoffee" data-sku="11089092">비아 아이스 커피 5개입</a></p>	<p class="second_rank">		<span class="left"><strong>2위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goCoffee" data-sku="11023539">비아 콜롬비아 12개입</a></span>	</p>	<p class="third_rank">		<span class="left"><strong>3위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goCoffee" data-sku="11037708">비아 하우스 블렌드 12개입</a></span>	</p></li><li style="float: left; list-style: none; position: relative; width: 184px;" class="bx-clone">	<header>부문별 원두 판매 순위<br><strong>스타벅스 원두</strong></header>	<figure><a href="javascript:void(0);" class="goCoffee" data-sku="11017015"><img alt="" src="https://image.istarbucks.co.kr/upload/store/skuimg/2015/07/[11017015]_20150722234902895.jpg"></a></figure>	<p class="first_bev">1위</p>	<p class="coffee_name"><a href="javascript:void(0);" class="goCoffee" data-sku="11017015">하우스 블렌드 250</a></p>	<p class="second_rank">		<span class="left"><strong>2위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goCoffee" data-sku="11017011">카페 베로나 250</a></span>	</p>	<p class="third_rank">		<span class="left"><strong>3위</strong></span>		<span class="right"><a href="javascript:void(0);" class="goCoffee" data-sku="11017024">에스프레소 로스트 250</a></span>	</p></li></ul></div><div class="bx-controls bx-has-controls-direction"><div class="bx-controls-direction"><a class="bx-prev" href="">Prev</a><a class="bx-next" href="">Next</a></div></div></div>
-                                        </div>
-                                    </article>
-                                </fieldset>
-                            </form>
-                        </section>
-                        메뉴 순위 end
-                        
-                    </div> -->
-                    
-                     <!-- 메뉴 순위 -->
-                        <section class="my_ms_rank">
-                            <form name="edwForm" method="post">
-                                <fieldset>
-                                    <legend>스타벅스 메뉴 순위 폼</legend>
-                                    <header class="my_ms_rank_head">
-                                        <p class="p1">스타벅스 코리아를 사랑하는</p>
-                                        <div class="my_ms_select">
-                                            <label for="my_ms_age" class="a11y">연령대</label><!-- 접근성_20171201 class 추가, 텍스트 수정 -->
-                                            <select id="my_ms_age" class="rank_select"><!-- 접근성_20171201 class 추가 -->
-                                                <option value="10">10대</option>
-                                                <option value="20" selected="selected">20대</option>
-                                                <option value="30">30대</option>
-                                                <option value="40">40대</option>
-                                                <option value="50">50대</option>
-                                            </select>
-                                        </div>
-                                        <div class="my_ms_select">
-                                            <label for="my_ms_select" class="a11y">성별</label><!-- 접근성_20171201 class 추가, 텍스트 수정 -->
-                                            <select id="my_ms_select" class="rank_select"><!-- 접근성_20171201 class 추가 -->
-                                                <option value="M">남성</option>
-                                                <option value="F" selected="selected">여성</option>
-                                            </select>
-                                        </div>
-                                        <!-- 150706 DOM 수정 - 텍스트 수정 -->
-										<p class="my_ms_last_txt">이 즐기는 메뉴가 궁금하시죠?</p>
-										<!-- 150706 DOM 수정 - 텍스트 수정 end -->
-										<a href="javascript:void(0)" class="my_ms_setBtn" role="button" title="메뉴 확인하기">확인</a><!-- 접근성_20171201 확인버튼 추가 -->
-                                    </header>
-                                    <span class="criteria">스타벅스 리워드<br>최근 일주일 판매 집계 기준</span> <!-- 스타벅스 리워드 수정 -->
-                                    <article class="my_ms_rank_wrap">
-                                        <div class="my_ms_rank_each my_ms_rank_each1">
-										<div class="bx-wrapper"
-											style="max-width: 100%; margin: 0px auto;">
-											<div class="bx-viewport"
-												style="width: 100%; overflow: hidden; position: relative; height: 317px;">
-												<ul class="edw1"
-													style="width: 1115%; position: relative; transition-duration: 0s; transform: translate3d(-245px, 0px, 0px);">
-													<!-- <li
-														style="float: left; list-style: none; position: relative; width: 184px;"
-														class="bx-clone"><header>
-															부문별 음료 판매 순위<br>
-															<strong>콜드 브루</strong>
-														</header>
-														<figure>
-															<a href="javascript:void(0);" class="goDrink"
-																data-sku="9200000000487"><img alt=""
-																src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[9200000000487]_20210430112319040.jpg"></a>
-														</figure>
-														<p class="first_bev">1위</p>
-														<p class="coffee_name">
-															<a href="javascript:void(0);" class="goDrink"
-																data-sku="9200000000487">바닐라 크림 콜드 브루</a>
-														</p>
-														<p class="second_rank">
-															<span class="left"><strong>2위</strong></span> <span
-																class="right"><a href="javascript:void(0);"
-																class="goDrink" data-sku="9200000000038">콜드 브루</a></span>
-														</p>
-														<p class="third_rank">
-															<span class="left"><strong>3위</strong></span> <span
-																class="right"><a href="javascript:void(0);"
-																class="goDrink" data-sku="9200000002081">돌체 콜드 브루</a></span>
-														</p></li>
-													<li
-														style="float: left; list-style: none; position: relative; width: 184px;">
-														<header>
-															부문별 음료 판매 순위<br>
-															<strong>에스프레소</strong>
-														</header>
-														<figure>
-															<a href="javascript:void(0);" class="goDrink"
-																data-sku="110563"><img alt=""
-																src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[110563]_20210426095937808.jpg"></a>
-														</figure>
-														<p class="first_bev">1위</p>
-														<p class="coffee_name">
-															<a href="javascript:void(0);" class="goDrink"
-																data-sku="110563">아이스 카페 아메리카노</a>
-														</p>
-														<p class="second_rank">
-															<span class="left"><strong>2위</strong></span> <span
-																class="right"><a href="javascript:void(0);"
-																class="goDrink" data-sku="110569">아이스 카페 라떼</a></span>
-														</p>
-														<p class="third_rank">
-															<span class="left"><strong>3위</strong></span> <span
-																class="right"><a href="javascript:void(0);"
-																class="goDrink" data-sku="128695">아이스 스타벅스 돌체 라떼</a></span>
-														</p>
-													</li>
-													<li
-														style="float: left; list-style: none; position: relative; width: 184px;">
-														<header>
-															부문별 음료 판매 순위<br>
-															<strong>프라푸치노</strong>
-														</header>
-														<figure>
-															<a href="javascript:void(0);" class="goDrink"
-																data-sku="168016"><img alt=""
-																src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[168016]_20210415154152122.jpg"></a>
-														</figure>
-														<p class="first_bev">1위</p>
-														<p class="coffee_name">
-															<a href="javascript:void(0);" class="goDrink"
-																data-sku="168016">P 자바 칩 프라푸치노</a>
-														</p>
-														<p class="second_rank">
-															<span class="left"><strong>2위</strong></span> <span
-																class="right"><a href="javascript:void(0);"
-																class="goDrink" data-sku="9200000002760">더블 에스프레소 칩
-																	프라푸치노</a></span>
-														</p>
-														<p class="third_rank">
-															<span class="left"><strong>3위</strong></span> <span
-																class="right"><a href="javascript:void(0);"
-																class="goDrink" data-sku="9200000002502">유기농 말차로 만든
-																	크림 프라푸치노</a></span>
-														</p>
-													</li>
-													<li
-														style="float: left; list-style: none; position: relative; width: 184px;">
-														<header>
-															부문별 음료 판매 순위<br>
-															<strong>블렌디드</strong>
-														</header>
-														<figure>
-															<a href="javascript:void(0);" class="goDrink"
-																data-sku="9200000003991"><img alt=""
-																src="https://image.istarbucks.co.kr/upload/store/skuimg/2022/04/[9200000003991]_20220406123619904.jpg"></a>
-														</figure>
-														<p class="first_bev">1위</p>
-														<p class="coffee_name">
-															<a href="javascript:void(0);" class="goDrink"
-																data-sku="9200000003991">펀치 그래피티 블렌디드</a>
-														</p>
-														<p class="second_rank">
-															<span class="left"><strong>2위</strong></span> <span
-																class="right"><a href="javascript:void(0);"
-																class="goDrink" data-sku="9200000003276">딸기 딜라이트 요거트
-																	블렌디드</a></span>
-														</p>
-														<p class="third_rank">
-															<span class="left"><strong>3위</strong></span> <span
-																class="right"><a href="javascript:void(0);"
-																class="goDrink" data-sku="9200000002766">피치 레몬 블렌디드</a></span>
-														</p>
-													</li>
-													<li
-														style="float: left; list-style: none; position: relative; width: 184px;">
-														<header>
-															부문별 음료 판매 순위<br>
-															<strong>기타 제조 음료</strong>
-														</header>
-														<figure>
-															<a href="javascript:void(0);" class="goDrink"
-																data-sku="110621"><img alt=""
-																src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[110621]_20210415140901611.jpg"></a>
-														</figure>
-														<p class="first_bev">1위</p>
-														<p class="coffee_name">
-															<a href="javascript:void(0);" class="goDrink"
-																data-sku="110621">아이스 시그니처 초콜릿</a>
-														</p>
-														<p class="second_rank">
-															<span class="left"><strong>2위</strong></span> <span
-																class="right"><a href="javascript:void(0);"
-																class="goDrink" data-sku="72">시그니처 핫 초콜릿</a></span>
-														</p>
-														<p class="third_rank">
-															<span class="left"><strong>3위</strong></span> <span
-																class="right"><a href="javascript:void(0);"
-																class="goDrink" data-sku="9200000001302">아이스 제주 까망
-																	라떼</a></span>
-														</p>
-													</li>
-													<li
-														style="float: left; list-style: none; position: relative; width: 184px;">
-														<header>
-															부문별 음료 판매 순위<br>
-															<strong>브루드 커피</strong>
-														</header>
-														<figure>
-															<a href="javascript:void(0);" class="goDrink"
-																data-sku="106509"><img alt=""
-																src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[106509]_20210430111852870.jpg"></a>
-														</figure>
-														<p class="first_bev">1위</p>
-														<p class="coffee_name">
-															<a href="javascript:void(0);" class="goDrink"
-																data-sku="106509">아이스 커피</a>
-														</p>
-														<p class="second_rank">
-															<span class="left"><strong>2위</strong></span> <span
-																class="right"><a href="javascript:void(0);"
-																class="goDrink" data-sku="2">오늘의 커피</a></span>
-														</p>
-													</li>
-													<li
-														style="float: left; list-style: none; position: relative; width: 184px;">
-														<header>
-															부문별 음료 판매 순위<br>
-															<strong>스타벅스 피지오</strong>
-														</header>
-														<figure>
-															<a href="javascript:void(0);" class="goDrink"
-																data-sku="9200000004121"><img alt=""
-																src="https://image.istarbucks.co.kr/upload/store/skuimg/2022/05/[9200000004121]_20220517102911610.jpg"></a>
-														</figure>
-														<p class="first_bev">1위</p>
-														<p class="coffee_name">
-															<a href="javascript:void(0);" class="goDrink"
-																data-sku="9200000004121">유자 패션 피지오</a>
-														</p>
-														<p class="second_rank">
-															<span class="left"><strong>2위</strong></span> <span
-																class="right"><a href="javascript:void(0);"
-																class="goDrink" data-sku="107051">쿨 라임 피지오</a></span>
-														</p>
-														<p class="third_rank">
-															<span class="left"><strong>3위</strong></span> <span
-																class="right"><a href="javascript:void(0);"
-																class="goDrink" data-sku="107031">패션 탱고 티 레모네이드 피지오</a></span>
-														</p>
-													</li>
-													<li
-														style="float: left; list-style: none; position: relative; width: 184px;">
-														<header>
-															부문별 음료 판매 순위<br>
-															<strong>스타벅스 주스(병음료)</strong>
-														</header>
-														<figure>
-															<a href="javascript:void(0);" class="goDrink"
-																data-sku="5210008070"><img alt=""
-																src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[5210008070]_20210426095034991.jpg"></a>
-														</figure>
-														<p class="first_bev">1위</p>
-														<p class="coffee_name">
-															<a href="javascript:void(0);" class="goDrink"
-																data-sku="5210008070">딸기주스 190M</a>
-														</p>
-														<p class="second_rank">
-															<span class="left"><strong>2위</strong></span> <span
-																class="right"><a href="javascript:void(0);"
-																class="goDrink" data-sku="5210008072">케일 사과주스 190M</a></span>
-														</p>
-														<p class="third_rank">
-															<span class="left"><strong>3위</strong></span> <span
-																class="right"><a href="javascript:void(0);"
-																class="goDrink" data-sku="9300000003775">딸기 가득 요거트
-																	190M</a></span>
-														</p>
-													</li>
-													<li
-														style="float: left; list-style: none; position: relative; width: 184px;">
-														<header>
-															부문별 음료 판매 순위<br>
-															<strong>티</strong>
-														</header>
-														<figure>
-															<a href="javascript:void(0);" class="goDrink"
-																data-sku="9200000000190"><img alt=""
-																src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[9200000000190]_20210419131723532.jpg"></a>
-														</figure>
-														<p class="first_bev">1위</p>
-														<p class="coffee_name">
-															<a href="javascript:void(0);" class="goDrink"
-																data-sku="9200000000190">쉐이큰 자몽허니 블랙티</a>
-														</p>
-														<p class="second_rank">
-															<span class="left"><strong>2위</strong></span> <span
-																class="right"><a href="javascript:void(0);"
-																class="goDrink" data-sku="9200000002959">아이스 유자 민트 티</a></span>
-														</p>
-														<p class="third_rank">
-															<span class="left"><strong>3위</strong></span> <span
-																class="right"><a href="javascript:void(0);"
-																class="goDrink" data-sku="9200000003994">포멜로 플로우 그린
-																	티</a></span>
-														</p>
-													</li>
-													<li
-														style="float: left; list-style: none; position: relative; width: 184px;">
-														<header>
-															부문별 음료 판매 순위<br>
-															<strong>콜드 브루</strong>
-														</header>
-														<figure>
-															<a href="javascript:void(0);" class="goDrink"
-																data-sku="9200000000487"><img alt=""
-																src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[9200000000487]_20210430112319040.jpg"></a>
-														</figure>
-														<p class="first_bev">1위</p>
-														<p class="coffee_name">
-															<a href="javascript:void(0);" class="goDrink"
-																data-sku="9200000000487">바닐라 크림 콜드 브루</a>
-														</p>
-														<p class="second_rank">
-															<span class="left"><strong>2위</strong></span> <span
-																class="right"><a href="javascript:void(0);"
-																class="goDrink" data-sku="9200000000038">콜드 브루</a></span>
-														</p>
-														<p class="third_rank">
-															<span class="left"><strong>3위</strong></span> <span
-																class="right"><a href="javascript:void(0);"
-																class="goDrink" data-sku="9200000002081">돌체 콜드 브루</a></span>
-														</p>
-													</li>
-													<li
-														style="float: left; list-style: none; position: relative; width: 184px;"
-														class="bx-clone"><header>
-															부문별 음료 판매 순위<br>
-															<strong>에스프레소</strong>
-														</header>
-														<figure>
-															<a href="javascript:void(0);" class="goDrink"
-																data-sku="110563"><img alt=""
-																src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[110563]_20210426095937808.jpg"></a>
-														</figure>
-														<p class="first_bev">1위</p>
-														<p class="coffee_name">
-															<a href="javascript:void(0);" class="goDrink"
-																data-sku="110563">아이스 카페 아메리카노</a>
-														</p>
-														<p class="second_rank">
-															<span class="left"><strong>2위</strong></span> <span
-																class="right"><a href="javascript:void(0);"
-																class="goDrink" data-sku="110569">아이스 카페 라떼</a></span>
-														</p>
-														<p class="third_rank">
-															<span class="left"><strong>3위</strong></span> <span
-																class="right"><a href="javascript:void(0);"
-																class="goDrink" data-sku="128695">아이스 스타벅스 돌체 라떼</a></span>
-														</p></li>
-												</ul>
-											</div> -->
-											<!-- <div class="bx-controls bx-has-controls-direction">
-												<div class="bx-controls-direction">
-													<a class="bx-prev" href="">Prev</a><a class="bx-next"
-														href="">Next</a>
+								<p class="agree_txt mb40"><input type="checkbox" name="agree2" id="agree2" /> <label for="agree2">회원탈퇴 후 e-프리퀀시 바코드, e-스티커, e-프리퀀시 카드의 소유권 상실에 대해 동의합니다.</label></p>
+								-->
+							</div>
+							<div class="ms_btn">
+								<p><a href="javascript:void(0)">스타벅스 리워드 <!-- 및 e-프리퀀시 --> 서비스 이용내역 일괄삭제</a></p>
+							</div>
+						</section>
+						
+						<!-- 회원 탈퇴시 뜨는 팝업 1 -->
+						<div class="myOut_pop_01">
+							<div class="myOut_pop_head">
+								<p class="tit">회원탈퇴 확인</p>
+								<p class="close"><a href="javascript:void(0)"><img src="//image.istarbucks.co.kr/common/img/util/myOut_pop_close.png" alt="팝업 닫기"></a></p>
+							</div>
+							<div class="myOut_pop_cont">
+								<div class="myOut_popCont">
+									<p class="txt1">스타벅스 홈페이지 회원 이용을 중지하시겠습니까? <br>회원탈퇴를 위해서는 본인 인증이 필요합니다.</p>
+									<p class="text">회원님이 지금 사용하기 편한 방법으로 진행해주세요.</p>
+									<ul class="certification_ul">
+										<li class="li_01"><a href="javascript:void(0);" class="on"><span class="i_txt">휴대폰 인증</span></a></li>
+										<li class="li_02"><a href="javascript:void(0);"><span class="i_txt">아이핀 인증</span></a></li>
+									</ul>
+									<p class="text02">본인 확인을 위해 다시 한번 스타벅스 로그인 비밀번호를 <br>입력해주시기 바랍니다.</p>
+								</div>
+								<form action="#" method="post">
+									<fieldset>
+										<legend>비밀번호 입력폼</legend>
+										<dl class="myinfo_pwBar">
+											<dt><label for="myinfo_pw_01">비밀번호</label></dt>
+											<dd><input type="password" name="myinfo_pw_01" id="myinfo_pw_01" class="myinfo_pw_bar" /></dd>
+										</dl>
+									</fieldset>
+								</form>
+								<div class="myOut_popCont">
+									<p class="text03">아래 ‘<span class="cert_type">휴대폰 인증</span>’버튼을 눌러 본인 인증을 진행해 주세요.</p>
+									<p class="btn_certification"><a href="javascript:void(0);">휴대폰 인증</a></p>
+									<ul class="myOut_pop_info">
+										<li>탈퇴하신 후에는 기존에 사용했던 아이디는 다시 사용하실 수 없습니다.</li>
+										<li>회원 탈퇴를 한 날로부터 30일이 경과해야만 재가입이 가능합니다.</li>
+										<li>그 동안 회원님께서 남겨주신 모든 게시물과 누적 정보들은 삭제 처리됩니다.</li>
+										<li>입력하신 정보는 회원탈퇴를 위한 목적으로만 사용되며, 절대 다른 목적으로 이용되지 않습니다.</li>
+									</ul>
+								</div>
+							</div>							
+						</div>
+						<!-- 회원 탈퇴시 뜨는 팝업 1 end -->
+
+						<!-- 회원 탈퇴시 뜨는 팝업 2 -->
+						<div class="myOut_pop_02">
+							<div class="myOut_pop02_head">
+								<p class="tit">회원탈퇴 확인</p>
+								<p class="close"><a href="javascript:void(0)"><img src="//image.istarbucks.co.kr/common/img/util/myOut_pop_close.png" alt="팝업 닫기"></a></p>
+							</div>
+							<div class="myOut_pop02_cont">
+								<p class="myOut_pop02_text"><!-- <span>님, 회원 탈퇴 시 30일 이내<br>재 가입이 불가합니다.</span> --></p>
+								<p class="btn2_close"><a href="javascript:void(0);">닫기</a></p>
+							</div>							
+						</div>
+						<!-- 회원 탈퇴시 뜨는 팝업 2 end -->
+
+						<!-- 회원 탈퇴시 뜨는 팝업 3 -->
+						<div class="myOut_pop_03">
+							<div class="myOut_pop03_head">
+								<p class="tit">회원탈퇴</p>
+								<p class="close"><a href="javascript:void(0)"><img src="//image.istarbucks.co.kr/common/img/util/myOut_pop_close.png" alt="팝업 닫기"></a></p>
+							</div>
+							<div class="myOut_pop03_cont">
+								<div class="popCont">
+									<p class="title">스타벅스를 이용해 주셔서 감사합니다.<br>더 좋은 모습으로 고객님을 다시 만날 수 있도록<br>최선을 다하겠습니다.</p>
+								</div>
+								<form action=""  method="post">
+									<fieldset>
+										<legend>탈퇴 사유 입력폼</legend>
+										<dl class="pop03_myinfo_pwBar">
+											<dt>탈퇴 사유</dt>
+											<dd>
+												<div class="myOut_pop03_wrap">
+													<input id="MYOUT1" name="myout" type="radio" checked="checked" value="아이디 변경">
+													<label for="MYOUT1">아이디 변경</label>											
 												</div>
-											</div> -->
-											
-											
-											<!-- 0617 예은 기본css 수정본 -->
-											<!-- 0630 지혜 순위작업 -->
-											<li
-												style="float: left; list-style: none; position: relative; width: 245px;">
-												<header>
-													<br>
-													<strong>음료 판매 순위</strong>
-												</header>
-													<figure>
-															<a href="javascript:void(0);" class="goDrink">
-														<img alt="" src="../img/my/coffee.png"></a>
-													</figure>
-												<p class="first_rank" style="border-bottom:2px dotted #ddd; display:table; height:30px; left: 20px; position:absolute; top:215px; width:206px;">
-													<span class="left" style="background:url('../img/util/rank_bg.gif'); float:left; font-size:16px; height:30px; line-height:30px; width:25px;">
-													<strong>1위</strong></span> 
-													<span class="right" style="color:#555; display:table-cell; font-size:12px; height:30px; vertical-align:middle;">
-													<a href="javascript:void(0);" class="goDrink" data-sku="110563">아이스 카페 아메리카노</a></span>
-												</p>
-												<p class="second_rank" >
-													<span class="left"><strong>2위</strong></span> 
-													<span class="right" >
-													<a href="javascript:void(0);" class="goDrink" data-sku="110569">아이스 카페 라떼</a></span>
-												</p>
-												<p class="third_rank" >
-													<span class="left"><strong>3위</strong></span> <span
-														class="right"><a href="javascript:void(0);"
-														class="goDrink" data-sku="128695">아이스 스타벅스 돌체 라떼</a></span>
-												</p>
-											</li>
-											<li
-												style="float: left; list-style: none; position: relative; width: 245px;"
-												class="bx-clone">
-												<header>
-													<br>
-													<strong>음료 판매 순위</strong>
-												</header>
-													<figure>
-															<a href="javascript:void(0);" class="goDrink">
-														<img alt="" src="../img/my/coffee.png"></a>
-													</figure>
-												<p class="first_rank" style="border-bottom:2px dotted #ddd; display:table; height:30px; left: 20px;  position:absolute; top:215px; width:206px;">
-													<span class="left" style="background:url('../img/util/rank_bg.gif'); float:left; font-size:16px; height:30px; line-height:30px; width:25px;">
-													<strong>1위</strong></span> 
-													<span class="right" style="color:#555; display:table-cell; font-size:12px; height:30px; vertical-align:middle;">
-														<a href="javascript:void(0);"
-														class="goDrink" data-sku="110563">아이스 카페 아메리카노</a></span>
-												</p>
-												<p class="second_rank">
-													<span class="left"><strong>2위</strong></span> <span
-														class="right"><a href="javascript:void(0);"
-														class="goDrink" data-sku="110569">아이스 카페 라떼</a></span>
-												</p>
-												<p class="third_rank">
-													<span class="left"><strong>3위</strong></span> <span
-														class="right"><a href="javascript:void(0);"
-														class="goDrink" data-sku="128695">아이스 스타벅스 돌체 라떼</a></span>
-												</p>
-											</li>
-											
-										</ul>
-									</div>											
-										</div>
-									</div>
-									<div class="my_ms_rank_each my_ms_rank_each2">
-										<div class="bx-wrapper"
-											style="max-width: 100%; margin: 0px auto;">
-											<div class="bx-viewport"
-												style="width: 100%; overflow: hidden; position: relative; height: 317px;">
-												<ul class="edw2"
-													style="width: 1115%; position: relative; transition-duration: 0s; transform: translate3d(-245px, 0px, 0px);">
-												<!-- 	<li
-														style="float: left; list-style: none; position: relative; width: 184px;"
-														class="bx-clone"><header>
-															부문별 푸드 판매 순위<br>
-															<strong>브런치유어웨이</strong>
-														</header>
-														<figure>
-															<a href="javascript:void(0);" class="goFood"
-																data-sku="5110003062"><img alt=""
-																src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[5110003062]_20210421162339549.jpg"></a>
-														</figure>
-														<p class="first_bev">1위</p>
-														<p class="coffee_name">
-															<a href="javascript:void(0);" class="goFood"
-																data-sku="5110003062">바비큐 치킨 치즈 치아바타</a>
-														</p>
-														<p class="second_rank">
-															<span class="left"><strong>2위</strong></span> <span
-																class="right"><a href="javascript:void(0);"
-																class="goFood" data-sku="9300000002178">베이컨 치즈 토스트</a></span>
-														</p>
-														<p class="third_rank">
-															<span class="left"><strong>3위</strong></span> <span
-																class="right"><a href="javascript:void(0);"
-																class="goFood" data-sku="9300000001777">햄 루꼴라 올리브
-																	샌드위치</a></span>
-														</p></li>
-													<li
-														style="float: left; list-style: none; position: relative; width: 184px;">
-														<header>
-															부문별 푸드 판매 순위<br>
-															<strong>브레드</strong>
-														</header>
-														<figure>
-															<a href="javascript:void(0);" class="goFood"
-																data-sku="9300000003223"><img alt=""
-																src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/03/[9300000003223]_20210315170846073.jpg"></a>
-														</figure>
-														<p class="first_bev">1위</p>
-														<p class="coffee_name">
-															<a href="javascript:void(0);" class="goFood"
-																data-sku="9300000003223">바질 토마토 크림치즈 베이글</a>
-														</p>
-														<p class="second_rank">
-															<span class="left"><strong>2위</strong></span> <span
-																class="right"><a href="javascript:void(0);"
-																class="goFood" data-sku="9300000004026">티라미수 크림 데니쉬</a></span>
-														</p>
-														<p class="third_rank">
-															<span class="left"><strong>3위</strong></span> <span
-																class="right"><a href="javascript:void(0);"
-																class="goFood" data-sku="5110006070">하트 파이</a></span>
-														</p>
-													</li>
-													<li
-														style="float: left; list-style: none; position: relative; width: 184px;">
-														<header>
-															부문별 푸드 판매 순위<br>
-															<strong>케이크</strong>
-														</header>
-														<figure>
-															<a href="javascript:void(0);" class="goFood"
-																data-sku="5110007181"><img alt=""
-																src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[5110007181]_20210421164728509.jpg"></a>
-														</figure>
-														<p class="first_bev">1위</p>
-														<p class="coffee_name">
-															<a href="javascript:void(0);" class="goFood"
-																data-sku="5110007181">부드러운 생크림 카스텔라</a>
-														</p>
-														<p class="second_rank">
-															<span class="left"><strong>2위</strong></span> <span
-																class="right"><a href="javascript:void(0);"
-																class="goFood" data-sku="9300000004034">딸기 쏙 생크림 케이크</a></span>
-														</p>
-														<p class="third_rank">
-															<span class="left"><strong>3위</strong></span> <span
-																class="right"><a href="javascript:void(0);"
-																class="goFood" data-sku="9300000004174">크런치 쿠키 마스카포네
-																	케이크</a></span>
-														</p>
-													</li>
-													<li
-														style="float: left; list-style: none; position: relative; width: 184px;">
-														<header>
-															부문별 푸드 판매 순위<br>
-															<strong>샌드위치&amp;샐러드</strong>
-														</header>
-														<figure>
-															<a href="javascript:void(0);" class="goFood"
-																data-sku="5110003062"><img alt=""
-																src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[5110003062]_20210421162339549.jpg"></a>
-														</figure>
-														<p class="first_bev">1위</p>
-														<p class="coffee_name">
-															<a href="javascript:void(0);" class="goFood"
-																data-sku="5110003062">바비큐 치킨 치즈 치아바타</a>
-														</p>
-														<p class="second_rank">
-															<span class="left"><strong>2위</strong></span> <span
-																class="right"><a href="javascript:void(0);"
-																class="goFood" data-sku="9300000002178">베이컨 치즈 토스트</a></span>
-														</p>
-														<p class="third_rank">
-															<span class="left"><strong>3위</strong></span> <span
-																class="right"><a href="javascript:void(0);"
-																class="goFood" data-sku="9300000001777">햄 루꼴라 올리브
-																	샌드위치</a></span>
-														</p>
-													</li>
-													<li
-														style="float: left; list-style: none; position: relative; width: 184px;">
-														<header>
-															부문별 푸드 판매 순위<br>
-															<strong>따뜻한 푸드</strong>
-														</header>
-														<figure>
-															<a href="javascript:void(0);" class="goFood"
-																data-sku="9900000000680"><img alt=""
-																src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[9900000000680]_20210426103936780.jpg"></a>
-														</figure>
-														<p class="first_bev">1위</p>
-														<p class="coffee_name">
-															<a href="javascript:void(0);" class="goFood"
-																data-sku="9900000000680">판매트러플 머쉬룸 수프</a>
-														</p>
-														<p class="second_rank">
-															<span class="left"><strong>2위</strong></span> <span
-																class="right"><a href="javascript:void(0);"
-																class="goFood" data-sku="9900000001201">판매 토마토 로제 수프</a></span>
-														</p>
-														<p class="third_rank">
-															<span class="left"><strong>3위</strong></span> <span
-																class="right"><a href="javascript:void(0);"
-																class="goFood" data-sku="9900000001200">판매 단호박 크림 수프</a></span>
-														</p>
-													</li>
-													<li
-														style="float: left; list-style: none; position: relative; width: 184px;">
-														<header>
-															부문별 푸드 판매 순위<br>
-															<strong>과일&amp;요거트</strong>
-														</header>
-														<figure>
-															<a href="javascript:void(0);" class="goFood"
-																data-sku="5110009051"><img alt=""
-																src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[5110009051]_20210422111651003.jpg"></a>
-														</figure>
-														<p class="first_bev">1위</p>
-														<p class="coffee_name">
-															<a href="javascript:void(0);" class="goFood"
-																data-sku="5110009051">하루 한 컵 레드</a>
-														</p>
-														<p class="second_rank">
-															<span class="left"><strong>2위</strong></span> <span
-																class="right"><a href="javascript:void(0);"
-																class="goFood" data-sku="9300000002619">20 밀크 푸딩</a></span>
-														</p>
-														<p class="third_rank">
-															<span class="left"><strong>3위</strong></span> <span
-																class="right"><a href="javascript:void(0);"
-																class="goFood" data-sku="9300000003232">오가닉 프로틴 그릭
-																	요거트 그래놀라</a></span>
-														</p>
-													</li>
-													<li
-														style="float: left; list-style: none; position: relative; width: 184px;">
-														<header>
-															부문별 푸드 판매 순위<br>
-															<strong>스낵&amp;미니디저트</strong>
-														</header>
-														<figure>
-															<a href="javascript:void(0);" class="goFood"
-																data-sku="9300000002517"><img alt=""
-																src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[9300000002517]_20210421163620436.jpg"></a>
-														</figure>
-														<p class="first_bev">1위</p>
-														<p class="coffee_name">
-															<a href="javascript:void(0);" class="goFood"
-																data-sku="9300000002517">더블 치즈 베이글 칩</a>
-														</p>
-														<p class="second_rank">
-															<span class="left"><strong>2위</strong></span> <span
-																class="right"><a href="javascript:void(0);"
-																class="goFood" data-sku="9300000004045">리얼 두부칩</a></span>
-														</p>
-														<p class="third_rank">
-															<span class="left"><strong>3위</strong></span> <span
-																class="right"><a href="javascript:void(0);"
-																class="goFood" data-sku="9300000002556">자일리톨 캔디 크리스탈
-																	레몬</a></span>
-														</p>
-													</li>
-													<li
-														style="float: left; list-style: none; position: relative; width: 184px;">
-														<header>
-															부문별 푸드 판매 순위<br>
-															<strong>아이스크림</strong>
-														</header>
-														<figure>
-															<a href="javascript:void(0);" class="goFood"
-																data-sku="5110009050"><img alt=""
-																src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[5110009050]_20210422110047018.jpg"></a>
-														</figure>
-														<p class="first_bev">1위</p>
-														<p class="coffee_name">
-															<a href="javascript:void(0);" class="goFood"
-																data-sku="5110009050">유기농 아이스크림 바닐라볼</a>
-														</p>
-														<p class="second_rank">
-															<span class="left"><strong>2위</strong></span> <span
-																class="right"><a href="javascript:void(0);"
-																class="goFood" data-sku="9900000000031">바닐라 아포가토볼</a></span>
-														</p>
-														<p class="third_rank">
-															<span class="left"><strong>3위</strong></span> <span
-																class="right"><a href="javascript:void(0);"
-																class="goFood" data-sku="9300000000810">유기농 아이스크림
-																	초콜릿볼</a></span>
-														</p>
-													</li>
-													<li
-														style="float: left; list-style: none; position: relative; width: 184px;">
-														<header>
-															부문별 푸드 판매 순위<br>
-															<strong>프리미어 푸드</strong>
-														</header>
-														<figure>
-															<a href="javascript:void(0);" class="goFood"
-																data-sku="9300000001785"><img alt=""
-																src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[9300000001785]_20210422124351504.jpg"></a>
-														</figure>
-														<p class="first_bev">1위</p>
-														<p class="coffee_name">
-															<a href="javascript:void(0);" class="goFood"
-																data-sku="9300000001785">리저브초콜릿 월넛 돔 쿠키</a>
-														</p>
-													</li>
-													<li
-														style="float: left; list-style: none; position: relative; width: 184px;">
-														<header>
-															부문별 푸드 판매 순위<br>
-															<strong>브런치유어웨이</strong>
-														</header>
-														<figure>
-															<a href="javascript:void(0);" class="goFood"
-																data-sku="5110003062"><img alt=""
-																src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[5110003062]_20210421162339549.jpg"></a>
-														</figure>
-														<p class="first_bev">1위</p>
-														<p class="coffee_name">
-															<a href="javascript:void(0);" class="goFood"
-																data-sku="5110003062">바비큐 치킨 치즈 치아바타</a>
-														</p>
-														<p class="second_rank">
-															<span class="left"><strong>2위</strong></span> <span
-																class="right"><a href="javascript:void(0);"
-																class="goFood" data-sku="9300000002178">베이컨 치즈 토스트</a></span>
-														</p>
-														<p class="third_rank">
-															<span class="left"><strong>3위</strong></span> <span
-																class="right"><a href="javascript:void(0);"
-																class="goFood" data-sku="9300000001777">햄 루꼴라 올리브
-																	샌드위치</a></span>
-														</p>
-													</li>
-													<li
-														style="float: left; list-style: none; position: relative; width: 184px;"
-														class="bx-clone"><header>
-															부문별 푸드 판매 순위<br>
-															<strong>브레드</strong>
-														</header>
-														<figure>
-															<a href="javascript:void(0);" class="goFood"
-																data-sku="9300000003223"><img alt=""
-																src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/03/[9300000003223]_20210315170846073.jpg"></a>
-														</figure>
-														<p class="first_bev">1위</p>
-														<p class="coffee_name">
-															<a href="javascript:void(0);" class="goFood"
-																data-sku="9300000003223">바질 토마토 크림치즈 베이글</a>
-														</p>
-														<p class="second_rank">
-															<span class="left"><strong>2위</strong></span> <span
-																class="right"><a href="javascript:void(0);"
-																class="goFood" data-sku="9300000004026">티라미수 크림 데니쉬</a></span>
-														</p>
-														<p class="third_rank">
-															<span class="left"><strong>3위</strong></span> <span
-																class="right"><a href="javascript:void(0);"
-																class="goFood" data-sku="5110006070">하트 파이</a></span>
-														</p></li>
-												</ul>
-											</div> -->
-											<!-- <div class="bx-controls bx-has-controls-direction">
-												<div class="bx-controls-direction">
-													<a class="bx-prev" href="">Prev</a><a class="bx-next"
-														href="">Next</a>
+											</dd>
+											<dd>
+												<div class="myOut_pop03_wrap">
+													<input id="MYOUT2" name="myout" type="radio" value="고객서비스(상담 및 응대)가 마음에 들지 않아서">
+													<label for="MYOUT2">고객서비스(상담 및 응대)가 마음에 들지 않아서</label>
 												</div>
-											</div> -->
-											
-											<!-- 0617 예은 수정 -->
-											<li
-												style="float: left; list-style: none; position: relative; width: 245px;">
-												<header>
-													<br>
-													<strong>푸드 판매 순위</strong>
-												</header>
-													<figure>
-															<a href="javascript:void(0);" class="goFood">
-														<img alt="" src="../img/my/french-bread.png"></a>
-													</figure>
-												<p class="first_rank" style="border-bottom:2px dotted #ddd; display:table; height:30px; left: 20px; position:absolute; top:215px; width:206px;">
-													<span class="left" style="background:url('../img/util/rank_bg.gif'); float:left; font-size:16px; height:30px; line-height:30px; width:25px;">
-													<strong>1위</strong></span> 
-													<span class="right" style="color:#555; display:table-cell; font-size:12px; height:30px; padding: 0 0 0 7px; vertical-align:middle;">
-													<a href="javascript:void(0);" class="goFood" data-sku="9300000003223">바질 토마토 크림치즈 베이글</a></span>
-												</p>
-												<p class="second_rank" >
-													<span class="left"><strong>2위</strong></span> 
-													<span class="right" >
-													<a href="javascript:void(0);" class="goFood" data-sku="9300000004026">티라미수 크림 데니쉬</a></span>
-												</p>
-												<p class="third_rank" >
-													<span class="left"><strong>3위</strong></span> <span
-														class="right"><a href="javascript:void(0);"
-														class="goFood" data-sku="5110006070">하트 파이</a></span>
-												</p>
-											</li>
-											<li
-												style="float: left; list-style: none; position: relative; width: 245px;"
-												class="bx-clone">
-												<header>
-													<br>
-													<strong>푸드 판매 순위</strong>
-												</header>
-													<figure>
-															<a href="javascript:void(0);" class="goFood">
-														<img alt="" src="../img/my/french-bread.png"></a>
-													</figure>
-												<p class="first_rank" style="border-bottom:2px dotted #ddd; display:table; height:30px; left: 20px;  position:absolute; top:215px; width:206px;">
-													<span class="left" style="background:url('../img/util/rank_bg.gif'); float:left; font-size:16px; height:30px; line-height:30px; width:25px;">
-													<strong>1위</strong></span> 
-													<span class="right" style="color:#555; display:table-cell; font-size:12px; height:30px; padding: 0 0 0 7px; vertical-align:middle;">
-														<a href="javascript:void(0);"
-														class="goFood" data-sku="9300000003223">바질 토마토 크림치즈 베이글</a></span>
-												</p>
-												<p class="second_rank">
-													<span class="left"><strong>2위</strong></span> <span
-														class="right"><a href="javascript:void(0);"
-														class="goFood" data-sku="9300000004026">티라미수 크림 데니쉬</a></span>
-												</p>
-												<p class="third_rank">
-													<span class="left"><strong>3위</strong></span> <span
-														class="right"><a href="javascript:void(0);"
-														class="goFood" data-sku="5110006070">하트 파이</a></span>
-												</p>
-											</li>
-											
-										</ul>
-									</div>									
-										</div>
-									</div>
-									<div class="my_ms_rank_each my_ms_rank_each3">
-										<div class="bx-wrapper"
-											style="max-width: 100%; margin: 0px auto;">
-											<div class="bx-viewport"
-												style="width: 100%; overflow: hidden; position: relative; height: 317px;">
-												<ul class="edw3"
-													style="width: 515%; position: relative; transition-duration: 0s; transform: translate3d(-245px, 0px, 0px);">
-												<!-- 	<li
-														style="float: left; list-style: none; position: relative; width: 184px;"
-														class="bx-clone"><header>
-															부문별 원두 판매 순위<br>
-															<strong>스타벅스 비아</strong>
-														</header>
-														<figure>
-															<a href="javascript:void(0);" class="goCoffee"
-																data-sku="11089092"><img alt=""
-																src="https://image.istarbucks.co.kr/upload/store/skuimg/2019/05/[11089092]_20190527140748520.jpg"></a>
-														</figure>
-														<p class="first_bev">1위</p>
-														<p class="coffee_name">
-															<a href="javascript:void(0);" class="goCoffee"
-																data-sku="11089092">비아 아이스 커피 5개입</a>
-														</p>
-														<p class="second_rank">
-															<span class="left"><strong>2위</strong></span> <span
-																class="right"><a href="javascript:void(0);"
-																class="goCoffee" data-sku="11023539">비아 콜롬비아 12개입</a></span>
-														</p>
-														<p class="third_rank">
-															<span class="left"><strong>3위</strong></span> <span
-																class="right"><a href="javascript:void(0);"
-																class="goCoffee" data-sku="11037708">비아 하우스 블렌드 12개입</a></span>
-														</p></li>
-													<li
-														style="float: left; list-style: none; position: relative; width: 184px;">
-														<header>
-															부문별 원두 판매 순위<br>
-															<strong>스타벅스 원두</strong>
-														</header>
-														<figure>
-															<a href="javascript:void(0);" class="goCoffee"
-																data-sku="11017015"><img alt=""
-																src="https://image.istarbucks.co.kr/upload/store/skuimg/2015/07/[11017015]_20150722234902895.jpg"></a>
-														</figure>
-														<p class="first_bev">1위</p>
-														<p class="coffee_name">
-															<a href="javascript:void(0);" class="goCoffee"
-																data-sku="11017015">하우스 블렌드 250</a>
-														</p>
-														<p class="second_rank">
-															<span class="left"><strong>2위</strong></span> <span
-																class="right"><a href="javascript:void(0);"
-																class="goCoffee" data-sku="11017011">카페 베로나 250</a></span>
-														</p>
-														<p class="third_rank">
-															<span class="left"><strong>3위</strong></span> <span
-																class="right"><a href="javascript:void(0);"
-																class="goCoffee" data-sku="11017024">에스프레소 로스트 250</a></span>
-														</p>
-													</li>
-													<li
-														style="float: left; list-style: none; position: relative; width: 184px;">
-														<header>
-															부문별 원두 판매 순위<br>
-															<strong>리저브 원두</strong>
-														</header>
-														<figure>
-															<a href="javascript:void(0);" class="goCoffee"
-																data-sku="11133545"><img alt=""
-																src="https://image.istarbucks.co.kr/upload/store/skuimg/2022/03/[11133545]_20220324145738445.jpg"></a>
-														</figure>
-														<p class="first_bev">1위</p>
-														<p class="coffee_name">
-															<a href="javascript:void(0);" class="goCoffee"
-																data-sku="11133545">Reserve 브라질 파젠다 카탄두바 250</a>
-														</p>
-														<p class="second_rank">
-															<span class="left"><strong>2위</strong></span> <span
-																class="right"><a href="javascript:void(0);"
-																class="goCoffee" data-sku="11115491">Reserve 인도네시아
-																	웨스트 자바 250</a></span>
-														</p>
-														<p class="third_rank">
-															<span class="left"><strong>3위</strong></span> <span
-																class="right"><a href="javascript:void(0);"
-																class="goCoffee" data-sku="11133775">Reserve SD 콜롬비아
-																	핀카 250</a></span>
-														</p>
-													</li>
-													<li
-														style="float: left; list-style: none; position: relative; width: 184px;">
-														<header>
-															부문별 원두 판매 순위<br>
-															<strong>스타벅스 비아</strong>
-														</header>
-														<figure>
-															<a href="javascript:void(0);" class="goCoffee"
-																data-sku="11089092"><img alt=""
-																src="https://image.istarbucks.co.kr/upload/store/skuimg/2019/05/[11089092]_20190527140748520.jpg"></a>
-														</figure>
-														<p class="first_bev">1위</p>
-														<p class="coffee_name">
-															<a href="javascript:void(0);" class="goCoffee"
-																data-sku="11089092">비아 아이스 커피 5개입</a>
-														</p>
-														<p class="second_rank">
-															<span class="left"><strong>2위</strong></span> <span
-																class="right"><a href="javascript:void(0);"
-																class="goCoffee" data-sku="11023539">비아 콜롬비아 12개입</a></span>
-														</p>
-														<p class="third_rank">
-															<span class="left"><strong>3위</strong></span> <span
-																class="right"><a href="javascript:void(0);"
-																class="goCoffee" data-sku="11037708">비아 하우스 블렌드 12개입</a></span>
-														</p>
-													</li>
-													<li
-														style="float: left; list-style: none; position: relative; width: 184px;"
-														class="bx-clone"><header>
-															부문별 원두 판매 순위<br>
-															<strong>스타벅스 원두</strong>
-														</header>
-														<figure>
-															<a href="javascript:void(0);" class="goCoffee"
-																data-sku="11017015"><img alt=""
-																src="https://image.istarbucks.co.kr/upload/store/skuimg/2015/07/[11017015]_20150722234902895.jpg"></a>
-														</figure>
-														<p class="first_bev">1위</p>
-														<p class="coffee_name">
-															<a href="javascript:void(0);" class="goCoffee"
-																data-sku="11017015">하우스 블렌드 250</a>
-														</p>
-														<p class="second_rank">
-															<span class="left"><strong>2위</strong></span> <span
-																class="right"><a href="javascript:void(0);"
-																class="goCoffee" data-sku="11017011">카페 베로나 250</a></span>
-														</p>
-														<p class="third_rank">
-															<span class="left"><strong>3위</strong></span> <span
-																class="right"><a href="javascript:void(0);"
-																class="goCoffee" data-sku="11017024">에스프레소 로스트 250</a></span>
-														</p></li>
-												</ul>
-											</div> -->
-											<!-- <div class="bx-controls bx-has-controls-direction">
-												<div class="bx-controls-direction">
-													<a class="bx-prev" href="">Prev</a><a class="bx-next"
-														href="">Next</a>
+											</dd>
+											<dd>
+												<div class="myOut_pop03_wrap">
+													<input id="MYOUT3" name="myout" type="radio" value="시스템 장애(속도저조, 잦은 에러 등)">
+													<label for="MYOUT3">시스템 장애(속도저조, 잦은 에러 등)</label>
 												</div>
-											</div> -->
-											<!-- 예은 수정 -->
-											<li
-												style="float: left; list-style: none; position: relative; width: 245px;">
-												<header>
-													<br>
-													<strong>원두 판매 순위</strong>
-												</header>
-													<figure>
-															<a href="javascript:void(0);" class="goCoffee">
-														<img alt="" src="../img/my/shopping-trolley.png"></a>
-													</figure>
-												<p class="first_rank" style="border-bottom:2px dotted #ddd; display:table; height:30px; left: 20px; position:absolute; top:215px; width:206px;">
-													<span class="left" style="background:url('../img/util/rank_bg.gif'); float:left; font-size:16px; height:30px; line-height:30px; width:25px;">
-													<strong>1위</strong></span> 
-													<span class="right" style="color:#555; display:table-cell; font-size:12px; height:30px; padding:0 0 0 11px; vertical-align:middle; width:170px;">
-													<a href="javascript:void(0);" class="goCoffee" data-sku="11017015">하우스 블렌드 250</a></span>
-												</p>
-												<p class="second_rank" >
-													<span class="left"><strong>2위</strong></span> 
-													<span class="right" >
-													<a href="javascript:void(0);" class="goCoffee" data-sku="11017011">카페 베로나 250</a></span>
-												</p>
-												<p class="third_rank" >
-													<span class="left"><strong>3위</strong></span> <span
-														class="right"><a href="javascript:void(0);"
-														class="goCoffee" data-sku="11017024">에스프레소 로스트 250</a></span>
-												</p>
-											</li>
-											<li
-												style="float: left; list-style: none; position: relative; width: 245px;"
-												class="bx-clone">
-												<header>
-													<br>
-													<strong>원두 판매 순위</strong>
-												</header>
-														<figure>
-															<a href="javascript:void(0);" class="goCoffee">
-														<img alt="" src="../img/my/shopping-trolley.png"></a>
-													</figure>
-												<p class="first_rank" style="border-bottom:2px dotted #ddd; display:table; height:30px; left: 20px;  position:absolute; top:215px; width:206px;">
-													<span class="left" style="background:url('../img/util/rank_bg.gif'); float:left; font-size:16px; height:30px; line-height:30px; width:25px;">
-													<strong>1위</strong></span> 
-													<span class="right" style="color:#555; display:table-cell; font-size:12px; height:30px; padding:0 0 0 11px; vertical-align:middle; width:170px;">
-														<a href="javascript:void(0);"
-														class="goCoffee" data-sku="11017015">하우스 블렌드 250</a></span>
-												</p>
-												<p class="second_rank">
-													<span class="left"><strong>2위</strong></span> <span
-														class="right"><a href="javascript:void(0);"
-														class="goCoffee" data-sku="11017011">카페 베로나 250</a></span>
-												</p>
-												<p class="third_rank">
-													<span class="left"><strong>3위</strong></span> <span
-														class="right"><a href="javascript:void(0);"
-														class="goCoffee" data-sku="11017024">에스프레소 로스트 250</a></span>
-												</p>
-											</li>
-											
-										</ul>
-									</div>		
-											
-										</div>
-									</div>
-								</article>
-                                </fieldset>
-                            </form>
-                        </section>
-                        <!-- 메뉴 순위 end -->
-                        
-                    </div>
-                    
-                    
+											</dd>
+											<dd>
+												<div class="myOut_pop03_wrap">
+													<input id="MYOUT4" name="myout" type="radio" value="이벤트 참여를 위해서 회원가입을 했기 때문에">
+													<label for="MYOUT4">이벤트 참여를 위해서 회원가입을 했기 때문에</label>
+												</div>
+											</dd>
+											<dd>
+												<div class="myOut_pop03_wrap">
+													<input id="MYOUT5" name="myout" type="radio" value="기타">
+													<label for="MYOUT5">기타</label>
+												</div>
+											</dd>
+										</dl>
+									</fieldset>
+								</form>
+								<div class="popCont">								
+									<ul class="myOut_pop03_info">
+										<li>탈퇴하신 후에는 기존에 사용했던 아이디는 다시 사용하실 수 없습니다.</li>
+										<li>그 동안 회원님께서 남겨주신 모든 게시물과 누적 정보들은 삭제 처리됩니다.</li>
+										<li>입력하신 정보는 회원탈퇴를 위한 목적으로만 사용되며, 절대 다른 목적으로 이용되지 않습니다.</li>
+									</ul>
+									<p class="myOut_point">회원 탈퇴를 한 날로부터 <span>30일</span>이 경과해야만<br> 재가입이 가능합니다.</p>
+									<p class="btn3_close"><a href="javascript:void(0);">닫기</a></p>
+								</div>
+							</div>							
+						</div>
+						<!-- 회원 탈퇴시 뜨는 팝업 3 end -->
+												
+						<!-- 회원탈퇴 end -->
+					</div>
+					
 
 
 

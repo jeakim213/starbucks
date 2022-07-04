@@ -386,6 +386,32 @@ public class MyController {
 
 	}
 	
+	//회원정보 확인 - 예은
+	@RequestMapping(value = "my/myinfo_modify_login")
+	public String myinfo_modify_login() {
+		return "my/myinfo_modify_login";
+	}
+	
+	//회원정보 확인 - 예은
+		@RequestMapping(value = "my/myinfo_modifyForm")
+		public String myinfo_modifyForm() {
+			return "my/myinfo_modifyForm";
+		}
+	
+	//회원탈퇴 - 예은
+		@RequestMapping(value = "my/myinfo_out")
+		public String myinfo_out() {
+			return "my/myinfo_out";
+		}
+	
+	//비밀번호 수정 - 예은
+	@RequestMapping(value = "my/myinfo_modify_pwd")
+	public String myinfo_modify_pwd() {
+		return "my/myinfo_modify_pwd";
+	}
+	
+	
+	
 	
 	
 	@RequestMapping(value = "my/my_menu")//지혜0628
