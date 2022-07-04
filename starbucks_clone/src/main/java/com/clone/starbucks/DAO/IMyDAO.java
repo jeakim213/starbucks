@@ -9,6 +9,7 @@ import com.clone.starbucks.DTO.AllDTO;
 import com.clone.starbucks.DTO.CardDTO;
 import com.clone.starbucks.DTO.CustomDTO;
 import com.clone.starbucks.DTO.E_couponDTO;
+import com.clone.starbucks.DTO.RegisterDTO;
 import com.clone.starbucks.DTO.UserInfoDTO;
 
 
@@ -71,5 +72,16 @@ public interface IMyDAO {
 	int cusCount(String id); //지혜
 	
 	int deleteCustom(int cus_no); //지혜
+
+	//---------------------------------
+	// 개인정보관리 - 예은
+	
+	RegisterDTO userInfo(String id);
+
+	UserInfoDTO detailinfo(String id);
+
+	void updateRegInfo(RegisterDTO all);
+
+	void updateUserInfo(UserInfoDTO user);
 
 }

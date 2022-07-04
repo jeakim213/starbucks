@@ -704,7 +704,7 @@ var eFrequencyPlannerYn = 'Y';
 <%-- <h3>
 	<font color="red" id="msg">${msg } </font>
 </h3> --%>
-<form action="memberListForm" method="post">
+<form action="myinfo_ModifyProc" method="post">
 	<table id="t">
 		<tr>
 			<td></td>
@@ -712,7 +712,7 @@ var eFrequencyPlannerYn = 'Y';
 		</tr>
 		<tr>
 			<td id="l" width=90 align='right' height=35>아이디</td>
-			<td><input class="text" type=text name='id' value="${all.id }" readonly="readonly"/></td>
+			<td><input class="text" type=text name='id' value="${all.id }" disabled="disabled"/></td>
 		</tr>
 		<tr>
 			<td id="l" width=90 align='right' height=35>이름</td>
@@ -723,12 +723,12 @@ var eFrequencyPlannerYn = 'Y';
 			<td>
 				<c:choose>
 					<c:when test="${all.gender == 'M' }">
-						<input class="radio" type=radio name='gender' value='M' checked onclick="return(false);"/>&nbsp;남&nbsp;&nbsp;&nbsp;
-						<input type=radio name='gender' value='F' onclick="return(false);"/>&nbsp;여
+						<input class="radio" type=radio name='gender' value='M' checked="checked" disabled="disabled"/>&nbsp;남&nbsp;&nbsp;&nbsp;
+						<input type=radio name='gender' value='F' disabled="disabled"/>&nbsp;여
 					</c:when>
 					<c:when test="${all.gender == 'F' }">
-						<input class="radio" type=radio name='gender' value='M' onclick="return(false);"/>&nbsp;남&nbsp;&nbsp;&nbsp;
-						<input type=radio name='gender' value='F' checked onclick="return(false);"/>&nbsp;여
+						<input class="radio" type=radio name='gender' value='M' disabled="disabled"/>&nbsp;남&nbsp;&nbsp;&nbsp;
+						<input type=radio name='gender' value='F' checked="checked" disabled="disabled"/>&nbsp;여
 					</c:when>
 				</c:choose>
 			</td>
@@ -750,12 +750,12 @@ var eFrequencyPlannerYn = 'Y';
 			<td>
 				<c:choose>
 					<c:when test="${all.event_sms == 'Y' }">
-						<input class="radio" type=radio name='event_sms' value='Y' checked onclick="return(false);"/>&nbsp;동의&nbsp;&nbsp;&nbsp;
-						<input type=radio name='event_sms' value='N' onclick="return(false);"/>&nbsp;비동의
+						<input class="radio" type=radio name='event_sms' value='Y' checked="checked"/>&nbsp;동의&nbsp;&nbsp;&nbsp;
+						<input type=radio name='event_sms' value='N'/>&nbsp;비동의
 					</c:when>
 					<c:when test="${all.event_sms == 'N' }">
-						<input class="radio" type=radio name='event_sms' value='Y' onclick="return(false);"/>&nbsp;동의&nbsp;&nbsp;&nbsp;
-						<input type=radio name='event_sms' value='N' checked onclick="return(false);"/>&nbsp;비동의
+						<input class="radio" type=radio name='event_sms' value='Y'/>&nbsp;동의&nbsp;&nbsp;&nbsp;
+						<input type=radio name='event_sms' value='N' checked="checked"/>&nbsp;비동의
 					</c:when>
 				</c:choose>
 			</td>
@@ -769,12 +769,12 @@ var eFrequencyPlannerYn = 'Y';
 			<td>
 				<c:choose>
 					<c:when test="${all.event_e == 'Y' }">
-						<input class="radio" type=radio name='event_e' value='Y' checked onclick="return(false);"/>&nbsp;동의&nbsp;&nbsp;&nbsp;
-						<input type=radio name='event_e' value='N' onclick="return(false);">&nbsp;비동의
+						<input class="radio" type=radio name='event_e' value='Y' checked="checked"/>&nbsp;동의&nbsp;&nbsp;&nbsp;
+						<input type=radio name='event_e' value='N'>&nbsp;비동의
 					</c:when>
 					<c:when test="${all.event_e == 'N' }">
-						<input class="radio" type=radio name='event_e' value='Y' onclick="return(false);"/>&nbsp;동의&nbsp;&nbsp;&nbsp;
-						<input type=radio name='event_e' value='N' checked onclick="return(false);"/>&nbsp;비동의
+						<input class="radio" type=radio name='event_e' value='Y'/>&nbsp;동의&nbsp;&nbsp;&nbsp;
+						<input type=radio name='event_e' value='N' checked="checked"/>&nbsp;비동의
 					</c:when>
 				</c:choose>
 			</td>
@@ -785,30 +785,30 @@ var eFrequencyPlannerYn = 'Y';
 		</tr>
 		<tr>
 			<td id="l" width=90 align='right' height=35>별</td>
-			<td><input class="text" type=text name='star' value="${all.star }"/></td>
+			<td><input class="text" type=text name='star' value="${all.star }" disabled="disabled"/></td>
 		</tr>
 		<tr>
 			<td id="l" width=90 align='right' height=35>DTPass</td>
-			<td><input class="text" type=text name='DTPass' value="${all.DTPass }"/></td>
+			<td><input class="text" type=text name='DTPass' value="${all.DTPass }" disabled="disabled"/></td>
 		</tr>
 		<tr>
 			<td id="lh" width=90 align='right' height=35>등급</td>
 			<td>
 				<c:choose>
 					<c:when test="${all.grade == 'WC' }">
-						<input class="radio" type=radio name='grade' value='WC' checked="checked"/>&nbsp;Welcome&nbsp;&nbsp;&nbsp;
-						<input type=radio name='grade' value='GR'/>&nbsp;Green&nbsp;&nbsp;&nbsp;
-						<input type=radio name='grade' value='GD'/>&nbsp;Gold
+						<input class="radio" type=radio name='grade' value='WC' checked="checked" disabled="disabled"/>&nbsp;Welcome&nbsp;&nbsp;&nbsp;
+						<input type=radio name='grade' value='GR' disabled="disabled"/>&nbsp;Green&nbsp;&nbsp;&nbsp;
+						<input type=radio name='grade' value='GD' disabled="disabled"/>&nbsp;Gold
 					</c:when>
 					<c:when test="${all.grade == 'GR' }">
-						<input class="radio" type=radio name='grade' value='WC'/>&nbsp;Welcome&nbsp;&nbsp;&nbsp;
-						<input type=radio name='grade' value='GR' checked="checked"/>&nbsp;Green&nbsp;&nbsp;&nbsp;
-						<input type=radio name='grade' value='GD'/>&nbsp;Gold
+						<input class="radio" type=radio name='grade' value='WC' disabled="disabled"/>&nbsp;Welcome&nbsp;&nbsp;&nbsp;
+						<input type=radio name='grade' value='GR' checked="checked" disabled="disabled"/>&nbsp;Green&nbsp;&nbsp;&nbsp;
+						<input type=radio name='grade' value='GD' disabled="disabled"/>&nbsp;Gold
 					</c:when>
 					<c:when test="${all.grade == 'GD' }">
-						<input class="radio" type=radio name='grade' value='WC'/>&nbsp;Welcome&nbsp;&nbsp;&nbsp;
-						<input type=radio name='grade' value='GR'/>&nbsp;Green&nbsp;&nbsp;&nbsp;
-						<input type=radio name='grade' value='GD' checked="checked"/>&nbsp;Gold
+						<input class="radio" type=radio name='grade' value='WC' disabled="disabled"/>&nbsp;Welcome&nbsp;&nbsp;&nbsp;
+						<input type=radio name='grade' value='GR' disabled="disabled"/>&nbsp;Green&nbsp;&nbsp;&nbsp;
+						<input type=radio name='grade' value='GD' checked="checked" disabled="disabled"/>&nbsp;Gold
 					</c:when>
 				</c:choose>
 			</td>
@@ -830,8 +830,8 @@ var eFrequencyPlannerYn = 'Y';
 		</tr>
 		<tr>
 			<td align='right' height=35 colspan=4>
-				<button type="submit" onclick="this.form.action='memberModifyProc'">저장</button>
-				<button type="button" onclick="location.href='index'">취소</button>	 
+				<button type="submit">저장</button>
+				<button type="button" onclick="location.href='index'">취소</button> 
 			</td>
 		</tr>
 	</table>

@@ -19,6 +19,7 @@ import com.clone.starbucks.DTO.AllDTO;
 import com.clone.starbucks.DTO.CardDTO;
 import com.clone.starbucks.DTO.CustomDTO;
 import com.clone.starbucks.DTO.E_couponDTO;
+import com.clone.starbucks.DTO.RegisterDTO;
 import com.clone.starbucks.DTO.UserInfoDTO;
 
 @Service
@@ -356,5 +357,47 @@ public class MyServiceImpl implements IMyService {
 		}
 		return msg;
 	}
+
 	
+	// 회원관리 - 예은
+	@Override
+	public RegisterDTO userInfo(String id) {
+		
+		UserInfoDTO Session_user = (UserInfoDTO) session.getAttribute("userInfo");
+	    id = Session_user.getId();
+	    
+		RegisterDTO reg = myDAO.userInfo(id);
+		UserInfoDTO user = myDAO.detailinfo(id);
+		RegisterDTO all = new RegisterDTO();
+		if (reg != null) {
+			all.setId(reg.getId());
+			all.setName(reg.getName());
+			all.setPhone(reg.getPhone());
+			all.setEmail(reg.getEmail());
+			all.setBirth_year(reg.getBirth_year());
+			all.setBirth_month(reg.getBirth_month());
+			all.setBirth_day(reg.getBirth_day());
+			all.setGender(reg.getGender());
+			all.setEvent_sms(reg.getEvent_sms());
+			all.setEvent_e(reg.getEvent_e());
+		}
+		if (user != null) {
+			all.setStar(user.getStar());
+			all.setGrade(user.getGrade());
+			all.setNickname(user.getNickname());
+			all.setCupreward(user.getCupreward());
+		}
+		return all;
+	}
+
+	@Override
+	public String myinfo_ModifyProc(RegisterDTO all, UserInfoDTO userInfo) {
+		
+		myDAO.updateRegInfo(all);
+		UserInfoDTO user = (UserInfoDTO) all;
+		myDAO.updateUserInfo(user);
+		return "회원 수정 완료";
+	  
+	}
 }
+	

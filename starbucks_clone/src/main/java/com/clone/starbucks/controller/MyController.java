@@ -388,15 +388,35 @@ public class MyController {
 	
 	//회원정보 확인 - 예은
 	@RequestMapping(value = "my/myinfo_modify_login")
-	public String myinfo_modify_login() {
+	public String myinfo_modify_login(String id, Model model) {
+		model.addAttribute("all", myService.userInfo(id));
 		return "my/myinfo_modify_login";
 	}
 	
-	//회원정보 확인 - 예은
-		@RequestMapping(value = "my/myinfo_modifyForm")
-		public String myinfo_modifyForm() {
-			return "my/myinfo_modifyForm";
+	//회원정보 수정 - 예은
+	
+	@RequestMapping(value = "my/myinfo_modifyForm")
+	public String memberModifyForm(RegisterDTO all, Model model) {
+		model.addAttribute("all", all);
+		return "my/myinfo_modifyForm";
+	}
+		
+	@RequestMapping(value = "my/myinfo_ModifyProc")
+	public String myinfo_modifyForm(RegisterDTO all, UserInfoDTO userInfo) {
+		UserInfoDTO Session_user = (UserInfoDTO) session.getAttribute("userInfo");
+	    String id = Session_user.getId();
+	    System.out.println("확인 : " + id);
+	    
+	    all.setId(id);
+	    userInfo.setId(id);
+	    
+		
+		String msg = myService.myinfo_ModifyProc(all, userInfo);
+		if(msg.equals("회원 수정 완료")) {
+			return "redirect:/my/myinfo_modify_login";
 		}
+		return "redirect:/my/myinfo_modifyForm";
+	}
 	
 	//회원탈퇴 - 예은
 		@RequestMapping(value = "my/myinfo_out")

@@ -695,11 +695,7 @@ var eFrequencyPlannerYn = 'Y';
                     
                     
 <!-- 관리자 -->
-<%-- <c:if test="${empty sessionScope.id }">
-	<script>
-		location.href = 'index?formpath=login'
-	</script>
-</c:if> --%>
+
 <c:url var="root" value="/" />
 <div align="center">
 	<%-- <h3><font color="#036635" id="msg">${msg }</font></h3> --%>
@@ -851,7 +847,7 @@ var eFrequencyPlannerYn = 'Y';
 		</table>
 		<div style="width: 450px; text-align: center; margin: 2px;">
 			<button type="submit">수정</button>
-			<button type="button" onclick="location.href='index'">취소</button>
+			<button type="button" onclick="location.href='index'">돌아가기</button>
 		</div>
 	</form>
 </div>
