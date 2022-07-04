@@ -19,6 +19,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
@@ -286,10 +288,6 @@ public class MyController {
 		return "my/dtpass";
 	}
 	
-
-	
-
-	
 	@ResponseBody // 차량번호 중복 체크-예은
 	@PostMapping(value = "my/isExistCarNoWeb", produces = "application/json; charset=UTF-8")
 	public String isExistId(@RequestBody(required = false) String carNo) {
@@ -389,15 +387,23 @@ public class MyController {
 	}
 	
 	
-
-	@RequestMapping(value = "my/my_menu")
-	public String my_menu(Model model) {
-		ArrayList<CustomDTO> list = myService.setCusTable();
+	
+	@RequestMapping(value = "my/my_menu")//지혜0628
+	public String my_menu(@RequestParam(value="myCustomPage", required = false, defaultValue = "1")int myCustomPage
+			,Model model) {
+		ArrayList<CustomDTO> list = myService.setCusTable(myCustomPage, model);
 		model.addAttribute("custom", list);
+		model.addAttribute("cusDateList", myService.setCusDate(list));
+		
 		return "my/my_menu";
 	}
 
-
+	@ResponseBody //지혜0629
+	@PostMapping(value = "my/deleteCusAjax")
+	public String deleteCusAjax(@RequestBody HashMap<String, ArrayList<Integer>> data) {
+		return myService.deleteCustom(data.get("Arr"));
+	}
+	
 	@GetMapping("userInfo")
 	public String userInfoLoad(UserInfoDTO userinfo, RegisterDTO member, HttpServletRequest req, Model model) {
 		String name = member.getName();

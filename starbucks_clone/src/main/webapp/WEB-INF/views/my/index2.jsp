@@ -1315,7 +1315,8 @@ var eFrequencyPlannerYn = 'Y';
 											</div> -->
 											
 											
-											<!-- 0617 예은 수정본 -->
+											<!-- 0617 예은 기본css 수정본 -->
+											<!-- 0630 지혜 순위작업 -->
 											<li
 												style="float: left; list-style: none; position: relative; width: 245px;">
 												<header>

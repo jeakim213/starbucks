@@ -43,7 +43,7 @@ public interface IMyService {
 	String deleteProc(UserInfoDTO userInfo);
 
 	
-	ArrayList<CustomDTO> setCusTable();
+	ArrayList<CustomDTO> setCusTable(int myCustomPage, Model model);
 	
 	String deleteCustom(ArrayList<Integer> cusNoArr);
 

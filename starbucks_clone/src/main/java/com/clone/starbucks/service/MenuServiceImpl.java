@@ -116,11 +116,11 @@ public class MenuServiceImpl implements IMenuService{
 		else if(data.get("delegateSku").equals("20")) result += "톨";
 		else if(data.get("delegateSku").equals("30")) {
 			result += "그란데";
-			setPrice(dto, 500);
+			if(dto != null) setPrice(dto, 500);
 		}
 		else if(data.get("delegateSku").equals("40")) {
 			result += "벤티";
-			setPrice(dto, 1000);
+			if(dto != null) setPrice(dto, 1000);
 		}
 		result += "|";
 		

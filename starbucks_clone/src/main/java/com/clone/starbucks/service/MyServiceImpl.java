@@ -1,8 +1,11 @@
 package com.clone.starbucks.service;
 
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
+import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -309,22 +312,47 @@ public class MyServiceImpl implements IMyService {
 		}
 
 	@Override //커스텀메뉴 리스트 - 지혜 0628
-	public ArrayList<CustomDTO> setCusTable() {
+	public ArrayList<CustomDTO> setCusTable(int myCustomPage, Model model) {
 		UserInfoDTO user = (UserInfoDTO) session.getAttribute("userInfo");
 	    String id = user.getId();
-	    ArrayList<CustomDTO> result = myDAO.customList(id);
+		
+	    //지혜 0630
+	    int pageBlock = 5; //한 화면에 보여줄 데이터 수
+		int totalData = myDAO.cusCount(id);
+		int end = myCustomPage * pageBlock; // 데이터의 끝 번호
+		int begin = end + 1 - pageBlock; // 데이터의 시작 번호
+		String url = "/starbucks/my/my_menu?myCustomPage=";
+		model.addAttribute("page", PageService.getNavi(myCustomPage, pageBlock, totalData, url));
+		model.addAttribute("no", (totalData - begin + 1));
+		Map<String, Object> paramMap = new HashMap<String, Object>();
+		paramMap.put("begin", begin);
+		paramMap.put("end", end);
+		paramMap.put("id", id);
+		ArrayList<CustomDTO> result = myDAO.customList(paramMap);
 		
 		return result;
+	}
+	
+	public ArrayList<String> setCusDate(ArrayList<CustomDTO> list){
+		ArrayList<String> dateList = new ArrayList<String>();
+		if(list == null) return null;
+		for(CustomDTO dto : list) {
+			SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd hh:mm:ss");
+			Date date = dto.getCus_date();
+			String fomatDate = sdf.format(date);
+			dateList.add(fomatDate);
+		}
+		return dateList;
 	}
 	
 	@Override //커스텀메뉴 삭제 - 지혜 0629
 	public String deleteCustom(ArrayList<Integer> cusNoArr) {
 		//배열에서 cus_no하나씩 꺼내서 delete작업
 		//성공결과 실패결과 String으로 담아서 전달하기.
-		String msg = "성공";
+		String msg = "SUCCESS";
 		for(Integer aa : cusNoArr) {
 			int result = myDAO.deleteCustom(aa.intValue());
-			if(result < 1) msg = "실패";
+			if(result < 1) msg = "FAIL";
 		}
 		return msg;
 	}
