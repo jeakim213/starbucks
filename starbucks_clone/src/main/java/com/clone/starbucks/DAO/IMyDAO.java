@@ -1,6 +1,7 @@
 package com.clone.starbucks.DAO;
 
 import java.util.ArrayList;
+import java.util.Map;
 
 import org.springframework.stereotype.Repository;
 
@@ -8,6 +9,7 @@ import com.clone.starbucks.DTO.AllDTO;
 import com.clone.starbucks.DTO.CardDTO;
 import com.clone.starbucks.DTO.CustomDTO;
 import com.clone.starbucks.DTO.E_couponDTO;
+import com.clone.starbucks.DTO.RegisterDTO;
 import com.clone.starbucks.DTO.UserInfoDTO;
 
 
@@ -57,9 +59,29 @@ public interface IMyDAO {
 	AllDTO userAllInfo(String id);
 
 	int useCouponCount(String id);
+
+	int isExistCar(String carNo);
+
+	int updateDtpass(UserInfoDTO userInfo);
+
+	int deleteDtpass(UserInfoDTO userInfo);
+
 	
-	ArrayList<CustomDTO> customList(String id); //지혜
+	ArrayList<CustomDTO> customList(Map<String, Object> paramMap); //지혜
+	
+	int cusCount(String id); //지혜
 	
 	int deleteCustom(int cus_no); //지혜
+
+	//---------------------------------
+	// 개인정보관리 - 예은
 	
+	RegisterDTO userInfo(String id);
+
+	UserInfoDTO detailinfo(String id);
+
+	void updateRegInfo(RegisterDTO all);
+
+	void updateUserInfo(UserInfoDTO user);
+
 }

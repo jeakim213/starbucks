@@ -1,8 +1,11 @@
 package com.clone.starbucks.service;
 
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
+import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -16,6 +19,7 @@ import com.clone.starbucks.DTO.AllDTO;
 import com.clone.starbucks.DTO.CardDTO;
 import com.clone.starbucks.DTO.CustomDTO;
 import com.clone.starbucks.DTO.E_couponDTO;
+import com.clone.starbucks.DTO.RegisterDTO;
 import com.clone.starbucks.DTO.UserInfoDTO;
 
 @Service
@@ -276,26 +280,124 @@ public class MyServiceImpl implements IMyService {
 			
 		}
 
+		//----------- dt pass
+		
+		@Override
+		public String isExistCar(String carNo) {
+			if(carNo == null || carNo == "")
+				return "차량 번호 입력 후, 다시 시도하세요.";
+			int count = myDAO.isExistCar(carNo);
+			if(count == 1)			
+				return "중복 차량 번호";
+			
+			return "등록 가능 차량 번호";
+			
+		}
+
+		@Override
+		public String dtpassProc(UserInfoDTO userInfo) {
+
+			myDAO.updateDtpass(userInfo);
+			
+			return "등록 완료";
+		}
+
+		@Override
+		public String deleteProc(UserInfoDTO userInfo) {
+			
+			
+		    myDAO.deleteDtpass(userInfo);
+		  
+
+			return "삭제 완료";
+		}
 
 	@Override //커스텀메뉴 리스트 - 지혜 0628
-	public ArrayList<CustomDTO> setCusTable() {
+	public ArrayList<CustomDTO> setCusTable(int myCustomPage, Model model) {
 		UserInfoDTO user = (UserInfoDTO) session.getAttribute("userInfo");
 	    String id = user.getId();
-	    ArrayList<CustomDTO> result = myDAO.customList(id);
+		
+	    //지혜 0630
+	    int pageBlock = 5; //한 화면에 보여줄 데이터 수
+		int totalData = myDAO.cusCount(id);
+		int end = myCustomPage * pageBlock; // 데이터의 끝 번호
+		int begin = end + 1 - pageBlock; // 데이터의 시작 번호
+		String url = "/starbucks/my/my_menu?myCustomPage=";
+		model.addAttribute("page", PageService.getNavi(myCustomPage, pageBlock, totalData, url));
+		model.addAttribute("no", (totalData - begin + 1));
+		Map<String, Object> paramMap = new HashMap<String, Object>();
+		paramMap.put("begin", begin);
+		paramMap.put("end", end);
+		paramMap.put("id", id);
+		ArrayList<CustomDTO> result = myDAO.customList(paramMap);
 		
 		return result;
+	}
+	
+	public ArrayList<String> setCusDate(ArrayList<CustomDTO> list){
+		ArrayList<String> dateList = new ArrayList<String>();
+		if(list == null) return null;
+		for(CustomDTO dto : list) {
+			SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd hh:mm:ss");
+			Date date = dto.getCus_date();
+			String fomatDate = sdf.format(date);
+			dateList.add(fomatDate);
+		}
+		return dateList;
 	}
 	
 	@Override //커스텀메뉴 삭제 - 지혜 0629
 	public String deleteCustom(ArrayList<Integer> cusNoArr) {
 		//배열에서 cus_no하나씩 꺼내서 delete작업
 		//성공결과 실패결과 String으로 담아서 전달하기.
-		String msg = "성공";
+		String msg = "SUCCESS";
 		for(Integer aa : cusNoArr) {
 			int result = myDAO.deleteCustom(aa.intValue());
-			if(result < 1) msg = "실패";
+			if(result < 1) msg = "FAIL";
 		}
 		return msg;
 	}
+
 	
+	// 회원관리 - 예은
+	@Override
+	public RegisterDTO userInfo(String id) {
+		
+		UserInfoDTO Session_user = (UserInfoDTO) session.getAttribute("userInfo");
+	    id = Session_user.getId();
+	    
+		RegisterDTO reg = myDAO.userInfo(id);
+		UserInfoDTO user = myDAO.detailinfo(id);
+		RegisterDTO all = new RegisterDTO();
+		if (reg != null) {
+			all.setId(reg.getId());
+			all.setName(reg.getName());
+			all.setPhone(reg.getPhone());
+			all.setEmail(reg.getEmail());
+			all.setBirth_year(reg.getBirth_year());
+			all.setBirth_month(reg.getBirth_month());
+			all.setBirth_day(reg.getBirth_day());
+			all.setGender(reg.getGender());
+			all.setEvent_sms(reg.getEvent_sms());
+			all.setEvent_e(reg.getEvent_e());
+		}
+		if (user != null) {
+			all.setStar(user.getStar());
+			all.setGrade(user.getGrade());
+			all.setNickname(user.getNickname());
+			all.setCupreward(user.getCupreward());
+		}
+		return all;
+	}
+
+	@Override
+	public String myinfo_ModifyProc(RegisterDTO all, UserInfoDTO userInfo) {
+		
+		myDAO.updateRegInfo(all);
+		UserInfoDTO user = (UserInfoDTO) all;
+		myDAO.updateUserInfo(user);
+		return "회원 수정 완료";
+	  
+	}
 }
+	

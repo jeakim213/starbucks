@@ -1457,20 +1457,16 @@ var eFrequencyPlannerYn = 'Y';
 			var check = document.getElementById('agreement1').checked;
 			if(check){
 				document.getElementById('agreement1').value = 'Y';
-				alert(check);
 			}else{
 				document.getElementById('agreement1').value = 'N';
-				alert(check);
 			}
 		}else if(val == "email"){
-			var check = document.getElementById('agreement3').checked;
+				document.getElementById('agreement3').checked;
 			
 			if(check){
-				var a = document.getElementById('agreement3').value = 'Y';
-				alert(a);
+				document.getElementById('agreement3').value = 'Y';
 			}else{
-				var a = document.getElementById('agreement3').value = 'N';
-				alert(a);
+				document.getElementById('agreement3').value = 'N';
 			}
 		}
 	} 

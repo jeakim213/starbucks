@@ -15,10 +15,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.clone.starbucks.DAO.IMyDAO;
 import com.clone.starbucks.DTO.AllDTO;
@@ -29,6 +33,7 @@ import com.clone.starbucks.DTO.RegisterDTO;
 import com.clone.starbucks.DTO.UserInfoDTO;
 import com.clone.starbucks.service.MenuServiceImpl;
 import com.clone.starbucks.service.MyServiceImpl;
+import com.google.gson.JsonObject;
 
 @Controller
 public class MyController {
@@ -283,13 +288,168 @@ public class MyController {
 		return "my/dtpass";
 	}
 	
-	@RequestMapping(value = "my/my_menu")
-	public String my_menu(Model model) {
-		ArrayList<CustomDTO> list = myService.setCusTable();
+	@ResponseBody // 차량번호 중복 체크-예은
+	@PostMapping(value = "my/isExistCarNoWeb", produces = "application/json; charset=UTF-8")
+	public String isExistId(@RequestBody(required = false) String carNo) {
+		// @RequestBody : 클라이언트가 보낸 데이터 / (required = true / false) 기본필수값
+		
+		
+		
+		String str = carNo;
+		String[] strAry = str.split("\\&|\\=");
+		JsonObject obj = new JsonObject();
+
+		for (String a : strAry)
+
+			carNo = strAry[1];
+
+		String msg = myService.isExistCar(carNo);
+		if (msg.equals("등록 가능 차량 번호")) {
+			obj.addProperty("result_code", "000");
+			obj.addProperty("message", "");
+		} else if (msg.equals("중복 차랑 변호")) {
+			obj.addProperty("result_code", "ERROR");
+			obj.addProperty("message", "");
+		}
+		return obj.toString();
+	}
+	
+	
+	@RequestMapping(value = "my/dtpassProc")	// 차량번호 등록
+	public String dtpassProc(@ModelAttribute UserInfoDTO userInfo, Model model, RedirectAttributes ra, HttpServletResponse response) throws IOException {
+	
+		 UserInfoDTO user = (UserInfoDTO) session.getAttribute("userInfo");
+	      
+	      // 로그인 안했을때 로그인창으로 이동
+	      if(user == null) {
+	    	  return "redirect:/login/login";
+	      }
+	    //System.out.println(userInfo.getDTPass());
+
+	    userInfo.setId(user.getId());
+		String msg = myService.dtpassProc(userInfo);
+
+		response.setContentType("text/html; charset=UTF-8");
+		PrintWriter out = response.getWriter();
+
+		
+		if (msg.equals("등록 완료")) {
+			model.addAttribute("msg", msg);
+			user.setDTPass(userInfo.getDTPass());
+			session.setAttribute("userInfo", user);
+			out.println("<script>alert('차랑 번호가 등록되었습니다.'); window.location.href='../my/index';</script>");
+			out.flush();
+			out.close();
+			return "my/index";
+			
+
+		} else {
+			model.addAttribute("msg", msg);
+			out.println("<script>alert('차랑 번호 등록에 실패하였습니다.'); window.location.href='../my/dtpass';</script>");
+			out.flush();
+			out.close();
+			return "my/dtpass";
+
+		}
+
+	}
+	
+	@RequestMapping(value = "my/deleteProc")	// 차량번호 삭제
+	public String deleteProc(UserInfoDTO userInfo, Model model, HttpServletResponse response) throws IOException{
+	
+		 UserInfoDTO user = (UserInfoDTO) session.getAttribute("userInfo");
+
+		 
+	      // 로그인 안했을때 로그인창으로 이동
+	      if(user == null) {
+	    	  return "redirect:/login/login";
+	      }
+	    //System.out.println(userInfo.getDTPass());
+
+	    userInfo.setId(user.getId());
+	    userInfo.setDTPass(user.getDTPass());
+	 
+		String msg = myService.deleteProc(userInfo);
+
+			
+		if (msg.equals("삭제 완료")) {
+			user.setDTPass("");
+			session.setAttribute("userInfo", user);
+			
+			return "redirect:/my/index";
+			
+
+		} else {
+			return "redirect:/my/dtpass";
+
+		}
+
+	}
+	
+	//회원정보 확인 - 예은
+	@RequestMapping(value = "my/myinfo_modify_login")
+	public String myinfo_modify_login(String id, Model model) {
+		model.addAttribute("all", myService.userInfo(id));
+		return "my/myinfo_modify_login";
+	}
+	
+	//회원정보 수정 - 예은
+	
+	@RequestMapping(value = "my/myinfo_modifyForm")
+	public String memberModifyForm(RegisterDTO all, Model model) {
+		model.addAttribute("all", all);
+		return "my/myinfo_modifyForm";
+	}
+		
+	@RequestMapping(value = "my/myinfo_ModifyProc")
+	public String myinfo_modifyForm(RegisterDTO all, UserInfoDTO userInfo) {
+		UserInfoDTO Session_user = (UserInfoDTO) session.getAttribute("userInfo");
+	    String id = Session_user.getId();
+	    System.out.println("확인 : " + id);
+	    
+	    all.setId(id);
+	    userInfo.setId(id);
+	    
+		
+		String msg = myService.myinfo_ModifyProc(all, userInfo);
+		if(msg.equals("회원 수정 완료")) {
+			return "redirect:/my/myinfo_modify_login";
+		}
+		return "redirect:/my/myinfo_modifyForm";
+	}
+	
+	//회원탈퇴 - 예은
+		@RequestMapping(value = "my/myinfo_out")
+		public String myinfo_out() {
+			return "my/myinfo_out";
+		}
+	
+	//비밀번호 수정 - 예은
+	@RequestMapping(value = "my/myinfo_modify_pwd")
+	public String myinfo_modify_pwd() {
+		return "my/myinfo_modify_pwd";
+	}
+	
+	
+	
+	
+	
+	@RequestMapping(value = "my/my_menu")//지혜0628
+	public String my_menu(@RequestParam(value="myCustomPage", required = false, defaultValue = "1")int myCustomPage
+			,Model model) {
+		ArrayList<CustomDTO> list = myService.setCusTable(myCustomPage, model);
 		model.addAttribute("custom", list);
+		model.addAttribute("cusDateList", myService.setCusDate(list));
+		
 		return "my/my_menu";
 	}
 
+	@ResponseBody //지혜0629
+	@PostMapping(value = "my/deleteCusAjax")
+	public String deleteCusAjax(@RequestBody HashMap<String, ArrayList<Integer>> data) {
+		return myService.deleteCustom(data.get("Arr"));
+	}
+	
 	@GetMapping("userInfo")
 	public String userInfoLoad(UserInfoDTO userinfo, RegisterDTO member, HttpServletRequest req, Model model) {
 		String name = member.getName();

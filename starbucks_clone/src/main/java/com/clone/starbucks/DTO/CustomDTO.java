@@ -6,8 +6,8 @@ import java.util.Date;
 create table custom(
 cus_no number not null primary key,
 id varchar2(30) not null,
-p_name varchar2(50) not null,
-cus_nickname varchar2(50),
+p_name varchar2(80) not null,
+cus_nickname varchar2(80),
 cus_date date default sysdate not null,
 cus_op varchar2(100)
 );

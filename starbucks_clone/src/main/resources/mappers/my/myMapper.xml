@@ -91,6 +91,18 @@
 	</select>
 	
 	
+	<!-- DTPASS - 예은 -->
+	<select id="isExistCar" parameterType="String" resultType="int">
+		SELECT count(*) FROM userinfo WHERE DTPass= #{DTPass}
+	</select>
+
+	<update id="updateDtpass" parameterType="com.clone.starbucks.DTO.UserInfoDTO">
+		update userinfo set DTPass=#{DTPass} where id=#{id}
+	</update>
+	
+	<update id="deleteDtpass" parameterType="com.clone.starbucks.DTO.UserInfoDTO">
+		update userinfo set DTPass='' where id=#{id}
+	</update>
 	
 	<!-- Star 지혜 -->
 	<update id="updateStar" parameterType="com.clone.starbucks.DTO.UserInfoDTO">
@@ -98,12 +110,38 @@
 	</update>
 	
 	<!-- My메뉴 지혜 -->
-	<select id="customList" parameterType="String" resultType="com.clone.starbucks.DTO.CustomDTO">
-		select * from custom where id=#{id}
+	<select id="customList" parameterType="Map" resultType="com.clone.starbucks.DTO.CustomDTO">
+		select list.* from(
+			select rownum rn, numbering.* from(select * from custom where id=#{id})numbering
+		)list where rn between #{begin} and #{end}
+	</select>
+	
+	<select id="cusCount" parameterType="String" resultType="int">
+		select count(*) from custom where id=#{id}
 	</select>
 	
 	<delete id="deleteCustom" parameterType="int">
-		delete * from custom where cus_no=#{cus_no}
+		delete from custom where cus_no=#{cus_no}
 	</delete>
+	
+	
+	
+	<!-- 개인정보관리 - 예은 -->
+	<select id="userInfo" resultType="com.clone.starbucks.DTO.RegisterDTO">
+		SELECT * FROM register WHERE id=#{id}
+	</select>
+	<select id="detailinfo" resultType="com.clone.starbucks.DTO.UserInfoDTO">
+		SELECT star, grade, nickname, cupreward, DTPass FROM userInfo WHERE id=#{id}
+	</select>
+	
+	<update id="updateRegInfo" parameterType="com.clone.starbucks.DTO.RegisterDTO" >
+		UPDATE register SET name=#{name}, phone=#{phone}, email=#{email},
+		birth_year=#{birth_year}, birth_month=#{birth_month}, birth_day=#{birth_day},
+		event_sms=#{event_sms}, event_e=#{event_e}
+		WHERE id=#{id}
+	</update>
+	<update id="updateUserInfo" parameterType="com.clone.starbucks.DTO.UserInfoDTO" >
+		UPDATE userInfo SET nickname=#{nickname}, cupreward=#{cupreward} WHERE id=#{id}
+	</update>
 	
 	</mapper>

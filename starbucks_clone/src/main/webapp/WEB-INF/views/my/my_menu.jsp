@@ -710,11 +710,12 @@ var eFrequencyPlannerYn = 'Y';
 											</tr>
 										</thead>
 										<tbody><!-- 0628 지혜 -->
-										<c:set var="i" value="0"/><!-- 넘버링 하기  -->
+										<c:set var="datei" value="0"/>
+										<c:set var="i" value="${no }"/>
 										<c:forEach var="item" items="${custom }">
 											<tr>
 												<td><div class="ez-checkbox"><input type="checkbox" name="drinkShop_view_ck2" title="선택" value="${item.cus_no }" ></div></td>
-												<td>번호</td>
+												<td>${i }</td>
 												<c:choose>
 													<c:when test="${empty item.cus_nickname }">
 														<td class="tl"> ${item.p_name }</td>
@@ -724,8 +725,10 @@ var eFrequencyPlannerYn = 'Y';
 													</c:otherwise>
 												</c:choose>
 												<td>${item.cus_op }</td>
-												<td>${item.cus_date }</td>
+												<td>${cusDateList[datei] }</td>
 											</tr>
+											<c:set var="datei" value="${datei+1 }"/>
+											<c:set var="i" value="${i-1 }"/>
 										</c:forEach>
 										</tbody>
 									</table>
@@ -747,7 +750,7 @@ var eFrequencyPlannerYn = 'Y';
 							
 							<!-- (My 음료/매장) 페이징 -->
 							<div class="drinkShop_tbl_pagination">
-								<ul class="pager"><li class=" active"><a href="javascript:void(0)">1</a></li><li class=""><a href="javascript:void(0)">2</a></li></ul>
+								<ul class="pager"><li>${page }</li></ul>
 							</div>
 						</dd>
 						<!-- 2번 끝 -->
@@ -1044,23 +1047,26 @@ var eFrequencyPlannerYn = 'Y';
 	      tableArr.push(tmpVal);
 	    });
 		
-		console.log(tableArr);
-		/* req = new XMLHttpRequest();
+		console.log(tableArr); //['1', '2']
+		
+		var obj = { "Arr" : tableArr };
+		req = new XMLHttpRequest();
 		req.onreadystatechange = resultAjax;
-		req.open('post', 'setOrderCountAjax')
-		data = JSON.stringify(jsonObj);
+		req.open('post', 'deleteCusAjax')
+		data = JSON.stringify(obj);
 		req.setRequestHeader('Content-Type', 'application/json; charset=UTF-8')
-		req.send(data); */
+		req.send(data);
 	}
 	
 	function resultAjax(){
 		if(req.readyState == 4 && req.status == 200){
 			var _response = req.responseText;
 			if (_response == "SUCCESS") {
-				location.href = 'my_menu';
+				alert('커스텀 메뉴 삭제 완료');
 			} else {
 				alert('처리중 오류가 발생하였습니다.');
 			}
+			location.href = 'my_menu';
 		}
 	}
 	

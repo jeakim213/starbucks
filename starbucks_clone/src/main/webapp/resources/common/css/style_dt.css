@@ -57,9 +57,9 @@ div.dt_pop_up_dimm { background:#000; display:none; height:100%; left:0; opacity
 .dtConWrap .dtBtnWrap .dtBtn1{position:absolute; top:0; left:0; width:145px; margin-left:0; background:#e2c383; border:1px solid #bb9f65;; color:#222}
 .dtConWrap .dtBtnWrap .dtBtn1::before{content:'+'; display:inline-block;}
 .dtConWrap .dtBtnWrap .dtBtn2,
-.dtConWrap .dtBtnWrap .dtBtn3{width:85px; color:#444; background:#fff; border:1px solid #ddd}
-.dtConWrap .dtBtnWrap2 .dtBtn4{width:85px; color:#222; background:#e2c383; border:1px solid #bb9f65}
-.dtConWrap .dtBtnWrap2 .dtBtn5{width:85px; color:#fff;  background:#222; border:1px solid #222}
+.dtConWrap .dtBtnWrap .dtBtn3{width:85px; height: 30px; color:#444; background:#fff; border:1px solid #ddd}
+.dtConWrap .dtBtnWrap2 .dtBtn4{width:85px; height: 30px; color:#222; background:#e2c383; border:1px solid #bb9f65}
+.dtConWrap .dtBtnWrap2 .dtBtn5{width:85px; height: 30px; color:#fff;  background:#222; border:1px solid #222}
 .dtConWrap .dtGuideTxt{margin-top:30px; padding:15px; line-height:20px; background:#f4f4f2; font-size:13px; color:#666666}
 
 .dtConWrap input.disable{background:#f4f4f2}

@@ -13,6 +13,7 @@ import com.clone.starbucks.DTO.CardDTO;
 import com.clone.starbucks.DTO.CustomDTO;
 //github.com/jeakim213/stabucks.git
 import com.clone.starbucks.DTO.E_couponDTO;
+import com.clone.starbucks.DTO.RegisterDTO;
 import com.clone.starbucks.DTO.UserInfoDTO;
 
 public interface IMyService {
@@ -35,8 +36,22 @@ public interface IMyService {
 	boolean setChargeData(HashMap<String, String> data);
 	
 	void couponCount(E_couponDTO eCouponDTO, Model model);
+
+	String isExistCar(String carNo);
+
+	String dtpassProc(UserInfoDTO userInfo);
+
+	String deleteProc(UserInfoDTO userInfo);
+
 	
-	ArrayList<CustomDTO> setCusTable();
+	ArrayList<CustomDTO> setCusTable(int myCustomPage, Model model);
 	
 	String deleteCustom(ArrayList<Integer> cusNoArr);
+
+	
+	
+	RegisterDTO userInfo(String id);
+
+	String myinfo_ModifyProc(RegisterDTO all, UserInfoDTO userInfo);
+
 }

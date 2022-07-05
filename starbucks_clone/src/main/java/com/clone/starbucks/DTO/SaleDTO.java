@@ -6,7 +6,7 @@ import java.util.Date;
 create table sale(
 sale_no number not null,
 id varchar2(30) not null,
-p_name varchar2(50) not null,
+p_name varchar2(80) not null,
 salecount number not null,
 saledate date default sysdate not null,
 salemethod varchar2(50) not null,
