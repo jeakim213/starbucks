@@ -65,7 +65,9 @@ public class AdminController {
 	   
 	   //0602 다정 푸드
 	   @RequestMapping(value="admin/saleChart-2")
-	   public String saleChart2() {
+	   public String saleChart2(Model model) {
+		  adminService.foodCount(model);
+		  adminService.foodRank(model);
 	      return "admin/saleChart-2";
 	   }
 	   

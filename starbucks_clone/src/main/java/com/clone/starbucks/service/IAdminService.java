@@ -41,6 +41,12 @@ public interface IAdminService {
 	
 	void drinkCount(Model model);
 	
+	void drinkRank(Model model);
+	
+	void foodCount(Model model);
+	
+	void foodRank(Model model);
+	
 //------------------------------------------sale------------------------------------------------	
 	
 }

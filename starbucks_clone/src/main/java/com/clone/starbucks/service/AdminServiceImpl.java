@@ -356,25 +356,77 @@ public class AdminServiceImpl implements IAdminService {
 		model.addAttribute("drink12",DecDrink);
 	}
 	
+	@Override
 	public void drinkRank(Model model) {
 		ArrayList<RankDTO> list = adminDAO.drinkRank();
-		double allCount = (double)adminDAO.allCount();
+		double allCount = (double)adminDAO.allCountD();
 		
+		model.addAttribute("Dname1", list.get(0).getP_name());
+		model.addAttribute("Dname2", list.get(1).getP_name());
+		model.addAttribute("Dname3", list.get(2).getP_name());
+		model.addAttribute("Dname4", list.get(3).getP_name());
+		model.addAttribute("Dname5", list.get(4).getP_name());
+		model.addAttribute("Dname6", list.get(5).getP_name());
 		
-		model.addAttribute("name1", list.get(0).getP_name());
-		model.addAttribute("name2", list.get(1).getP_name());
-		model.addAttribute("name3", list.get(2).getP_name());
-		model.addAttribute("name4", list.get(3).getP_name());
-		model.addAttribute("name5", list.get(4).getP_name());
-		model.addAttribute("name6", list.get(5).getP_name());
+		model.addAttribute("Dvalue1",String.format("%.02f", (((double)(list.get(0).getSumcount()))/allCount)*100));
+		model.addAttribute("Dvalue2",String.format("%.02f", (((double)(list.get(1).getSumcount()))/allCount)*100));
+		model.addAttribute("Dvalue3",String.format("%.02f", (((double)(list.get(2).getSumcount()))/allCount)*100));
+		model.addAttribute("Dvalue4",String.format("%.02f", (((double)(list.get(3).getSumcount()))/allCount)*100));
+		model.addAttribute("Dvalue5",String.format("%.02f", (((double)(list.get(4).getSumcount()))/allCount)*100));
+		model.addAttribute("Dvalue6",String.format("%.02f", (((double)(list.get(5).getSumcount()))/allCount)*100));
+		model.addAttribute("Dother",String.format("%.02f", ((double)(allCount-(list.get(1).getSumcount()+list.get(2).getSumcount()+list.get(3).getSumcount()+list.get(4).getSumcount()+list.get(5).getSumcount()+list.get(0).getSumcount()))/allCount)*100));
 		
-		model.addAttribute("value1",String.format("%.02f", (((double)(list.get(0).getSumcount()))/allCount)*100));
-		model.addAttribute("value2",String.format("%.02f", (((double)(list.get(1).getSumcount()))/allCount)*100));
-		model.addAttribute("value3",String.format("%.02f", (((double)(list.get(2).getSumcount()))/allCount)*100));
-		model.addAttribute("value4",String.format("%.02f", (((double)(list.get(3).getSumcount()))/allCount)*100));
-		model.addAttribute("value5",String.format("%.02f", (((double)(list.get(4).getSumcount()))/allCount)*100));
-		model.addAttribute("value6",String.format("%.02f", (((double)(list.get(5).getSumcount()))/allCount)*100));
-		model.addAttribute("other",String.format("%.02f", ((double)(allCount-(list.get(1).getSumcount()+list.get(2).getSumcount()+list.get(3).getSumcount()+list.get(4).getSumcount()+list.get(5).getSumcount()+list.get(0).getSumcount()))/allCount)*100));
+	}
+
+	@Override
+	public void foodCount(Model model) {
+		Integer JanFood = adminDAO.salesFoodCount("01");
+		Integer FebFood = adminDAO.salesFoodCount("02");
+		Integer MarFood = adminDAO.salesFoodCount("03");
+		Integer AprFood = adminDAO.salesFoodCount("04");
+		Integer MayFood = adminDAO.salesFoodCount("05");
+		Integer JunFood = adminDAO.salesFoodCount("06");
+		Integer JulFood = adminDAO.salesFoodCount("07");
+		Integer AugFood = adminDAO.salesFoodCount("08");
+		Integer SepFood = adminDAO.salesFoodCount("09");
+		Integer OctFood = adminDAO.salesFoodCount("10");
+		Integer NovFood = adminDAO.salesFoodCount("11");
+		Integer DecFood = adminDAO.salesFoodCount("12");
+		
+		model.addAttribute("food1", JanFood);
+		model.addAttribute("food2", FebFood);
+		model.addAttribute("food3", MarFood);
+		model.addAttribute("food4", AprFood);
+		model.addAttribute("food5", MayFood);
+		model.addAttribute("food6", JunFood);
+		model.addAttribute("food7", JulFood);
+		model.addAttribute("food8", AugFood);
+		model.addAttribute("food9", SepFood);
+		model.addAttribute("food10", OctFood);
+		model.addAttribute("food11", NovFood);
+		model.addAttribute("food12", DecFood);
+		
+	}
+
+	@Override
+	public void foodRank(Model model) {
+		ArrayList<RankDTO> list = adminDAO.foodRank();
+		double allCount = (double)adminDAO.allCountF();
+		
+		model.addAttribute("Fname1", list.get(0).getP_name());
+		model.addAttribute("Fname2", list.get(1).getP_name());
+		model.addAttribute("Fname3", list.get(2).getP_name());
+		model.addAttribute("Fname4", list.get(3).getP_name());
+		model.addAttribute("Fname5", list.get(4).getP_name());
+		model.addAttribute("Fname6", list.get(5).getP_name());
+		
+		model.addAttribute("Fvalue1",String.format("%.02f", (((double)(list.get(0).getSumcount()))/allCount)*100));
+		model.addAttribute("Fvalue2",String.format("%.02f", (((double)(list.get(1).getSumcount()))/allCount)*100));
+		model.addAttribute("Fvalue3",String.format("%.02f", (((double)(list.get(2).getSumcount()))/allCount)*100));
+		model.addAttribute("Fvalue4",String.format("%.02f", (((double)(list.get(3).getSumcount()))/allCount)*100));
+		model.addAttribute("Fvalue5",String.format("%.02f", (((double)(list.get(4).getSumcount()))/allCount)*100));
+		model.addAttribute("Fvalue6",String.format("%.02f", (((double)(list.get(5).getSumcount()))/allCount)*100));
+		model.addAttribute("Fother",String.format("%.02f", ((double)(allCount-(list.get(1).getSumcount()+list.get(2).getSumcount()+list.get(3).getSumcount()+list.get(4).getSumcount()+list.get(5).getSumcount()+list.get(0).getSumcount()))/allCount)*100));
 		
 		
 	}
