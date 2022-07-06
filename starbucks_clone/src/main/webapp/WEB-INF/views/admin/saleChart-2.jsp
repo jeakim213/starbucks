@@ -800,6 +800,36 @@ var eFrequencyPlannerYn = 'Y';
 
 <!-- 내용 -->
 <div class="ms_cont_wrap">
+	<!-- 월별 차트 값 -->
+	<input type="hidden" id="food1" name="food1" value="${food1}">
+	<input type="hidden" id="food2" name="food2" value="${food2}">
+	<input type="hidden" id="food3" name="food3" value="${food3}">
+	<input type="hidden" id="food4" name="food4" value="${food4}">
+	<input type="hidden" id="food5" name="food5" value="${food5}">
+	<input type="hidden" id="food6" name="food6" value="${food6}">
+	<input type="hidden" id="food7" name="food7" value="${food7}">
+	<input type="hidden" id="food8" name="food8" value="${food8}">
+	<input type="hidden" id="food9" name="food9" value="${food9}">
+	<input type="hidden" id="food10" name="food10" value="${food10}">
+	<input type="hidden" id="food11" name="food11" value="${food11}">
+	<input type="hidden" id="food12" name="food12" value="${food12}">
+	
+	<!-- 인기차트 값 -->
+	<input type="hidden" id="Fname1" name="Fname1" value="${Fname1 }">
+	<input type="hidden" id="Fname2" name="Fname2" value="${Fname2 }">
+	<input type="hidden" id="Fname3" name="Fname3" value="${Fname3 }">
+	<input type="hidden" id="Fname4" name="Fname4" value="${Fname4 }">
+	<input type="hidden" id="Fname5" name="Fname5" value="${Fname5 }">
+	<input type="hidden" id="Fname6" name="Fname6" value="${Fname6 }">
+	
+	<input type="hidden" id="Fvalue1" name="Fvalue1" value="${Fvalue1 }">
+	<input type="hidden" id="Fvalue2" name="Fvalue2" value="${Fvalue2 }">
+	<input type="hidden" id="Fvalue3" name="Fvalue3" value="${Fvalue3 }">
+	<input type="hidden" id="Fvalue4" name="Fvalue4" value="${Fvalue4 }">
+	<input type="hidden" id="Fvalue5" name="Fvalue5" value="${Fvalue5 }">
+	<input type="hidden" id="Fvalue6" name="Fvalue6" value="${Fvalue6 }">
+	<input type="hidden" id="Fother" name="FDother" value="${Fother }">
+
     <div class="ms_cont">
                     
 <!-- 관리자 -->
@@ -807,7 +837,7 @@ var eFrequencyPlannerYn = 'Y';
 
 <!-- 금액 매출 -->
 	<img src="../common/img/admin/sales_title.png" style="width: 100px;"><br>
-	<img src="../common/img/admin/food.png" style="width: 60px;"><br><br><br>
+	<br><br><br>
 	
 	
 		<div style="text-align: center; margin: auto; font-size: 20px;"><b>- FOOD 월별 총 판매 금액 -</b> </div><hr>
@@ -838,6 +868,20 @@ var eFrequencyPlannerYn = 'Y';
 
 
 <script type="text/javascript">
+
+	var food1 = parseInt(document.getElementById('food1').value);
+	var food2 = parseInt(document.getElementById('food2').value);
+	var food3 = parseInt(document.getElementById('food3').value);
+	var food4 = parseInt(document.getElementById('food4').value);
+	var food5 = parseInt(document.getElementById('food5').value);
+	var food6 = parseInt(document.getElementById('food6').value);
+	var food7 = parseInt(document.getElementById('food7').value);
+	var food8 = parseInt(document.getElementById('food8').value);
+	var food9 = parseInt(document.getElementById('food9').value);
+	var food10 = parseInt(document.getElementById('food10').value);
+	var food11 = parseInt(document.getElementById('food11').value);
+	var food12 = parseInt(document.getElementById('food12').value);
+
 	const chart = Highcharts.chart('sale_container', {
 	    title: {
 	        text: 'Food Sale Chart'
@@ -851,7 +895,7 @@ var eFrequencyPlannerYn = 'Y';
 	    series: [{
 	        type: 'column',
 	        colorByPoint: false,
-	        data: [235, 643, 345, 352, 543, 123, 253, 352, 562, 234, 623, 442],
+	        data: [food1, food2, food3, food4, food5, food6, food7, food8, food9, food10, food11, food12],
 	        showInLegend: false
 	    }]
 	});
@@ -875,6 +919,22 @@ var eFrequencyPlannerYn = 'Y';
  </figure>
 
   <script type="text/javascript">
+  
+  	var name1 = document.getElementById('Fname1').value;
+	var name2 = document.getElementById('Fname2').value;
+	var name3 = document.getElementById('Fname3').value;
+	var name4 = document.getElementById('Fname4').value;
+	var name5 = document.getElementById('Fname5').value;
+	var name6 = document.getElementById('Fname6').value;
+	
+	var value1 = parseFloat(document.getElementById('Fvalue1').value);
+	var value2 = parseFloat(document.getElementById('Fvalue2').value);
+	var value3 = parseFloat(document.getElementById('Fvalue3').value);
+	var value4 = parseFloat(document.getElementById('Fvalue4').value);
+	var value5 = parseFloat(document.getElementById('Fvalue5').value);
+	var value6 = parseFloat(document.getElementById('Fvalue6').value);
+	var other = parseFloat(document.getElementById('Fother').value);
+  
      // Create the chart
      Highcharts.chart('popular_container', {
          chart: {
@@ -900,7 +960,7 @@ var eFrequencyPlannerYn = 'Y';
              series: {
                  dataLabels: {
                      enabled: true,
-                     format: '{point.name}: {point.y:.1f}%'
+                     format: '{point.name}: {point.y:.2f}%'
                  }
              }
          },
@@ -912,42 +972,42 @@ var eFrequencyPlannerYn = 'Y';
 
          series: [
              {
-                 name: "Browsers",
+                 name: "Food",
                  colorByPoint: true,
                  data: [
                      {
-                         name: "Chrome",
-                         y: 62.74,
-                         drilldown: "Chrome"
+                         name: name1,
+                         y: value1,
+                         drilldown: name1
                      },
                      {
-                         name: "Firefox",
-                         y: 10.57,
-                         drilldown: "Firefox"
+                         name: name2,
+                         y: value2,
+                         drilldown: name2
                      },
                      {
-                         name: "Internet Explorer",
-                         y: 7.23,
-                         drilldown: "Internet Explorer"
+                         name: name3,
+                         y: value3,
+                         drilldown: name3
                      },
                      {
-                         name: "Safari",
-                         y: 5.58,
-                         drilldown: "Safari"
+                         name: name4,
+                         y: value4,
+                         drilldown: name4
                      },
                      {
-                         name: "Edge",
-                         y: 4.02,
-                         drilldown: "Edge"
+                         name: name5,
+                         y: value5,
+                         drilldown: name5
                      },
                      {
-                         name: "Opera",
-                         y: 1.92,
-                         drilldown: "Opera"
+                         name: name6,
+                         y: value6,
+                         drilldown: name6
                      },
                      {
                          name: "Other",
-                         y: 7.62,
+                         y: other,
                          drilldown: null
                      }
                  ]
@@ -1383,7 +1443,7 @@ var eFrequencyPlannerYn = 'Y';
 		<li>
 			<a href="javascript:void(0);">매출현황<span class="sbox_arrow_down"></span></a>
 			<ul>
-				<li><a href="saleChart-1" <%-- required="login" --%> data-href="admin/saleChart-1">· COFFEE 매출 분석</a></li>
+				<li><a href="saleChart-1" <%-- required="login" --%> data-href="admin/saleChart-1">· DRINK 매출 분석</a></li>
 				<li><a href="saleChart-2" <%-- required="login" --%> data-href="admin/saleChart-2">· FOOD 매출 분석</a></li>
 				<li><a href="saleChart-3" <%-- required="login" --%> data-href="admin/saleChart-3">· PRODUCT 매출 분석</a></li>
 			</ul>

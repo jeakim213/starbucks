@@ -816,20 +816,20 @@ var eFrequencyPlannerYn = 'Y';
 	<input type="hidden" id="drink12" name="drink12" value="${drink12}">
 	
 	<!-- 인기차트 값 -->
-	<input type="hidden" id="name1" name="name1" value="${name1 }">
-	<input type="hidden" id="name2" name="name2" value="${name2 }">
-	<input type="hidden" id="name3" name="name3" value="${name3 }">
-	<input type="hidden" id="name4" name="name4" value="${name4 }">
-	<input type="hidden" id="name5" name="name5" value="${name5 }">
-	<input type="hidden" id="name6" name="name6" value="${name6 }">
+	<input type="hidden" id="Dname1" name="Dname1" value="${Dname1 }">
+	<input type="hidden" id="Dname2" name="Dname2" value="${Dname2 }">
+	<input type="hidden" id="Dname3" name="Dname3" value="${Dname3 }">
+	<input type="hidden" id="Dname4" name="Dname4" value="${Dname4 }">
+	<input type="hidden" id="Dname5" name="Dname5" value="${Dname5 }">
+	<input type="hidden" id="Dname6" name="Dname6" value="${Dname6 }">
 	
-	<input type="hidden" id="value1" name="value1" value="${value1 }">
-	<input type="hidden" id="value2" name="value2" value="${value2 }">
-	<input type="hidden" id="value3" name="value3" value="${value3 }">
-	<input type="hidden" id="value4" name="value4" value="${value4 }">
-	<input type="hidden" id="value5" name="value5" value="${value5 }">
-	<input type="hidden" id="value6" name="value6" value="${value6 }">
-	<input type="hidden" id="other" name="other" value="${other }">
+	<input type="hidden" id="Dvalue1" name="Dvalue1" value="${Dvalue1 }">
+	<input type="hidden" id="Dvalue2" name="Dvalue2" value="${Dvalue2 }">
+	<input type="hidden" id="Dvalue3" name="Dvalue3" value="${Dvalue3 }">
+	<input type="hidden" id="Dvalue4" name="Dvalue4" value="${Dvalue4 }">
+	<input type="hidden" id="Dvalue5" name="Dvalue5" value="${Dvalue5 }">
+	<input type="hidden" id="Dvalue6" name="Dvalue6" value="${Dvalue6 }">
+	<input type="hidden" id="Dother" name="Dother" value="${Dother }">
 	
     <div class="ms_cont">
                     
@@ -922,20 +922,20 @@ var eFrequencyPlannerYn = 'Y';
  </figure>
 
   <script type="text/javascript">
-  	var name1 = document.getElementById('name1').value;
-  	var name2 = document.getElementById('name2').value;
-  	var name3 = document.getElementById('name3').value;
-  	var name4 = document.getElementById('name4').value;
-  	var name5 = document.getElementById('name5').value;
-  	var name6 = document.getElementById('name6').value;
+  	var name1 = document.getElementById('Dname1').value;
+  	var name2 = document.getElementById('Dname2').value;
+  	var name3 = document.getElementById('Dname3').value;
+  	var name4 = document.getElementById('Dname4').value;
+  	var name5 = document.getElementById('Dname5').value;
+  	var name6 = document.getElementById('Dname6').value;
   	
-  	var value1 = parseFloat(document.getElementById('value1').value);
-  	var value2 = parseFloat(document.getElementById('value2').value);
-  	var value3 = parseFloat(document.getElementById('value3').value);
-  	var value4 = parseFloat(document.getElementById('value4').value);
-  	var value5 = parseFloat(document.getElementById('value5').value);
-  	var value6 = parseFloat(document.getElementById('value6').value);
-  	var other = parseFloat(document.getElementById('other').value);
+  	var value1 = parseFloat(document.getElementById('Dvalue1').value);
+  	var value2 = parseFloat(document.getElementById('Dvalue2').value);
+  	var value3 = parseFloat(document.getElementById('Dvalue3').value);
+  	var value4 = parseFloat(document.getElementById('Dvalue4').value);
+  	var value5 = parseFloat(document.getElementById('Dvalue5').value);
+  	var value6 = parseFloat(document.getElementById('Dvalue6').value);
+  	var other = parseFloat(document.getElementById('Dother').value);
   
   
      // Create the chart
