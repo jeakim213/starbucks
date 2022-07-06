@@ -1,14 +1,18 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <html lang="ko"><head>
         
 
 
-
-
-
-
+<c:set var="today" value="<%=new java.util.Date()%>" />
+<!-- 현재날짜 -->
+<c:set var="date"><fmt:formatDate value="${today}" pattern="dd" /></c:set> 
+<!-- 현재년도 -->
+<c:set var="year"><fmt:formatDate value="${today}" pattern="yyyy" /></c:set> 
+<!-- 현재월 -->
+<c:set var="month"><fmt:formatDate value="${today}" pattern="MM" /></c:set> 
 
 
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -674,6 +678,7 @@ var eFrequencyPlannerYn = 'Y';
 				
 				<!-- 내용 -->
 				<div class="ms_cont_wrap">
+				<form action="userDeleteProc" id="userDelete" method="post">
 					<div class="ms_cont">
 						<!-- 회원탈퇴 -->
 						<section class="ms_myinfo_section ms_myinfo_add">
@@ -681,48 +686,37 @@ var eFrequencyPlannerYn = 'Y';
 								<div class="mem_info_wrap">
 									<div class="mem_txt_zone">
 										<p class="p1">
-											<span class="s1 userName"></span>님의
-											<span class="year"></span>년
-											<span class="month"></span>월
-											<span class="date"></span>일
+											<span class="s1 userName"></span>${nickname }님의
+											<span class="year"><c:out value="${year}" /></span>년
+											<span class="month"><c:out value="${month}" /></span>월
+											<span class="date"><c:out value="${date}" /></span>일
 											<span class="end">현재 스타벅스 서비스 현황입니다.</span><br />
 											<span class="s2">아래 사항들을 확인하시고,</span>
 											<span class="s2 end">회원탈퇴에 대해 다시 한번 신중히 결정해주세요.</span>
 										</p>
 										<ul class="mem_level">
-											<li class="li1"></li>
-											<li class="li2">유효한 스타벅스 별 : <span>0개</span></li>
-											<li class="li3">사용 가능한 쿠폰 : <span>0장</span></li>
+											<li class="li1">${grade }</li>
+											<li class="li2">유효한 스타벅스 별 : <span>${star }개</span></li>
+											<li class="li3">사용 가능한 쿠폰 : <span>${couponCount }장</span></li>
 										</ul>
 									</div>
 								</div>
 								<div class="mem_tit_area">
-									<p class="mem_tit"><span class="userName"></span>님의 등록된 스타벅스 카드</p>
-									<p class="mem_my_card">총 보유카드 : 0장</p>
+									<p class="mem_tit"><span class="userName">${nickname }</span>님의 등록된 스타벅스 카드</p>
+									<p class="mem_my_card">총 보유카드 : ${cardCount }장</p>
 								</div>
-								<table summary="나의 스타벅스 카드 웹 버전" class="myCardInfo mb50">
-									<caption class="hid">나의 스타벅스 카드, 카드명, 카드번호, 최종 사용일 카드 등록일, 잔액에 대한 테이블</caption>
-									<colgroup>
-										<col width="165">
-										<col width="121">
-										<col width="179">
-										<col width="159">
-										<col width="117">
-										<col width="89">
-									</colgroup>
-									<thead>
-										<tr>
-											<th scope="col">카드</th>
-											<th scope="col">카드명</th>
-											<th scope="col">카드번호</th>
-											<th scope="col">최종 사용일</th>
-											<th scope="col">카드 등록일</th>
-											<th scope="col">잔액</th>
-										</tr>
-									</thead>
-									<tbody>
-									</tbody>
-								</table>
+									<section class="my_ms_index_slide" style="height: auto; min-height: 100px; overflow: auto;">
+
+												<div class="my_ms_slider_txt">
+													<div class="my_ms_slider_txt_l" style="background:none; float:left; height: 85px; padding: 60px 0 0 3%; width:47%;">
+														<strong class="cardNickname">${c_name }</strong> 
+														<p>${c_num }</p>
+													</div>
+													<div class="my_ms_slider_txt_r" style="color:#222;font-size:16px;float:left;font-weight:bold;height: 234px;line-height:70px;position:relative;text-align:left; padding: 40px 0;  ">
+														잔액 <strong class="en">${remaincost }</strong>원
+													</div>
+												</div>
+											</section>
 								<script id="cardList" type="text/x-jquery-tmpl">
 									<tr>
 										<td><img src="${cardThumbnailIimgUrl}" alt="" class="cardImg" /></td>
@@ -795,7 +789,7 @@ var eFrequencyPlannerYn = 'Y';
 									</ul>
 								</div>
 								<!-- e::211221 -->
-								<p class="agree_txt mb40"><input type="checkbox" name="agree1" id="agree1" /> <label for="agree1">회원탈퇴 후 스타벅스 리워드 혜택 및 등록한 스타벅스 카드의 소유권 상실에 대해 동의합니다.</label></p> <!-- 스타벅스 리워드 수정 -->
+							
 								<!-- 20200821 수정 -->
 								<!--
 								<p class="myinfo_tit">e-프리퀀시 서비스 해지 시 유의사항</p>
@@ -811,125 +805,13 @@ var eFrequencyPlannerYn = 'Y';
 								-->
 							</div>
 							<div class="ms_btn">
-								<p><a href="javascript:void(0)">스타벅스 리워드 <!-- 및 e-프리퀀시 --> 서비스 이용내역 일괄삭제</a></p>
+								<input type="submit" value="스타벅스 리워드 서비스 이용내역 일괄삭제 및 탈퇴" style="border-radius: 3px; display: block; width: 830px; height: 38px; line-height: 38px; background: #e2c383; border: 1px solid #bb9f65; font-size: 14px; font-weight: bold; color: #222; text-align: center;"/>
 							</div>
 						</section>
-						
-						<!-- 회원 탈퇴시 뜨는 팝업 1 -->
-						<div class="myOut_pop_01">
-							<div class="myOut_pop_head">
-								<p class="tit">회원탈퇴 확인</p>
-								<p class="close"><a href="javascript:void(0)"><img src="//image.istarbucks.co.kr/common/img/util/myOut_pop_close.png" alt="팝업 닫기"></a></p>
-							</div>
-							<div class="myOut_pop_cont">
-								<div class="myOut_popCont">
-									<p class="txt1">스타벅스 홈페이지 회원 이용을 중지하시겠습니까? <br>회원탈퇴를 위해서는 본인 인증이 필요합니다.</p>
-									<p class="text">회원님이 지금 사용하기 편한 방법으로 진행해주세요.</p>
-									<ul class="certification_ul">
-										<li class="li_01"><a href="javascript:void(0);" class="on"><span class="i_txt">휴대폰 인증</span></a></li>
-										<li class="li_02"><a href="javascript:void(0);"><span class="i_txt">아이핀 인증</span></a></li>
-									</ul>
-									<p class="text02">본인 확인을 위해 다시 한번 스타벅스 로그인 비밀번호를 <br>입력해주시기 바랍니다.</p>
-								</div>
-								<form action="#" method="post">
-									<fieldset>
-										<legend>비밀번호 입력폼</legend>
-										<dl class="myinfo_pwBar">
-											<dt><label for="myinfo_pw_01">비밀번호</label></dt>
-											<dd><input type="password" name="myinfo_pw_01" id="myinfo_pw_01" class="myinfo_pw_bar" /></dd>
-										</dl>
-									</fieldset>
-								</form>
-								<div class="myOut_popCont">
-									<p class="text03">아래 ‘<span class="cert_type">휴대폰 인증</span>’버튼을 눌러 본인 인증을 진행해 주세요.</p>
-									<p class="btn_certification"><a href="javascript:void(0);">휴대폰 인증</a></p>
-									<ul class="myOut_pop_info">
-										<li>탈퇴하신 후에는 기존에 사용했던 아이디는 다시 사용하실 수 없습니다.</li>
-										<li>회원 탈퇴를 한 날로부터 30일이 경과해야만 재가입이 가능합니다.</li>
-										<li>그 동안 회원님께서 남겨주신 모든 게시물과 누적 정보들은 삭제 처리됩니다.</li>
-										<li>입력하신 정보는 회원탈퇴를 위한 목적으로만 사용되며, 절대 다른 목적으로 이용되지 않습니다.</li>
-									</ul>
-								</div>
-							</div>							
 						</div>
-						<!-- 회원 탈퇴시 뜨는 팝업 1 end -->
-
-						<!-- 회원 탈퇴시 뜨는 팝업 2 -->
-						<div class="myOut_pop_02">
-							<div class="myOut_pop02_head">
-								<p class="tit">회원탈퇴 확인</p>
-								<p class="close"><a href="javascript:void(0)"><img src="//image.istarbucks.co.kr/common/img/util/myOut_pop_close.png" alt="팝업 닫기"></a></p>
-							</div>
-							<div class="myOut_pop02_cont">
-								<p class="myOut_pop02_text"><!-- <span>님, 회원 탈퇴 시 30일 이내<br>재 가입이 불가합니다.</span> --></p>
-								<p class="btn2_close"><a href="javascript:void(0);">닫기</a></p>
-							</div>							
-						</div>
-						<!-- 회원 탈퇴시 뜨는 팝업 2 end -->
-
-						<!-- 회원 탈퇴시 뜨는 팝업 3 -->
-						<div class="myOut_pop_03">
-							<div class="myOut_pop03_head">
-								<p class="tit">회원탈퇴</p>
-								<p class="close"><a href="javascript:void(0)"><img src="//image.istarbucks.co.kr/common/img/util/myOut_pop_close.png" alt="팝업 닫기"></a></p>
-							</div>
-							<div class="myOut_pop03_cont">
-								<div class="popCont">
-									<p class="title">스타벅스를 이용해 주셔서 감사합니다.<br>더 좋은 모습으로 고객님을 다시 만날 수 있도록<br>최선을 다하겠습니다.</p>
-								</div>
-								<form action=""  method="post">
-									<fieldset>
-										<legend>탈퇴 사유 입력폼</legend>
-										<dl class="pop03_myinfo_pwBar">
-											<dt>탈퇴 사유</dt>
-											<dd>
-												<div class="myOut_pop03_wrap">
-													<input id="MYOUT1" name="myout" type="radio" checked="checked" value="아이디 변경">
-													<label for="MYOUT1">아이디 변경</label>											
-												</div>
-											</dd>
-											<dd>
-												<div class="myOut_pop03_wrap">
-													<input id="MYOUT2" name="myout" type="radio" value="고객서비스(상담 및 응대)가 마음에 들지 않아서">
-													<label for="MYOUT2">고객서비스(상담 및 응대)가 마음에 들지 않아서</label>
-												</div>
-											</dd>
-											<dd>
-												<div class="myOut_pop03_wrap">
-													<input id="MYOUT3" name="myout" type="radio" value="시스템 장애(속도저조, 잦은 에러 등)">
-													<label for="MYOUT3">시스템 장애(속도저조, 잦은 에러 등)</label>
-												</div>
-											</dd>
-											<dd>
-												<div class="myOut_pop03_wrap">
-													<input id="MYOUT4" name="myout" type="radio" value="이벤트 참여를 위해서 회원가입을 했기 때문에">
-													<label for="MYOUT4">이벤트 참여를 위해서 회원가입을 했기 때문에</label>
-												</div>
-											</dd>
-											<dd>
-												<div class="myOut_pop03_wrap">
-													<input id="MYOUT5" name="myout" type="radio" value="기타">
-													<label for="MYOUT5">기타</label>
-												</div>
-											</dd>
-										</dl>
-									</fieldset>
-								</form>
-								<div class="popCont">								
-									<ul class="myOut_pop03_info">
-										<li>탈퇴하신 후에는 기존에 사용했던 아이디는 다시 사용하실 수 없습니다.</li>
-										<li>그 동안 회원님께서 남겨주신 모든 게시물과 누적 정보들은 삭제 처리됩니다.</li>
-										<li>입력하신 정보는 회원탈퇴를 위한 목적으로만 사용되며, 절대 다른 목적으로 이용되지 않습니다.</li>
-									</ul>
-									<p class="myOut_point">회원 탈퇴를 한 날로부터 <span>30일</span>이 경과해야만<br> 재가입이 가능합니다.</p>
-									<p class="btn3_close"><a href="javascript:void(0);">닫기</a></p>
-								</div>
-							</div>							
-						</div>
-						<!-- 회원 탈퇴시 뜨는 팝업 3 end -->
-												
+					</form>								
 						<!-- 회원탈퇴 end -->
-					</div>
+				</div>
 					
 
 

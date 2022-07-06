@@ -54,7 +54,7 @@
 		DELETE FROM register WHERE id=#{id}
 	</delete>
 	<delete id="deleteUser" parameterType="String">
-		DELETE FROM userInfo WHERE id=#{id}
+		DELETE FROM userInfo WHERE id=#{id};
 	</delete>
 	
 </mapper>

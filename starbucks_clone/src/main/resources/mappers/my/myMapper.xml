@@ -85,6 +85,7 @@
 		FROM userinfo a LEFT OUTER JOIN card b ON a.id = b.id
 		WHERE a.id = #{id} and b.c_master = '1'
 	</select>
+
 	
 	<select id="useCouponCount" parameterType="com.clone.starbucks.DTO.E_couponDTO" resultType="int">
 		SELECT count(*) FROM e_coupon WHERE id=#{id} and pon_used='Y'
@@ -140,6 +141,7 @@
 		event_sms=#{event_sms}, event_e=#{event_e}
 		WHERE id=#{id}
 	</update>
+	
 	<update id="updateUserInfo" parameterType="com.clone.starbucks.DTO.UserInfoDTO" >
 		UPDATE userInfo SET nickname=#{nickname}, cupreward=#{cupreward} WHERE id=#{id}
 	</update>
@@ -147,5 +149,12 @@
 	<update id="updatePwd" parameterType="com.clone.starbucks.DTO.UserInfoDTO">
 		update userInfo SET pw=#{pw} WHERE id=#{id}
 	</update>
+	
+	<delete id="deleteReg" parameterType="String">
+		DELETE FROM register WHERE id=#{id}
+	</delete>
+	<delete id="deleteUser" parameterType="String">
+		DELETE FROM userInfo WHERE id=#{id}
+	</delete>
 	
 	</mapper>
