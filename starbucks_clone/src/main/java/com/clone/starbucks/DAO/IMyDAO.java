@@ -84,4 +84,6 @@ public interface IMyDAO {
 
 	void updateUserInfo(UserInfoDTO user);
 
+	void updatePwd(UserInfoDTO userInfo);
+
 }

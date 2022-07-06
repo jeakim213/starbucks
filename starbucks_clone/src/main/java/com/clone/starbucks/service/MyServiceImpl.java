@@ -11,8 +11,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestBody;
 
 import com.clone.starbucks.DAO.IMyDAO;
 import com.clone.starbucks.DTO.AllDTO;
@@ -398,6 +400,12 @@ public class MyServiceImpl implements IMyService {
 		myDAO.updateUserInfo(user);
 		return "회원 수정 완료";
 	  
+	}
+
+	@Override
+	public String myinfo_modify_pwd(UserInfoDTO userInfo) {
+		myDAO.updatePwd(userInfo);
+		return "비밀번호 수정 완료";
 	}
 }
 	

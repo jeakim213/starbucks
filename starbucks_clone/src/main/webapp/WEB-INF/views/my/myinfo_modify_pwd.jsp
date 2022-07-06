@@ -665,9 +665,9 @@ var eFrequencyPlannerYn = 'Y';
 						</div>
 						<div class="renew_input_box">
 							<strong>아이디</strong>
-							<p class="nofix_name">CYE2510</p>
+							<p class="nofix_name">${sessionScope.userInfo.id }</p>
 							<input type="hidden" name="IS_DORMANCY" id="IS_DORMANCY" value="">
-							<input type="hidden" name="user_id" id="user_id" value="CYE2510">
+							<input type="hidden" name="user_id" id="user_id" value="">
 						</div>
 						<div class="renew_input_box">
 							<strong>현재 비밀번호</strong>

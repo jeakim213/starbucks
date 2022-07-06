@@ -144,4 +144,8 @@
 		UPDATE userInfo SET nickname=#{nickname}, cupreward=#{cupreward} WHERE id=#{id}
 	</update>
 	
+	<update id="updatePwd" parameterType="com.clone.starbucks.DTO.UserInfoDTO">
+		update userInfo SET pw=#{pw} WHERE id=#{id}
+	</update>
+	
 	</mapper>

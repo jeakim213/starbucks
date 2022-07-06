@@ -54,4 +54,6 @@ public interface IMyService {
 
 	String myinfo_ModifyProc(RegisterDTO all, UserInfoDTO userInfo);
 
+	String myinfo_modify_pwd(UserInfoDTO userInfo);
+
 }

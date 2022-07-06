@@ -426,8 +426,26 @@ public class MyController {
 	
 	//비밀번호 수정 - 예은
 	@RequestMapping(value = "my/myinfo_modify_pwd")
-	public String myinfo_modify_pwd() {
-		return "my/myinfo_modify_pwd";
+	public String myinfo_modify_pwd(@RequestBody String pw, UserInfoDTO userInfo) {
+		UserInfoDTO user = (UserInfoDTO) session.getAttribute("userInfo");
+	    String id = user.getId();
+	    
+	    String result = null;
+	    
+		
+		System.out.println("db : " + user.getPw());
+		System.out.println("폼 : " + pw );
+	    
+	    userInfo.setId(id);
+	    userInfo.setPw(user.getPw());
+
+	    String msg = myService.myinfo_modify_pwd(userInfo);
+//		if(msg.equals("비밀번호 수정 완료")) {
+//			return "redirect:/my/index";
+//		}
+//		return "redirect:/my/myinfo_modify_pwd";
+	    
+	   return result;
 	}
 	
 	
