@@ -366,7 +366,7 @@ var eFrequencyPlannerYn = 'Y';
 									<li><a href="my/vocList" required="login">My 고객의 소리</a></li>
 							<li><a href="my/eReceiptList" required="login">전자영수증</a></li>
 							<li class="msRnb_btn"><a href="javascript:void(0);" onclick="fn_rewardTumblerMsrCheck();">개인컵 리워드 설정</a></li>
-							<li><a href="edt/expressDtList" required="login">My DT Pass</a></li>
+							<li><a href="dtpass" required="login">My DT Pass</a></li>
 							<li>
 								<a role="button" href="javascript:void(0);">개인정보관리<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 -->
 								<ul>
@@ -1140,7 +1140,7 @@ var eFrequencyPlannerYn = 'Y';
 		<li class="msRnb_btn"><a href="my_menu" required="login">My 메뉴</a></li>
 		<li class="msRnb_btn"><a href="eReceiptList" required="login">전자영수증</a></li>
 		<li class="msRnb_btn"><a href="javascript:void(0);"  onclick="fn_rewardTumblerMsrCheck();">개인컵 리워드 설정</a></li>
-		<li class="msRnb_btn"><a href="../edt/expressDtList" required="login">My DT Pass</a></li>
+		<li class="msRnb_btn"><a href="dtpass" required="login">My DT Pass</a></li>
 		<li>
 			<a href="javascript:void(0);">개인정보관리<span class="sbox_arrow_down"></span></a>
 			<ul>

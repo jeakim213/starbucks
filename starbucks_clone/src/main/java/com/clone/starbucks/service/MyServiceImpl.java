@@ -19,6 +19,7 @@ import com.clone.starbucks.DTO.AllDTO;
 import com.clone.starbucks.DTO.CardDTO;
 import com.clone.starbucks.DTO.CustomDTO;
 import com.clone.starbucks.DTO.E_couponDTO;
+import com.clone.starbucks.DTO.ReceiptDTO;
 import com.clone.starbucks.DTO.RegisterDTO;
 import com.clone.starbucks.DTO.UserInfoDTO;
 
@@ -398,6 +399,39 @@ public class MyServiceImpl implements IMyService {
 		myDAO.updateUserInfo(user);
 		return "회원 수정 완료";
 	  
+	}
+
+	@Override
+	public void receipt(Model model) {
+		UserInfoDTO user = (UserInfoDTO) session.getAttribute("userInfo");
+		String id = user.getId();
+		
+		
+//		int pageBlock = 12; //한 화면에 보여줄 데이터 수
+//		int totalCount = myDAO.dataCount(id); //총 데이터 수
+//		int end = currentPage * pageBlock; //데이터의 끝번호
+//		int begin = end+1 - pageBlock; //데이터의 시작번호
+//		String url = "/starbucks/my/eReceiptList?currentPage=";
+//		model.addAttribute("page",PageService.getNavi(currentPage, pageBlock, totalCount, url));
+		
+		
+		ArrayList<ReceiptDTO> list = myDAO.eReceipt(id);
+		//ArrayList<ReceiptDTO> list = myDAO.printList(id, begin, end);
+		
+		ArrayList<String> saledate = new ArrayList<String>();
+		
+		SimpleDateFormat sdf = new SimpleDateFormat("yy/MM/dd");
+		for(int i=0 ; i<list.size(); i++) {
+			Date SaleD = list.get(i).getSaledate();
+			String saleDate = sdf.format(SaleD);
+			
+			saledate.add(saleDate);
+			
+			model.addAttribute("listSize",list.size());
+		}
+		
+		model.addAttribute("list", list);
+		model.addAttribute("dateList", saledate);
 	}
 }
 	

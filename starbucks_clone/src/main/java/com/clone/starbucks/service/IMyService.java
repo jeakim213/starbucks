@@ -42,6 +42,9 @@ public interface IMyService {
 	String dtpassProc(UserInfoDTO userInfo);
 
 	String deleteProc(UserInfoDTO userInfo);
+	
+	void receipt(Model model);
+	//void receipt(int currentPage, Model model);
 
 	
 	ArrayList<CustomDTO> setCusTable(int myCustomPage, Model model);
@@ -53,5 +56,9 @@ public interface IMyService {
 	RegisterDTO userInfo(String id);
 
 	String myinfo_ModifyProc(RegisterDTO all, UserInfoDTO userInfo);
+
+	
+
+	
 
 }

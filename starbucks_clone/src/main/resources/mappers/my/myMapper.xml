@@ -71,6 +71,19 @@
 	</select>
 	
 	
+	<select id="eReceipt" parameterType="String" resultType="com.clone.starbucks.DTO.ReceiptDTO">
+		SELECT a.saledate, a.p_name, a.salecount, a.salecount*b.p_price price, a.salemethod FROM sale a LEFT OUTER JOIN product b ON a.p_name=b.p_name WHERE a.id=#{id} ORDER BY a.saledate DESC
+	</select>
+	
+	<!-- <select id="printList" resultType="com.clone.starbucks.DTO.ReceiptDTO">
+		SELECT * FROM(SELECT rownum rn, a.saledate, a.p_name, a.salecount, a.salecount*b.p_price price FROM(SELECT * FROM sale a LEFT OUTER JOIN product b ON a.p_name=b.p_name) A) WHERE a.id=#{id} and RN BETWEEN #{b} and #{e} ORDER BY a.saledate DESC
+	</select> -->
+	
+	<select id="dataCount" parameterType="String" resultType="int">
+		SELECT count(*) FROM sale a LEFT OUTER JOIN product b ON a.p_name=b.p_name WHERE a.id=#{id}
+	</select>
+	
+	
 	<!-- MY INDEX - 예은 -->
 	<select id="userCard" parameterType="com.clone.starbucks.DTO.CardDTO" resultType="int">
 		SELECT count(*) FROM card WHERE id=#{id}

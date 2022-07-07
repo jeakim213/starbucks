@@ -3,12 +3,14 @@ package com.clone.starbucks.DAO;
 import java.util.ArrayList;
 import java.util.Map;
 
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
 import com.clone.starbucks.DTO.AllDTO;
 import com.clone.starbucks.DTO.CardDTO;
 import com.clone.starbucks.DTO.CustomDTO;
 import com.clone.starbucks.DTO.E_couponDTO;
+import com.clone.starbucks.DTO.ReceiptDTO;
 import com.clone.starbucks.DTO.RegisterDTO;
 import com.clone.starbucks.DTO.UserInfoDTO;
 
@@ -46,6 +48,11 @@ public interface IMyDAO {
 	
 	int couponCount(String id);
 	
+	ArrayList<ReceiptDTO> eReceipt(String id);
+	
+	int dataCount(String id);
+	
+	//ArrayList<ReceiptDTO> printList(String id, @Param("b")int begin, @Param("e")int end);
 	
 	//---------------------------------
 	// my index - 예은
@@ -84,4 +91,5 @@ public interface IMyDAO {
 
 	void updateUserInfo(UserInfoDTO user);
 
+	
 }

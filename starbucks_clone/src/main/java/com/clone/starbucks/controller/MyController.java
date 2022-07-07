@@ -110,11 +110,20 @@ public class MyController {
 	public String egiftCard() {
 		return "my/egiftCard";
 	}
-
+	
+	
+	//전자영수증
 	@RequestMapping(value = "my/eReceiptList")
-	public String eReceiptList() {
+	public String eReceiptList(Model model) {
+		myService.receipt(model);
 		return "my/eReceiptList";
 	}
+	
+//	public String eReceiptList(Model model,
+//			@RequestParam(value="currentPage", required = false, defaultValue = "1") int currentPage) {
+//		myService.receipt(currentPage, model);
+//		return "my/eReceiptList";
+//	}
 	
 	
 	// 예은 - 마이스타벅스
