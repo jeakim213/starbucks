@@ -198,6 +198,8 @@ public class MyController {
 	      model.addAttribute("remaincost", all.getRemaincost());
 	      model.addAttribute("cardCount", cardCount);
 	      model.addAttribute("couponCount", couponCount);
+	      //지혜0704 추가
+	      model.addAttribute("ageGd", myService.getInfo(user.getId()));
 	      
 	      return "my/index2";
 
@@ -299,7 +301,7 @@ public class MyController {
 	
 	@ResponseBody // 차량번호 중복 체크-예은
 	@PostMapping(value = "my/isExistCarNoWeb", produces = "application/json; charset=UTF-8")
-	public String isExistId(@RequestBody(required = false) String carNo) {
+	public String isExistCarNoWeb(@RequestBody(required = false) String carNo) {
 		// @RequestBody : 클라이언트가 보낸 데이터 / (required = true / false) 기본필수값
 		
 		
@@ -429,17 +431,166 @@ public class MyController {
 	
 	//회원탈퇴 - 예은
 		@RequestMapping(value = "my/myinfo_out")
-		public String myinfo_out() {
+		public String myinfo_out(UserInfoDTO userInfo, CardDTO cardDTO, Model model) {
+			 UserInfoDTO user = (UserInfoDTO) session.getAttribute("userInfo");
+
+			 
+			  boolean b = myService.isExistCard(userInfo, cardDTO);
+
+
+		      // 카드 없는 회원
+		      if(b==false) {
+		              
+		    		 if(user.getGrade().equals("WC")) {
+		    			 user.setGrade("Welcome Level");
+				      }else if(user.getGrade().equals("GR")) {
+				    	  user.setGrade("Green Level");
+				      }else {
+				    	  user.setGrade("Gold Level");
+				      }
+		    	  	
+		            int couponCount = myDAO.userCoupon(user.getId());
+				      
+				      model.addAttribute("nickname", user.getNickname());
+				      model.addAttribute("grade", user.getGrade());
+				      model.addAttribute("star", user.getStar());
+				      model.addAttribute("c_name", "");
+				      model.addAttribute("c_num", "");
+				      model.addAttribute("remaincost", 0);
+				      model.addAttribute("cardCount", 0);
+				      model.addAttribute("couponCount", couponCount);
+				      
+				      return "my/myinfo_out";
+		      }      
+		      
+			 
+			 AllDTO all = myService.userAllInfo(user.getId());
+			 
+			 
+			 if(all.getGrade().equals("WC")) {
+				 all.setGrade("Welcome Level");
+		      }else if(all.getGrade().equals("GR")) {
+		    	  all.setGrade("Green Level");
+		      }else {
+		    	  all.setGrade("Gold Level");
+		      }
+			 
+			   // 카드 갯수
+		      
+		      int cardCount = myDAO.userCard(user.getId());
+		      
+		      // 쿠폰 갯수
+		      
+		      int useCouponCount = myDAO.useCouponCount(user.getId());
+		      
+		      int couponCount = (myDAO.userCoupon(user.getId())-useCouponCount);
+
+		      //views로 넘겨주는 값
+		   
+		      model.addAttribute("nickname", user.getNickname());
+		      model.addAttribute("grade", user.getGrade());
+		      model.addAttribute("star", user.getStar());
+		      model.addAttribute("c_name", all.getC_name());
+		      model.addAttribute("c_num", all.getC_num());
+		      model.addAttribute("remaincost", all.getRemaincost());
+		      model.addAttribute("cardCount", cardCount);
+		      model.addAttribute("couponCount", couponCount);
+			 
 			return "my/myinfo_out";
+		}
+		
+		
+		@RequestMapping(value = "my/userDeleteProc")
+		public String userDelete(UserInfoDTO userInfo, Model model, HttpServletResponse response){
+		
+			UserInfoDTO user = (UserInfoDTO) session.getAttribute("userInfo");
+
+		    userInfo.setId(user.getId());
+		 
+			String msg = myService.userDeleteProc(userInfo);
+
+				
+			if (msg.equals("탈퇴 완료")) {
+
+				session.invalidate();
+				return "redirect:/index";
+				
+
+			} else {
+				return "my/myinfo_out";
+
+			}
+
 		}
 	
 	//비밀번호 수정 - 예은
+		
 	@RequestMapping(value = "my/myinfo_modify_pwd")
-	public String myinfo_modify_pwd() {
+	public String myinfo_modify_pwd(UserInfoDTO userInfo) {
+		UserInfoDTO user = (UserInfoDTO) session.getAttribute("userInfo");
+	    String id = user.getId();
+
 		return "my/myinfo_modify_pwd";
 	}
 	
 	
+	@RequestMapping(value = "my/updatePwdProc")
+	public String updatePwdProc(UserInfoDTO userInfo, Model model, RedirectAttributes ra, HttpServletRequest req, HttpServletResponse response) throws IOException {
+		UserInfoDTO user = (UserInfoDTO) session.getAttribute("userInfo");
+		String pw = user.getPw();
+		
+		userInfo.setPw(pw);
+		userInfo.setId(user.getId());
+		System.out.println("yess: " + userInfo.getPw());
+		String msg = myService.updatePwdProc(userInfo, req);
+		
+		response.setContentType("text/html; charset=UTF-8");
+		PrintWriter out = response.getWriter();
+		
+		
+		if(msg.equals("비밀번호 수정 완료")) {
+			out.println("<script>alert('비밀번호가 변경되었습니다.'); location.href='myinfo_modify_pwd';</script>");
+			out.flush();
+			out.close();
+			return "my/myinfo_modify_pwd";
+		}else if(msg.equals("옳지 않은 비밀번호입니다")) {	//db랑 입력값이랑 다를때
+			out.println("<script>alert('사용중인 비밀번호와 일치하지 않습니다.'); location.href='myinfo_modify_pwd';</script>");
+			out.flush();
+			out.close();
+			return "my/myinfo_modify_pwd";
+		}else if(msg.equals("변경불가")) {//입력값이랑 새비밀번호랑 같을때
+			out.println("<script>alert('사용중인 비밀번호와 같습니다.'); location.href='myinfo_modify_pwd';</script>");
+			out.flush();
+			out.close();
+			return "my/myinfo_modify_pwd";
+		}else {// 새 비밀번호 비교
+			out.println("<script>alert('두 비밀번호가 일치하지 않습니다.'); location.href='myinfo_modify_pwd';</script>");
+			out.flush();
+			out.close();
+			return "my/myinfo_modify_pwd";
+		}
+			
+	}
+	
+	@ResponseBody // 기존 비밀번호와 비교-예은
+	@PostMapping(value = "my/getUserPwdCheck", produces = "application/json; charset=UTF-8")
+	public String getUserPwdCheck() {
+		JsonObject obj = new JsonObject();
+		obj.addProperty("result_code", "SUCCESS");
+		obj.addProperty("alert_msg", "");
+
+		return obj.toString();
+	}
+	
+	@ResponseBody // new 비밀번호 확인-예은
+	@PostMapping(value = "**/interface/checkUserPwd", produces = "application/json; charset=UTF-8")
+	public String checkUserPwd() {
+		JsonObject obj = new JsonObject();
+		obj.addProperty("result_code", "SUCCESS");
+
+		return obj.toString();
+	}
+		
 	
 	
 	
@@ -467,6 +618,29 @@ public class MyController {
 		return "my/index";
 	}
 
-
+	@ResponseBody //지혜0704
+	@PostMapping(value = "my/saleTop3Ajax", produces="application/json; charset=UTF-8")
+	public ArrayList<String> saleTop3Ajax(@RequestBody HashMap<String, String> data) {
+		System.out.println(data);
+		ArrayList<String> result = myService.setSaleTop3(data);
+		result.add(data.get("category"));
+		return result;
+	}
+	
+	@GetMapping("my/reward_tumbler") // 지혜 0707
+	public String reward_tumbler() {
+		return "my/reward_tumbler";
+	}
+	
+	@ResponseBody //지혜0707
+	@PostMapping(value = "my/setTumblerReward", produces="application/json; charset=UTF-8")
+	public String rewardAjax(String tumblerRewardType) {
+		System.out.println(tumblerRewardType);
+		JsonObject result = new JsonObject();
+		int check = myService.setTumblerReward(tumblerRewardType);
+		if(check != 0) result.addProperty("result_code", "SUCCESS");
+		else result.addProperty("result_code", "FAIL");
+		return result.toString();
+	}
 	
 }

@@ -100,17 +100,24 @@ public class MemberServiceImpl implements IMemberService{
 				
 				if(member.getPw() == null || member.getPw().isEmpty())
 					return "비밀번호를 입력하세요.";
-					
+				
 				UserInfoDTO check = memberDao.loginProc(member.getId());
+				System.out.println(check.getPw());
 				
 				BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
 		
+				System.out.println("dddd: " + encoder.encode(check.getPw()));
+				
 				if(check != null && encoder.matches(member.getPw(), check.getPw())) {
 					session.setAttribute("userInfo", check);
+					System.out.println("야" + encoder.encode(member.getPw()));
 					return "로그인 성공";
 				}else {
+					System.out.println("야" + encoder.encode(member.getPw()));
 					return "아이디 또는 비밀번호를 확인하세요.";
 				}
+				
+
 			}
 			
 	public String getAccessToken (String code) {//설아

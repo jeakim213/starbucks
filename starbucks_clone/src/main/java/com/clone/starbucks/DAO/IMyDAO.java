@@ -1,6 +1,7 @@
 package com.clone.starbucks.DAO;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 import org.apache.ibatis.annotations.Param;
@@ -79,6 +80,12 @@ public interface IMyDAO {
 	int cusCount(String id); //지혜
 	
 	int deleteCustom(int cus_no); //지혜
+	
+	ArrayList<String> saleTop3(Map<String, Object> paramMap); //지혜
+	
+	RegisterDTO getInfo(String id); //지혜
+	
+	int updateReward(UserInfoDTO rewardType); //지혜
 
 	//---------------------------------
 	// 개인정보관리 - 예은
@@ -91,5 +98,8 @@ public interface IMyDAO {
 
 	void updateUserInfo(UserInfoDTO user);
 
-	
+	void updatePwd(UserInfoDTO userInfo);
+
+	void deleteUser(UserInfoDTO userInfo);
+
 }

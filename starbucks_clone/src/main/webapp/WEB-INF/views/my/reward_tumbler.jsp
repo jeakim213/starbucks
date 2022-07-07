@@ -1,18 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 
 <!DOCTYPE html>
 <html lang="ko">
 	<head>
 	
-
-
-
-
-
-
 
 
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -26,20 +20,20 @@
 
 <title id="titleJoin">Starbucks Korea</title> <!-- 220117 수정 -->
 <link rel="shortcut icon" href="https://image.istarbucks.co.kr/common/img/common/favicon.ico?v=200828" type="image/ico"> <!-- 20200827 파비콘 교체 및 CDN 변수처리 -->
-<link href="/common/css/reset.css" rel="stylesheet">
-<link href="/common/css/style.css?v=210721" rel="stylesheet">
-<link href="/common/css/jquery.bxslider.css" rel="stylesheet">
-<link href="/common/css/idangerous.swiper.css" rel="stylesheet">
-<link href="/common/css/idangerous.swiper.scrollbar.css" rel="stylesheet">
-<link href="/common/css/jquery.mCustomScrollbar.css" rel="stylesheet">
-<link href="/common/css/jquery.scrollbar.css" rel="stylesheet">
-<link href="/common/css/jquery-ui.css" rel="stylesheet">
-<link href="/common/css/ezmark.css" rel="stylesheet">
-<link href="/common/css/style_dt.css?v=20191211" rel="stylesheet"> <!-- 20191211 수정 -->
+<link href="../common/css/reset.css" rel="stylesheet">
+<link href="../common/css/style.css?v=210721" rel="stylesheet">
+<link href="../common/css/jquery.bxslider.css" rel="stylesheet">
+<link href="../common/css/idangerous.swiper.css" rel="stylesheet">
+<link href="../common/css/idangerous.swiper.scrollbar.css" rel="stylesheet">
+<link href="../common/css/jquery.mCustomScrollbar.css" rel="stylesheet">
+<link href="../common/css/jquery.scrollbar.css" rel="stylesheet">
+<link href="../common/css/jquery-ui.css" rel="stylesheet">
+<link href="../common/css/ezmark.css" rel="stylesheet">
+<link href="../common/css/style_dt.css?v=20191211" rel="stylesheet"> <!-- 20191211 수정 -->
 
 <!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-	<link href="/common/css_ie/style.css" rel="stylesheet">
+	<link href="../common/css_ie/style.css" rel="stylesheet">
 	<script>
 		document.createElement('header');
 		document.createElement('nav');
@@ -71,8 +65,8 @@ var eFrequencySeq = '172';
 var eFrequencyPlannerYn = 'Y';
 </script>
 
-		<link href="/common/css/style_util.css" rel="stylesheet">
-		<link href="/common/css/style_ecoBonus.css" rel="stylesheet"><!-- 20190103 추가(css 신규) -->
+		<link href="../common/css/style_util.css" rel="stylesheet">
+		<link href="../common/css/style_ecoBonus.css" rel="stylesheet"><!-- 20190103 추가(css 신규) -->
 		
 	</head>
 	<body>
@@ -199,7 +193,7 @@ var eFrequencyPlannerYn = 'Y';
 					<!-- 일반회원 -->
 					<div class="sb_card_regi">
 						<a href="javascript:void(0);">
-							<p class="icon_add_card" onclick="location.href = '/my/mycard_info_input.do';"><img alt="카드등록 아이콘" src="//image.istarbucks.co.kr/common/img/common/icon_add_card.png"></p>
+							<p class="icon_add_card" onclick="location.href = '/my/mycard_info_input';"><img alt="카드등록 아이콘" src="//image.istarbucks.co.kr/common/img/common/icon_add_card.png"></p>
 							<p class="sb_card_regi_txt"><strong>스타벅스 카드 등록</strong><br>카드를 등록하시고<br>다양한 리워드를<br>만나보세요.</p>
 						</a>
 					</div>
@@ -357,7 +351,7 @@ var eFrequencyPlannerYn = 'Y';
 							
 									<li><a href="/my/vocList.do" required="login">My 고객의 소리</a></li>
 							<li><a href="/my/eReceiptList.do" required="login">전자영수증</a></li>
-							<li class="msRnb_btn"><a href="javascript:void(0);" onclick="fn_rewardTumblerMsrCheck();">개인컵 리워드 설정</a></li>
+							<li class="msRnb_btn"><a href="my/reward_tumbler" >개인컵 리워드 설정</a></li>
 							<li><a href="/edt/expressDtList.do" required="login">My DT Pass</a></li>
 							<li>
 								<a role="button" href="javascript:void(0);">개인정보관리<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 -->
@@ -655,16 +649,13 @@ var eFrequencyPlannerYn = 'Y';
 					
 								
 <ul>
-	<li class="util_nav01 sign_out" style="display:none;"><a href="javascript:void(0);">Sign out</a></li>
-	<li class="util_nav01 sign_in"><a href="javascript:void(0);">Sign In</a></li>
-	<li class="util_nav02"><a href="/my/index.do" required="login">My Starbucks</a></li>
-	<li class="util_nav03"><a href="/util/index.do">Customer Service & Ideas</a></li>
-	<li class="util_nav04"><a href="/store/store_map.do">Find a Store</a></li>
+    <li class="util_nav01 sign_out" style="display:none;"><a href="/starbucks/login/logout">Sign out</a></li>
+    <li class="util_nav01 sign_in"><a href="/starbucks/login/login">Sign In</a></li>
+    <li class="util_nav02"><a href="/starbucks/my/index">My Starbucks</a></li>
+    <li class="util_nav03"><a href="/starbucks/menu/orderList">Order</a></li>
+    <li class="util_nav04"><a href="/starbucks/store/store_map">Find a Store</a></li>
 </ul>
 				</nav>
-				<p class="btn_search">
-					<a href="javascript:void(0);"><img alt="통합검색" src="//image.istarbucks.co.kr/common/img/common/icon_magnifier_black.png"></a>
-				</p>
 				<a href="javascript:void(0);" class="rCup3_wrap" role="button" title="마이 리워드 레이어 열기"><!-- 접근성_20171201 class, role, title 추가 --><span class="rCup3"></span></a><!-- 150714 DOM 수정 - 떨어지는 메뉴 부분에 jsMovie 추가 -->
 			</div>
 			<nav class="sub_gnb_nav">
@@ -734,7 +725,7 @@ var eFrequencyPlannerYn = 'Y';
 						<!-- //버튼 영역 -->
 						<!-- 유의사항 -->
 						<div class="ecoNote" id="earnEcoBonusStarContents" style="display:none;">
-							<span class="ecoNoteImg"><img src="/common/img/util/bnr_ecoBonus.jpg" alt="개인컵을 사용하시면 에코 1별1개를 드립니다." /></span>
+							<span class="ecoNoteImg"><img src="../common/img/util/bnr_ecoBonus.jpg" alt="개인컵을 사용하시면 에코 1별1개를 드립니다." /></span>
 							<p class="ecoNoteTit">에코 보너스 스타 유의사항</p>
 							<ul class="ecoNoteTxt">
 								<li>· 등록된 스타벅스 카드로 일정 금액 이상 결제하는 경우에만 에코★별이 적립됩니다.</li>
@@ -780,7 +771,7 @@ var eFrequencyPlannerYn = 'Y';
 		</li>
 		<li class="msRnb_btn"><a href="my_menu" required="login">My 메뉴</a></li>
 		<li class="msRnb_btn"><a href="eReceiptList" required="login">전자영수증</a></li>
-		<li class="msRnb_btn"><a href="javascript:void(0);"  onclick="fn_rewardTumblerMsrCheck();">개인컵 리워드 설정</a></li>
+		<li class="msRnb_btn"><a href="reward_tumbler" >개인컵 리워드 설정</a></li>
 		<li class="msRnb_btn"><a href="dtpass" required="login">My DT Pass</a></li>
 		<li>
 			<a href="javascript:void(0);">개인정보관리<span class="sbox_arrow_down"></span></a>
@@ -984,8 +975,8 @@ var eFrequencyPlannerYn = 'Y';
 			<script src="//image.istarbucks.co.kr/common/js/greensock/TweenMax.min.js"></script>
 			<script src="//image.istarbucks.co.kr/common/js/masonry.pkgd.js"></script>
 			<script src="//image.istarbucks.co.kr/common/js/common.js"></script>
-			<script src="/common/js/gnb.js?v=220614"></script>
-			<script src="/common/js/header.js?v=200915"></script>
+			<script src="../common/js/gnb.js?v=220614"></script>
+			<script src="../common/js/header.js?v=200915"></script>
 			<script src="//image.istarbucks.co.kr/common/js/footer.js?v=210818"></script>
 
 			<script src="//image.istarbucks.co.kr/common/js/jquery.tmpl.js"></script>
@@ -1006,27 +997,6 @@ var eFrequencyPlannerYn = 'Y';
 				
 				var mrSlider;
                 
-                /* 개인컵 리워드 s */
-                function fn_rewardTumblerMsrCheck(){
-                	fn_hideGnbMenu();
-					var url = document.location.pathname;
-					fn_showrewardTumblerMsrCheckLayer(url);
-                }
-                
-                function fn_showrewardTumblerMsrCheckPopup(obj){
-                	if( obj.msrMemberYn == "Y"){ /*msr 회원일 경우 페이지 이동*/
-                		location.href = "/my/reward_tumbler.do";
-                    }else{/* msr 비회원일 경우 팝업창 노출 */
-                        $('#msrCheckPop_rewardTumbler').fadeIn();
-                        $('.dt_pop_up_dimm').fadeIn();
-                        $('#msrCheckPop_rewardTumblerContents').show();
-                        $('#tumblerPopConfirmBtn, #tumblerPopCancelBtn').show();
-                        $('#tumblerPopConfirmBtn').on('click', function(){
-                        	// msr 비회원일 경우 카드 등록 페이지로 이동
-                        	location.href = "/my/mycard_info_input.do";
-                        });
-                    }
-                }
                 $('#tumblerPopCommonCloseBtn, #tumblerPopCancelBtn').click(function(){
                     $('#msrCheckPop_rewardTumbler').fadeOut();
                     $('.dt_pop_up_dimm').fadeOut();
@@ -1043,7 +1013,7 @@ var eFrequencyPlannerYn = 'Y';
 			<!-- footer end -->
 			<!-- 20190107  -->
 			<script> var serverTime = 20220629145450; </script>
-			<script src="/common/js/common_jhp.js"></script>
+			<script src="../common/js/common_jhp.js"></script>
 			<!-- 20190107  -->
 		</div>
 		
@@ -1120,116 +1090,103 @@ var eFrequencyPlannerYn = 'Y';
 		<!-- <div class="dt_pop_up_dimm" style="display:none;"></div> -->
 		<!-- e::20190103 popup -->
 
-		<script>
-		$(document).ready(function(){
-			__ajaxCall("starbucks/interface/checkLogin", {}, true, "json", "post"
-	   			,function (_response) {
-	   				if (_response.result_code == "FAIL") {
-	   					alert("로그인이 필요한 기능 입니다.");
-	   					location.href = "../login/login";
-	   				}
-	   			}
-	   			,function (_error) {
-	   			}
-	   		);
-			
-			showtumblerTypeData();
-			var tumblerTypeChange = 0;
-			
-			$("input[name=tumblerType]").change(function() {
+<script> 
+	$(document).ready(function(){
+		__ajaxCall("starbucks/interface/checkLogin", {}, true, "json", "post"
+   			,function (_response) {
+   				if (_response.result_code == "FAIL") {
+   					alert("로그인이 필요한 기능 입니다.");
+   					location.href = "../login/login";
+   				}
+   			}
+   			,function (_error) {
+   			}
+   		);
+		
+		showtumblerTypeData();
+		var tumblerTypeChange = 0;
+		
+		$("input[name=tumblerType]").change(function() {
 
-				var radioValue = $(this).val();
-				tumblerTypeChange = 1;
-				if (radioValue == "earnEcoBonusStar") {
-					 $('#earnEcoBonusStarContents').css('display','block');
-				} else if (radioValue == "amountDiscount") {
-					$('#earnEcoBonusStarContents').css('display','none');
-				} 
-				
-				 $("#cancel").click(function() { 
-					 $("#cancel").prop("href", "javascript:void(0)");
-					 $(".dt_pop_up_dimm").show();
-					 $("#cancelPopup").fadeIn();
-				});
-				
+			var radioValue = $(this).val();
+			tumblerTypeChange = 1;
+			if (radioValue == "earnEcoBonusStar") {
+				 $('#earnEcoBonusStarContents').css('display','block');
+			} else if (radioValue == "amountDiscount") {
+				$('#earnEcoBonusStarContents').css('display','none');
+			} 
+			
+			 $("#cancel").click(function() { 
+				 $("#cancel").prop("href", "javascript:void(0)");
+				 $(".dt_pop_up_dimm").show();
+				 $("#cancelPopup").fadeIn();
 			});
 			
-			if(tumblerTypeChange == 0){
-				$("#cancel").click(function() { 
-					$("#cancel").prop("href", "/my/index.do");
-				});
+		});
+		
+		if(tumblerTypeChange == 0){
+			$("#cancel").click(function() { 
+				$("#cancel").prop("href", "index");
+			});
+		}
+		
+		$(".dtPopBtn a.cancel,#dtPopCommonCloseBtn,.dtPopBtn2").click(function(){
+			 $(".ecoPop").fadeOut();
+		     $(".dt_pop_up_dimm").hide();
+		});
+		
+		$("#save").click(function() {  //저장 버튼 클릭시 
+			var tumblerTypeValue= $("input[name=tumblerType]:checked").val();
+			if(tumblerTypeValue == 'earnEcoBonusStar' ){ //에코 보너스 스타 적립으로 저장했을 경우 
+				tumblerTypeValue ='S';
+				setTumblerTypeData(tumblerTypeValue);
+			}else if(tumblerTypeValue == 'amountDiscount' ){ //300원 할인으로 저장했을 경우 
+				//tumblerTypeValue ='D';
+				$(".dt_pop_up_dimm").show();
+				$("#amountDiscountCheckPop").fadeIn();// 300원 할인 변경 확인 팝업
 			}
 			
-			$(".dtPopBtn a.cancel,#dtPopCommonCloseBtn,.dtPopBtn2").click(function(){
-				 $(".ecoPop").fadeOut();
-			     $(".dt_pop_up_dimm").hide();
-			});
-			
-			 $("#save").click(function() {  //저장 버튼 클릭시 
-				var tumblerTypeValue= $("input[name=tumblerType]:checked").val();
-				if(tumblerTypeValue == 'earnEcoBonusStar' ){ //에코 보너스 스타 적립으로 저장했을 경우 
-					tumblerTypeValue ='S';
-					setTumblerTypeData(tumblerTypeValue);
-				}else if(tumblerTypeValue == 'amountDiscount' ){ //300원 할인으로 저장했을 경우 
-					//tumblerTypeValue ='D';
-					$(".dt_pop_up_dimm").show();
-					$("#amountDiscountCheckPop").fadeIn();// 300원 할인 변경 확인 팝업
-				}
-				
-			 });
-			 
-			 $("#amountDiscountCheckPop .confirm").click(function(){
-					$(".ecoPop").fadeOut();
-			        $(".dt_pop_up_dimm").hide();
-					setTumblerTypeData('D');  
-				});
+		});
+		
+		$("#amountDiscountCheckPop .confirm").click(function(){
+			$(".ecoPop").fadeOut();
+	        $(".dt_pop_up_dimm").hide();
+			setTumblerTypeData('D');  
+		});
 			
 	});
 	
-	
-	
-		function showtumblerTypeData() {
-			___ajaxCall("/interface/getRewardTumbler.do", {}, true, "json", "post"
-	    			,function (_response) {
-	    				if (_response.result_code == "SUCCESS") {
-	    					var jsonData = jQuery.parseJSON(_response.data);
-	    					var tumblerRewardType= jsonData.tumblerRewardType;
-	    					var tumblerDcAmount = jsonData.tumblerDcAmount;
-	    					if(tumblerRewardType=='S'){
-	    						$('input[name="tumblerType"]').val(['earnEcoBonusStar']);
-	    						$('#earnEcoBonusStarContents').css('display','block');
-	    					}else{
-	    						$('input[name="tumblerType"]').val(['amountDiscount']);
-	    						$('#earnEcoBonusStarContents').css('display','none');
-	    					}
-	        			}else{
-	        				alert('처리 중 오류가 발생 하였습니다. 다시 시도 해주세요.');
-	        			}
-	    			}
-	    		);
+	function showtumblerTypeData() {//지혜0707
+		var tumblerRewardType= "<c:out value='${sessionScope.userInfo.cupreward}' />"
+		if(tumblerRewardType=='S'){
+			$('input[name="tumblerType"]').val(['earnEcoBonusStar']);
+			$('#earnEcoBonusStarContents').css('display','block');
+		}else{
+			$('input[name="tumblerType"]').val(['amountDiscount']);
+			$('#earnEcoBonusStarContents').css('display','none');
 		}
+	}
 		
-		function setTumblerTypeData(tumblerTypeValue) {
-			var objParam = {
-					tumblerRewardType : tumblerTypeValue
-		        };
-			___ajaxCall("/interface/setTumblerReward.do", objParam , true, "json", "post"
-	    			,function (_response) {
-	    				if (_response.result_code == "SUCCESS") {
-	      					if(tumblerTypeValue=='S'){
-	      						$(".dt_pop_up_dimm").show();
-	      						$("#ecoBonusStarPop").fadeIn();// 에코 보너스 스타 적립 변경 완료 팝업 
-	      					}else if(tumblerTypeValue=='D'){
-	      						$(".dt_pop_up_dimm").show();
-	      						$("#amountDiscountFinalPop").fadeIn();// 300원 할인 변경 완료 팝업 
-	      					}
-	        			}else{
-	        				alert('처리 중 오류가 발생 하였습니다. 다시 시도 해주세요.');
-	        			}
-	    			}
-	    		);
-		}
-		/* 20190103 e */
+	function setTumblerTypeData(tumblerTypeValue) {//지혜0707
+		var objParam = {
+			tumblerRewardType : tumblerTypeValue
+        };
+		___ajaxCall("setTumblerReward", objParam , true, "json", "post"
+   			,function (_response) {
+   				if (_response.result_code == "SUCCESS") {
+   					if(tumblerTypeValue=='S'){
+   						$(".dt_pop_up_dimm").show();
+   						$("#ecoBonusStarPop").fadeIn();// 에코 보너스 스타 적립 변경 완료 팝업 
+   					}else if(tumblerTypeValue=='D'){
+   						$(".dt_pop_up_dimm").show();
+   						$("#amountDiscountFinalPop").fadeIn();// 300원 할인 변경 완료 팝업 
+   					}
+       			}else{
+       				alert('처리 중 오류가 발생 하였습니다. 다시 시도 해주세요.');
+       			}
+   			}
+   		);
+	}
 			
 		</script>
 	</body>

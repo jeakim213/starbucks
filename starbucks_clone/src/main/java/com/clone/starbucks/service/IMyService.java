@@ -46,19 +46,21 @@ public interface IMyService {
 	void receipt(Model model);
 	//void receipt(int currentPage, Model model);
 
-	
 	ArrayList<CustomDTO> setCusTable(int myCustomPage, Model model);
 	
 	String deleteCustom(ArrayList<Integer> cusNoArr);
-
-	
 	
 	RegisterDTO userInfo(String id);
 
 	String myinfo_ModifyProc(RegisterDTO all, UserInfoDTO userInfo);
 
-	
+	String updatePwdProc(UserInfoDTO userInfo, HttpServletRequest req);
 
+	String userDeleteProc(UserInfoDTO userInfo);
 	
-
+	ArrayList<String> setSaleTop3(HashMap<String, String> data);
+	
+	RegisterDTO getInfo(String id);
+	
+	int setTumblerReward(String rewardType);
 }

@@ -37,47 +37,6 @@ public class MenuController {
 		return "menu/drink_list";
 	}
 
-	@RequestMapping(value = "menu/drink_list_1")
-	public String drink_list_1() {
-		return "menu/drink_list-1";
-	}
-	@RequestMapping(value = "menu/drink_list_2")
-	public String drink_list_2() {
-		return "menu/drink_list-2";
-	}
-	@RequestMapping(value = "menu/drink_list_3")
-	public String drink_list_3() {
-		return "menu/drink_list-3";
-	}
-	@RequestMapping(value = "menu/drink_list_4")
-	public String drink_list_4() {
-		return "menu/drink_list-4";
-	}
-	@RequestMapping(value = "menu/drink_list_5")
-	public String drink_list_5() {
-		return "menu/drink_list-5";
-	}
-
-	@RequestMapping(value = "menu/drink_list_6")
-	public String drink_list_6() {
-		return "menu/drink_list-6";
-	}
-
-	@RequestMapping(value = "menu/drink_list_7")
-	public String drink_list_7() {
-		return "menu/drink_list-7";
-	}
-
-	@RequestMapping(value = "menu/drink_list_8")
-	public String drink_list_8() {
-		return "menu/drink_list-8";
-	}
-
-	@RequestMapping(value = "menu/drink_list_9")
-	public String drink_list_9() {
-		return "menu/drink_list-9";
-	}
-
 	@RequestMapping(value = "menu/drink_view")
 	public String drink_view(String product_cd, Model model) {
 		model.addAttribute("product_cd", product_cd);
@@ -89,41 +48,6 @@ public class MenuController {
 		return "menu/food_list";
 	}
 
-	@RequestMapping(value = "menu/food_list_1") // 카테고리 코드를 받아 해당 카테고리만 뿌린다
-	public String food_list_1(String CATE_CD) {
-		return "menu/food_list-1";
-	}
-
-	@RequestMapping(value = "menu/food_list_2")
-	public String food_list_2(String CATE_CD) {
-		return "menu/food_list-2";
-	}
-
-	@RequestMapping(value = "menu/food_list_3")
-	public String food_list_3(String CATE_CD) {
-		return "menu/food_list-3";
-	}
-
-	@RequestMapping(value = "menu/food_list_4")
-	public String food_list_4(String CATE_CD) {
-		return "menu/food_list-4";
-	}
-
-	@RequestMapping(value = "menu/food_list_5")
-	public String food_list_5(String CATE_CD) {
-		return "menu/food_list-5";
-	}
-
-	@RequestMapping(value = "menu/food_list_6")
-	public String food_list_6(String CATE_CD) {
-		return "menu/food_list-6";
-	}
-
-	@RequestMapping(value = "menu/food_list_7")
-	public String food_list_7(String CATE_CD) {
-		return "menu/food_list-7";
-	}
-
 	@RequestMapping(value = "menu/food_view")
 	public String food_view(String product_cd, Model model) {
 		model.addAttribute("product_cd", product_cd);
@@ -133,51 +57,6 @@ public class MenuController {
 	@RequestMapping(value = "menu/product_list")
 	public String product_list() {
 		return "menu/product_list";
-	}
-
-	@RequestMapping(value = "menu/product_list_1")
-	public String product_list_1() {
-		return "menu/product_list-1";
-	}
-
-	@RequestMapping(value = "menu/product_list_2")
-	public String product_list_2() {
-		return "menu/product_list-2";
-	}
-
-	@RequestMapping(value = "menu/product_list_3")
-	public String product_list_3() {
-		return "menu/product_list-3";
-	}
-
-	@RequestMapping(value = "menu/product_list_4")
-	public String product_list_4() {
-		return "menu/product_list-4";
-	}
-
-	@RequestMapping(value = "menu/product_list_5")
-	public String product_list_5() {
-		return "menu/product_list-5";
-	}
-
-	@RequestMapping(value = "menu/product_list_6")
-	public String product_list_6() {
-		return "menu/product_list-6";
-	}
-
-	@RequestMapping(value = "menu/product_list_7")
-	public String product_list_7() {
-		return "menu/product_list-7";
-	}
-
-	@RequestMapping(value = "menu/product_list_8")
-	public String product_list_8() {
-		return "menu/product_list-8";
-	}
-
-	@RequestMapping(value = "menu/product_list_9")
-	public String product_list_9() {
-		return "menu/product_list-9";
 	}
 
 	@RequestMapping(value = "menu/product_view")
@@ -384,6 +263,13 @@ public class MenuController {
 		}
 		//성공시 1반환
 		return res;
+	}
+
+	@ResponseBody // 결제하기 값 세팅-지혜
+	@PostMapping(value = "menu/resetOrderAjax")
+	public String resetOrderAjax(){
+		service.resetOrderList();
+		return "SUCCESS";
 	}
 	
 /*	

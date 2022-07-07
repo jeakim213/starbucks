@@ -98,6 +98,7 @@
 		FROM userinfo a LEFT OUTER JOIN card b ON a.id = b.id
 		WHERE a.id = #{id} and b.c_master = '1'
 	</select>
+
 	
 	<select id="useCouponCount" parameterType="com.clone.starbucks.DTO.E_couponDTO" resultType="int">
 		SELECT count(*) FROM e_coupon WHERE id=#{id} and pon_used='Y'
@@ -137,7 +138,32 @@
 		delete from custom where cus_no=#{cus_no}
 	</delete>
 	
+	<select id="saleTop3" parameterType="hashmap" resultType="String">
+        select p_name from(
+	        select 
+	            a.p_name
+	            , sum(a.salecount) SC
+	        from sale a
+	            , register b
+	            , product c 
+	        where b.birth_year between #{startDate} 
+	            and #{endDate} 
+	            and b.gender = #{gender}
+	            and a.id = b.id 
+	            and a.p_name = c.p_name 
+	            and trim(c.p_category1) = #{category}
+	        group by a.p_name
+	        order by SC desc
+	    ) where rownum <![CDATA[<=]]> 3
+	</select>
 	
+	<select id="getInfo" parameterType="String" resultType="com.clone.starbucks.DTO.RegisterDTO">
+	   select birth_year, gender from register where id=#{id}
+	</select>
+	
+	<update id="updateReward" parameterType="com.clone.starbucks.DTO.UserInfoDTO">
+	   update userinfo set cupreward=#{cupreward} where id=#{id}
+	</update>
 	
 	<!-- 개인정보관리 - 예은 -->
 	<select id="userInfo" resultType="com.clone.starbucks.DTO.RegisterDTO">
@@ -153,8 +179,20 @@
 		event_sms=#{event_sms}, event_e=#{event_e}
 		WHERE id=#{id}
 	</update>
+	
 	<update id="updateUserInfo" parameterType="com.clone.starbucks.DTO.UserInfoDTO" >
 		UPDATE userInfo SET nickname=#{nickname}, cupreward=#{cupreward} WHERE id=#{id}
 	</update>
+	
+	<update id="updatePwd" parameterType="com.clone.starbucks.DTO.UserInfoDTO">
+		update userInfo SET pw=#{pw} WHERE id=#{id}
+	</update>
+	
+	<delete id="deleteReg" parameterType="String">
+		DELETE FROM register WHERE id=#{id}
+	</delete>
+	<delete id="deleteUser" parameterType="String">
+		DELETE FROM userInfo WHERE id=#{id}
+	</delete>
 	
 	</mapper>

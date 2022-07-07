@@ -598,9 +598,9 @@ var eFrequencyPlannerYn = 'Y';
 									</tr>
 								</tbody>	
 								</table>
-								<c:if test="${sessionScope.userinfo.cupreward == 'D'}">
+								<c:if test="${sessionScope.userInfo.cupreward == 'D' && sessionScope.cupReward != null}">
 									<p style="color: red;">* 리워드 할인이 적용되었습니다.</p>
-									<c:set var="discount" value="${discount + 400 }"/>
+									<c:set var="discount" value="${discount + (sessionScope.cupReward * 400) }"/>
 								</c:if>
 								<br>
 								<input type="button" class="btn_coupon" value="쿠폰 검색" onclick="window.open('couponUse','COUPON 적용하기','width=700 ,height=315 ,location=no,status=no, scrollbars=yes')"><br>
@@ -645,7 +645,7 @@ var eFrequencyPlannerYn = 'Y';
 						<input type="hidden" id="cardMoney" value="">
 						<div class="order_submit" style="margin: auto; text-align: center;">
 							<input type="button" value="결제" class="submitResetBtn" onclick="payment();" style="background: #006633; color: white;">
-							<input type="reset" value="취소" class="submitResetBtn" style="background: #f6f6f6; ">
+							<input type="button" value="취소" class="submitResetBtn" onclick="resetOrder();" style="background: #f6f6f6; ">
 						</div>
 						
 					</div>
@@ -861,7 +861,7 @@ var eFrequencyPlannerYn = 'Y';
 		        
 <script type="text/javascript">//결제페이지-지혜0620
 	var req;
-	var reward = "<c:out value='${sessionScope.userinfo.cupreward}'/>";
+	var reward = "<c:out value='${sessionScope.userInfo.cupreward}'/>";
 	var IMP = window.IMP;
 	var code = "imp86654742"; //가맹점 식별코드
 	IMP.init(code);
@@ -929,6 +929,20 @@ var eFrequencyPlannerYn = 'Y';
 			//값 선택시 히든input에 카드잔액&카드num받아오기.
 			//강제 액션넣어 function동작
 		}
+	}
+	
+	function resetOrder(){
+		$.ajax({
+            type : "POST",
+            url : "resetOrderAjax",
+            dataType : "text",
+            error : function(){
+                alert('통신실패!!');
+            },
+            success : function(_response){
+            	location.href = 'orderList';
+            }
+        });
 	}
 	
 	function resultAjax(){

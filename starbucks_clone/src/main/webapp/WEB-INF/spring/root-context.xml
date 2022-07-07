@@ -46,7 +46,7 @@
 		</property>
 	</bean>
 	<bean id="templateEmailmessage" class="org.springframework.mail.SimpleMailMessage" /> 
-
+    
 </beans>
 		
-	
+

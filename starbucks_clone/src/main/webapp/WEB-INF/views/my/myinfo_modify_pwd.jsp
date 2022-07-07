@@ -652,22 +652,25 @@ var eFrequencyPlannerYn = 'Y';
 <div id="container">
 			<!-- 내용 -->
 			<div class="find_mem_wrap">
+				<form action="updatePwdProc" id="updatePwd" method="post">
 				<div class="find_mem_inner">
 					<strong class="find_mem_ttl">비밀번호 변경</strong>
 					<div class="find_mem_form">
 						<figure class="find_mem_sally">
 								<img src="//image.istarbucks.co.kr/common/img/util/mem/icon_find_sally.png" alt="">
 						</figure>
+						
 						<div class="find_mem_result">
 							<p class="mem_result_txt">
 								<span class="result_txt_sub">새로운 비밀번호로 변경 하실 수 있습니다.</span>
 							</p>
 						</div>
+						
 						<div class="renew_input_box">
 							<strong>아이디</strong>
-							<p class="nofix_name">CYE2510</p>
+							<p class="nofix_name">${sessionScope.userInfo.id }</p>
 							<input type="hidden" name="IS_DORMANCY" id="IS_DORMANCY" value="">
-							<input type="hidden" name="user_id" id="user_id" value="CYE2510">
+							<input type="hidden" name="user_id" id="user_id" value="">
 						</div>
 						<div class="renew_input_box">
 							<strong>현재 비밀번호</strong>
@@ -684,10 +687,10 @@ var eFrequencyPlannerYn = 'Y';
 						</div>
 					</div>
 					<p class="btn_mem_login">
-						<a class="btn_ok" href="javascript:void(0);">확인</a>
+						<input type="submit" value='확인' style="color:#fff;font-size:24px; display:block; line-height:65px; background: #006633; margin: auto; border-style: none; width: 530px; cursor:pointer;"/>
 					</p>
-					
 				</div>
+				</form>
 			</div>
 			<!-- 내용 end -->
 		</div>
@@ -1149,6 +1152,186 @@ var eFrequencyPlannerYn = 'Y';
 					});
 				});
 			</script>
+			
+	<script type="text/javascript">
+		//2019.05.10 [비밀번호 규칙 추가] 비밀번호 규칙 체크
+		var check_pwd_rules = false;
+		
+		$(document).ready(function () {
+			
+			$("#user_pwd, #user_pwd_new, #user_pwd_new_chk").on("keydown", function (_e) {
+				var thisId = $(this).attr("id");
+				$(this).removeClass('input_warn').addClass('green');		
+				$("."+thisId+"_txt").text("");
+				$(this).nextAll('.limit_txt').text("").hide();
+			}).on("blur", function () {
+				$(this).removeClass("green");
+			});
+			
+			// 비밀번호 입력 체크
+			$("#user_pwd").on("blur", function() {
+				var strPwdNew = $(this).val();
+				
+				if(strPwdNew.length == 0) {
+					$("#user_pwd").addClass("input_warn");
+					$(".user_pwd_txt").addClass("input_warn_text").text("비밀번호를 입력해주세요.").show();
+				}else{
+					$("#user_pwd").removeClass("input_warn");
+					$(".user_pwd_txt").text("");
+				}
+			});
+			
+			// 새 비밀번호 입력 체크
+			$("#user_pwd_new").on("blur", function() {
+				var strPwdNew = $(this).val();
+				var isValid = m_regex_pwd1.test(strPwdNew);
+				
+				if(strPwdNew.length == 0) {
+					$("#user_pwd_new_chk").removeClass("input_warn");
+					$(".user_pwd_new_chk_txt").text("");
+				}
+				
+				if (strPwdNew.length > 9) {
+					isValid = m_regex_pwd2.test(strPwdNew);
+				}
+				
+				if (isValid) {
+					if($("#user_pwd").val() == $("#user_pwd_new").val()){
+						$("#user_pwd_new").addClass("input_warn");
+						$(".user_pwd_new_txt").addClass("input_warn_text").text("현재 비밀번호와 동일한 비밀번호 입니다. 다른 비밀번호를 입력하세요.").show();
+					} else {
+						// 2019.05.10 [비밀번호 규칙 추가] 비밀번호 규칙 체크
+						var objParam = {
+								user_id : $.trim($("#user_id").val())
+								,user_pwd : $.trim($("#user_pwd_new").val())
+							};
+						
+						___ajaxCall("getUserPwdCheck", objParam, false, "json", "post"
+							,function (_response) {
+								if (_response.result_code == "SUCCESS") {
+									$("#user_pwd_new").removeClass("input_warn");
+									$(".user_pwd_new_txt").removeClass("input_warn_text").text("사용가능한 비밀번호 입니다.").show();
+									check_pwd_rules = true;
+									
+									if(strPwdNew != $("#user_pwd_new_chk").val() && $("#user_pwd_new_chk").val().length > 0) {
+										$("#user_pwd_new_chk").addClass("input_warn");
+										$(".user_pwd_new_chk_txt").addClass("input_warn_text").text("일치하지 않습니다.").show();
+									}
+								} else {
+									$("#user_pwd_new").addClass("input_warn");
+									$(".user_pwd_new_txt").addClass("input_warn_text").text(_response.alert_msg).show();
+									check_pwd_rules = false;
+								}
+							}
+						);
+					}
+				} else {
+					$("#user_pwd_new").addClass("input_warn");
+					$(".user_pwd_new_txt").addClass("input_warn_text").text("영문, 숫자 혼합하여 10~20자리 이내로 입력하세요.").show();
+				}
+			});
+			
+			// 새 비밀번호 확인 체크
+			$("#user_pwd_new_chk").on("blur", function() {
+				var strPwdNew    = $("#user_pwd_new").val();
+				var strPwdNewChk = $(this).val();
+				
+				if(!$("#user_pwd_new").hasClass("input_warn")){
+					if (strPwdNew == strPwdNewChk) {
+						
+						$("#user_pwd_new_chk").removeClass("input_warn");
+						$(".user_pwd_new_chk_txt").removeClass("input_warn_text").text("일치합니다.").show();
+					} else {
+						$("#user_pwd_new_chk").addClass("input_warn");
+						$(".user_pwd_new_chk_txt").addClass("input_warn_text").text("일치하지 않습니다.").show();
+					}
+				}
+			});
+			
+			// 확인
+			$(".btn_ok").on("click", function () {
+				if($("#user_pwd").val().length == 0) {
+					$("#user_pwd").addClass("input_warn").focus();
+					$("#warn_user_pwd").text("비밀번호를 입력해주세요").show();
+					return;
+				}
+				
+				//2019.05.10 [비밀번호 규칙 추가] 비밀번호 규칙 체크
+				if(!check_pwd_rules){
+					$("#user_pwd_new").focus();
+					return;
+				}
+				
+				var msg = checkValid2("#user_pwd_new", "PASSWORD");	// 새 비밀번호 체크
+				if (msg) {
+					$("#user_pwd_new").addClass("input_warn").focus();
+					$("#warn_user_pwd_new").text(msg).show();
+					return;
+				}
+				
+				if($("#user_pwd").val() == $("#user_pwd_new").val()){
+					$("#user_pwd_new").addClass("input_warn");
+					$(".user_pwd_new_txt").addClass("input_warn_text").text("현재 비밀번호와 동일한 비밀번호 입니다. 다른 비밀번호를 입력하세요.").show();
+					return;
+				}
+				
+				msg = checkValid2("#user_pwd_new_chk", "PASSWORD");	// 새 비밀번호 확인 체크
+				if (msg) {
+					$("#user_pwd_new_chk").addClass("input_warn").focus();
+					$("#warn_user_pwd_new_chk").text(msg).show();
+					return;
+				}
+				
+				if ($("#user_pwd_new").val() != $("#user_pwd_new_chk").val()) {
+					$("#user_pwd_new_chk").addClass("input_warn").focus();
+					$("#warn_user_pwd_new_chk").text("비밀번호가 일치하지 않습니다.").show();
+					return;
+				}		
+				
+				var param = {
+					user_id : $.trim($("#user_id").val())
+					,user_pwd : $("#user_pwd").val()
+					,IS_DORMANCY : $.trim($("#IS_DORMANCY").val())
+				};
+				
+				
+				___ajaxCall("/starbucks/interface/checkUserPwd", param, false, "json", "post"
+					,function (_response) {
+					
+						if (_response.result_code == "SUCCESS") {
+							var objParam = {
+									 user_pwd_new     : $.trim($("#user_pwd_new").val())
+									,user_pwd_new_chk : $.trim($("#user_pwd_new_chk").val())
+									,reg_channel	  : "P"
+								};
+							
+							___ajaxCall("/interface/changeUserPwd", objParam, false, "json", "post"
+									,function (_response) {
+										if (_response.result_code == "SUCCESS") {
+											alert("비밀번호가 변경 되었습니다.");
+											location.replace("/starbucks/my/index");
+										} else {
+											var msg = (_response.alert_msg == "") ? _response.error_msg : _response.alert_msg;
+											var arr = msg.split("|");
+											if (arr.length == 2) {
+												alert(arr[1]);	
+											} else {
+												alert(arr[0]);
+											}
+										}
+									}
+								);
+						} else {
+							
+							alert(_response.alert_msg);
+						}
+					}
+				
+				);
+
+			});
+		});
+	</script>
 		
             <script>
                 var $edwSlider1 = null;
@@ -1165,7 +1348,9 @@ var eFrequencyPlannerYn = 'Y';
             <script src="../common/js/common_jhp.js"></script>
             <script src="../common/js/my/index.js?v=210420"></script>
             <script src="../common/js/my/index_level_web.js"></script>
+           
         </div>
+
 
     
 <div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div></div></div></div></body></html>

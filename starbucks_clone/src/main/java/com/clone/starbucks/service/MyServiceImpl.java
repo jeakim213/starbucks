@@ -5,12 +5,14 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
 
@@ -22,6 +24,7 @@ import com.clone.starbucks.DTO.E_couponDTO;
 import com.clone.starbucks.DTO.ReceiptDTO;
 import com.clone.starbucks.DTO.RegisterDTO;
 import com.clone.starbucks.DTO.UserInfoDTO;
+import com.fasterxml.jackson.databind.deser.DataFormatReaders.Match;
 
 @Service
 public class MyServiceImpl implements IMyService {
@@ -359,7 +362,6 @@ public class MyServiceImpl implements IMyService {
 		return msg;
 	}
 
-	
 	// 회원관리 - 예은
 	@Override
 	public RegisterDTO userInfo(String id) {
@@ -402,6 +404,7 @@ public class MyServiceImpl implements IMyService {
 	}
 
 	@Override
+<<<<<<< HEAD
 	public void receipt(Model model) {
 		UserInfoDTO user = (UserInfoDTO) session.getAttribute("userInfo");
 		String id = user.getId();
@@ -432,6 +435,82 @@ public class MyServiceImpl implements IMyService {
 		
 		model.addAttribute("list", list);
 		model.addAttribute("dateList", saledate);
+=======
+	public String updatePwdProc(UserInfoDTO userInfo, HttpServletRequest req) {
+
+		UserInfoDTO user = (UserInfoDTO) session.getAttribute("userInfo");
+	    String id = user.getId();
+		String pw = user.getPw();
+		
+		String oldPw = req.getParameter("user_pwd");
+		String confirmPw = req.getParameter("user_pw1");
+		String confirmPwCheck = req.getParameter("user_pw2");
+		
+		BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+		
+		if(encoder.matches(oldPw, pw) == false) {
+			return "옳지 않은 비밀번호입니다";
+		}
+	
+		if(oldPw.equals(confirmPw)) {
+			return "변경불가";
+		}
+		
+		if(confirmPw.equals(confirmPwCheck)==false) {
+			return "두 비밀번호가 일치하지 않습니다.";
+		}
+		
+		if(userInfo.getPw() != "") {
+			String tmp = encoder.encode(confirmPw);
+			userInfo.setPw(tmp);
+			myDAO.updatePwd(userInfo);
+		}
+		
+		
+		return "비밀번호 수정 완료";
+	}
+
+	@Override
+	public String userDeleteProc(UserInfoDTO userInfo) {
+		myDAO.deleteUser(userInfo);
+		return "탈퇴 완료";
+	}
+	
+	@Override //TOP3 제품 - 지혜 0704
+	public ArrayList<String> setSaleTop3(HashMap<String, String> data) {
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy");
+		int today = Integer.parseInt(sdf.format(new Date()));
+		int age = Integer.parseInt(data.get("age"));
+		Map<String, Object> paramMap = new HashMap<String, Object>();
+		paramMap.put("startDate", (today - age - 9));
+		paramMap.put("endDate", (today - age));
+		paramMap.put("gender", data.get("gender"));
+		paramMap.put("category", data.get("category"));
+		ArrayList<String> aa = myDAO.saleTop3(paramMap);
+		System.out.println("DB 결과 >>>>" + aa);
+		return aa;
+	}
+	
+	@Override //나이대 설정 - 지혜
+	public RegisterDTO getInfo(String id) {
+		RegisterDTO user = myDAO.getInfo(id);
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy");
+		int today = Integer.parseInt(sdf.format(new Date()));
+		user.setBirth_year((today - user.getBirth_year()) / 10);
+		
+		return user;
+	}
+	
+	@Override //에코텀블러 설정 - 지혜
+	public int setTumblerReward(String rewardType) {
+		UserInfoDTO user = (UserInfoDTO) session.getAttribute("userInfo");
+		user.setCupreward(rewardType);
+		if(myDAO.updateReward(user) != 0) {
+			session.setAttribute("userInfo", user);
+			return 1;
+		}
+		return 0;
+>>>>>>> branch 'main' of https://github.com/jeakim213/starbucks.git
 	}
 }
 	

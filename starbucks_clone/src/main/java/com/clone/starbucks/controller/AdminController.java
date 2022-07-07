@@ -87,6 +87,7 @@ public class AdminController {
 			@RequestParam(value = "currentPage", required=false, defaultValue = "1") int currentPage,
 			String select, String search) {
 		adminService.memberListForm(currentPage, select, search);
+		
 		return "admin/memberListForm";
 	}
 	
