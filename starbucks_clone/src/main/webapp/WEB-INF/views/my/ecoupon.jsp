@@ -1139,7 +1139,7 @@ var eFrequencyPlannerYn = 'Y';
 		</li>
 		<li class="msRnb_btn"><a href="my_menu" required="login">My 메뉴</a></li>
 		<li class="msRnb_btn"><a href="eReceiptList" required="login">전자영수증</a></li>
-		<li class="msRnb_btn"><a href="javascript:void(0);"  onclick="fn_rewardTumblerMsrCheck();">개인컵 리워드 설정</a></li>
+		<li class="msRnb_btn"><a href="reward_tumbler" >개인컵 리워드 설정</a></li>
 		<li class="msRnb_btn"><a href="../edt/expressDtList" required="login">My DT Pass</a></li>
 		<li>
 			<a href="javascript:void(0);">개인정보관리<span class="sbox_arrow_down"></span></a>

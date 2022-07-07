@@ -5,6 +5,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
@@ -19,6 +20,7 @@ import com.clone.starbucks.DTO.AllDTO;
 import com.clone.starbucks.DTO.CardDTO;
 import com.clone.starbucks.DTO.CustomDTO;
 import com.clone.starbucks.DTO.E_couponDTO;
+import com.clone.starbucks.DTO.RegisterDTO;
 import com.clone.starbucks.DTO.UserInfoDTO;
 
 @Service
@@ -357,4 +359,39 @@ public class MyServiceImpl implements IMyService {
 		return msg;
 	}
 	
+	@Override //TOP3 제품 - 지혜 0704
+	public ArrayList<String> setSaleTop3(HashMap<String, String> data) {
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy");
+		int today = Integer.parseInt(sdf.format(new Date()));
+		int age = Integer.parseInt(data.get("age"));
+		Map<String, Object> paramMap = new HashMap<String, Object>();
+		paramMap.put("startDate", (today - age - 9));
+		paramMap.put("endDate", (today - age));
+		paramMap.put("gender", data.get("gender"));
+		paramMap.put("category", data.get("category"));
+		ArrayList<String> aa = myDAO.saleTop3(paramMap);
+		System.out.println("DB 결과 >>>>" + aa);
+		return aa;
+	}
+	
+	@Override //나이대 설정 - 지혜
+	public RegisterDTO getInfo(String id) {
+		RegisterDTO user = myDAO.getInfo(id);
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy");
+		int today = Integer.parseInt(sdf.format(new Date()));
+		user.setBirth_year((today - user.getBirth_year()) / 10);
+		
+		return user;
+	}
+	
+	@Override //에코텀블러 설정 - 지혜
+	public int setTumblerReward(String rewardType) {
+		UserInfoDTO user = (UserInfoDTO) session.getAttribute("userInfo");
+		user.setCupreward(rewardType);
+		if(myDAO.updateReward(user) != 0) {
+			session.setAttribute("userInfo", user);
+			return 1;
+		}
+		return 0;
+	}
 }

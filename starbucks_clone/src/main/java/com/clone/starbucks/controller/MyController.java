@@ -189,6 +189,8 @@ public class MyController {
 	      model.addAttribute("remaincost", all.getRemaincost());
 	      model.addAttribute("cardCount", cardCount);
 	      model.addAttribute("couponCount", couponCount);
+	      //지혜0704 추가
+	      model.addAttribute("ageGd", myService.getInfo(user.getId()));
 	      
 	      return "my/index2";
 
@@ -412,6 +414,29 @@ public class MyController {
 		return "my/index";
 	}
 
-
+	@ResponseBody //지혜0704
+	@PostMapping(value = "my/saleTop3Ajax", produces="application/json; charset=UTF-8")
+	public ArrayList<String> saleTop3Ajax(@RequestBody HashMap<String, String> data) {
+		System.out.println(data);
+		ArrayList<String> result = myService.setSaleTop3(data);
+		result.add(data.get("category"));
+		return result;
+	}
+	
+	@GetMapping("my/reward_tumbler") // 지혜 0707
+	public String reward_tumbler() {
+		return "my/reward_tumbler";
+	}
+	
+	@ResponseBody //지혜0707
+	@PostMapping(value = "my/setTumblerReward", produces="application/json; charset=UTF-8")
+	public String rewardAjax(String tumblerRewardType) {
+		System.out.println(tumblerRewardType);
+		JsonObject result = new JsonObject();
+		int check = myService.setTumblerReward(tumblerRewardType);
+		if(check != 0) result.addProperty("result_code", "SUCCESS");
+		else result.addProperty("result_code", "FAIL");
+		return result.toString();
+	}
 	
 }

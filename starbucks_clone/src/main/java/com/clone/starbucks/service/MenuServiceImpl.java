@@ -126,7 +126,11 @@ public class MenuServiceImpl implements IMenuService{
 		
 		if(data.get("cupType").equals("1")) result += "일회용";
 		else if(data.get("cupType").equals("0")) result += "머그";
-		else if(data.get("cupType").equals("2")) result += "개인";
+		else if(data.get("cupType").equals("2")) {
+			result += "개인";
+			int reward = session.getAttribute("cupReward") == null ? 0 : (int)session.getAttribute("cupReward");
+			session.setAttribute("cupReward", reward += 1);
+		}
 		
 		if(data.get("customFlag").equals("Y")) {//drink_view에서 커스텀리스트 값 체크해야함. 언디파인나옴
 			result += "|" + data.get("customList");
@@ -211,6 +215,7 @@ public class MenuServiceImpl implements IMenuService{
 				}
 			}
 			session.removeAttribute("saleCount");
+			session.removeAttribute("cupReward");
 		}
 	}
 	
@@ -259,6 +264,7 @@ public class MenuServiceImpl implements IMenuService{
 		}
 		session.removeAttribute("saleCount");//판매개수
 		session.removeAttribute("list");//장바구니
+		if(session.getAttribute("cupReward") != null) session.removeAttribute("cupReward");
 		
 		return 1;
 	}
@@ -292,6 +298,11 @@ public class MenuServiceImpl implements IMenuService{
 				if(pro.equals(pname)) count++;
 		}
 		System.out.println("음료개수적립 : " + count);
+		if(user.getCupreward().equals("S")) {
+			int reward = session.getAttribute("cupReward") == null ? 0 : (int)session.getAttribute("cupReward");
+			System.out.println("에코별적립 : " + reward);
+			count += reward;
+		}
 		int userStar = user.getStar() + count;
 		if(userStar > 11) { //적립별이 12개이상이면 별쿠폰 적립 후 별 차감
 			System.out.println("더한개수 : "+userStar);

@@ -13,6 +13,7 @@ import com.clone.starbucks.DTO.CardDTO;
 import com.clone.starbucks.DTO.CustomDTO;
 //github.com/jeakim213/stabucks.git
 import com.clone.starbucks.DTO.E_couponDTO;
+import com.clone.starbucks.DTO.RegisterDTO;
 import com.clone.starbucks.DTO.UserInfoDTO;
 
 public interface IMyService {
@@ -46,5 +47,10 @@ public interface IMyService {
 	ArrayList<CustomDTO> setCusTable(int myCustomPage, Model model);
 	
 	String deleteCustom(ArrayList<Integer> cusNoArr);
-
+	
+	ArrayList<String> setSaleTop3(HashMap<String, String> data);
+	
+	RegisterDTO getInfo(String id);
+	
+	int setTumblerReward(String rewardType);
 }

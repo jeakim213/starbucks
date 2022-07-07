@@ -124,4 +124,31 @@
 		delete from custom where cus_no=#{cus_no}
 	</delete>
 	
+	<select id="saleTop3" parameterType="hashmap" resultType="String">
+        select p_name from(
+	        select 
+	            a.p_name
+	            , sum(a.salecount) SC
+	        from sale a
+	            , register b
+	            , product c 
+	        where b.birth_year between #{startDate} 
+	            and #{endDate} 
+	            and b.gender = #{gender}
+	            and a.id = b.id 
+	            and a.p_name = c.p_name 
+	            and trim(c.p_category1) = #{category}
+	        group by a.p_name
+	        order by SC desc
+	    ) where rownum <![CDATA[<=]]> 3
+	</select>
+	
+	<select id="getInfo" parameterType="String" resultType="com.clone.starbucks.DTO.RegisterDTO">
+	   select birth_year, gender from register where id=#{id}
+	</select>
+	
+	<update id="updateReward" parameterType="com.clone.starbucks.DTO.UserInfoDTO">
+	   update userinfo set cupreward=#{cupreward} where id=#{id}
+	</update>
+	
 	</mapper>

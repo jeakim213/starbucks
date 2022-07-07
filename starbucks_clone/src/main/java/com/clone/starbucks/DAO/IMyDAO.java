@@ -1,6 +1,7 @@
 package com.clone.starbucks.DAO;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.stereotype.Repository;
@@ -9,6 +10,7 @@ import com.clone.starbucks.DTO.AllDTO;
 import com.clone.starbucks.DTO.CardDTO;
 import com.clone.starbucks.DTO.CustomDTO;
 import com.clone.starbucks.DTO.E_couponDTO;
+import com.clone.starbucks.DTO.RegisterDTO;
 import com.clone.starbucks.DTO.UserInfoDTO;
 
 
@@ -71,5 +73,10 @@ public interface IMyDAO {
 	int cusCount(String id); //지혜
 	
 	int deleteCustom(int cus_no); //지혜
-
+	
+	ArrayList<String> saleTop3(Map<String, Object> paramMap); //지혜
+	
+	RegisterDTO getInfo(String id); //지혜
+	
+	int updateReward(UserInfoDTO rewardType); //지혜
 }
