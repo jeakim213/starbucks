@@ -38,8 +38,12 @@ public interface IAdminDAO {
 	void deleteUser(String Id);
 	
 	Integer salesDrinkCount(String saledate);
-	
 	ArrayList<RankDTO> drinkRank();
 	
-	int allCount();
+	int allCountD();
+	
+	Integer salesFoodCount(String saledate);
+	ArrayList<RankDTO> foodRank();
+	
+	int allCountF();
 }

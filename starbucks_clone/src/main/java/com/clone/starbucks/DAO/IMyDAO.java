@@ -79,4 +79,20 @@ public interface IMyDAO {
 	RegisterDTO getInfo(String id); //지혜
 	
 	int updateReward(UserInfoDTO rewardType); //지혜
+
+	//---------------------------------
+	// 개인정보관리 - 예은
+	
+	RegisterDTO userInfo(String id);
+
+	UserInfoDTO detailinfo(String id);
+
+	void updateRegInfo(RegisterDTO all);
+
+	void updateUserInfo(UserInfoDTO user);
+
+	void updatePwd(UserInfoDTO userInfo);
+
+	void deleteUser(UserInfoDTO userInfo);
+
 }

@@ -1274,9 +1274,9 @@ var eFrequencyPlannerYn = 'Y';
 				<a href="javascript:void(0);">개인정보관리<span class="sbox_arrow_down"></span></a>
 				<ul>
               
-					<li><a href="my/myinfo_modify_login" required="login">· 개인정보확인 및 수정</a></li>
-					<li><a href="my/myinfo_out" required="login">· 회원 탈퇴</a></li>
-					<li><a href="my/myinfo_modify_pwd" required="login">· 비밀번호 변경</a></li>
+					<li><a href="myinfo_modify_login" required="login">· 개인정보확인 및 수정</a></li>
+					<li><a href="myinfo_out" required="login">· 회원 탈퇴</a></li>
+					<li><a href="myinfo_modify_pwd" required="login">· 비밀번호 변경</a></li>
 				</ul>
 			</li>
 		</ul>

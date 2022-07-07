@@ -336,9 +336,9 @@ var eFrequencyPlannerYn = 'Y';
 							<li style="display: none;">
 								<a role="button" href="javascript:void(0);">개인정보관리<span class="mob_gnb_arrow_down"></span></a><!-- 접근성_20171106 role 추가 -->
 								<ul>
-									<li style="display: none;"><a href="javascript:void(0);" required="login" data-href="../my/myinfo_modify_login">개인정보확인 및 수정</a></li>
-									<li style="display: none;"><a href="javascript:void(0);" required="login" data-href="../my/myinfo_out">회원 탈퇴</a></li>
-									<li style="display: none;"><a href="javascript:void(0);" required="login" data-href="../my/myinfo_modify_pwd">비밀번호 변경</a></li>
+									<li style="display: none;"><a href="javascript:void(0);" required="login" data-href="my/myinfo_modify_login">개인정보확인 및 수정</a></li>
+									<li style="display: none;"><a href="javascript:void(0);" required="login" data-href="my/myinfo_out">회원 탈퇴</a></li>
+									<li style="display: none;"><a href="javascript:void(0);" required="login" data-href="my/myinfo_modify_pwd">비밀번호 변경</a></li>
 								</ul>
 							</li>
 						</ul>
@@ -1210,9 +1210,9 @@ var eFrequencyPlannerYn = 'Y';
 				<a href="javascript:void(0);">개인정보관리<span class="sbox_arrow_down"></span></a>
 				<ul>
               
-					<li><a href="my/myinfo_modify_login" required="login">· 개인정보확인 및 수정</a></li>
-					<li><a href="my/myinfo_out" required="login">· 회원 탈퇴</a></li>
-					<li><a href="my/myinfo_modify_pwd" required="login">· 비밀번호 변경</a></li>
+					<li><a href="myinfo_modify_login" required="login">· 개인정보확인 및 수정</a></li>
+					<li><a href="myinfo_out" required="login">· 회원 탈퇴</a></li>
+					<li><a href="myinfo_modify_pwd" required="login">· 비밀번호 변경</a></li>
 				</ul>
 			</li>
 		</ul>

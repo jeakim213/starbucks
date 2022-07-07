@@ -807,7 +807,7 @@ var eFrequencyPlannerYn = 'Y';
 
 <!-- 금액 매출 -->
 	<img src="../common/img/admin/sales_title.png" style="width: 100px;"><br>
-	<img src="../common/img/admin/product_1.png" style="width: 60px;"><br><br><br>
+	<br><br><br>
 	
 	
 		<div style="text-align: center; margin: auto; font-size: 20px;"><b>- PRODUCT 월별 총 판매 금액 -</b> </div><hr>
@@ -851,7 +851,7 @@ var eFrequencyPlannerYn = 'Y';
 	    series: [{
 	        type: 'column',
 	        colorByPoint: false,
-	        data: [235, 643, 345, 352, 543, 123, 253, 352, 562, 234, 623, 442],
+	        data: [235, 407, 345, 352, 543, 266, 441, 563, 562, 234, 623, 442],
 	        showInLegend: false
 	    }]
 	});
@@ -900,7 +900,7 @@ var eFrequencyPlannerYn = 'Y';
              series: {
                  dataLabels: {
                      enabled: true,
-                     format: '{point.name}: {point.y:.1f}%'
+                     format: '{point.name}: {point.y:.2f}%'
                  }
              }
          },
@@ -916,34 +916,34 @@ var eFrequencyPlannerYn = 'Y';
                  colorByPoint: true,
                  data: [
                      {
-                         name: "Chrome",
-                         y: 62.74,
-                         drilldown: "Chrome"
+                         name: "그린 그러데이션 사이렌 콜드컵 591ml",
+                         y: 42.74,
+                         drilldown: "그린 그러데이션 사이렌 콜드컵 591ml"
                      },
                      {
-                         name: "Firefox",
-                         y: 10.57,
-                         drilldown: "Firefox"
+                         name: "22 서머 스터드 핑크옐로 콜드컵 710ml",
+                         y: 20.57,
+                         drilldown: "22 서머 스터드 핑크옐로 콜드컵 710ml"
                      },
                      {
-                         name: "Internet Explorer",
-                         y: 7.23,
-                         drilldown: "Internet Explorer"
+                         name: "SS 서머 옐로 데비 텀블러 414ml",
+                         y: 12.23,
+                         drilldown: "SS 서머 옐로 데비 텀블러 414ml"
                      },
                      {
-                         name: "Safari",
-                         y: 5.58,
-                         drilldown: "Safari"
+                         name: "크림 사이렌 스퀘어 머그 355ml",
+                         y: 10.58,
+                         drilldown: "크림 사이렌 스퀘어 머그 355ml"
                      },
                      {
-                         name: "Edge",
+                         name: "SS 스탠리 베이츠 보온병 473ml",
                          y: 4.02,
-                         drilldown: "Edge"
+                         drilldown: "SS 스탠리 베이츠 보온병 473ml"
                      },
                      {
-                         name: "Opera",
+                         name: "그린스토리 텀블러 473ml",
                          y: 1.92,
-                         drilldown: "Opera"
+                         drilldown: "그린스토리 텀블러 473ml"
                      },
                      {
                          name: "Other",
@@ -1383,7 +1383,7 @@ var eFrequencyPlannerYn = 'Y';
 		<li>
 			<a href="javascript:void(0);">매출현황<span class="sbox_arrow_down"></span></a>
 			<ul>
-				<li><a href="saleChart-1" <%-- required="login" --%> data-href="admin/saleChart-1">· COFFEE 매출 분석</a></li>
+				<li><a href="saleChart-1" <%-- required="login" --%> data-href="admin/saleChart-1">· DRINK 매출 분석</a></li>
 				<li><a href="saleChart-2" <%-- required="login" --%> data-href="admin/saleChart-2">· FOOD 매출 분석</a></li>
 				<li><a href="saleChart-3" <%-- required="login" --%> data-href="admin/saleChart-3">· PRODUCT 매출 분석</a></li>
 			</ul>

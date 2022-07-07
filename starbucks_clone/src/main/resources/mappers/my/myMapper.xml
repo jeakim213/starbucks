@@ -85,6 +85,7 @@
 		FROM userinfo a LEFT OUTER JOIN card b ON a.id = b.id
 		WHERE a.id = #{id} and b.c_master = '1'
 	</select>
+
 	
 	<select id="useCouponCount" parameterType="com.clone.starbucks.DTO.E_couponDTO" resultType="int">
 		SELECT count(*) FROM e_coupon WHERE id=#{id} and pon_used='Y'
@@ -150,5 +151,35 @@
 	<update id="updateReward" parameterType="com.clone.starbucks.DTO.UserInfoDTO">
 	   update userinfo set cupreward=#{cupreward} where id=#{id}
 	</update>
+	
+	<!-- 개인정보관리 - 예은 -->
+	<select id="userInfo" resultType="com.clone.starbucks.DTO.RegisterDTO">
+		SELECT * FROM register WHERE id=#{id}
+	</select>
+	<select id="detailinfo" resultType="com.clone.starbucks.DTO.UserInfoDTO">
+		SELECT star, grade, nickname, cupreward, DTPass FROM userInfo WHERE id=#{id}
+	</select>
+	
+	<update id="updateRegInfo" parameterType="com.clone.starbucks.DTO.RegisterDTO" >
+		UPDATE register SET name=#{name}, phone=#{phone}, email=#{email},
+		birth_year=#{birth_year}, birth_month=#{birth_month}, birth_day=#{birth_day},
+		event_sms=#{event_sms}, event_e=#{event_e}
+		WHERE id=#{id}
+	</update>
+	
+	<update id="updateUserInfo" parameterType="com.clone.starbucks.DTO.UserInfoDTO" >
+		UPDATE userInfo SET nickname=#{nickname}, cupreward=#{cupreward} WHERE id=#{id}
+	</update>
+	
+	<update id="updatePwd" parameterType="com.clone.starbucks.DTO.UserInfoDTO">
+		update userInfo SET pw=#{pw} WHERE id=#{id}
+	</update>
+	
+	<delete id="deleteReg" parameterType="String">
+		DELETE FROM register WHERE id=#{id}
+	</delete>
+	<delete id="deleteUser" parameterType="String">
+		DELETE FROM userInfo WHERE id=#{id}
+	</delete>
 	
 	</mapper>

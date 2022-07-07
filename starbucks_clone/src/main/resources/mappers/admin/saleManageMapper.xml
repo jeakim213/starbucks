@@ -10,9 +10,22 @@
 		select DISTINCT a.p_name, sum(a.salecount) sumcount, dense_rank() OVER (PARTITION BY b.p_category1 ORDER BY sum(a.salecount) DESC) rank from sale a LEFT OUTER JOIN product b ON a.p_name=b.p_name where b.p_category1='음료' group by a.p_name, b.p_category1 
 	</select>
 	
-	<select id="allCount" resultType="int">
+	<select id="allCountD" resultType="int">
 		select sum(a.salecount) from sale a JOIN product b ON a.p_name=b.p_name where b.p_category1='음료'
 	</select>
+	
+	<select id="salesFoodCount" parameterType="String" resultType="Integer">
+		SELECT SUM(salecount) FROM sale a JOIN product b ON a.p_name=b.p_name WHERE TO_CHAR(a.saledate, 'MM')=#{saledate} AND b.p_category1='푸드'
+	</select>
+	
+	<select id="foodRank" resultType="com.clone.starbucks.DTO.RankDTO">
+		SELECT DISTINCT a.p_name, sum(a.salecount) sumcount, DENSE_RANK() OVER (PARTITION BY b.p_category1 ORDER BY sum(a.salecount) DESC) rank from sale a LEFT OUTER JOIN product b ON a.p_name=b.p_name WHERE b.p_category1='푸드' GROUP BY a.p_name, b.p_category1
+	</select>
+	
+	<select id="allCountF" resultType="int">
+		select sum(a.salecount) from sale a JOIN product b ON a.p_name=b.p_name where b.p_category1='푸드'
+	</select>
+	
 	
 
 </mapper>

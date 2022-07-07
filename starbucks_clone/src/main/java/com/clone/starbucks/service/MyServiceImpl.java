@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
 
@@ -22,6 +23,7 @@ import com.clone.starbucks.DTO.CustomDTO;
 import com.clone.starbucks.DTO.E_couponDTO;
 import com.clone.starbucks.DTO.RegisterDTO;
 import com.clone.starbucks.DTO.UserInfoDTO;
+import com.fasterxml.jackson.databind.deser.DataFormatReaders.Match;
 
 @Service
 public class MyServiceImpl implements IMyService {
@@ -358,6 +360,88 @@ public class MyServiceImpl implements IMyService {
 		}
 		return msg;
 	}
+
+	// 회원관리 - 예은
+	@Override
+	public RegisterDTO userInfo(String id) {
+		
+		UserInfoDTO Session_user = (UserInfoDTO) session.getAttribute("userInfo");
+	    id = Session_user.getId();
+	    
+		RegisterDTO reg = myDAO.userInfo(id);
+		UserInfoDTO user = myDAO.detailinfo(id);
+		RegisterDTO all = new RegisterDTO();
+		if (reg != null) {
+			all.setId(reg.getId());
+			all.setName(reg.getName());
+			all.setPhone(reg.getPhone());
+			all.setEmail(reg.getEmail());
+			all.setBirth_year(reg.getBirth_year());
+			all.setBirth_month(reg.getBirth_month());
+			all.setBirth_day(reg.getBirth_day());
+			all.setGender(reg.getGender());
+			all.setEvent_sms(reg.getEvent_sms());
+			all.setEvent_e(reg.getEvent_e());
+		}
+		if (user != null) {
+			all.setStar(user.getStar());
+			all.setGrade(user.getGrade());
+			all.setNickname(user.getNickname());
+			all.setCupreward(user.getCupreward());
+		}
+		return all;
+	}
+
+	@Override
+	public String myinfo_ModifyProc(RegisterDTO all, UserInfoDTO userInfo) {
+		
+		myDAO.updateRegInfo(all);
+		UserInfoDTO user = (UserInfoDTO) all;
+		myDAO.updateUserInfo(user);
+		return "회원 수정 완료";
+	  
+	}
+
+	@Override
+	public String updatePwdProc(UserInfoDTO userInfo, HttpServletRequest req) {
+
+		UserInfoDTO user = (UserInfoDTO) session.getAttribute("userInfo");
+	    String id = user.getId();
+		String pw = user.getPw();
+		
+		String oldPw = req.getParameter("user_pwd");
+		String confirmPw = req.getParameter("user_pw1");
+		String confirmPwCheck = req.getParameter("user_pw2");
+		
+		BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+		
+		if(encoder.matches(oldPw, pw) == false) {
+			return "옳지 않은 비밀번호입니다";
+		}
+	
+		if(oldPw.equals(confirmPw)) {
+			return "변경불가";
+		}
+		
+		if(confirmPw.equals(confirmPwCheck)==false) {
+			return "두 비밀번호가 일치하지 않습니다.";
+		}
+		
+		if(userInfo.getPw() != "") {
+			String tmp = encoder.encode(confirmPw);
+			userInfo.setPw(tmp);
+			myDAO.updatePwd(userInfo);
+		}
+		
+		
+		return "비밀번호 수정 완료";
+	}
+
+	@Override
+	public String userDeleteProc(UserInfoDTO userInfo) {
+		myDAO.deleteUser(userInfo);
+		return "탈퇴 완료";
+	}
 	
 	@Override //TOP3 제품 - 지혜 0704
 	public ArrayList<String> setSaleTop3(HashMap<String, String> data) {
@@ -395,3 +479,4 @@ public class MyServiceImpl implements IMyService {
 		return 0;
 	}
 }
+	
