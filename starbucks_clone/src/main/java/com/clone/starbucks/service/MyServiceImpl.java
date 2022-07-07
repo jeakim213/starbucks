@@ -404,7 +404,6 @@ public class MyServiceImpl implements IMyService {
 	}
 
 	@Override
-<<<<<<< HEAD
 	public void receipt(Model model) {
 		UserInfoDTO user = (UserInfoDTO) session.getAttribute("userInfo");
 		String id = user.getId();
@@ -435,7 +434,8 @@ public class MyServiceImpl implements IMyService {
 		
 		model.addAttribute("list", list);
 		model.addAttribute("dateList", saledate);
-=======
+		
+	}
 	public String updatePwdProc(UserInfoDTO userInfo, HttpServletRequest req) {
 
 		UserInfoDTO user = (UserInfoDTO) session.getAttribute("userInfo");
@@ -510,7 +510,6 @@ public class MyServiceImpl implements IMyService {
 			return 1;
 		}
 		return 0;
->>>>>>> branch 'main' of https://github.com/jeakim213/starbucks.git
 	}
 }
 	
