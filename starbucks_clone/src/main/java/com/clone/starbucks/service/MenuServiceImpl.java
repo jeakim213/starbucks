@@ -183,8 +183,12 @@ public class MenuServiceImpl implements IMenuService{
 			Collection<ProductDTO> foodDtos = food.values();
 			for(ProductDTO dto : foodDtos) {
 				if(dto.getP_category1().equals("02")) {
-					int count = Integer.parseInt(data.get(dto.getP_name()));
-					dto.setP_price(dto.getP_price()* count);
+					String order = data.get(dto.getP_name()) == null ? null : data.get(dto.getP_name());
+					if(order != null) {
+						int count = Integer.parseInt(order);
+						dto.setP_price(dto.getP_price()* count);
+					}
+					
 				}
 			}
 			cart.put("Food", food);
@@ -258,7 +262,7 @@ public class MenuServiceImpl implements IMenuService{
 		//0628지혜
 
 		String check = (String)session.getAttribute("drink");
-		if(!check.equals("N")) {
+		if(check == null) {
 			makeStar(user, sale.keySet(), sdf.parse(data.get("pay_date")));//별 생성
 			session.removeAttribute("drink");//음료 유무
 		}
